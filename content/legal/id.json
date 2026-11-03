@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "updated": "Terakhir diperbarui: 31 Oktober 2026",
+    "intro": "Kebijakan ini menjelaskan data apa yang dikumpulkan FocusKept, alasannya, siapa yang membantu kami memprosesnya, dan pilihan apa yang kamu miliki. FocusKept dioperasikan oleh Murad Gojayev, Baku, Azerbaijan. Kontak: hello@focuskept.com.",
+    "sections": [
+      {
+        "heading": "Data yang kami kumpulkan",
+        "paragraphs": [
+          "Data akun: nama, alamat email, dan kata sandi yang di-hash dengan aman, atau pengenal akun Google-mu jika kamu masuk dengan Google.",
+          "Data yang kamu buat di produk: sesi fokus (teknik, durasi, nilai fokus, catatan, dan target), tugas dan proyek, topik belajar, catatan, penjelasan Feynman, pertanyaan pengulangan, jawabanmu saat pengulangan beserta hasilnya, dan pengaturanmu (bahasa, zona waktu, waktu pengingat, dan sebagainya).",
+          "Data perangkat dan notifikasi: jika kamu mengaktifkan notifikasi browser, alamat langganan push yang diberikan browsermu. Demi keamanan, sesi login menyimpan alamat IP dan identitas browser (user agent).",
+          "Tanpa akun, sesi dan tugas mode kerja tetap berada di penyimpanan lokal browser pada perangkatmu. Data itu hanya sampai ke server kami jika kamu memilih untuk mengimpornya setelah mendaftar.",
+          "Analitik opsional: hanya dengan izinmu, kami mengumpulkan peristiwa penggunaan anonim (misalnya bahwa sebuah sesi atau pengulangan telah selesai). Kami tidak pernah mengirim teks, penjelasan, atau jawabanmu ke analitik."
+        ]
+      },
+      {
+        "heading": "Cara kami menggunakannya",
+        "paragraphs": [
+          "Untuk menyediakan layanan: menjalankan timer dan statistik, menjadwalkan pengulangan, mengirim pengingat yang kamu minta, dan menjaga keamanan akunmu.",
+          "Untuk menyediakan fitur AI: membuat masukan, pertanyaan pengulangan, dan penilaian jawaban dari apa yang kamu tulis.",
+          "Untuk memproses pembayaran dan mengelola paketmu melalui penyedia pembayaran kami.",
+          "Untuk memahami dan meningkatkan produk: analitik hanya dengan persetujuanmu, dan laporan kesalahan yang sebisa mungkin dibersihkan dari data pribadi."
+        ]
+      },
+      {
+        "heading": "Pemrosesan AI oleh OpenAI",
+        "paragraphs": [
+          "Saat kamu memakai masukan AI, pembuatan pertanyaan, atau penilaian jawaban, topik, penjelasanmu, pertanyaan, dan jawabanmu dikirim ke OpenAI untuk diproses.",
+          "Proyek kami di OpenAI diatur untuk membagikan data API dengan OpenAI; artinya OpenAI dapat memakai konten ini untuk meningkatkan modelnya. Jangan sertakan informasi pribadi atau sensitif dalam penjelasan atau jawabanmu.",
+          "Kamu selalu bisa memakai FocusKept tanpa AI dengan menulis pertanyaan sendiri dan menilai jawabanmu sendiri."
+        ]
+      },
+      {
+        "heading": "Penyedia layanan",
+        "paragraphs": [
+          "Kami memakai penyedia berikut untuk menjalankan FocusKept: OpenAI (fitur AI, lihat di atas); Resend (pengiriman email); Polar (pembayaran, sebagai merchant of record yang juga menangani faktur dan pajak penjualan); PostHog (analitik produk, hanya dengan persetujuanmu); Sentry (pemantauan kesalahan); Google (masuk, hanya jika kamu memilihnya); Cloudflare (DNS dan jaringan); dan penyedia hosting kami Hetzner Online GmbH.",
+          "Setiap penyedia hanya menerima data yang dibutuhkan untuk tugasnya. Beberapa penyedia mungkin memproses data di luar negaramu; bila diperlukan, kami mengandalkan perlindungan yang sesuai seperti klausul kontrak standar."
+        ]
+      },
+      {
+        "heading": "Berapa lama data disimpan",
+        "paragraphs": [
+          "Kami menyimpan data akun dan produk sampai kamu menghapus akunmu. Menghapus akun akan menghapus sesi, tugas, kartu, pengulangan, dan pengaturanmu dari basis data kami.",
+          "Log notifikasi dihapus setelah 180 hari. Cadangan disimpan selama 30 hari lalu ditimpa. Catatan pembayaran disimpan oleh Polar dan kami selama diwajibkan oleh hukum."
+        ]
+      },
+      {
+        "heading": "Pilihan dan hakmu",
+        "paragraphs": [
+          "Kamu bisa kapan saja mengunduh semua datamu dari Pengaturan (JSON dan CSV), mengubahnya di aplikasi, mematikan email dan notifikasi, menarik persetujuan analitik, dan menghapus akunmu.",
+          "Tergantung tempat tinggalmu, kamu mungkin juga berhak mengakses, memperbaiki, membatasi, atau menolak pemrosesan, serta mengajukan keluhan ke otoritas perlindungan data. Kirim email ke hello@focuskept.com dan kami akan menjawab dalam batas waktu yang ditentukan hukum."
+        ]
+      },
+      {
+        "heading": "Cookie dan penyimpanan lokal",
+        "paragraphs": [
+          "Kami memakai cookie yang diperlukan untuk menjaga kamu tetap masuk dan mengingat bahasamu. Kami memakai penyimpanan lokal perangkat untuk timer yang sedang berjalan, pengaturan, dan, jika kamu tidak punya akun, sesi-sesimu. Cookie analitik hanya dipasang setelah kamu mengizinkannya."
+        ]
+      },
+      {
+        "heading": "Anak-anak",
+        "paragraphs": [
+          "FocusKept tidak ditujukan untuk anak di bawah 16 tahun tanpa persetujuan orang tua atau wali. Jika kamu yakin ada anak yang memberikan data pribadi kepada kami tanpa persetujuan, hubungi kami dan kami akan menghapusnya."
+        ]
+      },
+      {
+        "heading": "Perubahan",
+        "paragraphs": [
+          "Jika kami mengubah kebijakan ini secara berarti, kami akan memperbarui tanggal di atas dan memberi tahu pengguna yang masuk di aplikasi atau lewat email."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Ketentuan Layanan",
+    "updated": "Terakhir diperbarui: 3 November 2026",
+    "intro": "Ketentuan ini mengatur penggunaan FocusKept olehmu, yang dioperasikan oleh Murad Gojayev, Baku, Azerbaijan. Dengan memakai FocusKept, kamu menyetujui ketentuan ini.",
+    "sections": [
+      {
+        "heading": "Layanan",
+        "paragraphs": [
+          "FocusKept menyediakan timer fokus, perencanaan tugas, alat belajar, masukan dan pertanyaan buatan AI, serta pengulangan berbasis pengulangan berjarak. Beberapa fitur membutuhkan akun dan beberapa membutuhkan paket berbayar."
+        ]
+      },
+      {
+        "heading": "Akunmu",
+        "paragraphs": [
+          "Jaga keamanan data masukmu dan beri tahu kami jika kamu mencurigai penyalahgunaan. Kamu bertanggung jawab atas aktivitas di akunmu. Kamu harus memberikan alamat email yang valid."
+        ]
+      },
+      {
+        "heading": "Penggunaan yang diperbolehkan",
+        "paragraphs": [
+          "Jangan menyalahgunakan layanan: tidak boleh mencoba merusak atau membebani layanan secara berlebihan, tidak boleh mengambil data secara otomatis, tidak boleh konten ilegal, dan tidak boleh memakai fitur AI untuk membuat konten berbahaya. Kami dapat menangguhkan akun yang melakukannya."
+        ]
+      },
+      {
+        "heading": "Fitur AI",
+        "paragraphs": [
+          "Masukan, pertanyaan, dan penilaian AI dibuat secara otomatis dan bisa saja tidak akurat atau tidak lengkap. Fitur ini mendukung belajarmu, tetapi bukan nasihat profesional. Periksa informasi penting dengan sumber tepercaya.",
+          "Paket Gratis dan Pro memiliki batas penggunaan AI yang tercantum di halaman harga. Kami dapat membatasi fitur AI untuk sementara agar layanan tetap stabil."
+        ]
+      },
+      {
+        "heading": "Kontenmu",
+        "paragraphs": [
+          "Apa yang kamu tulis di FocusKept tetap milikmu. Kamu memberi kami izin untuk menyimpan, memproses, menampilkan, dan mengirimkannya ke penyedia layanan kami (termasuk OpenAI untuk fitur AI) hanya sejauh yang diperlukan untuk menyediakan layanan kepadamu."
+        ]
+      },
+      {
+        "heading": "Paket, pembayaran, dan pembatalan",
+        "paragraphs": [
+          "Pro dijual sebagai langganan bulanan atau tahunan melalui Polar, merchant of record kami. Harga ditampilkan sebelum pembayaran; pajak dapat berlaku. Langganan diperpanjang otomatis sampai dibatalkan.",
+          "Kamu bisa membatalkan kapan saja dari halaman Tagihan; Pro tetap aktif hingga akhir periode yang sudah dibayar. Pengembalian dana mengikuti kebijakan Polar dan hukum di negaramu.",
+          "Jika paketmu berakhir, kartu dan pengulangan yang ada tetap berjalan; batas paket Gratis berlaku untuk konten baru."
+        ]
+      },
+      {
+        "heading": "Nama, logo, dan kode",
+        "paragraphs": [
+          "Nama FocusKept dan logonya adalah milik kami. Lisensi sumber terbuka apa pun pada kode kami hanya mencakup kode: lisensi itu tidak memberi hak untuk memakai nama atau logo kami, dan ketentuan ini tetap berlaku untuk layanan FocusKept."
+        ]
+      },
+      {
+        "heading": "Ketersediaan dan perubahan",
+        "paragraphs": [
+          "Kami berusaha menjaga FocusKept tetap tersedia, tetapi tidak dapat menjamin layanan selalu berjalan tanpa gangguan. Kami dapat mengubah atau menghentikan fitur; jika perubahan berdampak besar pada fitur berbayar, kami akan memberi tahu lebih dulu."
+        ]
+      },
+      {
+        "heading": "Mengakhiri penggunaan",
+        "paragraphs": [
+          "Kamu bisa menghapus akunmu kapan saja di Pengaturan. Kami dapat menangguhkan atau menutup akun yang melanggar ketentuan ini secara serius atau berulang."
+        ]
+      },
+      {
+        "heading": "Tanggung jawab",
+        "paragraphs": [
+          "FocusKept disediakan “sebagaimana adanya”. Sejauh diizinkan hukum, kami tidak bertanggung jawab atas kerugian tidak langsung atau kehilangan data, dan total tanggung jawab kami terbatas pada jumlah yang kamu bayarkan kepada kami dalam 12 bulan sebelum klaim. Tidak ada dalam ketentuan ini yang membatasi hakmu berdasarkan undang-undang perlindungan konsumen."
+        ]
+      },
+      {
+        "heading": "Hukum yang berlaku dan kontak",
+        "paragraphs": [
+          "Ketentuan ini tunduk pada hukum Azerbaijan, tanpa mengurangi hak konsumen yang bersifat wajib di negara tempat tinggalmu. Pertanyaan: hello@focuskept.com."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Tentang FocusKept",
+    "intro": "FocusKept adalah produk independen yang dibuat oleh satu orang, yang menginginkan satu tempat untuk fokus dan benar-benar mengingat apa yang dipelajari.",
+    "sections": [
+      {
+        "heading": "Kenapa FocusKept ada",
+        "paragraphs": [
+          "Timer fokus membantumu memulai, tetapi melupakan segalanya begitu sesi selesai. Aplikasi flashcard membantumu mengingat, tetapi menulis kartu secara manual itu melelahkan. FocusKept menghubungkan keduanya: fokus, jelaskan dengan kata-katamu sendiri, dan biarkan pengulangan datang kepadamu.",
+          "FocusKept dirancang, dibangun, dan dioperasikan oleh Murad Gojayev, insinyur perangkat lunak yang berbasis di Baku, Azerbaijan. Setiap fitur berlandaskan metode belajar yang sudah banyak diteliti — blok kerja terfokus, latihan mengingat kembali, dan pengulangan berjarak — dan hanya dipertahankan jika membuatnya lebih mudah dijalankan secara konsisten. Ia bertanggung jawab langsung atas produk, dukungan, dan perlindungan datamu."
+        ]
+      },
+      {
+        "heading": "Cara kami bekerja",
+        "paragraphs": [
+          "Tanpa pola desain yang menjebak (dark patterns), tanpa angka karangan. Gratis berarti benar-benar berguna, dan Pro membiayai AI dan waktu yang dibutuhkan agar FocusKept tetap berjalan dan terus membaik.",
+          "Pertanyaan, ide, atau laporan bug: hello@focuskept.com. Setiap pesan dibaca oleh manusia."
+        ]
+      }
+    ]
+  }
+}

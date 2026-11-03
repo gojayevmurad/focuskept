@@ -1,0 +1,721 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "25 minut skupienia, 5 minut odpoczynku. I od nowa.",
+    "summary": "Metoda 25/5 dzieli pracę na krótkie, odmierzane bloki oddzielone przerwami. Ułatwia start i pozwala utrzymać stały poziom energii przez cały długi dzień.",
+    "howItWorks": [
+      "Poświęcasz jeden 25-minutowy blok tylko jednemu zadaniu. W tym czasie nie robisz nic innego: żadnych e-maili, czatu ani szybkiego zerkania. Gdy minutnik zadzwoni, przerywasz i robisz 5 minut przerwy, nawet w połowie czegoś.",
+      "Po czterech blokach robisz dłuższą przerwę, od 15 do 30 minut. Stały rytm zamienia mglisty cel w rodzaju „uczyć się całe popołudnie” w małe, policzalne jednostki — trudniej wtedy odkładać pracę, a postęp staje się widoczny. W FocusKept możesz dostosować blok pracy (10–60 min), przerwy i liczbę cykli."
+    ],
+    "steps": [
+      "Wybierz jedno zadanie i zapisz, co w tym bloku oznacza „gotowe”.",
+      "Ustaw minutnik na 25 minut i pracuj tylko nad tym zadaniem.",
+      "Jeśli coś cię rozproszy, zanotuj to i wróć do zadania.",
+      "Gdy minutnik zadzwoni, przerwij i zrób 5 minut przerwy z dala od ekranu.",
+      "Po czterech blokach zrób dłuższą przerwę, 15–30 minut."
+    ],
+    "bestFor": [
+      "Rozpoczynanie zadań odkładanych od dawna",
+      "Naukę, czytanie i powtórki",
+      "Dni pełne drobnych zadań, często przerywanych"
+    ],
+    "whenNotToUse": [
+      "Głęboka praca twórcza lub programowanie, gdy 25 minut wybija z rytmu; spróbuj 52/17 albo Deep Work 90",
+      "Zadania, których rytm narzuca ktoś inny, np. spotkania czy rozmowy na żywo"
+    ],
+    "faq": [
+      {
+        "q": "Dlaczego akurat 25 minut?",
+        "a": "Dwadzieścia pięć minut wystarcza, by realnie posunąć się naprzód, a jednocześnie jest na tyle krótkie, że łatwo zacząć. To wartość domyślna, nie reguła: wiele osób po wyrobieniu nawyku przechodzi na 30–50 minut."
+      },
+      {
+        "q": "Co zrobić, gdy zadanie skończy się przed czasem?",
+        "a": "Wykorzystaj pozostałe minuty na sprawdzenie, dopracowanie albo zaplanowanie kolejnego kroku. Jeśli zadanie jest naprawdę gotowe, zakończ blok i zacznij następne zadanie od nowa."
+      },
+      {
+        "q": "Czy pomijać przerwę, gdy praca idzie świetnie?",
+        "a": "Krótkie przerwy utrzymują świeżość uwagi przez wiele godzin. Jeśli ciągle wybijają cię z rytmu, przejdź na Flowtime albo dłuższy blok pracy, zamiast je pomijać."
+      },
+      {
+        "q": "Czy metoda 25/5 sprawdza się w nauce?",
+        "a": "Tak. Dobrze łączy się z aktywnym przypominaniem: jeden blok na czytanie, drugi na sprawdzanie siebie. Tryb nauki w FocusKept dodaje do tego wyjaśnienie metodą Feynmana i powtórki w odstępach."
+      }
+    ],
+    "seoTitle": "Minutnik skupienia 25/5: metoda 25 minut wyjaśniona",
+    "seoDescription": "Korzystaj z metody 25/5 online: 25 minut skupienia, 5 minut przerwy i długa przerwa po czterech cyklach. Darmowy minutnik, przewodnik krok po kroku i wskazówki."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 minuty głębokiego skupienia, 17 minut prawdziwego odpoczynku.",
+    "summary": "Metoda 52/17 przeplata dłuższe bloki skupienia z hojnymi przerwami. Pasuje osobom, którym 25 minut to za mało, by wejść w zadanie.",
+    "howItWorks": [
+      "Przez 52 minuty pracujesz w pełnym skupieniu, a potem na 17 minut odchodzisz od pracy. Ta proporcja pochodzi z danych o czasie pracy bardzo wydajnych pracowników biurowych, którzy naturalnie pracowali w seriach trwających około godziny, z solidnymi przerwami.",
+      "Długa przerwa jest tu najważniejsza: przejdź się, rozciągnij, napij się wody, popatrz przez okno. Po prawdziwym odpoczynku kolejne 52 minuty są równie owocne jak pierwsze."
+    ],
+    "steps": [
+      "Wybierz zadanie, które wymaga dłuższej uwagi.",
+      "Wycisz powiadomienia i skup się przez 52 minuty.",
+      "Zrób 17 minut przerwy z dala od ekranu.",
+      "Zacznij kolejny 52-minutowy blok ze świeżą głową."
+    ],
+    "bestFor": [
+      "Pisanie, analizę i skupioną pracę biurową",
+      "Osoby, którym przerwy w 25/5 wypadają za często",
+      "Pół dnia głębokiej pracy"
+    ],
+    "whenNotToUse": [
+      "Gdy trudno w ogóle zacząć; 25-minutowy blok jest łagodniejszy",
+      "Bardzo krótkie zadania, które nie potrzebują długiego bloku"
+    ],
+    "faq": [
+      {
+        "q": "Czy 52/17 jest lepsze niż 25/5?",
+        "a": "Żadna z nich nie jest lepsza dla wszystkich. 52/17 daje więcej czasu na wejście w zadanie, a 25/5 ułatwia start. Laboratorium w FocusKept porównuje twoje oceny skupienia, żeby pokazać, co działa właśnie u ciebie."
+      },
+      {
+        "q": "Co robić podczas 17-minutowej przerwy?",
+        "a": "Cokolwiek poza kolejnym ekranem: rusz się, napij się, daj odpocząć oczom albo złap trochę dziennego światła. Przewijanie telefonu zwykle utrudnia kolejny blok."
+      },
+      {
+        "q": "Czy mogę zmienić liczby?",
+        "a": "Minutnik 52/17 trzyma się klasycznej proporcji. Jeśli chcesz własnych długości pracy i przerw, użyj własnego minutnika."
+      }
+    ],
+    "seoTitle": "Metoda 52/17: 52 minuty pracy, 17 minut przerwy",
+    "seoDescription": "Wypróbuj metodę 52/17: 52 minuty skupionej pracy i 17 minut przerwy. Darmowy minutnik online i prosty przewodnik po dłuższych sesjach skupienia."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Pracuj, aż skupienie osłabnie, i odpoczywaj proporcjonalnie.",
+    "summary": "Flowtime zastępuje stały minutnik stoperem. Przerywasz, gdy uwaga słabnie, i robisz przerwę proporcjonalną do czasu pracy.",
+    "howItWorks": [
+      "Uruchom stoper i pracuj nad jednym zadaniem, dopóki skupienie trwa. Gdy czujesz, że uwaga ucieka, przerwij. FocusKept proponuje przerwę równą jednej piątej czasu pracy, od 5 do 30 minut: 40 minut pracy daje 8 minut przerwy, 2 godziny dają 24 minuty.",
+      "Ponieważ to ty decydujesz, kiedy przerwać, Flowtime chroni stan głębokiego flow i jednocześnie pilnuje odpoczynku. Z czasem historia sesji pokazuje, jak długo trwa twoje naturalne skupienie."
+    ],
+    "steps": [
+      "Wybierz jedno zadanie i uruchom stoper.",
+      "Pracuj, aż skupienie naprawdę osłabnie, a nie przy pierwszej pokusie zmiany zadania.",
+      "Naciśnij „Zrób przerwę” i odpocznij przez proponowany czas (czas pracy ÷ 5, 5–30 min).",
+      "Wróć do pracy, gdy przerwa się skończy."
+    ],
+    "bestFor": [
+      "Pracę twórczą i programowanie, gdzie przerwy dużo kosztują",
+      "Osoby, które często pomijają przerwy w 25/5",
+      "Poznanie własnego naturalnego czasu skupienia"
+    ],
+    "whenNotToUse": [
+      "Gdy bez terminu łatwo się rozpraszasz; stały minutnik daje więcej struktury",
+      "Dni z twardymi okienkami czasu między spotkaniami"
+    ],
+    "faq": [
+      {
+        "q": "Jak liczona jest przerwa we Flowtime?",
+        "a": "FocusKept proponuje jedną piątą czasu pracy, co najmniej 5 i najwyżej 30 minut."
+      },
+      {
+        "q": "A jeśli nigdy nie chce mi się przerwać?",
+        "a": "I tak zrób przerwę przynajmniej co 90 minut. Długie odcinki bez odpoczynku po cichu obniżają jakość, nawet gdy wydają się produktywne."
+      },
+      {
+        "q": "Czy Flowtime nadaje się na początek?",
+        "a": "Jeśli lubisz skupioną pracę, tak. Jeśli najtrudniej jest zacząć, zacznij od 25/5, a do Flowtime przejdź później."
+      }
+    ],
+    "seoTitle": "Technika Flowtime: minutnik do elastycznego skupienia",
+    "seoDescription": "W technice Flowtime pracujesz, aż skupienie osłabnie, a potem robisz proporcjonalną przerwę. Darmowy stoper z automatyczną propozycją przerwy."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "Jeden 90-minutowy blok na najbardziej wymagającą pracę.",
+    "summary": "Deep Work 90 to jedna nieprzerwana, 90-minutowa sesja i 20 minut przerwy — w sam raz na długość naturalnego cyklu uwagi.",
+    "howItWorks": [
+      "U wielu osób koncentracja rośnie i spada w cyklach trwających około półtorej godziny. 90-minutowy blok wykorzystuje cały cykl na trudną, ważną pracę, a 20-minutowa przerwa pozwala zregenerować się przed kolejnym.",
+      "Traktuj ten blok jak ważne spotkanie ze sobą: wybierz zadanie wcześniej, zamknij wszystko inne i chroń ten czas. Jeden lub dwa takie bloki dziennie potrafią popchnąć naprzód największe projekty."
+    ],
+    "steps": [
+      "Zdecyduj z góry, które zadanie zasługuje na najgłębsze skupienie.",
+      "Zamknij pocztę i czat, wycisz telefon i uruchom 90-minutowy minutnik.",
+      "Pracuj tylko nad tym zadaniem, aż minutnik się skończy.",
+      "Zrób pełne 20 minut przerwy, zanim zajmiesz się czymś wymagającym."
+    ],
+    "bestFor": [
+      "Pisanie, badania, projektowanie i złożone programowanie",
+      "Najważniejsze zadanie dnia",
+      "Poranki albo inne pory pełne energii"
+    ],
+    "whenNotToUse": [
+      "Gdy brakuje energii albo ktoś często przerywa; zacznij od krótszych bloków",
+      "Płytkie zadania, jak e-maile czy formalności"
+    ],
+    "faq": [
+      {
+        "q": "Czy naprawdę da się skupić przez 90 minut?",
+        "a": "To wymaga praktyki. Zacznij od bloków 50–60-minutowych i wydłużaj je w miarę rozwoju nawyku. Ocena po każdej sesji pokazuje, jak poszło."
+      },
+      {
+        "q": "Ile bloków głębokiej pracy robić dziennie?",
+        "a": "Dla większości osób dwa lub trzy to w zupełności dość. Resztę dnia przeznacz na lżejszą pracę."
+      },
+      {
+        "q": "Co liczy się jako głęboka praca?",
+        "a": "Praca, która wymaga pełnej uwagi i tworzy realną wartość, np. pisanie, rozwiązywanie problemów albo nauka czegoś trudnego."
+      }
+    ],
+    "seoTitle": "Minutnik Deep Work: 90-minutowe sesje skupienia",
+    "seoDescription": "Planuj 90-minutowe sesje głębokiej pracy z 20-minutowymi przerwami. Darmowy minutnik i przewodnik po skupionej pracy bez rozpraszaczy nad tym, co najważniejsze."
+  },
+  "custom": {
+    "name": "Własny minutnik",
+    "tagline": "Twoje własne długości pracy i przerw, zapisane jako ustawienia.",
+    "summary": "Własny minutnik pozwala ustawić dowolny blok pracy, krótką i długą przerwę oraz liczbę cykli, a także zapisać do pięciu ustawień.",
+    "howItWorks": [
+      "Nie każde zadanie pasuje do słynnych proporcji. We własnym minutniku wybierasz, jak długo pracować (1–180 minut), ile odpoczywać i po ilu blokach zrobić długą przerwę.",
+      "Zapisz ulubione zestawy jako ustawienia, żeby mieć je pod ręką, np. „Czytanie 40/10” albo „Przed egzaminem 30/5”."
+    ],
+    "steps": [
+      "Ustaw blok pracy, krótką przerwę, długą przerwę i liczbę cykli.",
+      "Jeśli chcesz, zapisz ten zestaw jako ustawienie (maksymalnie pięć).",
+      "Uruchom minutnik i trzymaj się rytmu, który ustalasz."
+    ],
+    "bestFor": [
+      "Eksperymentowanie w poszukiwaniu własnego rytmu",
+      "Powtarzalne rutyny o stałym kształcie",
+      "Dopasowanie do długości zajęć, laboratorium albo egzaminu"
+    ],
+    "whenNotToUse": [
+      "Gdy nie wiesz, od czego zacząć; najpierw wypróbuj 25/5, a potem dostosuj"
+    ],
+    "faq": [
+      {
+        "q": "Ile ustawień mogę zapisać?",
+        "a": "Do pięciu. Możesz je edytować lub usuwać w ustawieniach."
+      },
+      {
+        "q": "Skąd wiedzieć, które ustawienia działają najlepiej?",
+        "a": "Oceniaj skupienie po każdej sesji. Laboratorium porównuje oceny dla różnych technik i długości."
+      },
+      {
+        "q": "Od której techniki zacząć?",
+        "a": "Jeśli nie masz preferencji, przez tydzień używaj 25/5. Potem dopasuj długości pracy i przerw we własnym ustawieniu na podstawie ocen skupienia."
+      }
+    ],
+    "seoTitle": "Własny minutnik skupienia z zapisanymi ustawieniami",
+    "seoDescription": "Stwórz własny minutnik skupienia: wybierz długość pracy i przerw, długie przerwy i liczbę cykli, a potem zapisz ustawienia. Darmowy i prosty w obsłudze."
+  },
+  "timeboxing": {
+    "name": "Timeboxing",
+    "tagline": "Daj zadaniu stały przydział czasu, a potem zdecyduj.",
+    "summary": "Timeboxing przydziela każdemu zadaniu stały budżet czasu. Gdy timebox się kończy, decydujesz: gotowe, przedłużyć raz albo przenieść na później.",
+    "howItWorks": [
+      "Zamiast pracować do skutku, decydujesz z góry, ile czasu zadanie jest warte, np. 30 minut na szkic raportu. Limit kieruje uwagę na to, co istotne, i nie pozwala perfekcjonizmowi pochłonąć całego dnia.",
+      "Gdy timebox się kończy, FocusKept prosi o wybór: oznaczyć jako gotowe, przedłużyć raz o 25% timeboxa albo przenieść zadanie na później. Każda minuta ponad pierwotny timebox jest zapisywana jako przekroczenie, więc widzisz, jak trafne są twoje szacunki."
+    ],
+    "steps": [
+      "Wybierz zadanie i zdecyduj, ile minut jest warte.",
+      "Uruchom timebox i pracuj tylko nad tym zadaniem.",
+      "Gdy czas minie, wybierz: gotowe, przedłuż raz (+25%) albo przenieś na później.",
+      "Sprawdzaj przekroczenia w statystykach, by lepiej szacować w przyszłości."
+    ],
+    "bestFor": [
+      "Zadania, które rozrastają się, aż zajmą cały dostępny czas",
+      "Perfekcjonistów i wiecznych poprawiaczy",
+      "Planowanie dnia z wieloma różnymi zadaniami"
+    ],
+    "whenNotToUse": [
+      "Otwarte poszukiwania, których wynik jest nieznany",
+      "Sesje nauki, które wymagają powtarzanych cykli"
+    ],
+    "faq": [
+      {
+        "q": "Co jeśli nie zdążę?",
+        "a": "Możesz raz przedłużyć o jedną czwartą timeboxa albo przenieść zadanie na później. Obie opcje są w porządku; chodzi o świadomą decyzję."
+      },
+      {
+        "q": "Jak długi powinien być timebox?",
+        "a": "Dla większości zadań od 15 do 90 minut. Krótsze timeboxy budują poczucie pilności, dłuższe pasują do większych kawałków pracy."
+      },
+      {
+        "q": "Czym jest przekroczenie?",
+        "a": "To czas spędzony ponad pierwotny timebox. Stale wysokie przekroczenie oznacza, że twoje szacunki są zbyt optymistyczne."
+      }
+    ],
+    "seoTitle": "Timeboxing: minutnik i opis techniki",
+    "seoDescription": "Poznaj timeboxing: daj każdemu zadaniu stały czas, a potem zakończ, przedłuż raz albo przełóż. Darmowy minutnik, który śledzi szacunki i przekroczenia."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Wyjaśnij prosto. Sprawdź, co naprawdę rozumiesz.",
+    "summary": "Technika Feynmana sprawdza zrozumienie: wyjaśniasz temat prostym językiem, tak jakby słuchał dwunastolatek. Luki w wyjaśnieniu pokazują, czego uczyć się dalej.",
+    "howItWorks": [
+      "Technika nosi imię fizyka Richarda Feynmana i jest prosta: po nauce tematu napisz wyjaśnienie codziennymi słowami i krótkimi zdaniami, jakby słuchał ciekawski dwunastolatek. Fachowy żargon to sygnał ostrzegawczy, bo często ukrywa lukę.",
+      "Tam, gdzie pojawia się zacięcie albo ogólniki, wróć do źródła, uzupełnij lukę i znów uprość. W FocusKept każda sesja nauki kończy się wyjaśnieniem metodą Feynmana; AI wskazuje luki i błędy, a potem zamienia wyjaśnienie w pytania do powtórek."
+    ],
+    "steps": [
+      "Poznaj temat, korzystając ze swoich materiałów.",
+      "Zamknij źródło i wyjaśnij temat prostymi słowami, jak dwunastolatkowi.",
+      "Zaznacz miejsca, w których pojawiło się zacięcie albo żargon.",
+      "Wróć do źródła, aby uzupełnić te luki.",
+      "Upraszczaj wyjaśnienie, aż zacznie płynąć."
+    ],
+    "bestFor": [
+      "Pojęcia, teorie i tematy typu „jak to działa”",
+      "Sprawdzenie prawdziwego zrozumienia przed egzaminem",
+      "Zamianę przeczytanych treści w trwałą wiedzę"
+    ],
+    "whenNotToUse": [
+      "Czyste zapamiętywanie, np. słówek czy dat; użyj aktywnego przypominania lub powtórek w odstępach",
+      "Umiejętności, które wymagają praktyki, a nie wyjaśniania"
+    ],
+    "faq": [
+      {
+        "q": "Dlaczego wyjaśniać dwunastolatkowi?",
+        "a": "Dziecko nie zaakceptuje żargonu, więc trzeba wiedzieć, co znaczą słowa. Prosty język szybko obnaża mgliste zrozumienie."
+      },
+      {
+        "q": "Czy trzeba mówić na głos?",
+        "a": "Pisanie działa równie dobrze i zostawia coś, do czego można wrócić. W FocusKept wyjaśnienie staje się sercem karty wiedzy."
+      },
+      {
+        "q": "Co sprawdza AI?",
+        "a": "Szuka brakujących elementów i błędów, wystawia ocenę przejrzystości i proponuje prostszą wersję. Decyzja należy do ciebie: wszystko edytujesz i zatwierdzasz."
+      },
+      {
+        "q": "Jak długie powinno być wyjaśnienie?",
+        "a": "Idealnie kilka jasnych akapitów. FocusKept wymaga co najmniej 80 znaków i przyjmuje do 6000."
+      }
+    ],
+    "seoTitle": "Technika Feynmana: ucz się, wyjaśniając",
+    "seoDescription": "Jak stosować technikę Feynmana: wyjaśnij temat prosto, znajdź luki i je uzupełnij. Darmowy przewodnik z uwagami AI i automatycznymi pytaniami do powtórek."
+  },
+  "active-recall": {
+    "name": "Aktywne przypominanie",
+    "tagline": "Wydobywaj wiedzę z pamięci, zamiast ją czytać ponownie.",
+    "summary": "Aktywne przypominanie to sprawdzanie siebie zamiast ponownego czytania. Za każdym razem, gdy wydobywasz odpowiedź z pamięci, następnym razem przychodzi to łatwiej.",
+    "howItWorks": [
+      "Ponowne czytanie daje poczucie produktywności, ale buduje głównie znajomość, a nie pamięć. Aktywne przypominanie to odwraca: zamykasz materiał i zadajesz sobie pytania, zapisujesz, co pamiętasz, albo rozwiązujesz zadania bez zaglądania.",
+      "To właśnie wysiłek przypominania wzmacnia pamięć. FocusKept zamienia twoje wyjaśnienie w pytania i zadaje je ponownie w 5., 10. i 30. dniu, więc aktywne przypominanie dzieje się samo."
+    ],
+    "steps": [
+      "Przeczytaj uważnie jedną część materiału.",
+      "Zamknij go i zapisz pytania o najważniejsze myśli.",
+      "Odpowiedz na pytania z pamięci, bez zaglądania.",
+      "Sprawdź odpowiedzi i zaznacz braki.",
+      "Wróć tylko do tych części, w których pojawiły się błędy."
+    ],
+    "bestFor": [
+      "Przygotowania do egzaminów z każdego przedmiotu",
+      "Fakty, definicje i procesy",
+      "Wykorzystanie czasu nauki do maksimum"
+    ],
+    "whenNotToUse": [
+      "Pierwsze zetknięcie z tematem; najpierw zrozum, potem przypominaj"
+    ],
+    "faq": [
+      {
+        "q": "Czy aktywne przypominanie jest lepsze od ponownego czytania?",
+        "a": "Badania nad efektem testowania konsekwentnie pokazują, że ćwiczenie przypominania daje lepsze długotrwałe zapamiętywanie niż ponowne czytanie tego samego materiału."
+      },
+      {
+        "q": "A jeśli nic nie pamiętam?",
+        "a": "To cenna informacja. Sprawdź odpowiedź i spróbuj ponownie później. Odrobina trudu to część tego, jak to działa."
+      },
+      {
+        "q": "Jak FocusKept wykorzystuje aktywne przypominanie?",
+        "a": "Każda karta wiedzy ma pytania, a każda powtórka prosi o odpowiedź, zanim pokaże rozwiązanie."
+      }
+    ],
+    "seoTitle": "Aktywne przypominanie: metoda nauki i jak jej używać",
+    "seoDescription": "Aktywne przypominanie (active recall) to jedna z najskuteczniejszych metod nauki. Naucz się sprawdzać siebie, zadawać lepsze pytania i pamiętać więcej."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Zapisz wszystko, co pamiętasz, a potem porównaj.",
+    "summary": "Blurting to szybkie ćwiczenie aktywnego przypominania: po nauce zapisujesz wszystko, co wiesz o temacie, a potem porównujesz to ze źródłem, żeby znaleźć braki.",
+    "howItWorks": [
+      "Po bloku nauki zamknij notatki i jak najszybciej zapisz wszystko, co pamiętasz, w dowolnej kolejności. Nie przejmuj się strukturą; chodzi o to, by wyrzucić z głowy wszystko na papier.",
+      "Potem otwórz źródło i porównaj. Innym kolorem zaznacz to, czego brakowało lub co było błędne. Te luki to dokładnie to, czego warto uczyć się dalej. W FocusKept przewodnik dzieli sesję na etap „zapisz wszystko” i etap „porównaj ze źródłem”."
+    ],
+    "steps": [
+      "Naucz się jednej części lub jednego tematu.",
+      "Zamknij źródło i bez przerwy zapisuj wszystko, co pamiętasz.",
+      "Otwórz źródło i porównuj linijka po linijce.",
+      "Zaznacz braki i pomyłki.",
+      "Przerób luki, a później zrób blurting jeszcze raz."
+    ],
+    "bestFor": [
+      "Powtórkę wykładów lub rozdziałów podręcznika",
+      "Przedmioty z wieloma powiązanymi faktami, np. historię czy biologię",
+      "Szybkie sprawdziany między blokami nauki"
+    ],
+    "whenNotToUse": [
+      "Przedmioty oparte na rozwiązywaniu zadań, gdzie lepiej działają zadania ćwiczeniowe"
+    ],
+    "faq": [
+      {
+        "q": "Czy blurting musi być uporządkowany?",
+        "a": "Nie. Szybkość jest ważniejsza niż porządek. Strukturę nadasz później, podczas porównywania."
+      },
+      {
+        "q": "Czym blurting różni się od techniki Feynmana?",
+        "a": "Blurting sprawdza, co potrafisz przypomnieć; Feynman sprawdza, czy rozumiesz. W FocusKept każda sesja nauki kończy się krokiem Feynmana, więc masz jedno i drugie."
+      },
+      {
+        "q": "Jak często robić blurting z jednego tematu?",
+        "a": "Zaraz po nauce, a potem znowu kilka dni później. Powtórki w odstępach w FocusKept w 5., 10. i 30. dniu to naturalne momenty, by znów się sprawdzić."
+      }
+    ],
+    "seoTitle": "Metoda blurting do powtórek: krok po kroku",
+    "seoDescription": "Technika blurting: zapisz wszystko, co pamiętasz, porównaj z notatkami i uzupełnij luki. Szybka i skuteczna metoda powtórek."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: przegląd, pytania, czytanie, odtwarzanie, powtórka.",
+    "summary": "SQ3R to pięciostopniowa metoda aktywnego czytania podręczników, dzięki której rozumiesz i zapamiętujesz, zamiast tylko podkreślać.",
+    "howItWorks": [
+      "SQ3R to skrót od angielskich słów Survey, Question, Read, Recite i Review. Najpierw przeglądasz strukturę, zamieniasz nagłówki w pytania, czytasz, by na nie odpowiedzieć, odtwarzasz odpowiedzi z pamięci, a na koniec powtarzasz cały rozdział.",
+      "Każdy krok nadaje czytaniu cel. FocusKept prowadzi przez pięć kroków po kolei, z miejscem na notatki na każdym etapie."
+    ],
+    "steps": [
+      "Przegląd: przejrzyj nagłówki, podsumowania i ilustracje, by zobaczyć całość.",
+      "Pytania: zamień każdy nagłówek w pytanie, na które chcesz znać odpowiedź.",
+      "Czytanie: czytaj po jednej części, aby odpowiedzieć na jej pytanie.",
+      "Odtwarzanie: zamknij książkę i odpowiedz na pytanie własnymi słowami.",
+      "Powtórka: na koniec przejdź jeszcze raz przez wszystkie pytania i odpowiedzi."
+    ],
+    "bestFor": [
+      "Podręczniki i długie rozdziały literatury faktu",
+      "Kursy z dużą ilością obowiązkowych lektur",
+      "Osoby, które dużo podkreślają, a mało pamiętają"
+    ],
+    "whenNotToUse": [
+      "Beletrystykę i lekką lekturę",
+      "Bardzo krótkie teksty o oczywistej strukturze"
+    ],
+    "faq": [
+      {
+        "q": "Czy SQ3R nie jest powolne?",
+        "a": "Trwa dłużej niż przeglądanie, ale znacznie krócej niż trzykrotne czytanie rozdziału przed egzaminem."
+      },
+      {
+        "q": "Czy mogę stosować SQ3R do artykułów w sieci?",
+        "a": "Tak. Dodaj artykuł jako link do źródła i wykonaj te same pięć kroków."
+      },
+      {
+        "q": "Który krok jest najważniejszy?",
+        "a": "Odtwarzanie. Odpowiadanie z pamięci zamienia czytanie w wiedzę. Pozostałe kroki do tego przygotowują."
+      }
+    ],
+    "seoTitle": "Metoda czytania SQ3R: przegląd, pytania, czytanie",
+    "seoDescription": "Poznaj metodę SQ3R, by aktywnie czytać podręczniki i więcej zapamiętywać. Przejrzysty przewodnik w pięciu krokach z wbudowanym minutnikiem nauki."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Notatki, pytania kluczowe i podsumowanie na jednej stronie.",
+    "summary": "Metoda Cornell dzieli notatki na trzy części: notatki główne, pytania kluczowe i krótkie podsumowanie. Dzięki temu notatki stają się gotowym testem dla siebie.",
+    "howItWorks": [
+      "Podczas nauki zapisujesz notatki główne w dużym polu. Potem w bocznej kolumnie dodajesz krótkie pytania kluczowe lub słowa klucze prowadzące do każdej myśli. Na dole podsumowujesz całą stronę w kilku zdaniach.",
+      "Przy powtórce zakryj notatki i odpowiadaj na pytania kluczowe z pamięci. FocusKept daje ten sam trzyczęściowy układ podczas sesji i zapisuje go razem z nią."
+    ],
+    "steps": [
+      "Podczas nauki rób notatki w polu głównym.",
+      "Po nauce dopisz pytania kluczowe obok każdej ważnej myśli.",
+      "Na dole podsumuj cały temat w 2–3 zdaniach.",
+      "Powtarzaj, zakrywając notatki i odpowiadając na pytania kluczowe."
+    ],
+    "bestFor": [
+      "Wykłady, filmy i seminaria",
+      "Przedmioty, w których przed egzaminem powtarzasz notatki",
+      "Zamianę notatek w pytania ćwiczeniowe"
+    ],
+    "whenNotToUse": [
+      "Bardzo wizualne przedmioty, w których lepiej działają mapy myśli lub schematy"
+    ],
+    "faq": [
+      {
+        "q": "Kto wymyślił metodę Cornell?",
+        "a": "Opisał ją w latach 50. Walter Pauk, profesor pedagogiki na Uniwersytecie Cornella."
+      },
+      {
+        "q": "Czy potrzebuję specjalnego papieru?",
+        "a": "Nie. FocusKept pokazuje trzy pola na ekranie: notatki, pytania kluczowe i podsumowanie."
+      },
+      {
+        "q": "Jak długie powinno być podsumowanie?",
+        "a": "Dwa lub trzy zdania. Jeśli strony nie da się krótko podsumować, prawdopodobnie część z niej trzeba przejrzeć ponownie."
+      }
+    ],
+    "seoTitle": "Metoda notowania Cornell: szablon i przewodnik",
+    "seoDescription": "Notuj metodą Cornell online: notatki, pytania kluczowe i podsumowanie w jednym układzie. Darmowy szablon z minutnikiem skupienia."
+  },
+  "interleaving": {
+    "name": "Przeplatanie",
+    "tagline": "Mieszaj powiązane tematy, zamiast uczyć się ich po kolei.",
+    "summary": "Przeplatanie (interleaving) polega na przechodzeniu między dwoma–czterema powiązanymi tematami w jednej sesji nauki. Wydaje się trudniejsze niż nauka blokami, ale poprawia umiejętność wyboru właściwego podejścia.",
+    "howItWorks": [
+      "Zamiast rozwiązać dwadzieścia zadań jednego typu, a potem dwadzieścia innego, mieszasz je: A, B, C, A, C, B. Mózg musi najpierw rozpoznać, z jakim problemem ma do czynienia — a tej umiejętności nauka blokami nigdy nie ćwiczy.",
+      "W FocusKept dodajesz 2–4 powiązane tematy, a przewodnik zmienia temat przy każdym bloku pracy."
+    ],
+    "steps": [
+      "Wybierz 2–4 powiązane tematy lub typy zadań.",
+      "W pierwszym bloku pracy zajmij się pierwszym tematem.",
+      "Z każdym nowym blokiem przechodź do kolejnego tematu, zgodnie z rotacją.",
+      "Zwracaj uwagę na różnice między tematami i na to, dlaczego pasuje dane podejście."
+    ],
+    "bestFor": [
+      "Matematykę, fizykę i inne przedmioty z rozwiązywaniem zadań",
+      "Języki: mieszanie zagadnień gramatycznych",
+      "Umiejętności, w których najtrudniej jest wybrać właściwą metodę"
+    ],
+    "whenNotToUse": [
+      "Gdy temat jest zupełnie nowy; najpierw poznaj podstawy każdego z nich"
+    ],
+    "faq": [
+      {
+        "q": "Dlaczego przeplatanie wydaje się trudniejsze?",
+        "a": "Bo takie jest. Zmiana tematu wymusza za każdym razem ustalenie, jakiego podejścia użyć. Właśnie ten dodatkowy wysiłek poprawia długotrwałą naukę."
+      },
+      {
+        "q": "Ile tematów mieszać?",
+        "a": "Od dwóch do czterech powiązanych tematów. Więcej robi się chaotyczne."
+      },
+      {
+        "q": "Czy można łączyć przeplatanie z 25/5?",
+        "a": "Tak. Każdy blok pracy obejmuje jeden temat, a następny go zmienia, co nadaje przeplataniu naturalny rytm."
+      }
+    ],
+    "seoTitle": "Przeplatanie: mieszaj tematy, ucz się skuteczniej",
+    "seoDescription": "Przeplatanie łączy powiązane tematy w jednej sesji nauki. Dowiedz się, jak i kiedy stosować interleaving, z minutnikiem, który zmienia tematy za ciebie."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Pudełka, w których karty idą dalej, gdy znasz odpowiedź.",
+    "summary": "System Leitnera układa fiszki w pudełkach. Karty z poprawną odpowiedzią trafiają do pudełka powtarzanego rzadziej; błąd odsyła kartę z powrotem.",
+    "howItWorks": [
+      "System Sebastiana Leitnera korzysta z serii pudełek. Nowe karty zaczynają w pudełku 1, które powtarzasz często. Każda poprawna odpowiedź przesuwa kartę o jedno pudełko dalej, gdzie wraca rzadziej. Błędna odpowiedź cofa ją.",
+      "FocusKept stosuje tę samą zasadę automatycznie: każdy krok powtórki (5., 10. i 30. dzień, potem 60 dni i dłużej) to pudełko. Zaliczona powtórka przesuwa kartę dalej; błędna odpowiedź sprawia, że karta wraca po 2 dniach."
+    ],
+    "steps": [
+      "Przygotuj karty z pytaniem po jednej stronie i odpowiedzią po drugiej.",
+      "Najczęściej powtarzaj karty z pierwszego pudełka.",
+      "Po poprawnej odpowiedzi przesuń kartę o jedno pudełko dalej.",
+      "Po błędnej odpowiedzi cofnij ją.",
+      "W FocusKept po prostu rób zaległe powtórki: pudełkami zajmujemy się za ciebie."
+    ],
+    "bestFor": [
+      "Słówka, definicje i wzory",
+      "Pamięć długotrwałą przy minimum planowania",
+      "Osoby, które lubią widzieć swoje postępy"
+    ],
+    "whenNotToUse": [
+      "Zrozumienie złożonych idei; najpierw wyjaśnij je techniką Feynmana"
+    ],
+    "faq": [
+      {
+        "q": "Jak Leitner wygląda w FocusKept?",
+        "a": "Każdy krok powtórki to pudełko: 5. dzień, 10. dzień, 30. dzień, potem 60 dni, z podwajaniem do 180. Bieżący krok karty to jej pudełko."
+      },
+      {
+        "q": "Co się dzieje po błędnej odpowiedzi?",
+        "a": "Karta wraca po 2 dniach na powtórkę utrwalającą na tym samym kroku. Po jej zaliczeniu idzie dalej."
+      },
+      {
+        "q": "Czy karty trzeba przenosić ręcznie?",
+        "a": "Nie. FocusKept planuje każdą kartę za ciebie, więc odpowiadasz tylko na powtórki zaplanowane na dziś."
+      }
+    ],
+    "seoTitle": "System Leitnera: pudełka z fiszkami w praktyce",
+    "seoDescription": "Jak działa system fiszek Leitnera i jak korzystać z niego z automatycznymi powtórkami w odstępach. Prosty przewodnik z przykładami."
+  },
+  "spaced-repetition": {
+    "name": "Powtórki w odstępach",
+    "tagline": "Powtarzaj w 5., 10. i 30. dniu, tuż zanim zaczniesz zapominać.",
+    "summary": "Powtórki w odstępach (spaced repetition) planują kolejne powtórki w rosnących odstępach, tak by każda wypadała akurat wtedy, gdy wspomnienie zaczyna blednąć. To serce każdej sesji nauki w FocusKept.",
+    "howItWorks": [
+      "Po nauce pamięć szybko słabnie, ale każda udana powtórka spowalnia zapominanie. Rozkładanie powtórek w coraz dłuższych odstępach daje najlepsze zapamiętywanie przy najmniejszym nakładzie czasu.",
+      "FocusKept automatycznie planuje każdą kartę wiedzy: pierwsza powtórka w 5. dniu, potem w 10. i 30. Następnie odstęp wynosi 60 dni i podwaja się po każdej zaliczonej powtórce, maksymalnie do 180 dni. Po błędnej odpowiedzi karta wraca po 2 dniach. Pierwsze trzy kroki możesz zmienić w ustawieniach."
+    ],
+    "steps": [
+      "Zakończ sesję nauki i zapisz kartę wiedzy.",
+      "Dostań przypomnienie, gdy pojawi się powtórka (e-mailem lub w przeglądarce).",
+      "Odpowiedz z pamięci na pytania z karty.",
+      "Zaliczone: karta przechodzi do kolejnego odstępu; niezaliczone: wraca po 2 dniach."
+    ],
+    "bestFor": [
+      "Wszystko, co chcesz pamiętać miesiącami, a nie dniami",
+      "Przygotowania do egzaminów rozłożone na kilka tygodni",
+      "Wiedzę zawodową używaną rzadko, ale potrzebną"
+    ],
+    "whenNotToUse": [
+      "Wkuwanie na jutro; powtórki w odstępach działają w skali tygodni"
+    ],
+    "faq": [
+      {
+        "q": "Dlaczego 5., 10. i 30. dzień?",
+        "a": "To proste, łatwe do zapamiętania kroki, które rozkładają powtórki na pierwszy miesiąc, kiedy zapominamy najszybciej. Możesz je zmienić w ustawieniach."
+      },
+      {
+        "q": "Co jeśli opuszczę dzień powtórki?",
+        "a": "Zaległe karty czekają, dopóki ich nie powtórzysz. Nic nie przepada; po prostu nadrób, kiedy możesz."
+      },
+      {
+        "q": "Czy powtórka musi być bezbłędna?",
+        "a": "Powtórka jest zaliczona, gdy wszystkie odpowiedzi są poprawne. Częściowo dobra odpowiedź liczy się jako niezaliczona, więc karta wraca szybciej."
+      }
+    ],
+    "seoTitle": "Powtórki w odstępach: harmonogram, który działa",
+    "seoDescription": "Powtórki w odstępach wyjaśnione: powtarzaj w 5., 10. i 30. dniu, a potem w rosnących odstępach. Automatyczne przypomnienia i pytania w FocusKept."
+  },
+  "eat-the-frog": {
+    "name": "Zjedz żabę",
+    "tagline": "Najpierw zrób najtrudniejsze i najważniejsze zadanie.",
+    "summary": "„Zjedz żabę” oznacza: wybierz jedno zadanie, które najchętniej odłożysz, i zrób je na samym początku. Wszystko potem wydaje się łatwiejsze.",
+    "howItWorks": [
+      "„Żaba” to ważne zadanie, na które masz najmniejszą ochotę. Jeśli zmierzysz się z nim na początku dnia, gdy energii jest najwięcej, przez resztę dnia nie towarzyszy ci ten cichy niepokój.",
+      "W FocusKept możesz oznaczyć dokładnie jedną żabę dziennie. Jest przypięta na górze dzisiejszej listy i proponowana jako pierwsza sesja."
+    ],
+    "steps": [
+      "Wieczorem albo z samego rana wybierz dzisiejszą żabę: ważną i łatwą do odłożenia.",
+      "Oznacz ją jako żabę, aby była na górze dnia.",
+      "Pierwszą sesję skupienia poświęć żabie, zanim zajmiesz się czymkolwiek innym.",
+      "Pracuj, aż będzie gotowa albo wyraźnie ruszy z miejsca."
+    ],
+    "bestFor": [
+      "Odkładanie ważnych zadań",
+      "Poranki pełne energii",
+      "Pracowite dni, które inaczej wypełniają się drobiazgami"
+    ],
+    "whenNotToUse": [
+      "Gdy najtrudniejsze zadanie zależy od dostępności innej osoby"
+    ],
+    "faq": [
+      {
+        "q": "Skąd ta nazwa?",
+        "a": "Od powiedzenia często przypisywanego Markowi Twainowi: jeśli musisz zjeść żywą żabę, zrób to z samego rana. Brian Tracy zamienił je w metodę produktywności."
+      },
+      {
+        "q": "Czy mogę mieć więcej niż jedną żabę?",
+        "a": "Nie, jedna dziennie pozwala zachować jasność. Wybór nowej żaby zastępuje poprzednią."
+      },
+      {
+        "q": "A jeśli żaba jest za duża na jedną sesję?",
+        "a": "Podziel ją i jako dzisiejszą żabę wybierz pierwszy konkretny krok. Najtrudniej jest zacząć."
+      }
+    ],
+    "seoTitle": "Zjedz żabę: najtrudniejsze zadanie najpierw",
+    "seoDescription": "Pokonaj prokrastynację metodą „zjedz żabę”: wybierz jedno ważne zadanie i zrób je jako pierwsze. Prosty przewodnik i minutnik, który zaczyna od twojej żaby."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Sortuj zadania według pilności i ważności.",
+    "summary": "Macierz Eisenhowera dzieli zadania na cztery ćwiartki według pilności i ważności, dzięki czemu wiesz, co zrobić teraz, co zaplanować, co delegować, a co usunąć.",
+    "howItWorks": [
+      "Każde zadanie trafia do jednej z czterech ćwiartek: Zrób teraz (pilne i ważne), Zaplanuj (ważne, niepilne), Deleguj (pilne, nieważne) i Usuń (ani jedno, ani drugie). Macierz wyraźnie pokazuje, kiedy pilny szum wypiera ważną pracę.",
+      "W FocusKept przeciągasz zadania między ćwiartkami albo przenosisz je klawiaturą. Ćwiartka Usuń proponuje archiwizację, aby zadania zniknęły z listy."
+    ],
+    "steps": [
+      "Wypisz otwarte zadania.",
+      "Przypisz każde zadanie do ćwiartki Zrób teraz, Zaplanuj, Deleguj lub Usuń.",
+      "Rozpocznij sesję skupienia z zadaniem z ćwiartki Zrób teraz.",
+      "Zaplanuj czas na zadania z ćwiartki Zaplanuj, zanim staną się pilne.",
+      "Przekaż zadania z ćwiartki Deleguj i zarchiwizuj te z ćwiartki Usuń."
+    ],
+    "bestFor": [
+      "Przepełnione listy zadań",
+      "Planowanie tygodnia",
+      "Odróżnianie prawdziwych priorytetów od szumu"
+    ],
+    "whenNotToUse": ["Krótkie listy równie ważnych zadań"],
+    "faq": [
+      {
+        "q": "Co jeśli wszystko wydaje się pilne i ważne?",
+        "a": "Zapytaj siebie, co się stanie, jeśli zadanie poczeka tydzień. Jeśli nic poważnego, należy do ćwiartki Zaplanuj."
+      },
+      {
+        "q": "Pracuję w pojedynkę. Co z ćwiartką Deleguj?",
+        "a": "Użyj jej do zadań, które można zautomatyzować, zgrupować albo do których można poprosić kogoś o pomoc."
+      },
+      {
+        "q": "Jak często porządkować macierz?",
+        "a": "Krótki przegląd raz dziennie i dokładniejszy raz w tygodniu utrzymują macierz w zgodzie z rzeczywistością, gdy zbliżają się terminy."
+      }
+    ],
+    "seoTitle": "Macierz Eisenhowera: pilne czy ważne?",
+    "seoDescription": "Ustal priorytety z macierzą Eisenhowera: zrób teraz, zaplanuj, deleguj lub usuń. Darmowa tablica z przeciąganiem i wbudowanym minutnikiem skupienia."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Jedna duża rzecz, trzy średnie, pięć małych. Oto twój dzień.",
+    "summary": "Zasada 1-3-5 ogranicza każdy dzień do jednego dużego zadania, trzech średnich i pięciu małych, dzięki czemu plany pozostają realne.",
+    "howItWorks": [
+      "Większość list zadań jest zbyt długa, by je skończyć, więc każdy dzień wygląda jak porażka. Zasada 1-3-5 ogranicza dzień do dziewięciu zadań różnej wielkości: jednego wymagającego prawdziwego wysiłku, trzech zajmujących trochę czasu i pięciu szybkich.",
+      "FocusKept daje dzisiejszemu planowi dokładnie te miejsca i nie pozwala ich przepełnić, żeby wybór był świadomy."
+    ],
+    "steps": [
+      "Wybierz jedno duże zadanie na dziś.",
+      "Dodaj trzy średnie zadania.",
+      "Uzupełnij pięcioma małymi zadaniami.",
+      "Zacznij od dużego, póki energii jest najwięcej."
+    ],
+    "bestFor": [
+      "Realistyczne planowanie dnia",
+      "Osoby, których listy nigdy się nie kończą",
+      "Równowagę między głęboką pracą a drobnymi sprawami"
+    ],
+    "whenNotToUse": ["Dni wypełnione spotkaniami albo jednym projektem"],
+    "faq": [
+      {
+        "q": "Co jeśli wszystko skończy się wcześniej?",
+        "a": "Świetnie. Ciesz się wolnym czasem albo weź jeszcze jedno zadanie z listy na później."
+      },
+      {
+        "q": "Jak ocenić wielkość zadania?",
+        "a": "Duże zajmuje kilka godzin, średnie około godziny, małe 15 minut lub mniej."
+      },
+      {
+        "q": "Czy można łączyć 1-3-5 z innymi technikami?",
+        "a": "Tak. Niech duże zadanie będzie twoją żabą, a na każdym zadaniu skupiaj się z 25/5 albo timeboxem."
+      }
+    ],
+    "seoTitle": "Zasada 1-3-5: realistyczna lista zadań na każdy dzień",
+    "seoDescription": "Zaplanuj dzień według zasady 1-3-5: jedno duże zadanie, trzy średnie i pięć małych. Darmowy planer ze stałymi miejscami i minutnikiem skupienia."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Sześć zadań na jutro, w kolejności. Nic więcej.",
+    "summary": "Metoda Ivy Lee polega na tym, by każdego wieczoru zapisać do sześciu zadań na następny dzień, według ważności, i wykonywać je po kolei.",
+    "howItWorks": [
+      "Pod koniec każdego dnia wypisujesz sześć najważniejszych rzeczy na jutro i ustawiasz je w kolejności. Następnego dnia zaczynasz od pierwszej i nie przechodzisz dalej, dopóki jej nie skończysz. Niewykonane zadania trafiają na górę listy na kolejny dzień.",
+      "FocusKept daje wieczorny widok planowania jutra z sześcioma uporządkowanymi miejscami i przenosi niewykonane zadania dalej w tej samej kolejności."
+    ],
+    "steps": [
+      "Wieczorem zapisz do sześciu zadań na jutro.",
+      "Uszereguj je według rzeczywistej ważności.",
+      "Jutro pracuj nad zadaniem 1, aż będzie gotowe, a potem przejdź do zadania 2.",
+      "Niewykonane zadania przechodzą na listę następnego dnia w tej samej kolejności."
+    ],
+    "bestFor": [
+      "Kończenie dnia z jasnym planem",
+      "Osoby, które tracą poranek na decydowanie, czym się zająć",
+      "Stały postęp w ważnej pracy"
+    ],
+    "whenNotToUse": [
+      "Bardzo reaktywne stanowiska, gdzie priorytety zmieniają się co godzinę"
+    ],
+    "faq": [
+      {
+        "q": "Dlaczego tylko sześć zadań?",
+        "a": "Limit zmusza do wyboru. Sześć wystarcza, by wypełnić produktywny dzień, nie przeciążając go."
+      },
+      {
+        "q": "Skąd pochodzi metoda Ivy Lee?",
+        "a": "Konsultant ds. produktywności Ivy Lee nauczył jej menedżerów w 1918 roku."
+      },
+      {
+        "q": "Co jeśli pojawi się coś pilnego?",
+        "a": "Zajmij się tym, a potem wróć do listy w ustalonej kolejności. Jeśli pilne sprawy pojawiają się ciągle, planuj na jutro mniej zadań."
+      }
+    ],
+    "seoTitle": "Metoda Ivy Lee: zaplanuj sześć zadań na jutro",
+    "seoDescription": "Metoda Ivy Lee: każdego wieczoru zapisz sześć zadań na jutro w kolejności. Niewykonane przechodzą automatycznie na kolejny dzień. Darmowy planer i przewodnik."
+  }
+}

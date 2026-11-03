@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Privacybeleid",
+    "updated": "Laatst bijgewerkt: 31 oktober 2026",
+    "intro": "Dit beleid legt uit wat FocusKept verzamelt, waarom, wie ons helpt het te verwerken en welke keuzes je hebt. FocusKept wordt beheerd door Murad Gojayev, Bakoe, Azerbeidzjan. Contact: hello@focuskept.com.",
+    "sections": [
+      {
+        "heading": "Wat we verzamelen",
+        "paragraphs": [
+          "Accountgegevens: je naam, je e-mailadres en een veilig gehasht wachtwoord, of je Google-account-ID als je inlogt met Google.",
+          "Productgegevens die je zelf maakt: focussessies (techniek, duur, focusscore, notities en doelen), taken en projecten, leeronderwerpen, notities, Feynman-uitleg, herhaalvragen, je antwoorden bij herhalingen en de resultaten daarvan, en je instellingen (taal, tijdzone, herinneringstijd en dergelijke).",
+          "Apparaat- en meldingsgegevens: als je browsermeldingen aanzet, het pushabonnementsadres dat je browser ons geeft. Inlogsessies bewaren voor de veiligheid je IP-adres en de user agent van je browser.",
+          "Zonder account blijven sessies en taken uit de werkmodus in de lokale opslag van je browser, op je apparaat. Ze komen alleen op onze servers als je ervoor kiest ze na het aanmelden te importeren.",
+          "Optionele analyse: alleen als je dat toestaat, verzamelen we anonieme gebruiksgebeurtenissen (bijvoorbeeld dat een sessie of herhaling is afgerond). We sturen je teksten, uitleg of antwoorden nooit naar analyse."
+        ]
+      },
+      {
+        "heading": "Waarvoor we het gebruiken",
+        "paragraphs": [
+          "Om de dienst te leveren: je timer en statistieken laten werken, herhalingen plannen, de herinneringen sturen waar je om vroeg en je account veilig houden.",
+          "Om AI-functies te leveren: feedback, herhaalvragen en het beoordelen van antwoorden maken op basis van wat je schrijft.",
+          "Om betalingen te verwerken en je abonnement te beheren, via onze betaalprovider.",
+          "Om het product te begrijpen en te verbeteren, met analyse alleen als je toestemming geeft, en met foutrapporten waaruit we persoonsgegevens zoveel mogelijk verwijderen."
+        ]
+      },
+      {
+        "heading": "AI-verwerking door OpenAI",
+        "paragraphs": [
+          "Als je AI-feedback, het maken van vragen of het beoordelen van antwoorden gebruikt, worden het onderwerp, je uitleg, de vragen en je antwoorden ter verwerking naar OpenAI gestuurd.",
+          "Ons OpenAI-project is zo ingesteld dat API-gegevens met OpenAI worden gedeeld. Dat betekent dat OpenAI deze inhoud mag gebruiken om zijn modellen te verbeteren. Zet daarom geen persoonlijke of gevoelige informatie in je uitleg of antwoorden.",
+          "Je kunt FocusKept altijd zonder AI gebruiken door je vragen zelf te schrijven en je antwoorden zelf te beoordelen."
+        ]
+      },
+      {
+        "heading": "Dienstverleners",
+        "paragraphs": [
+          "We gebruiken deze dienstverleners om FocusKept te laten draaien: OpenAI (AI-functies, zie hierboven); Resend (e-mail versturen); Polar (betalingen, als merchant of record, die ook facturen en omzetbelasting regelt); PostHog (productanalyse, alleen met je toestemming); Sentry (foutbewaking); Google (inloggen, alleen als je daarvoor kiest); Cloudflare (DNS en netwerk); en onze hostingprovider Hetzner Online GmbH.",
+          "Elke dienstverlener krijgt alleen de gegevens die nodig zijn voor zijn taak. Sommige dienstverleners verwerken gegevens mogelijk buiten je land; waar dat nodig is, gebruiken we passende waarborgen zoals modelcontractbepalingen."
+        ]
+      },
+      {
+        "heading": "Hoe lang we gegevens bewaren",
+        "paragraphs": [
+          "We bewaren je account- en productgegevens tot je je account verwijdert. Als je je account verwijdert, worden je sessies, taken, kaarten, herhalingen en instellingen uit onze database gehaald.",
+          "Meldingslogboeken worden na 180 dagen verwijderd. Back-ups worden 30 dagen bewaard en daarna overschreven. Betaalgegevens worden door Polar en door ons bewaard zolang de wet dat vereist."
+        ]
+      },
+      {
+        "heading": "Je keuzes en rechten",
+        "paragraphs": [
+          "Je kunt op elk moment al je gegevens downloaden via Instellingen (JSON en CSV), ze in de app aanpassen, e-mails en meldingen uitzetten, je toestemming voor analyse intrekken en je account verwijderen.",
+          "Afhankelijk van waar je woont, heb je mogelijk ook het recht op inzage, correctie, beperking van of bezwaar tegen de verwerking, en het recht om een klacht in te dienen bij een toezichthouder voor gegevensbescherming. Mail naar hello@focuskept.com en we reageren binnen de wettelijke termijn."
+        ]
+      },
+      {
+        "heading": "Cookies en lokale opslag",
+        "paragraphs": [
+          "We gebruiken noodzakelijke cookies om je ingelogd te houden en je taal te onthouden. We gebruiken de lokale opslag van je apparaat voor je lopende timer, je instellingen en, als je geen account hebt, je sessies. Analysecookies worden pas geplaatst nadat je ze hebt toegestaan."
+        ]
+      },
+      {
+        "heading": "Kinderen",
+        "paragraphs": [
+          "FocusKept is niet bedoeld voor kinderen onder de 16 zonder toestemming van een ouder of voogd. Denk je dat een kind ons zonder toestemming persoonsgegevens heeft gegeven? Neem dan contact met ons op en we verwijderen ze."
+        ]
+      },
+      {
+        "heading": "Wijzigingen",
+        "paragraphs": [
+          "Als we dit beleid op een belangrijke manier wijzigen, passen we de datum hierboven aan en laten we het ingelogde gebruikers weten in de app of per e-mail."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Gebruiksvoorwaarden",
+    "updated": "Laatst bijgewerkt: 3 november 2026",
+    "intro": "Deze voorwaarden gelden voor je gebruik van FocusKept, beheerd door Murad Gojayev, Bakoe, Azerbeidzjan. Door FocusKept te gebruiken, ga je ermee akkoord.",
+    "sections": [
+      {
+        "heading": "De dienst",
+        "paragraphs": [
+          "FocusKept biedt een focustimer, taakplanning, leerhulpmiddelen, door AI gemaakte feedback en vragen, en herhalingen volgens gespreide herhaling. Voor sommige functies heb je een account nodig, voor andere een betaald abonnement."
+        ]
+      },
+      {
+        "heading": "Je account",
+        "paragraphs": [
+          "Houd je inloggegevens veilig en laat het ons weten als je misbruik vermoedt. Je bent verantwoordelijk voor de activiteit op je account. Je moet een geldig e-mailadres opgeven."
+        ]
+      },
+      {
+        "heading": "Toegestaan gebruik",
+        "paragraphs": [
+          "Misbruik de dienst niet: geen pogingen om hem te breken of te overbelasten, geen geautomatiseerd scrapen, geen illegale inhoud en geen gebruik van de AI-functies om schadelijk materiaal te maken. We kunnen accounts die dat doen opschorten."
+        ]
+      },
+      {
+        "heading": "AI-functies",
+        "paragraphs": [
+          "AI-feedback, vragen en beoordelingen worden automatisch gemaakt en kunnen onjuist of onvolledig zijn. Ze ondersteunen je leren, maar zijn geen professioneel advies. Controleer belangrijke informatie bij betrouwbare bronnen.",
+          "De abonnementen Gratis en Pro hebben gebruikslimieten voor AI, beschreven op de prijspagina. We kunnen AI-functies tijdelijk beperken om de dienst betrouwbaar te houden."
+        ]
+      },
+      {
+        "heading": "Jouw inhoud",
+        "paragraphs": [
+          "Wat je in FocusKept schrijft, blijft van jou. Je geeft ons toestemming om het op te slaan, te verwerken en te tonen, en om het naar onze dienstverleners te sturen (waaronder OpenAI voor AI-functies), alleen voor zover dat nodig is om de dienst voor je te leveren."
+        ]
+      },
+      {
+        "heading": "Abonnementen, betaling en opzegging",
+        "paragraphs": [
+          "Pro wordt verkocht als maand- of jaarabonnement via Polar, onze merchant of record. Prijzen worden vóór de betaling getoond; er kan belasting bij komen. Abonnementen worden automatisch verlengd tot ze worden opgezegd.",
+          "Je kunt op elk moment opzeggen via Facturering; Pro blijft actief tot het einde van de betaalde periode. Terugbetalingen volgen het beleid van Polar en de wet in jouw land.",
+          "Als je abonnement afloopt, blijven je bestaande kaarten en herhalingen werken; voor nieuwe inhoud gelden de limieten van Gratis."
+        ]
+      },
+      {
+        "heading": "Naam, logo en code",
+        "paragraphs": [
+          "De naam FocusKept en het logo zijn van ons. Een opensourcelicentie op onze code geldt alleen voor de code: die geeft geen recht om onze naam of ons logo te gebruiken, en deze voorwaarden blijven gelden voor de dienst FocusKept."
+        ]
+      },
+      {
+        "heading": "Beschikbaarheid en wijzigingen",
+        "paragraphs": [
+          "We doen ons best om FocusKept beschikbaar te houden, maar kunnen niet garanderen dat het altijd zonder onderbreking werkt. We kunnen functies wijzigen of stopzetten; als een wijziging betaalde functies aanzienlijk raakt, laten we het je van tevoren weten."
+        ]
+      },
+      {
+        "heading": "Stoppen met gebruik",
+        "paragraphs": [
+          "Je kunt je account op elk moment verwijderen in Instellingen. We kunnen accounts opschorten of beëindigen die deze voorwaarden ernstig of herhaaldelijk schenden."
+        ]
+      },
+      {
+        "heading": "Aansprakelijkheid",
+        "paragraphs": [
+          "FocusKept wordt geleverd zoals het is. Voor zover de wet het toestaat, zijn we niet aansprakelijk voor indirecte schade of verloren gegevens, en is onze totale aansprakelijkheid beperkt tot het bedrag dat je ons in de 12 maanden vóór de claim hebt betaald. Niets in deze voorwaarden beperkt de rechten die je hebt op grond van het consumentenrecht."
+        ]
+      },
+      {
+        "heading": "Toepasselijk recht en contact",
+        "paragraphs": [
+          "Op deze voorwaarden is het recht van Azerbeidzjan van toepassing, zonder afbreuk aan dwingende consumentenrechten in je woonland. Vragen: hello@focuskept.com."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Over FocusKept",
+    "intro": "FocusKept is een onafhankelijk product, gemaakt door één persoon die één plek wilde om te focussen en echt te onthouden wat er werd geleerd.",
+    "sections": [
+      {
+        "heading": "Waarom het bestaat",
+        "paragraphs": [
+          "Focustimers helpen je beginnen, maar vergeten alles zodra de sessie voorbij is. Flashcard-apps helpen je onthouden, maar kaarten met de hand schrijven is een klus. FocusKept verbindt de twee: focus, leg het uit in je eigen woorden en laat de herhalingen naar je toe komen.",
+          "FocusKept wordt ontworpen, gebouwd en beheerd door Murad Gojayev, software-engineer in Bakoe, Azerbeidzjan. Elke functie steunt op goed onderzochte leermethoden — geconcentreerde werkblokken, actief ophalen en gespreide herhaling — en blijft alleen als ze het makkelijker maakt om die vol te houden. Hij is persoonlijk verantwoordelijk voor het product, de support en de bescherming van je gegevens."
+        ]
+      },
+      {
+        "heading": "Hoe we werken",
+        "paragraphs": [
+          "Geen dark patterns, geen verzonnen cijfers. Gratis betekent echt nuttig, en Pro betaalt de AI en de tijd die nodig is om FocusKept draaiende te houden en te verbeteren.",
+          "Vragen, ideeën of bugs: hello@focuskept.com. Elk bericht wordt door een mens gelezen."
+        ]
+      }
+    ]
+  }
+}

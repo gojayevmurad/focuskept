@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Məxfilik siyasəti",
+    "updated": "Son yenilənmə: 31 oktyabr 2026",
+    "intro": "Bu siyasət FocusKept-in hansı məlumatları topladığını, niyə topladığını, onları emal etməyə kimlərin kömək etdiyini və sənin hansı seçimlərin olduğunu izah edir. FocusKept-i Murad Gojayev, Bakı, Azərbaycan idarə edir. Əlaqə: hello@focuskept.com.",
+    "sections": [
+      {
+        "heading": "Hansı məlumatları toplayırıq",
+        "paragraphs": [
+          "Hesab məlumatları: ad, e-poçt ünvanı və təhlükəsiz şəkildə heşlənmiş şifrə, Google ilə daxil olursansa, Google hesabının identifikatoru.",
+          "Məhsulda yaratdığın məlumatlar: fokus sessiyaları (texnika, müddət, fokus qiyməti, qeydlər və hədəflər), tapşırıqlar və layihələr, öyrənmə mövzuları, qeydlər, Feynman izahları, təkrar sualları, təkrarlarda verdiyin cavablar və onların nəticələri, eləcə də ayarların (dil, saat qurşağı, xatırlatma vaxtı və s.).",
+          "Cihaz və bildiriş məlumatları: brauzer bildirişlərini aktiv etsən, brauzerinin verdiyi push abunəlik ünvanı. Təhlükəsizlik üçün giriş sessiyaları IP ünvanını və brauzerin identifikasiyasını (user agent) saxlayır.",
+          "Hesab olmadan iş rejiminin sessiyaları və tapşırıqları cihazındakı brauzerin lokal yaddaşında qalır. Onlar serverlərimizə yalnız qeydiyyatdan sonra köçürməyi seçsən çatır.",
+          "İstəyə bağlı analitika: yalnız sənin icazənlə anonim istifadə hadisələri toplayırıq (məsələn, sessiyanın və ya təkrarın bitdiyi). Mətnlərini, izahlarını və ya cavablarını heç vaxt analitikaya göndərmirik."
+        ]
+      },
+      {
+        "heading": "Onlardan necə istifadə edirik",
+        "paragraphs": [
+          "Xidməti göstərmək üçün: taymer və statistikanı işlətmək, təkrarları planlaşdırmaq, istədiyin xatırlatmaları göndərmək və hesabını təhlükəsiz saxlamaq.",
+          "AI funksiyalarını təmin etmək üçün: yazdıqlarından rəy, təkrar sualları və cavabların qiymətləndirilməsini yaratmaq.",
+          "Ödəniş provayderimiz vasitəsilə ödənişləri emal etmək və planını idarə etmək üçün.",
+          "Məhsulu anlamaq və yaxşılaşdırmaq üçün: analitika yalnız razılığınla, xəta hesabatları isə mümkün qədər şəxsi məlumatlardan təmizlənmiş şəkildə."
+        ]
+      },
+      {
+        "heading": "OpenAI ilə AI emalı",
+        "paragraphs": [
+          "AI rəyi, sual yaradılması və ya cavabların qiymətləndirilməsindən istifadə edəndə mövzu, izahın, suallar və cavabların emal üçün OpenAI-a göndərilir.",
+          "OpenAI-dakı layihəmiz API məlumatlarını OpenAI ilə paylaşmaq üçün qurulub; bu o deməkdir ki, OpenAI bu məzmundan modellərini yaxşılaşdırmaq üçün istifadə edə bilər. İzahlarında və ya cavablarında şəxsi və ya həssas məlumat yazma.",
+          "FocusKept-dən həmişə AI olmadan da istifadə edə bilərsən: sadəcə sualları özün yaz və cavablarını özün qiymətləndir."
+        ]
+      },
+      {
+        "heading": "Xidmət təminatçıları",
+        "paragraphs": [
+          "FocusKept-i işlətmək üçün bu təminatçılardan istifadə edirik: OpenAI (AI funksiyaları, yuxarıya bax); Resend (e-poçt göndərilməsi); Polar (ödənişlər, fakturaları və satış vergisini də idarə edən satıcı-qeydiyyatçı kimi); PostHog (məhsul analitikası, yalnız razılığınla); Sentry (xətaların monitorinqi); Google (giriş, yalnız seçsən); Cloudflare (DNS və şəbəkə); və hostinq təminatçımız Hetzner Online GmbH.",
+          "Hər təminatçı yalnız öz işi üçün lazım olan məlumatı alır. Bəzi təminatçılar məlumatları sənin ölkəndən kənarda emal edə bilər; lazım olduqda standart müqavilə şərtləri kimi uyğun təminatlara əsaslanırıq."
+        ]
+      },
+      {
+        "heading": "Məlumatlar nə qədər saxlanılır",
+        "paragraphs": [
+          "Hesab və məhsul məlumatlarını sən hesabını silənə qədər saxlayırıq. Hesabı silmək sessiyalarını, tapşırıqlarını, kartlarını, təkrarlarını və ayarlarını verilənlər bazamızdan silir.",
+          "Bildiriş qeydləri 180 gündən sonra silinir. Ehtiyat nüsxələr 30 gün saxlanılır, sonra üzərinə yazılır. Ödəniş qeydlərini Polar və biz qanunun tələb etdiyi müddət ərzində saxlayırıq."
+        ]
+      },
+      {
+        "heading": "Seçimlərin və hüquqların",
+        "paragraphs": [
+          "İstənilən vaxt Ayarlardan bütün məlumatlarını yükləyə (JSON və CSV), tətbiqdə dəyişə, e-poçtları və bildirişləri söndürə, analitika razılığını geri götürə və hesabını silə bilərsən.",
+          "Yaşadığın yerdən asılı olaraq, məlumatlara çıxış, düzəliş, emalı məhdudlaşdırmaq və ya ona etiraz etmək, həmçinin məlumatların qorunması orqanına şikayət etmək hüququn da ola bilər. hello@focuskept.com ünvanına yaz, qanuni müddətdə cavab verəcəyik."
+        ]
+      },
+      {
+        "heading": "Kukilər və lokal yaddaş",
+        "paragraphs": [
+          "Səni daxil olmuş halda saxlamaq və dilini yadda saxlamaq üçün zəruri kukilərdən istifadə edirik. İşləyən taymer, ayarlar və hesabın yoxdursa, sessiyaların üçün cihazın lokal yaddaşından istifadə edirik. Analitika kukiləri yalnız sən icazə verdikdən sonra qoyulur."
+        ]
+      },
+      {
+        "heading": "Uşaqlar",
+        "paragraphs": [
+          "FocusKept valideyn və ya qəyyum razılığı olmadan 16 yaşdan kiçik uşaqlar üçün nəzərdə tutulmayıb. Bir uşağın razılıq olmadan bizə şəxsi məlumat verdiyini düşünürsənsə, bizimlə əlaqə saxla, onu silək."
+        ]
+      },
+      {
+        "heading": "Dəyişikliklər",
+        "paragraphs": [
+          "Bu siyasəti əhəmiyyətli dərəcədə dəyişsək, yuxarıdakı tarixi yeniləyəcək və daxil olmuş istifadəçiləri tətbiqdə və ya e-poçtla xəbərdar edəcəyik."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Xidmət şərtləri",
+    "updated": "Son yenilənmə: 3 noyabr 2026",
+    "intro": "Bu şərtlər Murad Gojayev, Bakı, Azərbaycan tərəfindən idarə olunan FocusKept-dən istifadəni tənzimləyir. FocusKept-dən istifadə etməklə bu şərtləri qəbul edirsən.",
+    "sections": [
+      {
+        "heading": "Xidmət",
+        "paragraphs": [
+          "FocusKept fokus taymeri, tapşırıq planlaşdırması, öyrənmə alətləri, AI ilə yaradılan rəy və suallar, eləcə də aralıqlı təkrara əsaslanan təkrarlar təqdim edir. Bəzi funksiyalar hesab, bəziləri isə ödənişli plan tələb edir."
+        ]
+      },
+      {
+        "heading": "Hesabın",
+        "paragraphs": [
+          "Giriş məlumatlarını təhlükəsiz saxla və sui-istifadədən şübhələnsən, bizə xəbər ver. Hesabındakı fəaliyyətə görə sən cavabdehsən. Etibarlı e-poçt ünvanı göstərməlisən."
+        ]
+      },
+      {
+        "heading": "Məqbul istifadə",
+        "paragraphs": [
+          "Xidmətdən sui-istifadə etmə: onu pozmağa və ya həddən artıq yükləməyə cəhd etmə, məlumatları avtomatik toplama, qanunsuz məzmun yerləşdirmə və zərərli məzmun yaratmaq üçün AI funksiyalarından istifadə etmə. Bunu edən hesabları dayandıra bilərik."
+        ]
+      },
+      {
+        "heading": "AI funksiyaları",
+        "paragraphs": [
+          "AI rəyi, suallar və qiymətləndirmə avtomatik yaradılır və qeyri-dəqiq və ya natamam ola bilər. Onlar öyrənməyinə dəstək olur, amma peşəkar məsləhət deyil. Vacib məlumatları etibarlı mənbələrlə yoxla.",
+          "Pulsuz və Pro planlarında qiymətlər səhifəsində göstərilən AI istifadə limitləri var. Xidməti sabit saxlamaq üçün AI funksiyalarını müvəqqəti məhdudlaşdıra bilərik."
+        ]
+      },
+      {
+        "heading": "Sənin məzmunun",
+        "paragraphs": [
+          "FocusKept-də yazdıqların sənin olaraq qalır. Bizə onu saxlamağa, emal etməyə, göstərməyə və xidmət təminatçılarımıza (AI funksiyaları üçün OpenAI daxil olmaqla) göndərməyə yalnız sənə xidmət göstərmək üçün lazım olan həddə icazə verirsən."
+        ]
+      },
+      {
+        "heading": "Planlar, ödəniş və ləğv",
+        "paragraphs": [
+          "Pro satıcı-qeydiyyatçımız (merchant of record) Polar vasitəsilə aylıq və ya illik abunəlik kimi satılır. Qiymətlər ödənişdən əvvəl göstərilir; vergi tətbiq oluna bilər. Abunəliklər ləğv edilənə qədər avtomatik yenilənir.",
+          "İstənilən vaxt Ödəniş səhifəsindən ləğv edə bilərsən; Pro ödənilmiş dövrün sonuna qədər aktiv qalır. Geri ödəmələr Polar-ın siyasətinə və ölkənin qanunlarına tabedir.",
+          "Planın bitərsə, mövcud kartların və təkrarların işləməyə davam edir; yeni məzmuna Pulsuz plan limitləri tətbiq olunur."
+        ]
+      },
+      {
+        "heading": "Ad, loqo və kod",
+        "paragraphs": [
+          "FocusKept adı və loqosu bizə məxsusdur. Kodumuza tətbiq olunan istənilən açıq mənbə lisenziyası yalnız kodu əhatə edir: adımızdan və ya loqomuzdan istifadə hüququ vermir və bu şərtlər FocusKept xidmətinə tətbiq olunmağa davam edir."
+        ]
+      },
+      {
+        "heading": "Əlçatanlıq və dəyişikliklər",
+        "paragraphs": [
+          "FocusKept-i əlçatan saxlamağa çalışırıq, amma onun həmişə fasiləsiz işləyəcəyinə zəmanət verə bilmərik. Funksiyaları dəyişə və ya dayandıra bilərik; dəyişiklik ödənişli funksiyalara ciddi təsir edərsə, əvvəlcədən xəbər verəcəyik."
+        ]
+      },
+      {
+        "heading": "İstifadəyə son",
+        "paragraphs": [
+          "Hesabını istənilən vaxt Ayarlarda silə bilərsən. Bu şərtləri ciddi və ya təkrar pozan hesabları dayandıra və ya bağlaya bilərik."
+        ]
+      },
+      {
+        "heading": "Məsuliyyət",
+        "paragraphs": [
+          "FocusKept “olduğu kimi” təqdim olunur. Qanunun icazə verdiyi həddə dolayı zərərlərə və ya məlumat itkisinə görə məsuliyyət daşımırıq və ümumi məsuliyyətimiz iddiadan əvvəlki 12 ay ərzində bizə ödədiyin məbləğlə məhdudlaşır. Bu şərtlərdəki heç nə istehlakçı hüquqlarının müdafiəsi qanunları üzrə hüquqlarını məhdudlaşdırmır."
+        ]
+      },
+      {
+        "heading": "Tətbiq olunan qanun və əlaqə",
+        "paragraphs": [
+          "Bu şərtlər Azərbaycan Respublikasının qanunlarına tabedir və yaşadığın ölkədə istehlakçının məcburi hüquqlarına təsir etmir. Suallar: hello@focuskept.com."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "FocusKept haqqında",
+    "intro": "FocusKept bir nəfərin yaratdığı müstəqil məhsuldur; fokuslanmaq və öyrəndiklərini həqiqətən yadda saxlamaq üçün tək bir yer istəyən birinin.",
+    "sections": [
+      {
+        "heading": "Niyə yaranıb",
+        "paragraphs": [
+          "Fokus taymerləri başlamağa kömək edir, amma sessiya bitən kimi hər şeyi unudur. Fləşkart tətbiqləri yadda saxlamağa kömək edir, amma kartları əl ilə yazmaq yorucudur. FocusKept bu ikisini birləşdirir: fokuslan, öz sözlərinlə izah et və qoy təkrarlar özləri sənə gəlsin.",
+          "FocusKept Bakıda yaşayan proqram mühəndisi Murad Gojayev tərəfindən hazırlanır və idarə olunur. Hər funksiya elmi əsası olan öyrənmə metodlarına — fokuslu iş bloklarına, yaddaşdan geri çağırmaya və aralıqlı təkrara — söykənir və yalnız onları davam etdirməyi asanlaşdırırsa saxlanılır. Məhsul, dəstək və məlumatlarınızın qorunması birbaşa onun məsuliyyətindədir."
+        ]
+      },
+      {
+        "heading": "Necə işləyirik",
+        "paragraphs": [
+          "Aldadıcı dizayn fəndləri (dark patterns) yoxdur, uydurma rəqəmlər yoxdur. Pulsuz həqiqətən faydalı deməkdir, Pro isə FocusKept-in işləməsi və yaxşılaşması üçün lazım olan AI və vaxtın xərcini ödəyir.",
+          "Suallar, ideyalar və ya xəta hesabatları: hello@focuskept.com. Hər mesajı insan oxuyur."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,719 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "25 minut soustředění, 5 minut odpočinku. A znovu.",
+    "summary": "Metoda 25/5 dělí práci na krátké odměřené bloky oddělené pauzami. Usnadňuje začátek a udržuje stálou energii po celý dlouhý den.",
+    "howItWorks": [
+      "Jeden 25minutový blok věnuješ jen jednomu úkolu. Během bloku neděláš nic jiného: žádný e-mail, chat ani rychlé nahlédnutí. Když časovač zazvoní, přestaneš a dáš si 5 minut pauzu, i kdyby uprostřed rozdělané věci.",
+      "Po čtyřech blocích si dáš delší pauzu, 15 až 30 minut. Pevný rytmus promění mlhavý cíl typu „učit se celé odpoledne“ v malé, spočitatelné jednotky. Odkládání je pak těžší a pokrok je vidět. Ve FocusKept si můžeš nastavit délku pracovního bloku (10–60 min), pauzy i počet cyklů."
+    ],
+    "steps": [
+      "Vyber jeden úkol a zapiš si, co v tomto bloku znamená „hotovo“.",
+      "Spusť 25minutový časovač a pracuj jen na tomto úkolu.",
+      "Když tě něco rozptýlí, zapiš si to a vrať se k úkolu.",
+      "Když časovač zazvoní, přestaň a dej si 5 minut pauzu mimo obrazovku.",
+      "Po čtyřech blocích si dej delší pauzu na 15–30 minut."
+    ],
+    "bestFor": [
+      "Pustit se do úkolů, které dlouho odkládáš",
+      "Učení, čtení a opakování",
+      "Dny plné drobných úkolů, které se často přerušují"
+    ],
+    "whenNotToUse": [
+      "Hluboká tvůrčí práce nebo programování, kdy 25 minut přeruší flow; zkus 52/17 nebo Deep Work 90",
+      "Úkoly, jejichž tempo určuje někdo jiný, třeba schůzky nebo hovory naživo"
+    ],
+    "faq": [
+      {
+        "q": "Proč zrovna 25 minut?",
+        "a": "Pětadvacet minut stačí na skutečný pokrok a zároveň je to dost krátké na to, aby se snadno začínalo. Je to výchozí hodnota, ne pravidlo: hodně lidí se po zažití návyku ustálí na 30 až 50 minutách."
+      },
+      {
+        "q": "Co dělat, když je úkol hotový dřív?",
+        "a": "Zbývající minuty využij ke kontrole, doladění nebo naplánování dalšího kroku. Pokud je opravdu hotovo, ukonči blok a začni další úkol znovu od začátku."
+      },
+      {
+        "q": "Mám pauzu vynechat, když to zrovna jde?",
+        "a": "Krátké pauzy udržují pozornost svěží po několik hodin. Pokud tě pauzy pořád vytrhávají z flow, přejdi raději na Flowtime nebo delší pracovní blok, než abys je vynechával."
+      },
+      {
+        "q": "Funguje metoda 25/5 při učení?",
+        "a": "Ano. Dobře se kombinuje s aktivním vybavováním: jeden blok čtení, jeden blok zkoušení sebe sama. Režim učení ve FocusKept k tomu přidává vysvětlení Feynmanovou metodou a rozložené opakování."
+      }
+    ],
+    "seoTitle": "Časovač soustředění 25/5: metoda 25 minut vysvětlená",
+    "seoDescription": "Používej metodu 25/5 online: 25 minut soustředění, 5 minut pauzy a dlouhá pauza po čtyřech cyklech. Zdarma časovač, návod krok za krokem a tipy."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 minut hlubokého soustředění, 17 minut skutečného odpočinku.",
+    "summary": "Metoda 52/17 střídá delší bloky soustředění s velkorysými pauzami. Hodí se pro ty, kterým je 25 minut málo na to, aby se do úkolu ponořili.",
+    "howItWorks": [
+      "52 minut pracuješ s plným soustředěním a pak na 17 minut odejdeš. Poměr vychází z dat o měření času velmi výkonných kancelářských pracovníků, kteří přirozeně pracovali v zhruba hodinových úsecích s pořádnými pauzami.",
+      "Dlouhá pauza je to hlavní: projdi se, protáhni se, napij se, podívej se z okna. Po skutečném odpočinku je dalších 52 minut stejně ostrých jako ty první."
+    ],
+    "steps": [
+      "Vyber úkol, který vyžaduje dlouhodobou pozornost.",
+      "Ztlum oznámení a 52 minut se soustřeď.",
+      "Dej si 17 minut pauzu mimo obrazovku.",
+      "Další 52minutový blok začni s čerstvou hlavou."
+    ],
+    "bestFor": [
+      "Psaní, analýzu a soustředěnou kancelářskou práci",
+      "Lidi, kterým pauzy v 25/5 přijdou moc časté",
+      "Půldenní bloky hluboké práce"
+    ],
+    "whenNotToUse": [
+      "Když je těžké vůbec začít; 25minutový blok je mírnější",
+      "Velmi krátké úkoly, které dlouhý blok nepotřebují"
+    ],
+    "faq": [
+      {
+        "q": "Je 52/17 lepší než 25/5?",
+        "a": "Ani jedna metoda není lepší pro všechny. 52/17 dává víc času se do úkolu ponořit, 25/5 usnadňuje začátek. Laboratoř ve FocusKept porovná tvá hodnocení soustředění, abys viděl, co funguje právě tobě."
+      },
+      {
+        "q": "Co dělat během 17minutové pauzy?",
+        "a": "Cokoli kromě další práce u obrazovky: pohyb, pití, odpočinek pro oči nebo trocha denního světla. Projíždění telefonu obvykle další blok ztíží."
+      },
+      {
+        "q": "Můžu čísla změnit?",
+        "a": "Časovač 52/17 drží klasický poměr. Pokud chceš vlastní délky práce a pauz, použij vlastní časovač."
+      }
+    ],
+    "seoTitle": "Metoda 52/17: 52 minut práce, 17 minut pauza",
+    "seoDescription": "Vyzkoušej metodu 52/17: 52 minut soustředěné práce a 17 minut pauzy. Online časovač zdarma a jednoduchý návod na delší bloky soustředění."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Pracuj, dokud soustředění nepoleví, a odpočívej úměrně tomu.",
+    "summary": "Flowtime nahrazuje pevný časovač stopkami. Přestaneš, když pozornost klesne, a dáš si pauzu úměrnou tomu, jak dlouho jsi pracoval.",
+    "howItWorks": [
+      "Spusť stopky a pracuj na jednom úkolu, dokud vydrží soustředění. Když cítíš, že pozornost uniká, přestaň. FocusKept navrhne pauzu v délce pětiny odpracovaného času, v rozmezí 5 až 30 minut: 40 minut práce znamená 8 minut pauzy, 2 hodiny znamenají 24 minut.",
+      "Protože o konci rozhoduješ ty, Flowtime chrání hluboký flow a zároveň zajišťuje odpočinek. Časem ti historie sezení ukáže, jak dlouho tvé přirozené soustředění vydrží."
+    ],
+    "steps": [
+      "Vyber jeden úkol a spusť stopky.",
+      "Pracuj, dokud soustředění opravdu nepoleví, ne při prvním nutkání přepnout.",
+      "Klepni na „Dát si pauzu“ a odpočívej navrženou dobu (odpracovaný čas ÷ 5, 5–30 min).",
+      "Po skončení pauzy začni znovu."
+    ],
+    "bestFor": [
+      "Tvůrčí práci a programování, kde vyrušení hodně stojí",
+      "Lidi, kteří často vynechávají pauzy v 25/5",
+      "Poznání vlastní přirozené délky soustředění"
+    ],
+    "whenNotToUse": [
+      "Když bez termínu snadno odbíháš jinam; pevný časovač dává víc struktury",
+      "Dny s pevnými časovými okny mezi schůzkami"
+    ],
+    "faq": [
+      {
+        "q": "Jak se počítá pauza ve Flowtime?",
+        "a": "FocusKept navrhne pětinu odpracovaného času, nejméně 5 a nejvýš 30 minut."
+      },
+      {
+        "q": "Co když se mi nikdy nechce přestat?",
+        "a": "I tak si dej pauzu aspoň každých 90 minut. Dlouhé úseky bez odpočinku nenápadně snižují kvalitu, i když působí produktivně."
+      },
+      {
+        "q": "Je Flowtime vhodný pro začátečníky?",
+        "a": "Pokud tě soustředěná práce baví, ano. Pokud je nejtěžší vůbec začít, začni s 25/5 a k Flowtime přejdi později."
+      }
+    ],
+    "seoTitle": "Technika Flowtime: časovač pro pružné soustředění",
+    "seoDescription": "U techniky Flowtime pracuješ, dokud soustředění nepoleví, a pak si dáš úměrnou pauzu. Stopky zdarma s automatickým návrhem pauzy."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "Jeden 90minutový blok pro tvou nejnáročnější práci.",
+    "summary": "Deep Work 90 ti dá jediné nerušené 90minutové sezení a po něm 20 minut pauzy — přesně na délku přirozeného cyklu pozornosti.",
+    "howItWorks": [
+      "U mnoha lidí soustředění stoupá a klesá v cyklech zhruba po hodině a půl. 90minutový blok využije celý cyklus na těžkou a smysluplnou práci a 20minutová pauza ti pak umožní zotavit se před dalším.",
+      "Ber ten blok jako důležitou schůzku sám se sebou: úkol si vyber předem, všechno ostatní zavři a ten čas si chraň. Jeden nebo dva takové bloky denně dokážou posunout i ty největší projekty."
+    ],
+    "steps": [
+      "Předem rozhodni, který úkol si zaslouží nejhlubší soustředění.",
+      "Zavři e-mail a chat, ztlum telefon a spusť 90minutový časovač.",
+      "Až do konce časovače pracuj jen na tomto úkolu.",
+      "Než začneš cokoli dalšího náročného, dej si celých 20 minut pauzy."
+    ],
+    "bestFor": [
+      "Psaní, výzkum, design a složité programování",
+      "Nejdůležitější úkol dne",
+      "Rána nebo jiné chvíle plné energie"
+    ],
+    "whenNotToUse": [
+      "Když chybí energie nebo tě často něco vyrušuje; začni kratšími bloky",
+      "Mělké úkoly jako e-maily nebo administrativa"
+    ],
+    "faq": [
+      {
+        "q": "Dá se opravdu soustředit 90 minut?",
+        "a": "Chce to cvik. Začni bloky na 50–60 minut a prodlužuj je, jak bude návyk sílit. Hodnocení po každém sezení ukáže, jak to šlo."
+      },
+      {
+        "q": "Kolik bloků hluboké práce denně?",
+        "a": "Pro většinu lidí jsou dva až tři víc než dost. Zbytek dne věnuj lehčí práci."
+      },
+      {
+        "q": "Co se počítá jako hluboká práce?",
+        "a": "Práce, která vyžaduje plnou pozornost a vytváří skutečnou hodnotu, třeba psaní, řešení problémů nebo učení se něčemu obtížnému."
+      }
+    ],
+    "seoTitle": "Časovač Deep Work: 90minutová sezení soustředění",
+    "seoDescription": "Naplánuj si 90minutová sezení hluboké práce s 20minutovými pauzami. Časovač zdarma a návod na soustředěnou práci bez rušení na tom, na čem záleží."
+  },
+  "custom": {
+    "name": "Vlastní časovač",
+    "tagline": "Tvoje vlastní délky práce a pauz, uložené jako předvolby.",
+    "summary": "Vlastní časovač ti umožní nastavit libovolný pracovní blok, krátkou i dlouhou pauzu a počet cyklů a uložit až pět předvoleb.",
+    "howItWorks": [
+      "Ne každý úkol sedí na slavný poměr. S vlastním časovačem si vybereš, jak dlouho pracovat (1–180 minut), jak dlouho odpočívat a po kolika blocích si dát dlouhou pauzu.",
+      "Oblíbené kombinace si ulož jako předvolby, abys je měl na jedno klepnutí, třeba „Čtení 40/10“ nebo „Příprava na zkoušku 30/5“."
+    ],
+    "steps": [
+      "Nastav pracovní blok, krátkou pauzu, dlouhou pauzu a cykly.",
+      "Pokud chceš, ulož kombinaci jako předvolbu (nejvýš pět).",
+      "Spusť časovač a drž se rytmu, který sis navrhl."
+    ],
+    "bestFor": [
+      "Experimentování a hledání vlastního rytmu",
+      "Opakující se rutiny s pevným tvarem",
+      "Přizpůsobení délce hodiny, cvičení nebo zkoušky"
+    ],
+    "whenNotToUse": [
+      "Když nevíš, kde začít; zkus nejdřív 25/5 a uprav to později"
+    ],
+    "faq": [
+      {
+        "q": "Kolik předvoleb můžu uložit?",
+        "a": "Až pět. Upravit nebo smazat je můžeš v nastavení."
+      },
+      {
+        "q": "Jak poznám, které nastavení funguje nejlépe?",
+        "a": "Po každém sezení ohodnoť své soustředění. Laboratoř porovná hodnocení napříč technikami a délkami."
+      },
+      {
+        "q": "Kterou technikou začít?",
+        "a": "Pokud nemáš preferenci, používej týden 25/5. Pak si podle hodnocení soustředění uprav délky práce a pauz ve vlastní předvolbě."
+      }
+    ],
+    "seoTitle": "Vlastní časovač soustředění s předvolbami",
+    "seoDescription": "Vytvoř si vlastní časovač soustředění: zvol délky práce a pauz, dlouhé pauzy a cykly a ulož si předvolby. Zdarma a jednoduše."
+  },
+  "timeboxing": {
+    "name": "Timeboxing",
+    "tagline": "Dej úkolu pevný časový rámec a pak se rozhodni.",
+    "summary": "Timeboxing dává každému úkolu pevný časový rozpočet. Když timebox skončí, rozhodneš se: hotovo, jednou prodloužit, nebo odložit na později.",
+    "howItWorks": [
+      "Místo práce, dokud úkol není hotový, předem rozhodneš, kolik času si zaslouží, třeba 30 minut na první verzi zprávy. Limit tě přiměje soustředit se na podstatné a nedovolí perfekcionismu sníst celý den.",
+      "Když timebox skončí, FocusKept se zeptá: označit jako hotové, jednou prodloužit o 25 % timeboxu, nebo úkol odložit. Každá minuta nad původní timebox se zaznamená jako přetažení, takže uvidíš, jak dobře odhaduješ."
+    ],
+    "steps": [
+      "Vyber úkol a rozhodni, kolik minut si zaslouží.",
+      "Spusť timebox a pracuj jen na tomto úkolu.",
+      "Když čas vyprší, zvol: hotovo, jednou prodloužit (+25 %), nebo odložit.",
+      "Sleduj přetažení ve statistikách a zpřesňuj odhady."
+    ],
+    "bestFor": [
+      "Úkoly, které se roztáhnou na všechen dostupný čas",
+      "Perfekcionisty a věčné vylepšovatele",
+      "Plánování dne s mnoha různými úkoly"
+    ],
+    "whenNotToUse": [
+      "Otevřené zkoumání s neznámým výsledkem",
+      "Učební sezení, která potřebují opakované cykly"
+    ],
+    "faq": [
+      {
+        "q": "Co když to nestihnu?",
+        "a": "Můžeš jednou prodloužit o čtvrtinu timeboxu, nebo úkol odložit. Obojí je v pořádku; jde o vědomé rozhodnutí."
+      },
+      {
+        "q": "Jak dlouhý má timebox být?",
+        "a": "U většiny úkolů 15 až 90 minut. Kratší timeboxy vytvářejí naléhavost, delší se hodí pro větší kusy práce."
+      },
+      {
+        "q": "Co je přetažení?",
+        "a": "Čas strávený nad rámec původního timeboxu. Trvale vysoké přetažení znamená, že tvoje odhady jsou příliš optimistické."
+      }
+    ],
+    "seoTitle": "Timeboxing: časovač a vysvětlení techniky",
+    "seoDescription": "Nauč se timeboxing: dej každému úkolu pevný čas a pak dokonči, jednou prodluž, nebo přeplánuj. Časovač zdarma, který sleduje odhady i přetažení."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Vysvětli to jednoduše. Zjisti, čemu opravdu rozumíš.",
+    "summary": "Feynmanova technika ověřuje porozumění tím, že téma vysvětlíš jednoduchými slovy, jako by poslouchalo dvanáctileté dítě. Mezery ve vysvětlení ukážou, co se učit dál.",
+    "howItWorks": [
+      "Technika nese jméno fyzika Richarda Feynmana a je prostá: po nastudování tématu napiš vysvětlení běžnými slovy a krátkými větami, jako bys ho učil zvídavé dvanáctileté dítě. Odborný žargon je varovný signál, protože často zakrývá mezeru.",
+      "Kde se zasekneš nebo začneš mlžit, vrať se ke zdroji, doplň mezeru a znovu zjednoduš. Ve FocusKept končí každé učební sezení vysvětlením Feynmanovou metodou; AI pak upozorní na mezery a chyby a promění vysvětlení v otázky k opakování."
+    ],
+    "steps": [
+      "Nastuduj téma ze svých materiálů.",
+      "Zavři zdroj a vysvětli téma jednoduchými slovy, jako dvanáctiletému dítěti.",
+      "Označ místa, kde přišlo zaseknutí nebo žargon.",
+      "Vrať se ke zdroji a tyto mezery doplň.",
+      "Zjednodušuj vysvětlení, dokud nebude plynout."
+    ],
+    "bestFor": [
+      "Pojmy, teorie a témata typu „jak to funguje“",
+      "Ověření skutečného porozumění před zkouškou",
+      "Proměnu přečteného v trvalé znalosti"
+    ],
+    "whenNotToUse": [
+      "Čisté memorování, třeba slovíček nebo letopočtů; použij aktivní vybavování nebo rozložené opakování",
+      "Dovednosti, které potřebují spíš praxi než vysvětlování"
+    ],
+    "faq": [
+      {
+        "q": "Proč to vysvětlovat dvanáctiletému dítěti?",
+        "a": "Dítě žargon nepřijme, takže musíš vědět, co slova znamenají. Jednoduchý jazyk rychle odhalí mlhavé porozumění."
+      },
+      {
+        "q": "Musím to říkat nahlas?",
+        "a": "Psaní funguje stejně dobře a zanechá něco, k čemu se dá vrátit. Ve FocusKept se tvoje vysvětlení stane jádrem karty znalostí."
+      },
+      {
+        "q": "Co AI kontroluje?",
+        "a": "Hledá chybějící části a chyby, dá hodnocení srozumitelnosti a navrhne jednodušší verzi. Rozhoduješ ty: všechno upravuješ a schvaluješ."
+      },
+      {
+        "q": "Jak dlouhé má vysvětlení být?",
+        "a": "Ideální je pár jasných odstavců. FocusKept vyžaduje alespoň 80 znaků a přijme až 6 000."
+      }
+    ],
+    "seoTitle": "Feynmanova technika: uč se tím, že vysvětluješ",
+    "seoDescription": "Jak používat Feynmanovu techniku: vysvětli téma jednoduše, najdi mezery a doplň je. Návod zdarma se zpětnou vazbou od AI a otázkami k opakování."
+  },
+  "active-recall": {
+    "name": "Aktivní vybavování",
+    "tagline": "Vytahuj informace z paměti, místo abys je znovu četl.",
+    "summary": "Aktivní vybavování znamená zkoušet sám sebe místo opakovaného čtení. Pokaždé, když si odpověď vybavíš z paměti, příště to jde snáz.",
+    "howItWorks": [
+      "Opakované čtení působí produktivně, ale buduje hlavně pocit povědomosti, ne paměť. Aktivní vybavování to obrací: zavřeš materiál a kladeš si otázky, zapisuješ, co si pamatuješ, nebo řešíš úlohy bez nahlížení.",
+      "Právě úsilí vybavování posiluje paměť. FocusKept promění tvoje vysvětlení v otázky a položí ti je znovu 5., 10. a 30. den, takže aktivní vybavování probíhá samo."
+    ],
+    "steps": [
+      "Jednou pozorně nastuduj část materiálu.",
+      "Zavři ho a zapiš si otázky ke klíčovým myšlenkám.",
+      "Odpověz na otázky zpaměti, bez nahlížení.",
+      "Zkontroluj odpovědi a označ, co chybělo.",
+      "Znovu se uč jen ty části, které nebyly správně."
+    ],
+    "bestFor": [
+      "Přípravu na zkoušky z jakéhokoli předmětu",
+      "Fakta, definice a postupy",
+      "Aby se čas strávený učením vyplatil"
+    ],
+    "whenNotToUse": [
+      "Úplně první setkání s tématem; nejdřív pochop, pak vybavuj"
+    ],
+    "faq": [
+      {
+        "q": "Je aktivní vybavování lepší než opakované čtení?",
+        "a": "Výzkum efektu testování opakovaně ukazuje, že procvičování vybavování vede k lepšímu dlouhodobému zapamatování než opakované čtení stejného materiálu."
+      },
+      {
+        "q": "Co když si nic nepamatuji?",
+        "a": "I to je užitečná informace. Najdi odpověď a zkus to později znovu. Trocha námahy k tomu patří."
+      },
+      {
+        "q": "Jak FocusKept aktivní vybavování využívá?",
+        "a": "Každá karta znalostí má otázky a při každém opakování na ně odpovídáš dřív, než se ukáže řešení."
+      }
+    ],
+    "seoTitle": "Aktivní vybavování: metoda učení a jak ji používat",
+    "seoDescription": "Aktivní vybavování (active recall) patří k nejúčinnějším metodám učení. Nauč se zkoušet sám sebe, klást lepší otázky a pamatovat si víc."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Zapiš všechno, co si pamatuješ, a pak porovnej.",
+    "summary": "Blurting je rychlé cvičení aktivního vybavování: po učení zapíšeš všechno, co o tématu víš, a pak to porovnáš se zdrojem a najdeš, co chybí.",
+    "howItWorks": [
+      "Po bloku učení zavři poznámky a co nejrychleji zapiš všechno, co si pamatuješ, v libovolném pořadí. Se strukturou si nedělej starosti; cílem je vysypat obsah hlavy na papír.",
+      "Pak otevři zdroj a porovnej. Jinou barvou označ, co chybělo nebo nebylo správně. Právě tyto mezery jsou to, co se učit dál. Ve FocusKept průvodce rozdělí sezení na fázi „vypiš všechno“ a fázi „porovnej se zdrojem“."
+    ],
+    "steps": [
+      "Nastuduj jednu část nebo téma.",
+      "Zavři zdroj a bez přestávky zapiš všechno, co si pamatuješ.",
+      "Otevři zdroj a porovnávej řádek po řádku.",
+      "Označ, co chybí nebo nesedí.",
+      "Doplň mezery a později blurting zopakuj."
+    ],
+    "bestFor": [
+      "Opakování přednášek nebo kapitol učebnice",
+      "Předměty s mnoha propojenými fakty, jako dějepis nebo biologie",
+      "Rychlé kontroly mezi bloky učení"
+    ],
+    "whenNotToUse": [
+      "Předměty založené na řešení úloh, kde lépe fungují cvičné příklady"
+    ],
+    "faq": [
+      {
+        "q": "Musí být blurting uspořádaný?",
+        "a": "Ne. Rychlost je důležitější než pořadí. Strukturu dodáš až při porovnávání."
+      },
+      {
+        "q": "Jak se blurting liší od Feynmanovy techniky?",
+        "a": "Blurting ověřuje, co si dokážeš vybavit; Feynman ověřuje, zda rozumíš. Ve FocusKept končí každé učební sezení krokem podle Feynmana, takže máš obojí."
+      },
+      {
+        "q": "Jak často dělat blurting k jednomu tématu?",
+        "a": "Hned po učení a pak znovu o pár dní později. Rozložená opakování ve FocusKept 5., 10. a 30. den jsou přirozené chvíle, kdy se znovu vyzkoušet."
+      }
+    ],
+    "seoTitle": "Metoda blurting na opakování: krok za krokem",
+    "seoDescription": "Technika blurting: zapiš všechno, co si pamatuješ, porovnej s poznámkami a doplň mezery. Rychlá a účinná metoda opakování."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: přehled, otázky, čtení, vybavení, opakování.",
+    "summary": "SQ3R je pětikroková metoda aktivního čtení učebnic, díky které rozumíš a pamatuješ si, místo abys jen podtrhával.",
+    "howItWorks": [
+      "SQ3R je zkratka anglických slov Survey, Question, Read, Recite a Review. Nejdřív si uděláš přehled o struktuře, z nadpisů uděláš otázky, čteš, abys na ně odpověděl, odpovědi si vybavíš zpaměti a nakonec zopakuješ celou kapitolu.",
+      "Každý krok dává čtení smysl. FocusKept tě provede všemi pěti kroky jeden po druhém a v každé fázi máš místo na poznámky."
+    ],
+    "steps": [
+      "Přehled: projdi nadpisy, shrnutí a obrázky a získej celkový obraz.",
+      "Otázky: z každého nadpisu udělej otázku, na kterou chceš znát odpověď.",
+      "Čtení: čti vždy jednu část a odpověz na její otázku.",
+      "Vybavení: zavři knihu a odpověz na otázku vlastními slovy.",
+      "Opakování: na konci projdi všechny otázky a odpovědi znovu."
+    ],
+    "bestFor": [
+      "Učebnice a dlouhé kapitoly odborné literatury",
+      "Kurzy s velkým množstvím povinné četby",
+      "Studenty, kteří hodně podtrhávají, ale málo si pamatují"
+    ],
+    "whenNotToUse": [
+      "Beletrii a odpočinkové čtení",
+      "Velmi krátké texty se zjevnou strukturou"
+    ],
+    "faq": [
+      {
+        "q": "Není SQ3R pomalé?",
+        "a": "Trvá déle než rychlé proletění, ale mnohem kratší dobu než třikrát číst kapitolu před zkouškou."
+      },
+      {
+        "q": "Můžu SQ3R použít u článků na internetu?",
+        "a": "Ano. Přidej článek jako odkaz na zdroj a projdi stejných pět kroků."
+      },
+      {
+        "q": "Který krok je nejdůležitější?",
+        "a": "Vybavení. Odpovídání zpaměti mění čtení ve znalosti. Ostatní kroky tě na něj připravují."
+      }
+    ],
+    "seoTitle": "Metoda čtení SQ3R: přehled, otázky, čtení, vybavení",
+    "seoDescription": "Nauč se metodu SQ3R, abys učebnice četl aktivně a víc si pamatoval. Přehledný návod v pěti krocích s vestavěným časovačem učení."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Poznámky, klíčové otázky a shrnutí na jedné stránce.",
+    "summary": "Cornellova metoda dělí poznámky na tři části: hlavní poznámky, klíčové otázky a krátké shrnutí. Z poznámek se tak stane hotový test pro sebe.",
+    "howItWorks": [
+      "Během učení píšeš hlavní poznámky do velkého pole. Potom do postranního sloupce přidáš krátké klíčové otázky nebo hesla, která vedou ke každé myšlence. Dole celou stránku shrneš do několika vět.",
+      "Při opakování zakryj poznámky a odpovídej na klíčové otázky zpaměti. FocusKept ti během sezení nabídne stejné trojdílné rozvržení a uloží ho k sezení."
+    ],
+    "steps": [
+      "Během učení si dělej poznámky do hlavního pole.",
+      "Po učení dopiš ke každé klíčové myšlence otázku.",
+      "Dole shrň celé téma do 2–3 vět.",
+      "Opakuj tak, že zakryješ poznámky a odpovídáš na klíčové otázky."
+    ],
+    "bestFor": [
+      "Přednášky, videa a semináře",
+      "Předměty, u kterých si před zkouškou opakuješ poznámky",
+      "Proměnu poznámek v cvičné otázky"
+    ],
+    "whenNotToUse": [
+      "Velmi vizuální předměty, kde lépe fungují myšlenkové mapy nebo schémata"
+    ],
+    "faq": [
+      {
+        "q": "Kdo Cornellovu metodu vymyslel?",
+        "a": "Popsal ji v 50. letech Walter Pauk, profesor pedagogiky na Cornellově univerzitě."
+      },
+      {
+        "q": "Potřebuju speciální papír?",
+        "a": "Ne. FocusKept zobrazí tři pole přímo na obrazovce: poznámky, klíčové otázky a shrnutí."
+      },
+      {
+        "q": "Jak dlouhé má být shrnutí?",
+        "a": "Dvě nebo tři věty. Pokud stránku nejde shrnout krátce, nejspíš je potřeba část z ní projít znovu."
+      }
+    ],
+    "seoTitle": "Cornellova metoda poznámek: šablona a návod",
+    "seoDescription": "Dělej si poznámky Cornellovou metodou online: poznámky, klíčové otázky a shrnutí v jednom rozvržení. Šablona zdarma s časovačem soustředění."
+  },
+  "interleaving": {
+    "name": "Prokládané učení",
+    "tagline": "Míchej související témata, místo abys je bral jedno po druhém.",
+    "summary": "Prokládané učení (interleaving) znamená střídat během jednoho sezení dvě až čtyři související témata. Působí to těžší než učení po blocích, ale zlepšuje to schopnost zvolit správný postup.",
+    "howItWorks": [
+      "Místo dvaceti úloh jednoho typu a pak dvaceti jiného je zamícháš: A, B, C, A, C, B. Mozek musí nejdřív rozpoznat, o jaký typ problému jde — a tuhle dovednost učení po blocích nikdy netrénuje.",
+      "Ve FocusKept přidáš 2 až 4 související témata a průvodce s každým pracovním blokem přepne na další."
+    ],
+    "steps": [
+      "Vyber 2–4 související témata nebo typy úloh.",
+      "V prvním pracovním bloku se věnuj prvnímu tématu.",
+      "S každým novým blokem přejdi na další téma podle pořadí.",
+      "Všímej si rozdílů mezi tématy a toho, proč se hodí který postup."
+    ],
+    "bestFor": [
+      "Matematiku, fyziku a další předměty s řešením úloh",
+      "Jazyky: míchání různých gramatických jevů",
+      "Dovednosti, kde je nejtěžší vybrat správnou metodu"
+    ],
+    "whenNotToUse": [
+      "Když je téma úplně nové; nejdřív se nauč základy každého z nich"
+    ],
+    "faq": [
+      {
+        "q": "Proč prokládané učení působí těžší?",
+        "a": "Protože těžší je. Přepínání tě nutí pokaždé zjistit, jaký postup použít. Právě toto úsilí navíc zlepšuje dlouhodobé učení."
+      },
+      {
+        "q": "Kolik témat míchat?",
+        "a": "Dvě až čtyři související témata. Víc už bývá roztříštěné."
+      },
+      {
+        "q": "Dá se prokládané učení kombinovat s 25/5?",
+        "a": "Ano. Každý pracovní blok pokryje jedno téma a další blok přepne, což prokládanému učení dává přirozený rytmus."
+      }
+    ],
+    "seoTitle": "Prokládané učení: míchej témata a uč se víc",
+    "seoDescription": "Prokládané učení mísí související témata v jednom sezení. Zjisti, jak a kdy interleaving použít, s časovačem, který témata střídá za tebe."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Přihrádky, ve kterých karty postupují, když je umíš.",
+    "summary": "Leitnerův systém třídí kartičky do přihrádek. Správně zodpovězené karty postupují do přihrádky, která se opakuje méně často; chyba kartu vrací zpět.",
+    "howItWorks": [
+      "Systém Sebastiana Leitnera používá řadu přihrádek. Nové karty začínají v přihrádce 1, kterou opakuješ často. Každá správná odpověď posune kartu o přihrádku dál, kde přijde na řadu méně často. Špatná odpověď ji vrátí.",
+      "FocusKept uplatňuje stejný princip automaticky: každý krok opakování (5., 10. a 30. den, pak 60 dní a déle) je přihrádka. Úspěšné opakování posune kartu dál; chybná odpověď ji vrátí za 2 dny."
+    ],
+    "steps": [
+      "Vytvoř karty s otázkou na jedné straně a odpovědí na druhé.",
+      "Nejčastěji opakuj karty z první přihrádky.",
+      "Po správné odpovědi posuň kartu o přihrádku dál.",
+      "Po chybě ji vrať zpět.",
+      "Ve FocusKept prostě dělej čekající opakování: přihrádky se spravují samy."
+    ],
+    "bestFor": [
+      "Slovíčka, definice a vzorce",
+      "Dlouhodobou paměť s minimem plánování",
+      "Lidi, kteří rádi vidí svůj pokrok"
+    ],
+    "whenNotToUse": [
+      "Porozumění složitým myšlenkám; nejdřív je vysvětli Feynmanovou technikou"
+    ],
+    "faq": [
+      {
+        "q": "Jak Leitner funguje ve FocusKept?",
+        "a": "Každý krok opakování je přihrádka: 5. den, 10. den, 30. den, pak 60 dní a dál se zdvojnásobuje až na 180. Aktuální krok karty je její přihrádka."
+      },
+      {
+        "q": "Co se stane po chybné odpovědi?",
+        "a": "Karta se za 2 dny vrátí k opakování na stejném kroku. Když ho zvládneš, postupuje dál."
+      },
+      {
+        "q": "Musím karty přesouvat ručně?",
+        "a": "Ne. FocusKept naplánuje každou kartu za tebe, takže odpovídáš jen na opakování, která jsou na řadě dnes."
+      }
+    ],
+    "seoTitle": "Leitnerův systém: přihrádky s kartičkami vysvětleny",
+    "seoDescription": "Jak funguje Leitnerův systém kartiček a jak ho používat s automatickým rozloženým opakováním. Jednoduchý návod s příklady."
+  },
+  "spaced-repetition": {
+    "name": "Rozložené opakování",
+    "tagline": "Opakuj 5., 10. a 30. den, těsně předtím, než se to vytratí.",
+    "summary": "Rozložené opakování (spaced repetition) plánuje opakování v rostoucích intervalech, aby každé přišlo právě ve chvíli, kdy vzpomínka začíná blednout. Je jádrem každého učebního sezení ve FocusKept.",
+    "howItWorks": [
+      "Paměť po učení rychle slábne, ale každé úspěšné opakování zapomínání zpomalí. Když opakování rozložíš do stále delších intervalů, zapamatuješ si nejvíc s nejmenším časem stráveným opakováním.",
+      "FocusKept naplánuje každou kartu znalostí automaticky: první opakování 5. den, pak 10. a 30. den. Potom je interval 60 dní a s každým úspěchem se zdvojnásobí, nejvýš na 180 dní. Při chybné odpovědi se karta vrátí za 2 dny. První tři kroky můžeš změnit v nastavení."
+    ],
+    "steps": [
+      "Dokonči učební sezení a ulož kartu znalostí.",
+      "Nech si připomenout, když je opakování na řadě (e-mailem nebo v prohlížeči).",
+      "Odpověz zpaměti na otázky na kartě.",
+      "Úspěch: karta jde na další interval; chyba: vrátí se za 2 dny."
+    ],
+    "bestFor": [
+      "Všechno, co si chceš pamatovat měsíce, ne dny",
+      "Přípravu na zkoušky rozloženou do několika týdnů",
+      "Odborné znalosti, které používáš zřídka, ale potřebuješ je udržet"
+    ],
+    "whenNotToUse": [
+      "Biflování na zítřek; rozložené opakování funguje v řádu týdnů"
+    ],
+    "faq": [
+      {
+        "q": "Proč 5., 10. a 30. den?",
+        "a": "Jsou to jednoduché, snadno zapamatovatelné kroky, které rozloží opakování do prvního měsíce, kdy zapomínáme nejrychleji. Upravit je můžeš v nastavení."
+      },
+      {
+        "q": "Co když opakování vynechám?",
+        "a": "Karty po termínu čekají, dokud je nezopakuješ. Nic se neztratí; prostě to dožeň, až budeš mít čas."
+      },
+      {
+        "q": "Musí být opakování bezchybné?",
+        "a": "Opakování je úspěšné, když jsou všechny odpovědi správně. Částečně správná odpověď se počítá jako neúspěch, takže se karta vrátí dřív."
+      }
+    ],
+    "seoTitle": "Rozložené opakování: plán opakování, který funguje",
+    "seoDescription": "Rozložené opakování vysvětleno: opakuj 5., 10. a 30. den, pak v rostoucích intervalech. Automatická připomenutí a otázky k opakování ve FocusKept."
+  },
+  "eat-the-frog": {
+    "name": "Sněz tu žábu",
+    "tagline": "Udělej nejdřív nejtěžší a nejdůležitější úkol.",
+    "summary": "„Sněz tu žábu“ znamená vybrat ten jeden úkol, kterému by ses nejraději vyhnul, a udělat ho hned na začátku. Všechno potom jde snáz.",
+    "howItWorks": [
+      "„Žába“ je důležitý úkol, do kterého se ti nejméně chce. Když se do něj pustíš na začátku dne, kdy máš nejvíc energie, zbytek dne se toho tichého napětí zbavíš.",
+      "Ve FocusKept můžeš označit právě jednu žábu denně. Je připnutá nahoře v dnešním seznamu a nabídne se jako první sezení."
+    ],
+    "steps": [
+      "Večer předem nebo hned ráno vyber dnešní žábu: důležitou a snadno odložitelnou.",
+      "Označ ji jako žábu, aby byla v dnešku nahoře.",
+      "První sezení soustředění věnuj žábě, dřív než čemukoli jinému.",
+      "Pokračuj, dokud není hotová nebo se zřetelně nepohne."
+    ],
+    "bestFor": [
+      "Odkládání důležitých úkolů",
+      "Rána plná energie",
+      "Rušné dny, které se jinak zaplní drobnostmi"
+    ],
+    "whenNotToUse": ["Když nejtěžší úkol závisí na tom, zda má čas někdo jiný"],
+    "faq": [
+      {
+        "q": "Odkud se vzal ten název?",
+        "a": "Z rčení, které se často připisuje Marku Twainovi: pokud musíš sníst živou žábu, udělej to hned ráno. Brian Tracy z něj udělal metodu produktivity."
+      },
+      {
+        "q": "Můžu mít víc než jednu žábu?",
+        "a": "Ne, jedna denně udrží rozhodnutí jasné. Výběr nové žáby nahradí tu původní."
+      },
+      {
+        "q": "Co když je žába na jedno sezení moc velká?",
+        "a": "Rozděl ji a za dnešní žábu zvol první konkrétní krok. Nejtěžší je začít."
+      }
+    ],
+    "seoTitle": "Sněz tu žábu: nejtěžší úkol jako první",
+    "seoDescription": "Poraz prokrastinaci metodou „sněz tu žábu“: vyber jeden důležitý úkol a udělej ho jako první. Jednoduchý návod a časovač, který začíná tvou žábou."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Třiď úkoly podle naléhavosti a důležitosti.",
+    "summary": "Eisenhowerova matice třídí úkoly do čtyř kvadrantů podle naléhavosti a důležitosti, abys věděl, co udělat hned, co naplánovat, co delegovat a co vyškrtnout.",
+    "howItWorks": [
+      "Každý úkol patří do jednoho ze čtyř kvadrantů: Udělat hned (naléhavé a důležité), Naplánovat (důležité, ne naléhavé), Delegovat (naléhavé, ne důležité) a Vyškrtnout (ani jedno). Matice jasně ukáže, kdy naléhavý šum vytlačuje důležitou práci.",
+      "Ve FocusKept přetahuješ úkoly mezi kvadranty nebo je přesouváš klávesnicí. Kvadrant Vyškrtnout nabízí úkoly archivovat, aby zmizely ze seznamu."
+    ],
+    "steps": [
+      "Vypiš si otevřené úkoly.",
+      "Zařaď každý úkol do kvadrantu Udělat hned, Naplánovat, Delegovat nebo Vyškrtnout.",
+      "Začni sezení soustředění s úkolem z kvadrantu Udělat hned.",
+      "Naplánuj si čas na úkoly z kvadrantu Naplánovat, než začnou hořet.",
+      "Úkoly z kvadrantu Delegovat předej dál a ty z kvadrantu Vyškrtnout archivuj."
+    ],
+    "bestFor": [
+      "Přeplněné seznamy úkolů",
+      "Týdenní plánování",
+      "Rozlišení skutečných priorit od šumu"
+    ],
+    "whenNotToUse": ["Krátké seznamy stejně důležitých úkolů"],
+    "faq": [
+      {
+        "q": "Co když se všechno zdá naléhavé a důležité?",
+        "a": "Zeptej se, co se stane, když úkol týden počká. Pokud nic vážného, patří do kvadrantu Naplánovat."
+      },
+      {
+        "q": "Pracuji samostatně. Co s kvadrantem Delegovat?",
+        "a": "Použij ho pro úkoly, které jde automatizovat, sdružit nebo na které můžeš někoho požádat o pomoc."
+      },
+      {
+        "q": "Jak často matici přetřídit?",
+        "a": "Krátký pohled jednou denně a důkladnější revize jednou týdně udrží matici poctivou, když se blíží termíny."
+      }
+    ],
+    "seoTitle": "Eisenhowerova matice: naléhavé, nebo důležité?",
+    "seoDescription": "Stanov priority s Eisenhowerovou maticí: udělat hned, naplánovat, delegovat, nebo vyškrtnout. Nástěnka zdarma s přetahováním a časovačem soustředění."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Jedna velká věc, tři střední, pět malých. To je tvůj den.",
+    "summary": "Pravidlo 1-3-5 omezuje každý den na jeden velký úkol, tři střední a pět malých, takže plány zůstávají realistické.",
+    "howItWorks": [
+      "Většina seznamů úkolů je příliš dlouhá, než aby se daly dokončit, a každý den pak působí jako neúspěch. Pravidlo 1-3-5 omezí den na devět úkolů různé velikosti: jeden, který vyžaduje skutečné úsilí, tři, které zaberou nějaký čas, a pět rychlých.",
+      "FocusKept dá dnešnímu plánu přesně tato místa a nedovolí je přeplnit, takže vybíráš vědomě."
+    ],
+    "steps": [
+      "Vyber jeden velký úkol na dnešek.",
+      "Přidej tři střední úkoly.",
+      "Doplň pět malých úkolů.",
+      "Začni tím velkým, dokud máš nejvíc energie."
+    ],
+    "bestFor": [
+      "Realistické plánování dne",
+      "Lidi, jejichž seznamy nikdy nekončí",
+      "Rovnováhu mezi hlubokou prací a drobnými povinnostmi"
+    ],
+    "whenNotToUse": ["Dny plné schůzek nebo jediného projektu"],
+    "faq": [
+      {
+        "q": "Co když je všechno hotové dřív?",
+        "a": "Skvělé. Užij si volný čas, nebo si vezmi ještě jeden úkol ze zásobníku."
+      },
+      {
+        "q": "Jak určit velikost úkolu?",
+        "a": "Velký zabere pár hodin, střední zhruba hodinu, malý 15 minut nebo méně."
+      },
+      {
+        "q": "Dá se 1-3-5 kombinovat s jinými technikami?",
+        "a": "Ano. Z velkého úkolu udělej svou žábu a na každý úkol se soustřeď s 25/5 nebo timeboxem."
+      }
+    ],
+    "seoTitle": "Pravidlo 1-3-5: realistický seznam úkolů na každý den",
+    "seoDescription": "Naplánuj si den podle pravidla 1-3-5: jeden velký úkol, tři střední a pět malých. Plánovač zdarma s pevnými místy a časovačem soustředění."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Šest úkolů na zítřek, popořadě. Nic víc.",
+    "summary": "Metoda Ivy Lee spočívá v tom, že každý večer zapíšeš až šest úkolů na další den podle důležitosti a plníš je jeden po druhém.",
+    "howItWorks": [
+      "Na konci každého dne sepíšeš šest nejdůležitějších věcí na zítřek a seřadíš je. Další den začneš prvním a dál pokračuješ, až když je hotový. Nedokončené úkoly se přesunou na začátek seznamu dalšího dne.",
+      "FocusKept ti večer nabídne plánovací pohled na zítřek se šesti seřazenými místy a nedokončené úkoly přesune dál ve stejném pořadí."
+    ],
+    "steps": [
+      "Večer zapiš až šest úkolů na zítřek.",
+      "Seřaď je podle skutečné důležitosti.",
+      "Zítra pracuj na úkolu 1, dokud není hotový, pak přejdi na úkol 2.",
+      "Nedokončené úkoly se ve stejném pořadí přesunou na seznam dalšího dne."
+    ],
+    "bestFor": [
+      "Zakončení dne s jasným plánem",
+      "Lidi, kteří ráno ztrácejí čas rozhodováním, co dělat",
+      "Stálý pokrok v důležité práci"
+    ],
+    "whenNotToUse": [
+      "Velmi reaktivní pozice, kde se priority mění každou hodinu"
+    ],
+    "faq": [
+      {
+        "q": "Proč jen šest úkolů?",
+        "a": "Limit tě nutí vybírat. Šest stačí na produktivní den, aniž by ho přetížilo."
+      },
+      {
+        "q": "Odkud metoda Ivy Lee pochází?",
+        "a": "Poradce pro produktivitu Ivy Lee ji v roce 1918 naučil vedoucí pracovníky."
+      },
+      {
+        "q": "Co když přijde něco naléhavého?",
+        "a": "Vyřiď to a pak se vrať k seznamu ve stanoveném pořadí. Pokud naléhavé věci přicházejí pořád, plánuj na zítřek méně úkolů."
+      }
+    ],
+    "seoTitle": "Metoda Ivy Lee: naplánuj šest úkolů na zítřek",
+    "seoDescription": "Metoda Ivy Lee: každý večer zapiš šest úkolů na zítřek popořadě. Nedokončené se automaticky přesunou na další den. Plánovač a návod zdarma."
+  }
+}

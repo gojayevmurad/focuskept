@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Chính sách quyền riêng tư",
+    "updated": "Cập nhật lần cuối: 31 tháng 10, 2026",
+    "intro": "Chính sách này giải thích FocusKept thu thập dữ liệu gì, vì sao, ai giúp chúng tôi xử lý dữ liệu và bạn có những lựa chọn nào. FocusKept được vận hành bởi Murad Gojayev, Baku, Azerbaijan. Liên hệ: hello@focuskept.com.",
+    "sections": [
+      {
+        "heading": "Dữ liệu chúng tôi thu thập",
+        "paragraphs": [
+          "Dữ liệu tài khoản: tên, địa chỉ email và mật khẩu đã được băm an toàn, hoặc mã định danh tài khoản Google nếu bạn đăng nhập bằng Google.",
+          "Dữ liệu bạn tạo trong sản phẩm: phiên tập trung (phương pháp, thời lượng, điểm tập trung, ghi chú và mục tiêu), việc cần làm và dự án, chủ đề học, ghi chú, lời giải thích Feynman, câu hỏi ôn tập, câu trả lời của bạn khi ôn và kết quả, cùng các cài đặt của bạn (ngôn ngữ, múi giờ, giờ nhắc và các mục tương tự).",
+          "Dữ liệu thiết bị và thông báo: nếu bạn bật thông báo trình duyệt, địa chỉ đăng ký push mà trình duyệt cung cấp. Vì lý do bảo mật, các phiên đăng nhập lưu địa chỉ IP và thông tin nhận dạng trình duyệt (user agent).",
+          "Khi không có tài khoản, phiên và việc cần làm ở chế độ làm việc được lưu trong bộ nhớ cục bộ của trình duyệt trên thiết bị của bạn. Chúng chỉ đến máy chủ của chúng tôi nếu bạn chọn nhập sau khi đăng ký.",
+          "Phân tích không bắt buộc: chỉ khi bạn cho phép, chúng tôi mới thu thập sự kiện sử dụng ẩn danh (ví dụ một phiên hoặc lượt ôn đã hoàn thành). Chúng tôi không bao giờ gửi văn bản, lời giải thích hay câu trả lời của bạn cho bên phân tích."
+        ]
+      },
+      {
+        "heading": "Cách chúng tôi sử dụng dữ liệu",
+        "paragraphs": [
+          "Để cung cấp dịch vụ: chạy đồng hồ và thống kê, lên lịch ôn tập, gửi các lời nhắc bạn yêu cầu và giữ an toàn cho tài khoản.",
+          "Để cung cấp tính năng AI: tạo phản hồi, câu hỏi ôn tập và chấm câu trả lời từ những gì bạn viết.",
+          "Để xử lý thanh toán và quản lý gói của bạn thông qua nhà cung cấp thanh toán của chúng tôi.",
+          "Để hiểu và cải thiện sản phẩm: phân tích chỉ khi có sự đồng ý của bạn, và báo cáo lỗi đã được loại bỏ dữ liệu cá nhân ở mức có thể."
+        ]
+      },
+      {
+        "heading": "Xử lý AI bởi OpenAI",
+        "paragraphs": [
+          "Khi bạn dùng phản hồi AI, tạo câu hỏi hoặc chấm câu trả lời, chủ đề, lời giải thích, câu hỏi và câu trả lời của bạn được gửi đến OpenAI để xử lý.",
+          "Dự án của chúng tôi tại OpenAI được thiết lập để chia sẻ dữ liệu API với OpenAI; nghĩa là OpenAI có thể dùng nội dung này để cải thiện các mô hình của họ. Vui lòng không đưa thông tin cá nhân hay nhạy cảm vào lời giải thích hoặc câu trả lời.",
+          "Bạn luôn có thể dùng FocusKept mà không cần AI bằng cách tự viết câu hỏi và tự chấm câu trả lời."
+        ]
+      },
+      {
+        "heading": "Nhà cung cấp dịch vụ",
+        "paragraphs": [
+          "Chúng tôi dùng các nhà cung cấp sau để vận hành FocusKept: OpenAI (tính năng AI, xem ở trên); Resend (gửi email); Polar (thanh toán, với vai trò đơn vị bán hàng chính thức, đồng thời xử lý hóa đơn và thuế bán hàng); PostHog (phân tích sản phẩm, chỉ khi bạn đồng ý); Sentry (giám sát lỗi); Google (đăng nhập, chỉ khi bạn chọn); Cloudflare (DNS và mạng); và nhà cung cấp lưu trữ của chúng tôi Hetzner Online GmbH.",
+          "Mỗi nhà cung cấp chỉ nhận dữ liệu cần cho công việc của họ. Một số nhà cung cấp có thể xử lý dữ liệu bên ngoài quốc gia của bạn; khi cần, chúng tôi dựa vào các biện pháp bảo vệ phù hợp như điều khoản hợp đồng tiêu chuẩn."
+        ]
+      },
+      {
+        "heading": "Thời gian lưu giữ dữ liệu",
+        "paragraphs": [
+          "Chúng tôi giữ dữ liệu tài khoản và sản phẩm cho đến khi bạn xóa tài khoản. Xóa tài khoản sẽ xóa phiên, việc cần làm, thẻ, lượt ôn và cài đặt của bạn khỏi cơ sở dữ liệu của chúng tôi.",
+          "Nhật ký thông báo được xóa sau 180 ngày. Bản sao lưu được giữ trong 30 ngày rồi bị ghi đè. Hồ sơ thanh toán được Polar và chúng tôi lưu giữ trong thời gian pháp luật yêu cầu."
+        ]
+      },
+      {
+        "heading": "Lựa chọn và quyền của bạn",
+        "paragraphs": [
+          "Bạn có thể bất cứ lúc nào tải xuống toàn bộ dữ liệu từ Cài đặt (JSON và CSV), chỉnh sửa trong ứng dụng, tắt email và thông báo, rút lại sự đồng ý phân tích và xóa tài khoản.",
+          "Tùy theo nơi bạn sống, bạn cũng có thể có quyền truy cập, chỉnh sửa, hạn chế hoặc phản đối việc xử lý, và quyền khiếu nại với cơ quan bảo vệ dữ liệu. Hãy viết đến hello@focuskept.com và chúng tôi sẽ trả lời trong thời hạn luật định."
+        ]
+      },
+      {
+        "heading": "Cookie và bộ nhớ cục bộ",
+        "paragraphs": [
+          "Chúng tôi dùng cookie cần thiết để giữ bạn đăng nhập và ghi nhớ ngôn ngữ của bạn. Chúng tôi dùng bộ nhớ cục bộ của thiết bị cho đồng hồ đang chạy, cài đặt và, nếu bạn không có tài khoản, các phiên của bạn. Cookie phân tích chỉ được đặt sau khi bạn cho phép."
+        ]
+      },
+      {
+        "heading": "Trẻ em",
+        "paragraphs": [
+          "FocusKept không dành cho trẻ dưới 16 tuổi nếu không có sự đồng ý của cha mẹ hoặc người giám hộ. Nếu bạn cho rằng có trẻ em đã cung cấp dữ liệu cá nhân cho chúng tôi mà không có sự đồng ý, hãy liên hệ để chúng tôi xóa dữ liệu đó."
+        ]
+      },
+      {
+        "heading": "Thay đổi",
+        "paragraphs": [
+          "Nếu chúng tôi thay đổi chính sách này một cách đáng kể, chúng tôi sẽ cập nhật ngày ở trên và thông báo cho người dùng đã đăng nhập trong ứng dụng hoặc qua email."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Điều khoản dịch vụ",
+    "updated": "Cập nhật lần cuối: 3 tháng 11, 2026",
+    "intro": "Các điều khoản này điều chỉnh việc bạn sử dụng FocusKept, được vận hành bởi Murad Gojayev, Baku, Azerbaijan. Khi sử dụng FocusKept, bạn đồng ý với các điều khoản này.",
+    "sections": [
+      {
+        "heading": "Dịch vụ",
+        "paragraphs": [
+          "FocusKept cung cấp đồng hồ tập trung, lập kế hoạch công việc, công cụ học tập, phản hồi và câu hỏi do AI tạo, và ôn tập dựa trên lặp lại ngắt quãng. Một số tính năng cần tài khoản và một số cần gói trả phí."
+        ]
+      },
+      {
+        "heading": "Tài khoản của bạn",
+        "paragraphs": [
+          "Hãy giữ an toàn thông tin đăng nhập và báo cho chúng tôi nếu nghi ngờ bị lạm dụng. Bạn chịu trách nhiệm về hoạt động trên tài khoản của mình. Bạn phải cung cấp địa chỉ email hợp lệ."
+        ]
+      },
+      {
+        "heading": "Sử dụng được chấp nhận",
+        "paragraphs": [
+          "Không lạm dụng dịch vụ: không cố tình phá hoại hoặc làm quá tải, không thu thập dữ liệu tự động, không nội dung bất hợp pháp và không dùng tính năng AI để tạo nội dung có hại. Chúng tôi có thể tạm khóa các tài khoản vi phạm."
+        ]
+      },
+      {
+        "heading": "Tính năng AI",
+        "paragraphs": [
+          "Phản hồi, câu hỏi và chấm điểm của AI được tạo tự động và có thể không chính xác hoặc chưa đầy đủ. Chúng hỗ trợ việc học của bạn nhưng không phải lời khuyên chuyên môn. Hãy kiểm tra thông tin quan trọng với nguồn đáng tin cậy.",
+          "Gói Miễn phí và Pro có giới hạn sử dụng AI được ghi trên trang bảng giá. Chúng tôi có thể tạm thời giới hạn tính năng AI để giữ dịch vụ ổn định."
+        ]
+      },
+      {
+        "heading": "Nội dung của bạn",
+        "paragraphs": [
+          "Những gì bạn viết trong FocusKept vẫn thuộc về bạn. Bạn cho phép chúng tôi lưu trữ, xử lý, hiển thị và gửi nội dung đó đến các nhà cung cấp dịch vụ của chúng tôi (bao gồm OpenAI cho tính năng AI), chỉ trong phạm vi cần thiết để cung cấp dịch vụ cho bạn."
+        ]
+      },
+      {
+        "heading": "Gói, thanh toán và hủy",
+        "paragraphs": [
+          "Pro được bán dưới dạng gói đăng ký theo tháng hoặc theo năm thông qua Polar, đơn vị bán hàng chính thức (merchant of record) của chúng tôi. Giá được hiển thị trước khi thanh toán; có thể áp dụng thuế. Gói đăng ký tự động gia hạn cho đến khi bị hủy.",
+          "Bạn có thể hủy bất cứ lúc nào từ trang Thanh toán; Pro vẫn hoạt động đến hết kỳ đã thanh toán. Hoàn tiền tuân theo chính sách của Polar và pháp luật tại quốc gia của bạn.",
+          "Nếu gói của bạn kết thúc, thẻ và lượt ôn hiện có vẫn hoạt động; giới hạn của gói Miễn phí áp dụng cho nội dung mới."
+        ]
+      },
+      {
+        "heading": "Tên, biểu trưng và mã nguồn",
+        "paragraphs": [
+          "Tên FocusKept và biểu trưng thuộc về chúng tôi. Mọi giấy phép nguồn mở áp dụng cho mã của chúng tôi chỉ bao gồm mã: giấy phép đó không cho quyền sử dụng tên hoặc biểu trưng của chúng tôi, và các điều khoản này vẫn áp dụng cho dịch vụ FocusKept."
+        ]
+      },
+      {
+        "heading": "Khả dụng và thay đổi",
+        "paragraphs": [
+          "Chúng tôi cố gắng giữ FocusKept luôn khả dụng nhưng không thể đảm bảo dịch vụ chạy liên tục không gián đoạn. Chúng tôi có thể thay đổi hoặc ngừng tính năng; nếu thay đổi ảnh hưởng đáng kể đến tính năng trả phí, chúng tôi sẽ thông báo trước."
+        ]
+      },
+      {
+        "heading": "Chấm dứt sử dụng",
+        "paragraphs": [
+          "Bạn có thể xóa tài khoản bất cứ lúc nào trong Cài đặt. Chúng tôi có thể tạm khóa hoặc đóng các tài khoản vi phạm nghiêm trọng hoặc lặp lại các điều khoản này."
+        ]
+      },
+      {
+        "heading": "Trách nhiệm",
+        "paragraphs": [
+          "FocusKept được cung cấp “nguyên trạng”. Trong phạm vi pháp luật cho phép, chúng tôi không chịu trách nhiệm cho thiệt hại gián tiếp hay mất dữ liệu, và tổng trách nhiệm của chúng tôi giới hạn ở số tiền bạn đã trả cho chúng tôi trong 12 tháng trước khi khiếu nại. Không điều gì trong các điều khoản này hạn chế quyền của bạn theo luật bảo vệ người tiêu dùng."
+        ]
+      },
+      {
+        "heading": "Luật áp dụng và liên hệ",
+        "paragraphs": [
+          "Các điều khoản này chịu sự điều chỉnh của pháp luật Azerbaijan, không ảnh hưởng đến các quyền bắt buộc của người tiêu dùng tại quốc gia bạn cư trú. Câu hỏi: hello@focuskept.com."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Về FocusKept",
+    "intro": "FocusKept là một sản phẩm độc lập do một người tạo ra; người muốn có một nơi duy nhất để vừa tập trung vừa thật sự ghi nhớ điều mình học.",
+    "sections": [
+      {
+        "heading": "Vì sao có FocusKept",
+        "paragraphs": [
+          "Đồng hồ tập trung giúp bạn bắt đầu, nhưng quên sạch mọi thứ ngay khi phiên kết thúc. Ứng dụng thẻ ghi nhớ giúp bạn nhớ, nhưng tự viết thẻ bằng tay thì thật mệt. FocusKept kết nối cả hai: tập trung, giải thích bằng lời của bạn và để các lượt ôn tự tìm đến bạn.",
+          "FocusKept được thiết kế, xây dựng và vận hành bởi Murad Gojayev, kỹ sư phần mềm sống tại Baku, Azerbaijan. Mỗi tính năng đều dựa trên các phương pháp học đã được nghiên cứu kỹ — các khối làm việc tập trung, luyện truy hồi và lặp lại ngắt quãng — và chỉ được giữ lại nếu giúp bạn duy trì chúng dễ dàng hơn. Anh trực tiếp chịu trách nhiệm về sản phẩm, hỗ trợ và việc bảo vệ dữ liệu của bạn."
+        ]
+      },
+      {
+        "heading": "Cách chúng tôi làm việc",
+        "paragraphs": [
+          "Không có thủ thuật thiết kế lừa người dùng (dark patterns), không có con số bịa đặt. Miễn phí nghĩa là thật sự hữu ích, và Pro chi trả cho AI và thời gian cần thiết để FocusKept tiếp tục chạy và ngày càng tốt hơn.",
+          "Câu hỏi, ý tưởng hay báo lỗi: hello@focuskept.com. Mọi tin nhắn đều được một con người đọc."
+        ]
+      }
+    ]
+  }
+}

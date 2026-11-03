@@ -1,0 +1,721 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "Fokus 25 menit, istirahat 5 menit. Lalu ulangi.",
+    "summary": "Metode 25/5 membagi pekerjaan menjadi blok-blok singkat berwaktu yang dipisahkan oleh istirahat. Teknik ini membuat memulai jadi mudah dan menjaga energimu tetap stabil sepanjang hari yang panjang.",
+    "howItWorks": [
+      "Kamu berfokus pada satu tugas selama satu blok 25 menit. Selama itu kamu tidak melakukan hal lain: tidak buka email, tidak chat, tidak “lihat sebentar”. Saat timer berbunyi, berhenti dan istirahat 5 menit, meskipun kamu sedang di tengah-tengah sesuatu.",
+      "Setelah empat blok, kamu mengambil istirahat lebih panjang selama 15 hingga 30 menit. Ritme yang stabil ini mengubah niat samar seperti “belajar sepanjang sore” menjadi unit kecil yang bisa dihitung, sehingga menunda jadi lebih sulit dan kemajuan terlihat jelas. Di FocusKept, kamu bisa mengatur durasi kerja (10–60 menit), istirahat, dan jumlah putaran."
+    ],
+    "steps": [
+      "Pilih satu tugas dan tuliskan apa arti “selesai” untuk blok ini.",
+      "Mulai timer 25 menit dan kerjakan hanya tugas itu.",
+      "Jika ada gangguan yang muncul, catat lalu kembali bekerja.",
+      "Saat timer berbunyi, berhenti dan istirahat 5 menit jauh dari layar.",
+      "Setelah empat blok, ambil istirahat panjang 15–30 menit."
+    ],
+    "bestFor": [
+      "Memulai tugas yang sudah lama kamu tunda",
+      "Sesi belajar, membaca, dan mengulang materi",
+      "Hari yang penuh tugas kecil yang berulang"
+    ],
+    "whenNotToUse": [
+      "Kerja kreatif mendalam atau coding, saat 25 menit memutus alurmu; coba 52/17 atau Deep Work 90",
+      "Tugas yang waktunya ditentukan orang lain, seperti rapat atau panggilan langsung"
+    ],
+    "faq": [
+      {
+        "q": "Kenapa 25 menit?",
+        "a": "Dua puluh lima menit cukup panjang untuk kemajuan nyata dan cukup pendek sehingga terasa mudah dimulai. Ini nilai bawaan, bukan aturan: banyak orang naik ke 30–50 menit setelah kebiasaannya terbentuk."
+      },
+      {
+        "q": "Bagaimana kalau tugasnya selesai lebih cepat?",
+        "a": "Pakai sisa menitnya untuk memeriksa, merapikan, atau merencanakan langkah berikutnya. Kalau memang sudah selesai, tutup bloknya dan mulai tugas berikutnya dari awal."
+      },
+      {
+        "q": "Haruskah aku tetap istirahat saat sedang lancar?",
+        "a": "Istirahat singkat menjaga perhatianmu tetap segar selama berjam-jam. Kalau istirahat terus memutus alurmu, coba Flowtime atau blok kerja yang lebih panjang daripada melewatkannya."
+      },
+      {
+        "q": "Apakah metode 25/5 cocok untuk belajar?",
+        "a": "Ya. Teknik ini sangat cocok dipadukan dengan mengingat aktif: satu blok untuk membaca, satu blok untuk menguji diri. Mode belajar FocusKept juga menambahkan penjelasan ala Feynman dan pengulangan berjarak."
+      }
+    ],
+    "seoTitle": "Timer fokus 25/5: penjelasan metode kerja 25 menit",
+    "seoDescription": "Gunakan metode 25/5 secara online: 25 menit fokus, 5 menit istirahat, dan istirahat panjang setelah empat siklus. Timer gratis, panduan, dan tips."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 menit fokus mendalam, 17 menit istirahat sungguhan.",
+    "summary": "Metode 52/17 menggantikan blok fokus yang lebih panjang dengan istirahat yang lega. Cocok untuk kamu yang merasa 25 menit terlalu singkat untuk tenggelam dalam pekerjaan.",
+    "howItWorks": [
+      "Kamu bekerja dengan fokus penuh selama 52 menit, lalu benar-benar menjauh dari pekerjaan selama 17 menit. Rasio ini berasal dari data pelacakan waktu pekerja kantor yang sangat produktif, yang secara alami bekerja dalam blok hampir satu jam dengan istirahat yang cukup.",
+      "Istirahat panjang adalah kuncinya: jalan-jalan, peregangan, minum, lihat ke luar jendela. Kembali setelah istirahat sungguhan membuat 52 menit berikutnya setajam yang pertama."
+    ],
+    "steps": [
+      "Pilih tugas yang butuh perhatian berkelanjutan.",
+      "Matikan notifikasi dan fokus selama 52 menit.",
+      "Istirahat 17 menit jauh dari layar.",
+      "Mulai blok 52 menit berikutnya dengan pikiran segar."
+    ],
+    "bestFor": [
+      "Menulis, analisis, dan pekerjaan meja yang butuh fokus",
+      "Orang yang merasa istirahat 25/5 terlalu sering",
+      "Setengah hari kerja mendalam"
+    ],
+    "whenNotToUse": [
+      "Saat memulai saja sudah sulit; blok 25 menit lebih ringan",
+      "Tugas sangat singkat yang tidak butuh blok panjang"
+    ],
+    "faq": [
+      {
+        "q": "Apakah 52/17 lebih baik dari 25/5?",
+        "a": "Tidak ada yang lebih baik untuk semua orang. 52/17 memberi lebih banyak waktu untuk tenggelam dalam pekerjaan; 25/5 membuat memulai lebih mudah. Lab FocusKept membandingkan nilai fokusmu agar kamu bisa melihat mana yang cocok untukmu."
+      },
+      {
+        "q": "Apa yang sebaiknya dilakukan saat istirahat 17 menit?",
+        "a": "Apa saja selain menatap layar lagi: bergerak, minum, istirahatkan mata, atau cari sinar matahari. Scroll ponsel biasanya membuat blok berikutnya lebih berat."
+      },
+      {
+        "q": "Bisakah angkanya diubah?",
+        "a": "Timer 52/17 mempertahankan rasio klasiknya. Kalau ingin durasi kerja dan istirahat sendiri, gunakan timer kustom."
+      }
+    ],
+    "seoTitle": "Metode 52/17: kerja 52 menit, istirahat 17 menit",
+    "seoDescription": "Coba metode produktivitas 52/17: kerja fokus 52 menit dan istirahat 17 menit. Timer online gratis dan panduan sederhana untuk sesi fokus yang lebih panjang."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Bekerjalah selama kamu fokus, lalu istirahat sebanding.",
+    "summary": "Flowtime memakai stopwatch, bukan timer tetap. Kamu berhenti saat perhatianmu menurun, lalu istirahat sebanding dengan lama kamu bekerja.",
+    "howItWorks": [
+      "Mulai stopwatch dan kerjakan satu tugas selama kamu masih fokus. Saat perhatianmu mulai buyar, berhenti. FocusKept menyarankan istirahat seperlima dari waktu kerjamu, antara 5 dan 30 menit: kerja 40 menit berarti istirahat 8 menit, dan 2 jam berarti 24 menit.",
+      "Karena kamu sendiri yang memutuskan kapan berhenti, Flowtime melindungi kondisi tenggelam dalam kerja sekaligus memastikan kamu tetap istirahat. Seiring waktu, riwayat sesimu menunjukkan berapa lama fokus alamimu bertahan."
+    ],
+    "steps": [
+      "Pilih satu tugas dan mulai stopwatch yang menghitung maju.",
+      "Bekerjalah sampai fokusmu benar-benar menurun, bukan saat pertama kali ingin ganti tugas.",
+      "Tekan “Istirahat” dan istirahatlah selama waktu yang disarankan (waktu kerja ÷ 5, 5–30 menit).",
+      "Mulai lagi saat istirahat selesai."
+    ],
+    "bestFor": [
+      "Kerja kreatif dan coding, saat gangguan sangat mahal",
+      "Orang yang sering melewatkan istirahat 25/5",
+      "Mengenali durasi fokus alamimu"
+    ],
+    "whenNotToUse": [
+      "Saat kamu mudah teralihkan tanpa tenggat; timer tetap memberi lebih banyak struktur",
+      "Hari dengan slot waktu ketat di antara rapat"
+    ],
+    "faq": [
+      {
+        "q": "Bagaimana istirahat Flowtime dihitung?",
+        "a": "FocusKept menyarankan seperlima dari waktu kerjamu, minimal 5 dan maksimal 30 menit."
+      },
+      {
+        "q": "Bagaimana kalau aku tidak pernah ingin berhenti?",
+        "a": "Tetap istirahat setidaknya setiap 90 menit. Blok panjang tanpa istirahat diam-diam menurunkan kualitas, meskipun terasa produktif."
+      },
+      {
+        "q": "Apakah Flowtime cocok untuk pemula?",
+        "a": "Kalau kamu suka bekerja dengan fokus, ya. Kalau bagian tersulitnya adalah memulai, mulailah dengan 25/5 dan beralih ke Flowtime nanti."
+      }
+    ],
+    "seoTitle": "Teknik Flowtime: timer untuk sesi fokus fleksibel",
+    "seoDescription": "Dengan teknik Flowtime, kamu bekerja selama fokus lalu istirahat sebanding. Stopwatch gratis dengan saran waktu istirahat otomatis."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "Satu blok 90 menit untuk pekerjaan tersulitmu.",
+    "summary": "Deep Work 90 memberimu satu sesi tanpa jeda selama 90 menit, lalu istirahat 20 menit, sesuai dengan satu siklus perhatian alami.",
+    "howItWorks": [
+      "Fokus banyak orang naik turun dalam siklus sekitar satu setengah jam. Blok 90 menit memakai satu siklus penuh untuk pekerjaan sulit yang bermakna, lalu istirahat 20 menit memberi waktu pulih sebelum blok berikutnya.",
+      "Anggap blok ini sebagai janji penting dengan dirimu sendiri: tentukan tugasnya lebih dulu, tutup semua hal lain, dan lindungi waktunya. Satu atau dua blok seperti ini sehari bisa menggerakkan proyek terbesarmu."
+    ],
+    "steps": [
+      "Tentukan lebih dulu tugas mana yang layak mendapat fokus terdalammu.",
+      "Tutup email dan chat, senyapkan ponsel, dan mulai timer 90 menit.",
+      "Kerjakan hanya tugas itu sampai timer selesai.",
+      "Istirahat penuh 20 menit sebelum pekerjaan berat lainnya."
+    ],
+    "bestFor": [
+      "Menulis, riset, desain, dan coding yang rumit",
+      "Tugas terpenting hari itu",
+      "Pagi hari atau waktu lain saat energimu tinggi"
+    ],
+    "whenNotToUse": [
+      "Saat kamu lelah atau sering terganggu; mulai dengan blok yang lebih pendek",
+      "Pekerjaan dangkal seperti email atau administrasi"
+    ],
+    "faq": [
+      {
+        "q": "Apakah benar-benar bisa fokus 90 menit?",
+        "a": "Butuh latihan. Mulai dengan blok 50–60 menit dan perpanjang seiring kebiasaannya menguat. Nilai setelah tiap sesi menunjukkan bagaimana hasilnya."
+      },
+      {
+        "q": "Berapa blok kerja mendalam yang sebaiknya dalam sehari?",
+        "a": "Dua atau tiga sudah cukup untuk kebanyakan orang. Gunakan sisa hari untuk pekerjaan yang lebih ringan."
+      },
+      {
+        "q": "Apa itu kerja mendalam?",
+        "a": "Pekerjaan yang butuh perhatian penuh dan menciptakan nilai nyata, seperti menulis, memecahkan masalah, atau mempelajari hal yang sulit."
+      }
+    ],
+    "seoTitle": "Timer kerja mendalam: sesi fokus 90 menit",
+    "seoDescription": "Rencanakan sesi kerja mendalam 90 menit dengan istirahat 20 menit. Timer gratis dan panduan untuk fokus tanpa gangguan pada tugas terpenting."
+  },
+  "custom": {
+    "name": "Timer kustom",
+    "tagline": "Durasi kerja dan istirahatmu sendiri, disimpan sebagai preset.",
+    "summary": "Timer kustom memungkinkanmu mengatur durasi kerja apa pun, istirahat pendek dan panjang, serta jumlah putaran, lalu menyimpan hingga lima preset.",
+    "howItWorks": [
+      "Tidak semua tugas cocok dengan rasio yang terkenal. Dengan timer kustom, kamu memilih berapa lama bekerja (1–180 menit), berapa lama istirahat, dan setelah berapa blok kamu istirahat panjang.",
+      "Simpan kombinasi favoritmu sebagai preset agar tersedia dalam sekali ketuk, misalnya “Membaca 40/10” atau “Persiapan ujian 30/5”."
+    ],
+    "steps": [
+      "Atur durasi kerja, istirahat pendek, istirahat panjang, dan jumlah putaran.",
+      "Jika mau, simpan kombinasinya sebagai preset (hingga lima).",
+      "Mulai timer dan ikuti ritme yang kamu rancang."
+    ],
+    "bestFor": [
+      "Bereksperimen untuk menemukan ritmemu sendiri",
+      "Rutinitas berulang dengan pola tetap",
+      "Menyesuaikan dengan durasi kelas, praktikum, atau ujian"
+    ],
+    "whenNotToUse": [
+      "Saat kamu tidak tahu harus mulai dari mana; coba 25/5 dulu, lalu sesuaikan"
+    ],
+    "faq": [
+      {
+        "q": "Berapa banyak preset yang bisa disimpan?",
+        "a": "Hingga lima. Kamu bisa mengedit atau menghapusnya di Pengaturan."
+      },
+      {
+        "q": "Bagaimana tahu pengaturan mana yang paling berhasil?",
+        "a": "Nilai fokusmu setelah setiap sesi. Lab membandingkan nilaimu berdasarkan teknik dan durasi."
+      },
+      {
+        "q": "Teknik mana yang sebaiknya kucoba dulu?",
+        "a": "Kalau belum punya preferensi, mulailah dengan 25/5 selama seminggu. Lalu sesuaikan durasi kerja dan istirahat di preset kustom berdasarkan nilai fokusmu."
+      }
+    ],
+    "seoTitle": "Timer fokus kustom dengan preset",
+    "seoDescription": "Buat timer fokusmu sendiri: pilih durasi kerja dan istirahat, istirahat panjang, dan putaran, lalu simpan sebagai preset. Gratis dan sederhana."
+  },
+  "timeboxing": {
+    "name": "Kotak waktu",
+    "tagline": "Beri setiap tugas waktu tetap, lalu putuskan.",
+    "summary": "Kotak waktu (timeboxing) memberi setiap tugas anggaran waktu tetap. Saat kotaknya habis, kamu memutuskan: selesai, perpanjang sekali, atau tunda ke nanti.",
+    "howItWorks": [
+      "Daripada bekerja sampai tugas selesai, kamu memutuskan lebih dulu berapa waktu yang layak untuknya, misalnya 30 menit untuk draf laporan. Batas ini mengarahkanmu ke hal yang penting dan mencegah perfeksionisme menelan seharianmu.",
+      "Saat kotak waktu habis, FocusKept memintamu memilih: tandai selesai, perpanjang sekali sebesar 25% dari kotak, atau tunda tugasnya. Waktu yang melebihi kotak awal dicatat sebagai “waktu lebih” agar kamu bisa melihat seberapa akurat perkiraanmu."
+    ],
+    "steps": [
+      "Pilih tugas dan tentukan berapa menit yang layak untuknya.",
+      "Mulai kotak waktu dan kerjakan hanya tugas itu.",
+      "Saat waktunya habis, pilih: selesai, perpanjang sekali (+25%), atau tunda ke nanti.",
+      "Lihat waktu lebih di statistik untuk memperbaiki perkiraan berikutnya."
+    ],
+    "bestFor": [
+      "Tugas yang terus melebar sampai memenuhi semua waktu yang ada",
+      "Perfeksionis dan orang yang tak berhenti memoles",
+      "Merencanakan hari dengan tugas yang beragam"
+    ],
+    "whenNotToUse": [
+      "Eksplorasi terbuka yang hasilnya belum diketahui",
+      "Sesi belajar yang butuh beberapa putaran berulang"
+    ],
+    "faq": [
+      {
+        "q": "Bagaimana kalau tidak selesai tepat waktu?",
+        "a": "Kamu bisa memperpanjang sekali sebesar seperempat kotak atau menunda tugasnya. Keduanya sah; tujuannya adalah keputusan yang disengaja."
+      },
+      {
+        "q": "Seberapa panjang kotak waktu sebaiknya?",
+        "a": "Untuk kebanyakan tugas, 15 sampai 90 menit. Kotak pendek menciptakan rasa mendesak; kotak panjang cocok untuk tugas yang lebih besar."
+      },
+      {
+        "q": "Apa itu waktu lebih?",
+        "a": "Waktu yang terpakai melebihi kotak awal. Waktu lebih yang selalu tinggi berarti perkiraanmu terlalu optimis."
+      }
+    ],
+    "seoTitle": "Teknik kotak waktu (timeboxing): timer dan panduan",
+    "seoDescription": "Pelajari kotak waktu: beri setiap tugas waktu tetap, lalu selesaikan, perpanjang sekali, atau jadwalkan ulang. Timer gratis yang mengukur perkiraanmu."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Jelaskan dengan sederhana. Temukan apa yang benar-benar kamu pahami.",
+    "summary": "Teknik Feynman menguji pemahamanmu dengan meminta kamu menjelaskan sebuah topik dengan kata-kata sederhana, seolah untuk anak 12 tahun. Celah dalam penjelasanmu menunjukkan apa yang perlu dipelajari berikutnya.",
+    "howItWorks": [
+      "Dinamai dari fisikawan Richard Feynman, teknik ini sederhana: setelah mempelajari sebuah topik, tulis penjelasan dengan kata sehari-hari dan kalimat pendek, seolah sedang mengajari anak 12 tahun yang penasaran. Istilah teknis adalah tanda bahaya, karena sering menyembunyikan celah.",
+      "Di mana pun kamu tersendat atau berbicara samar, kembali ke sumber, isi celahnya, lalu sederhanakan lagi. Di FocusKept, setiap sesi belajar diakhiri dengan penjelasan ala Feynman; lalu AI menunjukkan celah dan kesalahan, serta mengubah penjelasanmu menjadi pertanyaan pengulangan."
+    ],
+    "steps": [
+      "Pelajari topiknya dengan sumber-sumbermu.",
+      "Tutup sumbernya dan jelaskan topiknya dengan kata sederhana, seolah untuk anak 12 tahun.",
+      "Tandai bagian yang membuatmu tersendat atau yang memakai istilah teknis.",
+      "Kembali ke sumber untuk mengisi celah tersebut.",
+      "Sederhanakan penjelasanmu sampai terasa mengalir."
+    ],
+    "bestFor": [
+      "Konsep, teori, dan topik “bagaimana cara kerjanya”",
+      "Menguji pemahaman sungguhan sebelum ujian",
+      "Mengubah bacaan menjadi pengetahuan yang bertahan"
+    ],
+    "whenNotToUse": [
+      "Hafalan murni seperti kosakata atau tanggal; gunakan mengingat aktif atau pengulangan berjarak",
+      "Keterampilan yang butuh latihan langsung, bukan penjelasan"
+    ],
+    "faq": [
+      {
+        "q": "Kenapa menjelaskan untuk anak 12 tahun?",
+        "a": "Anak tidak menerima istilah teknis, jadi kamu harus tahu arti kata-katanya. Bahasa sederhana cepat menyingkap pemahaman yang kabur."
+      },
+      {
+        "q": "Apakah harus diucapkan keras-keras?",
+        "a": "Menulis sama efektifnya dan meninggalkan sesuatu untuk diulang. Di FocusKept, penjelasanmu menjadi inti kartu pengetahuanmu."
+      },
+      {
+        "q": "Apa yang diperiksa AI?",
+        "a": "AI mencari bagian yang kurang dan kesalahan, memberi skor kejelasan, dan menyarankan versi yang lebih sederhana. Kendali tetap di tanganmu: kamu yang mengedit dan menyetujui semuanya."
+      },
+      {
+        "q": "Seberapa panjang penjelasanku sebaiknya?",
+        "a": "Beberapa paragraf yang jelas sudah ideal. FocusKept meminta minimal 80 karakter dan menerima hingga 6000."
+      }
+    ],
+    "seoTitle": "Teknik Feynman: pelajari apa pun dengan menjelaskannya",
+    "seoDescription": "Cara memakai teknik Feynman: jelaskan topik dengan sederhana, temukan celahnya, lalu isi. Panduan gratis dengan masukan AI dan pertanyaan pengulangan."
+  },
+  "active-recall": {
+    "name": "Mengingat aktif",
+    "tagline": "Tarik informasi dari ingatan, bukan membaca ulang.",
+    "summary": "Mengingat aktif berarti menguji dirimu sendiri alih-alih membaca ulang. Setiap kali kamu menarik jawaban dari ingatan, jawaban itu jadi lebih mudah diingat lain kali.",
+    "howItWorks": [
+      "Membaca ulang terasa produktif, tetapi lebih membangun rasa familier daripada ingatan. Mengingat aktif membaliknya: kamu menutup materi dan bertanya pada diri sendiri, menulis apa yang kamu ingat, atau mengerjakan soal tanpa melihat.",
+      "Usaha untuk mengingat itulah yang memperkuat ingatan. FocusKept mengubah penjelasanmu menjadi pertanyaan dan menanyakannya lagi di hari ke-5, 10, dan 30, jadi mengingat aktif terjadi dengan sendirinya."
+    ],
+    "steps": [
+      "Pelajari satu bagian materi dengan saksama, sekali saja.",
+      "Tutup materinya dan tulis pertanyaan tentang ide-ide utamanya.",
+      "Jawab dari ingatan, tanpa melihat.",
+      "Periksa jawabanmu dan tandai yang terlewat.",
+      "Baca ulang hanya bagian yang salah."
+    ],
+    "bestFor": [
+      "Persiapan ujian di mata pelajaran apa pun",
+      "Fakta, definisi, dan proses",
+      "Membuat waktu belajar benar-benar berguna"
+    ],
+    "whenNotToUse": [
+      "Saat pertama kali bertemu sebuah topik; pahami dulu, baru ingat"
+    ],
+    "faq": [
+      {
+        "q": "Apakah mengingat aktif lebih baik dari membaca ulang?",
+        "a": "Riset tentang “efek pengujian” berulang kali menunjukkan bahwa latihan mengingat menghasilkan retensi jangka panjang yang lebih baik daripada membaca ulang materi yang sama."
+      },
+      {
+        "q": "Bagaimana kalau aku tidak ingat apa pun?",
+        "a": "Itu informasi yang berguna juga. Cari jawabannya dan coba lagi nanti. Sedikit kesulitan adalah bagian dari metode ini."
+      },
+      {
+        "q": "Bagaimana FocusKept memakai mengingat aktif?",
+        "a": "Setiap kartu pengetahuan punya pertanyaan, dan setiap pengulangan memintamu menjawabnya sebelum melihat jawaban."
+      }
+    ],
+    "seoTitle": "Mengingat aktif: metode belajar dan cara memakainya",
+    "seoDescription": "Mengingat aktif (active recall) adalah metode belajar yang sangat efektif. Pelajari cara menguji diri, membuat pertanyaan yang baik, dan mengingat lebih banyak."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Tulis semua yang kamu ingat, lalu bandingkan.",
+    "summary": "Blurting adalah latihan mengingat aktif yang cepat: setelah belajar, kamu menuliskan semua yang kamu tahu tentang topiknya, lalu membandingkannya dengan sumber untuk melihat apa yang terlewat.",
+    "howItWorks": [
+      "Setelah satu blok belajar, tutup catatanmu dan tulis semua yang bisa kamu ingat, secepat mungkin, dalam urutan apa pun. Jangan pikirkan strukturnya; tujuannya adalah menumpahkan isi kepalamu ke kertas.",
+      "Lalu buka sumbernya dan bandingkan. Tandai yang kurang atau keliru dengan warna lain. Celah itulah yang persis perlu kamu pelajari berikutnya. Di FocusKept, panduan membagi sesi menjadi tahap “tumpahkan semuanya” dan “bandingkan dengan sumber”."
+    ],
+    "steps": [
+      "Pelajari satu bagian atau topik.",
+      "Tutup sumbernya dan tulis semua yang kamu ingat tanpa berhenti.",
+      "Buka sumbernya dan bandingkan baris demi baris.",
+      "Tandai yang terlewat atau keliru.",
+      "Pelajari celahnya, lalu lakukan blurting lagi nanti."
+    ],
+    "bestFor": [
+      "Mengulang materi kuliah atau bab buku pelajaran",
+      "Mata pelajaran dengan banyak fakta yang saling terhubung, seperti sejarah atau biologi",
+      "Pemeriksaan cepat di antara blok belajar"
+    ],
+    "whenNotToUse": [
+      "Mata pelajaran berbasis soal, saat latihan soal lebih efektif"
+    ],
+    "faq": [
+      {
+        "q": "Apakah blurting harus rapi?",
+        "a": "Tidak. Kecepatan lebih penting daripada urutan. Strukturnya datang belakangan, saat membandingkan."
+      },
+      {
+        "q": "Apa bedanya blurting dengan teknik Feynman?",
+        "a": "Blurting menguji apa yang bisa kamu ingat; Feynman menguji apakah kamu memahaminya. Di FocusKept, setiap sesi belajar diakhiri dengan langkah Feynman, jadi kamu mendapatkan keduanya."
+      },
+      {
+        "q": "Berapa kali sebaiknya blurting per topik?",
+        "a": "Segera setelah belajar, lalu sekali lagi beberapa hari kemudian. Pengulangan FocusKept di hari ke-5, 10, dan 30 adalah kesempatan alami untuk menguji dirimu lagi."
+      }
+    ],
+    "seoTitle": "Metode blurting untuk mengulang materi: langkah demi langkah",
+    "seoDescription": "Teknik blurting: tulis semua yang kamu ingat, bandingkan dengan catatan, dan isi celahnya. Cara mengulang materi yang cepat dan efektif."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: tinjau, bertanya, baca, ucapkan, ulas.",
+    "summary": "SQ3R adalah metode lima langkah untuk membaca buku pelajaran secara aktif, sehingga kamu memahami dan mengingat, bukan sekadar menandai teks.",
+    "howItWorks": [
+      "SQ3R adalah singkatan dari kata bahasa Inggris Survey, Question, Read, Recite, dan Review. Pertama kamu meninjau struktur bacaan, mengubah judul menjadi pertanyaan, membaca untuk menjawabnya, mengucapkan jawabannya dari ingatan, dan terakhir mengulas seluruh bab.",
+      "Setiap langkah memberi tujuan pada bacaanmu. FocusKept memandumu melewati kelima langkah satu per satu dan menyediakan tempat untuk catatan di setiap tahap."
+    ],
+    "steps": [
+      "Tinjau: lihat sekilas judul, ringkasan, dan gambar untuk menangkap gambaran besarnya.",
+      "Bertanya: ubah setiap judul menjadi pertanyaan yang ingin kamu jawab.",
+      "Baca: baca satu bagian setiap kali untuk menjawab pertanyaannya.",
+      "Ucapkan: tutup buku dan jawab pertanyaannya dengan kata-katamu sendiri.",
+      "Ulas: di akhir, lihat kembali semua pertanyaan dan jawaban."
+    ],
+    "bestFor": [
+      "Buku pelajaran dan bab nonfiksi yang panjang",
+      "Mata kuliah dengan banyak bacaan wajib",
+      "Pelajar yang banyak menandai teks tapi sedikit mengingat"
+    ],
+    "whenNotToUse": [
+      "Fiksi atau bacaan santai",
+      "Teks sangat pendek dengan struktur yang jelas"
+    ],
+    "faq": [
+      {
+        "q": "Bukankah SQ3R lambat?",
+        "a": "Memang lebih lama daripada membaca sekilas, tetapi jauh lebih cepat daripada membaca satu bab tiga kali sebelum ujian."
+      },
+      {
+        "q": "Apakah SQ3R bisa dipakai untuk artikel online?",
+        "a": "Bisa. Tambahkan artikelnya sebagai tautan sumber dan ikuti lima langkah yang sama."
+      },
+      {
+        "q": "Langkah mana yang paling penting?",
+        "a": "Mengucapkan. Menjawab dari ingatan itulah yang mengubah bacaan menjadi pengetahuan. Langkah lainnya mempersiapkanmu untuk itu."
+      }
+    ],
+    "seoTitle": "Metode membaca SQ3R: tinjau, bertanya, baca, ucapkan",
+    "seoDescription": "Pelajari metode SQ3R untuk membaca buku pelajaran secara aktif dan mengingat lebih banyak. Panduan lima langkah yang jelas dengan timer belajar bawaan."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Catatan, pertanyaan petunjuk, dan ringkasan dalam satu halaman.",
+    "summary": "Metode mencatat Cornell membagi catatanmu menjadi tiga area: catatan utama, pertanyaan petunjuk, dan ringkasan singkat, sehingga catatanmu siap dipakai untuk menguji diri.",
+    "howItWorks": [
+      "Saat belajar, kamu menulis catatan utama di area yang besar. Setelahnya, di kolom samping, kamu menulis pertanyaan petunjuk singkat atau kata kunci yang mengarah ke setiap ide. Di bagian bawah, kamu meringkas seluruh halaman dalam beberapa kalimat.",
+      "Untuk mengulang, tutup catatanmu dan jawab pertanyaan petunjuk dari ingatan. FocusKept memberimu tata letak tiga area ini selama sesi dan menyimpannya bersama sesi."
+    ],
+    "steps": [
+      "Catat di area utama sambil belajar.",
+      "Setelah belajar, tulis pertanyaan petunjuk di samping setiap ide utama.",
+      "Ringkas seluruh topik dalam 2–3 kalimat di bagian bawah.",
+      "Ulangi dengan menutup catatan dan menjawab pertanyaan petunjuk."
+    ],
+    "bestFor": [
+      "Kelas, video, dan seminar",
+      "Mata pelajaran yang catatannya kamu ulang sebelum ujian",
+      "Mengubah catatan menjadi soal latihan"
+    ],
+    "whenNotToUse": [
+      "Mata pelajaran yang sangat visual, saat peta pikiran atau diagram lebih efektif"
+    ],
+    "faq": [
+      {
+        "q": "Siapa yang menciptakan metode Cornell?",
+        "a": "Walter Pauk, pendidik di Universitas Cornell, menjelaskannya pada tahun 1950-an."
+      },
+      {
+        "q": "Apakah butuh kertas khusus?",
+        "a": "Tidak. FocusKept menampilkan ketiga area di layar: catatan, pertanyaan petunjuk, dan ringkasan."
+      },
+      {
+        "q": "Seberapa panjang ringkasannya?",
+        "a": "Dua atau tiga kalimat. Kalau kamu tidak bisa meringkas halaman secara singkat, mungkin sebagian perlu dilihat lagi."
+      }
+    ],
+    "seoTitle": "Metode mencatat Cornell: templat dan panduan",
+    "seoDescription": "Gunakan sistem catatan Cornell secara online: catatan, pertanyaan petunjuk, dan ringkasan dalam satu tata letak. Templat gratis dengan timer fokus."
+  },
+  "interleaving": {
+    "name": "Belajar selang-seling",
+    "tagline": "Campur topik yang berkaitan, bukan mempelajarinya satu per satu.",
+    "summary": "Belajar selang-seling (interleaving) berarti berganti di antara dua sampai empat topik yang berkaitan dalam satu sesi belajar. Rasanya lebih sulit daripada latihan berblok, tetapi meningkatkan kemampuanmu memilih pendekatan yang tepat.",
+    "howItWorks": [
+      "Alih-alih mengerjakan dua puluh soal satu jenis lalu dua puluh soal jenis lain, kamu mencampurnya: A, B, C, A, C, B. Otakmu harus lebih dulu mengenali jenis soal yang dihadapi; keterampilan yang tidak pernah dilatih oleh latihan berblok.",
+      "Di FocusKept, kamu menambahkan dua sampai empat topik terkait dan panduan mengganti topik di setiap blok kerja."
+    ],
+    "steps": [
+      "Pilih 2–4 topik atau jenis soal yang berkaitan.",
+      "Pelajari topik pertama di blok kerja pertama.",
+      "Di setiap blok baru, pindah ke topik berikutnya sesuai rotasi.",
+      "Perhatikan perbedaan antartopik dan kenapa tiap pendekatan cocok."
+    ],
+    "bestFor": [
+      "Matematika, fisika, dan mata pelajaran berbasis soal lainnya",
+      "Bahasa: mencampur berbagai poin tata bahasa",
+      "Keterampilan yang bagian tersulitnya adalah memilih metode yang tepat"
+    ],
+    "whenNotToUse": [
+      "Saat topiknya benar-benar baru; pelajari dasar masing-masing dulu"
+    ],
+    "faq": [
+      {
+        "q": "Kenapa belajar selang-seling terasa lebih sulit?",
+        "a": "Karena memang lebih sulit. Berganti-ganti memaksamu mengenali pendekatan mana yang dipakai setiap kali. Usaha ekstra itulah yang meningkatkan pembelajaran jangka panjang."
+      },
+      {
+        "q": "Berapa banyak topik yang sebaiknya dicampur?",
+        "a": "Dua sampai empat topik yang berkaitan. Lebih dari itu jadi tercerai-berai."
+      },
+      {
+        "q": "Bisakah belajar selang-seling digabung dengan 25/5?",
+        "a": "Bisa. Setiap blok kerja membahas satu topik dan blok berikutnya menggantinya; ini memberi ritme alami pada pencampuran."
+      }
+    ],
+    "seoTitle": "Belajar selang-seling: campur topik, belajar lebih banyak",
+    "seoDescription": "Belajar selang-seling mencampur topik terkait dalam satu sesi. Pelajari cara dan waktu memakai interleaving, dengan timer yang merotasi topik untukmu."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Kotak-kotak tempat kartu maju saat kamu sudah menguasainya.",
+    "summary": "Sistem Leitner menyusun flashcard ke dalam kotak. Kartu yang kamu jawab dengan benar pindah ke kotak yang lebih jarang diulang; jawaban salah mengembalikan kartu ke belakang.",
+    "howItWorks": [
+      "Sistem Sebastian Leitner memakai serangkaian kotak. Kartu baru mulai di kotak 1, yang sering kamu ulang. Setiap jawaban benar memajukan kartu satu kotak, sehingga kamu lebih jarang melihatnya. Jawaban salah mengembalikannya.",
+      "FocusKept menerapkan ide ini secara otomatis: setiap langkah pengulangan (hari ke-5, 10, dan 30, lalu 60 hari dan lebih) adalah sebuah kotak. Lulus pengulangan dan kartumu maju; salah menjawab satu pertanyaan dan kartu kembali dalam 2 hari."
+    ],
+    "steps": [
+      "Buat kartu dengan pertanyaan di satu sisi dan jawaban di sisi lain.",
+      "Ulangi kartu di kotak pertama paling sering.",
+      "Saat jawabanmu benar, majukan kartu satu kotak.",
+      "Saat salah, kembalikan kartunya.",
+      "Di FocusKept, cukup kerjakan pengulangan yang jatuh tempo: kotak-kotaknya diatur otomatis."
+    ],
+    "bestFor": [
+      "Kosakata, definisi, dan rumus",
+      "Ingatan jangka panjang dengan perencanaan minimal",
+      "Orang yang suka melihat kemajuannya"
+    ],
+    "whenNotToUse": [
+      "Memahami ide yang rumit; jelaskan dulu dengan teknik Feynman"
+    ],
+    "faq": [
+      {
+        "q": "Bagaimana Leitner diterapkan di FocusKept?",
+        "a": "Setiap langkah pengulangan adalah sebuah kotak: hari ke-5, ke-10, ke-30, lalu 60 hari yang berlipat dua hingga 180. Langkah kartu saat ini adalah kotaknya."
+      },
+      {
+        "q": "Apa yang terjadi kalau aku salah menjawab kartu?",
+        "a": "Kartu kembali dalam 2 hari untuk pengulangan belajar ulang di langkah yang sama. Jika lulus, kartu maju."
+      },
+      {
+        "q": "Apakah kartunya harus dipindahkan sendiri?",
+        "a": "Tidak. FocusKept menjadwalkan setiap kartu untukmu, dan kamu cukup menjawab pengulangan hari ini."
+      }
+    ],
+    "seoTitle": "Sistem Leitner: kotak flashcard dijelaskan dengan mudah",
+    "seoDescription": "Cara kerja sistem flashcard Leitner dan cara memakainya dengan pengulangan berjarak otomatis. Panduan sederhana dengan contoh."
+  },
+  "spaced-repetition": {
+    "name": "Pengulangan berjarak",
+    "tagline": "Ulangi di hari ke-5, 10, dan 30, tepat sebelum kamu lupa.",
+    "summary": "Pengulangan berjarak (spaced repetition) menjadwalkan pengulangan dengan jarak yang makin panjang, sehingga setiap pengulangan datang tepat saat ingatan mulai memudar. Inilah inti setiap sesi belajar di FocusKept.",
+    "howItWorks": [
+      "Ingatan memudar dengan cepat setelah belajar, tetapi setiap pengulangan yang berhasil memperlambat lupa. Menyebar pengulangan dengan jarak yang makin panjang memberi retensi paling besar dengan waktu pengulangan paling sedikit.",
+      "FocusKept menjadwalkan setiap kartu pengetahuan secara otomatis: pengulangan pertama di hari ke-5, lalu hari ke-10 dan ke-30. Setelah itu jaraknya menjadi 60 hari dan berlipat dua setiap kali berhasil, hingga 180 hari. Jika kamu salah menjawab, kartu kembali dalam 2 hari. Kamu bisa mengubah tiga langkah pertama di Pengaturan."
+    ],
+    "steps": [
+      "Selesaikan sesi belajar dan simpan kartu pengetahuanmu.",
+      "Dapatkan pengingat saat pengulangan jatuh tempo (lewat email atau di browser).",
+      "Jawab pertanyaan kartu dari ingatan.",
+      "Lulus berarti jarak berikutnya; gagal berarti kartu kembali dalam 2 hari."
+    ],
+    "bestFor": [
+      "Apa pun yang ingin kamu ingat berbulan-bulan, bukan hanya beberapa hari",
+      "Persiapan ujian selama beberapa minggu",
+      "Pengetahuan profesional yang jarang dipakai tapi harus tetap diingat"
+    ],
+    "whenNotToUse": [
+      "Belajar kebut semalam untuk ujian besok; pengulangan berjarak bekerja dalam hitungan minggu"
+    ],
+    "faq": [
+      {
+        "q": "Kenapa hari ke-5, 10, dan 30?",
+        "a": "Langkah-langkah ini sederhana dan mudah diingat, menyebar pengulangan di bulan pertama saat lupa terjadi paling cepat. Kamu bisa mengubahnya di Pengaturan."
+      },
+      {
+        "q": "Bagaimana kalau hari pengulangan terlewat?",
+        "a": "Kartu yang terlambat tetap jatuh tempo sampai kamu mengulangnya. Tidak ada yang hilang; kejar saja saat kamu bisa."
+      },
+      {
+        "q": "Apakah pengulangan harus sempurna?",
+        "a": "Pengulangan lulus jika semua jawaban benar. Jawaban yang benar sebagian dihitung gagal agar kartu kembali lebih cepat."
+      }
+    ],
+    "seoTitle": "Pengulangan berjarak: jadwal pengulangan yang efektif",
+    "seoDescription": "Pengulangan berjarak: ulangi di hari ke-5, 10, dan 30, lalu dengan jarak makin panjang. Pengingat otomatis dan pertanyaan pengulangan di FocusKept."
+  },
+  "eat-the-frog": {
+    "name": "Makan katak",
+    "tagline": "Kerjakan tugas tersulit dan terpentingmu lebih dulu.",
+    "summary": "“Makan katak” berarti memilih satu tugas yang paling mungkin kamu hindari dan mengerjakannya paling awal. Setelah itu, semuanya terasa lebih ringan.",
+    "howItWorks": [
+      "“Katak” adalah tugas penting yang tidak ingin kamu kerjakan. Kalau kamu menyelesaikannya di awal hari, saat energimu paling tinggi, sisa harimu bebas dari rasa cemas yang mengganjal itu.",
+      "Di FocusKept, kamu bisa menandai tepat satu katak setiap hari. Katak itu disematkan di bagian atas daftar hari ini dan disarankan sebagai sesi pertamamu."
+    ],
+    "steps": [
+      "Pilih katak hari ini malam sebelumnya atau pagi-pagi sekali: penting dan mudah dihindari.",
+      "Tandai sebagai katak agar tetap di bagian atas harimu.",
+      "Berikan sesi fokus pertamamu untuk katak, sebelum hal lain.",
+      "Terus kerjakan sampai selesai atau jelas ada kemajuan."
+    ],
+    "bestFor": [
+      "Menunda-nunda tugas penting",
+      "Pagi yang penuh energi",
+      "Hari sibuk yang kalau tidak akan terisi tugas-tugas kecil"
+    ],
+    "whenNotToUse": [
+      "Saat tugas tersulit bergantung pada ketersediaan orang lain"
+    ],
+    "faq": [
+      {
+        "q": "Dari mana nama ini berasal?",
+        "a": "Dari ungkapan yang sering dikaitkan dengan Mark Twain: kalau kamu harus makan katak hidup, lakukan pertama kali di pagi hari. Brian Tracy menjadikannya metode produktivitas."
+      },
+      {
+        "q": "Bolehkah punya lebih dari satu katak?",
+        "a": "Tidak, satu katak per hari menjaga keputusanmu tetap jelas. Memilih katak baru akan menggantikan yang sebelumnya."
+      },
+      {
+        "q": "Bagaimana kalau katakku terlalu besar untuk satu sesi?",
+        "a": "Pecah menjadi bagian kecil dan jadikan langkah konkret pertama sebagai katak hari ini. Bagian tersulit adalah memulai."
+      }
+    ],
+    "seoTitle": "Makan katak: kerjakan tugas tersulit lebih dulu",
+    "seoDescription": "Atasi kebiasaan menunda dengan metode “makan katak”: pilih satu tugas penting dan kerjakan lebih dulu. Panduan sederhana dan timer yang dimulai dengan katakmu."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Sortir tugas berdasarkan seberapa mendesak dan penting.",
+    "summary": "Matriks Eisenhower mengelompokkan tugas ke dalam empat kuadran berdasarkan tingkat mendesak dan penting, agar kamu tahu mana yang dikerjakan sekarang, dijadwalkan, didelegasikan, atau dihapus.",
+    "howItWorks": [
+      "Setiap tugas masuk ke salah satu dari empat kuadran: Kerjakan (mendesak dan penting), Jadwalkan (penting, tidak mendesak), Delegasikan (mendesak, tidak penting), dan Hapus (bukan keduanya). Matriks ini menunjukkan dengan jelas kapan kebisingan hal mendesak menyingkirkan pekerjaan penting.",
+      "Di FocusKept, kamu menyeret tugas antar kuadran atau memindahkannya dengan keyboard. Kuadran Hapus menawarkan untuk mengarsipkan tugas agar keluar dari daftarmu."
+    ],
+    "steps": [
+      "Tulis semua tugasmu yang masih terbuka.",
+      "Masukkan setiap tugas ke Kerjakan, Jadwalkan, Delegasikan, atau Hapus.",
+      "Mulai sesi fokus dengan satu tugas dari Kerjakan.",
+      "Sediakan waktu untuk tugas Jadwalkan sebelum menjadi mendesak.",
+      "Serahkan tugas Delegasikan dan arsipkan tugas Hapus."
+    ],
+    "bestFor": [
+      "Daftar tugas yang meluap",
+      "Perencanaan mingguan",
+      "Memisahkan prioritas sungguhan dari kebisingan"
+    ],
+    "whenNotToUse": ["Daftar pendek berisi tugas yang sama pentingnya"],
+    "faq": [
+      {
+        "q": "Bagaimana kalau semuanya terasa mendesak dan penting?",
+        "a": "Tanyakan apa yang terjadi kalau tugas itu menunggu seminggu. Kalau tidak ada yang serius, tempatnya di Jadwalkan."
+      },
+      {
+        "q": "Kalau bekerja sendiri, apa gunanya Delegasikan?",
+        "a": "Pakai untuk tugas yang bisa diotomatisasi, dikerjakan sekaligus dalam satu kelompok, atau dimintai bantuan orang lain."
+      },
+      {
+        "q": "Seberapa sering matriks perlu disortir ulang?",
+        "a": "Sekilas setiap hari dan tinjauan menyeluruh setiap minggu menjaga matriks tetap jujur saat tenggat makin dekat."
+      }
+    ],
+    "seoTitle": "Matriks Eisenhower: mendesak atau penting?",
+    "seoDescription": "Tentukan prioritas dengan matriks Eisenhower: kerjakan, jadwalkan, delegasikan, dan hapus. Papan seret-dan-lepas gratis dengan timer fokus bawaan."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Satu tugas besar, tiga sedang, lima kecil. Itulah harimu.",
+    "summary": "Aturan 1-3-5 membatasi setiap hari menjadi satu tugas besar, tiga tugas sedang, dan lima tugas kecil, agar rencanamu tetap realistis.",
+    "howItWorks": [
+      "Kebanyakan daftar tugas terlalu panjang untuk diselesaikan dan meninggalkan rasa gagal setiap hari. Aturan 1-3-5 membatasi hari menjadi sembilan tugas dengan ukuran berbeda: satu yang butuh usaha sungguhan, tiga yang butuh waktu, dan lima yang cepat selesai.",
+      "FocusKept memberimu persis sejumlah slot itu di rencana hari ini dan tidak membiarkanmu mengisi lebih, sehingga kamu memilih dengan sadar."
+    ],
+    "steps": [
+      "Pilih satu tugas besar untuk hari ini.",
+      "Tambahkan tiga tugas sedang.",
+      "Masukkan lima tugas kecil.",
+      "Mulai dengan tugas besar selagi energimu tinggi."
+    ],
+    "bestFor": [
+      "Perencanaan harian yang realistis",
+      "Orang yang daftarnya tidak pernah selesai",
+      "Menyeimbangkan kerja mendalam dan tugas-tugas kecil"
+    ],
+    "whenNotToUse": ["Hari yang penuh rapat atau satu proyek saja"],
+    "faq": [
+      {
+        "q": "Bagaimana kalau semuanya selesai lebih awal?",
+        "a": "Bagus sekali. Nikmati waktumu atau ambil satu tugas lagi dari daftar tunggu."
+      },
+      {
+        "q": "Bagaimana menentukan ukuran tugas?",
+        "a": "Tugas besar butuh beberapa jam, tugas sedang sekitar satu jam, dan tugas kecil 15 menit atau kurang."
+      },
+      {
+        "q": "Bisakah 1-3-5 digabung dengan teknik lain?",
+        "a": "Bisa. Jadikan tugas besar sebagai katakmu, dan fokuslah pada setiap tugas dengan 25/5 atau kotak waktu."
+      }
+    ],
+    "seoTitle": "Aturan 1-3-5: daftar tugas harian yang realistis",
+    "seoDescription": "Rencanakan harimu dengan aturan 1-3-5: satu tugas besar, tiga sedang, dan lima kecil. Perencana gratis dengan slot tetap dan timer fokus."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Enam tugas untuk besok, berurutan. Tidak lebih.",
+    "summary": "Metode Ivy Lee memintamu menulis hingga enam tugas untuk hari berikutnya setiap malam, diurutkan berdasarkan kepentingan, lalu mengerjakannya satu per satu.",
+    "howItWorks": [
+      "Di akhir setiap hari, kamu menulis dan mengurutkan enam tugas penting untuk besok. Besoknya, kamu mulai dari yang pertama dan tidak pindah ke berikutnya sampai yang itu selesai. Tugas yang belum selesai pindah ke bagian atas daftar hari berikutnya.",
+      "FocusKept memberimu tampilan perencanaan malam untuk besok dengan enam slot berurutan, dan memindahkan tugas yang belum selesai dengan urutan yang sama."
+    ],
+    "steps": [
+      "Di malam hari, tulis hingga enam tugas untuk besok.",
+      "Urutkan berdasarkan tingkat kepentingan sebenarnya.",
+      "Besok, kerjakan tugas 1 sampai selesai, lalu pindah ke tugas 2.",
+      "Tugas yang belum selesai pindah ke daftar hari berikutnya dengan urutan yang sama."
+    ],
+    "bestFor": [
+      "Mengakhiri hari dengan rencana yang jelas",
+      "Orang yang menghabiskan pagi untuk memutuskan apa yang dikerjakan",
+      "Kemajuan yang konsisten pada tugas penting"
+    ],
+    "whenNotToUse": [
+      "Peran yang sangat reaktif, saat prioritas berubah setiap jam"
+    ],
+    "faq": [
+      {
+        "q": "Kenapa hanya enam tugas?",
+        "a": "Batasan memaksamu untuk memilih. Enam tugas cukup untuk mengisi hari yang produktif tanpa membuatmu kewalahan."
+      },
+      {
+        "q": "Dari mana metode Ivy Lee berasal?",
+        "a": "Konsultan produktivitas Ivy Lee mengajarkannya kepada para eksekutif pada tahun 1918."
+      },
+      {
+        "q": "Bagaimana kalau ada hal mendesak?",
+        "a": "Tangani dulu, lalu kembali ke daftar sesuai urutan. Kalau hal mendesak sering muncul, rencanakan lebih sedikit tugas untuk besok."
+      }
+    ],
+    "seoTitle": "Metode Ivy Lee: rencanakan enam tugas untuk besok",
+    "seoDescription": "Metode Ivy Lee: setiap malam, tulis enam tugas untuk besok secara berurutan. Tugas yang belum selesai pindah otomatis. Perencana dan panduan gratis."
+  }
+}

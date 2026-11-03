@@ -1,0 +1,719 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "Tập trung 25 phút, nghỉ 5 phút. Rồi lặp lại.",
+    "summary": "Phương pháp 25/5 chia công việc thành các khối ngắn có hẹn giờ, xen kẽ bằng giờ nghỉ. Nó giúp việc bắt đầu trở nên dễ dàng và giữ năng lượng của bạn ổn định suốt một ngày dài.",
+    "howItWorks": [
+      "Bạn dành trọn một khối 25 phút cho một việc duy nhất. Trong lúc đó bạn không làm gì khác: không email, không nhắn tin, không “xem nhanh một chút”. Khi đồng hồ reo, hãy dừng lại và nghỉ 5 phút, kể cả khi đang làm dở.",
+      "Sau bốn khối, bạn nghỉ dài hơn từ 15 đến 30 phút. Nhịp đều đặn này biến một ý định mơ hồ như “học cả buổi chiều” thành những đơn vị nhỏ có thể đếm được, khiến việc trì hoãn khó hơn và tiến độ hiện rõ. Trong FocusKept, bạn có thể chỉnh thời gian làm việc (10–60 phút), giờ nghỉ và số vòng."
+    ],
+    "steps": [
+      "Chọn một việc và ghi lại “xong” nghĩa là gì trong khối này.",
+      "Bắt đầu đồng hồ 25 phút và chỉ làm đúng việc đó.",
+      "Nếu có điều gì làm bạn xao nhãng, ghi lại rồi quay về công việc.",
+      "Khi đồng hồ reo, dừng lại và nghỉ 5 phút xa màn hình.",
+      "Sau mỗi bốn khối, nghỉ dài 15–30 phút."
+    ],
+    "bestFor": [
+      "Bắt đầu những việc bạn đã trì hoãn từ lâu",
+      "Các phiên học, đọc và ôn tập",
+      "Những ngày toàn việc nhỏ lặp đi lặp lại"
+    ],
+    "whenNotToUse": [
+      "Công việc sáng tạo chuyên sâu hoặc lập trình, khi 25 phút cắt ngang mạch làm việc; hãy thử 52/17 hoặc Deep Work 90",
+      "Những việc mà người khác quyết định thời gian, như cuộc họp hay cuộc gọi trực tiếp"
+    ],
+    "faq": [
+      {
+        "q": "Tại sao lại là 25 phút?",
+        "a": "Hai mươi lăm phút đủ dài để có tiến triển thật và đủ ngắn để cảm thấy dễ bắt đầu. Đây là mặc định, không phải quy tắc: nhiều người tăng lên 30–50 phút khi đã quen."
+      },
+      {
+        "q": "Nếu xong việc sớm thì sao?",
+        "a": "Dùng số phút còn lại để rà soát, trau chuốt hoặc lên kế hoạch cho bước tiếp theo. Nếu thật sự đã xong, hãy đóng khối lại và bắt đầu việc kế tiếp từ đầu."
+      },
+      {
+        "q": "Đang vào mạch thì có nên bỏ giờ nghỉ không?",
+        "a": "Những giờ nghỉ ngắn giữ cho sự chú ý luôn tươi mới trong nhiều giờ. Nếu giờ nghỉ cứ cắt ngang mạch làm việc, hãy thử Flowtime hoặc khối làm việc dài hơn thay vì bỏ qua."
+      },
+      {
+        "q": "Phương pháp 25/5 có hiệu quả khi học không?",
+        "a": "Có. Nó kết hợp rất tốt với gợi nhớ chủ động: một khối để đọc, một khối để tự kiểm tra. Chế độ học của FocusKept còn thêm phần giải thích kiểu Feynman và lặp lại ngắt quãng."
+      }
+    ],
+    "seoTitle": "Hẹn giờ tập trung 25/5: giải thích phương pháp 25 phút",
+    "seoDescription": "Dùng phương pháp 25/5 trực tuyến: 25 phút tập trung, 5 phút nghỉ và một lần nghỉ dài sau bốn chu kỳ. Hẹn giờ miễn phí, hướng dẫn từng bước và mẹo."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 phút tập trung sâu, 17 phút nghỉ thật sự.",
+    "summary": "Phương pháp 52/17 xen kẽ các khối tập trung dài hơn với những giờ nghỉ thoải mái. Phù hợp với người thấy 25 phút là quá ngắn để đắm mình vào công việc.",
+    "howItWorks": [
+      "Bạn làm việc với sự tập trung trọn vẹn trong 52 phút, rồi rời hẳn công việc trong 17 phút. Tỷ lệ này đến từ dữ liệu theo dõi thời gian của những nhân viên văn phòng làm việc rất hiệu quả, những người tự nhiên làm theo khối gần một giờ và nghỉ ngơi đàng hoàng.",
+      "Giờ nghỉ dài mới là điểm mấu chốt: đi bộ, vươn vai, uống nước, nhìn ra cửa sổ. Quay lại sau khi nghỉ thật sự giúp 52 phút tiếp theo vẫn sắc bén như lần đầu."
+    ],
+    "steps": [
+      "Chọn một việc cần sự chú ý liên tục.",
+      "Tắt thông báo và tập trung trong 52 phút.",
+      "Nghỉ 17 phút xa màn hình.",
+      "Bắt đầu khối 52 phút tiếp theo với đầu óc tỉnh táo."
+    ],
+    "bestFor": [
+      "Viết, phân tích và công việc bàn giấy cần tập trung",
+      "Người thấy giờ nghỉ của 25/5 quá dày",
+      "Nửa ngày làm việc chuyên sâu"
+    ],
+    "whenNotToUse": [
+      "Khi chỉ riêng việc bắt đầu đã khó; khối 25 phút nhẹ nhàng hơn",
+      "Những việc rất ngắn không cần khối dài"
+    ],
+    "faq": [
+      {
+        "q": "52/17 có tốt hơn 25/5 không?",
+        "a": "Không có phương pháp nào tốt hơn cho tất cả mọi người. 52/17 cho bạn nhiều thời gian đắm chìm hơn; 25/5 giúp bắt đầu dễ hơn. Lab của FocusKept so sánh điểm tập trung của bạn để bạn thấy cách nào hợp với mình."
+      },
+      {
+        "q": "Nên làm gì trong 17 phút nghỉ?",
+        "a": "Bất cứ điều gì trừ nhìn thêm màn hình: vận động, uống nước, cho mắt nghỉ hoặc ra ngoài đón ánh nắng. Lướt điện thoại thường khiến khối tiếp theo khó hơn."
+      },
+      {
+        "q": "Có thể đổi các con số không?",
+        "a": "Đồng hồ 52/17 giữ tỷ lệ kinh điển. Nếu muốn tự đặt thời gian làm và nghỉ, hãy dùng đồng hồ tùy chỉnh."
+      }
+    ],
+    "seoTitle": "Phương pháp 52/17: làm 52 phút, nghỉ 17 phút",
+    "seoDescription": "Thử phương pháp năng suất 52/17: làm việc tập trung 52 phút và nghỉ 17 phút. Đồng hồ trực tuyến miễn phí và hướng dẫn đơn giản cho các phiên tập trung dài hơn."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Làm khi còn tập trung, rồi nghỉ tương xứng.",
+    "summary": "Flowtime dùng đồng hồ bấm giờ thay vì đồng hồ cố định. Bạn dừng khi sự chú ý giảm và nghỉ tương xứng với thời gian đã làm.",
+    "howItWorks": [
+      "Bấm đồng hồ và làm một việc chừng nào bạn còn tập trung. Khi cảm thấy sự chú ý bắt đầu trôi đi, hãy dừng lại. FocusKept đề xuất nghỉ bằng một phần năm thời gian làm việc, trong khoảng 5 đến 30 phút: làm 40 phút thì nghỉ 8 phút, làm 2 giờ thì nghỉ 24 phút.",
+      "Vì bạn tự quyết định khi nào dừng, Flowtime bảo vệ trạng thái đắm chìm sâu mà vẫn đảm bảo bạn được nghỉ. Theo thời gian, lịch sử các phiên cho bạn thấy khả năng tập trung tự nhiên của mình kéo dài bao lâu."
+    ],
+    "steps": [
+      "Chọn một việc và bấm đồng hồ đếm tiến.",
+      "Làm cho đến khi sự tập trung thật sự giảm, không phải ngay khi lần đầu muốn chuyển việc.",
+      "Nhấn “Nghỉ một lát” và nghỉ theo thời gian được đề xuất (thời gian làm ÷ 5, 5–30 phút).",
+      "Khi hết giờ nghỉ, bắt đầu lại."
+    ],
+    "bestFor": [
+      "Công việc sáng tạo và lập trình, nơi bị ngắt quãng rất tốn kém",
+      "Người hay bỏ qua giờ nghỉ của 25/5",
+      "Tìm hiểu khoảng tập trung tự nhiên của bạn"
+    ],
+    "whenNotToUse": [
+      "Khi bạn dễ xao nhãng nếu không có hạn chót; đồng hồ cố định cho nhiều khuôn khổ hơn",
+      "Những ngày có khung giờ chặt chẽ giữa các cuộc họp"
+    ],
+    "faq": [
+      {
+        "q": "Giờ nghỉ Flowtime được tính thế nào?",
+        "a": "FocusKept đề xuất một phần năm thời gian làm việc, tối thiểu 5 và tối đa 30 phút."
+      },
+      {
+        "q": "Nếu không bao giờ muốn dừng thì sao?",
+        "a": "Vẫn hãy nghỉ ít nhất mỗi 90 phút. Những khối dài không nghỉ âm thầm làm giảm chất lượng, dù cảm giác vẫn hiệu quả."
+      },
+      {
+        "q": "Flowtime có hợp với người mới không?",
+        "a": "Có, nếu bạn thích làm việc tập trung. Nếu khó nhất là việc bắt đầu, hãy khởi đầu với 25/5 rồi chuyển sang Flowtime sau."
+      }
+    ],
+    "seoTitle": "Phương pháp Flowtime: đồng hồ cho phiên tập trung linh hoạt",
+    "seoDescription": "Với Flowtime, bạn làm khi còn tập trung rồi nghỉ tương xứng. Đồng hồ bấm giờ miễn phí, tự động đề xuất thời gian nghỉ."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "Một khối 90 phút cho việc khó nhất của bạn.",
+    "summary": "Deep Work 90 cho bạn một phiên liền mạch 90 phút rồi nghỉ 20 phút, khớp với một chu kỳ chú ý tự nhiên.",
+    "howItWorks": [
+      "Sự tập trung của nhiều người lên xuống theo chu kỳ khoảng một tiếng rưỡi. Khối 90 phút dành trọn một chu kỳ cho công việc khó và có ý nghĩa, rồi 20 phút nghỉ giúp bạn hồi phục trước khối tiếp theo.",
+      "Hãy coi khối này như một cuộc hẹn quan trọng với chính mình: chọn việc từ trước, đóng mọi thứ khác và bảo vệ khoảng thời gian đó. Một hoặc hai khối như vậy mỗi ngày có thể đẩy những dự án lớn nhất của bạn đi tới."
+    ],
+    "steps": [
+      "Quyết định trước việc nào xứng đáng với sự tập trung sâu nhất của bạn.",
+      "Đóng email và tin nhắn, tắt chuông điện thoại và bắt đầu đồng hồ 90 phút.",
+      "Chỉ làm đúng việc đó cho đến khi hết giờ.",
+      "Nghỉ trọn 20 phút trước khi làm việc nặng khác."
+    ],
+    "bestFor": [
+      "Viết, nghiên cứu, thiết kế và lập trình phức tạp",
+      "Việc quan trọng nhất trong ngày",
+      "Buổi sáng hoặc những lúc nhiều năng lượng"
+    ],
+    "whenNotToUse": [
+      "Khi bạn mệt hoặc liên tục bị gián đoạn; hãy bắt đầu với khối ngắn hơn",
+      "Việc nông như email hay hành chính"
+    ],
+    "faq": [
+      {
+        "q": "Có thật sự tập trung được 90 phút không?",
+        "a": "Cần luyện tập. Bắt đầu với khối 50–60 phút và kéo dài dần khi thói quen vững hơn. Điểm chấm sau mỗi phiên cho bạn biết kết quả ra sao."
+      },
+      {
+        "q": "Mỗi ngày nên có bao nhiêu khối làm việc sâu?",
+        "a": "Với hầu hết mọi người, hai hoặc ba khối là đủ. Phần còn lại của ngày dành cho việc nhẹ hơn."
+      },
+      {
+        "q": "Làm việc sâu là gì?",
+        "a": "Công việc đòi hỏi toàn bộ sự chú ý và tạo ra giá trị thật, như viết, giải quyết vấn đề hoặc học điều khó."
+      }
+    ],
+    "seoTitle": "Đồng hồ làm việc sâu: phiên tập trung 90 phút",
+    "seoDescription": "Lên kế hoạch các phiên làm việc sâu 90 phút với 20 phút nghỉ. Đồng hồ và hướng dẫn miễn phí để tập trung không bị gián đoạn vào việc quan trọng."
+  },
+  "custom": {
+    "name": "Đồng hồ tùy chỉnh",
+    "tagline": "Thời gian làm và nghỉ của riêng bạn, lưu thành cài đặt sẵn.",
+    "summary": "Đồng hồ tùy chỉnh cho phép bạn đặt bất kỳ thời gian làm việc, giờ nghỉ ngắn và dài, số vòng, và lưu tối đa năm cài đặt sẵn.",
+    "howItWorks": [
+      "Không phải việc nào cũng vừa với một tỷ lệ nổi tiếng. Với đồng hồ tùy chỉnh, bạn chọn làm bao lâu (1–180 phút), nghỉ bao lâu và sau bao nhiêu khối thì nghỉ dài.",
+      "Lưu các tổ hợp yêu thích thành cài đặt sẵn để mở bằng một chạm, chẳng hạn “Đọc 40/10” hoặc “Ôn thi 30/5”."
+    ],
+    "steps": [
+      "Đặt thời gian làm việc, nghỉ ngắn, nghỉ dài và số vòng.",
+      "Nếu muốn, lưu tổ hợp thành cài đặt sẵn (tối đa năm).",
+      "Bắt đầu đồng hồ và theo nhịp bạn đã thiết kế."
+    ],
+    "bestFor": [
+      "Thử nghiệm để tìm nhịp của riêng bạn",
+      "Các thói quen lặp lại có khuôn cố định",
+      "Khớp với thời lượng buổi học, buổi thực hành hay kỳ thi"
+    ],
+    "whenNotToUse": [
+      "Khi bạn chưa biết bắt đầu từ đâu; hãy thử 25/5 trước rồi điều chỉnh"
+    ],
+    "faq": [
+      {
+        "q": "Có thể lưu bao nhiêu cài đặt sẵn?",
+        "a": "Tối đa năm. Bạn có thể sửa hoặc xóa chúng trong Cài đặt."
+      },
+      {
+        "q": "Làm sao biết thiết lập nào hiệu quả nhất?",
+        "a": "Chấm điểm tập trung sau mỗi phiên. Lab so sánh điểm của bạn theo phương pháp và thời lượng."
+      },
+      {
+        "q": "Nên bắt đầu với phương pháp nào?",
+        "a": "Nếu chưa có lựa chọn riêng, hãy dùng 25/5 trong một tuần. Sau đó điều chỉnh thời gian làm và nghỉ trong một cài đặt sẵn tùy chỉnh dựa trên điểm tập trung."
+      }
+    ],
+    "seoTitle": "Đồng hồ tập trung tùy chỉnh với cài đặt sẵn",
+    "seoDescription": "Tạo đồng hồ tập trung của riêng bạn: chọn thời gian làm và nghỉ, nghỉ dài, số vòng và lưu cài đặt sẵn. Miễn phí và đơn giản."
+  },
+  "timeboxing": {
+    "name": "Hộp thời gian",
+    "tagline": "Cho mỗi việc một khoảng thời gian cố định, rồi quyết định.",
+    "summary": "Hộp thời gian (timeboxing) dành cho mỗi việc một ngân sách thời gian cố định. Khi hộp kết thúc, bạn quyết định: xong, gia hạn một lần, hay để sau.",
+    "howItWorks": [
+      "Thay vì làm đến khi xong, bạn quyết định trước việc đó đáng bao nhiêu thời gian, ví dụ 30 phút cho bản nháp báo cáo. Giới hạn này hướng bạn vào điều quan trọng và ngăn chủ nghĩa hoàn hảo nuốt trọn cả ngày.",
+      "Khi hộp thời gian kết thúc, FocusKept yêu cầu bạn chọn: đánh dấu xong, gia hạn một lần thêm 25% thời lượng hộp, hoặc dời việc sang sau. Thời gian vượt quá hộp ban đầu được ghi là “thời gian vượt” để bạn thấy mình ước tính chính xác đến đâu."
+    ],
+    "steps": [
+      "Chọn một việc và quyết định nó đáng bao nhiêu phút.",
+      "Bắt đầu hộp thời gian và chỉ làm đúng việc đó.",
+      "Khi hết giờ, chọn: xong, gia hạn một lần (+25%), hoặc để sau.",
+      "Xem thời gian vượt trong thống kê để lần sau ước tính chuẩn hơn."
+    ],
+    "bestFor": [
+      "Những việc cứ phình ra lấp đầy mọi thời gian có sẵn",
+      "Người cầu toàn và người cứ chỉnh sửa mãi",
+      "Lên kế hoạch cho một ngày có nhiều loại việc"
+    ],
+    "whenNotToUse": [
+      "Khám phá mở mà chưa biết kết quả",
+      "Phiên học cần nhiều vòng lặp lại"
+    ],
+    "faq": [
+      {
+        "q": "Nếu không xong đúng giờ thì sao?",
+        "a": "Bạn có thể gia hạn một lần thêm một phần tư thời lượng hộp, hoặc dời việc sang sau. Cả hai đều ổn; mục tiêu là một quyết định có chủ đích."
+      },
+      {
+        "q": "Một hộp thời gian nên dài bao lâu?",
+        "a": "Với phần lớn công việc là từ 15 đến 90 phút. Hộp ngắn tạo cảm giác cấp bách; hộp dài hợp với việc lớn hơn."
+      },
+      {
+        "q": "Thời gian vượt là gì?",
+        "a": "Là thời gian bạn dùng vượt quá hộp ban đầu. Nếu thời gian vượt luôn cao, ước tính của bạn đang quá lạc quan."
+      }
+    ],
+    "seoTitle": "Phương pháp hộp thời gian (timeboxing): đồng hồ và hướng dẫn",
+    "seoDescription": "Hộp thời gian: cho mỗi việc một khoảng thời gian cố định, rồi hoàn thành, gia hạn một lần hoặc lên lịch lại. Đồng hồ miễn phí đo độ chính xác ước tính."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Giải thích thật đơn giản. Biết mình thực sự hiểu gì.",
+    "summary": "Phương pháp Feynman kiểm tra mức hiểu của bạn bằng cách giải thích một chủ đề bằng lời đơn giản, như giảng cho một đứa trẻ 12 tuổi. Những lỗ hổng trong lời giải thích cho bạn biết cần học gì tiếp.",
+    "howItWorks": [
+      "Được đặt theo tên nhà vật lý Richard Feynman, phương pháp này rất đơn giản: sau khi học một chủ đề, hãy viết lời giải thích bằng từ ngữ hằng ngày và câu ngắn, như đang dạy một đứa trẻ 12 tuổi tò mò. Thuật ngữ chuyên môn là dấu hiệu cảnh báo, vì nó thường che giấu chỗ chưa hiểu.",
+      "Chỗ nào bạn bị vấp hoặc nói chung chung, hãy quay lại tài liệu, lấp chỗ hổng rồi đơn giản hóa lần nữa. Trong FocusKept, mỗi phiên học đều kết thúc bằng một lời giải thích kiểu Feynman; sau đó AI chỉ ra chỗ thiếu và chỗ sai, rồi biến lời giải thích của bạn thành câu hỏi ôn tập."
+    ],
+    "steps": [
+      "Học chủ đề qua tài liệu của bạn.",
+      "Đóng tài liệu và giải thích chủ đề bằng lời đơn giản, như giảng cho đứa trẻ 12 tuổi.",
+      "Đánh dấu chỗ bạn bị vấp hoặc phải dùng thuật ngữ.",
+      "Quay lại tài liệu để lấp những chỗ hổng đó.",
+      "Đơn giản hóa lời giải thích cho đến khi đọc trôi chảy."
+    ],
+    "bestFor": [
+      "Khái niệm, lý thuyết và các chủ đề “nó hoạt động thế nào”",
+      "Kiểm tra mức hiểu thật sự trước kỳ thi",
+      "Biến điều đã đọc thành kiến thức bền lâu"
+    ],
+    "whenNotToUse": [
+      "Học thuộc thuần túy như từ vựng hay năm tháng; hãy dùng gợi nhớ chủ động hoặc lặp lại ngắt quãng",
+      "Kỹ năng cần thực hành trực tiếp hơn là giải thích"
+    ],
+    "faq": [
+      {
+        "q": "Vì sao phải giải thích cho trẻ 12 tuổi?",
+        "a": "Trẻ con không chấp nhận thuật ngữ, nên bạn buộc phải hiểu nghĩa của từ. Ngôn ngữ đơn giản nhanh chóng phơi bày chỗ hiểu mơ hồ."
+      },
+      {
+        "q": "Có cần nói thành tiếng không?",
+        "a": "Viết ra cũng hiệu quả không kém và để lại thứ để ôn. Trong FocusKept, lời giải thích của bạn trở thành cốt lõi của thẻ kiến thức."
+      },
+      {
+        "q": "AI kiểm tra những gì?",
+        "a": "AI tìm phần còn thiếu và lỗi sai, chấm điểm rõ ràng và đề xuất một phiên bản đơn giản hơn. Quyền quyết định là của bạn: bạn tự sửa và duyệt mọi thứ."
+      },
+      {
+        "q": "Lời giải thích nên dài bao nhiêu?",
+        "a": "Vài đoạn rõ ràng là lý tưởng. FocusKept yêu cầu tối thiểu 80 ký tự và chấp nhận đến 6000."
+      }
+    ],
+    "seoTitle": "Phương pháp Feynman: học mọi thứ bằng cách giải thích",
+    "seoDescription": "Cách dùng phương pháp Feynman: giải thích chủ đề thật đơn giản, tìm và lấp lỗ hổng. Hướng dẫn miễn phí kèm phản hồi AI và câu hỏi ôn tập."
+  },
+  "active-recall": {
+    "name": "Gợi nhớ chủ động",
+    "tagline": "Rút thông tin ra từ trí nhớ thay vì đọc lại.",
+    "summary": "Gợi nhớ chủ động nghĩa là tự kiểm tra thay vì đọc lại. Mỗi lần bạn rút câu trả lời ra từ trí nhớ, lần sau sẽ dễ nhớ ra hơn.",
+    "howItWorks": [
+      "Đọc lại tạo cảm giác hiệu quả, nhưng thứ nó xây dựng là sự quen mặt hơn là trí nhớ. Gợi nhớ chủ động đảo ngược điều đó: bạn đóng tài liệu và tự hỏi mình, viết ra những gì nhớ được, hoặc giải bài mà không nhìn.",
+      "Chính nỗ lực nhớ lại làm trí nhớ mạnh hơn. FocusKept biến lời giải thích của bạn thành câu hỏi và hỏi lại vào ngày 5, 10 và 30, nên việc gợi nhớ chủ động diễn ra tự nhiên."
+    ],
+    "steps": [
+      "Học kỹ một phần tài liệu, một lần.",
+      "Đóng tài liệu và viết câu hỏi về các ý chính.",
+      "Trả lời theo trí nhớ, không nhìn.",
+      "Kiểm tra câu trả lời và đánh dấu phần bỏ sót.",
+      "Chỉ đọc lại những phần bạn trả lời sai."
+    ],
+    "bestFor": [
+      "Ôn thi cho bất kỳ môn nào",
+      "Sự kiện, định nghĩa và quy trình",
+      "Tận dụng thật sự thời gian học"
+    ],
+    "whenNotToUse": [
+      "Lần đầu tiếp xúc với một chủ đề; hãy hiểu trước, rồi mới gợi nhớ"
+    ],
+    "faq": [
+      {
+        "q": "Gợi nhớ chủ động có tốt hơn đọc lại không?",
+        "a": "Các nghiên cứu về “hiệu ứng kiểm tra” nhiều lần cho thấy luyện nhớ lại giúp ghi nhớ dài hạn tốt hơn so với đọc lại cùng tài liệu."
+      },
+      {
+        "q": "Nếu không nhớ ra gì thì sao?",
+        "a": "Đó cũng là thông tin hữu ích. Hãy tra đáp án và thử lại sau. Một chút khó khăn là một phần của phương pháp."
+      },
+      {
+        "q": "FocusKept dùng gợi nhớ chủ động như thế nào?",
+        "a": "Mỗi thẻ kiến thức đều có câu hỏi, và mỗi lượt ôn yêu cầu bạn trả lời trước khi xem đáp án."
+      }
+    ],
+    "seoTitle": "Gợi nhớ chủ động: phương pháp học và cách áp dụng",
+    "seoDescription": "Gợi nhớ chủ động (active recall) là một trong những phương pháp học hiệu quả nhất. Học cách tự kiểm tra, đặt câu hỏi tốt hơn và nhớ nhiều hơn."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Viết ra mọi điều bạn nhớ, rồi đối chiếu.",
+    "summary": "Blurting là một bài luyện gợi nhớ chủ động nhanh: sau khi học, bạn viết ra mọi điều mình biết về chủ đề, rồi đối chiếu với tài liệu để xem mình bỏ sót gì.",
+    "howItWorks": [
+      "Sau một khối học, đóng ghi chú lại và viết ra mọi điều bạn nhớ được, càng nhanh càng tốt, theo thứ tự bất kỳ. Đừng bận tâm về cấu trúc; mục tiêu là trút hết những gì trong đầu ra giấy.",
+      "Sau đó mở tài liệu và đối chiếu. Đánh dấu phần còn thiếu hoặc sai bằng màu khác. Những chỗ hổng đó chính là điều bạn cần học tiếp. Trong FocusKept, phần hướng dẫn chia phiên thành giai đoạn “viết ra tất cả” và “đối chiếu với nguồn”."
+    ],
+    "steps": [
+      "Học một phần hoặc một chủ đề.",
+      "Đóng tài liệu và viết liên tục mọi điều bạn nhớ.",
+      "Mở tài liệu và đối chiếu từng dòng.",
+      "Đánh dấu phần bỏ sót hoặc viết sai.",
+      "Học lại các chỗ hổng, rồi blurting lần nữa sau đó."
+    ],
+    "bestFor": [
+      "Ôn lại bài giảng hoặc chương sách giáo khoa",
+      "Các môn có nhiều sự kiện liên kết với nhau như lịch sử hay sinh học",
+      "Kiểm tra nhanh giữa các khối học"
+    ],
+    "whenNotToUse": ["Các môn thiên về giải bài, nơi luyện tập hiệu quả hơn"],
+    "faq": [
+      {
+        "q": "Bài blurting có cần ngăn nắp không?",
+        "a": "Không. Tốc độ quan trọng hơn thứ tự. Cấu trúc sẽ hình thành sau, khi bạn đối chiếu."
+      },
+      {
+        "q": "Blurting khác phương pháp Feynman thế nào?",
+        "a": "Blurting kiểm tra những gì bạn nhớ được; Feynman kiểm tra xem bạn có hiểu hay không. Trong FocusKept, mỗi phiên học đều kết thúc bằng bước Feynman, nên bạn có cả hai."
+      },
+      {
+        "q": "Nên blurting mỗi chủ đề bao nhiêu lần?",
+        "a": "Ngay sau khi học, rồi thêm một lần vài ngày sau. Các lượt ôn ngày 5, 10 và 30 của FocusKept là dịp tự nhiên để tự kiểm tra lại."
+      }
+    ],
+    "seoTitle": "Phương pháp ôn tập blurting: hướng dẫn từng bước",
+    "seoDescription": "Kỹ thuật blurting: viết ra mọi điều bạn nhớ, đối chiếu với ghi chú và lấp chỗ hổng. Một cách ôn tập nhanh và hiệu quả."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: khảo sát, đặt câu hỏi, đọc, thuật lại, ôn lại.",
+    "summary": "SQ3R là phương pháp năm bước để đọc sách giáo khoa một cách chủ động, giúp bạn hiểu và nhớ thay vì chỉ gạch chân.",
+    "howItWorks": [
+      "SQ3R là chữ viết tắt của các từ tiếng Anh Survey, Question, Read, Recite và Review. Trước tiên bạn xem lướt cấu trúc, biến các tiêu đề thành câu hỏi, đọc để trả lời chúng, thuật lại câu trả lời theo trí nhớ, và cuối cùng ôn lại cả chương.",
+      "Mỗi bước cho việc đọc của bạn một mục đích. FocusKept dẫn bạn qua từng bước trong năm bước và cho chỗ ghi chú ở mỗi giai đoạn."
+    ],
+    "steps": [
+      "Khảo sát: xem lướt tiêu đề, tóm tắt và hình minh họa để nắm bức tranh tổng thể.",
+      "Đặt câu hỏi: biến mỗi tiêu đề thành một câu hỏi bạn muốn biết câu trả lời.",
+      "Đọc: đọc từng phần một để trả lời câu hỏi của phần đó.",
+      "Thuật lại: gấp sách lại và trả lời câu hỏi bằng lời của bạn.",
+      "Ôn lại: cuối cùng xem lại tất cả câu hỏi và câu trả lời."
+    ],
+    "bestFor": [
+      "Sách giáo khoa và các chương phi hư cấu dài",
+      "Các môn có nhiều tài liệu bắt buộc phải đọc",
+      "Người học gạch chân nhiều nhưng nhớ ít"
+    ],
+    "whenNotToUse": [
+      "Truyện hoặc đọc giải trí",
+      "Văn bản rất ngắn có cấu trúc rõ ràng"
+    ],
+    "faq": [
+      {
+        "q": "SQ3R có chậm không?",
+        "a": "Mất nhiều thời gian hơn đọc lướt, nhưng ít hơn nhiều so với đọc một chương ba lần trước kỳ thi."
+      },
+      {
+        "q": "SQ3R có dùng được cho bài viết trên mạng không?",
+        "a": "Được. Thêm bài viết làm liên kết nguồn và làm theo cùng năm bước."
+      },
+      {
+        "q": "Bước nào quan trọng nhất?",
+        "a": "Thuật lại. Trả lời theo trí nhớ mới là điều biến việc đọc thành kiến thức. Các bước khác chuẩn bị cho bước này."
+      }
+    ],
+    "seoTitle": "Phương pháp đọc SQ3R: khảo sát, câu hỏi, đọc, thuật lại",
+    "seoDescription": "Học phương pháp SQ3R để đọc sách giáo khoa chủ động và nhớ nhiều hơn. Hướng dẫn năm bước rõ ràng kèm đồng hồ học tích hợp."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Ghi chú, câu hỏi gợi ý và tóm tắt trên cùng một trang.",
+    "summary": "Phương pháp ghi chú Cornell chia ghi chú thành ba vùng: ghi chú chính, câu hỏi gợi ý và một đoạn tóm tắt ngắn, biến ghi chú thành công cụ tự kiểm tra sẵn sàng.",
+    "howItWorks": [
+      "Trong lúc học, bạn ghi chú chính vào vùng lớn. Sau đó, ở cột bên cạnh, bạn viết những câu hỏi gợi ý ngắn hoặc từ khóa dẫn đến từng ý. Ở cuối trang, bạn tóm tắt cả trang trong vài câu.",
+      "Khi ôn, hãy che phần ghi chú và trả lời các câu hỏi gợi ý theo trí nhớ. FocusKept cung cấp bố cục ba vùng này trong phiên học và lưu lại cùng phiên."
+    ],
+    "steps": [
+      "Ghi chú vào vùng chính trong lúc học.",
+      "Sau khi học, viết câu hỏi gợi ý cạnh mỗi ý chính.",
+      "Tóm tắt toàn bộ chủ đề trong 2–3 câu ở cuối trang.",
+      "Ôn bằng cách che ghi chú và trả lời các câu hỏi gợi ý."
+    ],
+    "bestFor": [
+      "Bài giảng, video và hội thảo",
+      "Các môn mà bạn ôn ghi chú trước kỳ thi",
+      "Biến ghi chú thành câu hỏi luyện tập"
+    ],
+    "whenNotToUse": [
+      "Các môn rất trực quan, nơi sơ đồ tư duy hay hình vẽ hiệu quả hơn"
+    ],
+    "faq": [
+      {
+        "q": "Ai đã tạo ra phương pháp Cornell?",
+        "a": "Walter Pauk, nhà giáo dục tại Đại học Cornell, đã mô tả phương pháp này vào những năm 1950."
+      },
+      {
+        "q": "Có cần giấy đặc biệt không?",
+        "a": "Không. FocusKept hiển thị ba vùng trên màn hình: ghi chú, câu hỏi gợi ý và tóm tắt."
+      },
+      {
+        "q": "Phần tóm tắt nên dài bao nhiêu?",
+        "a": "Hai hoặc ba câu. Nếu không tóm tắt ngắn gọn được một trang, có lẽ bạn cần xem lại một phần."
+      }
+    ],
+    "seoTitle": "Phương pháp ghi chú Cornell: mẫu và hướng dẫn",
+    "seoDescription": "Dùng hệ thống ghi chú Cornell trực tuyến: ghi chú, câu hỏi gợi ý và tóm tắt trong một bố cục. Mẫu miễn phí kèm đồng hồ tập trung."
+  },
+  "interleaving": {
+    "name": "Học xen kẽ",
+    "tagline": "Trộn các chủ đề liên quan thay vì học lần lượt từng cái.",
+    "summary": "Học xen kẽ (interleaving) nghĩa là luân phiên giữa hai đến bốn chủ đề liên quan trong cùng một phiên học. Cách này có vẻ khó hơn luyện theo khối, nhưng giúp bạn chọn đúng cách tiếp cận tốt hơn.",
+    "howItWorks": [
+      "Thay vì giải hai mươi bài cùng một dạng rồi hai mươi bài dạng khác, bạn trộn chúng lại: A, B, C, A, C, B. Não bạn phải nhận ra trước mình đang gặp dạng bài nào; kỹ năng mà luyện theo khối không bao giờ rèn được.",
+      "Trong FocusKept, bạn thêm hai đến bốn chủ đề liên quan và phần hướng dẫn đổi chủ đề ở mỗi khối làm việc."
+    ],
+    "steps": [
+      "Chọn 2–4 chủ đề hoặc dạng bài liên quan.",
+      "Học chủ đề đầu tiên trong khối làm việc đầu tiên.",
+      "Ở mỗi khối mới, chuyển sang chủ đề tiếp theo theo vòng luân phiên.",
+      "Chú ý đến sự khác biệt giữa các chủ đề và lý do mỗi cách tiếp cận phù hợp."
+    ],
+    "bestFor": [
+      "Toán, vật lý và các môn thiên về giải bài khác",
+      "Ngoại ngữ: trộn các điểm ngữ pháp khác nhau",
+      "Kỹ năng mà phần khó nhất là chọn đúng phương pháp"
+    ],
+    "whenNotToUse": [
+      "Khi chủ đề hoàn toàn mới; hãy nắm phần cơ bản của từng chủ đề trước"
+    ],
+    "faq": [
+      {
+        "q": "Vì sao học xen kẽ có cảm giác khó hơn?",
+        "a": "Vì nó thật sự khó hơn. Việc chuyển đổi buộc bạn mỗi lần đều phải nhận ra nên dùng cách nào. Chính nỗ lực thêm đó cải thiện việc học dài hạn."
+      },
+      {
+        "q": "Nên trộn bao nhiêu chủ đề?",
+        "a": "Hai đến bốn chủ đề liên quan. Nhiều hơn thì dễ bị tản mạn."
+      },
+      {
+        "q": "Có thể kết hợp học xen kẽ với 25/5 không?",
+        "a": "Có. Mỗi khối làm việc dành cho một chủ đề và khối tiếp theo đổi sang chủ đề khác; điều này tạo nhịp tự nhiên cho việc xen kẽ."
+      }
+    ],
+    "seoTitle": "Học xen kẽ: trộn chủ đề, học được nhiều hơn",
+    "seoDescription": "Học xen kẽ trộn các chủ đề liên quan trong một phiên. Tìm hiểu cách và khi nào dùng interleaving, với đồng hồ tự luân phiên chủ đề cho bạn."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Những chiếc hộp nơi thẻ tiến lên khi bạn đã thuộc.",
+    "summary": "Hệ thống Leitner sắp xếp thẻ ghi nhớ vào các hộp. Thẻ bạn trả lời đúng chuyển sang hộp ít phải ôn hơn; trả lời sai thì thẻ bị đưa trở lại.",
+    "howItWorks": [
+      "Hệ thống của Sebastian Leitner dùng một dãy hộp. Thẻ mới bắt đầu ở hộp 1, nơi bạn ôn thường xuyên. Mỗi lần trả lời đúng, thẻ tiến lên một hộp, nơi bạn gặp nó ít hơn. Trả lời sai thì thẻ bị đưa về.",
+      "FocusKept áp dụng ý tưởng này tự động: mỗi bước ôn tập (ngày 5, 10 và 30, sau đó 60 ngày và lâu hơn) là một hộp. Ôn đạt thì thẻ tiến lên; trả lời sai một câu thì thẻ quay lại sau 2 ngày."
+    ],
+    "steps": [
+      "Làm thẻ với câu hỏi ở một mặt và đáp án ở mặt kia.",
+      "Ôn thẻ ở hộp đầu tiên thường xuyên nhất.",
+      "Khi trả lời đúng, chuyển thẻ lên một hộp.",
+      "Khi trả lời sai, đưa thẻ trở lại.",
+      "Trong FocusKept, chỉ cần làm các lượt ôn đến hạn: các hộp được quản lý tự động."
+    ],
+    "bestFor": [
+      "Từ vựng, định nghĩa và công thức",
+      "Ghi nhớ dài hạn với rất ít công lên kế hoạch",
+      "Người thích nhìn thấy tiến bộ của mình"
+    ],
+    "whenNotToUse": [
+      "Hiểu các ý tưởng phức tạp; hãy giải thích chúng bằng phương pháp Feynman trước"
+    ],
+    "faq": [
+      {
+        "q": "Leitner được áp dụng trong FocusKept thế nào?",
+        "a": "Mỗi bước ôn tập là một hộp: ngày 5, ngày 10, ngày 30, sau đó từ 60 ngày tăng gấp đôi đến 180. Bước hiện tại của thẻ chính là hộp của nó."
+      },
+      {
+        "q": "Nếu trả lời sai một thẻ thì sao?",
+        "a": "Thẻ quay lại sau 2 ngày để ôn học lại ở cùng bước. Nếu đạt, thẻ sẽ tiến lên."
+      },
+      {
+        "q": "Có phải tự di chuyển thẻ không?",
+        "a": "Không. FocusKept lên lịch cho từng thẻ và bạn chỉ cần trả lời các lượt ôn hôm nay."
+      }
+    ],
+    "seoTitle": "Hệ thống Leitner: hộp thẻ ghi nhớ giải thích dễ hiểu",
+    "seoDescription": "Hệ thống thẻ ghi nhớ Leitner hoạt động thế nào và cách dùng nó với lặp lại ngắt quãng tự động. Hướng dẫn đơn giản kèm ví dụ."
+  },
+  "spaced-repetition": {
+    "name": "Lặp lại ngắt quãng",
+    "tagline": "Ôn vào ngày 5, 10 và 30, ngay trước khi bạn quên.",
+    "summary": "Lặp lại ngắt quãng (spaced repetition) xếp lịch ôn với khoảng cách tăng dần, để mỗi lượt ôn đến đúng lúc ký ức bắt đầu phai. Đây là cốt lõi của mọi phiên học trong FocusKept.",
+    "howItWorks": [
+      "Ký ức phai nhanh sau khi học, nhưng mỗi lần ôn thành công lại làm chậm quá trình quên. Trải các lượt ôn ra với khoảng cách ngày càng dài mang lại khả năng ghi nhớ cao nhất với ít thời gian ôn nhất.",
+      "FocusKept tự động lên lịch cho mỗi thẻ kiến thức: lần ôn đầu vào ngày 5, sau đó ngày 10 và ngày 30. Tiếp theo khoảng cách là 60 ngày và tăng gấp đôi sau mỗi lần đạt, tối đa 180 ngày. Nếu bạn trả lời sai một câu, thẻ quay lại sau 2 ngày. Bạn có thể đổi ba bước đầu trong Cài đặt."
+    ],
+    "steps": [
+      "Hoàn thành một phiên học và lưu thẻ kiến thức.",
+      "Nhận lời nhắc khi đến hạn ôn (qua email hoặc trình duyệt).",
+      "Trả lời các câu hỏi của thẻ theo trí nhớ.",
+      "Đạt thì sang khoảng cách tiếp theo; chưa đạt thì thẻ quay lại sau 2 ngày."
+    ],
+    "bestFor": [
+      "Mọi điều bạn muốn nhớ trong nhiều tháng chứ không chỉ vài ngày",
+      "Ôn thi trong nhiều tuần",
+      "Kiến thức chuyên môn ít dùng nhưng phải nhớ"
+    ],
+    "whenNotToUse": [
+      "Học nhồi cho kỳ thi ngày mai; lặp lại ngắt quãng phát huy hiệu quả qua nhiều tuần"
+    ],
+    "faq": [
+      {
+        "q": "Vì sao là ngày 5, 10 và 30?",
+        "a": "Đây là các bước đơn giản, dễ nhớ, giúp trải lượt ôn ra trong tháng đầu khi ta quên nhanh nhất. Bạn có thể đổi chúng trong Cài đặt."
+      },
+      {
+        "q": "Nếu lỡ ngày ôn thì sao?",
+        "a": "Thẻ quá hạn vẫn ở trạng thái đến hạn cho đến khi bạn ôn. Không mất gì cả; hãy ôn bù khi có thể."
+      },
+      {
+        "q": "Lượt ôn có phải hoàn hảo không?",
+        "a": "Lượt ôn đạt khi mọi câu trả lời đều đúng. Câu trả lời đúng một phần được tính là chưa đạt để thẻ quay lại sớm hơn."
+      }
+    ],
+    "seoTitle": "Lặp lại ngắt quãng: lịch ôn tập thật sự hiệu quả",
+    "seoDescription": "Lặp lại ngắt quãng dễ hiểu: ôn vào ngày 5, 10 và 30, sau đó với khoảng cách tăng dần. Nhắc nhở tự động và câu hỏi ôn tập trong FocusKept."
+  },
+  "eat-the-frog": {
+    "name": "Ăn con ếch",
+    "tagline": "Làm việc khó nhất và quan trọng nhất trước tiên.",
+    "summary": "“Ăn con ếch” nghĩa là chọn đúng một việc bạn dễ né tránh nhất và làm nó đầu tiên. Sau đó mọi thứ khác đều thấy nhẹ nhàng hơn.",
+    "howItWorks": [
+      "“Con ếch” là việc quan trọng mà bạn không muốn làm. Nếu giải quyết nó vào đầu ngày, lúc năng lượng cao nhất, bạn sẽ thoát khỏi nỗi lo âm ỉ đó trong suốt phần còn lại của ngày.",
+      "Trong FocusKept, bạn có thể đánh dấu đúng một con ếch mỗi ngày. Nó được ghim lên đầu danh sách hôm nay và được đề xuất làm phiên đầu tiên."
+    ],
+    "steps": [
+      "Chọn con ếch hôm nay từ tối hôm trước hoặc đầu buổi sáng: quan trọng và dễ né tránh.",
+      "Đánh dấu nó là con ếch để nó luôn ở đầu ngày của bạn.",
+      "Dành phiên tập trung đầu tiên cho con ếch, trước mọi việc khác.",
+      "Làm đến khi xong hoặc có tiến triển rõ ràng."
+    ],
+    "bestFor": [
+      "Trì hoãn những việc quan trọng",
+      "Những buổi sáng tràn đầy năng lượng",
+      "Ngày bận rộn mà nếu không thì sẽ bị lấp đầy bởi việc vặt"
+    ],
+    "whenNotToUse": [
+      "Khi việc khó nhất phụ thuộc vào thời gian rảnh của người khác"
+    ],
+    "faq": [
+      {
+        "q": "Cái tên này từ đâu ra?",
+        "a": "Từ một câu nói thường được gán cho Mark Twain: nếu phải ăn một con ếch sống, hãy ăn nó ngay đầu buổi sáng. Brian Tracy đã biến nó thành một phương pháp năng suất."
+      },
+      {
+        "q": "Có thể có nhiều hơn một con ếch không?",
+        "a": "Không, mỗi ngày một con ếch giúp quyết định luôn rõ ràng. Chọn con ếch mới sẽ thay con ếch cũ."
+      },
+      {
+        "q": "Nếu con ếch quá lớn cho một phiên thì sao?",
+        "a": "Chia nhỏ nó và lấy bước cụ thể đầu tiên làm con ếch hôm nay. Phần khó nhất là bắt đầu."
+      }
+    ],
+    "seoTitle": "Ăn con ếch: làm việc khó nhất trước",
+    "seoDescription": "Vượt qua sự trì hoãn với phương pháp “ăn con ếch”: chọn một việc quan trọng và làm nó trước. Hướng dẫn đơn giản và đồng hồ bắt đầu với con ếch của bạn."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Sắp xếp công việc theo mức khẩn cấp và quan trọng.",
+    "summary": "Ma trận Eisenhower chia công việc vào bốn ô theo mức khẩn cấp và quan trọng, để bạn biết việc nào làm ngay, lên lịch, giao cho người khác hay loại bỏ.",
+    "howItWorks": [
+      "Mỗi việc rơi vào một trong bốn ô: Làm ngay (khẩn cấp và quan trọng), Lên lịch (quan trọng, không khẩn cấp), Giao việc (khẩn cấp, không quan trọng) và Loại bỏ (không phải cả hai). Ma trận cho thấy rõ khi nào sự ồn ào của việc khẩn cấp đang chen lấn việc quan trọng.",
+      "Trong FocusKept, bạn kéo việc giữa các ô hoặc di chuyển bằng bàn phím. Ô Loại bỏ gợi ý lưu trữ việc để chúng rời khỏi danh sách của bạn."
+    ],
+    "steps": [
+      "Liệt kê các việc chưa xong.",
+      "Xếp từng việc vào Làm ngay, Lên lịch, Giao việc hoặc Loại bỏ.",
+      "Bắt đầu một phiên tập trung với một việc trong Làm ngay.",
+      "Dành thời gian cho việc trong Lên lịch trước khi chúng trở nên khẩn cấp.",
+      "Giao các việc trong Giao việc và lưu trữ các việc trong Loại bỏ."
+    ],
+    "bestFor": [
+      "Danh sách việc quá tải",
+      "Lập kế hoạch hằng tuần",
+      "Tách ưu tiên thật sự khỏi những thứ gây nhiễu"
+    ],
+    "whenNotToUse": ["Danh sách ngắn gồm các việc quan trọng như nhau"],
+    "faq": [
+      {
+        "q": "Nếu mọi thứ đều có vẻ khẩn cấp và quan trọng thì sao?",
+        "a": "Hãy tự hỏi điều gì xảy ra nếu việc đó chờ một tuần. Nếu không có gì nghiêm trọng, nó thuộc về Lên lịch."
+      },
+      {
+        "q": "Nếu làm việc một mình thì dùng Giao việc thế nào?",
+        "a": "Dùng nó cho những việc có thể tự động hóa, gom lại làm một lần, hoặc nhờ ai đó giúp."
+      },
+      {
+        "q": "Bao lâu thì nên sắp xếp lại ma trận?",
+        "a": "Xem nhanh mỗi ngày và rà soát kỹ mỗi tuần giúp ma trận luôn sát thực tế khi hạn chót đến gần."
+      }
+    ],
+    "seoTitle": "Ma trận Eisenhower: khẩn cấp hay quan trọng?",
+    "seoDescription": "Sắp xếp ưu tiên với ma trận Eisenhower: làm ngay, lên lịch, giao việc và loại bỏ. Bảng kéo thả miễn phí kèm đồng hồ tập trung tích hợp."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Một việc lớn, ba việc vừa, năm việc nhỏ. Đó là ngày của bạn.",
+    "summary": "Quy tắc 1-3-5 giới hạn mỗi ngày ở một việc lớn, ba việc vừa và năm việc nhỏ, để kế hoạch của bạn luôn thực tế.",
+    "howItWorks": [
+      "Hầu hết danh sách việc quá dài để làm hết và khiến mỗi ngày trôi qua với cảm giác thất bại. Quy tắc 1-3-5 giới hạn ngày ở chín việc với kích cỡ khác nhau: một việc cần nỗ lực thật sự, ba việc mất kha khá thời gian và năm việc làm nhanh.",
+      "FocusKept cho bạn đúng chừng ấy ô trong kế hoạch hôm nay và không cho điền thêm, để bạn chọn lựa có chủ đích."
+    ],
+    "steps": [
+      "Chọn một việc lớn cho hôm nay.",
+      "Thêm ba việc vừa.",
+      "Thêm năm việc nhỏ.",
+      "Bắt đầu với việc lớn khi năng lượng còn cao."
+    ],
+    "bestFor": [
+      "Lập kế hoạch hằng ngày thực tế",
+      "Người có danh sách việc không bao giờ hết",
+      "Cân bằng giữa làm việc sâu và việc vặt"
+    ],
+    "whenNotToUse": ["Những ngày kín lịch họp hoặc chỉ một dự án"],
+    "faq": [
+      {
+        "q": "Nếu làm xong hết sớm thì sao?",
+        "a": "Tuyệt vời. Hãy tận hưởng thời gian rảnh hoặc lấy thêm một việc từ danh sách chờ."
+      },
+      {
+        "q": "Làm sao xác định kích cỡ một việc?",
+        "a": "Việc lớn mất vài giờ, việc vừa khoảng một giờ, việc nhỏ 15 phút hoặc ít hơn."
+      },
+      {
+        "q": "Có thể kết hợp 1-3-5 với phương pháp khác không?",
+        "a": "Có. Lấy việc lớn làm con ếch của bạn, và tập trung vào từng việc bằng 25/5 hoặc hộp thời gian."
+      }
+    ],
+    "seoTitle": "Quy tắc 1-3-5: danh sách việc hằng ngày thực tế",
+    "seoDescription": "Lên kế hoạch ngày với quy tắc 1-3-5: một việc lớn, ba việc vừa và năm việc nhỏ. Công cụ lập kế hoạch miễn phí với ô cố định và đồng hồ tập trung."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Sáu việc cho ngày mai, theo thứ tự. Không hơn.",
+    "summary": "Phương pháp Ivy Lee yêu cầu bạn mỗi tối viết tối đa sáu việc cho ngày hôm sau theo thứ tự quan trọng, rồi làm lần lượt từng việc.",
+    "howItWorks": [
+      "Cuối mỗi ngày, bạn liệt kê và xếp hạng sáu việc quan trọng cho ngày mai. Hôm sau, bạn bắt đầu từ việc đầu tiên và không chuyển sang việc tiếp theo cho đến khi xong. Việc chưa xong được chuyển lên đầu danh sách ngày hôm sau.",
+      "FocusKept cho bạn màn hình lên kế hoạch buổi tối cho ngày mai với sáu ô theo thứ tự, và chuyển các việc chưa xong sang với cùng thứ tự."
+    ],
+    "steps": [
+      "Buổi tối, viết tối đa sáu việc cho ngày mai.",
+      "Xếp chúng theo mức quan trọng thật sự.",
+      "Ngày mai, làm việc 1 đến khi xong rồi mới sang việc 2.",
+      "Việc chưa xong chuyển sang danh sách ngày hôm sau, giữ nguyên thứ tự."
+    ],
+    "bestFor": [
+      "Kết thúc một ngày với kế hoạch rõ ràng",
+      "Người mất cả buổi sáng để quyết định làm gì",
+      "Tiến bộ đều đặn với những việc quan trọng"
+    ],
+    "whenNotToUse": [
+      "Công việc mang tính phản ứng cao, nơi ưu tiên thay đổi theo từng giờ"
+    ],
+    "faq": [
+      {
+        "q": "Vì sao chỉ sáu việc?",
+        "a": "Giới hạn buộc bạn phải chọn. Sáu việc đủ để lấp đầy một ngày hiệu quả mà không bị quá tải."
+      },
+      {
+        "q": "Phương pháp Ivy Lee từ đâu mà có?",
+        "a": "Chuyên gia tư vấn năng suất Ivy Lee đã dạy phương pháp này cho các nhà quản lý vào năm 1918."
+      },
+      {
+        "q": "Nếu có việc gấp phát sinh thì sao?",
+        "a": "Xử lý việc gấp, rồi quay lại danh sách theo thứ tự. Nếu việc gấp xuất hiện thường xuyên, hãy lên ít việc hơn cho ngày mai."
+      }
+    ],
+    "seoTitle": "Phương pháp Ivy Lee: lên kế hoạch sáu việc cho ngày mai",
+    "seoDescription": "Phương pháp Ivy Lee: mỗi tối viết sáu việc cho ngày mai theo thứ tự. Việc chưa xong tự động chuyển sang. Công cụ và hướng dẫn miễn phí."
+  }
+}

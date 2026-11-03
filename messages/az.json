@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "Əsas naviqasiya",
+      "appNavigation": "Tətbiq naviqasiyası",
+      "skipToContent": "Məzmuna keç",
+      "techniques": "Texnikalar",
+      "pricing": "Qiymətlər",
+      "about": "Haqqında",
+      "signIn": "Daxil ol",
+      "tasks": "Tapşırıqlar",
+      "cards": "Kartlar",
+      "stats": "Statistika",
+      "settings": "Ayarlar",
+      "billing": "Ödəniş",
+      "signOut": "Çıxış",
+      "timer": "Taymer",
+      "guide": "Bələdçi",
+      "howItWorks": "Necə işləyir",
+      "menu": "Menyu",
+      "account": "Hesab və ayarlar",
+      "reviewsDue": "Təkrar gözləyən kartlar var"
+    },
+    "theme": {
+      "label": "Tema",
+      "dark": "Qaranlıq",
+      "light": "İşıqlı",
+      "system": "Sistem"
+    },
+    "language": {
+      "label": "Dil"
+    },
+    "actions": {
+      "save": "Yadda saxla",
+      "saving": "Yadda saxlanılır…",
+      "retry": "Yenidən cəhd et"
+    },
+    "status": {
+      "error": "Nəsə səhv getdi. Yenidən cəhd et.",
+      "offline": "Oflayndasan. Sessiyan bu cihazda saxlanılıb və internet qayıdanda sinxronlaşacaq."
+    },
+    "consent": {
+      "label": "Analitika seçimləri",
+      "text": "FocusKept-i yaxşılaşdırmaq üçün anonim istifadə statistikası toplaya bilərikmi? Sən seçənə qədər heç nə izlənmir.",
+      "allow": "İcazə ver",
+      "decline": "Xeyr, sağ ol"
+    },
+    "footer": {
+      "tagline": "Dərindən fokuslan. Öyrəndiyini yadda saxla.",
+      "product": "Məhsul",
+      "company": "Şirkət",
+      "legal": "Hüquqi",
+      "focusTimer": "Fokus taymeri",
+      "learningMode": "Öyrənmə rejimi",
+      "contact": "Əlaqə",
+      "privacy": "Məxfilik",
+      "terms": "Şərtlər",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — Dərindən fokuslan. Öyrəndiyini yadda saxla.",
+    "defaultDescription": "18 sınanmış texnikalı fokus taymeri, Feynman üslubunda izahlar, AI ilə yaradılan suallar və 5-ci, 10-cu və 30-cu gün avtomatik aralıqlı təkrar.",
+    "signIn": "Daxil ol",
+    "signUp": "Hesab yarat",
+    "verifyEmail": "Poçt qutunu yoxla",
+    "forgotPassword": "Şifrəni sıfırla",
+    "resetPassword": "Yeni şifrə seç",
+    "settings": "Ayarlar",
+    "security": "Təhlükəsizlik",
+    "billing": "Ödəniş",
+    "focusTitle": "Fokus taymeri",
+    "focusDescription": "Pulsuz fokus taymeri: 25/5, 52/17, Flowtime, Deep Work 90, zaman qutusu və fərdi şablonlar. Hesab tələb olunmur.",
+    "tasks": "Tapşırıqlar",
+    "learnTitle": "Öyrənmə rejimi: öyrən, izah et, yadda saxla",
+    "learnDescription": "Mövzunu öyrən, öz sözlərinlə izah et, AI-dan rəy və suallar al, 5-ci, 10-cu və 30-cu gün avtomatik təkrarla.",
+    "learnNew": "Yeni öyrənmə sessiyası",
+    "explain": "Öyrəndiyini izah et",
+    "cards": "Bilik kartları",
+    "card": "Bilik kartı",
+    "review": "Təkrar",
+    "stats": "Statistika",
+    "pricingTitle": "Qiymətlər: Pulsuz və Pro",
+    "pricingDescription": "FocusKept-ə pulsuz başla. Pro ayda $5 və ya ildə $40: limitsiz kartlar, daha çox AI rəyi, tam Laboratoriya və həftəlik hesabat.",
+    "techniquesTitle": "Fokus, öyrənmə və planlaşdırma üçün 18 texnika",
+    "techniquesDescription": "25/5, 52/17, Flowtime, Feynman, aktiv xatırlama, SQ3R, Eisenhower və digərləri: hər texnika necə işləyir, nə vaxt istifadə etməli və sınamaq üçün pulsuz taymer."
+  },
+  "errors": {
+    "notFoundTitle": "Belə səhifə yoxdur.",
+    "notFoundText": "Keçid köhnə ola bilər, ya da səhifə başqa yerə köçürülüb.",
+    "backHome": "Ana səhifəyə qayıt",
+    "errorTitle": "Nəsə planlaşdırıldığı kimi getmədi.",
+    "errorText": "Bir az sonra yenidən cəhd et. Təkrarlanarsa, bizə xəbər ver."
+  },
+  "auth": {
+    "signInTitle": "Yenidən xoş gəldin",
+    "signInLead": "Fokus sessiyalarına və təkrarlarına davam etmək üçün daxil ol.",
+    "signUpTitle": "Hesab yarat",
+    "signUpLead": "Öyrəndiklərini saxla və 5-ci, 10-cu və 30-cu gün xatırlatma al.",
+    "forgotTitle": "Şifrəni sıfırla",
+    "forgotLead": "Yeni şifrə seçmək üçün sənə təhlükəsiz keçid göndərəcəyik.",
+    "resetTitle": "Yeni şifrə seç",
+    "resetLead": "Ən azı 12 simvol istifadə et.",
+    "verifyTitle": "Poçt qutunu yoxla",
+    "verifyLead": "Sənə təsdiq keçidi göndərdik. Hesabını aktivləşdirmək üçün onu aç — keçid səni daxil olmuş halda birbaşa bura qaytaracaq.",
+    "verifyHint": "Tapa bilmirsən? Spam qovluğunu yoxla və ya yeni keçid almaq üçün yenidən daxil ol.",
+    "name": "Adın",
+    "namePlaceholder": "Aysel Məmmədova",
+    "email": "E-poçt ünvanı",
+    "emailPlaceholder": "sen@numune.az",
+    "password": "Şifrə",
+    "passwordPlaceholder": "Ən azı 12 simvol",
+    "newPassword": "Yeni şifrə",
+    "forgotLink": "Şifrəni unutmusan?",
+    "submitSignIn": "Daxil ol",
+    "submitSignUp": "Hesab yarat",
+    "submitForgot": "Sıfırlama keçidini göndər",
+    "submitReset": "Şifrəni yenilə",
+    "google": "Google ilə davam et",
+    "or": "və ya",
+    "haveAccount": "Artıq hesabın var?",
+    "noAccount": "FocusKept-də yenisən?",
+    "createAccount": "Hesab yarat",
+    "signInLink": "Daxil ol",
+    "legal": "Davam etməklə <terms>Şərtlərimizi</terms> və <privacy>Məxfilik siyasətimizi</privacy> qəbul edirsən.",
+    "resetSent": "Bu e-poçtla hesab varsa, sıfırlama keçidi yoldadır.",
+    "resetDone": "Şifrə yeniləndi. İndi daxil ola bilərsən.",
+    "invalidCredentials": "Düzgün e-poçt və 12–128 simvolluq şifrə daxil et.",
+    "invalidPassword": "12–128 simvolluq şifrə istifadə et.",
+    "wrongCredentials": "E-poçt və şifrə uyğun gəlmir.",
+    "emailNotVerified": "Əvvəlcə e-poçtunu təsdiqlə. Sənə indicə yeni keçid göndərdik.",
+    "userExists": "Bu e-poçtla hesab artıq var. Daxil olmağa çalış.",
+    "tooManyAttempts": "Çox cəhd edildi. Bir dəqiqə gözlə və yenidən yoxla.",
+    "invalidToken": "Bu keçidin vaxtı bitib və ya artıq istifadə olunub. Yenisini istə.",
+    "learningContext": "“{topic}” mövzusunda öyrənmə sessiyasına başlamaq üçün qeydiyyatdan keç."
+  },
+  "email": {
+    "verification": {
+      "subject": "FocusKept üçün e-poçtunu təsdiqlə",
+      "heading": "E-poçtunu təsdiqlə",
+      "body": "FocusKept hesabını aktivləşdirmək üçün aşağıdakı düyməyə toxun. Daxil olacaq və qaldığın yerə qayıdacaqsan.",
+      "button": "E-poçtu təsdiqlə",
+      "ignore": "Hesab yaratmamısansa, bu məktubu nəzərə almaya bilərsən."
+    },
+    "reset": {
+      "subject": "FocusKept şifrəni sıfırla",
+      "heading": "Şifrəni sıfırla",
+      "body": "Yeni şifrə seçmək üçün aşağıdakı təhlükəsiz keçiddən istifadə et. Keçidin vaxtı tezliklə bitir və yalnız bir dəfə işləyir.",
+      "button": "Yeni şifrə seç",
+      "ignore": "Bunu sən istəməmisənsə, bu məktubu nəzərə alma. Şifrən dəyişmir."
+    },
+    "footer": {
+      "transactional": "Bu məktubu FocusKept hesabında edilən bir əməliyyata görə aldın.",
+      "reviews": "Bunu FocusKept hesabında təkrar xatırlatmaları aktiv olduğu üçün alırsan.",
+      "weekly": "Bu həftəlik hesabatı FocusKept Pro hesabında aktiv olduğu üçün alırsan.",
+      "unsubscribe": "Abunəlikdən çıx"
+    },
+    "digest": {
+      "subject": "{count, plural, one {Bu gün təkrar üçün # kart} other {Bu gün təkrar üçün # kart}}",
+      "preview": "{count, plural, one {Bir kart təkrara hazırdır.} other {# kart təkrara hazırdır.}}",
+      "heading": "{count, plural, one {# kartı təkrarlamaq vaxtıdır} other {# kartı təkrarlamaq vaxtıdır}}",
+      "intro": "Unutmazdan əvvəl, elə indi təkrarlamaq bilgini möhkəmləndirir:",
+      "more": "{count, plural, one {…və daha #} other {…və daha #}}",
+      "estimate": "{minutes, plural, one {Təxminən # dəqiqə.} other {Təxminən # dəqiqə.}}",
+      "button": "Təkrara başla"
+    },
+    "weekly": {
+      "subject": "FocusKept-də həftən",
+      "preview": "{minutes, plural, one {Keçən həftə # dəqiqə fokus.} other {Keçən həftə # dəqiqə fokus.}}",
+      "heading": "Fokusda keçən həftən",
+      "intro": "Keçən həftə belə keçdi.",
+      "focus": "Fokus vaxtı",
+      "minutes": "{minutes, plural, one {# dəqiqə} other {# dəqiqə}}",
+      "sessions": "Sessiyalar",
+      "best": "Ən yaxşı texnika",
+      "cards": "Yaradılan kartlar",
+      "retention": "Yadda saxlama",
+      "streak": "Ardıcıllıq",
+      "days": "{count, plural, one {# gün} other {# gün}}",
+      "suggestionTitle": "Bu həftə üçün bir tövsiyə",
+      "suggestions": {
+        "start": "Kiçikdən başla: bazar ertəsi bir 25 dəqiqəlik blok başlamaq üçün kifayətdir.",
+        "retention": "Təkrarlarının {percent, number}% hissəsindən keçdin. Kartı təkrarlamazdan əvvəl izahını yenidən oxu və cavabları qısa saxla.",
+        "goal": "Həftəlik hədəfinin {percent, number}% hissəsinə çatdın. Həftənin ortasına bir sessiya əlavə et.",
+        "bestTechnique": "Ən yaxşı fokusun bu texnika ilə oldu: {technique}. Ən vacib iki sessiyanı onunla planlaşdır.",
+        "keepGoing": "Güclü həftə idi. Eyni ritmi saxla və fokus vaxtını qoru."
+      },
+      "recapTitle": "{month} ayında öyrəndiklərin",
+      "recapText": "{cards, plural, one {# kart yaradıldı} other {# kart yaradıldı}} · yadda saxlama {retention}",
+      "button": "Statistikanı aç"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, one {Təkrar üçün # kart} other {Təkrar üçün # kart}}",
+      "reviewsBody": "İndi bir neçə dəqiqə ayırsan, yaddaşında qalacaq.",
+      "streakTitle": "{count, plural, one {# günlük ardıcıllığını qoru} other {# günlük ardıcıllığını qoru}}",
+      "streakBody": "Bu gün bir qısa sessiya ardıcıllığı davam etdirir."
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "Analitika",
+      "text": "İstəyə bağlı, anonim məhsul analitikası. Qeydlərin, izahların və cavabların heç vaxt göndərilmir.",
+      "allow": "Analitikaya icazə ver",
+      "disable": "Analitikanı söndür",
+      "enabled": "Analitika aktivləşdirildi.",
+      "disabled": "Analitika söndürüldü.",
+      "error": "Seçimini yeniləmək mümkün olmadı."
+    },
+    "title": "Ayarlar",
+    "lead": "Hesabın, seçimlərin və xatırlatmaların.",
+    "account": {
+      "title": "Hesab",
+      "displayName": "Görünən ad",
+      "saved": "Dəyişikliklər yadda saxlanıldı.",
+      "securityLink": "Şifrə və sessiyalar",
+      "billingLink": "Plan və ödəniş"
+    },
+    "security": {
+      "title": "Təhlükəsizlik",
+      "lead": "Hesabını qoru.",
+      "backToSettings": "Ayarlara qayıt",
+      "passwordTitle": "Şifrəni dəyiş",
+      "passwordText": "Şifrəni dəyişmək digər cihazlarından çıxış edir.",
+      "currentPassword": "Hazırkı şifrə",
+      "newPassword": "Yeni şifrə",
+      "passwordHint": "Ən azı 12 simvol.",
+      "changePassword": "Şifrəni dəyiş",
+      "passwordChanged": "Şifrə dəyişdirildi.",
+      "passwordError": "Şifrəni dəyişmək mümkün olmadı. Hazırkı şifrəni yoxla və yenidən cəhd et.",
+      "sessionsTitle": "Giriş sessiyaları",
+      "sessionsText": "Burada daxil olmuş qal və bütün digər yerlərdən çıxış et.",
+      "revokeOthers": "Digər sessiyalardan çıx",
+      "revoked": "Digər sessiyalardan çıxış edildi.",
+      "revokeError": "Digər sessiyalardan çıxmaq mümkün olmadı."
+    },
+    "delete": {
+      "title": "Hesabı sil",
+      "text": "Hesabını və içindəki hər şeyi birdəfəlik silir: sessiyalar, tapşırıqlar, kartlar və təkrarlar. Ödəniş tarixçəsi olan hesablara dəstək komandası qısa baxış keçirir ki, heç bir abunəlik açıq qalmasın. Surət istəyirsənsə, əvvəlcə məlumatlarını ixrac et.",
+      "word": "SİL",
+      "typeToConfirm": "Təsdiq üçün {word} yaz",
+      "password": "Şifrən",
+      "submit": "Hesabımı sil",
+      "billingBlocked": "Hesabının ödəniş tarixçəsi var. Bizə yaz, hesabını sənin üçün bağlayaq.",
+      "error": "Hesabı silmək mümkün olmadı. Şifrəni yoxla və yenidən cəhd et."
+    },
+    "prefs": {
+      "saved": "Ayarlar yadda saxlanıldı.",
+      "general": "Ümumi",
+      "timezone": "Saat qurşağı",
+      "useDeviceZone": "Bu cihazın saat qurşağını istifadə et ({zone})",
+      "weekStart": "Həftə bu gün başlayır",
+      "weeklyGoal": "Həftəlik fokus hədəfi (saat)",
+      "weeklyGoalHint": "Statistikada görünür. 0 söndürür.",
+      "techniques": "Texnikalar",
+      "defaultTime": "Defolt vaxt texnikası",
+      "defaultMethod": "Defolt öyrənmə metodu",
+      "timebox": "Defolt zaman qutusu (dəqiqə)",
+      "presets": "Fərdi şablonlar",
+      "deletePreset": "“{name}” şablonunu sil",
+      "reviewSteps": "Təkrar cədvəli",
+      "reviewStepsText": "Kartı saxladıqdan sonra ilk üç təkrara qədər olan günlər. Son addımdan sonra təkrar 60 günə keçir, sonra ikiqat artır, ən çoxu 180 günə qədər.",
+      "stepN": "{n, number}. təkrar (gün)",
+      "resetSteps": "5 / 10 / 30-a qaytar",
+      "stepsInvalid": "1 ilə 365 arasında artan üç rəqəm istifadə et.",
+      "notifications": "Xatırlatmalar və bildirişlər",
+      "reminderTime": "Gündəlik xatırlatma vaxtı",
+      "reminderTimeHint": "Təkrar vaxtı çatanda bu saatda bir xatırlatma alırsan.",
+      "emailReviews": "Təkrar xatırlatma məktubları",
+      "emailReviewsHint": "Təkrar olan günlərdə bir məktub. Heç vaxt hər kart üçün ayrıca deyil.",
+      "emailWeekly": "Həftəlik hesabat məktubu",
+      "emailWeeklyHint": "Hər bazar ertəsi saat 09:00-da: fokusda keçən həftən və bir tövsiyə.",
+      "emailWeeklyPro": "Pro funksiyasıdır. İndi aktiv et, Pro-ya keçəndə başlayacaq.",
+      "streakNudge": "Ardıcıllıq xatırlatması",
+      "streakNudgeHint": "3+ günlük ardıcıllığın bu gün qırılacaqsa, saat 19:00-da yumşaq brauzer bildirişi.",
+      "browser": "Brauzer bildirişləri",
+      "browserHint": "E-poçta əlavə olaraq bu cihazda da təkrar xatırlatmaları.",
+      "browserDisable": "Bu cihazda söndür",
+      "browserOff": "Bu cihazda brauzer xatırlatmaları söndürülüb.",
+      "browserUnavailable": "Bu brauzerdə mövcud deyil və ya hələ qurulmayıb.",
+      "hours": "Bildiriş saatları",
+      "hoursHint": "Brauzer bildirişləri yalnız bu saatlarda göndərilir. Gündəlik e-poçt xatırlatmasına təsir etmir.",
+      "from": "{day}: başlanğıc",
+      "to": "{day}: son",
+      "export": "Məlumatların",
+      "exportText": "FocusKept-in sənin haqqında saxladığı hər şeyi istənilən planda yüklə.",
+      "exportJson": "Hamısı (JSON)",
+      "exportCsv": {
+        "sessions": "Sessiyalar (CSV)",
+        "cards": "Kartlar (CSV)",
+        "reviews": "Təkrarlar (CSV)"
+      }
+    }
+  },
+  "billing": {
+    "title": "Ödəniş",
+    "lead": "Planın, fakturaların və ödəniş məlumatların.",
+    "currentPlan": "Hazırkı plan",
+    "free": "Pulsuz",
+    "pro": "Pro",
+    "syncNote": "Polar ödənişi təsdiqləyən kimi planın avtomatik yenilənir. Sadəcə ödəniş səhifəsindən qayıtmaq onu dəyişmir, ona görə bir az vaxt apara bilər.",
+    "returned": "Təşəkkürlər! Ödəniş təsdiqlənən kimi planını yeniləyəcəyik.",
+    "manage": "Abunəliyi idarə et",
+    "seePlans": "Planlara bax",
+    "connecting": "Qoşulur…",
+    "notConfigured": "Ödənişlər hələ qurulmayıb. Heç bir məbləğ tutulmadı.",
+    "unavailable": "Ödəniş hazırda əlçatan deyil. Yenidən cəhd et.",
+    "renewsOn": "Yenilənmə tarixi: {date}.",
+    "endsOn": "Ləğv edildi. Pro bu tarixə qədər aktiv qalır: {date}."
+  },
+  "landing": {
+    "heroTitle": "Dərindən fokuslan. Öyrəndiyini yadda saxla.",
+    "heroLead": "FocusKept 18 sınanmış texnikası olan sakit fokus taymeridir. Oxuyanda o, sənin öz izahını suallara çevirir və 5-ci, 10-cu və 30-cu gün təkrarlamağı xatırladır.",
+    "question": "Bu gün nə edirsən?",
+    "workTitle": "İş",
+    "workText": "Tapşırıq və texnika seç, sonra fokuslan. Hesab tələb olunmur.",
+    "learnTitle": "Öyrənmə",
+    "learnText": "Mövzunu öyrən, öz sözlərinlə izah et və yadda saxla.",
+    "noCard": "Başlamaq pulsuzdur. Kredit kartı lazım deyil.",
+    "loop": {
+      "eyebrow": "Necə işləyir",
+      "title": "Fokusdan qalıcı yaddaşa",
+      "lead": "Taymerlər başlamağa kömək edir. Yadda saxlamaq üçün daha bir addım lazımdır. FocusKept o addımı sənin yerinə tamamlayır.",
+      "focus": {
+        "title": "Fokuslan",
+        "text": "25/5, 52/17, Flowtime və ya başqa texnika ilə zaman bloklarında işlə."
+      },
+      "explain": {
+        "title": "İzah et",
+        "text": "Öyrəndiyini 12 yaşlı uşağa danışırmış kimi yaz: bu, Feynman texnikasıdır."
+      },
+      "questions": {
+        "title": "Suallar al",
+        "text": "AI boşluqları göstərir və izahını redaktə edə biləcəyin təkrar suallarına çevirir."
+      },
+      "review": {
+        "title": "Vaxtında təkrarla",
+        "text": "Unutmazdan az əvvəl, 5-ci, 10-cu və 30-cu gün sənə xatırladırıq."
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman, praktikada",
+      "title": "Sadə izah et. Həqiqətən nəyi başa düşdüyünü gör.",
+      "lead": "Öyrənmə sessiyasından sonra mövzunu öz sözlərinlə izah edirsən. Aydınlıq balı, nəyin çatışmadığı, nəyin səhv olduğu və təkrar üçün suallar alırsan.",
+      "cta": "Öyrənmə rejimini sına",
+      "label": "AI rəyi ilə izah nümunəsi",
+      "badge": "Nümunə",
+      "topic": "Mövzu: Fotosintez",
+      "explanation": "Bitkilər öz qidalarını özləri hazırlayır. Yarpaqları günəş işığını tutur, köklərdən su, kiçik dəliklərdən hava alır və bunları şəkərə çevirir. Artıq qalan isə oksigendir, biz onu nəfəs alırıq.",
+      "feedback": "Rəy",
+      "clarity": "Aydınlıq 82/100",
+      "gap": "Çatışmır: havadan alınan qaz karbon qazıdır.",
+      "mistake": "Qeyri-dəqiq: günəş işığı enerji verir; işığın özü şəkərə çevrilmir.",
+      "questionsLabel": "Təkrar sualları",
+      "q1": "Bitkilər şəkər hazırlamaq üçün havadan hansı qazı alır?",
+      "q2": "Doğru, yoxsa yanlış: bitkilər əlavə məhsul kimi oksigen buraxır.",
+      "q3": "Bitkilər şəkər hazırlamaq üçün ____ enerjisindən istifadə edir.",
+      "schedule": "Kart kimi saxlanıldı. Təkrarlar 5-ci, 10-cu və 30-cu gün."
+    },
+    "techniques": {
+      "eyebrow": "18 texnika",
+      "title": "Bütün texnikalar bir yerdə",
+      "lead": "Fokus üçün vaxt texnikaları, anlamaq üçün öyrənmə metodları, günün üçün planlaşdırma texnikaları. Hər səhifə texnikanı izah edir və dərhal sınamağa imkan verir."
+    },
+    "pricing": {
+      "title": "Başlamaq pulsuz, böyüyəndə ədalətli",
+      "lead": "Sənə lazım olan hər şey pulsuzdur. Pro ayda {monthly} və ya ildə {yearly}.",
+      "points": {
+        "1": "Pulsuz planda bütün texnikalar, tapşırıqlar, statistika və xatırlatmalar",
+        "2": "Pro: limitsiz kartlar və hər kart üçün AI rəyi",
+        "3": "Pro: tam Laboratoriya və həftəlik hesabat"
+      },
+      "cta": "Planları müqayisə et"
+    },
+    "faq": {
+      "title": "Suallar",
+      "1": {
+        "q": "Hesab lazımdır?",
+        "a": "İş rejimi üçün yox: sadəcə taymeri başlat. Öyrənmə rejimi üçün pulsuz hesab lazımdır ki, kartlarını saxlaya və təkrar xatırlatmaları göndərə bilək."
+      },
+      "2": {
+        "q": "Mobil tətbiq varmı?",
+        "a": "FocusKept istənilən cihazda brauzerdə işləyir. Onu ana ekrana quraşdıra bilərsən, xatırlatmalar isə e-poçt və brauzer bildirişləri ilə gəlir."
+      },
+      "3": {
+        "q": "AI izahımdan necə istifadə edir?",
+        "a": "Rəy və suallar yaratmaq üçün izahın OpenAI-a göndərilir. Şəxsi və ya həssas məlumat yazma. Ətraflı məlumat məxfilik siyasətimizdədir."
+      },
+      "4": {
+        "q": "Niyə məhz 5-ci, 10-cu və 30-cu gün?",
+        "a": "Unutmanın ən sürətli olduğu ilk aya yayılmış təkrarlar bilgini az zəhmətlə uzun müddət saxlayır. Addımları Ayarlarda dəyişə bilərsən."
+      },
+      "5": {
+        "q": "Hansı dillər mövcuddur?",
+        "a": "FocusKept 24 dildə mövcuddur. İzahların və sualların yazdığın istənilən dildə işləyir."
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "Vaxt",
+    "goalLabel": "Hədəf",
+    "paused": "Fasilədə",
+    "announce": "{phase}",
+    "block": "Blok {current} / {total}",
+    "focusedSoFar": "Fokus: {duration}",
+    "flowHint": "Fokusun zəifləyəndə dayan",
+    "phase": {
+      "idle": "Hazır olanda başla",
+      "work": "Fokus",
+      "short_break": "Qısa fasilə",
+      "long_break": "Uzun fasilə",
+      "ready": "Növbəti bloka hazır",
+      "box_ended": "Vaxt bitdi",
+      "finished": "Sessiya tamamlandı"
+    },
+    "controls": {
+      "start": "Başla",
+      "startNext": "Növbəti bloku başlat",
+      "pause": "Fasilə ver",
+      "resume": "Davam et",
+      "skip": "Keç",
+      "skipBreak": "Fasiləni keç",
+      "takeBreak": "Fasilə et",
+      "finish": "Sessiyanı bitir",
+      "fullscreen": "Tam ekran",
+      "exitFullscreen": "Tam ekrandan çıx",
+      "shortcuts": "Qısayollar",
+      "close": "Bağla"
+    },
+    "box": {
+      "title": "Vaxt bitdi. İndi nə?",
+      "done": "Hazırdır",
+      "extend": "Bir dəfə uzat (+{duration})",
+      "later": "Sonraya saxla"
+    },
+    "tips": {
+      "1": "Ayağa qalx və bir dəqiqə gərin.",
+      "2": "Bir stəkan su iç.",
+      "3": "Gözlərini dincəlt: 20 saniyə təxminən 6 metr uzaqdakı bir şeyə bax.",
+      "4": "Bir az gəzin, heç olmasa otaqda.",
+      "5": "Çiyinlərini fırlat və bir neçə dəfə yavaş nəfəs al.",
+      "6": "Pəncərəni aç və ya təmiz hava üçün çölə çıx."
+    },
+    "notify": {
+      "breakTitle": "Fasilə vaxtıdır",
+      "breakBody": "Fasilə: {duration}. Ekrandan uzaqlaş.",
+      "focusTitle": "Fokusa qayıt",
+      "readyTitle": "Fasilə bitdi",
+      "readyBody": "Növbəti bloka hazırsan?",
+      "boxTitle": "Vaxt bitdi",
+      "boxBody": "Hazırdır, bir dəfə uzat, yoxsa sonraya saxla?"
+    },
+    "shortcuts": {
+      "title": "Klaviatura qısayolları",
+      "keySpace": "Boşluq",
+      "keyEsc": "Esc",
+      "space": "Başlat, fasilə ver və ya davam et",
+      "skip": "Hazırkı mərhələni keç",
+      "fullscreen": "Tam ekranı dəyiş",
+      "exit": "Tam ekrandan çıx",
+      "help": "Bu siyahını göstər"
+    },
+    "sound": {
+      "title": "Səslər",
+      "chime": "Mərhələ dəyişəndə zəng",
+      "chimeVolume": "Zəngin səs səviyyəsi",
+      "background": "Fon səsi",
+      "backgroundVolume": "Fon səsinin səviyyəsi",
+      "hint": "Fon səsi yalnız fokuslananda səslənir.",
+      "done": "Hazırdır",
+      "kinds": {
+        "none": "Yoxdur",
+        "white": "Ağ küy",
+        "pink": "Çəhrayı küy",
+        "brown": "Qəhvəyi küy",
+        "rain": "Yağış",
+        "cafe": "Kafe",
+        "stream": "Çay",
+        "ocean": "Okean dalğaları",
+        "wind": "Külək",
+        "fire": "Kamin",
+        "night": "Yay gecəsi",
+        "binaural": "Binaural döyüntü"
+      },
+      "groups": {
+        "noise": "Küy",
+        "nature": "Təbiət",
+        "tones": "Tonlar",
+        "places": "Məkanlar"
+      },
+      "about": {
+        "white": "Söhbəti örtən bərabər xışıltı",
+        "pink": "Daha yumşaq, sakit yağış kimi",
+        "brown": "Dərin uğultu, xışıltısız",
+        "rain": "Damcılı yüngül yağış",
+        "stream": "Daşların üstündən axan çay",
+        "ocean": "Bir neçə saniyədən bir yavaş dalğa",
+        "wind": "Güclənib zəifləyən külək",
+        "fire": "Çırtlayan odun",
+        "night": "Sakit gecədə cırcıramalar",
+        "binaural": "16 Hz döyüntü, qulaqlıqla",
+        "cafe": "Səs-küylü kafenin uğultusu"
+      },
+      "headphones": "Qulaqlıq tax: hər qulaq bir az fərqli ton eşidir, beyin isə aralarındakı 16 Hz döyüntünü eşidir. Səsi aşağı saxla.",
+      "previewHint": "Səsi eşitmək üçün seç. Yalnız fokuslandığın vaxt çalınır.",
+      "tip": "Sözsüz səslər ən yaxşısıdır: mahnı sözləri və danışıq oxumağı və yadda saxlamağı ləngidir."
+    },
+    "taskLabel": "Tapşırıq"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "Hesab tələb olunmur. Sessiyalar bu cihazda saxlanılır.",
+      "durations": {
+        "work": "Fokus (dəq)",
+        "shortBreak": "Qısa fasilə (dəq)",
+        "longBreak": "Uzun fasilə (dəq)",
+        "cycles": "Uzun fasiləyə qədər blok",
+        "box": "Qutunun uzunluğu (dəq)"
+      }
+    },
+    "end": {
+      "ratingValue": "5 üzərindən {value}",
+      "discardConfirm": "Bu sessiya ləğv edilsin? Saxlanılmayacaq.",
+      "tooShort": "Bu sessiya bir dəqiqədən qısa idi, ona görə statistikana daxil edilməyəcək."
+    },
+    "import": {
+      "title": "Sessiyalarını özünlə gətirmək istəyirsən?",
+      "text": "Bu cihazda {sessions, plural, one {# sessiya} other {# sessiya}} və {tasks, plural, one {# tapşırıq} other {# tapşırıq}} tapdıq. Onlar hesabına köçürülsün?",
+      "confirm": "Köçür",
+      "later": "İndi yox",
+      "done": "Köçürüldü: {sessions, plural, one {# sessiya} other {# sessiya}} və {tasks, plural, one {# tapşırıq} other {# tapşırıq}}.",
+      "error": "Köçürmə alınmadı. Məlumatların hələ də bu cihazdadır; sonra yenidən cəhd et."
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "Öyrənmə rejimi",
+      "title": "Öyrəndiklərini saxla",
+      "lead": "Sınanmış metodla öyrən, mövzunu öz sözlərinlə izah et, FocusKept isə onu suallara çevirsin. Unutmazdan az əvvəl, 5-ci, 10-cu və 30-cu gün təkrarlamağı xatırladırıq.",
+      "steps": {
+        "1": "Öyrənmə metodu və taymerlə bir mövzuya fokuslan.",
+        "2": "Onu 12 yaşlı uşağa danışırmış kimi izah et.",
+        "3": "AI boşluqları göstərir və təkrar sualları yazır.",
+        "4": "5-ci, 10-cu və 30-cu gün avtomatik təkrarla."
+      },
+      "topicLabel": "Nə öyrənmək istəyirsən?",
+      "topicPlaceholder": "məs. Peyvəndlər immun sistemini necə öyrədir",
+      "start": "Davam et",
+      "accountNote": "Öyrənmə rejimi üçün pulsuz hesab lazımdır ki, sənə təkrar xatırlatmaları göndərə bilək.",
+      "workInstead": "Sadəcə taymer lazımdır? İş rejimindən istifadə et, hesab tələb olunmur."
+    },
+    "explain": {
+      "prompt": "Öyrəndiyini 12 yaşlı uşağa danışırmış kimi izah et.",
+      "promptHint": "Sadə sözlər və qısa cümlələr işlət. İlişdiyin yer məhz növbəti öyrənəcəyin şeydir.",
+      "openaiNotice": "İzahın OpenAI tərəfindən emal olunur. Şəxsi və ya həssas məlumat yazma. <privacy>Məxfilik siyasəti</privacy>",
+      "counter": "{count} / {max} simvol (ən azı {min})",
+      "analyze": "AI rəyi və sualları al",
+      "analyzing": "İzahın oxunur…",
+      "manual": "Sualları özüm yazım",
+      "aiOff": "AI rəyi hazırda əlçatan deyil. Suallarını özün yaza bilərsən.",
+      "remaining": "{count, plural, =0 {Bu ay AI analizi qalmayıb} one {Bu ay # AI analizi qalıb} other {Bu ay # AI analizi qalıb}}",
+      "aiFailed": "Bu dəfə AI rəyi alınmadı. İzahın saxlanılıb; suallarını aşağıda yaz və ya sonra yenidən cəhd et.",
+      "yourExplanation": "Sənin izahın",
+      "revise": "Düzəlt və yenidən analiz et",
+      "edit": "Redaktə et",
+      "analysisTitle": "Rəy",
+      "clarity": "Aydınlıq {score, number}/100",
+      "clarityLabel": "Aydınlıq balı",
+      "gaps": "Nə çatışmır",
+      "mistakes": "Nə səhv və ya qeyri-dəqiqdir",
+      "noGaps": "Vacib heç nə çatışmır.",
+      "noMistakes": "Səhv tapılmadı.",
+      "rewrite": "Daha aydın variantı göstər",
+      "useRewrite": "Bu variantdan başla",
+      "reanalysisUsed": "Bu kartın təkrar analizini artıq istifadə etmisən. Pro limitsiz düzəlişə imkan verir.",
+      "questionsTitle": "Təkrar sualları",
+      "questionsHint": "Redaktə et, sil və ya öz suallarını əlavə et. Təkrarlarda məhz bunlara cavab verəcəksən.",
+      "needQuestion": "Ən azı bir sual əlavə et.",
+      "fixQuestions": "Saxlamazdan əvvəl bəzi sualları düzəltmək lazımdır.",
+      "save": "Kartı saxla",
+      "saveError": "Kartı saxlamaq mümkün olmadı. Yenidən cəhd et.",
+      "savedTitle": "Kart saxlanıldı",
+      "savedText": "İlk təkrar tarixi: {date}. Sənə xatırladacağıq.",
+      "viewCard": "Karta bax",
+      "another": "Yeni sessiyaya başla",
+      "notFound": "Bu sessiya artıq saxlanılıb və ya mövcud deyil.",
+      "check": "Yoxla",
+      "focused": "Fokus: {duration}",
+      "hintLong": "Əsas fikirləri sadala, hər birini bir-iki cümlə ilə. Fasilə qeydlərin artıq buradadır.",
+      "hintMid": "Üç-beş əsas fikir, hər biri bir-iki cümlə ilə, kitaba baxmadan.",
+      "hintShort": "İki-üç əsas fikir kifayətdir. Kitaba baxmadan yaz.",
+      "keep": "{count, plural, one {# sualı saxla} other {# sualı saxla}}",
+      "keptTitle": "{count, plural, one {# sual hazırdır.} other {# sual hazırdır.}}",
+      "newSession": "Yeni sessiya",
+      "readingText": "Boşluqları tapırıq və suallar hazırlayırıq",
+      "writeTitle": "Nə öyrəndin? Öz sözlərinlə yaz."
+    }
+  },
+  "tasks": {
+    "title": "Tapşırıqlar",
+    "markDone": "“{title}” tapşırığını bitmiş kimi qeyd et",
+    "focusOn": "“{title}” tapşırığına fokuslan",
+    "close": "Bağla",
+    "errors": {
+      "generic": "Bu dəyişikliyi saxlamaq mümkün olmadı. Yenidən cəhd et.",
+      "ivyFull": "Sabah üçün artıq altı tapşırıq var.",
+      "slotFull": "Bu günün o hissəsi artıq doludur."
+    },
+    "matrix": {
+      "do": {
+        "title": "İndi et"
+      },
+      "schedule": {
+        "title": "Planlaşdır"
+      },
+      "delegate": {
+        "title": "Həvalə et"
+      },
+      "delete": {
+        "title": "Sil"
+      }
+    },
+    "plan135": {
+      "big": "Böyük",
+      "medium": "Orta",
+      "small": "Kiçik"
+    },
+    "ivy": {
+      "moveUp": "“{title}” yuxarı",
+      "moveDown": "“{title}” aşağı"
+    },
+    "board": {
+      "heading": "Bu gün",
+      "chip": {
+        "today": "Bu gün",
+        "tomorrow": "Sabah",
+        "full": "Bu gün doludur",
+        "slot": {
+          "big": "Əsas iş yerinə",
+          "medium": "Orta iş yerinə",
+          "small": "Qısa iş yerinə"
+        }
+      },
+      "toTomorrow": "Sabah",
+      "progress": "Bitdi: {done, number} / {total, number}",
+      "planned": "Planlı: {planned} · qalıb: {left}",
+      "plannedEmpty": "Hələ heç nə planlanmayıb",
+      "barLabel": "Bu gün: bitdi {done}, qalıb {left}",
+      "addLabel": "Yeni tapşırıq",
+      "addPlaceholder": "Yaz: «Esse planı 45d sabah !» — müddət, gün və vaciblik özü tanınır",
+      "add": "Əlavə et",
+      "keywords": {
+        "today": "bu gün, bugün",
+        "tomorrow": "sabah",
+        "minutes": "d, dəq, dəqiqə",
+        "hours": "s, saat"
+      },
+      "dayFull": "Bu gün doludur. Əvvəlcə bir işi sabaha köçür.",
+      "first": {
+        "label": "Əvvəlcə bunu et",
+        "empty": "Günün əsas işi hələ yoxdur. Uzun və təxirə saldığın bir işi seç və «Bu günə» bas."
+      },
+      "medium": {
+        "title": "Sonra bunlar",
+        "empty": "Boş yer · 25–60 dəq"
+      },
+      "small": {
+        "title": "Arada, qısa işlər",
+        "empty": "Boş yer · 25 dəqiqədən az"
+      },
+      "slotCount": "Bitdi: {done, number}/{used, number} · boş: {free, number}",
+      "overflow": {
+        "title": "Bu gün yer qalmayıb",
+        "hint": "Bu günə planlanıb, amma bütün yerlər doludur."
+      },
+      "footnote": "1 əsas, 3 orta, 5 qısa iş — dolu bir gün. Yeni iş müddətinə görə öz yerinə düşür.",
+      "focus": "Fokuslan",
+      "toTomorrowLabel": "«{title}» işini sabaha köçür",
+      "toIncoming": "Gələnlər",
+      "toIncomingLabel": "«{title}» işini Gələnlərə köçür",
+      "edit": "«{title}» işini aç"
+    },
+    "details": {
+      "days": {
+        "today": "Bu gün",
+        "tomorrow": "Sabah",
+        "none": "Tarixsiz"
+      },
+      "name": "Başlıq",
+      "tags": "Etiketlər",
+      "tagsPlaceholder": "məs. dərs, kodlaşdırma",
+      "project": "Layihə",
+      "noProject": "Layihə yoxdur",
+      "save": "Yadda saxla",
+      "deleteConfirm": "Bu tapşırıq silinsin? Ona bağlı sessiyalar saxlanılır.",
+      "title": "Tapşırıq",
+      "minutes": "Müddət (dəq)",
+      "day": "Gün",
+      "notes": "Qeydlər",
+      "archive": "Arxivlə",
+      "delete": "Sil"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "Sabah",
+        "planned": "Planlı",
+        "unsorted": "Çeşidlənməmiş"
+      },
+      "quadrant": {
+        "do": {
+          "label": "İndi et",
+          "hint": "Təcili və vacib"
+        },
+        "plan": {
+          "label": "Planlaşdır",
+          "hint": "Vacib, təcili deyil"
+        },
+        "quick": {
+          "hint": "Təcili, vacib deyil",
+          "label": "Tez bitir"
+        },
+        "later": {
+          "label": "Sonra",
+          "hint": "Heç biri"
+        }
+      },
+      "projects": "Layihələr və süzgəclər",
+      "filterLabel": "Vacibliyə görə süz",
+      "empty": {
+        "tomorrow": "Sabah üçün hələ heç nə yoxdur.",
+        "planned": "Sonrakı günlərə heç nə planlanmayıb.",
+        "unsorted": "Hər şey yerindədir."
+      },
+      "missed": "gecikib · {date}",
+      "important": "Vacib",
+      "urgent": "Təcili",
+      "importantShort": "V",
+      "urgentShort": "T",
+      "importantLabel": "«{title}» vacibdir",
+      "urgentLabel": "«{title}» təcilidir",
+      "toToday": "Bu günə",
+      "toTodayLabel": "«{title}» işini bu günə köçür",
+      "plan": "Sabahı 2 dəqiqəyə planla",
+      "planHint": "6-ya qədər işi sırala və səhərə hazır başla",
+      "title": "Gələnlər"
+    },
+    "projects": {
+      "filterProject": "Layihə",
+      "filterTag": "Etiket",
+      "all": "Hamısı",
+      "name": "Yeni layihənin adı",
+      "add": "Layihə əlavə et",
+      "archive": "Arxivlə",
+      "restore": "Bərpa et",
+      "done": "Hazırdır",
+      "title": "Layihələr və süzgəclər"
+    },
+    "planner": {
+      "moveUp": "“{title}” yuxarı",
+      "remove": "“{title}” tapşırığını sabahdan çıxar",
+      "title": "Sabah nə edəcəksən?",
+      "lead": "Ən vacibdən başlayaraq 6-ya qədər iş seç. Sabah birincisi «Əvvəlcə bunu et» olacaq, qalanları lövhəni dolduracaq.",
+      "pick": "Seç",
+      "order": "Sabahın sırası · {count, number}/{max, number}",
+      "empty": "Siyahıdan iş seç. Birinci seçdiyin, səhər ilk görəcəyin olacaq.",
+      "fromToday": "bu gündən",
+      "later": "İndi yox",
+      "save": "Sabah üçün saxla",
+      "saved": "Sabahın siyahısı saxlandı."
+    }
+  },
+  "cards": {
+    "title": "Bilik kartları",
+    "lead": "Öyrəndiyin hər şey, təkrar cədvəli ilə birlikdə.",
+    "newSession": "Yeni öyrənmə sessiyası",
+    "searchLabel": "Kartları axtar",
+    "searchPlaceholder": "Mövzu və izahları axtar",
+    "search": "Axtar",
+    "statusLabel": "Vəziyyət",
+    "active": "Aktiv",
+    "archived": "Arxivdə",
+    "topicLabel": "Mövzu",
+    "allTopics": "Bütün mövzular",
+    "sortLabel": "Sırala",
+    "sortDue": "Vaxtı çatanlar əvvəl",
+    "sortNew": "Ən yenilər əvvəl",
+    "allowance": "Pulsuz planda {limit, number} kartdan {used, number}",
+    "emptyTitle": "Hələ kart yoxdur",
+    "emptyText": "Bir öyrənmə sessiyasını bitir və öyrəndiyini izah et. İlk kartın burada görünəcək.",
+    "noResults": "Axtarışına uyğun kart yoxdur.",
+    "more": "Daha çox yüklə",
+    "due": "Vaxtı: {when}",
+    "dueToday": "Bu gün vaxtıdır",
+    "overdue": "Gecikib",
+    "box": "Qutu {n, number}",
+    "graduated": "Uzunmüddətli",
+    "questionsCount": "{count, plural, one {# sual} other {# sual}}",
+    "detail": {
+      "back": "Bütün kartlar",
+      "reviewNow": "İndi təkrarla",
+      "reviewNowHint": "İstənilən vaxt məşq et. Erkən təkrarlar cədvəli dəyişmir.",
+      "nextReview": "Növbəti təkrar",
+      "reviews": "Təkrarlar",
+      "source": "Mənbə",
+      "method": "Metod",
+      "created": "Yaradılıb",
+      "explanation": "İzah",
+      "editTopic": "Mövzu",
+      "save": "Dəyişiklikləri saxla",
+      "saved": "Dəyişikliklər yadda saxlanıldı.",
+      "archive": "Arxivlə",
+      "unarchive": "Bərpa et",
+      "archivedNote": "Arxivdəki kartlar təkrarlanmır. Onlar yenə də Pulsuz plan limitinə daxildir.",
+      "delete": "Kartı sil",
+      "deleteConfirm": "Bu kart və onun təkrar tarixçəsi silinsin? Bunu geri qaytarmaq olmaz.",
+      "history": "Təkrar tarixçəsi",
+      "noHistory": "Hələ təkrar yoxdur.",
+      "passed": "Keçdi",
+      "missed": "Keçmədi",
+      "early": "Məşq",
+      "score": "{score, number}%",
+      "analysis": "AI rəyi",
+      "error": "Saxlamaq mümkün olmadı. Yenidən cəhd et."
+    },
+    "questions": {
+      "number": "Sual {n, number}",
+      "type": "Sualın növü",
+      "types": {
+        "open": "Açıq cavab",
+        "true_false": "Doğru və ya yanlış",
+        "cloze": "Boşluğu doldur"
+      },
+      "source": {
+        "ai": "AI",
+        "ai_edited": "AI, redaktə olunub"
+      },
+      "prompt": "Sual",
+      "answer": "Cavab",
+      "true": "Doğru",
+      "false": "Yanlış",
+      "explanation": "Niyə doğrudur",
+      "explanationPlaceholder": "İstəyə bağlı, bir cümlə",
+      "clozeHint": "Çatışmayan sözü {blank} ilə işarələ",
+      "delete": "Sual {n, number}: sil",
+      "add": {
+        "open": "Açıq sual",
+        "true_false": "Doğru / yanlış",
+        "cloze": "Boşluğu doldur"
+      },
+      "problems": {
+        "prompt": "Sualı yaz.",
+        "answer": "Cavabı əlavə et.",
+        "blank": "Boşluq sualında tam olaraq bir ____ olmalıdır."
+      }
+    },
+    "boxes": {
+      "label": "Təkrar qutuları",
+      "today": "Bu gün",
+      "days": "{days, plural, one {# gün} other {# gün}}",
+      "hint": "Düz cavab kartı bir qutu irəli aparır və o daha seyrək gəlir. Səhv cavab onu tezliklə geri qaytarır."
+    }
+  },
+  "limits": {
+    "cta": "Pro-ya bax",
+    "keepWorking": "Kartların və təkrarların hər halda işləməyə davam edir.",
+    "pro": {
+      "cards": "Limitsiz bilik kartları",
+      "ai": "Hər kart üçün AI rəyi və suallar",
+      "lab": "Tam Laboratoriya: etiketə və günün saatına görə sənə ən yaxşı nə uyğundur",
+      "weekly": "E-poçtla həftəlik irəliləyiş hesabatı"
+    },
+    "card_limit": {
+      "title": "Pulsuz planda 20 karta çatdın",
+      "text": "Kartları istədiyin kimi sil və ya saxla; təkrarlar davam edir. Yeni kartlar saxlamaq üçün Pro-ya keç."
+    },
+    "monthly_limit": {
+      "title": "Bu ayın AI analizləri bitdi",
+      "text": "Pulsuz plana ayda {limit, number} AI kart analizi daxildir. Suallarını özün yazaraq bu kartı yenə də saxlaya bilərsən."
+    },
+    "reanalysis_limit": {
+      "title": "Bu kartın təkrar analizi artıq istifadə olunub",
+      "text": "Pulsuz plan hər kart üçün bir düzəlişə imkan verir. Sualları əl ilə redaktə et və ya limitsiz düzəliş üçün Pro-ya keç."
+    },
+    "budget": {
+      "title": "AI bu gün dincəlir",
+      "text": "AI rəyi müvəqqəti əlçatan deyil. Suallarını özün yaz; kartın tam eyni şəkildə işləyəcək."
+    },
+    "lab": {
+      "title": "Tam Laboratoriyanı Pro ilə gör",
+      "text": "Pulsuz plan son 7 gündə ən yaxşı texnikanı göstərir. Pro bütün dövr üzrə analiz, etiketə və saata görə nəticələr və yadda saxlama əyrilərini əlavə edir."
+    },
+    "weekly_report": {
+      "title": "Həftəlik hesabat Pro funksiyasıdır",
+      "text": "Hər bazar ertəsi fokus vaxtın, ən yaxşı texnikan, yadda saxlama göstəricin və bir tövsiyə ilə qısa məktub al."
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "Təkrar xatırlatmalarını brauzerdə də almaq istəyirsən?",
+      "text": "Təkrar vaxtı çatanda e-poçta əlavə olaraq bir bildiriş göndərəcəyik.",
+      "enable": "Brauzer xatırlatmalarını aç",
+      "enabled": "Brauzer xatırlatmaları aktivdir",
+      "denied": "Bu sayt üçün bildirişlər bloklanıb. Onlara brauzer ayarlarında icazə verə bilərsən."
+    },
+    "unsubscribe": {
+      "title": "E-poçt seçimləri",
+      "reviews": "Gündəlik təkrar xatırlatma məktubları dayandırılsın? Brauzer bildirişləri və təkrar cədvəlin olduğu kimi qalır.",
+      "weekly": "Həftəlik hesabat məktubları dayandırılsın?",
+      "confirm": "Abunəlikdən çıx",
+      "done": "Hazırdır. Bu məktubları daha almayacaqsan. Onları Ayarlarda yenidən aça bilərsən.",
+      "error": "Alınmadı. Yenidən cəhd et və ya Ayarlarda dəyiş.",
+      "invalid": "Bu keçid etibarlı deyil. Məktubları Ayarlarda idarə edə bilərsən.",
+      "settings": "Bütün bildirişləri Ayarlarda idarə et"
+    }
+  },
+  "review": {
+    "title": "Təkrar",
+    "lead": "Yaddaşdan cavab ver. Bütün cavablar doğru olanda kart keçir.",
+    "progress": "Kart {current, number} / {total, number}",
+    "questionProgress": "Sual {current, number} / {total, number}",
+    "types": {
+      "open": "Açıq cavab",
+      "true_false": "Doğru, yoxsa yanlış?",
+      "cloze": "Boşluğu doldur"
+    },
+    "true": "Doğru",
+    "false": "Yanlış",
+    "blankLabel": "Çatışmayan söz",
+    "yourAnswer": "Sənin cavabın",
+    "check": "Yoxla",
+    "grading": "Yoxlanılır…",
+    "modelAnswer": "Cavab",
+    "selfGradeNote": "Avtomatik yoxlama hazırda əlçatan deyil. Cavabla müqayisə et və özünü dürüst qiymətləndir.",
+    "self": {
+      "correct": "Doğru cavab verdim",
+      "partial": "Qismən",
+      "incorrect": "Hələ yox"
+    },
+    "verdict": {
+      "correct": "Doğrudur.",
+      "partial": "Qismən doğrudur.",
+      "incorrect": "Tam deyil."
+    },
+    "nextQuestion": "Növbəti sual",
+    "finishCard": "Kartı bitir",
+    "passedTitle": "Keçdi",
+    "missedTitle": "Hələ yox. Tezliklə qayıdacaq",
+    "score": "{score, number}%",
+    "nextReview": "Növbəti təkrar: {date}",
+    "earlyNote": "Məşq təkrarı: cədvəlin dəyişmir (növbəti təkrar: {date}).",
+    "revisit": "Yenidən baxmalı olduqların",
+    "openExplanation": "İzahını yenidən oxu",
+    "nextCard": "Növbəti kart",
+    "finish": "Bitir",
+    "passRule": "{count, plural, one {Keçmək üçün suala doğru cavab ver.} other {Keçmək üçün bütün # suala doğru cavab ver.}}",
+    "saveError": "Təkrarını saxlamaq mümkün olmadı. Yenidən cəhd et.",
+    "emptyTitle": "Hamısını bitirmisən",
+    "emptyText": "Hazırda vaxtı çatan təkrar yoxdur. Kartı saxladıqdan sonra 5-ci, 10-cu və 30-cu gün yeni təkrarlar görünür.",
+    "allDoneTitle": "Təkrarlar bitdi",
+    "allDoneText": "{total, number} kartdan {passed, number} kartı keçdin. Əla iş.",
+    "learnSomething": "Yeni nəsə öyrən",
+    "toTimer": "Taymerə qayıt"
+  },
+  "stats": {
+    "title": "Statistika",
+    "lead": "Fokusun və öyrənməyin necə gedir.",
+    "rangeLabel": "Dövr",
+    "range": "{days, number} gün",
+    "focused": "Fokus vaxtı",
+    "sessions": "Sessiyalar",
+    "avgRating": "Orta fokus",
+    "streak": "Ardıcıllıq",
+    "bestStreak": "Ən uzun ardıcıllıq",
+    "days": "{count, plural, one {# gün} other {# gün}}",
+    "retention30": "Yadda saxlama (30 gün)",
+    "retention90": "Yadda saxlama (90 gün)",
+    "cardsTotal": "Kartlar",
+    "dailyChart": "Gündəlik fokus dəqiqələri",
+    "showTable": "Cədvəl kimi göstər",
+    "day": "Gün",
+    "minutes": "Dəqiqə",
+    "techniques": "Texnikalar",
+    "technique": "Texnika",
+    "noSessions": "Bu dövrdə hələ sessiya yoxdur.",
+    "topics": "Mövzulara görə yadda saxlama (90 gün)",
+    "topic": "Mövzu",
+    "reviews": "Təkrarlar",
+    "retention": "Yadda saxlama",
+    "noReviews": "Hələ təkrar yoxdur.",
+    "lab": {
+      "title": "Laboratoriya",
+      "lead": "Öz fokus qiymətlərinə əsasən sənə hansı texnikanın daha uyğun olduğunu göstərir.",
+      "weekTop": "Son 7 gündə ən yaxşı fokusun bu texnika ilə oldu: {technique} — {sessions, plural, one {# sessiyada} other {# sessiyada}} {rating, number, ::.#} / 5.",
+      "needData": "Bir neçə sessiyanı qiymətləndir, nəticələrin burada görünəcək.",
+      "allTime": "Bütün dövr üzrə reytinq",
+      "rankRow": "{technique}: {rating, number, ::.#} / 5 ({sessions, plural, one {# sessiya} other {# sessiya}})",
+      "byTag": "Tapşırıq etiketinə görə ən yaxşı texnika",
+      "tag": "Etiket",
+      "best": "Ən yaxşı texnika",
+      "noTags": "Hər iş növünə hansı texnikanın uyğun olduğunu görmək üçün tapşırıqlarına etiket əlavə et.",
+      "byHour": "Günün saatına görə fokus",
+      "hour": "Saat",
+      "curve": "Təkrar addımına görə yadda saxlama",
+      "step": "Addım",
+      "dayN": "{day, number}-ci gün",
+      "graduated": "Uzunmüddətli"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Qiymətlər",
+    "title": "Pulsuz başla. Dəyərinə dəyəndə yüksəlt.",
+    "lead": "Hər fokus, öyrənmə və planlaşdırma texnikası pulsuzdur. Pro limitləri qaldırır və sənə ən yaxşı nəyin işlədiyini göstərir.",
+    "perMonth": "/ ay",
+    "perYear": "/ il",
+    "free": {
+      "name": "Pulsuz",
+      "text": "Fokuslanmaq və öyrəndiklərini yadda saxlamağa başlamaq üçün lazım olan hər şey.",
+      "points": {
+        "1": "Bütün 18 texnika, tapşırıqlar və statistika",
+        "2": "20-yə qədər bilik kartı",
+        "3": "Ayda 10 AI analizi",
+        "4": "E-poçt və brauzerlə təkrar xatırlatmaları"
+      },
+      "cta": "Pulsuz başla"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "Limitsiz bilik kartları",
+        "2": "Hər kart üçün AI rəyi və suallar (ədalətli istifadə)",
+        "3": "Tam Laboratoriya: etiketə və günün saatına görə ən yaxşı texnika",
+        "4": "E-poçtla həftəlik irəliləyiş hesabatı"
+      }
+    },
+    "monthly": {
+      "name": "Pro aylıq",
+      "text": "Çevik. İstənilən vaxt ləğv et.",
+      "cta": "Aylığı seç"
+    },
+    "yearly": {
+      "name": "Pro illik",
+      "badge": "{percent, number}% qənaət",
+      "text": "Bu, ayda {monthly} deməkdir, ildə bir dəfə ödənilir.",
+      "point": "Pro-nun hər şeyi, bütün il boyu",
+      "cta": "İlliyi seç"
+    },
+    "checkoutNote": "Ödənişləri satıcı-qeydiyyatçımız (merchant of record) Polar emal edir. Ölkən üçün vergilər daxil olmaqla son qiymət ödəniş səhifəsində göstərilir. İstənilən vaxt Ödəniş bölməsindən ləğv et.",
+    "compare": "Pulsuz və Pro müqayisəsi",
+    "feature": "Funksiya",
+    "notIncluded": "Daxil deyil",
+    "rows": {
+      "techniques": {
+        "label": "Vaxt, öyrənmə və planlaşdırma texnikaları",
+        "free": "Bütün 18",
+        "pro": "Bütün 18"
+      },
+      "tasks": {
+        "label": "Tapşırıqlar, layihələr və əsas statistika",
+        "free": "Daxildir",
+        "pro": "Daxildir"
+      },
+      "cards": {
+        "label": "Bilik kartları",
+        "free": "Cəmi 20",
+        "pro": "Limitsiz"
+      },
+      "ai": {
+        "label": "AI rəyi və sual yaradılması",
+        "free": "Ayda 10 kart",
+        "pro": "Limitsiz (ədalətli istifadə)"
+      },
+      "grading": {
+        "label": "Təkrarlarda açıq cavabların AI ilə qiymətləndirilməsi",
+        "free": "Daxildir",
+        "pro": "Daxildir"
+      },
+      "reminders": {
+        "label": "E-poçt və brauzer təkrar xatırlatmaları",
+        "free": "Daxildir",
+        "pro": "Daxildir"
+      },
+      "lab": {
+        "label": "Laboratoriya: sənə hansı texnika daha yaxşı uyğundur",
+        "free": "Son 7 gün, ən yaxşı texnika",
+        "pro": "Bütün dövr, etiketə və saata görə, yadda saxlama əyriləri"
+      },
+      "weekly": {
+        "label": "Həftəlik e-poçt hesabatı",
+        "free": "–",
+        "pro": "Daxildir"
+      },
+      "export": {
+        "label": "Məlumat ixracı (JSON və CSV)",
+        "free": "Daxildir",
+        "pro": "Daxildir"
+      }
+    },
+    "faqTitle": "Planlar haqqında suallar",
+    "faq": {
+      "1": {
+        "q": "Ödənişi dayandırsam, kartlarıma nə olacaq?",
+        "a": "Heç nə itmir. Kartların və planlaşdırılmış təkrarların işləməyə davam edir. Pulsuz limitdən artıq kart əlavə edə bilməyəcəksən, AI analizləri isə yenidən ayda 10 olacaq."
+      },
+      "2": {
+        "q": "Pro-da AI üçün ədalətli istifadə nə deməkdir?",
+        "a": "Pro-ya ayda 300 karta qədər AI rəyi daxildir; bu, insanların çoxunun yaratdığından xeyli çoxdur. Limitə çatsan da, sualları özün yaza bilərsən."
+      },
+      "3": {
+        "q": "Necə ləğv edim?",
+        "a": "Tətbiqdə Ödəniş bölməsini aç və “Abunəliyi idarə et” seç. Ödədiyin dövrün sonuna qədər Pro səndə qalır."
+      },
+      "4": {
+        "q": "Ödənişimi kim emal edir?",
+        "a": "Polar bizim satıcı-qeydiyyatçımızdır və ödənişi, fakturaları və satış vergisini idarə edir. FocusKept kart məlumatlarını heç vaxt görmür."
+      },
+      "5": {
+        "q": "Ömürlük plan varmı?",
+        "a": "Hazırda yoxdur. Pro aylıq və ya illik mövcuddur."
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "Vaxt texnikaları",
+      "learning": "Öyrənmə metodları",
+      "planning": "Planlaşdırma texnikaları"
+    },
+    "eyebrow": "Texnikalar",
+    "title": "Fokus, öyrənmə və planlaşdırma texnikaları",
+    "lead": "Hər texnika sadə dillə, addımlarla, nə vaxt kömək etdiyi və nə vaxt etmədiyi ilə izah olunub. İstənilənini öz səhifəsində elə oradaca sına.",
+    "all": "Bütün texnikalar",
+    "tryNow": "İndi sına",
+    "howItWorks": "Necə işləyir",
+    "steps": "Addım-addım",
+    "bestFor": "Ən yaxşı uyğun gəldiyi hallar",
+    "whenNotToUse": "Nə vaxt istifadə etməmək",
+    "faq": "Suallar",
+    "related": "Əlaqəli texnikalar",
+    "trademarkNotice": "Pomodoro Technique® Francesco Cirillo-nun ticarət nişanıdır. FocusKept-in Pomodoro Technique® və ya Francesco Cirillo ilə heç bir əlaqəsi yoxdur və onlar tərəfindən təsdiqlənməyib."
+  },
+  "tryIt": {
+    "reset": "Sıfırla",
+    "notSaved": "Bu demo saxlanılmır. Statistikanı saxlamaq üçün tam sessiyaya başla.",
+    "fullSession": "Tam sessiyada istifadə et",
+    "box": "Qutunun uzunluğu (dəqiqə)",
+    "steps": "Addımları izlə",
+    "learnWith": "Öyrənmə metodu: {method}",
+    "taskPlaceholder": "Tapşırıq əlavə et",
+    "where": "Hara getsin",
+    "add": "Əlavə et",
+    "full": "O hissə doludur. Məqsəd də budur: seçim et.",
+    "list": "Tapşırıqlar",
+    "remove": "“{title}” tapşırığını çıxar",
+    "markFrog": "“{title}” bugünkü qurbağa olsun",
+    "frogHint": "Bugünkü qurbağanı seçmək üçün alova toxun. O, ən yuxarıya keçəcək.",
+    "planFull": "Real gününü bu texnika ilə planlaşdır"
+  },
+  "home": {
+    "anonText": "Pulsuz hesab yarat: izahını yazarsan, ondan suallar alarsan və vaxtında xatırlatma gəlir. Sessiyan bu cihazda gözləyir.",
+    "anonTitle": "Öyrəndiyini yaz, suallarını al.",
+    "boxMinutes": "Qutu, dəq",
+    "breakMinutes": "Fasilə",
+    "breakNote": "Bu blokdan nə yadında qaldı?",
+    "breakNoteHint": "İstəyə bağlı · sonda səni gözləyəcək",
+    "breakNotePlaceholder": "Bir-iki fikir…",
+    "breakOver": "Fasilə bitdi",
+    "breakTitle": "Fasilə · blok {current}/{total} bitdi",
+    "continue": "Davam et",
+    "createAccount": "Pulsuz hesab yarat",
+    "decrease": "Azalt: {label}",
+    "discard": "Saxlamadan çıx",
+    "endFocused": "Fokus: {duration}",
+    "endSession": "Sessiyanı bitir",
+    "fillHint": "Fokuslandıqca kart dolur",
+    "focusFallback": "Fokus",
+    "focusMinutes": "Fokus",
+    "fromPlan": "Bu günün planından:",
+    "haveAccount": "Hesabım var",
+    "hintAsk": "Vaxtında soruşaq",
+    "hintFocus": "Fokuslan",
+    "hintWrite": "Öyrəndiyini yaz",
+    "howDidItGo": "Necə keçdi?",
+    "howItWorks": "Necə işləyir",
+    "increase": "Artır: {label}",
+    "learn": "Öyrənirəm",
+    "modeLabel": "Rejim",
+    "moods": {
+      "1": "dağınıq",
+      "2": "orta",
+      "3": "yaxşı",
+      "4": "əla",
+      "5": "tam içində"
+    },
+    "newTopic": "Yeni mövzu",
+    "nextBlock": "Növbəti blok · {current}/{total}",
+    "oneStep": "Bir addım qaldı",
+    "placeholderLearn": "məsələn, fotosintez",
+    "placeholderWork": "məsələn, hesabatın girişi",
+    "reviewStart": "Təkrara başla",
+    "reviewTitle": "{count, plural, one {# kart təkrar gözləyir} other {# kart təkrar gözləyir}}",
+    "rhythm": "Ritm",
+    "rhythmGuide": "Hansı ritm nə vaxt? Bələdçiyə bax",
+    "rhythmHint": "fokus · fasilə, dəqiqə",
+    "rhythmSub": {
+      "52-17": "Uzun, sakit işlər üçün",
+      "custom": "Rəqəmləri özün seç",
+      "deep-work-90": "Günün ən çətin işi",
+      "flowtime": "Diqqət dağılana qədər",
+      "pomodoro": "Başlamaq çətindirsə",
+      "timeboxing": "Bir işə vaxt büdcəsi ver"
+    },
+    "runBlock": "blok {current}/{total}",
+    "save": "Saxla",
+    "skipCard": "Kartsız bitir",
+    "start": "Başla",
+    "subjectLearn": "Nəyi öyrənirsən?",
+    "subjectWork": "Nə üzərində işləyirsən? (istəyə bağlı)",
+    "summaryBox": "Vaxt bitəndə: bitdi, uzat və ya sonraya",
+    "summaryCycle": "{blocks, plural, one {# blok} other {# blok}} · aralarda {minutes} dəq fasilə",
+    "summaryFlow": "Saniyəölçən · fasilə fokusun beşdə biri qədərdir",
+    "taskDone": "«{task}» bitdi",
+    "todayTotal": "Bu gün fokus: {duration}",
+    "topicHint": "Kartın bu adla saxlanacaq.",
+    "topicTitle": "Mövzu nə idi?",
+    "trailEmpty": "hələ boşdur",
+    "trailLabel": "Bu günün izi",
+    "trailSummary": "{duration} · {cards, plural, one {# kart} other {# kart}}",
+    "work": "İşləyirəm"
+  }
+}

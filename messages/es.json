@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "Navegación principal",
+      "appNavigation": "Navegación de la app",
+      "skipToContent": "Ir al contenido",
+      "techniques": "Técnicas",
+      "pricing": "Precios",
+      "about": "Acerca de",
+      "signIn": "Iniciar sesión",
+      "tasks": "Tareas",
+      "cards": "Tarjetas",
+      "stats": "Estadísticas",
+      "settings": "Ajustes",
+      "billing": "Facturación",
+      "signOut": "Cerrar sesión",
+      "timer": "Temporizador",
+      "guide": "Guía",
+      "howItWorks": "Cómo funciona",
+      "menu": "Menú",
+      "account": "Cuenta y ajustes",
+      "reviewsDue": "Hay tarjetas por repasar"
+    },
+    "theme": {
+      "label": "Tema",
+      "dark": "Oscuro",
+      "light": "Claro",
+      "system": "Sistema"
+    },
+    "language": {
+      "label": "Idioma"
+    },
+    "actions": {
+      "save": "Guardar",
+      "saving": "Guardando…",
+      "retry": "Reintentar"
+    },
+    "status": {
+      "error": "Algo salió mal. Inténtalo de nuevo.",
+      "offline": "Estás sin conexión. Tu sesión se guarda en este dispositivo y se sincronizará cuando vuelvas a estar en línea."
+    },
+    "consent": {
+      "label": "Preferencias de analítica",
+      "text": "¿Podemos recopilar analíticas de uso anónimas para mejorar FocusKept? No se registra nada hasta que elijas.",
+      "allow": "Permitir",
+      "decline": "No, gracias"
+    },
+    "footer": {
+      "tagline": "Concéntrate a fondo. Recuerda lo que aprendes.",
+      "product": "Producto",
+      "company": "Empresa",
+      "legal": "Legal",
+      "focusTimer": "Temporizador de enfoque",
+      "learningMode": "Modo Aprendizaje",
+      "contact": "Contacto",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — Concéntrate a fondo. Recuerda lo que aprendes.",
+    "defaultDescription": "Un temporizador de enfoque con 18 técnicas probadas, explicaciones Feynman, preguntas generadas con IA y repasos espaciados automáticos los días 5, 10 y 30.",
+    "signIn": "Iniciar sesión",
+    "signUp": "Crea tu cuenta",
+    "verifyEmail": "Revisa tu bandeja de entrada",
+    "forgotPassword": "Restablece tu contraseña",
+    "resetPassword": "Elige una contraseña nueva",
+    "settings": "Ajustes",
+    "security": "Seguridad",
+    "billing": "Facturación",
+    "focusTitle": "Temporizador de enfoque",
+    "focusDescription": "Un temporizador de enfoque gratis con 25/5, 52/17, Flowtime, Deep Work 90, timeboxing y ajustes personalizados. Sin cuenta.",
+    "tasks": "Tareas",
+    "learnTitle": "Modo Aprendizaje: estudia, explica, recuerda",
+    "learnDescription": "Estudia un tema, explícalo con tus palabras, recibe comentarios y preguntas de la IA, y repasa automáticamente los días 5, 10 y 30.",
+    "learnNew": "Nueva sesión de aprendizaje",
+    "explain": "Explica lo que aprendiste",
+    "cards": "Tarjetas de conocimiento",
+    "card": "Tarjeta de conocimiento",
+    "review": "Repaso",
+    "stats": "Estadísticas",
+    "pricingTitle": "Precios: Gratis y Pro",
+    "pricingDescription": "FocusKept es gratis para empezar. Pro cuesta 5 $ al mes o 40 $ al año: tarjetas ilimitadas, más comentarios de IA, el Laboratorio completo y un informe semanal.",
+    "techniquesTitle": "18 técnicas de enfoque, aprendizaje y planificación",
+    "techniquesDescription": "25/5, 52/17, Flowtime, Feynman, recuerdo activo, SQ3R, Eisenhower y más: cómo funciona cada técnica, cuándo usarla y un temporizador gratis para probarla."
+  },
+  "errors": {
+    "notFoundTitle": "Esta página no existe.",
+    "notFoundText": "Puede que el enlace sea antiguo o que la página se haya movido.",
+    "backHome": "Volver al inicio",
+    "errorTitle": "Algo no salió como esperábamos.",
+    "errorText": "Inténtalo de nuevo en un momento. Si sigue pasando, avísanos."
+  },
+  "auth": {
+    "signInTitle": "Hola de nuevo",
+    "signInLead": "Inicia sesión para seguir con tus sesiones de enfoque y tus repasos.",
+    "signUpTitle": "Crea tu cuenta",
+    "signUpLead": "Guarda lo que aprendes y recibe recordatorios los días 5, 10 y 30.",
+    "forgotTitle": "Restablece tu contraseña",
+    "forgotLead": "Te enviaremos un enlace seguro por correo para elegir una contraseña nueva.",
+    "resetTitle": "Elige una contraseña nueva",
+    "resetLead": "Usa al menos 12 caracteres.",
+    "verifyTitle": "Revisa tu bandeja de entrada",
+    "verifyLead": "Te enviamos un enlace de verificación. Ábrelo para activar tu cuenta: te trae de vuelta aquí con la sesión ya iniciada.",
+    "verifyHint": "¿No lo encuentras? Revisa la carpeta de spam o vuelve a iniciar sesión para recibir un enlace nuevo.",
+    "name": "Tu nombre",
+    "namePlaceholder": "Lucía García",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Al menos 12 caracteres",
+    "newPassword": "Contraseña nueva",
+    "forgotLink": "¿Olvidaste tu contraseña?",
+    "submitSignIn": "Iniciar sesión",
+    "submitSignUp": "Crear cuenta",
+    "submitForgot": "Enviar enlace",
+    "submitReset": "Cambiar contraseña",
+    "google": "Continuar con Google",
+    "or": "o",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "noAccount": "¿Primera vez en FocusKept?",
+    "createAccount": "Crear una cuenta",
+    "signInLink": "Iniciar sesión",
+    "legal": "Al continuar, aceptas nuestros <terms>Términos</terms> y nuestra <privacy>Política de privacidad</privacy>.",
+    "resetSent": "Si existe una cuenta con ese correo, el enlace ya va en camino.",
+    "resetDone": "Contraseña actualizada. Ya puedes iniciar sesión.",
+    "invalidCredentials": "Introduce un correo válido y una contraseña de 12 a 128 caracteres.",
+    "invalidPassword": "Usa una contraseña de 12 a 128 caracteres.",
+    "wrongCredentials": "El correo y la contraseña no coinciden.",
+    "emailNotVerified": "Primero verifica tu correo. Te acabamos de enviar un enlace nuevo.",
+    "userExists": "Ya existe una cuenta con este correo. Prueba a iniciar sesión.",
+    "tooManyAttempts": "Demasiados intentos. Espera un minuto y vuelve a intentarlo.",
+    "invalidToken": "Este enlace ha caducado o ya se usó. Solicita uno nuevo.",
+    "learningContext": "Regístrate para empezar tu sesión de aprendizaje sobre «{topic}»."
+  },
+  "email": {
+    "verification": {
+      "subject": "Confirma tu correo para FocusKept",
+      "heading": "Confirma tu correo",
+      "body": "Pulsa el botón de abajo para activar tu cuenta de FocusKept. Iniciarás sesión y volverás justo donde lo dejaste.",
+      "button": "Confirmar correo",
+      "ignore": "Si no creaste una cuenta, puedes ignorar este correo."
+    },
+    "reset": {
+      "subject": "Restablece tu contraseña de FocusKept",
+      "heading": "Restablece tu contraseña",
+      "body": "Usa el enlace seguro de abajo para elegir una contraseña nueva. Caduca pronto y solo funciona una vez.",
+      "button": "Elegir una contraseña nueva",
+      "ignore": "Si no lo pediste, puedes ignorar este correo. Tu contraseña no cambia."
+    },
+    "footer": {
+      "transactional": "Recibes este correo por una acción en tu cuenta de FocusKept.",
+      "reviews": "Recibes este correo porque los recordatorios de repaso están activados en tu cuenta de FocusKept.",
+      "weekly": "Recibes este informe semanal porque está activado en tu cuenta FocusKept Pro.",
+      "unsubscribe": "Darse de baja"
+    },
+    "digest": {
+      "subject": "{count, plural, one {# tarjeta para repasar hoy} many {# tarjetas para repasar hoy} other {# tarjetas para repasar hoy}}",
+      "preview": "{count, plural, one {Una tarjeta está lista para repasar.} many {# tarjetas están listas para repasar.} other {# tarjetas están listas para repasar.}}",
+      "heading": "{count, plural, one {Es hora de repasar # tarjeta} many {Es hora de repasar # tarjetas} other {Es hora de repasar # tarjetas}}",
+      "intro": "Repasar ahora, justo antes de olvidarlo, es lo que hace que se quede:",
+      "more": "{count, plural, one {…y # más} many {…y # más} other {…y # más}}",
+      "estimate": "{minutes, plural, one {Alrededor de # minuto.} many {Alrededor de # minutos.} other {Alrededor de # minutos.}}",
+      "button": "Empezar repaso"
+    },
+    "weekly": {
+      "subject": "Tu semana en FocusKept",
+      "preview": "{minutes, plural, one {# minuto de enfoque la semana pasada.} many {# minutos de enfoque la semana pasada.} other {# minutos de enfoque la semana pasada.}}",
+      "heading": "Tu semana de enfoque",
+      "intro": "Así fue tu semana pasada.",
+      "focus": "Enfoque",
+      "minutes": "{minutes, plural, one {# minuto} many {# minutos} other {# minutos}}",
+      "sessions": "Sesiones",
+      "best": "Mejor técnica",
+      "cards": "Tarjetas creadas",
+      "retention": "Retención",
+      "streak": "Racha",
+      "days": "{count, plural, one {# día} many {# días} other {# días}}",
+      "suggestionTitle": "Una sugerencia para esta semana",
+      "suggestions": {
+        "start": "Empieza poco a poco: un bloque de 25 minutos el lunes basta para arrancar.",
+        "retention": "Aprobaste el {percent, number} % de tus repasos. Relee tu explicación antes del repaso de una tarjeta y da respuestas breves.",
+        "goal": "Alcanzaste el {percent, number} % de tu objetivo semanal. Añade una sesión extra a mitad de semana.",
+        "bestTechnique": "Tu mejor enfoque llegó con {technique}. Planifica con ella tus dos sesiones más importantes.",
+        "keepGoing": "Una gran semana. Mantén el mismo ritmo y protege tu tiempo de enfoque."
+      },
+      "recapTitle": "Lo que aprendiste en {month}",
+      "recapText": "{cards, plural, one {# tarjeta creada} many {# tarjetas creadas} other {# tarjetas creadas}} · retención {retention}",
+      "button": "Ver tus estadísticas"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, one {# tarjeta para repasar} many {# tarjetas para repasar} other {# tarjetas para repasar}}",
+      "reviewsBody": "Unos minutos ahora y se queda en tu memoria.",
+      "streakTitle": "{count, plural, one {Mantén tu racha de # día} many {Mantén tu racha de # días} other {Mantén tu racha de # días}}",
+      "streakBody": "Una sesión corta hoy basta para mantenerla."
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "Analítica",
+      "text": "Analítica de producto opcional y anónima. Tus notas, explicaciones y respuestas nunca se envían.",
+      "allow": "Permitir analítica",
+      "disable": "Desactivar analítica",
+      "enabled": "Analítica activada.",
+      "disabled": "Analítica desactivada.",
+      "error": "No se pudo actualizar tu preferencia."
+    },
+    "title": "Ajustes",
+    "lead": "Tu cuenta, tus preferencias y tus recordatorios.",
+    "account": {
+      "title": "Cuenta",
+      "displayName": "Nombre visible",
+      "saved": "Cambios guardados.",
+      "securityLink": "Contraseña y sesiones",
+      "billingLink": "Plan y facturación"
+    },
+    "security": {
+      "title": "Seguridad",
+      "lead": "Que tu cuenta siga siendo tuya.",
+      "backToSettings": "Volver a Ajustes",
+      "passwordTitle": "Cambiar contraseña",
+      "passwordText": "Al cambiar tu contraseña se cierra la sesión en tus otros dispositivos.",
+      "currentPassword": "Contraseña actual",
+      "newPassword": "Contraseña nueva",
+      "passwordHint": "Al menos 12 caracteres.",
+      "changePassword": "Cambiar contraseña",
+      "passwordChanged": "Contraseña cambiada.",
+      "passwordError": "No se pudo cambiar tu contraseña. Revisa tu contraseña actual y vuelve a intentarlo.",
+      "sessionsTitle": "Sesiones abiertas",
+      "sessionsText": "Mantén abierta esta sesión y cierra todas las demás.",
+      "revokeOthers": "Cerrar las otras sesiones",
+      "revoked": "Se cerraron las otras sesiones.",
+      "revokeError": "No se pudieron cerrar las otras sesiones."
+    },
+    "delete": {
+      "title": "Eliminar cuenta",
+      "text": "Elimina para siempre tu cuenta y todo lo que contiene: sesiones, tareas, tarjetas y repasos. Las cuentas con historial de pagos pasan por una revisión rápida del soporte para que no quede ninguna suscripción activa. Exporta tus datos antes si quieres una copia.",
+      "word": "ELIMINAR",
+      "typeToConfirm": "Escribe {word} para confirmar",
+      "password": "Tu contraseña",
+      "submit": "Eliminar mi cuenta",
+      "billingBlocked": "Tu cuenta tiene historial de pagos. Escríbenos y la cerraremos por ti.",
+      "error": "No se pudo eliminar tu cuenta. Revisa tu contraseña y vuelve a intentarlo."
+    },
+    "prefs": {
+      "saved": "Ajustes guardados.",
+      "general": "General",
+      "timezone": "Zona horaria",
+      "useDeviceZone": "Usar la zona horaria de este dispositivo ({zone})",
+      "weekStart": "La semana empieza el",
+      "weeklyGoal": "Objetivo semanal de enfoque (horas)",
+      "weeklyGoalHint": "Se muestra en tus estadísticas. 0 lo desactiva.",
+      "techniques": "Técnicas",
+      "defaultTime": "Técnica de tiempo predeterminada",
+      "defaultMethod": "Método de aprendizaje predeterminado",
+      "timebox": "Timebox predeterminado (minutos)",
+      "presets": "Ajustes personalizados",
+      "deletePreset": "Eliminar el ajuste «{name}»",
+      "reviewSteps": "Calendario de repasos",
+      "reviewStepsText": "Días tras guardar una tarjeta para sus tres primeros repasos. Después del último paso, los repasos pasan a 60 días y luego se duplican, hasta 180 días.",
+      "stepN": "Repaso {n, number} (día)",
+      "resetSteps": "Restablecer a 5 / 10 / 30",
+      "stepsInvalid": "Usa tres números crecientes entre 1 y 365.",
+      "notifications": "Recordatorios y notificaciones",
+      "reminderTime": "Hora del recordatorio diario",
+      "reminderTimeHint": "Cuando tengas repasos pendientes, recibirás un recordatorio a esta hora.",
+      "emailReviews": "Correos de recordatorio de repaso",
+      "emailReviewsHint": "Un correo los días con repasos pendientes. Nunca uno por tarjeta.",
+      "emailWeekly": "Correo con el informe semanal",
+      "emailWeeklyHint": "Cada lunes a las 09:00: tu semana de enfoque y una sugerencia.",
+      "emailWeeklyPro": "Una función de Pro. Actívala ahora y empezará cuando te pases a Pro.",
+      "streakNudge": "Recordatorio de racha",
+      "streakNudgeHint": "Una notificación suave a las 19:00 si una racha de 3 días o más se rompería hoy.",
+      "browser": "Notificaciones del navegador",
+      "browserHint": "Recordatorios de repaso en este dispositivo, además del correo.",
+      "browserDisable": "Desactivar en este dispositivo",
+      "browserOff": "Los recordatorios del navegador están desactivados en este dispositivo.",
+      "browserUnavailable": "No disponible en este navegador o aún sin configurar.",
+      "hours": "Horario de notificaciones",
+      "hoursHint": "Las notificaciones del navegador solo se envían dentro de este horario. El correo de recordatorio diario no se ve afectado.",
+      "from": "{day}: desde",
+      "to": "{day}: hasta",
+      "export": "Tus datos",
+      "exportText": "Descarga todo lo que FocusKept guarda sobre ti, en cualquier plan.",
+      "exportJson": "Todo (JSON)",
+      "exportCsv": {
+        "sessions": "Sesiones (CSV)",
+        "cards": "Tarjetas (CSV)",
+        "reviews": "Repasos (CSV)"
+      }
+    }
+  },
+  "billing": {
+    "title": "Facturación",
+    "lead": "Tu plan, tus facturas y tus datos de pago.",
+    "currentPlan": "Plan actual",
+    "free": "Gratis",
+    "pro": "Pro",
+    "syncNote": "Tu plan se actualiza automáticamente cuando Polar confirma un pago. Volver de la página de pago no basta para cambiarlo, así que puede tardar un momento.",
+    "returned": "¡Gracias! Actualizaremos tu plan en cuanto se confirme el pago.",
+    "manage": "Gestionar suscripción",
+    "seePlans": "Ver planes",
+    "connecting": "Conectando…",
+    "notConfigured": "Los pagos aún no están configurados. No se ha cobrado nada.",
+    "unavailable": "La facturación no está disponible ahora mismo. Inténtalo de nuevo.",
+    "renewsOn": "Se renueva el {date}.",
+    "endsOn": "Cancelada. Pro sigue activo hasta el {date}."
+  },
+  "landing": {
+    "heroTitle": "Concéntrate a fondo. Recuerda lo que aprendes.",
+    "heroLead": "FocusKept es un temporizador de enfoque tranquilo con 18 técnicas probadas. Cuando estudias, convierte tu propia explicación en preguntas y te recuerda repasar los días 5, 10 y 30.",
+    "question": "¿Qué vas a hacer hoy?",
+    "workTitle": "Trabajar",
+    "workText": "Elige una tarea y una técnica, y concéntrate. Sin cuenta.",
+    "learnTitle": "Aprender",
+    "learnText": "Estudia un tema, explícalo con tus palabras y recuérdalo.",
+    "noCard": "Gratis para empezar. Sin tarjeta de crédito.",
+    "loop": {
+      "eyebrow": "Cómo funciona",
+      "title": "Del enfoque a la memoria duradera",
+      "lead": "Los temporizadores te ayudan a empezar. Recordar necesita una vuelta más. FocusKept la cierra por ti.",
+      "focus": {
+        "title": "Concéntrate",
+        "text": "Trabaja en bloques cronometrados con 25/5, 52/17, Flowtime u otra técnica."
+      },
+      "explain": {
+        "title": "Explica",
+        "text": "Escribe lo que aprendiste como si se lo contaras a alguien de 12 años: la técnica Feynman."
+      },
+      "questions": {
+        "title": "Recibe preguntas",
+        "text": "La IA señala lagunas y convierte tu explicación en preguntas de repaso que puedes editar."
+      },
+      "review": {
+        "title": "Repasa a tiempo",
+        "text": "Te lo recordamos los días 5, 10 y 30, justo antes de que lo olvides."
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman, en la práctica",
+      "title": "Explícalo con sencillez. Descubre lo que de verdad entiendes.",
+      "lead": "Después de una sesión de aprendizaje, explicas el tema con tus propias palabras. Recibes una puntuación de claridad, lo que falta, lo que no cuadra y preguntas para tus repasos.",
+      "cta": "Probar el modo Aprendizaje",
+      "label": "Ejemplo de una explicación con comentarios de la IA",
+      "badge": "Ejemplo",
+      "topic": "Tema: la fotosíntesis",
+      "explanation": "Las plantas fabrican su propia comida. Sus hojas atrapan la luz del sol, toman agua por las raíces y aire por unos agujeritos diminutos, y lo convierten en azúcar. Lo que sobra es oxígeno, que es lo que respiramos.",
+      "feedback": "Comentarios",
+      "clarity": "Claridad 82/100",
+      "gap": "Falta: el gas que toman del aire es dióxido de carbono.",
+      "mistake": "Poco claro: la luz del sol aporta la energía; no se convierte ella misma en azúcar.",
+      "questionsLabel": "Preguntas de repaso",
+      "q1": "¿Qué gas toman las plantas del aire para fabricar azúcar?",
+      "q2": "Verdadero o falso: las plantas liberan oxígeno como subproducto.",
+      "q3": "Las plantas usan la energía del ____ para fabricar azúcar.",
+      "schedule": "Guardada como tarjeta. Repasos los días 5, 10 y 30."
+    },
+    "techniques": {
+      "eyebrow": "18 técnicas",
+      "title": "Todas las técnicas, en un solo lugar",
+      "lead": "Técnicas de tiempo para concentrarte, métodos de aprendizaje para entender y técnicas de planificación para tu día. Cada página la explica y te deja probarla al momento."
+    },
+    "pricing": {
+      "title": "Gratis para empezar, justo cuando creces",
+      "lead": "Todo lo esencial es gratis. Pro cuesta {monthly} al mes o {yearly} al año.",
+      "points": {
+        "1": "Todas las técnicas, tareas, estadísticas y recordatorios en Gratis",
+        "2": "Pro: tarjetas ilimitadas y comentarios de IA para cada tarjeta",
+        "3": "Pro: el Laboratorio completo y un informe semanal"
+      },
+      "cta": "Comparar planes"
+    },
+    "faq": {
+      "title": "Preguntas",
+      "1": {
+        "q": "¿Necesito una cuenta?",
+        "a": "Para el modo Trabajo, no: solo inicia el temporizador. El modo Aprendizaje necesita una cuenta gratuita para que podamos guardar tus tarjetas y enviarte recordatorios de repaso."
+      },
+      "2": {
+        "q": "¿Hay una app para el móvil?",
+        "a": "FocusKept funciona en el navegador de cualquier dispositivo. Puedes instalarlo en tu pantalla de inicio, y los recordatorios llegan por correo y por notificaciones del navegador."
+      },
+      "3": {
+        "q": "¿Qué hace la IA con mi explicación?",
+        "a": "Tu explicación se envía a OpenAI para generar comentarios y preguntas. No incluyas información personal o sensible. Tienes los detalles en nuestra política de privacidad."
+      },
+      "4": {
+        "q": "¿Por qué los días 5, 10 y 30?",
+        "a": "Repartir los repasos en el primer mes, cuando más rápido se olvida, fija el conocimiento a largo plazo con poco esfuerzo. Puedes cambiar los pasos en Ajustes."
+      },
+      "5": {
+        "q": "¿En qué idiomas está disponible?",
+        "a": "FocusKept está disponible en 24 idiomas. Tus explicaciones y preguntas funcionan en el idioma en que escribas."
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "Tiempo",
+    "goalLabel": "Objetivo",
+    "paused": "En pausa",
+    "announce": "{phase}",
+    "block": "Bloque {current} de {total}",
+    "focusedSoFar": "{duration} de enfoque",
+    "flowHint": "Para cuando tu concentración baje",
+    "phase": {
+      "idle": "Cuando quieras",
+      "work": "Enfoque",
+      "short_break": "Descanso corto",
+      "long_break": "Descanso largo",
+      "ready": "Siguiente bloque a punto",
+      "box_ended": "Se acabó el tiempo",
+      "finished": "Sesión completada"
+    },
+    "controls": {
+      "start": "Empezar",
+      "startNext": "Empezar el siguiente bloque",
+      "pause": "Pausar",
+      "resume": "Reanudar",
+      "skip": "Saltar",
+      "skipBreak": "Saltar el descanso",
+      "takeBreak": "Tomar un descanso",
+      "finish": "Terminar la sesión",
+      "fullscreen": "Pantalla completa",
+      "exitFullscreen": "Salir de pantalla completa",
+      "shortcuts": "Atajos",
+      "close": "Cerrar"
+    },
+    "box": {
+      "title": "Se acabó el tiempo. ¿Y ahora?",
+      "done": "Hecho",
+      "extend": "Ampliar una vez (+{duration})",
+      "later": "Dejar para después"
+    },
+    "tips": {
+      "1": "Levántate y estírate un minuto.",
+      "2": "Bebe un vaso de agua.",
+      "3": "Descansa la vista: mira algo a unos 6 metros durante 20 segundos.",
+      "4": "Da un paseo corto, aunque sea por la habitación.",
+      "5": "Gira los hombros y respira despacio unas cuantas veces.",
+      "6": "Abre una ventana o sal a tomar el aire."
+    },
+    "notify": {
+      "breakTitle": "Hora de descansar",
+      "breakBody": "Tómate {duration}. Aléjate de la pantalla.",
+      "focusTitle": "De vuelta al enfoque",
+      "readyTitle": "Se acabó el descanso",
+      "readyBody": "¿Vamos con el siguiente bloque?",
+      "boxTitle": "Se acabó el tiempo",
+      "boxBody": "¿Hecho, ampliar una vez o dejarlo para después?"
+    },
+    "shortcuts": {
+      "title": "Atajos de teclado",
+      "keySpace": "Espacio",
+      "keyEsc": "Esc",
+      "space": "Empezar, pausar o reanudar",
+      "skip": "Saltar la fase actual",
+      "fullscreen": "Activar o desactivar pantalla completa",
+      "exit": "Salir de pantalla completa",
+      "help": "Mostrar esta lista"
+    },
+    "sound": {
+      "title": "Sonidos",
+      "chime": "Campanilla al cambiar de fase",
+      "chimeVolume": "Volumen de la campanilla",
+      "background": "Sonido de fondo",
+      "backgroundVolume": "Volumen de fondo",
+      "hint": "El sonido de fondo solo suena mientras te concentras.",
+      "done": "Listo",
+      "kinds": {
+        "none": "Ninguno",
+        "white": "Ruido blanco",
+        "pink": "Ruido rosa",
+        "brown": "Ruido marrón",
+        "rain": "Lluvia",
+        "cafe": "Cafetería",
+        "stream": "Arroyo",
+        "ocean": "Olas",
+        "wind": "Viento",
+        "fire": "Chimenea",
+        "night": "Noche de verano",
+        "binaural": "Pulso binaural"
+      },
+      "groups": {
+        "noise": "Ruido",
+        "nature": "Naturaleza",
+        "tones": "Tonos",
+        "places": "Lugares"
+      },
+      "about": {
+        "white": "Siseo uniforme que tapa las charlas",
+        "pink": "Más suave, como lluvia constante",
+        "brown": "Rumor grave, sin siseo",
+        "rain": "Lluvia ligera con gotas",
+        "stream": "Un arroyo entre piedras",
+        "ocean": "Olas lentas cada pocos segundos",
+        "wind": "Viento que sube y baja",
+        "fire": "Leña que crepita",
+        "night": "Grillos en una noche tranquila",
+        "binaural": "Pulso de 16 Hz, con auriculares",
+        "cafe": "Murmullo de una cafetería llena"
+      },
+      "headphones": "Usa auriculares: cada oído oye un tono algo distinto y tu cerebro percibe entre ambos un pulso de 16 Hz. Mantén el volumen bajo.",
+      "previewHint": "Elige un sonido para escucharlo. Solo suena mientras te concentras.",
+      "tip": "Los sonidos sin palabras funcionan mejor: las letras y las voces frenan la lectura y la memorización."
+    },
+    "taskLabel": "Tarea"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "Sin cuenta. Las sesiones se guardan en este dispositivo.",
+      "durations": {
+        "work": "Enfoque (min)",
+        "shortBreak": "Descanso corto (min)",
+        "longBreak": "Descanso largo (min)",
+        "cycles": "Bloques antes del descanso largo",
+        "box": "Duración del timebox (min)"
+      }
+    },
+    "end": {
+      "ratingValue": "{value} de 5",
+      "discardConfirm": "¿Descartar esta sesión? No se guardará.",
+      "tooShort": "Esta sesión duró menos de un minuto, así que no contará en tus estadísticas."
+    },
+    "import": {
+      "title": "¿Traer tus sesiones?",
+      "text": "Encontramos {sessions, plural, one {# sesión} many {# sesiones} other {# sesiones}} y {tasks, plural, one {# tarea} many {# tareas} other {# tareas}} en este dispositivo. ¿Quieres importarlas a tu cuenta?",
+      "confirm": "Importar",
+      "later": "Ahora no",
+      "done": "Se importaron {sessions, plural, one {# sesión} many {# sesiones} other {# sesiones}} y {tasks, plural, one {# tarea} many {# tareas} other {# tareas}}.",
+      "error": "La importación falló. Tus datos siguen en este dispositivo; inténtalo más tarde."
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "Modo Aprendizaje",
+      "title": "Guarda lo que aprendes",
+      "lead": "Estudia con un método probado, explica el tema con tus propias palabras y FocusKept lo convierte en preguntas. Te recordamos repasar los días 5, 10 y 30, justo antes de que lo olvides.",
+      "steps": {
+        "1": "Concéntrate en un tema con un método de aprendizaje y un temporizador.",
+        "2": "Explícalo como si se lo contaras a alguien de 12 años.",
+        "3": "La IA señala lagunas y escribe preguntas de repaso.",
+        "4": "Repasa automáticamente los días 5, 10 y 30."
+      },
+      "topicLabel": "¿Qué quieres aprender?",
+      "topicPlaceholder": "p. ej., Cómo entrenan las vacunas al sistema inmunitario",
+      "start": "Continuar",
+      "accountNote": "El modo Aprendizaje necesita una cuenta gratuita para que podamos enviarte recordatorios de repaso.",
+      "workInstead": "¿Solo quieres un temporizador? Usa el modo Trabajo, sin cuenta."
+    },
+    "explain": {
+      "prompt": "Explica lo que aprendiste como si se lo contaras a alguien de 12 años.",
+      "promptHint": "Usa palabras sencillas y frases cortas. Justo donde te atascas está lo que debes estudiar después.",
+      "openaiNotice": "OpenAI procesa tu explicación. No incluyas información personal o sensible. <privacy>Política de privacidad</privacy>",
+      "counter": "{count} / {max} caracteres (mínimo {min})",
+      "analyze": "Recibir comentarios y preguntas de la IA",
+      "analyzing": "Leyendo tu explicación…",
+      "manual": "Escribir yo las preguntas",
+      "aiOff": "Los comentarios de la IA no están disponibles ahora mismo. Puedes escribir tus preguntas tú.",
+      "remaining": "{count, plural, =0 {No te quedan análisis de IA este mes} one {Te queda # análisis de IA este mes} many {Te quedan # análisis de IA este mes} other {Te quedan # análisis de IA este mes}}",
+      "aiFailed": "Los comentarios de la IA no funcionaron esta vez. Tu explicación está guardada; escribe tus preguntas abajo o inténtalo más tarde.",
+      "yourExplanation": "Tu explicación",
+      "revise": "Revisar y volver a analizar",
+      "edit": "Editar",
+      "analysisTitle": "Comentarios",
+      "clarity": "Claridad {score, number}/100",
+      "clarityLabel": "Puntuación de claridad",
+      "gaps": "Lo que falta",
+      "mistakes": "Lo que está mal o poco claro",
+      "noGaps": "No falta nada importante.",
+      "noMistakes": "No se encontraron errores.",
+      "rewrite": "Ver una versión más clara",
+      "useRewrite": "Partir de esta versión",
+      "reanalysisUsed": "Ya usaste el nuevo análisis de esta tarjeta. Pro permite revisiones ilimitadas.",
+      "questionsTitle": "Preguntas de repaso",
+      "questionsHint": "Edítalas, elimínalas o añade las tuyas. Son las que responderás en tus repasos.",
+      "needQuestion": "Añade al menos una pregunta.",
+      "fixQuestions": "Hay preguntas que necesitan un arreglo antes de guardar.",
+      "save": "Guardar tarjeta",
+      "saveError": "No se pudo guardar la tarjeta. Inténtalo de nuevo.",
+      "savedTitle": "Tarjeta guardada",
+      "savedText": "Tu primer repaso es el {date}. Te lo recordaremos.",
+      "viewCard": "Ver tarjeta",
+      "another": "Empezar otra sesión",
+      "notFound": "Esta sesión ya se guardó o no existe.",
+      "check": "Revisar",
+      "focused": "Enfoque: {duration}",
+      "hintLong": "Enumera las ideas principales, con una o dos frases cada una. Tus notas de los descansos ya están aquí.",
+      "hintMid": "De tres a cinco ideas principales, con una o dos frases cada una, sin mirar el libro.",
+      "hintShort": "Bastan dos o tres ideas principales. Escribe sin mirar el libro.",
+      "keep": "{count, plural, one {Guardar # pregunta} many {Guardar # preguntas} other {Guardar # preguntas}}",
+      "keptTitle": "{count, plural, one {# pregunta está lista.} many {# preguntas están listas.} other {# preguntas están listas.}}",
+      "newSession": "Nueva sesión",
+      "readingText": "Buscamos lagunas y preparamos preguntas",
+      "writeTitle": "¿Qué aprendiste? Escríbelo con tus palabras."
+    }
+  },
+  "tasks": {
+    "title": "Tareas",
+    "markDone": "Marcar «{title}» como hecha",
+    "focusOn": "Concentrarte en «{title}»",
+    "close": "Cerrar",
+    "errors": {
+      "generic": "No se pudo guardar el cambio. Inténtalo de nuevo.",
+      "ivyFull": "Mañana ya tiene seis tareas.",
+      "slotFull": "Esa parte del tablero de hoy ya está llena."
+    },
+    "matrix": {
+      "do": {
+        "title": "Hacer"
+      },
+      "schedule": {
+        "title": "Planificar"
+      },
+      "delegate": {
+        "title": "Delegar"
+      },
+      "delete": {
+        "title": "Eliminar"
+      }
+    },
+    "plan135": {
+      "big": "Grande",
+      "medium": "Mediana",
+      "small": "Pequeña"
+    },
+    "ivy": {
+      "moveUp": "Subir «{title}»",
+      "moveDown": "Bajar «{title}»"
+    },
+    "board": {
+      "heading": "Hoy",
+      "chip": {
+        "today": "Hoy",
+        "tomorrow": "Mañana",
+        "full": "Hoy está lleno",
+        "slot": {
+          "big": "Hueco de la tarea principal",
+          "medium": "Hueco mediano",
+          "small": "Hueco corto"
+        }
+      },
+      "toTomorrow": "Mañana",
+      "progress": "{done, number} de {total, number} hechas",
+      "planned": "Planeado: {planned} · pendiente: {left}",
+      "plannedEmpty": "Nada planeado todavía",
+      "barLabel": "Hoy: hecho {done}, pendiente {left}",
+      "addLabel": "Nueva tarea",
+      "addPlaceholder": "Prueba «Esquema del ensayo 45min mañana !»: se reconocen la duración, el día y la prioridad",
+      "add": "Añadir",
+      "keywords": {
+        "today": "hoy",
+        "tomorrow": "mañana",
+        "minutes": "min, minutos",
+        "hours": "h, hora, horas"
+      },
+      "dayFull": "Hoy está lleno. Pasa primero una tarea a mañana.",
+      "first": {
+        "label": "Primero esto",
+        "empty": "Aún no hay tarea principal. Elige una tarea larga que sueles posponer y pulsa «Para hoy»."
+      },
+      "medium": {
+        "title": "Luego estas",
+        "empty": "Hueco libre · 25–60 min"
+      },
+      "small": {
+        "title": "Cortas, entre medias",
+        "empty": "Hueco libre · menos de 25 min"
+      },
+      "slotCount": "{done, number}/{used, number} hechas · {free, number} libres",
+      "overflow": {
+        "title": "Hoy no hay sitio",
+        "hint": "Planeada para hoy, pero todos los huecos están ocupados."
+      },
+      "footnote": "Una tarea principal, tres medianas y cinco cortas: un día completo. Las tareas nuevas encuentran su hueco según su duración.",
+      "focus": "Concentrarse",
+      "toTomorrowLabel": "Pasar «{title}» a mañana",
+      "toIncoming": "Entrantes",
+      "toIncomingLabel": "Mover «{title}» a Entrantes",
+      "edit": "Abrir «{title}»"
+    },
+    "details": {
+      "days": {
+        "today": "Hoy",
+        "tomorrow": "Mañana",
+        "none": "Sin fecha"
+      },
+      "name": "Título",
+      "tags": "Etiquetas",
+      "tagsPlaceholder": "p. ej., estudio, programación",
+      "project": "Proyecto",
+      "noProject": "Sin proyecto",
+      "save": "Guardar",
+      "deleteConfirm": "¿Eliminar esta tarea? Las sesiones vinculadas se conservan.",
+      "title": "Tarea",
+      "minutes": "Duración (min)",
+      "day": "Día",
+      "notes": "Notas",
+      "archive": "Archivar",
+      "delete": "Eliminar"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "Mañana",
+        "planned": "Planeadas",
+        "unsorted": "Sin ordenar"
+      },
+      "quadrant": {
+        "do": {
+          "label": "Hacer",
+          "hint": "Urgente e importante"
+        },
+        "plan": {
+          "label": "Planificar",
+          "hint": "Importante, no urgente"
+        },
+        "quick": {
+          "hint": "Urgente, no importante",
+          "label": "Rápidas"
+        },
+        "later": {
+          "label": "Más tarde",
+          "hint": "Ninguna"
+        }
+      },
+      "projects": "Proyectos y filtros",
+      "filterLabel": "Filtrar por prioridad",
+      "empty": {
+        "tomorrow": "Todavía no hay nada para mañana.",
+        "planned": "No hay nada planeado para más adelante.",
+        "unsorted": "Todo está en su sitio."
+      },
+      "missed": "desde el {date}",
+      "important": "Importante",
+      "urgent": "Urgente",
+      "importantShort": "I",
+      "urgentShort": "U",
+      "importantLabel": "«{title}» es importante",
+      "urgentLabel": "«{title}» es urgente",
+      "toToday": "Para hoy",
+      "toTodayLabel": "Pasar «{title}» a hoy",
+      "plan": "Planea mañana en 2 minutos",
+      "planHint": "Ordena hasta seis tareas y empieza la mañana con todo listo",
+      "title": "Entrantes"
+    },
+    "projects": {
+      "filterProject": "Proyecto",
+      "filterTag": "Etiqueta",
+      "all": "Todas",
+      "name": "Nombre del nuevo proyecto",
+      "add": "Añadir proyecto",
+      "archive": "Archivar",
+      "restore": "Restaurar",
+      "done": "Listo",
+      "title": "Proyectos y filtros"
+    },
+    "planner": {
+      "moveUp": "Subir «{title}»",
+      "remove": "Quitar «{title}» de mañana",
+      "title": "¿Qué vas a hacer mañana?",
+      "lead": "Elige hasta seis tareas, la más importante primero. Mañana la primera será «Primero esto» y el resto llenará el tablero.",
+      "pick": "Elegir",
+      "order": "Orden de mañana · {count, number}/{max, number}",
+      "empty": "Elige tareas de la lista. La primera que elijas será la primera que veas por la mañana.",
+      "fromToday": "de hoy",
+      "later": "Ahora no",
+      "save": "Guardar para mañana",
+      "saved": "La lista de mañana está guardada."
+    }
+  },
+  "cards": {
+    "title": "Tarjetas de conocimiento",
+    "lead": "Todo lo que has aprendido, con su calendario de repasos.",
+    "newSession": "Nueva sesión de aprendizaje",
+    "searchLabel": "Buscar tarjetas",
+    "searchPlaceholder": "Buscar en temas y explicaciones",
+    "search": "Buscar",
+    "statusLabel": "Estado",
+    "active": "Activas",
+    "archived": "Archivadas",
+    "topicLabel": "Tema",
+    "allTopics": "Todos los temas",
+    "sortLabel": "Ordenar",
+    "sortDue": "Pendientes primero",
+    "sortNew": "Más recientes primero",
+    "allowance": "{used, number} de {limit, number} tarjetas en Gratis",
+    "emptyTitle": "Aún no hay tarjetas",
+    "emptyText": "Termina una sesión de aprendizaje y explica lo que aprendiste. Tu primera tarjeta aparecerá aquí.",
+    "noResults": "Ninguna tarjeta coincide con tu búsqueda.",
+    "more": "Cargar más",
+    "due": "Repaso {when}",
+    "dueToday": "Para repasar hoy",
+    "overdue": "Atrasada",
+    "box": "Caja {n, number}",
+    "graduated": "Largo plazo",
+    "questionsCount": "{count, plural, one {# pregunta} many {# preguntas} other {# preguntas}}",
+    "detail": {
+      "back": "Todas las tarjetas",
+      "reviewNow": "Repasar ahora",
+      "reviewNowHint": "Practica cuando quieras. Los repasos anticipados no cambian el calendario.",
+      "nextReview": "Próximo repaso",
+      "reviews": "Repasos",
+      "source": "Fuente",
+      "method": "Método",
+      "created": "Creada",
+      "explanation": "Explicación",
+      "editTopic": "Tema",
+      "save": "Guardar cambios",
+      "saved": "Cambios guardados.",
+      "archive": "Archivar",
+      "unarchive": "Restaurar",
+      "archivedNote": "Las tarjetas archivadas no se repasan. Siguen contando para el límite del plan Gratis.",
+      "delete": "Eliminar tarjeta",
+      "deleteConfirm": "¿Eliminar esta tarjeta y su historial de repasos? No se puede deshacer.",
+      "history": "Historial de repasos",
+      "noHistory": "Aún no hay repasos.",
+      "passed": "Aprobado",
+      "missed": "Fallado",
+      "early": "Práctica",
+      "score": "{score, number} %",
+      "analysis": "Comentarios de la IA",
+      "error": "No se pudo guardar. Inténtalo de nuevo."
+    },
+    "questions": {
+      "number": "Pregunta {n, number}",
+      "type": "Tipo de pregunta",
+      "types": {
+        "open": "Respuesta abierta",
+        "true_false": "Verdadero o falso",
+        "cloze": "Completar el hueco"
+      },
+      "source": {
+        "ai": "IA",
+        "ai_edited": "IA, editada"
+      },
+      "prompt": "Pregunta",
+      "answer": "Respuesta",
+      "true": "Verdadero",
+      "false": "Falso",
+      "explanation": "Por qué es correcta",
+      "explanationPlaceholder": "Opcional, una frase",
+      "clozeHint": "Marca la palabra que falta con {blank}",
+      "delete": "Eliminar la pregunta {n, number}",
+      "add": {
+        "open": "Pregunta abierta",
+        "true_false": "Verdadero / falso",
+        "cloze": "Completar el hueco"
+      },
+      "problems": {
+        "prompt": "Escribe la pregunta.",
+        "answer": "Añade la respuesta.",
+        "blank": "Una pregunta para completar necesita exactamente un ____."
+      }
+    },
+    "boxes": {
+      "label": "Cajas de repaso",
+      "today": "Hoy",
+      "days": "{days, plural, one {# día} many {# días} other {# días}}",
+      "hint": "Una respuesta correcta mueve la tarjeta una caja y vuelve con menos frecuencia. Una incorrecta la trae pronto."
+    }
+  },
+  "limits": {
+    "cta": "Ver Pro",
+    "keepWorking": "Tus tarjetas y repasos siguen funcionando de todos modos.",
+    "pro": {
+      "cards": "Tarjetas de conocimiento ilimitadas",
+      "ai": "Comentarios y preguntas de la IA para cada tarjeta",
+      "lab": "El Laboratorio completo: qué te funciona mejor, por etiqueta y hora del día",
+      "weekly": "Un informe semanal de progreso por correo"
+    },
+    "card_limit": {
+      "title": "Has llegado a 20 tarjetas en Gratis",
+      "text": "Elimina o conserva tarjetas como quieras; los repasos continúan. Para guardar tarjetas nuevas, pásate a Pro."
+    },
+    "monthly_limit": {
+      "title": "Análisis de IA agotados este mes",
+      "text": "El plan Gratis incluye {limit, number} análisis de tarjetas con IA al mes. Aun así, puedes guardar esta tarjeta escribiendo tus propias preguntas."
+    },
+    "reanalysis_limit": {
+      "title": "Ya usaste el nuevo análisis de esta tarjeta",
+      "text": "El plan Gratis permite una revisión por tarjeta. Edita tus preguntas a mano o pásate a Pro para tener revisiones ilimitadas."
+    },
+    "budget": {
+      "title": "La IA descansa por hoy",
+      "text": "Los comentarios de la IA no están disponibles temporalmente. Escribe tú las preguntas; tu tarjeta funciona exactamente igual."
+    },
+    "lab": {
+      "title": "El Laboratorio completo con Pro",
+      "text": "En Gratis ves tu mejor técnica de los últimos 7 días. Pro añade el análisis de todo el historial, resultados por etiqueta y por hora, y curvas de retención."
+    },
+    "weekly_report": {
+      "title": "El informe semanal es una función de Pro",
+      "text": "Recibe cada lunes un correo breve con tu tiempo de enfoque, tu mejor técnica, tu retención y una sugerencia."
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "¿Recibir también los recordatorios de repaso en el navegador?",
+      "text": "Te enviaremos una notificación cuando tengas repasos pendientes, además del correo.",
+      "enable": "Activar recordatorios del navegador",
+      "enabled": "Los recordatorios del navegador están activados",
+      "denied": "Las notificaciones están bloqueadas para este sitio. Puedes permitirlas en los ajustes del navegador."
+    },
+    "unsubscribe": {
+      "title": "Preferencias de correo",
+      "reviews": "¿Dejar de recibir los correos diarios de recordatorio de repaso? Las notificaciones del navegador y tu calendario de repasos siguen igual.",
+      "weekly": "¿Dejar de recibir los correos del informe semanal?",
+      "confirm": "Darse de baja",
+      "done": "Listo. Ya no recibirás estos correos. Puedes volver a activarlos en Ajustes.",
+      "error": "No funcionó. Inténtalo de nuevo o cámbialo en Ajustes.",
+      "invalid": "Este enlace no es válido. Puedes gestionar tus correos en Ajustes.",
+      "settings": "Gestionar todas las notificaciones en Ajustes"
+    }
+  },
+  "review": {
+    "title": "Repaso",
+    "lead": "Responde de memoria. Una tarjeta se aprueba cuando todas las respuestas son correctas.",
+    "progress": "Tarjeta {current, number} de {total, number}",
+    "questionProgress": "Pregunta {current, number} de {total, number}",
+    "types": {
+      "open": "Respuesta abierta",
+      "true_false": "¿Verdadero o falso?",
+      "cloze": "Completa el hueco"
+    },
+    "true": "Verdadero",
+    "false": "Falso",
+    "blankLabel": "Palabra que falta",
+    "yourAnswer": "Tu respuesta",
+    "check": "Comprobar",
+    "grading": "Comprobando…",
+    "modelAnswer": "Respuesta",
+    "selfGradeNote": "La corrección automática no está disponible ahora mismo. Compara con la respuesta y evalúate con honestidad.",
+    "self": {
+      "correct": "La tenía bien",
+      "partial": "En parte",
+      "incorrect": "Todavía no"
+    },
+    "verdict": {
+      "correct": "Correcto.",
+      "partial": "En parte correcto.",
+      "incorrect": "No del todo."
+    },
+    "nextQuestion": "Siguiente pregunta",
+    "finishCard": "Terminar tarjeta",
+    "passedTitle": "Aprobada",
+    "missedTitle": "Todavía no. Volverá pronto",
+    "score": "{score, number} %",
+    "nextReview": "Próximo repaso: {date}",
+    "earlyNote": "Repaso de práctica: tu calendario no cambia (próximo repaso el {date}).",
+    "revisit": "Qué volver a mirar",
+    "openExplanation": "Releer tu explicación",
+    "nextCard": "Siguiente tarjeta",
+    "finish": "Terminar",
+    "passRule": "{count, plural, one {Responde bien la pregunta para aprobar.} many {Responde bien las # preguntas para aprobar.} other {Responde bien las # preguntas para aprobar.}}",
+    "saveError": "No se pudo guardar tu repaso. Inténtalo de nuevo.",
+    "emptyTitle": "Todo al día",
+    "emptyText": "No hay repasos pendientes ahora mismo. Los nuevos aparecen los días 5, 10 y 30 después de guardar una tarjeta.",
+    "allDoneTitle": "Repasos terminados",
+    "allDoneText": "Aprobaste {passed, number} de {total, number} tarjetas. Buen trabajo.",
+    "learnSomething": "Aprender algo nuevo",
+    "toTimer": "Volver al temporizador"
+  },
+  "stats": {
+    "title": "Estadísticas",
+    "lead": "Cómo van tu enfoque y tu aprendizaje.",
+    "rangeLabel": "Periodo",
+    "range": "{days, number} días",
+    "focused": "Enfoque",
+    "sessions": "Sesiones",
+    "avgRating": "Enfoque medio",
+    "streak": "Racha",
+    "bestStreak": "Mejor racha",
+    "days": "{count, plural, one {# día} many {# días} other {# días}}",
+    "retention30": "Retención (30 días)",
+    "retention90": "Retención (90 días)",
+    "cardsTotal": "Tarjetas",
+    "dailyChart": "Minutos de enfoque por día",
+    "showTable": "Ver como tabla",
+    "day": "Día",
+    "minutes": "Minutos",
+    "techniques": "Técnicas",
+    "technique": "Técnica",
+    "noSessions": "Aún no hay sesiones en este periodo.",
+    "topics": "Retención por tema (90 días)",
+    "topic": "Tema",
+    "reviews": "Repasos",
+    "retention": "Retención",
+    "noReviews": "Aún no hay repasos.",
+    "lab": {
+      "title": "Laboratorio",
+      "lead": "Qué técnica te funciona mejor, según tus propias valoraciones de enfoque.",
+      "weekTop": "En los últimos 7 días, tu mejor enfoque llegó con {technique}: {rating, number, ::.#} / 5 en {sessions, plural, one {# sesión} many {# sesiones} other {# sesiones}}.",
+      "needData": "Valora algunas sesiones y tus resultados aparecerán aquí.",
+      "allTime": "Clasificación de todo el historial",
+      "rankRow": "{technique}: {rating, number, ::.#} / 5 ({sessions, plural, one {# sesión} many {# sesiones} other {# sesiones}})",
+      "byTag": "Mejor técnica por etiqueta",
+      "tag": "Etiqueta",
+      "best": "Mejor técnica",
+      "noTags": "Etiqueta tus tareas para ver qué técnica encaja con cada tipo de trabajo.",
+      "byHour": "Enfoque según la hora del día",
+      "hour": "Hora",
+      "curve": "Retención por paso de repaso",
+      "step": "Paso",
+      "dayN": "Día {day, number}",
+      "graduated": "Largo plazo"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Precios",
+    "title": "Empieza gratis. Pásate a Pro cuando merezca la pena.",
+    "lead": "Todas las técnicas de enfoque, aprendizaje y planificación son gratis. Pro quita los límites y te muestra lo que mejor te funciona.",
+    "perMonth": "/ mes",
+    "perYear": "/ año",
+    "free": {
+      "name": "Gratis",
+      "text": "Todo lo que necesitas para concentrarte y empezar a recordar lo que aprendes.",
+      "points": {
+        "1": "Las 18 técnicas, tareas y estadísticas",
+        "2": "Hasta 20 tarjetas de conocimiento",
+        "3": "10 análisis de IA al mes",
+        "4": "Recordatorios de repaso por correo y en el navegador"
+      },
+      "cta": "Empezar gratis"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "Tarjetas de conocimiento ilimitadas",
+        "2": "Comentarios y preguntas de la IA para cada tarjeta (uso razonable)",
+        "3": "El Laboratorio completo: mejor técnica por etiqueta y hora del día",
+        "4": "Informe semanal de progreso por correo"
+      }
+    },
+    "monthly": {
+      "name": "Pro mensual",
+      "text": "Flexible. Cancela cuando quieras.",
+      "cta": "Elegir mensual"
+    },
+    "yearly": {
+      "name": "Pro anual",
+      "badge": "Ahorra un {percent, number} %",
+      "text": "Son {monthly} al mes, facturados una vez al año.",
+      "point": "Todo lo de Pro durante un año entero",
+      "cta": "Elegir anual"
+    },
+    "checkoutNote": "Los pagos los gestiona Polar, nuestro revendedor oficial (merchant of record). El precio final, con los impuestos de tu país, se muestra al pagar. Cancela cuando quieras desde Facturación.",
+    "compare": "Gratis y Pro comparados",
+    "feature": "Función",
+    "notIncluded": "No incluido",
+    "rows": {
+      "techniques": {
+        "label": "Técnicas de tiempo, aprendizaje y planificación",
+        "free": "Las 18",
+        "pro": "Las 18"
+      },
+      "tasks": {
+        "label": "Tareas, proyectos y estadísticas básicas",
+        "free": "Incluido",
+        "pro": "Incluido"
+      },
+      "cards": {
+        "label": "Tarjetas de conocimiento",
+        "free": "20 en total",
+        "pro": "Ilimitadas"
+      },
+      "ai": {
+        "label": "Comentarios de la IA y generación de preguntas",
+        "free": "10 tarjetas al mes",
+        "pro": "Ilimitado (uso razonable)"
+      },
+      "grading": {
+        "label": "Corrección con IA de respuestas abiertas en los repasos",
+        "free": "Incluido",
+        "pro": "Incluido"
+      },
+      "reminders": {
+        "label": "Recordatorios de repaso por correo y en el navegador",
+        "free": "Incluido",
+        "pro": "Incluido"
+      },
+      "lab": {
+        "label": "Laboratorio: qué técnica te funciona mejor",
+        "free": "Últimos 7 días, mejor técnica",
+        "pro": "Todo el historial, por etiqueta, por hora, curvas de retención"
+      },
+      "weekly": {
+        "label": "Informe semanal por correo",
+        "free": "–",
+        "pro": "Incluido"
+      },
+      "export": {
+        "label": "Exportación de datos (JSON y CSV)",
+        "free": "Incluido",
+        "pro": "Incluido"
+      }
+    },
+    "faqTitle": "Preguntas sobre los planes",
+    "faq": {
+      "1": {
+        "q": "¿Qué pasa con mis tarjetas si dejo de pagar?",
+        "a": "No se pierde nada. Tus tarjetas y repasos programados siguen funcionando. Solo no podrás superar el límite de tarjetas del plan Gratis, y los análisis de IA vuelven a ser 10 al mes."
+      },
+      "2": {
+        "q": "¿Qué significa «uso razonable» para la IA en Pro?",
+        "a": "Pro incluye comentarios de la IA para hasta 300 tarjetas al mes, mucho más de lo que crea la mayoría. Si llegas al límite, puedes seguir escribiendo tú las preguntas."
+      },
+      "3": {
+        "q": "¿Cómo cancelo?",
+        "a": "Abre Facturación en la app y elige «Gestionar suscripción». Conservas Pro hasta el final del periodo que pagaste."
+      },
+      "4": {
+        "q": "¿Quién procesa mi pago?",
+        "a": "Polar actúa como nuestro revendedor oficial (merchant of record) y se encarga del pago, las facturas y los impuestos. FocusKept nunca ve los datos de tu tarjeta."
+      },
+      "5": {
+        "q": "¿Hay un plan de por vida?",
+        "a": "De momento, no. Pro está disponible con pago mensual o anual."
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "Técnicas de tiempo",
+      "learning": "Métodos de aprendizaje",
+      "planning": "Técnicas de planificación"
+    },
+    "eyebrow": "Técnicas",
+    "title": "Técnicas de enfoque, aprendizaje y planificación",
+    "lead": "Cada técnica se explica con palabras sencillas: los pasos, cuándo ayuda y cuándo no. Pruébalas directamente en su página.",
+    "all": "Todas las técnicas",
+    "tryNow": "Probar ahora",
+    "howItWorks": "Cómo funciona",
+    "steps": "Paso a paso",
+    "bestFor": "Ideal para",
+    "whenNotToUse": "Cuándo no usarla",
+    "faq": "Preguntas",
+    "related": "Técnicas relacionadas",
+    "trademarkNotice": "Pomodoro Technique® es una marca de Francesco Cirillo. FocusKept no está afiliado ni asociado con la Pomodoro Technique® ni con Francesco Cirillo, ni cuenta con su respaldo."
+  },
+  "tryIt": {
+    "reset": "Reiniciar",
+    "notSaved": "Esta demo no se guarda. Empieza una sesión completa para que cuente en tus estadísticas.",
+    "fullSession": "Usarla en una sesión completa",
+    "box": "Duración del timebox (minutos)",
+    "steps": "Sigue los pasos",
+    "learnWith": "Aprender con {method}",
+    "taskPlaceholder": "Añade una tarea",
+    "where": "Dónde va",
+    "add": "Añadir",
+    "full": "Esa parte está llena. De eso se trata: elegir.",
+    "list": "Tareas",
+    "remove": "Quitar «{title}»",
+    "markFrog": "Hacer de «{title}» el sapo de hoy",
+    "frogHint": "Toca la llama para elegir el sapo de hoy. Pasa arriba del todo.",
+    "planFull": "Planifica tu día real con esta técnica"
+  },
+  "home": {
+    "anonText": "Crea una cuenta gratis para escribir tu explicación, recibir preguntas sobre ella y un recordatorio a tiempo. Tu sesión te espera en este dispositivo.",
+    "anonTitle": "Escribe lo que aprendiste y recibe tus preguntas.",
+    "boxMinutes": "Bloque, min",
+    "breakMinutes": "Descanso",
+    "breakNote": "¿Qué te quedó de este bloque?",
+    "breakNoteHint": "Opcional · te esperará al final",
+    "breakNotePlaceholder": "Una idea o dos…",
+    "breakOver": "Se acabó el descanso",
+    "breakTitle": "Descanso · bloque {current} de {total} hecho",
+    "continue": "Continuar",
+    "createAccount": "Crear una cuenta gratis",
+    "decrease": "Menos: {label}",
+    "discard": "Salir sin guardar",
+    "endFocused": "Enfoque: {duration}",
+    "endSession": "Terminar la sesión",
+    "fillHint": "La tarjeta se llena mientras te concentras",
+    "focusFallback": "Enfoque",
+    "focusMinutes": "Enfoque",
+    "fromPlan": "Del plan de hoy:",
+    "haveAccount": "Ya tengo cuenta",
+    "hintAsk": "Te preguntamos a tiempo",
+    "hintFocus": "Concéntrate",
+    "hintWrite": "Escribe lo que aprendiste",
+    "howDidItGo": "¿Cómo te fue?",
+    "howItWorks": "Cómo funciona",
+    "increase": "Más: {label}",
+    "learn": "Aprendo",
+    "modeLabel": "Modo",
+    "moods": {
+      "1": "con distracciones",
+      "2": "regular",
+      "3": "bien",
+      "4": "genial",
+      "5": "a tope"
+    },
+    "newTopic": "Tema nuevo",
+    "nextBlock": "Siguiente bloque · {current}/{total}",
+    "oneStep": "Falta un paso",
+    "placeholderLearn": "p. ej., la fotosíntesis",
+    "placeholderWork": "p. ej., la introducción del informe",
+    "reviewStart": "Empezar el repaso",
+    "reviewTitle": "{count, plural, one {# tarjeta espera repaso} many {# tarjetas esperan repaso} other {# tarjetas esperan repaso}}",
+    "rhythm": "Ritmo",
+    "rhythmGuide": "¿Qué ritmo y cuándo? Ver la guía",
+    "rhythmHint": "enfoque · descanso, minutos",
+    "rhythmSub": {
+      "52-17": "Para trabajo largo y tranquilo",
+      "custom": "Elige tus propios números",
+      "deep-work-90": "La tarea más difícil del día",
+      "flowtime": "Hasta que se te vaya la concentración",
+      "pomodoro": "Cuando cuesta empezar",
+      "timeboxing": "Dale un presupuesto de tiempo a una tarea"
+    },
+    "runBlock": "bloque {current}/{total}",
+    "save": "Guardar",
+    "skipCard": "Terminar sin tarjeta",
+    "start": "Empezar",
+    "subjectLearn": "¿Qué estás aprendiendo?",
+    "subjectWork": "¿En qué estás trabajando? (opcional)",
+    "summaryBox": "Al acabar el tiempo: listo, ampliar o más tarde",
+    "summaryCycle": "{blocks, plural, one {# bloque} many {# bloques} other {# bloques}} · {minutes} min de descanso entre ellos",
+    "summaryFlow": "Cronómetro · el descanso es una quinta parte de tu enfoque",
+    "taskDone": "«{task}» está hecha",
+    "todayTotal": "Enfoque de hoy: {duration}",
+    "topicHint": "Tu tarjeta se guarda con este nombre.",
+    "topicTitle": "¿Cuál era el tema?",
+    "trailEmpty": "todavía nada",
+    "trailLabel": "El rastro de hoy",
+    "trailSummary": "{duration} · {cards, plural, one {# tarjeta} many {# tarjetas} other {# tarjetas}}",
+    "work": "Trabajo"
+  }
+}

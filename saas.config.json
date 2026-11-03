@@ -1,0 +1,12 @@
+{
+  "name": "FocusKept",
+  "slug": "focuskept",
+  "domain": "focuskept.com",
+  "repository": "gojayevmurad/focuskept",
+  "description": "Focus deeply. Keep what you learn.",
+  "color": "#2F6F62",
+  "port": 7515,
+  "dbPort": 24515,
+  "testDbPort": 44515,
+  "deployPath": "/srv/apps/focuskept/deploy"
+}

@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "主导航",
+      "appNavigation": "应用导航",
+      "skipToContent": "跳到正文",
+      "techniques": "方法",
+      "pricing": "价格",
+      "about": "关于",
+      "signIn": "登录",
+      "tasks": "任务",
+      "cards": "卡片",
+      "stats": "统计",
+      "settings": "设置",
+      "billing": "账单",
+      "signOut": "退出登录",
+      "timer": "计时器",
+      "guide": "指南",
+      "howItWorks": "使用方法",
+      "menu": "菜单",
+      "account": "账户和设置",
+      "reviewsDue": "有卡片等待复习"
+    },
+    "theme": {
+      "label": "主题",
+      "dark": "深色",
+      "light": "浅色",
+      "system": "跟随系统"
+    },
+    "language": {
+      "label": "语言"
+    },
+    "actions": {
+      "save": "保存",
+      "saving": "正在保存…",
+      "retry": "重试"
+    },
+    "status": {
+      "error": "出了点问题，请重试。",
+      "offline": "你已离线。本次专注已保存在这台设备上，恢复联网后会自动同步。"
+    },
+    "consent": {
+      "label": "数据分析偏好",
+      "text": "我们可以收集匿名使用数据来改进 FocusKept 吗？在你做出选择之前，我们不会记录任何内容。",
+      "allow": "允许",
+      "decline": "不用了"
+    },
+    "footer": {
+      "tagline": "深度专注，学有所留。",
+      "product": "产品",
+      "company": "公司",
+      "legal": "法律信息",
+      "focusTimer": "专注计时器",
+      "learningMode": "学习模式",
+      "contact": "联系我们",
+      "privacy": "隐私",
+      "terms": "条款",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — 深度专注，学有所留。",
+    "defaultDescription": "内置 18 种实证方法的专注计时器，支持 Feynman 式讲解、AI 生成的问题，并在第 5、10、30 天自动安排间隔重复复习。",
+    "signIn": "登录",
+    "signUp": "创建账户",
+    "verifyEmail": "请查看收件箱",
+    "forgotPassword": "重置密码",
+    "resetPassword": "设置新密码",
+    "settings": "设置",
+    "security": "安全",
+    "billing": "账单",
+    "focusTitle": "专注计时器",
+    "focusDescription": "免费专注计时器：25/5、52/17、Flowtime、Deep Work 90、时间盒和自定义预设。无需注册账户。",
+    "tasks": "任务",
+    "learnTitle": "学习模式：学习、讲解、记住",
+    "learnDescription": "学习一个主题，用自己的话讲出来，获得 AI 反馈和问题，并在第 5、10、30 天自动复习。",
+    "learnNew": "新的学习时段",
+    "explain": "讲解你学到的内容",
+    "cards": "知识卡片",
+    "card": "知识卡片",
+    "review": "复习",
+    "stats": "统计",
+    "pricingTitle": "价格：免费版和 Pro",
+    "pricingDescription": "FocusKept 可免费开始使用。Pro 每月 $5 或每年 $40：无限卡片、更多 AI 反馈、完整实验室和每周报告。",
+    "techniquesTitle": "18 种专注、学习和计划方法",
+    "techniquesDescription": "25/5、52/17、Flowtime、Feynman、主动回忆、SQ3R、Eisenhower 等：每种方法的原理、适用场景，以及可直接试用的免费计时器。"
+  },
+  "errors": {
+    "notFoundTitle": "这个页面不存在。",
+    "notFoundText": "链接可能已过期，或页面已被移动。",
+    "backHome": "返回首页",
+    "errorTitle": "事情没有按计划进行。",
+    "errorText": "请稍后再试。如果问题反复出现，请告诉我们。"
+  },
+  "auth": {
+    "signInTitle": "欢迎回来",
+    "signInLead": "登录后继续你的专注和复习。",
+    "signUpTitle": "创建账户",
+    "signUpLead": "保存你学到的内容，并在第 5、10、30 天收到提醒。",
+    "forgotTitle": "重置密码",
+    "forgotLead": "我们会通过邮件发送一个安全链接，供你设置新密码。",
+    "resetTitle": "设置新密码",
+    "resetLead": "请使用至少 12 个字符。",
+    "verifyTitle": "请查看收件箱",
+    "verifyLead": "我们已发送验证链接。打开链接即可激活账户——它会直接带你回到这里，并保持登录状态。",
+    "verifyHint": "没找到？请查看垃圾邮件文件夹，或重新登录以获取新链接。",
+    "name": "你的名字",
+    "namePlaceholder": "王小明",
+    "email": "邮箱地址",
+    "emailPlaceholder": "you@example.com",
+    "password": "密码",
+    "passwordPlaceholder": "至少 12 个字符",
+    "newPassword": "新密码",
+    "forgotLink": "忘记密码？",
+    "submitSignIn": "登录",
+    "submitSignUp": "创建账户",
+    "submitForgot": "发送重置链接",
+    "submitReset": "更新密码",
+    "google": "使用 Google 继续",
+    "or": "或",
+    "haveAccount": "已有账户？",
+    "noAccount": "第一次使用 FocusKept？",
+    "createAccount": "创建账户",
+    "signInLink": "登录",
+    "legal": "继续即表示你同意我们的<terms>服务条款</terms>和<privacy>隐私政策</privacy>。",
+    "resetSent": "如果该邮箱有对应账户，重置链接已经发出。",
+    "resetDone": "密码已更新，现在可以登录了。",
+    "invalidCredentials": "请输入有效的邮箱和 12–128 个字符的密码。",
+    "invalidPassword": "请使用 12–128 个字符的密码。",
+    "wrongCredentials": "邮箱和密码不匹配。",
+    "emailNotVerified": "请先验证邮箱。我们刚刚给你发送了新链接。",
+    "userExists": "该邮箱已注册账户，请尝试登录。",
+    "tooManyAttempts": "尝试次数过多，请等一分钟后再试。",
+    "invalidToken": "此链接已过期或已被使用，请重新申请。",
+    "learningContext": "注册后即可开始“{topic}”的学习时段。"
+  },
+  "email": {
+    "verification": {
+      "subject": "验证你的 FocusKept 邮箱",
+      "heading": "验证你的邮箱",
+      "body": "点击下方按钮激活你的 FocusKept 账户。你会自动登录，并回到刚才的位置。",
+      "button": "验证邮箱",
+      "ignore": "如果你没有创建账户，请忽略这封邮件。"
+    },
+    "reset": {
+      "subject": "重置你的 FocusKept 密码",
+      "heading": "重置密码",
+      "body": "请通过下方的安全链接设置新密码。链接很快会过期，且只能使用一次。",
+      "button": "设置新密码",
+      "ignore": "如果这不是你发起的请求，请忽略这封邮件，你的密码不会改变。"
+    },
+    "footer": {
+      "transactional": "你收到这封邮件，是因为你的 FocusKept 账户进行了某项操作。",
+      "reviews": "你收到这封邮件，是因为你的 FocusKept 账户开启了复习提醒。",
+      "weekly": "你收到这份每周报告，是因为你的 FocusKept Pro 账户开启了此功能。",
+      "unsubscribe": "退订"
+    },
+    "digest": {
+      "subject": "{count, plural, other {今天有 # 张卡片待复习}}",
+      "preview": "{count, plural, other {有 # 张卡片可以复习了。}}",
+      "heading": "{count, plural, other {该复习 # 张卡片了}}",
+      "intro": "在快要忘记之前复习，记忆才能牢固：",
+      "more": "{count, plural, other {……还有 # 张}}",
+      "estimate": "{minutes, plural, other {大约 # 分钟。}}",
+      "button": "开始复习"
+    },
+    "weekly": {
+      "subject": "你在 FocusKept 的一周",
+      "preview": "{minutes, plural, other {上周专注了 # 分钟。}}",
+      "heading": "你的专注周报",
+      "intro": "来看看上周的情况。",
+      "focus": "专注时长",
+      "minutes": "{minutes, plural, other {# 分钟}}",
+      "sessions": "专注次数",
+      "best": "最佳方法",
+      "cards": "新建卡片",
+      "retention": "记忆保持率",
+      "streak": "连续天数",
+      "days": "{count, plural, other {# 天}}",
+      "suggestionTitle": "本周一条小建议",
+      "suggestions": {
+        "start": "从小处开始：周一做一个 25 分钟的专注时段 就足够起步了。",
+        "retention": "你通过了 {percent, number}% 的复习。复习卡片前先重读自己的讲解，回答尽量简短。",
+        "goal": "你完成了每周目标的 {percent, number}%。试试在周中多加一次专注。",
+        "bestTechnique": "你使用 {technique} 时最专注。把最重要的两次专注安排给它吧。",
+        "keepGoing": "很棒的一周。保持这个节奏，守护好你的专注时间。"
+      },
+      "recapTitle": "{month}你学到了什么",
+      "recapText": "{cards, plural, other {新建 # 张卡片}} · 记忆保持率 {retention}",
+      "button": "查看统计"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, other {有 # 张卡片待复习}}",
+      "reviewsBody": "现在花几分钟，就能把它留在记忆里。",
+      "streakTitle": "{count, plural, other {保持你的 # 天连续记录}}",
+      "streakBody": "今天做一次简短的专注，就能继续保持。"
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "数据分析",
+      "text": "可选的匿名产品分析。你的笔记、讲解和答案永远不会被发送。",
+      "allow": "允许数据分析",
+      "disable": "关闭数据分析",
+      "enabled": "已开启数据分析。",
+      "disabled": "已关闭数据分析。",
+      "error": "无法更新你的偏好设置。"
+    },
+    "title": "设置",
+    "lead": "你的账户、偏好和提醒。",
+    "account": {
+      "title": "账户",
+      "displayName": "显示名称",
+      "saved": "更改已保存。",
+      "securityLink": "密码和登录设备",
+      "billingLink": "套餐和账单"
+    },
+    "security": {
+      "title": "安全",
+      "lead": "保护好你的账户。",
+      "backToSettings": "返回设置",
+      "passwordTitle": "修改密码",
+      "passwordText": "修改密码后，你的其他设备将退出登录。",
+      "currentPassword": "当前密码",
+      "newPassword": "新密码",
+      "passwordHint": "至少 12 个字符。",
+      "changePassword": "修改密码",
+      "passwordChanged": "密码已修改。",
+      "passwordError": "无法修改密码。请检查当前密码后重试。",
+      "sessionsTitle": "登录会话",
+      "sessionsText": "在这里保持登录，并退出其他所有设备。",
+      "revokeOthers": "退出其他设备",
+      "revoked": "其他设备已退出登录。",
+      "revokeError": "无法退出其他设备。"
+    },
+    "delete": {
+      "title": "删除账户",
+      "text": "永久删除你的账户及其中的所有内容：专注记录、任务、卡片和复习。有账单记录的账户需要客服快速核查，以确保没有遗留的订阅。如需备份，请先导出数据。",
+      "word": "删除",
+      "typeToConfirm": "输入“{word}”以确认",
+      "password": "你的密码",
+      "submit": "删除我的账户",
+      "billingBlocked": "你的账户有账单记录。请给我们发邮件，我们会替你关闭账户。",
+      "error": "无法删除账户。请检查密码后重试。"
+    },
+    "prefs": {
+      "saved": "设置已保存。",
+      "general": "通用",
+      "timezone": "时区",
+      "useDeviceZone": "使用此设备的时区（{zone}）",
+      "weekStart": "每周开始于",
+      "weeklyGoal": "每周专注目标（小时）",
+      "weeklyGoalHint": "显示在你的统计中。设为 0 即关闭。",
+      "techniques": "方法",
+      "defaultTime": "默认时间管理方法",
+      "defaultMethod": "默认学习方法",
+      "timebox": "默认时间盒（分钟）",
+      "presets": "自定义预设",
+      "deletePreset": "删除预设“{name}”",
+      "reviewSteps": "复习计划",
+      "reviewStepsText": "保存卡片后前三次复习的间隔天数。最后一步之后，复习间隔变为 60 天，之后逐次翻倍，最长 180 天。",
+      "stepN": "第 {n, number} 次复习（天）",
+      "resetSteps": "恢复为 5 / 10 / 30",
+      "stepsInvalid": "请输入 1 到 365 之间三个递增的数字。",
+      "notifications": "提醒和通知",
+      "reminderTime": "每日提醒时间",
+      "reminderTimeHint": "有到期的复习时，会在这个时间提醒你一次。",
+      "emailReviews": "复习提醒邮件",
+      "emailReviewsHint": "有复习的日子只发一封邮件，绝不按卡片逐封发送。",
+      "emailWeekly": "每周报告邮件",
+      "emailWeeklyHint": "每周一 09:00：你的专注周报和一条建议。",
+      "emailWeeklyPro": "这是 Pro 功能。现在开启，升级后即开始发送。",
+      "streakNudge": "连续记录提醒",
+      "streakNudgeHint": "如果 3 天以上的连续记录今天即将中断，会在 19:00 通过浏览器温和提醒你。",
+      "browser": "浏览器通知",
+      "browserHint": "除邮件外，也在这台设备上提醒你复习。",
+      "browserDisable": "在此设备上关闭",
+      "browserOff": "此设备上的浏览器提醒已关闭。",
+      "browserUnavailable": "此浏览器不支持，或尚未设置。",
+      "hours": "通知时段",
+      "hoursHint": "浏览器通知只会在这些时段内发送，不影响每日邮件提醒。",
+      "from": "{day}：开始",
+      "to": "{day}：结束",
+      "export": "你的数据",
+      "exportText": "下载 FocusKept 存储的关于你的全部数据，任何套餐均可。",
+      "exportJson": "全部（JSON）",
+      "exportCsv": {
+        "sessions": "专注记录（CSV）",
+        "cards": "卡片（CSV）",
+        "reviews": "复习（CSV）"
+      }
+    }
+  },
+  "billing": {
+    "title": "账单",
+    "lead": "你的套餐、发票和付款信息。",
+    "currentPlan": "当前套餐",
+    "free": "免费版",
+    "pro": "Pro",
+    "syncNote": "Polar 确认付款后，你的套餐会自动更新。仅从结账页面返回并不会改变套餐，所以可能需要稍等片刻。",
+    "returned": "谢谢！付款确认后，我们会立即更新你的套餐。",
+    "manage": "管理订阅",
+    "seePlans": "查看套餐",
+    "connecting": "正在连接…",
+    "notConfigured": "付款功能尚未设置，没有产生任何扣款。",
+    "unavailable": "账单功能暂时不可用，请重试。",
+    "renewsOn": "将于 {date} 续订。",
+    "endsOn": "已取消。Pro 有效期至 {date}。"
+  },
+  "landing": {
+    "heroTitle": "深度专注，学有所留。",
+    "heroLead": "FocusKept 是一款安静的专注计时器，内置 18 种实证方法。学习时，它会把你自己的讲解变成问题，并在第 5、10、30 天提醒你复习。",
+    "question": "今天你要做什么？",
+    "workTitle": "工作",
+    "workText": "选一项任务和一种方法，然后专注。无需注册账户。",
+    "learnTitle": "学习",
+    "learnText": "学习一个主题，用自己的话讲出来，把它记住。",
+    "noCard": "免费开始，无需信用卡。",
+    "loop": {
+      "eyebrow": "如何运作",
+      "title": "从专注到长久记忆",
+      "lead": "计时器帮你开始，记住还需要再多一步。FocusKept 帮你补上这一环。",
+      "focus": {
+        "title": "专注",
+        "text": "用 25/5、52/17、Flowtime 或其他方法，按时间块工作。"
+      },
+      "explain": {
+        "title": "讲解",
+        "text": "像讲给 12 岁的孩子听一样写下你学到的东西：这就是 Feynman 学习法。"
+      },
+      "questions": {
+        "title": "获取问题",
+        "text": "AI 指出遗漏之处，并把你的讲解变成可编辑的复习问题。"
+      },
+      "review": {
+        "title": "按时复习",
+        "text": "我们会在第 5、10、30 天提醒你，正好在你快要忘记之前。"
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman 学习法，落到实处",
+      "title": "讲得简单，看清自己真正懂了什么。",
+      "lead": "学习时段结束后，用自己的话讲解这个主题。你会得到清晰度评分、遗漏之处、不准确之处，以及用于复习的问题。",
+      "cta": "试试学习模式",
+      "label": "带 AI 反馈的讲解示例",
+      "badge": "示例",
+      "topic": "主题：光合作用",
+      "explanation": "植物会自己制造食物。叶子接收阳光，从根部吸收水分，通过小孔吸入空气，再把它们变成糖。剩下的是氧气，也就是我们呼吸的东西。",
+      "feedback": "反馈",
+      "clarity": "清晰度 82/100",
+      "gap": "遗漏：从空气中吸收的气体是二氧化碳。",
+      "mistake": "不清楚：阳光提供的是能量，阳光本身并不会变成糖。",
+      "questionsLabel": "复习问题",
+      "q1": "植物从空气中吸收哪种气体来制造糖？",
+      "q2": "判断对错：植物会释放氧气作为副产品。",
+      "q3": "植物利用 ____ 的能量来制造糖。",
+      "schedule": "已保存为卡片。将在第 5、10、30 天复习。"
+    },
+    "techniques": {
+      "eyebrow": "18 种方法",
+      "title": "所有方法，尽在一处",
+      "lead": "专注用的时间管理方法，理解用的学习方法，安排一天用的计划方法。每个页面都有讲解，还能立即试用。"
+    },
+    "pricing": {
+      "title": "免费开始，成长时价格公道",
+      "lead": "你需要的一切都是免费的。Pro 每月 {monthly} 或每年 {yearly}。",
+      "points": {
+        "1": "免费版即可使用所有方法、任务、统计和提醒",
+        "2": "Pro：无限卡片，每张卡片都有 AI 反馈",
+        "3": "Pro：完整实验室和每周报告"
+      },
+      "cta": "比较套餐"
+    },
+    "faq": {
+      "title": "常见问题",
+      "1": {
+        "q": "我需要注册账户吗？",
+        "a": "工作模式不需要，直接开始计时就行。学习模式需要一个免费账户，以便保存你的卡片并发送复习提醒。"
+      },
+      "2": {
+        "q": "有手机 App 吗？",
+        "a": "FocusKept 可以在任何设备的浏览器中运行。你可以把它添加到主屏幕，提醒会通过邮件和浏览器通知送达。"
+      },
+      "3": {
+        "q": "AI 会怎样使用我的讲解？",
+        "a": "你的讲解会被发送给 OpenAI，用于生成反馈和问题。请不要包含个人信息或敏感信息。详情请见我们的隐私政策。"
+      },
+      "4": {
+        "q": "为什么是第 5、10、30 天？",
+        "a": "第一个月遗忘最快，把复习分散在这段时间里，只需少量努力就能长期记住知识。你可以在设置中调整这些间隔。"
+      },
+      "5": {
+        "q": "支持哪些语言？",
+        "a": "FocusKept 支持 24 种语言。无论你用哪种语言写讲解和问题，都能正常使用。"
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "时间",
+    "goalLabel": "目标",
+    "paused": "已暂停",
+    "announce": "{phase}",
+    "block": "第 {current} / {total} 个时间块",
+    "focusedSoFar": "已专注 {duration}",
+    "flowHint": "专注减弱时就停下",
+    "phase": {
+      "idle": "准备好就开始",
+      "work": "专注",
+      "short_break": "短休息",
+      "long_break": "长休息",
+      "ready": "准备进入下一个时间块",
+      "box_ended": "时间到",
+      "finished": "本次专注完成"
+    },
+    "controls": {
+      "start": "开始",
+      "startNext": "开始下一个时间块",
+      "pause": "暂停",
+      "resume": "继续",
+      "skip": "跳过",
+      "skipBreak": "跳过休息",
+      "takeBreak": "休息一下",
+      "finish": "结束专注",
+      "fullscreen": "全屏",
+      "exitFullscreen": "退出全屏",
+      "shortcuts": "快捷键",
+      "close": "关闭"
+    },
+    "box": {
+      "title": "时间到。接下来怎么做？",
+      "done": "完成",
+      "extend": "延长一次（+{duration}）",
+      "later": "稍后再做"
+    },
+    "tips": {
+      "1": "站起来伸展一分钟。",
+      "2": "喝一杯水。",
+      "3": "让眼睛休息：看向大约 6 米外的东西 20 秒。",
+      "4": "走动一下，哪怕只是在房间里转一圈。",
+      "5": "转转肩膀，慢慢深呼吸几次。",
+      "6": "开窗或到外面透透气。"
+    },
+    "notify": {
+      "breakTitle": "该休息了",
+      "breakBody": "休息 {duration}，离开屏幕吧。",
+      "focusTitle": "回到专注",
+      "readyTitle": "休息结束",
+      "readyBody": "准备好开始下一个时间块了吗？",
+      "boxTitle": "时间到",
+      "boxBody": "完成、延长一次，还是稍后再做？"
+    },
+    "shortcuts": {
+      "title": "键盘快捷键",
+      "keySpace": "空格",
+      "keyEsc": "Esc",
+      "space": "开始、暂停或继续",
+      "skip": "跳过当前阶段",
+      "fullscreen": "切换全屏",
+      "exit": "退出全屏",
+      "help": "显示此列表"
+    },
+    "sound": {
+      "title": "声音",
+      "chime": "阶段切换提示音",
+      "chimeVolume": "提示音音量",
+      "background": "背景音",
+      "backgroundVolume": "背景音音量",
+      "hint": "背景音只在专注时播放。",
+      "done": "完成",
+      "kinds": {
+        "none": "无",
+        "white": "白噪音",
+        "pink": "粉红噪音",
+        "brown": "棕色噪音",
+        "rain": "雨声",
+        "cafe": "咖啡馆",
+        "stream": "小溪",
+        "ocean": "海浪",
+        "wind": "风声",
+        "fire": "壁炉",
+        "night": "夏夜",
+        "binaural": "双耳节拍"
+      },
+      "groups": {
+        "noise": "噪声",
+        "nature": "自然",
+        "tones": "音调",
+        "places": "场所"
+      },
+      "about": {
+        "white": "均匀的沙沙声，盖住交谈",
+        "pink": "更柔和，像连绵细雨",
+        "brown": "低沉的轰鸣，没有嘶声",
+        "rain": "带雨滴声的小雨",
+        "stream": "流过石头的小溪",
+        "ocean": "每隔几秒的缓慢海浪",
+        "wind": "时强时弱的风",
+        "fire": "噼啪作响的木柴",
+        "night": "静夜里的蟋蟀",
+        "binaural": "16 Hz 节拍，需戴耳机",
+        "cafe": "热闹咖啡馆的嘈杂声"
+      },
+      "headphones": "请戴上耳机：两只耳朵听到略有不同的音调，大脑会在两者之间听到 16 Hz 的节拍。音量保持在低位。",
+      "previewHint": "选一个声音即可试听。只在专注时播放。",
+      "tip": "没有歌词的声音效果最好：歌词和说话声会拖慢阅读和记忆。"
+    },
+    "taskLabel": "任务"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "无需注册账户。专注记录保存在这台设备上。",
+      "durations": {
+        "work": "专注（分钟）",
+        "shortBreak": "短休息（分钟）",
+        "longBreak": "长休息（分钟）",
+        "cycles": "长休息前的时间块数",
+        "box": "时间盒长度（分钟）"
+      }
+    },
+    "end": {
+      "ratingValue": "{value} / 5",
+      "discardConfirm": "放弃这次专注？它不会被保存。",
+      "tooShort": "这次专注不到一分钟，不会计入统计。"
+    },
+    "import": {
+      "title": "要把记录带过来吗？",
+      "text": "我们在这台设备上找到 {sessions, plural, other {# 条专注记录}}和 {tasks, plural, other {# 项任务}}。要导入到你的账户吗？",
+      "confirm": "导入",
+      "later": "以后再说",
+      "done": "已导入 {sessions, plural, other {# 条专注记录}}和 {tasks, plural, other {# 项任务}}。",
+      "error": "导入失败。你的数据仍在这台设备上，请稍后再试。"
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "学习模式",
+      "title": "留住你学到的东西",
+      "lead": "用经过验证的方法学习，用自己的话讲解主题，FocusKept 会把它变成问题。我们会在第 5、10、30 天、就在你快要忘记之前提醒你复习。",
+      "steps": {
+        "1": "用学习方法和计时器专注于一个主题。",
+        "2": "像讲给 12 岁的孩子听一样讲解它。",
+        "3": "AI 指出遗漏，并写出复习问题。",
+        "4": "在第 5、10、30 天自动复习。"
+      },
+      "topicLabel": "你想学什么？",
+      "topicPlaceholder": "例如：疫苗如何训练免疫系统",
+      "start": "继续",
+      "accountNote": "学习模式需要一个免费账户，以便我们发送复习提醒。",
+      "workInstead": "只想用计时器？用工作模式，无需注册账户。"
+    },
+    "explain": {
+      "prompt": "像讲给 12 岁的孩子听一样，讲讲你学到了什么。",
+      "promptHint": "用简单的词和短句。卡住的地方，正是你接下来要学的。",
+      "openaiNotice": "你的讲解将由 OpenAI 处理。请不要包含个人信息或敏感信息。<privacy>隐私政策</privacy>",
+      "counter": "{count} / {max} 个字符（至少 {min} 个）",
+      "analyze": "获取 AI 反馈和问题",
+      "analyzing": "正在阅读你的讲解…",
+      "manual": "自己写问题",
+      "aiOff": "AI 反馈暂时不可用。你可以自己写问题。",
+      "remaining": "{count, plural, =0 {本月 AI 分析次数已用完} other {本月还剩 # 次 AI 分析}}",
+      "aiFailed": "这次 AI 反馈没有成功。你的讲解已保存；可以在下方自己写问题，或稍后再试。",
+      "yourExplanation": "你的讲解",
+      "revise": "修改后重新分析",
+      "edit": "编辑",
+      "analysisTitle": "反馈",
+      "clarity": "清晰度 {score, number}/100",
+      "clarityLabel": "清晰度评分",
+      "gaps": "遗漏之处",
+      "mistakes": "错误或不清楚之处",
+      "noGaps": "没有遗漏重要内容。",
+      "noMistakes": "没有发现错误。",
+      "rewrite": "查看更清晰的版本",
+      "useRewrite": "从这个版本开始",
+      "reanalysisUsed": "这张卡片的重新分析次数已用完。Pro 可以无限次修改。",
+      "questionsTitle": "复习问题",
+      "questionsHint": "可以编辑、删除或添加你自己的问题。复习时你要回答的就是这些。",
+      "needQuestion": "请至少添加一个问题。",
+      "fixQuestions": "有些问题需要修改后才能保存。",
+      "save": "保存卡片",
+      "saveError": "无法保存卡片，请重试。",
+      "savedTitle": "卡片已保存",
+      "savedText": "第一次复习在 {date}，我们会提醒你。",
+      "viewCard": "查看卡片",
+      "another": "再开始一个学习时段",
+      "notFound": "这个学习时段已经保存过了，或者不存在。",
+      "check": "检查",
+      "focused": "专注时长：{duration}",
+      "hintLong": "列出要点，每个一两句话。休息时的笔记已经在这里了。",
+      "hintMid": "三到五个要点，每个一两句话，不看书写。",
+      "hintShort": "两三个要点就够了。不看书写。",
+      "keep": "{count, plural, other {保留 # 道题}}",
+      "keptTitle": "{count, plural, other {# 道题已准备好。}}",
+      "newSession": "新的专注",
+      "readingText": "正在找出遗漏并准备问题",
+      "writeTitle": "你学到了什么？用自己的话写下来。"
+    }
+  },
+  "tasks": {
+    "title": "任务",
+    "markDone": "将“{title}”标为完成",
+    "focusOn": "专注于“{title}”",
+    "close": "关闭",
+    "errors": {
+      "generic": "无法保存这项更改，请重试。",
+      "ivyFull": "明天已经有六项任务了。",
+      "slotFull": "今天看板的这一部分已经满了。"
+    },
+    "matrix": {
+      "do": {
+        "title": "立即做"
+      },
+      "schedule": {
+        "title": "安排时间"
+      },
+      "delegate": {
+        "title": "委托他人"
+      },
+      "delete": {
+        "title": "删除"
+      }
+    },
+    "plan135": {
+      "big": "大",
+      "medium": "中",
+      "small": "小"
+    },
+    "ivy": {
+      "moveUp": "上移“{title}”",
+      "moveDown": "下移“{title}”"
+    },
+    "board": {
+      "heading": "今天",
+      "chip": {
+        "today": "今天",
+        "tomorrow": "明天",
+        "full": "今天已排满",
+        "slot": {
+          "big": "主要任务位",
+          "medium": "中等位",
+          "small": "短任务位"
+        }
+      },
+      "toTomorrow": "明天",
+      "progress": "已完成 {done, number}/{total, number}",
+      "planned": "计划 {planned} · 剩余 {left}",
+      "plannedEmpty": "还没有计划",
+      "barLabel": "今天：已完成 {done}，剩余 {left}",
+      "addLabel": "新任务",
+      "addPlaceholder": "试试输入“论文提纲 45分钟 明天 !”，时长、日期和优先级会被自动识别",
+      "add": "添加",
+      "keywords": {
+        "today": "今天",
+        "tomorrow": "明天",
+        "minutes": "分钟, 分",
+        "hours": "小时"
+      },
+      "dayFull": "今天已排满。先把一项任务移到明天。",
+      "first": {
+        "label": "先做这个",
+        "empty": "还没有主要任务。挑一项你常拖延的长任务，点“移到今天”。"
+      },
+      "medium": {
+        "title": "接着做这些",
+        "empty": "空位 · 25–60 分钟"
+      },
+      "small": {
+        "title": "穿插的短任务",
+        "empty": "空位 · 25 分钟以内"
+      },
+      "slotCount": "已完成 {done, number}/{used, number} · 空位 {free, number}",
+      "overflow": {
+        "title": "今天没有空位了",
+        "hint": "计划在今天，但所有位置都已占满。"
+      },
+      "footnote": "一项主要任务、三项中等、五项短任务：充实的一天。新任务会按时长找到位置。",
+      "focus": "专注",
+      "toTomorrowLabel": "把“{title}”移到明天",
+      "toIncoming": "待处理",
+      "toIncomingLabel": "把“{title}”移到待处理",
+      "edit": "打开“{title}”"
+    },
+    "details": {
+      "days": {
+        "today": "今天",
+        "tomorrow": "明天",
+        "none": "无日期"
+      },
+      "name": "标题",
+      "tags": "标签",
+      "tagsPlaceholder": "例如：学习，编程",
+      "project": "项目",
+      "noProject": "无项目",
+      "save": "保存",
+      "deleteConfirm": "删除这项任务？与它关联的专注记录会保留。",
+      "title": "任务",
+      "minutes": "时长（分钟）",
+      "day": "日期",
+      "notes": "备注",
+      "archive": "归档",
+      "delete": "删除"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "明天",
+        "planned": "已排期",
+        "unsorted": "未分类"
+      },
+      "quadrant": {
+        "do": {
+          "label": "立即做",
+          "hint": "紧急且重要"
+        },
+        "plan": {
+          "label": "安排时间",
+          "hint": "重要但不紧急"
+        },
+        "quick": {
+          "hint": "紧急但不重要",
+          "label": "速办"
+        },
+        "later": {
+          "label": "以后",
+          "hint": "都不是"
+        }
+      },
+      "projects": "项目和筛选",
+      "filterLabel": "按优先级筛选",
+      "empty": {
+        "tomorrow": "明天还没有安排。",
+        "planned": "之后的日子没有安排。",
+        "unsorted": "一切都已整理好。"
+      },
+      "missed": "自 {date}",
+      "important": "重要",
+      "urgent": "紧急",
+      "importantShort": "重",
+      "urgentShort": "急",
+      "importantLabel": "“{title}”很重要",
+      "urgentLabel": "“{title}”很紧急",
+      "toToday": "移到今天",
+      "toTodayLabel": "把“{title}”移到今天",
+      "plan": "2 分钟规划明天",
+      "planHint": "最多排好六项任务，早上直接开工",
+      "title": "待处理"
+    },
+    "projects": {
+      "filterProject": "项目",
+      "filterTag": "标签",
+      "all": "全部",
+      "name": "新项目名称",
+      "add": "添加项目",
+      "archive": "归档",
+      "restore": "恢复",
+      "done": "完成",
+      "title": "项目和筛选"
+    },
+    "planner": {
+      "moveUp": "上移“{title}”",
+      "remove": "从明天的清单中移除“{title}”",
+      "title": "明天你要做什么？",
+      "lead": "最多选六项任务，最重要的放前面。明天第一项会成为“先做这个”，其余的填满看板。",
+      "pick": "选择",
+      "order": "明天的顺序 · {count, number}/{max, number}",
+      "empty": "从列表中选择任务。你最先选的，就是明早最先看到的。",
+      "fromToday": "来自今天",
+      "later": "暂不",
+      "save": "保存到明天",
+      "saved": "明天的清单已保存。"
+    }
+  },
+  "cards": {
+    "title": "知识卡片",
+    "lead": "你学过的一切，以及它们的复习计划。",
+    "newSession": "新的学习时段",
+    "searchLabel": "搜索卡片",
+    "searchPlaceholder": "搜索主题和讲解",
+    "search": "搜索",
+    "statusLabel": "状态",
+    "active": "使用中",
+    "archived": "已归档",
+    "topicLabel": "主题",
+    "allTopics": "全部主题",
+    "sortLabel": "排序",
+    "sortDue": "按到期时间",
+    "sortNew": "最新优先",
+    "allowance": "免费版已用 {used, number} / {limit, number} 张卡片",
+    "emptyTitle": "还没有卡片",
+    "emptyText": "完成一个学习时段，讲解你学到的内容。你的第一张卡片会出现在这里。",
+    "noResults": "没有符合搜索条件的卡片。",
+    "more": "加载更多",
+    "due": "{when}到期",
+    "dueToday": "今天到期",
+    "overdue": "已逾期",
+    "box": "盒子 {n, number}",
+    "graduated": "长期记忆",
+    "questionsCount": "{count, plural, other {# 个问题}}",
+    "detail": {
+      "back": "全部卡片",
+      "reviewNow": "立即复习",
+      "reviewNowHint": "随时都可以练习。提前复习不会改变复习计划。",
+      "nextReview": "下次复习",
+      "reviews": "复习",
+      "source": "资料",
+      "method": "方法",
+      "created": "创建于",
+      "explanation": "讲解",
+      "editTopic": "主题",
+      "save": "保存更改",
+      "saved": "更改已保存。",
+      "archive": "归档",
+      "unarchive": "恢复",
+      "archivedNote": "已归档的卡片不会安排复习，但仍计入免费版上限。",
+      "delete": "删除卡片",
+      "deleteConfirm": "删除这张卡片及其复习记录？此操作无法撤销。",
+      "history": "复习记录",
+      "noHistory": "还没有复习记录。",
+      "passed": "通过",
+      "missed": "未通过",
+      "early": "练习",
+      "score": "{score, number}%",
+      "analysis": "AI 反馈",
+      "error": "无法保存，请重试。"
+    },
+    "questions": {
+      "number": "问题 {n, number}",
+      "type": "题型",
+      "types": {
+        "open": "简答题",
+        "true_false": "判断题",
+        "cloze": "填空题"
+      },
+      "source": {
+        "ai": "AI",
+        "ai_edited": "AI，已编辑"
+      },
+      "prompt": "问题",
+      "answer": "答案",
+      "true": "对",
+      "false": "错",
+      "explanation": "为什么正确",
+      "explanationPlaceholder": "可选，一句话",
+      "clozeHint": "用 {blank} 标出缺失的词",
+      "delete": "删除问题 {n, number}",
+      "add": {
+        "open": "简答题",
+        "true_false": "判断题",
+        "cloze": "填空题"
+      },
+      "problems": {
+        "prompt": "请写出问题。",
+        "answer": "请添加答案。",
+        "blank": "填空题需要恰好一个 ____。"
+      }
+    },
+    "boxes": {
+      "label": "复习盒子",
+      "today": "今天",
+      "days": "{days, plural, other {# 天}}",
+      "hint": "答对会把卡片移到下一个盒子，出现得更少；答错会让它很快回来。"
+    }
+  },
+  "limits": {
+    "cta": "了解 Pro",
+    "keepWorking": "无论如何，你的卡片和复习都会继续正常运作。",
+    "pro": {
+      "cards": "无限知识卡片",
+      "ai": "每张卡片都有 AI 反馈和问题",
+      "lab": "完整实验室：按标签和时段看什么最适合你",
+      "weekly": "每周进度报告邮件"
+    },
+    "card_limit": {
+      "title": "你已达到免费版的 20 张卡片上限",
+      "text": "卡片可以随意删除或保留，复习会继续进行。要保存新卡片，请升级到 Pro。"
+    },
+    "monthly_limit": {
+      "title": "本月 AI 分析次数已用完",
+      "text": "免费版每月包含 {limit, number} 次 AI 卡片分析。自己写问题，仍然可以保存这张卡片。"
+    },
+    "reanalysis_limit": {
+      "title": "这张卡片的重新分析次数已用完",
+      "text": "免费版每张卡片可修改一次。你可以手动编辑问题，或升级以无限次修改。"
+    },
+    "budget": {
+      "title": "AI 今天休息了",
+      "text": "AI 反馈暂时不可用。请自己写问题，你的卡片功能完全一样。"
+    },
+    "lab": {
+      "title": "升级 Pro 查看完整实验室",
+      "text": "免费版显示你最近 7 天的最佳方法。Pro 增加全时段分析、按标签和时段的结果，以及记忆保持曲线。"
+    },
+    "weekly_report": {
+      "title": "每周报告是 Pro 功能",
+      "text": "每周一收到一封简短邮件，包含你的专注时长、最佳方法、记忆保持率和一条建议。"
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "也在浏览器中接收复习提醒吗？",
+      "text": "有到期的复习时，除邮件外我们还会发送一条通知。",
+      "enable": "开启浏览器提醒",
+      "enabled": "浏览器提醒已开启",
+      "denied": "此网站的通知已被阻止。你可以在浏览器设置中允许通知。"
+    },
+    "unsubscribe": {
+      "title": "邮件偏好",
+      "reviews": "停止接收每日复习提醒邮件？浏览器通知和复习计划保持不变。",
+      "weekly": "停止接收每周报告邮件？",
+      "confirm": "退订",
+      "done": "已完成。你将不再收到这些邮件。可以随时在设置中重新开启。",
+      "error": "操作失败。请重试，或在设置中修改。",
+      "invalid": "此链接无效。你可以在设置中管理邮件。",
+      "settings": "在设置中管理所有通知"
+    }
+  },
+  "review": {
+    "title": "复习",
+    "lead": "凭记忆作答。所有答案都正确，卡片才算通过。",
+    "progress": "第 {current, number} / {total, number} 张卡片",
+    "questionProgress": "第 {current, number} / {total, number} 题",
+    "types": {
+      "open": "简答题",
+      "true_false": "对还是错？",
+      "cloze": "填空题"
+    },
+    "true": "对",
+    "false": "错",
+    "blankLabel": "缺失的词",
+    "yourAnswer": "你的答案",
+    "check": "检查",
+    "grading": "正在检查…",
+    "modelAnswer": "答案",
+    "selfGradeNote": "自动批改暂时不可用。请对照答案，诚实地给自己打分。",
+    "self": {
+      "correct": "我答对了",
+      "partial": "部分正确",
+      "incorrect": "还没掌握"
+    },
+    "verdict": {
+      "correct": "正确。",
+      "partial": "部分正确。",
+      "incorrect": "不太对。"
+    },
+    "nextQuestion": "下一题",
+    "finishCard": "完成这张卡片",
+    "passedTitle": "通过",
+    "missedTitle": "还没掌握，它很快会再出现",
+    "score": "{score, number}%",
+    "nextReview": "下次复习：{date}",
+    "earlyNote": "练习复习：你的复习计划保持不变（下次复习 {date}）。",
+    "revisit": "需要回顾的内容",
+    "openExplanation": "重读你的讲解",
+    "nextCard": "下一张卡片",
+    "finish": "完成",
+    "passRule": "{count, plural, other {答对全部 # 道题即可通过。}}",
+    "saveError": "无法保存你的复习，请重试。",
+    "emptyTitle": "全部完成了",
+    "emptyText": "现在没有到期的复习。保存卡片后，新的复习会在第 5、10、30 天出现。",
+    "allDoneTitle": "复习完成",
+    "allDoneText": "你通过了 {total, number} 张卡片中的 {passed, number} 张。干得好。",
+    "learnSomething": "学点新东西",
+    "toTimer": "返回计时器"
+  },
+  "stats": {
+    "title": "统计",
+    "lead": "你的专注和学习情况。",
+    "rangeLabel": "时间范围",
+    "range": "{days, number} 天",
+    "focused": "专注时长",
+    "sessions": "专注次数",
+    "avgRating": "平均专注度",
+    "streak": "连续天数",
+    "bestStreak": "最长连续",
+    "days": "{count, plural, other {# 天}}",
+    "retention30": "记忆保持率（30 天）",
+    "retention90": "记忆保持率（90 天）",
+    "cardsTotal": "卡片",
+    "dailyChart": "每日专注分钟数",
+    "showTable": "以表格显示",
+    "day": "日期",
+    "minutes": "分钟",
+    "techniques": "方法",
+    "technique": "方法",
+    "noSessions": "这个时间范围内还没有专注记录。",
+    "topics": "按主题的记忆保持率（90 天）",
+    "topic": "主题",
+    "reviews": "复习",
+    "retention": "记忆保持率",
+    "noReviews": "还没有复习记录。",
+    "lab": {
+      "title": "实验室",
+      "lead": "根据你自己的专注度评分，看看哪种方法最适合你。",
+      "weekTop": "最近 7 天，你使用 {technique} 时最专注：{sessions, plural, other {# 次专注}}，平均 {rating, number, ::.#} / 5。",
+      "needData": "给几次专注打分，结果就会显示在这里。",
+      "allTime": "全时段排名",
+      "rankRow": "{technique}：{rating, number, ::.#} / 5（{sessions, plural, other {# 次}}）",
+      "byTag": "按任务标签的最佳方法",
+      "tag": "标签",
+      "best": "最佳方法",
+      "noTags": "给任务加上标签，就能看出每类工作适合哪种方法。",
+      "byHour": "各时段的专注度",
+      "hour": "时段",
+      "curve": "各复习阶段的记忆保持率",
+      "step": "阶段",
+      "dayN": "第 {day, number} 天",
+      "graduated": "长期记忆"
+    }
+  },
+  "pricing": {
+    "eyebrow": "价格",
+    "title": "免费开始，值得时再升级。",
+    "lead": "所有专注、学习和计划方法都免费。Pro 解除限制，并告诉你什么方法最适合你。",
+    "perMonth": "/ 月",
+    "perYear": "/ 年",
+    "free": {
+      "name": "免费版",
+      "text": "专注所需的一切，并开始记住你学到的内容。",
+      "points": {
+        "1": "全部 18 种方法、任务和统计",
+        "2": "最多 20 张知识卡片",
+        "3": "每月 10 次 AI 分析",
+        "4": "邮件和浏览器复习提醒"
+      },
+      "cta": "免费开始"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "无限知识卡片",
+        "2": "每张卡片都有 AI 反馈和问题（合理使用）",
+        "3": "完整实验室：按标签和时段的最佳方法",
+        "4": "每周进度报告邮件"
+      }
+    },
+    "monthly": {
+      "name": "Pro 月付",
+      "text": "灵活，随时可取消。",
+      "cta": "选择月付"
+    },
+    "yearly": {
+      "name": "Pro 年付",
+      "badge": "省 {percent, number}%",
+      "text": "相当于每月 {monthly}，每年扣款一次。",
+      "point": "全年享有 Pro 的全部功能",
+      "cta": "选择年付"
+    },
+    "checkoutNote": "付款由我们的记录商户（merchant of record）Polar 处理。含你所在国家/地区税费的最终价格会在结账时显示。可随时在“账单”中取消。",
+    "compare": "免费版与 Pro 对比",
+    "feature": "功能",
+    "notIncluded": "不包含",
+    "rows": {
+      "techniques": {
+        "label": "时间管理、学习和计划方法",
+        "free": "全部 18 种",
+        "pro": "全部 18 种"
+      },
+      "tasks": {
+        "label": "任务、项目和基础统计",
+        "free": "包含",
+        "pro": "包含"
+      },
+      "cards": {
+        "label": "知识卡片",
+        "free": "共 20 张",
+        "pro": "无限"
+      },
+      "ai": {
+        "label": "AI 反馈和问题生成",
+        "free": "每月 10 张",
+        "pro": "无限（合理使用）"
+      },
+      "grading": {
+        "label": "复习中简答题的 AI 批改",
+        "free": "包含",
+        "pro": "包含"
+      },
+      "reminders": {
+        "label": "邮件和浏览器复习提醒",
+        "free": "包含",
+        "pro": "包含"
+      },
+      "lab": {
+        "label": "实验室：哪种方法最适合你",
+        "free": "最近 7 天的最佳方法",
+        "pro": "全时段、按标签、按时段、记忆保持曲线"
+      },
+      "weekly": {
+        "label": "每周邮件报告",
+        "free": "–",
+        "pro": "包含"
+      },
+      "export": {
+        "label": "数据导出（JSON 和 CSV）",
+        "free": "包含",
+        "pro": "包含"
+      }
+    },
+    "faqTitle": "关于套餐的问题",
+    "faq": {
+      "1": {
+        "q": "如果我停止付费，我的卡片会怎样？",
+        "a": "什么都不会丢。你的卡片和已安排的复习会继续正常运作。你无法再添加超出免费版上限的卡片，AI 分析恢复为每月 10 次。"
+      },
+      "2": {
+        "q": "Pro 的 AI“合理使用”是什么意思？",
+        "a": "Pro 每月包含最多 300 张卡片的 AI 反馈，远超大多数人的使用量。即使达到上限，你仍然可以自己写问题。"
+      },
+      "3": {
+        "q": "如何取消？",
+        "a": "在应用中打开“账单”，选择“管理订阅”。在已付费的周期结束前，你仍可使用 Pro。"
+      },
+      "4": {
+        "q": "谁来处理我的付款？",
+        "a": "Polar 作为我们的记录商户，负责处理付款、发票和销售税。FocusKept 永远看不到你的银行卡信息。"
+      },
+      "5": {
+        "q": "有终身套餐吗？",
+        "a": "目前没有。Pro 提供月付和年付两种方式。"
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "时间管理方法",
+      "learning": "学习方法",
+      "planning": "计划方法"
+    },
+    "eyebrow": "方法",
+    "title": "专注、学习和计划方法",
+    "lead": "每种方法都用通俗的语言讲解，附有步骤，以及何时有用、何时不适用。每种方法都可以在它的页面上直接试用。",
+    "all": "全部方法",
+    "tryNow": "立即试用",
+    "howItWorks": "原理",
+    "steps": "具体步骤",
+    "bestFor": "最适合",
+    "whenNotToUse": "不适合的情况",
+    "faq": "常见问题",
+    "related": "相关方法",
+    "trademarkNotice": "Pomodoro Technique® 是 Francesco Cirillo 的商标。FocusKept 与 Pomodoro Technique® 或 Francesco Cirillo 没有任何隶属或关联关系，也未获得其认可。"
+  },
+  "tryIt": {
+    "reset": "重置",
+    "notSaved": "这个演示不会保存。要保留统计数据，请开始一次完整的专注。",
+    "fullSession": "在完整专注中使用",
+    "box": "时间盒长度（分钟）",
+    "steps": "按步骤进行",
+    "learnWith": "用 {method} 学习",
+    "taskPlaceholder": "添加任务",
+    "where": "放在哪里",
+    "add": "添加",
+    "full": "这一栏满了。这正是重点：做出选择。",
+    "list": "任务",
+    "remove": "移除“{title}”",
+    "markFrog": "把“{title}”设为今天的青蛙",
+    "frogHint": "点击火焰图标选择今天的青蛙，它会移到最上面。",
+    "planFull": "用这个方法规划你真实的一天"
+  },
+  "home": {
+    "anonText": "创建免费账户，写下你的解释、据此生成问题，并在合适的时候收到提醒。本次记录在这台设备上等你。",
+    "anonTitle": "写下所学，获取你的问题。",
+    "boxMinutes": "时长，分钟",
+    "breakMinutes": "休息",
+    "breakNote": "这个时段你记住了什么？",
+    "breakNoteHint": "可选 · 最后会在这里等你",
+    "breakNotePlaceholder": "一两个想法…",
+    "breakOver": "休息结束",
+    "breakTitle": "休息 · 已完成第 {current}/{total} 个时段",
+    "continue": "继续",
+    "createAccount": "创建免费账户",
+    "decrease": "减少：{label}",
+    "discard": "不保存并离开",
+    "endFocused": "专注时长：{duration}",
+    "endSession": "结束本次",
+    "fillHint": "你越专注，卡片就越满",
+    "focusFallback": "专注",
+    "focusMinutes": "专注",
+    "fromPlan": "来自今天的计划：",
+    "haveAccount": "我有账户",
+    "hintAsk": "在合适的时候提问你",
+    "hintFocus": "专注",
+    "hintWrite": "写下所学",
+    "howDidItGo": "感觉如何？",
+    "howItWorks": "使用方法",
+    "increase": "增加：{label}",
+    "learn": "学习",
+    "modeLabel": "模式",
+    "moods": {
+      "1": "分心",
+      "2": "一般",
+      "3": "不错",
+      "4": "很好",
+      "5": "完全投入"
+    },
+    "newTopic": "新主题",
+    "nextBlock": "下一个时段 · {current}/{total}",
+    "oneStep": "还差一步",
+    "placeholderLearn": "例如：光合作用",
+    "placeholderWork": "例如：报告的引言",
+    "reviewStart": "开始复习",
+    "reviewTitle": "{count, plural, other {# 张卡片等待复习}}",
+    "rhythm": "节奏",
+    "rhythmGuide": "什么时候用哪种节奏？查看指南",
+    "rhythmHint": "专注 · 休息，分钟",
+    "rhythmSub": {
+      "52-17": "适合长时间的安静工作",
+      "custom": "自己选择数字",
+      "deep-work-90": "今天最难的任务",
+      "flowtime": "直到专注力减弱",
+      "pomodoro": "难以开始时",
+      "timeboxing": "给一项任务设定时间预算"
+    },
+    "runBlock": "第 {current}/{total} 个时段",
+    "save": "保存",
+    "skipCard": "不创建卡片并结束",
+    "start": "开始",
+    "subjectLearn": "你在学什么？",
+    "subjectWork": "你在做什么？（可选）",
+    "summaryBox": "时间到时：完成、延长或稍后",
+    "summaryCycle": "{blocks, plural, other {# 个时段}} · 中间休息 {minutes} 分钟",
+    "summaryFlow": "秒表 · 休息时间为专注时间的五分之一",
+    "taskDone": "“{task}”已完成",
+    "todayTotal": "今天专注：{duration}",
+    "topicHint": "卡片将以这个名称保存。",
+    "topicTitle": "主题是什么？",
+    "trailEmpty": "还没有记录",
+    "trailLabel": "今天的足迹",
+    "trailSummary": "{duration} · {cards, plural, other {# 张卡片}}",
+    "work": "工作"
+  }
+}

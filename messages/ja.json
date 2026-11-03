@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "メインナビゲーション",
+      "appNavigation": "アプリのナビゲーション",
+      "skipToContent": "本文へスキップ",
+      "techniques": "テクニック",
+      "pricing": "料金",
+      "about": "概要",
+      "signIn": "ログイン",
+      "tasks": "タスク",
+      "cards": "カード",
+      "stats": "統計",
+      "settings": "設定",
+      "billing": "お支払い",
+      "signOut": "ログアウト",
+      "timer": "タイマー",
+      "guide": "ガイド",
+      "howItWorks": "使い方",
+      "menu": "メニュー",
+      "account": "アカウントと設定",
+      "reviewsDue": "復習待ちのカードがあります"
+    },
+    "theme": {
+      "label": "テーマ",
+      "dark": "ダーク",
+      "light": "ライト",
+      "system": "システム"
+    },
+    "language": {
+      "label": "言語"
+    },
+    "actions": {
+      "save": "保存",
+      "saving": "保存中…",
+      "retry": "もう一度試す"
+    },
+    "status": {
+      "error": "問題が発生しました。もう一度お試しください。",
+      "offline": "オフラインです。セッションはこの端末に保存され、オンラインに戻ると同期されます。"
+    },
+    "consent": {
+      "label": "アナリティクスの設定",
+      "text": "FocusKept の改善のため、匿名の利用データを収集してもよろしいですか？選択するまで何も記録されません。",
+      "allow": "許可する",
+      "decline": "許可しない"
+    },
+    "footer": {
+      "tagline": "深く集中して、学んだことを忘れない。",
+      "product": "プロダクト",
+      "company": "運営",
+      "legal": "法的情報",
+      "focusTimer": "集中タイマー",
+      "learningMode": "学習モード",
+      "contact": "お問い合わせ",
+      "privacy": "プライバシー",
+      "terms": "利用規約",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — 深く集中して、学んだことを忘れない。",
+    "defaultDescription": "実証済みの18のテクニックを備えた集中タイマー。Feynman 式の説明、AI が作る問題、5日目・10日目・30日目の自動間隔反復で復習できます。",
+    "signIn": "ログイン",
+    "signUp": "アカウントを作成",
+    "verifyEmail": "受信トレイを確認してください",
+    "forgotPassword": "パスワードの再設定",
+    "resetPassword": "新しいパスワードを設定",
+    "settings": "設定",
+    "security": "セキュリティ",
+    "billing": "お支払い",
+    "focusTitle": "集中タイマー",
+    "focusDescription": "25/5、52/17、Flowtime、Deep Work 90、タイムボックス、カスタムプリセットに対応した無料の集中タイマー。アカウント不要です。",
+    "tasks": "タスク",
+    "learnTitle": "学習モード：学ぶ、説明する、覚える",
+    "learnDescription": "トピックを学び、自分の言葉で説明し、AI のフィードバックと問題を受け取り、5日目・10日目・30日目に自動で復習できます。",
+    "learnNew": "新しい学習セッション",
+    "explain": "学んだことを説明する",
+    "cards": "知識カード",
+    "card": "知識カード",
+    "review": "復習",
+    "stats": "統計",
+    "pricingTitle": "料金：無料プランと Pro",
+    "pricingDescription": "FocusKept は無料で始められます。Pro は月額 $5 または年額 $40。カード無制限、AI フィードバックの拡張、ラボの全機能、週間レポートが使えます。",
+    "techniquesTitle": "集中・学習・計画のための18のテクニック",
+    "techniquesDescription": "25/5、52/17、Flowtime、Feynman、アクティブリコール、SQ3R、Eisenhower など。各テクニックの仕組みと使いどころ、試せる無料タイマー付き。"
+  },
+  "errors": {
+    "notFoundTitle": "このページは存在しません。",
+    "notFoundText": "リンクが古いか、ページが移動した可能性があります。",
+    "backHome": "ホームに戻る",
+    "errorTitle": "うまくいきませんでした。",
+    "errorText": "少し時間をおいてもう一度お試しください。繰り返し起きる場合はお知らせください。"
+  },
+  "auth": {
+    "signInTitle": "おかえりなさい",
+    "signInLead": "ログインして、集中セッションと復習を続けましょう。",
+    "signUpTitle": "アカウントを作成",
+    "signUpLead": "学んだことを保存し、5日目・10日目・30日目にリマインドを受け取りましょう。",
+    "forgotTitle": "パスワードの再設定",
+    "forgotLead": "新しいパスワードを設定するための安全なリンクをメールでお送りします。",
+    "resetTitle": "新しいパスワードを設定",
+    "resetLead": "12文字以上で設定してください。",
+    "verifyTitle": "受信トレイを確認してください",
+    "verifyLead": "確認用リンクを送信しました。開くとアカウントが有効になり、ログインした状態でこの画面に戻ります。",
+    "verifyHint": "見つからない場合は迷惑メールフォルダを確認するか、もう一度ログインして新しいリンクを受け取ってください。",
+    "name": "お名前",
+    "namePlaceholder": "山田 花子",
+    "email": "メールアドレス",
+    "emailPlaceholder": "you@example.com",
+    "password": "パスワード",
+    "passwordPlaceholder": "12文字以上",
+    "newPassword": "新しいパスワード",
+    "forgotLink": "パスワードをお忘れですか？",
+    "submitSignIn": "ログイン",
+    "submitSignUp": "アカウントを作成",
+    "submitForgot": "再設定リンクを送信",
+    "submitReset": "パスワードを更新",
+    "google": "Google で続ける",
+    "or": "または",
+    "haveAccount": "アカウントをお持ちですか？",
+    "noAccount": "FocusKept は初めてですか？",
+    "createAccount": "アカウントを作成",
+    "signInLink": "ログイン",
+    "legal": "続行すると、<terms>利用規約</terms>と<privacy>プライバシーポリシー</privacy>に同意したものとみなされます。",
+    "resetSent": "このメールアドレスのアカウントが存在する場合、再設定リンクを送信しました。",
+    "resetDone": "パスワードを更新しました。ログインできます。",
+    "invalidCredentials": "有効なメールアドレスと12〜128文字のパスワードを入力してください。",
+    "invalidPassword": "12〜128文字のパスワードを使用してください。",
+    "wrongCredentials": "メールアドレスとパスワードが一致しません。",
+    "emailNotVerified": "まずメールアドレスを確認してください。新しいリンクをお送りしました。",
+    "userExists": "このメールアドレスのアカウントはすでに存在します。ログインしてみてください。",
+    "tooManyAttempts": "試行回数が多すぎます。1分ほど待ってからもう一度お試しください。",
+    "invalidToken": "このリンクは期限切れか、すでに使用されています。新しいリンクをリクエストしてください。",
+    "learningContext": "登録すると「{topic}」の学習セッションを始められます。"
+  },
+  "email": {
+    "verification": {
+      "subject": "FocusKept のメールアドレスを確認してください",
+      "heading": "メールアドレスの確認",
+      "body": "下のボタンを押して FocusKept アカウントを有効にしてください。ログインした状態で、中断したところに戻ります。",
+      "button": "メールアドレスを確認",
+      "ignore": "アカウントを作成した覚えがない場合は、このメールを無視してください。"
+    },
+    "reset": {
+      "subject": "FocusKept のパスワード再設定",
+      "heading": "パスワードの再設定",
+      "body": "下の安全なリンクから新しいパスワードを設定してください。リンクはまもなく期限切れになり、1回のみ使用できます。",
+      "button": "新しいパスワードを設定",
+      "ignore": "心当たりがない場合は、このメールを無視してください。パスワードは変更されません。"
+    },
+    "footer": {
+      "transactional": "このメールは、お使いの FocusKept アカウントでの操作に基づいて送信されました。",
+      "reviews": "FocusKept アカウントで復習リマインダーがオンになっているため、このメールをお送りしています。",
+      "weekly": "FocusKept Pro アカウントで週間レポートがオンになっているため、このメールをお送りしています。",
+      "unsubscribe": "配信停止"
+    },
+    "digest": {
+      "subject": "{count, plural, other {今日復習するカードが#枚あります}}",
+      "preview": "{count, plural, other {#枚のカードが復習を待っています。}}",
+      "heading": "{count, plural, other {#枚のカードを復習しましょう}}",
+      "intro": "忘れる直前の今こそ、復習が記憶を定着させます：",
+      "more": "{count, plural, other {…ほか#枚}}",
+      "estimate": "{minutes, plural, other {約#分です。}}",
+      "button": "復習を始める"
+    },
+    "weekly": {
+      "subject": "FocusKept の1週間",
+      "preview": "{minutes, plural, other {先週の集中時間は#分でした。}}",
+      "heading": "今週の集中のふりかえり",
+      "intro": "先週の様子はこちらです。",
+      "focus": "集中時間",
+      "minutes": "{minutes, plural, other {#分}}",
+      "sessions": "セッション",
+      "best": "ベストテクニック",
+      "cards": "作成したカード",
+      "retention": "定着率",
+      "streak": "連続記録",
+      "days": "{count, plural, other {#日}}",
+      "suggestionTitle": "今週のひとこと提案",
+      "suggestions": {
+        "start": "小さく始めましょう。月曜日に25分のブロック を1回するだけで十分なスタートです。",
+        "retention": "復習の{percent, number}%に合格しました。カードの復習前に自分の説明を読み返し、答えは短くまとめましょう。",
+        "goal": "週間目標の{percent, number}%を達成しました。週の半ばにセッションを1回追加してみましょう。",
+        "bestTechnique": "{technique}で最もよく集中できました。最も大切なセッション2つはこのテクニックで計画しましょう。",
+        "keepGoing": "充実した1週間でした。このリズムを保ち、集中する時間を守りましょう。"
+      },
+      "recapTitle": "{month}に学んだこと",
+      "recapText": "{cards, plural, other {#枚のカードを作成}} · 定着率 {retention}",
+      "button": "統計を開く"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, other {復習するカードが#枚あります}}",
+      "reviewsBody": "今の数分が記憶を保ちます。",
+      "streakTitle": "{count, plural, other {#日の連続記録を守りましょう}}",
+      "streakBody": "今日短いセッションを1回すれば記録が続きます。"
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "アナリティクス",
+      "text": "任意の匿名プロダクト分析です。メモ、説明、回答が送信されることはありません。",
+      "allow": "アナリティクスを許可",
+      "disable": "アナリティクスを無効にする",
+      "enabled": "アナリティクスを有効にしました。",
+      "disabled": "アナリティクスを無効にしました。",
+      "error": "設定を更新できませんでした。"
+    },
+    "title": "設定",
+    "lead": "アカウント、各種設定、リマインダー。",
+    "account": {
+      "title": "アカウント",
+      "displayName": "表示名",
+      "saved": "変更を保存しました。",
+      "securityLink": "パスワードとセッション",
+      "billingLink": "プランとお支払い"
+    },
+    "security": {
+      "title": "セキュリティ",
+      "lead": "アカウントを安全に保ちましょう。",
+      "backToSettings": "設定に戻る",
+      "passwordTitle": "パスワードの変更",
+      "passwordText": "パスワードを変更すると、ほかの端末からログアウトされます。",
+      "currentPassword": "現在のパスワード",
+      "newPassword": "新しいパスワード",
+      "passwordHint": "12文字以上。",
+      "changePassword": "パスワードを変更",
+      "passwordChanged": "パスワードを変更しました。",
+      "passwordError": "パスワードを変更できませんでした。現在のパスワードを確認して、もう一度お試しください。",
+      "sessionsTitle": "ログイン中のセッション",
+      "sessionsText": "この端末ではログインしたまま、ほかのすべての端末からログアウトします。",
+      "revokeOthers": "ほかのセッションをログアウト",
+      "revoked": "ほかのセッションをログアウトしました。",
+      "revokeError": "ほかのセッションをログアウトできませんでした。"
+    },
+    "delete": {
+      "title": "アカウントの削除",
+      "text": "アカウントとその中のすべて（セッション、タスク、カード、復習）を完全に削除します。お支払い履歴のあるアカウントは、サブスクリプションが残らないようサポートが簡単に確認します。コピーが必要な場合は先にデータをエクスポートしてください。",
+      "word": "削除",
+      "typeToConfirm": "確認のため「{word}」と入力してください",
+      "password": "パスワード",
+      "submit": "アカウントを削除",
+      "billingBlocked": "このアカウントにはお支払い履歴があります。メールでご連絡いただければ、こちらで解約手続きを行います。",
+      "error": "アカウントを削除できませんでした。パスワードを確認して、もう一度お試しください。"
+    },
+    "prefs": {
+      "saved": "設定を保存しました。",
+      "general": "一般",
+      "timezone": "タイムゾーン",
+      "useDeviceZone": "この端末のタイムゾーンを使う（{zone}）",
+      "weekStart": "週の始まり",
+      "weeklyGoal": "週間集中目標（時間）",
+      "weeklyGoalHint": "統計に表示されます。0 でオフになります。",
+      "techniques": "テクニック",
+      "defaultTime": "デフォルトの時間テクニック",
+      "defaultMethod": "デフォルトの学習法",
+      "timebox": "デフォルトのタイムボックス（分）",
+      "presets": "カスタムプリセット",
+      "deletePreset": "プリセット「{name}」を削除",
+      "reviewSteps": "復習スケジュール",
+      "reviewStepsText": "カードを保存してから最初の3回の復習までの日数です。最後のステップの後は60日になり、その後は最大180日まで倍になっていきます。",
+      "stepN": "{n, number}回目の復習（日）",
+      "resetSteps": "5 / 10 / 30 に戻す",
+      "stepsInvalid": "1〜365の範囲で、増えていく3つの数字を入力してください。",
+      "notifications": "リマインダーと通知",
+      "reminderTime": "毎日のリマインド時刻",
+      "reminderTimeHint": "復習の期日が来たら、この時刻にリマインドを1回お送りします。",
+      "emailReviews": "復習リマインダーのメール",
+      "emailReviewsHint": "復習がある日に1通だけ。カードごとに送ることはありません。",
+      "emailWeekly": "週間レポートのメール",
+      "emailWeeklyHint": "毎週月曜 09:00：1週間の集中のまとめと提案を1つ。",
+      "emailWeeklyPro": "Pro の機能です。今オンにしておけば、アップグレード時に開始します。",
+      "streakNudge": "連続記録のリマインダー",
+      "streakNudgeHint": "3日以上の連続記録が今日途切れそうなとき、19:00 にブラウザでそっとお知らせします。",
+      "browser": "ブラウザ通知",
+      "browserHint": "メールに加えて、この端末でも復習をリマインドします。",
+      "browserDisable": "この端末でオフにする",
+      "browserOff": "この端末ではブラウザのリマインダーはオフです。",
+      "browserUnavailable": "このブラウザでは利用できないか、まだ設定されていません。",
+      "hours": "通知する時間帯",
+      "hoursHint": "ブラウザ通知はこの時間帯にのみ送信されます。毎日のメールリマインダーには影響しません。",
+      "from": "{day}：開始",
+      "to": "{day}：終了",
+      "export": "あなたのデータ",
+      "exportText": "FocusKept が保存しているあなたのデータをすべてダウンロードできます（全プラン共通）。",
+      "exportJson": "すべて（JSON）",
+      "exportCsv": {
+        "sessions": "セッション（CSV）",
+        "cards": "カード（CSV）",
+        "reviews": "復習（CSV）"
+      }
+    }
+  },
+  "billing": {
+    "title": "お支払い",
+    "lead": "プラン、請求書、お支払い情報。",
+    "currentPlan": "現在のプラン",
+    "free": "無料",
+    "pro": "Pro",
+    "syncNote": "Polar が支払いを確認すると、プランは自動で更新されます。チェックアウトから戻っただけでは変わらないため、少し時間がかかることがあります。",
+    "returned": "ありがとうございます！支払いが確認され次第、プランを更新します。",
+    "manage": "サブスクリプションを管理",
+    "seePlans": "プランを見る",
+    "connecting": "接続中…",
+    "notConfigured": "お支払いはまだ設定されていません。請求は発生していません。",
+    "unavailable": "現在お支払い機能を利用できません。もう一度お試しください。",
+    "renewsOn": "{date}に更新されます。",
+    "endsOn": "解約済み。Pro は{date}まで有効です。"
+  },
+  "landing": {
+    "heroTitle": "深く集中して、学んだことを忘れない。",
+    "heroLead": "FocusKept は、実証済みの18のテクニックを備えた落ち着いた集中タイマーです。学習時には、あなた自身の説明を問題に変え、5日目・10日目・30日目に復習をリマインドします。",
+    "question": "今日は何をしますか？",
+    "workTitle": "作業",
+    "workText": "タスクとテクニックを選んで集中するだけ。アカウントは不要です。",
+    "learnTitle": "学習",
+    "learnText": "トピックを学び、自分の言葉で説明して、しっかり覚えましょう。",
+    "noCard": "無料で始められます。クレジットカード不要。",
+    "loop": {
+      "eyebrow": "使い方",
+      "title": "集中から、長く残る記憶へ",
+      "lead": "タイマーは始めるのを助けてくれます。覚えるにはもうひと手間が必要です。FocusKept がそれを引き受けます。",
+      "focus": {
+        "title": "集中する",
+        "text": "25/5、52/17、Flowtime などのテクニックで、時間を区切って作業します。"
+      },
+      "explain": {
+        "title": "説明する",
+        "text": "学んだことを12歳の子どもに話すように書きます。これが Feynman テクニックです。"
+      },
+      "questions": {
+        "title": "問題を受け取る",
+        "text": "AI が抜けを指摘し、あなたの説明を編集可能な復習問題に変えます。"
+      },
+      "review": {
+        "title": "ちょうどいい時に復習",
+        "text": "忘れる直前の5日目・10日目・30日目にリマインドします。"
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman を実践的に",
+      "title": "シンプルに説明して、本当の理解を確かめる。",
+      "lead": "学習セッションの後、トピックを自分の言葉で説明します。わかりやすさのスコア、足りない点、ずれている点、そして復習用の問題が返ってきます。",
+      "cta": "学習モードを試す",
+      "label": "AI フィードバック付きの説明の例",
+      "badge": "例",
+      "topic": "トピック：光合成",
+      "explanation": "植物は自分で栄養を作ります。葉が日光を受け、根から水を、小さな穴から空気を取り入れて、それを糖に変えます。残ったものが酸素で、私たちはそれを吸っています。",
+      "feedback": "フィードバック",
+      "clarity": "わかりやすさ 82/100",
+      "gap": "不足：空気から取り込む気体は二酸化炭素です。",
+      "mistake": "不明確：日光はエネルギーを与えるもので、日光そのものが糖になるわけではありません。",
+      "questionsLabel": "復習問題",
+      "q1": "植物が糖を作るために空気から取り込む気体は何ですか？",
+      "q2": "〇か×か：植物は副産物として酸素を放出する。",
+      "q3": "植物は ____ のエネルギーを使って糖を作る。",
+      "schedule": "カードとして保存しました。復習は5日目・10日目・30日目です。"
+    },
+    "techniques": {
+      "eyebrow": "18のテクニック",
+      "title": "すべてのテクニックを、ひとつの場所に",
+      "lead": "集中のための時間テクニック、理解のための学習法、1日のための計画テクニック。各ページで仕組みを解説し、その場で試せます。"
+    },
+    "pricing": {
+      "title": "無料で始めて、必要になったら",
+      "lead": "必要なものはすべて無料。Pro は月額 {monthly} または年額 {yearly} です。",
+      "points": {
+        "1": "無料プランですべてのテクニック、タスク、統計、リマインダーが使えます",
+        "2": "Pro：カード無制限、すべてのカードに AI フィードバック",
+        "3": "Pro：ラボの全機能と週間レポート"
+      },
+      "cta": "プランを比較"
+    },
+    "faq": {
+      "title": "よくある質問",
+      "1": {
+        "q": "アカウントは必要ですか？",
+        "a": "作業モードでは不要で、タイマーを始めるだけです。学習モードでは、カードを保存して復習リマインダーを送るために無料アカウントが必要です。"
+      },
+      "2": {
+        "q": "モバイルアプリはありますか？",
+        "a": "FocusKept はどの端末でもブラウザで動きます。ホーム画面に追加でき、リマインダーはメールとブラウザ通知で届きます。"
+      },
+      "3": {
+        "q": "AI は私の説明をどう使いますか？",
+        "a": "フィードバックと問題を作るため、説明は OpenAI に送信されます。個人情報や機密情報は含めないでください。詳しくはプライバシーポリシーをご覧ください。"
+      },
+      "4": {
+        "q": "なぜ5日目・10日目・30日目なのですか？",
+        "a": "最も忘れやすい最初の1か月に復習を分散させると、少ない労力で知識が長く定着します。ステップは設定で変更できます。"
+      },
+      "5": {
+        "q": "どの言語に対応していますか？",
+        "a": "FocusKept は24言語に対応しています。説明や問題は、あなたが書くどの言語でも使えます。"
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "時間",
+    "goalLabel": "目標",
+    "paused": "一時停止中",
+    "announce": "{phase}",
+    "block": "ブロック {current}/{total}",
+    "focusedSoFar": "集中 {duration}",
+    "flowHint": "集中が切れたら止めましょう",
+    "phase": {
+      "idle": "準備ができたら",
+      "work": "集中",
+      "short_break": "短い休憩",
+      "long_break": "長い休憩",
+      "ready": "次のブロックの準備完了",
+      "box_ended": "時間です",
+      "finished": "セッション完了"
+    },
+    "controls": {
+      "start": "開始",
+      "startNext": "次のブロックを開始",
+      "pause": "一時停止",
+      "resume": "再開",
+      "skip": "スキップ",
+      "skipBreak": "休憩をスキップ",
+      "takeBreak": "休憩する",
+      "finish": "セッションを終了",
+      "fullscreen": "全画面",
+      "exitFullscreen": "全画面を終了",
+      "shortcuts": "ショートカット",
+      "close": "閉じる"
+    },
+    "box": {
+      "title": "時間です。どうしますか？",
+      "done": "完了",
+      "extend": "1回だけ延長（+{duration}）",
+      "later": "後に回す"
+    },
+    "tips": {
+      "1": "立ち上がって1分ほどストレッチしましょう。",
+      "2": "コップ1杯の水を飲みましょう。",
+      "3": "目を休めましょう。約6メートル先のものを20秒見つめます。",
+      "4": "部屋の中だけでも、少し歩きましょう。",
+      "5": "肩を回して、ゆっくり何回か呼吸しましょう。",
+      "6": "窓を開けるか外に出て、新鮮な空気を吸いましょう。"
+    },
+    "notify": {
+      "breakTitle": "休憩の時間です",
+      "breakBody": "{duration}休みましょう。画面から離れてください。",
+      "focusTitle": "集中に戻りましょう",
+      "readyTitle": "休憩終了",
+      "readyBody": "次のブロックを始めますか？",
+      "boxTitle": "時間です",
+      "boxBody": "完了、1回延長、それとも後に回しますか？"
+    },
+    "shortcuts": {
+      "title": "キーボードショートカット",
+      "keySpace": "スペース",
+      "keyEsc": "Esc",
+      "space": "開始・一時停止・再開",
+      "skip": "現在のフェーズをスキップ",
+      "fullscreen": "全画面の切り替え",
+      "exit": "全画面を終了",
+      "help": "この一覧を表示"
+    },
+    "sound": {
+      "title": "サウンド",
+      "chime": "フェーズ切り替え時のチャイム",
+      "chimeVolume": "チャイムの音量",
+      "background": "環境音",
+      "backgroundVolume": "環境音の音量",
+      "hint": "環境音は集中中にのみ再生されます。",
+      "done": "完了",
+      "kinds": {
+        "none": "なし",
+        "white": "ホワイトノイズ",
+        "pink": "ピンクノイズ",
+        "brown": "ブラウンノイズ",
+        "rain": "雨",
+        "cafe": "カフェ",
+        "stream": "小川",
+        "ocean": "波の音",
+        "wind": "風",
+        "fire": "暖炉",
+        "night": "夏の夜",
+        "binaural": "バイノーラルビート"
+      },
+      "groups": {
+        "noise": "ノイズ",
+        "nature": "自然",
+        "tones": "トーン",
+        "places": "場所"
+      },
+      "about": {
+        "white": "話し声を隠す均一なサー音",
+        "pink": "より柔らかく、降り続く雨のよう",
+        "brown": "深い低音、シャー音なし",
+        "rain": "しずくの音がある小雨",
+        "stream": "石の上を流れる小川",
+        "ocean": "数秒ごとのゆっくりした波",
+        "wind": "強まったり弱まったりする風",
+        "fire": "ぱちぱちと燃える薪",
+        "night": "静かな夜の虫の声",
+        "binaural": "16 Hz のビート、ヘッドホン向け",
+        "cafe": "にぎやかなカフェのざわめき"
+      },
+      "headphones": "ヘッドホンを使ってください。左右の耳に少し違う音が届き、脳はその差である 16 Hz のビートを聞き取ります。音量は小さめにしてください。",
+      "previewHint": "サウンドを選ぶと試聴できます。集中している間だけ再生されます。",
+      "tip": "言葉のない音がいちばん効果的です。歌詞や話し声は読む速さと記憶を落とします。"
+    },
+    "taskLabel": "タスク"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "アカウント不要。セッションはこの端末に保存されます。",
+      "durations": {
+        "work": "集中（分）",
+        "shortBreak": "短い休憩（分）",
+        "longBreak": "長い休憩（分）",
+        "cycles": "長い休憩までのブロック数",
+        "box": "ボックスの長さ（分）"
+      }
+    },
+    "end": {
+      "ratingValue": "5段階中{value}",
+      "discardConfirm": "このセッションを破棄しますか？保存されません。",
+      "tooShort": "このセッションは1分未満だったため、統計には含まれません。"
+    },
+    "import": {
+      "title": "セッションを引き継ぎますか？",
+      "text": "この端末に{sessions, plural, other {#件のセッション}}と{tasks, plural, other {#件のタスク}}が見つかりました。アカウントに取り込みますか？",
+      "confirm": "取り込む",
+      "later": "後で",
+      "done": "{sessions, plural, other {#件のセッション}}と{tasks, plural, other {#件のタスク}}を取り込みました。",
+      "error": "取り込みに失敗しました。データはこの端末に残っています。後でもう一度お試しください。"
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "学習モード",
+      "title": "学んだことを残す",
+      "lead": "実証済みの方法で学び、トピックを自分の言葉で説明すると、FocusKept がそれを問題に変えます。忘れる直前の5日目・10日目・30日目に復習をリマインドします。",
+      "steps": {
+        "1": "学習法とタイマーでトピックに集中する。",
+        "2": "12歳の子どもに話すように説明する。",
+        "3": "AI が抜けを指摘し、復習問題を作る。",
+        "4": "5日目・10日目・30日目に自動で復習。"
+      },
+      "topicLabel": "何を学びたいですか？",
+      "topicPlaceholder": "例：ワクチンが免疫系を鍛える仕組み",
+      "start": "続ける",
+      "accountNote": "学習モードでは、復習リマインダーを送るために無料アカウントが必要です。",
+      "workInstead": "タイマーだけ使いたいですか？作業モードならアカウント不要です。"
+    },
+    "explain": {
+      "prompt": "学んだことを、12歳の子どもに話すように説明してください。",
+      "promptHint": "やさしい言葉と短い文で書きましょう。つまずいたところこそ、次に学ぶべきところです。",
+      "openaiNotice": "説明は OpenAI で処理されます。個人情報や機密情報は含めないでください。<privacy>プライバシーポリシー</privacy>",
+      "counter": "{count} / {max} 文字（{min}文字以上）",
+      "analyze": "AI のフィードバックと問題を受け取る",
+      "analyzing": "説明を読んでいます…",
+      "manual": "問題を自分で書く",
+      "aiOff": "現在 AI フィードバックは利用できません。問題は自分で書くことができます。",
+      "remaining": "{count, plural, =0 {今月の AI 分析は残っていません} other {今月の AI 分析：残り#回}}",
+      "aiFailed": "今回は AI フィードバックがうまくいきませんでした。説明は保存されています。下で問題を書くか、後でもう一度お試しください。",
+      "yourExplanation": "あなたの説明",
+      "revise": "修正して再分析",
+      "edit": "編集",
+      "analysisTitle": "フィードバック",
+      "clarity": "わかりやすさ {score, number}/100",
+      "clarityLabel": "わかりやすさのスコア",
+      "gaps": "足りないこと",
+      "mistakes": "間違い・不明確なこと",
+      "noGaps": "重要な抜けはありません。",
+      "noMistakes": "間違いは見つかりませんでした。",
+      "rewrite": "よりわかりやすい版を見る",
+      "useRewrite": "この版から始める",
+      "reanalysisUsed": "このカードの再分析はすでに使いました。Pro なら何度でも修正できます。",
+      "questionsTitle": "復習問題",
+      "questionsHint": "編集・削除したり、自分の問題を追加したりできます。復習ではこれらに答えます。",
+      "needQuestion": "問題を1つ以上追加してください。",
+      "fixQuestions": "保存する前に修正が必要な問題があります。",
+      "save": "カードを保存",
+      "saveError": "カードを保存できませんでした。もう一度お試しください。",
+      "savedTitle": "カードを保存しました",
+      "savedText": "最初の復習は{date}です。リマインドします。",
+      "viewCard": "カードを見る",
+      "another": "もう1回セッションを始める",
+      "notFound": "このセッションはすでに保存されているか、存在しません。",
+      "check": "チェック",
+      "focused": "集中時間：{duration}",
+      "hintLong": "大事な考えを挙げて、それぞれ1〜2文で。休憩中のメモはもうここにあります。",
+      "hintMid": "大事な考えを3〜5個、それぞれ1〜2文で、本を見ずに。",
+      "hintShort": "大事な考えを2〜3個で十分です。本を見ずに書きましょう。",
+      "keep": "{count, plural, other {#問を残す}}",
+      "keptTitle": "{count, plural, other {#問の準備ができました。}}",
+      "newSession": "新しいセッション",
+      "readingText": "抜けを見つけて問題を準備しています",
+      "writeTitle": "何を学びましたか？自分の言葉で書きましょう。"
+    }
+  },
+  "tasks": {
+    "title": "タスク",
+    "markDone": "「{title}」を完了にする",
+    "focusOn": "「{title}」に集中する",
+    "close": "閉じる",
+    "errors": {
+      "generic": "変更を保存できませんでした。もう一度お試しください。",
+      "ivyFull": "明日のタスクはすでに6つあります。",
+      "slotFull": "今日のボードのその部分はもう満杯です。"
+    },
+    "matrix": {
+      "do": {
+        "title": "すぐやる"
+      },
+      "schedule": {
+        "title": "予定に入れる"
+      },
+      "delegate": {
+        "title": "任せる"
+      },
+      "delete": {
+        "title": "やめる"
+      }
+    },
+    "plan135": {
+      "big": "大",
+      "medium": "中",
+      "small": "小"
+    },
+    "ivy": {
+      "moveUp": "「{title}」を上へ",
+      "moveDown": "「{title}」を下へ"
+    },
+    "board": {
+      "heading": "今日",
+      "chip": {
+        "today": "今日",
+        "tomorrow": "明日",
+        "full": "今日は満杯です",
+        "slot": {
+          "big": "メインタスクの枠",
+          "medium": "中くらいの枠",
+          "small": "短い枠"
+        }
+      },
+      "toTomorrow": "明日",
+      "progress": "{total, number}件中{done, number}件完了",
+      "planned": "予定 {planned} · 残り {left}",
+      "plannedEmpty": "まだ予定はありません",
+      "barLabel": "今日: 完了 {done}、残り {left}",
+      "addLabel": "新しいタスク",
+      "addPlaceholder": "「エッセイの構成 45分 明日 !」のように入力すると、時間・日・優先度を読み取ります",
+      "add": "追加",
+      "keywords": {
+        "today": "今日, きょう",
+        "tomorrow": "明日, あした",
+        "minutes": "分",
+        "hours": "時間"
+      },
+      "dayFull": "今日は満杯です。先にどれかを明日に移してください。",
+      "first": {
+        "label": "まずはこれ",
+        "empty": "メインタスクはまだありません。つい後回しにしがちな長いタスクを選び、「今日へ」を押してください。"
+      },
+      "medium": {
+        "title": "次にこれら",
+        "empty": "空き枠 · 25〜60分"
+      },
+      "small": {
+        "title": "合間の短いタスク",
+        "empty": "空き枠 · 25分未満"
+      },
+      "slotCount": "{done, number}/{used, number} 完了 · 空き {free, number}",
+      "overflow": {
+        "title": "今日は空きがありません",
+        "hint": "今日の予定ですが、枠がすべて埋まっています。"
+      },
+      "footnote": "メイン1つ、中3つ、短い5つで充実した1日になります。新しいタスクは時間に合わせて枠に入ります。",
+      "focus": "集中する",
+      "toTomorrowLabel": "「{title}」を明日に移す",
+      "toIncoming": "受信箱",
+      "toIncomingLabel": "「{title}」を受信箱に移す",
+      "edit": "「{title}」を開く"
+    },
+    "details": {
+      "days": {
+        "today": "今日",
+        "tomorrow": "明日",
+        "none": "日付なし"
+      },
+      "name": "タイトル",
+      "tags": "タグ",
+      "tagsPlaceholder": "例：勉強, コーディング",
+      "project": "プロジェクト",
+      "noProject": "プロジェクトなし",
+      "save": "保存",
+      "deleteConfirm": "このタスクを削除しますか？関連するセッションは残ります。",
+      "title": "タスク",
+      "minutes": "所要時間（分）",
+      "day": "日",
+      "notes": "メモ",
+      "archive": "アーカイブ",
+      "delete": "削除"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "明日",
+        "planned": "予定あり",
+        "unsorted": "未整理"
+      },
+      "quadrant": {
+        "do": {
+          "label": "すぐやる",
+          "hint": "緊急かつ重要"
+        },
+        "plan": {
+          "label": "予定に入れる",
+          "hint": "重要だが緊急ではない"
+        },
+        "quick": {
+          "hint": "緊急だが重要ではない",
+          "label": "すぐ終わる"
+        },
+        "later": {
+          "label": "あとで",
+          "hint": "どちらでもない"
+        }
+      },
+      "projects": "プロジェクトとフィルター",
+      "filterLabel": "優先度で絞り込む",
+      "empty": {
+        "tomorrow": "明日の予定はまだありません。",
+        "planned": "この先の予定はありません。",
+        "unsorted": "すべて整理済みです。"
+      },
+      "missed": "{date}から",
+      "important": "重要",
+      "urgent": "緊急",
+      "importantShort": "重",
+      "urgentShort": "急",
+      "importantLabel": "「{title}」は重要",
+      "urgentLabel": "「{title}」は緊急",
+      "toToday": "今日へ",
+      "toTodayLabel": "「{title}」を今日に移す",
+      "plan": "2分で明日を計画",
+      "planHint": "最大6つのタスクを並べて、準備万端で朝を始めましょう",
+      "title": "受信箱"
+    },
+    "projects": {
+      "filterProject": "プロジェクト",
+      "filterTag": "タグ",
+      "all": "すべて",
+      "name": "新しいプロジェクト名",
+      "add": "プロジェクトを追加",
+      "archive": "アーカイブ",
+      "restore": "元に戻す",
+      "done": "完了",
+      "title": "プロジェクトとフィルター"
+    },
+    "planner": {
+      "moveUp": "「{title}」を上へ",
+      "remove": "「{title}」を明日から外す",
+      "title": "明日は何をしますか？",
+      "lead": "最大6つのタスクを、重要なものから選んでください。明日は1つ目が「まずはこれ」になり、残りがボードを埋めます。",
+      "pick": "選ぶ",
+      "order": "明日の順番 · {count, number}/{max, number}",
+      "empty": "リストからタスクを選んでください。最初に選んだものが、朝いちばんに表示されます。",
+      "fromToday": "今日から",
+      "later": "今はしない",
+      "save": "明日の分として保存",
+      "saved": "明日のリストを保存しました。"
+    }
+  },
+  "cards": {
+    "title": "知識カード",
+    "lead": "これまでに学んだすべてと、その復習スケジュール。",
+    "newSession": "新しい学習セッション",
+    "searchLabel": "カードを検索",
+    "searchPlaceholder": "トピックや説明を検索",
+    "search": "検索",
+    "statusLabel": "状態",
+    "active": "有効",
+    "archived": "アーカイブ済み",
+    "topicLabel": "トピック",
+    "allTopics": "すべてのトピック",
+    "sortLabel": "並べ替え",
+    "sortDue": "期日が近い順",
+    "sortNew": "新しい順",
+    "allowance": "無料プラン：{limit, number}枚中{used, number}枚",
+    "emptyTitle": "まだカードがありません",
+    "emptyText": "学習セッションを終えて、学んだことを説明しましょう。最初のカードがここに表示されます。",
+    "noResults": "検索に一致するカードはありません。",
+    "more": "さらに読み込む",
+    "due": "期日：{when}",
+    "dueToday": "今日が期日",
+    "overdue": "期日超過",
+    "box": "ボックス {n, number}",
+    "graduated": "長期記憶",
+    "questionsCount": "{count, plural, other {#問}}",
+    "detail": {
+      "back": "すべてのカード",
+      "reviewNow": "今すぐ復習",
+      "reviewNowHint": "いつでも練習できます。早めの復習でスケジュールは変わりません。",
+      "nextReview": "次の復習",
+      "reviews": "復習",
+      "source": "参考資料",
+      "method": "学習法",
+      "created": "作成日",
+      "explanation": "説明",
+      "editTopic": "トピック",
+      "save": "変更を保存",
+      "saved": "変更を保存しました。",
+      "archive": "アーカイブ",
+      "unarchive": "元に戻す",
+      "archivedNote": "アーカイブしたカードは復習されません。無料プランの上限には含まれます。",
+      "delete": "カードを削除",
+      "deleteConfirm": "このカードと復習履歴を削除しますか？元に戻せません。",
+      "history": "復習履歴",
+      "noHistory": "まだ復習はありません。",
+      "passed": "合格",
+      "missed": "不合格",
+      "early": "練習",
+      "score": "{score, number}%",
+      "analysis": "AI フィードバック",
+      "error": "保存できませんでした。もう一度お試しください。"
+    },
+    "questions": {
+      "number": "問題 {n, number}",
+      "type": "問題の種類",
+      "types": {
+        "open": "記述式",
+        "true_false": "〇×問題",
+        "cloze": "穴埋め"
+      },
+      "source": {
+        "ai": "AI",
+        "ai_edited": "AI・編集済み"
+      },
+      "prompt": "問題",
+      "answer": "答え",
+      "true": "〇",
+      "false": "×",
+      "explanation": "正解の理由",
+      "explanationPlaceholder": "任意、1文で",
+      "clozeHint": "抜けている語を {blank} で示してください",
+      "delete": "問題 {n, number} を削除",
+      "add": {
+        "open": "記述式",
+        "true_false": "〇×",
+        "cloze": "穴埋め"
+      },
+      "problems": {
+        "prompt": "問題文を書いてください。",
+        "answer": "答えを追加してください。",
+        "blank": "穴埋め問題には ____ がちょうど1つ必要です。"
+      }
+    },
+    "boxes": {
+      "label": "復習ボックス",
+      "today": "今日",
+      "days": "{days, plural, other {#日}}",
+      "hint": "正解するとカードは次のボックスへ進み、出てくる間隔が空きます。間違えると、すぐまた出てきます。"
+    }
+  },
+  "limits": {
+    "cta": "Pro を見る",
+    "keepWorking": "どちらの場合も、カードと復習はそのまま使えます。",
+    "pro": {
+      "cards": "知識カード無制限",
+      "ai": "すべてのカードに AI フィードバックと問題",
+      "lab": "ラボの全機能：タグや時間帯ごとに、何が自分に合うかがわかる",
+      "weekly": "メールで届く週間レポート"
+    },
+    "card_limit": {
+      "title": "無料プランのカード20枚に達しました",
+      "text": "カードは自由に削除・保持でき、復習も続きます。新しいカードを保存するには Pro にアップグレードしてください。"
+    },
+    "monthly_limit": {
+      "title": "今月の AI 分析を使い切りました",
+      "text": "無料プランには月{limit, number}回の AI カード分析が含まれます。問題を自分で書けば、このカードは保存できます。"
+    },
+    "reanalysis_limit": {
+      "title": "このカードの再分析は使用済みです",
+      "text": "無料プランではカードごとに1回まで修正できます。問題を手で編集するか、アップグレードで何度でも修正できます。"
+    },
+    "budget": {
+      "title": "AI は今日はお休み中です",
+      "text": "AI フィードバックは一時的に利用できません。問題を自分で書いてください。カードはまったく同じように機能します。"
+    },
+    "lab": {
+      "title": "Pro でラボの全機能を",
+      "text": "無料プランでは直近7日間のトップテクニックを表示します。Pro では全期間の分析、タグ別・時間帯別の結果、定着率カーブが加わります。"
+    },
+    "weekly_report": {
+      "title": "週間レポートは Pro の機能です",
+      "text": "毎週月曜に、集中時間、ベストテクニック、定着率、提案を1つまとめた短いメールが届きます。"
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "ブラウザでも復習リマインダーを受け取りますか？",
+      "text": "復習の期日が来たら、メールに加えて通知を1回お送りします。",
+      "enable": "ブラウザのリマインダーをオン",
+      "enabled": "ブラウザのリマインダーはオンです",
+      "denied": "このサイトの通知はブロックされています。ブラウザの設定で許可できます。"
+    },
+    "unsubscribe": {
+      "title": "メールの設定",
+      "reviews": "毎日の復習リマインダーメールを停止しますか？ブラウザ通知と復習スケジュールはそのままです。",
+      "weekly": "週間レポートのメールを停止しますか？",
+      "confirm": "配信停止",
+      "done": "完了しました。今後このメールは届きません。設定からいつでも再開できます。",
+      "error": "うまくいきませんでした。もう一度お試しいただくか、設定から変更してください。",
+      "invalid": "このリンクは無効です。メールの設定は「設定」から管理できます。",
+      "settings": "すべての通知を設定で管理"
+    }
+  },
+  "review": {
+    "title": "復習",
+    "lead": "記憶を頼りに答えましょう。すべて正解するとカードは合格です。",
+    "progress": "カード {current, number}/{total, number}",
+    "questionProgress": "問題 {current, number}/{total, number}",
+    "types": {
+      "open": "記述式",
+      "true_false": "〇か×か？",
+      "cloze": "穴埋め"
+    },
+    "true": "〇",
+    "false": "×",
+    "blankLabel": "抜けている語",
+    "yourAnswer": "あなたの答え",
+    "check": "答え合わせ",
+    "grading": "確認中…",
+    "modelAnswer": "答え",
+    "selfGradeNote": "現在、自動採点は利用できません。答えと見比べて、正直に自己採点してください。",
+    "self": {
+      "correct": "正解した",
+      "partial": "一部正解",
+      "incorrect": "まだ"
+    },
+    "verdict": {
+      "correct": "正解です。",
+      "partial": "一部正解です。",
+      "incorrect": "惜しい、不正解です。"
+    },
+    "nextQuestion": "次の問題",
+    "finishCard": "カードを終える",
+    "passedTitle": "合格",
+    "missedTitle": "まだです。すぐにまた出題されます",
+    "score": "{score, number}%",
+    "nextReview": "次の復習：{date}",
+    "earlyNote": "練習の復習です。スケジュールは変わりません（次の復習は{date}）。",
+    "revisit": "見直すポイント",
+    "openExplanation": "自分の説明を読み返す",
+    "nextCard": "次のカード",
+    "finish": "終了",
+    "passRule": "{count, plural, other {#問すべてに正解すると合格です。}}",
+    "saveError": "復習を保存できませんでした。もう一度お試しください。",
+    "emptyTitle": "すべて完了です",
+    "emptyText": "今は期日の来た復習はありません。カードを保存すると、5日目・10日目・30日目に新しい復習が届きます。",
+    "allDoneTitle": "復習完了",
+    "allDoneText": "{total, number}枚中{passed, number}枚に合格しました。お疲れさまでした。",
+    "learnSomething": "新しいことを学ぶ",
+    "toTimer": "タイマーに戻る"
+  },
+  "stats": {
+    "title": "統計",
+    "lead": "集中と学習の状況。",
+    "rangeLabel": "期間",
+    "range": "{days, number}日間",
+    "focused": "集中時間",
+    "sessions": "セッション",
+    "avgRating": "平均集中度",
+    "streak": "連続記録",
+    "bestStreak": "最長記録",
+    "days": "{count, plural, other {#日}}",
+    "retention30": "定着率（30日）",
+    "retention90": "定着率（90日）",
+    "cardsTotal": "カード",
+    "dailyChart": "1日あたりの集中時間（分）",
+    "showTable": "表で表示",
+    "day": "日付",
+    "minutes": "分",
+    "techniques": "テクニック",
+    "technique": "テクニック",
+    "noSessions": "この期間のセッションはまだありません。",
+    "topics": "トピック別の定着率（90日）",
+    "topic": "トピック",
+    "reviews": "復習",
+    "retention": "定着率",
+    "noReviews": "まだ復習はありません。",
+    "lab": {
+      "title": "ラボ",
+      "lead": "あなた自身の集中度評価をもとに、どのテクニックが最も合うかを示します。",
+      "weekTop": "直近7日間で最も集中できたのは{technique}でした：{sessions, plural, other {#回のセッション}}で {rating, number, ::.#} / 5。",
+      "needData": "いくつかのセッションを評価すると、ここに結果が表示されます。",
+      "allTime": "全期間ランキング",
+      "rankRow": "{technique}：{rating, number, ::.#} / 5（{sessions, plural, other {#回}}）",
+      "byTag": "タスクのタグ別ベストテクニック",
+      "tag": "タグ",
+      "best": "ベストテクニック",
+      "noTags": "タスクにタグを付けると、作業の種類ごとに合うテクニックがわかります。",
+      "byHour": "時間帯別の集中度",
+      "hour": "時刻",
+      "curve": "復習ステップ別の定着率",
+      "step": "ステップ",
+      "dayN": "{day, number}日目",
+      "graduated": "長期記憶"
+    }
+  },
+  "pricing": {
+    "eyebrow": "料金",
+    "title": "無料で始めて、価値を感じたらアップグレード。",
+    "lead": "集中・学習・計画のテクニックはすべて無料です。Pro は上限をなくし、何が自分に最も合うかを示します。",
+    "perMonth": "/ 月",
+    "perYear": "/ 年",
+    "free": {
+      "name": "無料",
+      "text": "集中して、学んだことを覚え始めるのに必要なものがすべて揃っています。",
+      "points": {
+        "1": "18のテクニック、タスク、統計がすべて使えます",
+        "2": "知識カード20枚まで",
+        "3": "AI 分析 月10回",
+        "4": "メールとブラウザで復習リマインダー"
+      },
+      "cta": "無料で始める"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "知識カード無制限",
+        "2": "すべてのカードに AI フィードバックと問題（フェアユース）",
+        "3": "ラボの全機能：タグ別・時間帯別のベストテクニック",
+        "4": "メールで届く週間レポート"
+      }
+    },
+    "monthly": {
+      "name": "Pro 月額",
+      "text": "柔軟に。いつでも解約できます。",
+      "cta": "月額を選ぶ"
+    },
+    "yearly": {
+      "name": "Pro 年額",
+      "badge": "{percent, number}%お得",
+      "text": "月あたり{monthly}、年1回のお支払いです。",
+      "point": "Pro のすべてを1年間",
+      "cta": "年額を選ぶ"
+    },
+    "checkoutNote": "お支払いは、販売事業者（merchant of record）である Polar が処理します。お住まいの国の税金を含む最終価格はチェックアウト時に表示されます。「お支払い」からいつでも解約できます。",
+    "compare": "無料プランと Pro の比較",
+    "feature": "機能",
+    "notIncluded": "含まれません",
+    "rows": {
+      "techniques": {
+        "label": "時間・学習・計画のテクニック",
+        "free": "18すべて",
+        "pro": "18すべて"
+      },
+      "tasks": {
+        "label": "タスク、プロジェクト、基本統計",
+        "free": "含まれます",
+        "pro": "含まれます"
+      },
+      "cards": {
+        "label": "知識カード",
+        "free": "合計20枚",
+        "pro": "無制限"
+      },
+      "ai": {
+        "label": "AI フィードバックと問題生成",
+        "free": "月10枚",
+        "pro": "無制限（フェアユース）"
+      },
+      "grading": {
+        "label": "復習での記述式回答の AI 採点",
+        "free": "含まれます",
+        "pro": "含まれます"
+      },
+      "reminders": {
+        "label": "メールとブラウザの復習リマインダー",
+        "free": "含まれます",
+        "pro": "含まれます"
+      },
+      "lab": {
+        "label": "ラボ：自分に最も合うテクニック",
+        "free": "直近7日間のトップ",
+        "pro": "全期間、タグ別、時間帯別、定着率カーブ"
+      },
+      "weekly": {
+        "label": "週間メールレポート",
+        "free": "–",
+        "pro": "含まれます"
+      },
+      "export": {
+        "label": "データのエクスポート（JSON・CSV）",
+        "free": "含まれます",
+        "pro": "含まれます"
+      }
+    },
+    "faqTitle": "プランに関する質問",
+    "faq": {
+      "1": {
+        "q": "支払いをやめたらカードはどうなりますか？",
+        "a": "何も失われません。カードと予定された復習はそのまま使えます。無料プランの上限を超えてカードを追加することはできず、AI 分析は月10回に戻ります。"
+      },
+      "2": {
+        "q": "Pro の AI における「フェアユース」とは？",
+        "a": "Pro には月300枚までのカードの AI フィードバックが含まれており、ほとんどの方が作る枚数を大きく上回ります。上限に達しても、問題を自分で書くことができます。"
+      },
+      "3": {
+        "q": "解約するには？",
+        "a": "アプリの「お支払い」を開き、「サブスクリプションを管理」を選んでください。支払い済みの期間が終わるまで Pro を使えます。"
+      },
+      "4": {
+        "q": "支払いはどこが処理しますか？",
+        "a": "Polar が販売事業者として、支払い、請求書、売上税を処理します。FocusKept がカード情報を見ることはありません。"
+      },
+      "5": {
+        "q": "買い切りプランはありますか？",
+        "a": "現在はありません。Pro は月額または年額でご利用いただけます。"
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "時間テクニック",
+      "learning": "学習法",
+      "planning": "計画テクニック"
+    },
+    "eyebrow": "テクニック",
+    "title": "集中・学習・計画のテクニック",
+    "lead": "各テクニックをやさしい言葉で、手順や役立つ場面・向かない場面とともに解説しています。どれもそのページですぐに試せます。",
+    "all": "すべてのテクニック",
+    "tryNow": "今すぐ試す",
+    "howItWorks": "仕組み",
+    "steps": "手順",
+    "bestFor": "向いていること",
+    "whenNotToUse": "向かない場面",
+    "faq": "よくある質問",
+    "related": "関連するテクニック",
+    "trademarkNotice": "Pomodoro Technique® は Francesco Cirillo の商標です。FocusKept は Pomodoro Technique® および Francesco Cirillo とは提携・関係がなく、その承認も受けていません。"
+  },
+  "tryIt": {
+    "reset": "リセット",
+    "notSaved": "このデモは保存されません。統計を残すには通常のセッションを始めてください。",
+    "fullSession": "通常のセッションで使う",
+    "box": "ボックスの長さ（分）",
+    "steps": "手順に沿って進める",
+    "learnWith": "{method}で学ぶ",
+    "taskPlaceholder": "タスクを追加",
+    "where": "追加先",
+    "add": "追加",
+    "full": "この枠はいっぱいです。それが狙いです。選びましょう。",
+    "list": "タスク",
+    "remove": "「{title}」を削除",
+    "markFrog": "「{title}」を今日のカエルにする",
+    "frogHint": "炎のアイコンをタップして今日のカエルを選びましょう。いちばん上に移動します。",
+    "planFull": "このテクニックで実際の1日を計画する"
+  },
+  "home": {
+    "anonText": "無料アカウントを作ると、説明を書いて、そこから問題を作り、ちょうどいい頃にお知らせを受け取れます。セッションはこの端末で待っています。",
+    "anonTitle": "学んだことを書いて、問題を受け取りましょう。",
+    "boxMinutes": "枠（分）",
+    "breakMinutes": "休憩",
+    "breakNote": "このブロックで何が残りましたか？",
+    "breakNoteHint": "任意 · 最後にここで待っています",
+    "breakNotePlaceholder": "ひとつかふたつ…",
+    "breakOver": "休憩終了",
+    "breakTitle": "休憩 · ブロック{current}/{total}完了",
+    "continue": "続ける",
+    "createAccount": "無料アカウントを作成",
+    "decrease": "減らす：{label}",
+    "discard": "保存せずに終了",
+    "endFocused": "集中時間：{duration}",
+    "endSession": "セッションを終える",
+    "fillHint": "集中するほどカードが満ちていきます",
+    "focusFallback": "集中",
+    "focusMinutes": "集中",
+    "fromPlan": "今日の予定から：",
+    "haveAccount": "アカウントがあります",
+    "hintAsk": "ちょうどいい頃に問いかけます",
+    "hintFocus": "集中する",
+    "hintWrite": "学んだことを書く",
+    "howDidItGo": "どうでしたか？",
+    "howItWorks": "使い方",
+    "increase": "増やす：{label}",
+    "learn": "学ぶ",
+    "modeLabel": "モード",
+    "moods": {
+      "1": "散漫",
+      "2": "まあまあ",
+      "3": "よい",
+      "4": "とてもよい",
+      "5": "没頭"
+    },
+    "newTopic": "新しいテーマ",
+    "nextBlock": "次のブロック · {current}/{total}",
+    "oneStep": "あとひとつ",
+    "placeholderLearn": "例：光合成",
+    "placeholderWork": "例：レポートの導入",
+    "reviewStart": "復習を始める",
+    "reviewTitle": "{count, plural, other {#枚のカードが復習を待っています}}",
+    "rhythm": "リズム",
+    "rhythmGuide": "どのリズムをいつ？ガイドを見る",
+    "rhythmHint": "集中 · 休憩（分）",
+    "rhythmSub": {
+      "52-17": "長く落ち着いた作業に",
+      "custom": "数字を自分で決める",
+      "deep-work-90": "その日いちばん難しい作業",
+      "flowtime": "集中が続くかぎり",
+      "pomodoro": "取りかかるのが難しいとき",
+      "timeboxing": "ひとつの作業に時間の枠を"
+    },
+    "runBlock": "ブロック {current}/{total}",
+    "save": "保存",
+    "skipCard": "カードなしで終える",
+    "start": "スタート",
+    "subjectLearn": "何を学んでいますか？",
+    "subjectWork": "何に取り組んでいますか？（任意）",
+    "summaryBox": "時間が来たら：完了・延長・後回し",
+    "summaryCycle": "{blocks, plural, other {#ブロック}} · 間に{minutes}分休憩",
+    "summaryFlow": "ストップウォッチ · 休憩は集中時間の5分の1",
+    "taskDone": "「{task}」完了",
+    "todayTotal": "今日の集中：{duration}",
+    "topicHint": "この名前でカードを保存します。",
+    "topicTitle": "テーマは何でしたか？",
+    "trailEmpty": "まだありません",
+    "trailLabel": "今日の足あと",
+    "trailSummary": "{duration} · {cards, plural, other {カード#枚}}",
+    "work": "作業"
+  }
+}

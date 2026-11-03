@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "Main navigation",
+      "appNavigation": "App navigation",
+      "skipToContent": "Skip to content",
+      "techniques": "Techniques",
+      "pricing": "Pricing",
+      "about": "About",
+      "signIn": "Sign in",
+      "tasks": "Tasks",
+      "cards": "Cards",
+      "stats": "Stats",
+      "settings": "Settings",
+      "billing": "Billing",
+      "signOut": "Sign out",
+      "timer": "Timer",
+      "guide": "Guide",
+      "howItWorks": "How it works",
+      "menu": "Menu",
+      "account": "Account and settings",
+      "reviewsDue": "Cards are waiting for review"
+    },
+    "theme": {
+      "label": "Theme",
+      "dark": "Dark",
+      "light": "Light",
+      "system": "System"
+    },
+    "language": {
+      "label": "Language"
+    },
+    "actions": {
+      "save": "Save",
+      "saving": "Saving…",
+      "retry": "Try again"
+    },
+    "status": {
+      "error": "Something went wrong. Please try again.",
+      "offline": "You’re offline. Your session is saved on this device and will sync when you’re back."
+    },
+    "consent": {
+      "label": "Analytics preferences",
+      "text": "Can we collect anonymous usage analytics to improve FocusKept? Nothing is tracked until you choose.",
+      "allow": "Allow",
+      "decline": "No thanks"
+    },
+    "footer": {
+      "tagline": "Focus deeply. Keep what you learn.",
+      "product": "Product",
+      "company": "Company",
+      "legal": "Legal",
+      "focusTimer": "Focus timer",
+      "learningMode": "Learning mode",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — Focus deeply. Keep what you learn.",
+    "defaultDescription": "A focus timer with 18 proven techniques, Feynman explanations, AI-generated questions and automatic spaced-repetition reviews on day 5, 10 and 30.",
+    "signIn": "Sign in",
+    "signUp": "Create your account",
+    "verifyEmail": "Check your inbox",
+    "forgotPassword": "Reset your password",
+    "resetPassword": "Choose a new password",
+    "settings": "Settings",
+    "security": "Security",
+    "billing": "Billing",
+    "focusTitle": "Focus timer",
+    "focusDescription": "A free focus timer with 25/5, 52/17, Flowtime, Deep work 90, timeboxing and custom presets. No account needed.",
+    "tasks": "Tasks",
+    "learnTitle": "Learning mode: study, explain, remember",
+    "learnDescription": "Study a topic, explain it in your own words, get AI feedback and questions, and review automatically on day 5, 10 and 30.",
+    "learnNew": "New learning session",
+    "explain": "Explain what you learned",
+    "cards": "Knowledge cards",
+    "card": "Knowledge card",
+    "review": "Review",
+    "stats": "Stats",
+    "pricingTitle": "Pricing: Free and Pro",
+    "pricingDescription": "FocusKept is free to start. Pro is $5 a month or $40 a year: unlimited cards, more AI feedback, the full Lab and a weekly report.",
+    "techniquesTitle": "18 focus, learning and planning techniques",
+    "techniquesDescription": "25/5, 52/17, Flowtime, Feynman, active recall, SQ3R, Eisenhower and more: how each technique works, when to use it, and a free timer to try it."
+  },
+  "errors": {
+    "notFoundTitle": "This page doesn’t exist.",
+    "notFoundText": "The link may be old, or the page may have moved.",
+    "backHome": "Back to home",
+    "errorTitle": "Something didn’t go as planned.",
+    "errorText": "Please try again in a moment. If it keeps happening, let us know."
+  },
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signInLead": "Sign in to continue your focus sessions and reviews.",
+    "signUpTitle": "Create your account",
+    "signUpLead": "Save what you learn and get reminded on day 5, 10 and 30.",
+    "forgotTitle": "Reset your password",
+    "forgotLead": "We’ll email you a secure link to choose a new password.",
+    "resetTitle": "Choose a new password",
+    "resetLead": "Use at least 12 characters.",
+    "verifyTitle": "Check your inbox",
+    "verifyLead": "We sent you a verification link. Open it to activate your account — it brings you right back here, signed in.",
+    "verifyHint": "Can’t find it? Check your spam folder, or sign in again to get a new link.",
+    "name": "Your name",
+    "namePlaceholder": "Alex Morgan",
+    "email": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "At least 12 characters",
+    "newPassword": "New password",
+    "forgotLink": "Forgot password?",
+    "submitSignIn": "Sign in",
+    "submitSignUp": "Create account",
+    "submitForgot": "Send reset link",
+    "submitReset": "Update password",
+    "google": "Continue with Google",
+    "or": "or",
+    "haveAccount": "Already have an account?",
+    "noAccount": "New to FocusKept?",
+    "createAccount": "Create an account",
+    "signInLink": "Sign in",
+    "legal": "By continuing, you agree to our <terms>Terms</terms> and <privacy>Privacy Policy</privacy>.",
+    "resetSent": "If an account exists for that email, a reset link is on its way.",
+    "resetDone": "Password updated. You can sign in now.",
+    "invalidCredentials": "Enter a valid email and a password of 12–128 characters.",
+    "invalidPassword": "Use a password of 12–128 characters.",
+    "wrongCredentials": "That email and password don’t match.",
+    "emailNotVerified": "Please verify your email first. We just sent you a new link.",
+    "userExists": "An account with this email already exists. Try signing in.",
+    "tooManyAttempts": "Too many attempts. Please wait a minute and try again.",
+    "invalidToken": "This link has expired or was already used. Request a new one.",
+    "learningContext": "Sign up to start your Learning session on “{topic}”."
+  },
+  "email": {
+    "verification": {
+      "subject": "Confirm your email for FocusKept",
+      "heading": "Confirm your email",
+      "body": "Tap the button below to activate your FocusKept account. You’ll be signed in and taken back to where you left off.",
+      "button": "Confirm email",
+      "ignore": "If you didn’t create an account, you can ignore this email."
+    },
+    "reset": {
+      "subject": "Reset your FocusKept password",
+      "heading": "Reset your password",
+      "body": "Use the secure link below to choose a new password. It expires soon and works only once.",
+      "button": "Choose a new password",
+      "ignore": "If you didn’t ask for this, you can ignore this email. Your password stays the same."
+    },
+    "footer": {
+      "transactional": "You received this email because of an action on your FocusKept account.",
+      "reviews": "You receive this because review reminders are on for your FocusKept account.",
+      "weekly": "You receive this weekly report because it’s on for your FocusKept Pro account.",
+      "unsubscribe": "Unsubscribe"
+    },
+    "digest": {
+      "subject": "{count, plural, one {# card to review today} other {# cards to review today}}",
+      "preview": "{count, plural, one {One card is ready for review.} other {# cards are ready for review.}}",
+      "heading": "{count, plural, one {Time to review # card} other {Time to review # cards}}",
+      "intro": "Reviewing now, right before you’d forget, is what makes it stick:",
+      "more": "{count, plural, one {…and # more} other {…and # more}}",
+      "estimate": "{minutes, plural, one {About # minute.} other {About # minutes.}}",
+      "button": "Start review"
+    },
+    "weekly": {
+      "subject": "Your FocusKept week",
+      "preview": "{minutes, plural, one {# minute of focus last week.} other {# minutes of focus last week.}}",
+      "heading": "Your week in focus",
+      "intro": "Here’s how last week went.",
+      "focus": "Focused",
+      "minutes": "{minutes, plural, one {# minute} other {# minutes}}",
+      "sessions": "Sessions",
+      "best": "Best technique",
+      "cards": "Cards created",
+      "retention": "Retention",
+      "streak": "Streak",
+      "days": "{count, plural, one {# day} other {# days}}",
+      "suggestionTitle": "One suggestion for this week",
+      "suggestions": {
+        "start": "Start small: one 25-minute block on Monday is enough to get going.",
+        "retention": "You passed {percent, number}% of your reviews. Reread your explanation before a card’s review, and keep answers short.",
+        "goal": "You reached {percent, number}% of your weekly goal. Add one extra session midweek.",
+        "bestTechnique": "You focused best with {technique}. Plan your two most important sessions with it.",
+        "keepGoing": "A strong week. Keep the same rhythm and protect your focus time."
+      },
+      "recapTitle": "What you learned in {month}",
+      "recapText": "{cards, plural, one {# card created} other {# cards created}} · retention {retention}",
+      "button": "Open your stats"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, one {# card to review} other {# cards to review}}",
+      "reviewsBody": "A few minutes now keeps it in your memory.",
+      "streakTitle": "{count, plural, one {Keep your # day streak} other {Keep your #-day streak}}",
+      "streakBody": "One short session today keeps it going."
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "Analytics",
+      "text": "Optional, anonymous product analytics. Your notes, explanations and answers are never sent.",
+      "allow": "Allow analytics",
+      "disable": "Disable analytics",
+      "enabled": "Analytics enabled.",
+      "disabled": "Analytics disabled.",
+      "error": "Couldn’t update your preference."
+    },
+    "title": "Settings",
+    "lead": "Your account, preferences and reminders.",
+    "account": {
+      "title": "Account",
+      "displayName": "Display name",
+      "saved": "Changes saved.",
+      "securityLink": "Password and sessions",
+      "billingLink": "Plan and billing"
+    },
+    "security": {
+      "title": "Security",
+      "lead": "Keep your account yours.",
+      "backToSettings": "Back to settings",
+      "passwordTitle": "Change password",
+      "passwordText": "Changing your password signs you out on your other devices.",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "passwordHint": "At least 12 characters.",
+      "changePassword": "Change password",
+      "passwordChanged": "Password changed.",
+      "passwordError": "Couldn’t change your password. Check your current password and try again.",
+      "sessionsTitle": "Sessions",
+      "sessionsText": "Stay signed in here and sign out everywhere else.",
+      "revokeOthers": "Sign out other sessions",
+      "revoked": "Other sessions signed out.",
+      "revokeError": "Couldn’t sign out other sessions."
+    },
+    "delete": {
+      "title": "Delete account",
+      "text": "Permanently deletes your account and everything in it: sessions, tasks, cards and reviews. Accounts with billing history need a quick support review so no subscription is left behind. Export your data first if you want a copy.",
+      "word": "DELETE",
+      "typeToConfirm": "Type {word} to confirm",
+      "password": "Your password",
+      "submit": "Delete my account",
+      "billingBlocked": "Your account has billing history. Email us and we’ll close it for you.",
+      "error": "Couldn’t delete your account. Check your password and try again."
+    },
+    "prefs": {
+      "saved": "Settings saved.",
+      "general": "General",
+      "timezone": "Time zone",
+      "useDeviceZone": "Use this device’s time zone ({zone})",
+      "weekStart": "Week starts on",
+      "weeklyGoal": "Weekly focus goal (hours)",
+      "weeklyGoalHint": "Shown in your stats. 0 turns it off.",
+      "techniques": "Techniques",
+      "defaultTime": "Default time technique",
+      "defaultMethod": "Default learning method",
+      "timebox": "Default timebox (minutes)",
+      "presets": "Custom presets",
+      "deletePreset": "Delete preset “{name}”",
+      "reviewSteps": "Review schedule",
+      "reviewStepsText": "Days after you save a card for its first three reviews. After the last step, reviews move to 60 days and then double, up to 180 days.",
+      "stepN": "Review {n, number} (day)",
+      "resetSteps": "Reset to 5 / 10 / 30",
+      "stepsInvalid": "Use three increasing numbers between 1 and 365.",
+      "notifications": "Reminders and notifications",
+      "reminderTime": "Daily reminder time",
+      "reminderTimeHint": "When reviews are due, you get one reminder at this time.",
+      "emailReviews": "Review reminder emails",
+      "emailReviewsHint": "One email on days with due reviews. Never one per card.",
+      "emailWeekly": "Weekly report email",
+      "emailWeeklyHint": "Every Monday at 09:00: your week in focus and one suggestion.",
+      "emailWeeklyPro": "A Pro feature. Turn it on now and it starts when you upgrade.",
+      "streakNudge": "Streak reminder",
+      "streakNudgeHint": "A gentle browser notification at 19:00 if a streak of 3+ days would break today.",
+      "browser": "Browser notifications",
+      "browserHint": "Review reminders on this device, in addition to email.",
+      "browserDisable": "Turn off on this device",
+      "browserOff": "Browser reminders are off on this device.",
+      "browserUnavailable": "Not available in this browser or not set up yet.",
+      "hours": "Notification hours",
+      "hoursHint": "Browser notifications are only sent within these hours. The daily email reminder isn’t affected.",
+      "from": "{day}: from",
+      "to": "{day}: until",
+      "export": "Your data",
+      "exportText": "Download everything FocusKept stores about you, on any plan.",
+      "exportJson": "Everything (JSON)",
+      "exportCsv": {
+        "sessions": "Sessions (CSV)",
+        "cards": "Cards (CSV)",
+        "reviews": "Reviews (CSV)"
+      }
+    }
+  },
+  "billing": {
+    "title": "Billing",
+    "lead": "Your plan, invoices and payment details.",
+    "currentPlan": "Current plan",
+    "free": "Free",
+    "pro": "Pro",
+    "syncNote": "Your plan updates automatically once Polar confirms a payment. Returning from checkout alone doesn’t change it, so it can take a moment.",
+    "returned": "Thanks! We’ll update your plan as soon as the payment is confirmed.",
+    "manage": "Manage subscription",
+    "seePlans": "See plans",
+    "connecting": "Connecting…",
+    "notConfigured": "Payments aren’t set up yet. Nothing was charged.",
+    "unavailable": "Billing is unavailable right now. Please try again.",
+    "renewsOn": "Renews on {date}.",
+    "endsOn": "Cancelled. Pro stays active until {date}."
+  },
+  "landing": {
+    "heroTitle": "Focus deeply. Keep what you learn.",
+    "heroLead": "FocusKept is a calm focus timer with 18 proven techniques. When you study, it turns your own explanation into questions and reminds you to review on day 5, 10 and 30.",
+    "question": "What are you doing today?",
+    "workTitle": "Work",
+    "workText": "Pick a task and a technique, then focus. No account needed.",
+    "learnTitle": "Learning",
+    "learnText": "Study a topic, explain it in your own words, and keep it.",
+    "noCard": "Free to start. No credit card.",
+    "loop": {
+      "eyebrow": "How it works",
+      "title": "From focus to lasting memory",
+      "lead": "Timers help you start. Remembering needs one more loop. FocusKept closes it for you.",
+      "focus": {
+        "title": "Focus",
+        "text": "Work in timed blocks with 25/5, 52/17, Flowtime or another technique."
+      },
+      "explain": {
+        "title": "Explain",
+        "text": "Write what you learned as if to a 12-year-old: the Feynman technique."
+      },
+      "questions": {
+        "title": "Get questions",
+        "text": "AI points out gaps and turns your explanation into review questions you can edit."
+      },
+      "review": {
+        "title": "Review on time",
+        "text": "We remind you on day 5, 10 and 30, right before you’d forget."
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman, made practical",
+      "title": "Explain it simply. See what you really understand.",
+      "lead": "After a Learning session you explain the topic in your own words. You get a clarity score, what’s missing, what’s off, and questions for your reviews.",
+      "cta": "Try Learning mode",
+      "label": "Example of an explanation with AI feedback",
+      "badge": "Example",
+      "topic": "Topic: Photosynthesis",
+      "explanation": "Plants make their own food. Their leaves catch sunlight, take water from the roots and air through tiny holes, and turn it into sugar. The leftover is oxygen, which we breathe.",
+      "feedback": "Feedback",
+      "clarity": "Clarity 82/100",
+      "gap": "Missing: the gas from the air is carbon dioxide.",
+      "mistake": "Unclear: the sunlight provides energy; it isn’t turned into sugar itself.",
+      "questionsLabel": "Review questions",
+      "q1": "Which gas do plants take from the air to make sugar?",
+      "q2": "True or false: plants release oxygen as a by-product.",
+      "q3": "Plants use the energy of ____ to make sugar.",
+      "schedule": "Saved as a card. Reviews on day 5, 10 and 30."
+    },
+    "techniques": {
+      "eyebrow": "18 techniques",
+      "title": "Every technique, in one place",
+      "lead": "Time techniques for focus, learning methods for understanding, planning techniques for your day. Each page explains it and lets you try it right away."
+    },
+    "pricing": {
+      "title": "Free to start, fair when you grow",
+      "lead": "Everything you need is free. Pro is {monthly} a month or {yearly} a year.",
+      "points": {
+        "1": "All techniques, tasks, stats and reminders on Free",
+        "2": "Pro: unlimited cards and AI feedback for every card",
+        "3": "Pro: the full Lab and a weekly report"
+      },
+      "cta": "Compare plans"
+    },
+    "faq": {
+      "title": "Questions",
+      "1": {
+        "q": "Do I need an account?",
+        "a": "Not for Work mode: just start the timer. Learning mode needs a free account so we can save your cards and send review reminders."
+      },
+      "2": {
+        "q": "Is there a mobile app?",
+        "a": "FocusKept runs in your browser on any device. You can install it to your home screen, and reminders arrive by email and browser notifications."
+      },
+      "3": {
+        "q": "How does the AI use my explanation?",
+        "a": "Your explanation is sent to OpenAI to generate feedback and questions. Don’t include personal or sensitive information. Details are in our privacy policy."
+      },
+      "4": {
+        "q": "Why day 5, 10 and 30?",
+        "a": "Reviews spread over the first month, when forgetting is fastest, keep knowledge for the long term with little effort. You can change the steps in Settings."
+      },
+      "5": {
+        "q": "Which languages are available?",
+        "a": "FocusKept is available in 24 languages. Your explanations and questions work in any language you write in."
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "Time",
+    "goalLabel": "Goal",
+    "paused": "Paused",
+    "announce": "{phase}",
+    "block": "Block {current} of {total}",
+    "focusedSoFar": "{duration} focused",
+    "flowHint": "Stop when your focus fades",
+    "phase": {
+      "idle": "Ready when you are",
+      "work": "Focus",
+      "short_break": "Short break",
+      "long_break": "Long break",
+      "ready": "Ready for the next block",
+      "box_ended": "Time’s up",
+      "finished": "Session complete"
+    },
+    "controls": {
+      "start": "Start",
+      "startNext": "Start next block",
+      "pause": "Pause",
+      "resume": "Resume",
+      "skip": "Skip",
+      "skipBreak": "Skip break",
+      "takeBreak": "Take a break",
+      "finish": "End session",
+      "fullscreen": "Fullscreen",
+      "exitFullscreen": "Exit fullscreen",
+      "shortcuts": "Shortcuts",
+      "close": "Close"
+    },
+    "box": {
+      "title": "Time’s up. What now?",
+      "done": "Done",
+      "extend": "Extend once (+{duration})",
+      "later": "Move to later"
+    },
+    "tips": {
+      "1": "Stand up and stretch for a minute.",
+      "2": "Drink a glass of water.",
+      "3": "Rest your eyes: look at something about 6 metres (20 feet) away for 20 seconds.",
+      "4": "Take a short walk, even just around the room.",
+      "5": "Roll your shoulders and take a few slow breaths.",
+      "6": "Open a window or step outside for some fresh air."
+    },
+    "notify": {
+      "breakTitle": "Time for a break",
+      "breakBody": "Take {duration}. Step away from the screen.",
+      "focusTitle": "Back to focus",
+      "readyTitle": "Break’s over",
+      "readyBody": "Ready for the next block?",
+      "boxTitle": "Time’s up",
+      "boxBody": "Done, extend once, or move it to later?"
+    },
+    "shortcuts": {
+      "title": "Keyboard shortcuts",
+      "keySpace": "Space",
+      "keyEsc": "Esc",
+      "space": "Start, pause or resume",
+      "skip": "Skip the current phase",
+      "fullscreen": "Toggle fullscreen",
+      "exit": "Exit fullscreen",
+      "help": "Show this list"
+    },
+    "sound": {
+      "title": "Sounds",
+      "chime": "Chime at phase changes",
+      "chimeVolume": "Chime volume",
+      "background": "Background sound",
+      "backgroundVolume": "Background volume",
+      "hint": "Background sound plays only while you focus.",
+      "done": "Done",
+      "kinds": {
+        "none": "None",
+        "white": "White noise",
+        "pink": "Pink noise",
+        "brown": "Brown noise",
+        "rain": "Rain",
+        "cafe": "Café",
+        "stream": "Stream",
+        "ocean": "Ocean waves",
+        "wind": "Wind",
+        "fire": "Fireplace",
+        "night": "Summer night",
+        "binaural": "Binaural beat"
+      },
+      "groups": {
+        "noise": "Noise",
+        "nature": "Nature",
+        "tones": "Tones",
+        "places": "Places"
+      },
+      "about": {
+        "white": "Even hiss that masks chatter",
+        "pink": "Softer, like steady rain",
+        "brown": "Deep rumble, no hiss",
+        "rain": "Light rain with drops",
+        "stream": "A brook over stones",
+        "ocean": "Slow waves every few seconds",
+        "wind": "Wind rising and falling",
+        "fire": "Crackling logs",
+        "night": "Crickets on a still night",
+        "binaural": "16 Hz beat, for headphones",
+        "cafe": "Murmur of a busy café"
+      },
+      "headphones": "Use headphones: each ear hears a slightly different tone, and your brain hears the 16 Hz beat between them. Keep the volume low.",
+      "previewHint": "Pick a sound to hear it. It plays only while you focus.",
+      "tip": "Sounds without words work best: lyrics and speech slow down reading and memorizing."
+    },
+    "taskLabel": "Task"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "No account needed. Sessions are saved on this device.",
+      "durations": {
+        "work": "Focus (min)",
+        "shortBreak": "Short break (min)",
+        "longBreak": "Long break (min)",
+        "cycles": "Blocks before a long break",
+        "box": "Box length (min)"
+      }
+    },
+    "end": {
+      "ratingValue": "{value} of 5",
+      "discardConfirm": "Discard this session? It won’t be saved.",
+      "tooShort": "This session was shorter than a minute, so it won’t count toward your stats."
+    },
+    "import": {
+      "title": "Bring your sessions with you?",
+      "text": "We found {sessions, plural, one {# session} other {# sessions}} and {tasks, plural, one {# task} other {# tasks}} on this device. Import them into your account?",
+      "confirm": "Import",
+      "later": "Not now",
+      "done": "Imported {sessions, plural, one {# session} other {# sessions}} and {tasks, plural, one {# task} other {# tasks}}.",
+      "error": "Import failed. Your data is still on this device; try again later."
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "Learning mode",
+      "title": "Save what you learn",
+      "lead": "Study with a proven method, explain the topic in your own words, and FocusKept turns it into questions. We remind you to review on day 5, 10 and 30, right before you would forget.",
+      "steps": {
+        "1": "Focus on a topic with a learning method and a timer.",
+        "2": "Explain it as if to a 12-year-old.",
+        "3": "AI points out gaps and writes review questions.",
+        "4": "Review automatically on day 5, 10 and 30."
+      },
+      "topicLabel": "What do you want to learn?",
+      "topicPlaceholder": "e.g. How vaccines train the immune system",
+      "start": "Continue",
+      "accountNote": "Learning mode needs a free account so we can send your review reminders.",
+      "workInstead": "Just want a timer? Use Work mode, no account needed."
+    },
+    "explain": {
+      "prompt": "Explain what you learned as if to a 12-year-old.",
+      "promptHint": "Use simple words and short sentences. Where you get stuck is exactly what to study next.",
+      "openaiNotice": "Your explanation is processed by OpenAI. Don’t include personal or sensitive information. <privacy>Privacy policy</privacy>",
+      "counter": "{count} / {max} characters (at least {min})",
+      "analyze": "Get AI feedback and questions",
+      "analyzing": "Reading your explanation…",
+      "manual": "Write questions myself",
+      "aiOff": "AI feedback isn’t available right now. You can write your questions yourself.",
+      "remaining": "{count, plural, =0 {No AI analyses left this month} one {# AI analysis left this month} other {# AI analyses left this month}}",
+      "aiFailed": "AI feedback didn’t work this time. Your explanation is saved; write your questions below, or try again later.",
+      "yourExplanation": "Your explanation",
+      "revise": "Revise and analyze again",
+      "edit": "Edit",
+      "analysisTitle": "Feedback",
+      "clarity": "Clarity {score, number}/100",
+      "clarityLabel": "Clarity score",
+      "gaps": "What’s missing",
+      "mistakes": "What’s wrong or unclear",
+      "noGaps": "Nothing important missing.",
+      "noMistakes": "No mistakes found.",
+      "rewrite": "Show a clearer version",
+      "useRewrite": "Start from this version",
+      "reanalysisUsed": "You’ve used this card’s re-analysis. Pro allows unlimited revisions.",
+      "questionsTitle": "Review questions",
+      "questionsHint": "Edit, delete or add your own. These are what you’ll answer in your reviews.",
+      "needQuestion": "Add at least one question.",
+      "fixQuestions": "Some questions need a fix before saving.",
+      "save": "Save card",
+      "saveError": "Couldn’t save the card. Please try again.",
+      "savedTitle": "Card saved",
+      "savedText": "Your first review is on {date}. We’ll remind you.",
+      "viewCard": "View card",
+      "another": "Start another session",
+      "notFound": "This session has already been saved, or it doesn’t exist.",
+      "writeTitle": "What did you learn? Write it in your own words.",
+      "hintShort": "Two or three main ideas are enough. Write without looking at the book.",
+      "hintMid": "Three to five main ideas, a sentence or two each, without looking at the book.",
+      "hintLong": "List the main ideas, a sentence or two each. Your break notes are already here.",
+      "focused": "{duration} focused",
+      "check": "Check",
+      "readingText": "Finding gaps and preparing questions",
+      "keep": "{count, plural, one {Keep # question} other {Keep # questions}}",
+      "keptTitle": "{count, plural, one {# question is ready.} other {# questions are ready.}}",
+      "newSession": "New session"
+    }
+  },
+  "tasks": {
+    "title": "Tasks",
+    "markDone": "Mark “{title}” as done",
+    "focusOn": "Focus on “{title}”",
+    "close": "Close",
+    "errors": {
+      "generic": "Couldn’t save that change. Please try again.",
+      "ivyFull": "Tomorrow already has six tasks.",
+      "slotFull": "That part of today’s board is already full."
+    },
+    "matrix": {
+      "do": {
+        "title": "Do"
+      },
+      "schedule": {
+        "title": "Schedule"
+      },
+      "delegate": {
+        "title": "Delegate"
+      },
+      "delete": {
+        "title": "Delete"
+      }
+    },
+    "plan135": {
+      "big": "Big",
+      "medium": "Medium",
+      "small": "Small"
+    },
+    "ivy": {
+      "moveUp": "Move “{title}” up",
+      "moveDown": "Move “{title}” down"
+    },
+    "board": {
+      "heading": "Today",
+      "chip": {
+        "today": "Today",
+        "tomorrow": "Tomorrow",
+        "full": "Today is full",
+        "slot": {
+          "big": "Main task slot",
+          "medium": "Medium slot",
+          "small": "Short slot"
+        }
+      },
+      "toTomorrow": "Tomorrow",
+      "progress": "{done, number} of {total, number} done",
+      "planned": "{planned} planned · {left} left",
+      "plannedEmpty": "Nothing planned yet",
+      "barLabel": "Today: {done} done, {left} left",
+      "addLabel": "New task",
+      "addPlaceholder": "Try “Essay outline 45m tomorrow !” — duration, day and priority are picked up",
+      "add": "Add",
+      "keywords": {
+        "today": "today",
+        "tomorrow": "tomorrow",
+        "minutes": "m, min",
+        "hours": "h, hr"
+      },
+      "dayFull": "Today is full. Move a task to tomorrow first.",
+      "first": {
+        "label": "Do this first",
+        "empty": "No main task yet. Pick a long task you tend to put off and choose “To today”."
+      },
+      "medium": {
+        "title": "Then these",
+        "empty": "Free slot · 25–60 min"
+      },
+      "small": {
+        "title": "Short ones in between",
+        "empty": "Free slot · under 25 min"
+      },
+      "slotCount": "{done, number}/{used, number} done · {free, number} free",
+      "overflow": {
+        "title": "No room today",
+        "hint": "Planned for today, but every slot is taken."
+      },
+      "footnote": "One main task, three medium, five short: that’s a full day. New tasks find their slot by duration.",
+      "focus": "Focus",
+      "toTomorrowLabel": "Move “{title}” to tomorrow",
+      "toIncoming": "Incoming",
+      "toIncomingLabel": "Move “{title}” to Incoming",
+      "edit": "Open “{title}”"
+    },
+    "details": {
+      "days": {
+        "today": "Today",
+        "tomorrow": "Tomorrow",
+        "none": "No date"
+      },
+      "name": "Title",
+      "tags": "Tags",
+      "tagsPlaceholder": "e.g. study, coding",
+      "project": "Project",
+      "noProject": "No project",
+      "save": "Save",
+      "deleteConfirm": "Delete this task? Sessions linked to it are kept.",
+      "title": "Task",
+      "minutes": "Duration (min)",
+      "day": "Day",
+      "notes": "Notes",
+      "archive": "Archive",
+      "delete": "Delete"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "Tomorrow",
+        "planned": "Planned",
+        "unsorted": "Unsorted"
+      },
+      "quadrant": {
+        "do": {
+          "label": "Do",
+          "hint": "Urgent and important"
+        },
+        "plan": {
+          "label": "Schedule",
+          "hint": "Important, not urgent"
+        },
+        "quick": {
+          "hint": "Urgent, not important",
+          "label": "Quick wins"
+        },
+        "later": {
+          "label": "Later",
+          "hint": "Neither"
+        }
+      },
+      "projects": "Projects and filters",
+      "filterLabel": "Filter by priority",
+      "empty": {
+        "tomorrow": "Nothing for tomorrow yet.",
+        "planned": "Nothing planned for later dates.",
+        "unsorted": "Everything is sorted."
+      },
+      "missed": "from {date}",
+      "important": "Important",
+      "urgent": "Urgent",
+      "importantShort": "I",
+      "urgentShort": "U",
+      "importantLabel": "“{title}” is important",
+      "urgentLabel": "“{title}” is urgent",
+      "toToday": "To today",
+      "toTodayLabel": "Move “{title}” to today",
+      "plan": "Plan tomorrow in 2 minutes",
+      "planHint": "Put up to six tasks in order and start the morning ready",
+      "title": "Incoming"
+    },
+    "projects": {
+      "filterProject": "Project",
+      "filterTag": "Tag",
+      "all": "All",
+      "name": "New project name",
+      "add": "Add project",
+      "archive": "Archive",
+      "restore": "Restore",
+      "done": "Done",
+      "title": "Projects and filters"
+    },
+    "planner": {
+      "moveUp": "Move “{title}” up",
+      "remove": "Remove “{title}” from tomorrow",
+      "title": "What will you do tomorrow?",
+      "lead": "Pick up to six tasks, most important first. Tomorrow the first one becomes “Do this first” and the rest fill the board.",
+      "pick": "Choose",
+      "order": "Tomorrow’s order · {count, number}/{max, number}",
+      "empty": "Choose tasks from the list. The first one you pick is the first you’ll see in the morning.",
+      "fromToday": "from today",
+      "later": "Not now",
+      "save": "Save for tomorrow",
+      "saved": "Tomorrow’s list is saved."
+    }
+  },
+  "cards": {
+    "title": "Knowledge cards",
+    "lead": "Everything you’ve learned, with its review schedule.",
+    "newSession": "New learning session",
+    "searchLabel": "Search cards",
+    "searchPlaceholder": "Search topics and explanations",
+    "search": "Search",
+    "statusLabel": "Status",
+    "active": "Active",
+    "archived": "Archived",
+    "topicLabel": "Topic",
+    "allTopics": "All topics",
+    "sortLabel": "Sort",
+    "sortDue": "Due first",
+    "sortNew": "Newest first",
+    "allowance": "{used, number} of {limit, number} cards on Free",
+    "emptyTitle": "No cards yet",
+    "emptyText": "Finish a Learning session and explain what you learned. Your first card will appear here.",
+    "noResults": "No cards match your search.",
+    "more": "Load more",
+    "due": "Due {when}",
+    "dueToday": "Due today",
+    "overdue": "Overdue",
+    "box": "Box {n, number}",
+    "graduated": "Long-term",
+    "questionsCount": "{count, plural, one {# question} other {# questions}}",
+    "detail": {
+      "back": "All cards",
+      "reviewNow": "Review now",
+      "reviewNowHint": "Practice anytime. Early reviews don’t change the schedule.",
+      "nextReview": "Next review",
+      "reviews": "Reviews",
+      "source": "Source",
+      "method": "Method",
+      "created": "Created",
+      "explanation": "Explanation",
+      "editTopic": "Topic",
+      "save": "Save changes",
+      "saved": "Changes saved.",
+      "archive": "Archive",
+      "unarchive": "Restore",
+      "archivedNote": "Archived cards aren’t reviewed. They still count toward the Free limit.",
+      "delete": "Delete card",
+      "deleteConfirm": "Delete this card and its review history? This can’t be undone.",
+      "history": "Review history",
+      "noHistory": "No reviews yet.",
+      "passed": "Passed",
+      "missed": "Missed",
+      "early": "Practice",
+      "score": "{score, number}%",
+      "analysis": "AI feedback",
+      "error": "Couldn’t save. Please try again."
+    },
+    "questions": {
+      "number": "Question {n, number}",
+      "type": "Question type",
+      "types": {
+        "open": "Open answer",
+        "true_false": "True or false",
+        "cloze": "Fill in the blank"
+      },
+      "source": {
+        "ai": "AI",
+        "ai_edited": "AI, edited"
+      },
+      "prompt": "Question",
+      "answer": "Answer",
+      "true": "True",
+      "false": "False",
+      "explanation": "Why it’s right",
+      "explanationPlaceholder": "Optional, one sentence",
+      "clozeHint": "Mark the missing word with {blank}",
+      "delete": "Delete question {n, number}",
+      "add": {
+        "open": "Open question",
+        "true_false": "True / false",
+        "cloze": "Fill in the blank"
+      },
+      "problems": {
+        "prompt": "Write the question.",
+        "answer": "Add the answer.",
+        "blank": "A fill-in-the-blank question needs exactly one ____."
+      }
+    },
+    "boxes": {
+      "label": "Review boxes",
+      "today": "Today",
+      "days": "{days, plural, one {# day} other {# days}}",
+      "hint": "A right answer moves a card one box on, so it comes back less often. A wrong one brings it back soon."
+    }
+  },
+  "limits": {
+    "cta": "See Pro",
+    "keepWorking": "Your cards and reviews keep working either way.",
+    "pro": {
+      "cards": "Unlimited knowledge cards",
+      "ai": "AI feedback and questions for every card",
+      "lab": "The full Lab: what works best for you, by tag and time of day",
+      "weekly": "A weekly progress report by email"
+    },
+    "card_limit": {
+      "title": "You’ve reached 20 cards on Free",
+      "text": "Delete or keep cards as you like; reviews continue. To save new cards, upgrade to Pro."
+    },
+    "monthly_limit": {
+      "title": "AI analyses used up for this month",
+      "text": "Free includes {limit, number} AI card analyses a month. You can still save this card by writing your own questions."
+    },
+    "reanalysis_limit": {
+      "title": "Re-analysis already used for this card",
+      "text": "Free allows one revision per card. Edit your questions by hand, or upgrade for unlimited revisions."
+    },
+    "budget": {
+      "title": "AI is resting for today",
+      "text": "AI feedback is temporarily unavailable. Write your questions yourself; your card works exactly the same."
+    },
+    "lab": {
+      "title": "See the full Lab with Pro",
+      "text": "Free shows your top technique from the last 7 days. Pro adds all-time analysis, results by tag and hour, and retention curves."
+    },
+    "weekly_report": {
+      "title": "Weekly report is a Pro feature",
+      "text": "Get a short email every Monday with your focus time, best technique, retention and one suggestion."
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "Get review reminders in your browser too?",
+      "text": "We’ll send one notification when reviews are due, in addition to the email.",
+      "enable": "Turn on browser reminders",
+      "enabled": "Browser reminders are on",
+      "denied": "Notifications are blocked for this site. You can allow them in your browser settings."
+    },
+    "unsubscribe": {
+      "title": "Email preferences",
+      "reviews": "Stop the daily review reminder emails? Browser notifications and your review schedule stay as they are.",
+      "weekly": "Stop the weekly report emails?",
+      "confirm": "Unsubscribe",
+      "done": "Done. You won’t receive these emails anymore. You can turn them back on in Settings.",
+      "error": "That didn’t work. Please try again or change it in Settings.",
+      "invalid": "This link isn’t valid. You can manage emails in Settings.",
+      "settings": "Manage all notifications in Settings"
+    }
+  },
+  "review": {
+    "title": "Review",
+    "lead": "Answer from memory. A card passes when every answer is right.",
+    "progress": "Card {current, number} of {total, number}",
+    "questionProgress": "Question {current, number} of {total, number}",
+    "types": {
+      "open": "Open answer",
+      "true_false": "True or false?",
+      "cloze": "Fill in the blank"
+    },
+    "true": "True",
+    "false": "False",
+    "blankLabel": "Missing word",
+    "yourAnswer": "Your answer",
+    "check": "Check",
+    "grading": "Checking…",
+    "modelAnswer": "Answer",
+    "selfGradeNote": "Automatic checking isn’t available right now. Compare with the answer and grade yourself honestly.",
+    "self": {
+      "correct": "I got it right",
+      "partial": "Partly",
+      "incorrect": "Not yet"
+    },
+    "verdict": {
+      "correct": "Correct.",
+      "partial": "Partly right.",
+      "incorrect": "Not quite."
+    },
+    "nextQuestion": "Next question",
+    "finishCard": "Finish card",
+    "passedTitle": "Passed",
+    "missedTitle": "Not yet. It’ll come back soon",
+    "score": "{score, number}%",
+    "nextReview": "Next review: {date}",
+    "earlyNote": "Practice review: your schedule stays the same (next review {date}).",
+    "revisit": "What to revisit",
+    "openExplanation": "Read your explanation again",
+    "nextCard": "Next card",
+    "finish": "Finish",
+    "passRule": "{count, plural, one {Answer the question correctly to pass.} other {Answer all # questions correctly to pass.}}",
+    "saveError": "Couldn’t save your review. Please try again.",
+    "emptyTitle": "You’re all caught up",
+    "emptyText": "No reviews are due right now. New ones appear on day 5, 10 and 30 after you save a card.",
+    "allDoneTitle": "Reviews done",
+    "allDoneText": "You passed {passed, number} of {total, number} cards. Nice work.",
+    "learnSomething": "Learn something new",
+    "toTimer": "Back to the timer"
+  },
+  "stats": {
+    "title": "Stats",
+    "lead": "How your focus and learning are going.",
+    "rangeLabel": "Time range",
+    "range": "{days, number} days",
+    "focused": "Focused",
+    "sessions": "Sessions",
+    "avgRating": "Avg. focus",
+    "streak": "Streak",
+    "bestStreak": "Best streak",
+    "days": "{count, plural, one {# day} other {# days}}",
+    "retention30": "Retention (30 days)",
+    "retention90": "Retention (90 days)",
+    "cardsTotal": "Cards",
+    "dailyChart": "Focus minutes per day",
+    "showTable": "Show as table",
+    "day": "Day",
+    "minutes": "Minutes",
+    "techniques": "Techniques",
+    "technique": "Technique",
+    "noSessions": "No sessions in this range yet.",
+    "topics": "Retention by topic (90 days)",
+    "topic": "Topic",
+    "reviews": "Reviews",
+    "retention": "Retention",
+    "noReviews": "No reviews yet.",
+    "lab": {
+      "title": "Lab",
+      "lead": "Which technique works best for you, based on your own focus ratings.",
+      "weekTop": "Last 7 days, your best focus came with {technique}: {rating, number, ::.#} / 5 over {sessions, plural, one {# session} other {# sessions}}.",
+      "needData": "Rate a few sessions and your results will appear here.",
+      "allTime": "All-time ranking",
+      "rankRow": "{technique}: {rating, number, ::.#} / 5 ({sessions, plural, one {# session} other {# sessions}})",
+      "byTag": "Best technique by task tag",
+      "tag": "Tag",
+      "best": "Best technique",
+      "noTags": "Tag your tasks to see which technique suits each kind of work.",
+      "byHour": "Focus by hour of day",
+      "hour": "Hour",
+      "curve": "Retention by review step",
+      "step": "Step",
+      "dayN": "Day {day, number}",
+      "graduated": "Long-term"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Start free. Upgrade when it’s worth it.",
+    "lead": "Every focus, learning and planning technique is free. Pro removes the limits and shows you what works best.",
+    "perMonth": "/ month",
+    "perYear": "/ year",
+    "free": {
+      "name": "Free",
+      "text": "Everything you need to focus and start remembering what you learn.",
+      "points": {
+        "1": "All 18 techniques, tasks and stats",
+        "2": "Up to 20 knowledge cards",
+        "3": "10 AI analyses a month",
+        "4": "Review reminders by email and browser"
+      },
+      "cta": "Start for free"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "Unlimited knowledge cards",
+        "2": "AI feedback and questions for every card (fair use)",
+        "3": "The full Lab: best technique by tag and time of day",
+        "4": "Weekly progress report by email"
+      }
+    },
+    "monthly": {
+      "name": "Pro monthly",
+      "text": "Flexible. Cancel anytime.",
+      "cta": "Choose monthly"
+    },
+    "yearly": {
+      "name": "Pro yearly",
+      "badge": "Save {percent, number}%",
+      "text": "That’s {monthly} a month, billed once a year.",
+      "point": "Everything in Pro, for a whole year",
+      "cta": "Choose yearly"
+    },
+    "checkoutNote": "Payments are handled by Polar, our merchant of record. The final price, including any tax for your country, is shown at checkout. Cancel anytime from Billing.",
+    "compare": "Free and Pro compared",
+    "feature": "Feature",
+    "notIncluded": "Not included",
+    "rows": {
+      "techniques": {
+        "label": "Time, learning and planning techniques",
+        "free": "All 18",
+        "pro": "All 18"
+      },
+      "tasks": {
+        "label": "Tasks, projects and basic stats",
+        "free": "Included",
+        "pro": "Included"
+      },
+      "cards": {
+        "label": "Knowledge cards",
+        "free": "20 in total",
+        "pro": "Unlimited"
+      },
+      "ai": {
+        "label": "AI feedback and question generation",
+        "free": "10 cards a month",
+        "pro": "Unlimited (fair use)"
+      },
+      "grading": {
+        "label": "AI grading of open answers in reviews",
+        "free": "Included",
+        "pro": "Included"
+      },
+      "reminders": {
+        "label": "Email and browser review reminders",
+        "free": "Included",
+        "pro": "Included"
+      },
+      "lab": {
+        "label": "Lab: which technique works best for you",
+        "free": "Last 7 days, top technique",
+        "pro": "All time, by tag, by hour, retention curves"
+      },
+      "weekly": {
+        "label": "Weekly email report",
+        "free": "–",
+        "pro": "Included"
+      },
+      "export": {
+        "label": "Data export (JSON and CSV)",
+        "free": "Included",
+        "pro": "Included"
+      }
+    },
+    "faqTitle": "Questions about plans",
+    "faq": {
+      "1": {
+        "q": "What happens to my cards if I stop paying?",
+        "a": "Nothing is lost. Your cards and scheduled reviews keep working. You can’t add more cards beyond the Free limit, and AI analyses return to 10 a month."
+      },
+      "2": {
+        "q": "What does fair use mean for AI on Pro?",
+        "a": "Pro includes AI feedback for up to 300 cards a month, far more than most people create. If you reach it, you can still write questions yourself."
+      },
+      "3": {
+        "q": "How do I cancel?",
+        "a": "Open Billing in the app and choose Manage subscription. You keep Pro until the end of the period you paid for."
+      },
+      "4": {
+        "q": "Who processes my payment?",
+        "a": "Polar acts as our merchant of record and handles payment, invoices and sales tax. FocusKept never sees your card details."
+      },
+      "5": {
+        "q": "Is there a lifetime plan?",
+        "a": "Not at the moment. Pro is available monthly or yearly."
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "Time techniques",
+      "learning": "Learning methods",
+      "planning": "Planning techniques"
+    },
+    "eyebrow": "Techniques",
+    "title": "Focus, learning and planning techniques",
+    "lead": "Each technique is explained in plain words, with steps, when it helps and when it doesn’t. Try any of them right on its page.",
+    "all": "All techniques",
+    "tryNow": "Try it now",
+    "howItWorks": "How it works",
+    "steps": "Step by step",
+    "bestFor": "Best for",
+    "whenNotToUse": "When not to use it",
+    "faq": "Questions",
+    "related": "Related techniques",
+    "trademarkNotice": "Pomodoro Technique® is a trademark of Francesco Cirillo. FocusKept is not affiliated with, associated with, or endorsed by the Pomodoro Technique® or Francesco Cirillo."
+  },
+  "tryIt": {
+    "reset": "Reset",
+    "notSaved": "This demo isn’t saved. Start a full session to keep your stats.",
+    "fullSession": "Use it in a full session",
+    "box": "Box length (minutes)",
+    "steps": "Follow the steps",
+    "learnWith": "Learn with {method}",
+    "taskPlaceholder": "Add a task",
+    "where": "Where it goes",
+    "add": "Add",
+    "full": "That part is full. That’s the point: choose.",
+    "list": "Tasks",
+    "remove": "Remove “{title}”",
+    "markFrog": "Make “{title}” today’s frog",
+    "frogHint": "Tap the flame to choose today’s frog. It moves to the top.",
+    "planFull": "Plan your real day with this technique"
+  },
+  "home": {
+    "modeLabel": "Mode",
+    "learn": "Learning",
+    "work": "Working",
+    "subjectLearn": "What are you learning?",
+    "subjectWork": "What are you working on? (optional)",
+    "placeholderLearn": "e.g. photosynthesis",
+    "placeholderWork": "e.g. the report intro",
+    "fromPlan": "From today’s plan:",
+    "rhythm": "Rhythm",
+    "rhythmHint": "focus · break, minutes",
+    "rhythmGuide": "Which rhythm when? See the guide",
+    "rhythmSub": {
+      "pomodoro": "When starting is hard",
+      "52-17": "For long, calm work",
+      "deep-work-90": "Your hardest task of the day",
+      "flowtime": "Until your focus fades",
+      "timeboxing": "Give one task a time budget",
+      "custom": "Pick your own numbers"
+    },
+    "summaryCycle": "{blocks, plural, one {# block} other {# blocks}} · {minutes} min breaks",
+    "summaryFlow": "Stopwatch · the break is a fifth of your focus",
+    "summaryBox": "When time is up: done, extend or later",
+    "boxMinutes": "Box, min",
+    "focusMinutes": "Focus",
+    "breakMinutes": "Break",
+    "decrease": "Less: {label}",
+    "increase": "More: {label}",
+    "start": "Start",
+    "hintFocus": "Focus",
+    "hintWrite": "Write what you learned",
+    "hintAsk": "We ask you in time",
+    "howItWorks": "How it works",
+    "reviewTitle": "{count, plural, one {# card is} other {# cards are}} waiting for review",
+    "reviewStart": "Start review",
+    "trailLabel": "Today’s trail",
+    "trailEmpty": "nothing yet",
+    "trailSummary": "{duration} · {cards, plural, one {# card} other {# cards}}",
+    "runBlock": "block {current}/{total}",
+    "newTopic": "New topic",
+    "focusFallback": "Focus",
+    "fillHint": "The card fills up as you focus",
+    "breakTitle": "Break · block {current} of {total} done",
+    "breakOver": "Break’s over",
+    "breakNote": "What stuck from this block?",
+    "breakNoteHint": "Optional · it’s waiting for you at the end",
+    "breakNotePlaceholder": "An idea or two…",
+    "nextBlock": "Next block · {current}/{total}",
+    "endSession": "End session",
+    "endFocused": "{duration} focused",
+    "howDidItGo": "How did it go?",
+    "moods": {
+      "1": "scattered",
+      "2": "so-so",
+      "3": "good",
+      "4": "great",
+      "5": "fully in it"
+    },
+    "taskDone": "“{task}” is done",
+    "todayTotal": "{duration} of focus today",
+    "save": "Save",
+    "discard": "Leave without saving",
+    "topicTitle": "What was the topic?",
+    "topicHint": "Your card is saved under this name.",
+    "continue": "Continue",
+    "oneStep": "One step left",
+    "anonTitle": "Write what you learned and get your questions.",
+    "anonText": "Create a free account to write your explanation, get questions from it and be reminded on time. Your session waits on this device.",
+    "createAccount": "Create a free account",
+    "haveAccount": "I have an account",
+    "skipCard": "Finish without a card"
+  }
+}

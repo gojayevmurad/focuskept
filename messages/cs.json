@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "Hlavní navigace",
+      "appNavigation": "Navigace aplikace",
+      "skipToContent": "Přejít na obsah",
+      "techniques": "Techniky",
+      "pricing": "Ceník",
+      "about": "O nás",
+      "signIn": "Přihlásit se",
+      "tasks": "Úkoly",
+      "cards": "Karty",
+      "stats": "Statistiky",
+      "settings": "Nastavení",
+      "billing": "Platby",
+      "signOut": "Odhlásit se",
+      "timer": "Časovač",
+      "guide": "Průvodce",
+      "howItWorks": "Jak to funguje",
+      "menu": "Nabídka",
+      "account": "Účet a nastavení",
+      "reviewsDue": "Karty čekají na opakování"
+    },
+    "theme": {
+      "label": "Motiv",
+      "dark": "Tmavý",
+      "light": "Světlý",
+      "system": "Podle zařízení"
+    },
+    "language": {
+      "label": "Jazyk"
+    },
+    "actions": {
+      "save": "Uložit",
+      "saving": "Ukládání…",
+      "retry": "Zkusit znovu"
+    },
+    "status": {
+      "error": "Něco se pokazilo. Zkus to prosím znovu.",
+      "offline": "Jsi offline. Sezení je uložené v tomto zařízení a synchronizuje se, jakmile budeš zase online."
+    },
+    "consent": {
+      "label": "Nastavení analytiky",
+      "text": "Můžeme sbírat anonymní údaje o používání, abychom mohli FocusKept zlepšovat? Dokud se nerozhodneš, nic se nesleduje.",
+      "allow": "Povolit",
+      "decline": "Ne, díky"
+    },
+    "footer": {
+      "tagline": "Soustřeď se naplno. Pamatuj si, co se učíš.",
+      "product": "Produkt",
+      "company": "Společnost",
+      "legal": "Právní informace",
+      "focusTimer": "Časovač soustředění",
+      "learningMode": "Režim učení",
+      "contact": "Kontakt",
+      "privacy": "Soukromí",
+      "terms": "Podmínky",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — Soustřeď se naplno. Pamatuj si, co se učíš.",
+    "defaultDescription": "Časovač soustředění s 18 osvědčenými technikami, vysvětlováním Feynmanovou metodou, otázkami od AI a automatickým opakováním 5., 10. a 30. den.",
+    "signIn": "Přihlášení",
+    "signUp": "Vytvoř si účet",
+    "verifyEmail": "Zkontroluj si e-mail",
+    "forgotPassword": "Obnovení hesla",
+    "resetPassword": "Nastav si nové heslo",
+    "settings": "Nastavení",
+    "security": "Zabezpečení",
+    "billing": "Platby",
+    "focusTitle": "Časovač soustředění",
+    "focusDescription": "Bezplatný časovač soustředění s 25/5, 52/17, Flowtime, Deep Work 90, timeboxingem a vlastními předvolbami. Bez registrace.",
+    "tasks": "Úkoly",
+    "learnTitle": "Režim učení: studuj, vysvětli, zapamatuj si",
+    "learnDescription": "Nastuduj téma, vysvětli ho vlastními slovy, získej zpětnou vazbu a otázky od AI a opakuj automaticky 5., 10. a 30. den.",
+    "learnNew": "Nové učební sezení",
+    "explain": "Vysvětli, co se učíš",
+    "cards": "Karty znalostí",
+    "card": "Karta znalostí",
+    "review": "Opakování",
+    "stats": "Statistiky",
+    "pricingTitle": "Ceník: Zdarma a Pro",
+    "pricingDescription": "FocusKept můžeš začít používat zdarma. Pro stojí 5 USD měsíčně nebo 40 USD ročně: neomezené karty, více zpětné vazby od AI, celá Laboratoř a týdenní přehled.",
+    "techniquesTitle": "18 technik soustředění, učení a plánování",
+    "techniquesDescription": "25/5, 52/17, Flowtime, Feynman, aktivní vybavování, SQ3R, Eisenhower a další: jak která technika funguje, kdy ji použít a časovač zdarma na vyzkoušení."
+  },
+  "errors": {
+    "notFoundTitle": "Tahle stránka neexistuje.",
+    "notFoundText": "Odkaz může být zastaralý, nebo se stránka přesunula.",
+    "backHome": "Zpět na úvod",
+    "errorTitle": "Něco nevyšlo podle plánu.",
+    "errorText": "Zkus to prosím za chvíli znovu. Pokud se to bude opakovat, dej nám vědět."
+  },
+  "auth": {
+    "signInTitle": "Vítej zpátky",
+    "signInLead": "Přihlas se a pokračuj v sezeních soustředění a opakování.",
+    "signUpTitle": "Vytvoř si účet",
+    "signUpLead": "Uchovej si, co se učíš, a nech si připomenout opakování 5., 10. a 30. den.",
+    "forgotTitle": "Obnovení hesla",
+    "forgotLead": "Pošleme ti e-mailem bezpečný odkaz pro nastavení nového hesla.",
+    "resetTitle": "Nastav si nové heslo",
+    "resetLead": "Použij alespoň 12 znaků.",
+    "verifyTitle": "Zkontroluj si e-mail",
+    "verifyLead": "Poslali jsme ti ověřovací odkaz. Otevři ho a aktivuj si účet — vrátí tě sem a rovnou přihlásí.",
+    "verifyHint": "Nemůžeš ho najít? Podívej se do spamu nebo se přihlas znovu a získej nový odkaz.",
+    "name": "Jméno",
+    "namePlaceholder": "Tereza Nováková",
+    "email": "E-mailová adresa",
+    "emailPlaceholder": "ty@priklad.cz",
+    "password": "Heslo",
+    "passwordPlaceholder": "Alespoň 12 znaků",
+    "newPassword": "Nové heslo",
+    "forgotLink": "Zapomenuté heslo?",
+    "submitSignIn": "Přihlásit se",
+    "submitSignUp": "Vytvořit účet",
+    "submitForgot": "Poslat odkaz",
+    "submitReset": "Změnit heslo",
+    "google": "Pokračovat přes Google",
+    "or": "nebo",
+    "haveAccount": "Už máš účet?",
+    "noAccount": "Poprvé ve FocusKept?",
+    "createAccount": "Vytvořit účet",
+    "signInLink": "Přihlásit se",
+    "legal": "Pokračováním souhlasíš s našimi <terms>Podmínkami</terms> a <privacy>Zásadami ochrany soukromí</privacy>.",
+    "resetSent": "Pokud k tomuto e-mailu existuje účet, odkaz na obnovení je na cestě.",
+    "resetDone": "Heslo je změněné. Teď se můžeš přihlásit.",
+    "invalidCredentials": "Zadej platný e-mail a heslo o délce 12–128 znaků.",
+    "invalidPassword": "Použij heslo o délce 12–128 znaků.",
+    "wrongCredentials": "E-mail a heslo k sobě nepatří.",
+    "emailNotVerified": "Nejdřív si ověř e-mail. Právě jsme ti poslali nový odkaz.",
+    "userExists": "Účet s tímto e-mailem už existuje. Zkus se přihlásit.",
+    "tooManyAttempts": "Příliš mnoho pokusů. Počkej minutu a zkus to znovu.",
+    "invalidToken": "Platnost odkazu vypršela nebo už byl použit. Požádej o nový.",
+    "learningContext": "Zaregistruj se a začni učební sezení na téma „{topic}“."
+  },
+  "email": {
+    "verification": {
+      "subject": "Potvrď svůj e-mail pro FocusKept",
+      "heading": "Potvrď svůj e-mail",
+      "body": "Klepnutím na tlačítko níže aktivuješ svůj účet FocusKept. Přihlásíme tě a pokračovat budeš přesně od místa, kde byla práce přerušena.",
+      "button": "Potvrdit e-mail",
+      "ignore": "Pokud žádost o účet nepochází od tebe, můžeš tento e-mail ignorovat."
+    },
+    "reset": {
+      "subject": "Obnov si heslo do FocusKept",
+      "heading": "Obnovení hesla",
+      "body": "Přes bezpečný odkaz níže si nastavíš nové heslo. Brzy vyprší a funguje jen jednou.",
+      "button": "Nastavit nové heslo",
+      "ignore": "Pokud o to nežádáš, tento e-mail ignoruj. Heslo zůstane stejné."
+    },
+    "footer": {
+      "transactional": "Tento e-mail dostáváš kvůli akci ve svém účtu FocusKept.",
+      "reviews": "Tento e-mail dostáváš, protože máš ve svém účtu FocusKept zapnutá připomenutí opakování.",
+      "weekly": "Tento týdenní přehled dostáváš, protože ho máš zapnutý ve svém účtu FocusKept Pro.",
+      "unsubscribe": "Odhlásit odběr"
+    },
+    "digest": {
+      "subject": "{count, plural, one {Dnes # karta k opakování} few {Dnes # karty k opakování} many {Dnes # karty k opakování} other {Dnes # karet k opakování}}",
+      "preview": "{count, plural, one {Jedna karta čeká na opakování.} few {# karty čekají na opakování.} many {# karty čeká na opakování.} other {# karet čeká na opakování.}}",
+      "heading": "{count, plural, one {Je čas zopakovat # kartu} few {Je čas zopakovat # karty} many {Je čas zopakovat # karty} other {Je čas zopakovat # karet}}",
+      "intro": "Opakování právě teď, těsně předtím, než by se to vytratilo, je to, co pomáhá věci si zapamatovat:",
+      "more": "{count, plural, one {…a ještě #} few {…a ještě #} many {…a ještě #} other {…a ještě #}}",
+      "estimate": "{minutes, plural, one {Asi # minuta.} few {Asi # minuty.} many {Asi # minuty.} other {Asi # minut.}}",
+      "button": "Začít opakovat"
+    },
+    "weekly": {
+      "subject": "Tvůj týden ve FocusKept",
+      "preview": "{minutes, plural, one {Minulý týden # minuta soustředění.} few {Minulý týden # minuty soustředění.} many {Minulý týden # minuty soustředění.} other {Minulý týden # minut soustředění.}}",
+      "heading": "Tvůj týden soustředění",
+      "intro": "Takhle vypadal minulý týden.",
+      "focus": "Soustředění",
+      "minutes": "{minutes, plural, one {# minuta} few {# minuty} many {# minuty} other {# minut}}",
+      "sessions": "Sezení",
+      "best": "Nejlepší technika",
+      "cards": "Nové karty",
+      "retention": "Zapamatování",
+      "streak": "Série",
+      "days": "{count, plural, one {# den} few {# dny} many {# dne} other {# dní}}",
+      "suggestionTitle": "Jeden tip na tento týden",
+      "suggestions": {
+        "start": "Začni zlehka: jeden blok na 25 minut v pondělí stačí na rozjezd.",
+        "retention": "Úspěšnost opakování: {percent, number} %. Před opakováním karty si znovu přečti své vysvětlení a odpovídej stručně.",
+        "goal": "Týdenní cíl splněn na {percent, number} %. Přidej jedno sezení navíc v polovině týdne.",
+        "bestTechnique": "Nejlepší soustředění přinesla technika {technique}. Naplánuj s ní dvě nejdůležitější sezení.",
+        "keepGoing": "Silný týden. Drž stejné tempo a chraň si čas na soustředění."
+      },
+      "recapTitle": "Tvoje učení — {month}",
+      "recapText": "{cards, plural, one {# nová karta} few {# nové karty} many {# nové karty} other {# nových karet}} · zapamatování {retention}",
+      "button": "Otevřít statistiky"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, one {# karta k opakování} few {# karty k opakování} many {# karty k opakování} other {# karet k opakování}}",
+      "reviewsBody": "Pár minut teď a zůstane ti to v paměti.",
+      "streakTitle": "{count, plural, one {Udrž sérii: # den} few {Udrž sérii: # dny} many {Udrž sérii: # dne} other {Udrž sérii: # dní}}",
+      "streakBody": "Jedno krátké sezení dnes ji udrží."
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "Analytika",
+      "text": "Volitelná, anonymní analytika produktu. Tvoje poznámky, vysvětlení a odpovědi se nikdy neodesílají.",
+      "allow": "Povolit analytiku",
+      "disable": "Vypnout analytiku",
+      "enabled": "Analytika je zapnutá.",
+      "disabled": "Analytika je vypnutá.",
+      "error": "Nastavení se nepodařilo uložit."
+    },
+    "title": "Nastavení",
+    "lead": "Tvůj účet, předvolby a připomenutí.",
+    "account": {
+      "title": "Účet",
+      "displayName": "Zobrazované jméno",
+      "saved": "Změny uloženy.",
+      "securityLink": "Heslo a přihlášení",
+      "billingLink": "Tarif a platby"
+    },
+    "security": {
+      "title": "Zabezpečení",
+      "lead": "Ať tvůj účet zůstane jen tvůj.",
+      "backToSettings": "Zpět do nastavení",
+      "passwordTitle": "Změna hesla",
+      "passwordText": "Změnou hesla se odhlásíš na ostatních zařízeních.",
+      "currentPassword": "Současné heslo",
+      "newPassword": "Nové heslo",
+      "passwordHint": "Alespoň 12 znaků.",
+      "changePassword": "Změnit heslo",
+      "passwordChanged": "Heslo změněno.",
+      "passwordError": "Heslo se nepodařilo změnit. Zkontroluj současné heslo a zkus to znovu.",
+      "sessionsTitle": "Přihlášená zařízení",
+      "sessionsText": "Ponech toto přihlášení a odhlas se všude jinde.",
+      "revokeOthers": "Odhlásit ostatní zařízení",
+      "revoked": "Ostatní zařízení byla odhlášena.",
+      "revokeError": "Ostatní zařízení se nepodařilo odhlásit."
+    },
+    "delete": {
+      "title": "Smazat účet",
+      "text": "Trvale smaže tvůj účet a vše v něm: sezení, úkoly, karty i opakování. Účty s historií plateb nejdřív krátce zkontroluje podpora, aby nezůstalo aktivní žádné předplatné. Pokud chceš kopii, nejdřív si data vyexportuj.",
+      "word": "SMAZAT",
+      "typeToConfirm": "Pro potvrzení napiš {word}",
+      "password": "Tvoje heslo",
+      "submit": "Smazat můj účet",
+      "billingBlocked": "Tvůj účet má historii plateb. Napiš nám a uzavřeme ho za tebe.",
+      "error": "Účet se nepodařilo smazat. Zkontroluj heslo a zkus to znovu."
+    },
+    "prefs": {
+      "saved": "Nastavení uloženo.",
+      "general": "Obecné",
+      "timezone": "Časové pásmo",
+      "useDeviceZone": "Použít časové pásmo tohoto zařízení ({zone})",
+      "weekStart": "Týden začíná v",
+      "weeklyGoal": "Týdenní cíl soustředění (hodiny)",
+      "weeklyGoalHint": "Zobrazí se ve statistikách. 0 ho vypne.",
+      "techniques": "Techniky",
+      "defaultTime": "Výchozí časová technika",
+      "defaultMethod": "Výchozí metoda učení",
+      "timebox": "Výchozí timebox (minuty)",
+      "presets": "Vlastní předvolby",
+      "deletePreset": "Smazat předvolbu „{name}“",
+      "reviewSteps": "Plán opakování",
+      "reviewStepsText": "Počet dní od uložení karty do jejích prvních tří opakování. Po posledním kroku se opakuje po 60 dnech a interval se pak zdvojnásobuje, nejvýš na 180 dní.",
+      "stepN": "Opakování {n, number} (den)",
+      "resetSteps": "Obnovit 5 / 10 / 30",
+      "stepsInvalid": "Zadej tři rostoucí čísla od 1 do 365.",
+      "notifications": "Připomenutí a oznámení",
+      "reminderTime": "Čas denního připomenutí",
+      "reminderTimeHint": "Když na tebe čekají opakování, přijde v tento čas jedno připomenutí.",
+      "emailReviews": "E-maily s připomenutím opakování",
+      "emailReviewsHint": "Jeden e-mail ve dny s opakováním. Nikdy jeden za každou kartu.",
+      "emailWeekly": "Týdenní přehled e-mailem",
+      "emailWeeklyHint": "Každé pondělí v 09:00: tvůj týden soustředění a jeden tip.",
+      "emailWeeklyPro": "Funkce Pro. Zapni ji teď a spustí se po přechodu na Pro.",
+      "streakNudge": "Připomenutí série",
+      "streakNudgeHint": "Jemné oznámení v prohlížeči v 19:00, pokud by se dnes přerušila série 3 a více dní.",
+      "browser": "Oznámení v prohlížeči",
+      "browserHint": "Připomenutí opakování v tomto zařízení, navíc k e-mailu.",
+      "browserDisable": "Vypnout v tomto zařízení",
+      "browserOff": "Připomenutí v prohlížeči jsou v tomto zařízení vypnutá.",
+      "browserUnavailable": "V tomto prohlížeči nedostupné nebo zatím nenastavené.",
+      "hours": "Doba oznámení",
+      "hoursHint": "Oznámení v prohlížeči chodí jen v těchto hodinách. Denního e-mailu s připomenutím se to netýká.",
+      "from": "{day}: od",
+      "to": "{day}: do",
+      "export": "Tvoje data",
+      "exportText": "Stáhni si vše, co o tobě FocusKept uchovává — v jakémkoli tarifu.",
+      "exportJson": "Vše (JSON)",
+      "exportCsv": {
+        "sessions": "Sezení (CSV)",
+        "cards": "Karty (CSV)",
+        "reviews": "Opakování (CSV)"
+      }
+    }
+  },
+  "billing": {
+    "title": "Platby",
+    "lead": "Tvůj tarif, faktury a platební údaje.",
+    "currentPlan": "Aktuální tarif",
+    "free": "Zdarma",
+    "pro": "Pro",
+    "syncNote": "Tarif se aktualizuje automaticky, jakmile Polar potvrdí platbu. Samotný návrat z platební stránky ho nezmění, takže to může chvíli trvat.",
+    "returned": "Děkujeme! Tarif aktualizujeme, jakmile bude platba potvrzena.",
+    "manage": "Spravovat předplatné",
+    "seePlans": "Zobrazit tarify",
+    "connecting": "Připojování…",
+    "notConfigured": "Platby zatím nejsou nastavené. Nic nebylo strženo.",
+    "unavailable": "Platby jsou teď nedostupné. Zkus to prosím znovu.",
+    "renewsOn": "Obnoví se {date}.",
+    "endsOn": "Zrušeno. Pro zůstane aktivní do {date}."
+  },
+  "landing": {
+    "heroTitle": "Soustřeď se naplno. Pamatuj si, co se učíš.",
+    "heroLead": "FocusKept je klidný časovač soustředění s 18 osvědčenými technikami. Když se učíš, promění tvoje vlastní vysvětlení v otázky a připomene ti opakování 5., 10. a 30. den.",
+    "question": "Co dnes děláš?",
+    "workTitle": "Práce",
+    "workText": "Vyber úkol a techniku a soustřeď se. Bez registrace.",
+    "learnTitle": "Učení",
+    "learnText": "Nastuduj téma, vysvětli ho vlastními slovy a zapamatuj si ho.",
+    "noCard": "Začni zdarma. Bez platební karty.",
+    "loop": {
+      "eyebrow": "Jak to funguje",
+      "title": "Od soustředění k trvalé paměti",
+      "lead": "Časovače pomáhají začít. Zapamatování potřebuje ještě jeden krok. FocusKept ho udělá za tebe.",
+      "focus": {
+        "title": "Soustřeď se",
+        "text": "Pracuj v odměřených blocích s 25/5, 52/17, Flowtime nebo jinou technikou."
+      },
+      "explain": {
+        "title": "Vysvětli",
+        "text": "Napiš, co se učíš, tak, aby to pochopilo dvanáctileté dítě: Feynmanova technika."
+      },
+      "questions": {
+        "title": "Získej otázky",
+        "text": "AI najde mezery a z tvého vysvětlení udělá otázky k opakování, které můžeš upravit."
+      },
+      "review": {
+        "title": "Opakuj včas",
+        "text": "Připomeneme ti to 5., 10. a 30. den, těsně předtím, než se to začne vytrácet z paměti."
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman v praxi",
+      "title": "Vysvětli to jednoduše. Uvidíš, čemu opravdu rozumíš.",
+      "lead": "Po učebním sezení vysvětlíš téma vlastními slovy. Dostaneš hodnocení srozumitelnosti, uvidíš, co chybí a co nesedí, a získáš otázky k opakování.",
+      "cta": "Vyzkoušet režim učení",
+      "label": "Ukázka vysvětlení se zpětnou vazbou od AI",
+      "badge": "Ukázka",
+      "topic": "Téma: fotosyntéza",
+      "explanation": "Rostliny si samy vyrábějí jídlo. Listy chytají sluneční světlo, kořeny berou vodu a malinkými dírkami vzduch a z toho udělají cukr. Co zbude, je kyslík, který dýcháme.",
+      "feedback": "Zpětná vazba",
+      "clarity": "Srozumitelnost 82/100",
+      "gap": "Chybí: plyn ze vzduchu je oxid uhličitý.",
+      "mistake": "Nejasné: sluneční světlo dodává energii; samo se v cukr nemění.",
+      "questionsLabel": "Otázky k opakování",
+      "q1": "Jaký plyn berou rostliny ze vzduchu, aby vyrobily cukr?",
+      "q2": "Pravda, nebo nepravda: rostliny uvolňují kyslík jako vedlejší produkt.",
+      "q3": "Rostliny využívají energii ____ k výrobě cukru.",
+      "schedule": "Uloženo jako karta. Opakování 5., 10. a 30. den."
+    },
+    "techniques": {
+      "eyebrow": "18 technik",
+      "title": "Všechny techniky na jednom místě",
+      "lead": "Časové techniky pro soustředění, metody učení pro porozumění, plánovací techniky pro tvůj den. Každá stránka techniku vysvětlí a nechá tě ji hned vyzkoušet."
+    },
+    "pricing": {
+      "title": "Začni zdarma, plať férově, až porosteš",
+      "lead": "Vše podstatné je zdarma. Pro stojí {monthly} měsíčně nebo {yearly} ročně.",
+      "points": {
+        "1": "Všechny techniky, úkoly, statistiky a připomenutí v tarifu Zdarma",
+        "2": "Pro: neomezené karty a zpětná vazba od AI ke každé kartě",
+        "3": "Pro: celá Laboratoř a týdenní přehled"
+      },
+      "cta": "Porovnat tarify"
+    },
+    "faq": {
+      "title": "Otázky",
+      "1": {
+        "q": "Potřebuju účet?",
+        "a": "Pro režim práce ne: prostě spusť časovač. Režim učení potřebuje bezplatný účet, abychom mohli ukládat tvoje karty a posílat připomenutí opakování."
+      },
+      "2": {
+        "q": "Existuje mobilní aplikace?",
+        "a": "FocusKept běží v prohlížeči na jakémkoli zařízení. Můžeš si ho přidat na plochu a připomenutí chodí e-mailem i jako oznámení v prohlížeči."
+      },
+      "3": {
+        "q": "Co dělá AI s mým vysvětlením?",
+        "a": "Tvoje vysvětlení se odešle do OpenAI, aby vznikla zpětná vazba a otázky. Neuváděj osobní ani citlivé údaje. Podrobnosti najdeš v zásadách ochrany soukromí."
+      },
+      "4": {
+        "q": "Proč zrovna 5., 10. a 30. den?",
+        "a": "Opakování rozložená do prvního měsíce, kdy zapomínáme nejrychleji, udrží znalosti dlouhodobě s malým úsilím. Kroky můžeš změnit v nastavení."
+      },
+      "5": {
+        "q": "V jakých jazycích je FocusKept dostupný?",
+        "a": "FocusKept je dostupný ve 24 jazycích. Vysvětlení a otázky fungují v jakémkoli jazyce, ve kterém píšeš."
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "Čas",
+    "goalLabel": "Cíl",
+    "paused": "Pozastaveno",
+    "announce": "{phase}",
+    "block": "Blok {current} z {total}",
+    "focusedSoFar": "{duration} soustředění",
+    "flowHint": "Přestaň, až soustředění opadne",
+    "phase": {
+      "idle": "Kdykoli budeš chtít",
+      "work": "Soustředění",
+      "short_break": "Krátká pauza",
+      "long_break": "Dlouhá pauza",
+      "ready": "Další blok čeká",
+      "box_ended": "Čas vypršel",
+      "finished": "Sezení dokončeno"
+    },
+    "controls": {
+      "start": "Spustit",
+      "startNext": "Spustit další blok",
+      "pause": "Pozastavit",
+      "resume": "Pokračovat",
+      "skip": "Přeskočit",
+      "skipBreak": "Přeskočit pauzu",
+      "takeBreak": "Dát si pauzu",
+      "finish": "Ukončit sezení",
+      "fullscreen": "Celá obrazovka",
+      "exitFullscreen": "Ukončit celou obrazovku",
+      "shortcuts": "Zkratky",
+      "close": "Zavřít"
+    },
+    "box": {
+      "title": "Čas vypršel. Co dál?",
+      "done": "Hotovo",
+      "extend": "Jednou prodloužit (+{duration})",
+      "later": "Odložit na později"
+    },
+    "tips": {
+      "1": "Postav se a minutu se protahuj.",
+      "2": "Vypij sklenici vody.",
+      "3": "Dopřej očím odpočinek: 20 sekund se dívej na něco asi 6 metrů daleko.",
+      "4": "Projdi se, třeba jen po místnosti.",
+      "5": "Protoč ramena a několikrát se pomalu nadechni.",
+      "6": "Otevři okno nebo se na chvíli nadýchej čerstvého vzduchu venku."
+    },
+    "notify": {
+      "breakTitle": "Čas na pauzu",
+      "breakBody": "Dej si {duration}. Odejdi od obrazovky.",
+      "focusTitle": "Zpátky k soustředění",
+      "readyTitle": "Pauza skončila",
+      "readyBody": "Jdeme na další blok?",
+      "boxTitle": "Čas vypršel",
+      "boxBody": "Hotovo, jednou prodloužit, nebo odložit na později?"
+    },
+    "shortcuts": {
+      "title": "Klávesové zkratky",
+      "keySpace": "Mezerník",
+      "keyEsc": "Esc",
+      "space": "Spustit, pozastavit nebo pokračovat",
+      "skip": "Přeskočit aktuální fázi",
+      "fullscreen": "Zapnout/vypnout celou obrazovku",
+      "exit": "Ukončit celou obrazovku",
+      "help": "Zobrazit tento seznam"
+    },
+    "sound": {
+      "title": "Zvuky",
+      "chime": "Zvonek při změně fáze",
+      "chimeVolume": "Hlasitost zvonku",
+      "background": "Zvuk na pozadí",
+      "backgroundVolume": "Hlasitost pozadí",
+      "hint": "Zvuk na pozadí hraje jen během soustředění.",
+      "done": "Hotovo",
+      "kinds": {
+        "none": "Žádný",
+        "white": "Bílý šum",
+        "pink": "Růžový šum",
+        "brown": "Hnědý šum",
+        "rain": "Déšť",
+        "cafe": "Kavárna",
+        "stream": "Potok",
+        "ocean": "Mořské vlny",
+        "wind": "Vítr",
+        "fire": "Krb",
+        "night": "Letní noc",
+        "binaural": "Binaurální rytmus"
+      },
+      "groups": {
+        "noise": "Šum",
+        "nature": "Příroda",
+        "tones": "Tóny",
+        "places": "Místa"
+      },
+      "about": {
+        "white": "Rovnoměrný šum, který překryje hovor",
+        "pink": "Měkčí, jako vytrvalý déšť",
+        "brown": "Hluboké dunění bez syčení",
+        "rain": "Lehký déšť s kapkami",
+        "stream": "Potok přes kameny",
+        "ocean": "Pomalé vlny každých pár sekund",
+        "wind": "Vítr, který sílí a slábne",
+        "fire": "Praskající polena",
+        "night": "Cvrčci za tiché noci",
+        "binaural": "Rytmus 16 Hz, do sluchátek",
+        "cafe": "Šum plné kavárny"
+      },
+      "headphones": "Použij sluchátka: každé ucho slyší trochu jiný tón a mozek mezi nimi slyší rytmus 16 Hz. Hlasitost drž nízko.",
+      "previewHint": "Vyber zvuk a uslyšíš ho. Hraje jen během soustředění.",
+      "tip": "Nejlépe fungují zvuky bez slov: texty písní a řeč zpomalují čtení i zapamatování."
+    },
+    "taskLabel": "Úkol"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "Bez registrace. Sezení se ukládají v tomto zařízení.",
+      "durations": {
+        "work": "Soustředění (min)",
+        "shortBreak": "Krátká pauza (min)",
+        "longBreak": "Dlouhá pauza (min)",
+        "cycles": "Bloků před dlouhou pauzou",
+        "box": "Délka timeboxu (min)"
+      }
+    },
+    "end": {
+      "ratingValue": "{value} z 5",
+      "discardConfirm": "Zahodit toto sezení? Nebude uloženo.",
+      "tooShort": "Toto sezení trvalo méně než minutu, proto se nezapočítá do statistik."
+    },
+    "import": {
+      "title": "Přenést tvoje sezení?",
+      "text": "V tomto zařízení je {sessions, plural, one {# sezení} few {# sezení} many {# sezení} other {# sezení}} a {tasks, plural, one {# úkol} few {# úkoly} many {# úkolu} other {# úkolů}}. Importovat je do účtu?",
+      "confirm": "Importovat",
+      "later": "Teď ne",
+      "done": "Importováno: {sessions, plural, one {# sezení} few {# sezení} many {# sezení} other {# sezení}} a {tasks, plural, one {# úkol} few {# úkoly} many {# úkolu} other {# úkolů}}.",
+      "error": "Import se nepovedl. Data zůstávají v tomto zařízení; zkus to později."
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "Režim učení",
+      "title": "Uchovej si, co se učíš",
+      "lead": "Uč se osvědčenou metodou, vysvětli téma vlastními slovy a FocusKept z toho udělá otázky. Připomeneme ti opakování 5., 10. a 30. den, těsně předtím, než se to začne vytrácet z paměti.",
+      "steps": {
+        "1": "Soustřeď se na téma s metodou učení a časovačem.",
+        "2": "Vysvětli ho, jako by poslouchalo dvanáctileté dítě.",
+        "3": "AI najde mezery a napíše otázky k opakování.",
+        "4": "Opakuj automaticky 5., 10. a 30. den."
+      },
+      "topicLabel": "Co se chceš naučit?",
+      "topicPlaceholder": "např. Jak očkování trénuje imunitní systém",
+      "start": "Pokračovat",
+      "accountNote": "Režim učení potřebuje bezplatný účet, abychom ti mohli posílat připomenutí opakování.",
+      "workInstead": "Stačí ti časovač? Použij režim práce, bez registrace."
+    },
+    "explain": {
+      "prompt": "Vysvětli, co se učíš, jako by poslouchalo dvanáctileté dítě.",
+      "promptHint": "Používej jednoduchá slova a krátké věty. Místo, kde se zasekneš, je přesně to, co se učit dál.",
+      "openaiNotice": "Tvoje vysvětlení zpracovává OpenAI. Neuváděj osobní ani citlivé údaje. <privacy>Zásady ochrany soukromí</privacy>",
+      "counter": "{count} / {max} znaků (alespoň {min})",
+      "analyze": "Získat zpětnou vazbu a otázky od AI",
+      "analyzing": "Čteme tvoje vysvětlení…",
+      "manual": "Napsat otázky ručně",
+      "aiOff": "Zpětná vazba od AI teď není dostupná. Otázky můžeš napsat ručně.",
+      "remaining": "{count, plural, =0 {Tento měsíc už nezbývají žádné analýzy AI} one {Tento měsíc zbývá # analýza AI} few {Tento měsíc zbývají # analýzy AI} many {Tento měsíc zbývá # analýzy AI} other {Tento měsíc zbývá # analýz AI}}",
+      "aiFailed": "Zpětná vazba od AI tentokrát nefungovala. Vysvětlení je uložené; napiš otázky níže, nebo to zkus později.",
+      "yourExplanation": "Tvoje vysvětlení",
+      "revise": "Upravit a znovu analyzovat",
+      "edit": "Upravit",
+      "analysisTitle": "Zpětná vazba",
+      "clarity": "Srozumitelnost {score, number}/100",
+      "clarityLabel": "Hodnocení srozumitelnosti",
+      "gaps": "Co chybí",
+      "mistakes": "Co je špatně nebo nejasné",
+      "noGaps": "Nic důležitého nechybí.",
+      "noMistakes": "Žádné chyby nenalezeny.",
+      "rewrite": "Zobrazit srozumitelnější verzi",
+      "useRewrite": "Pokračovat od této verze",
+      "reanalysisUsed": "Opakovaná analýza této karty už byla využita. Pro umožňuje neomezené úpravy.",
+      "questionsTitle": "Otázky k opakování",
+      "questionsHint": "Uprav je, smaž nebo přidej vlastní. Právě na ně budeš odpovídat při opakování.",
+      "needQuestion": "Přidej alespoň jednu otázku.",
+      "fixQuestions": "Některé otázky je před uložením potřeba opravit.",
+      "save": "Uložit kartu",
+      "saveError": "Kartu se nepodařilo uložit. Zkus to prosím znovu.",
+      "savedTitle": "Karta uložena",
+      "savedText": "První opakování: {date}. Připomeneme ti ho.",
+      "viewCard": "Zobrazit kartu",
+      "another": "Začít další sezení",
+      "notFound": "Toto sezení už bylo uložené, nebo neexistuje.",
+      "check": "Zkontrolovat",
+      "focused": "Čas soustředění: {duration}",
+      "hintLong": "Vypiš hlavní myšlenky, každou jednou dvěma větami. Poznámky z pauz už tu jsou.",
+      "hintMid": "Tři až pět hlavních myšlenek, každá jednou dvěma větami, bez nahlížení do knihy.",
+      "hintShort": "Stačí dvě tři hlavní myšlenky. Piš bez nahlížení do knihy.",
+      "keep": "{count, plural, one {Ponechat # otázku} few {Ponechat # otázky} many {Ponechat # otázky} other {Ponechat # otázek}}",
+      "keptTitle": "{count, plural, one {# otázka je připravená.} few {# otázky jsou připravené.} many {# otázky je připraveno.} other {# otázek je připraveno.}}",
+      "newSession": "Nové sezení",
+      "readingText": "Hledáme mezery a připravujeme otázky",
+      "writeTitle": "Co nového víš? Napiš to vlastními slovy."
+    }
+  },
+  "tasks": {
+    "title": "Úkoly",
+    "markDone": "Označit „{title}“ jako hotové",
+    "focusOn": "Soustředit se na „{title}“",
+    "close": "Zavřít",
+    "errors": {
+      "generic": "Změnu se nepodařilo uložit. Zkus to prosím znovu.",
+      "ivyFull": "Na zítřek už je šest úkolů.",
+      "slotFull": "Tahle část dnešní tabule je už plná."
+    },
+    "matrix": {
+      "do": {
+        "title": "Udělat hned"
+      },
+      "schedule": {
+        "title": "Naplánovat"
+      },
+      "delegate": {
+        "title": "Delegovat"
+      },
+      "delete": {
+        "title": "Vyškrtnout"
+      }
+    },
+    "plan135": {
+      "big": "Velký",
+      "medium": "Střední",
+      "small": "Malý"
+    },
+    "ivy": {
+      "moveUp": "Posunout „{title}“ nahoru",
+      "moveDown": "Posunout „{title}“ dolů"
+    },
+    "board": {
+      "heading": "Dnes",
+      "chip": {
+        "today": "Dnes",
+        "tomorrow": "Zítra",
+        "full": "Den je plný",
+        "slot": {
+          "big": "Místo pro hlavní úkol",
+          "medium": "Střední místo",
+          "small": "Krátké místo"
+        }
+      },
+      "toTomorrow": "Zítra",
+      "progress": "Hotovo: {done, number} z {total, number}",
+      "planned": "Naplánováno: {planned} · zbývá: {left}",
+      "plannedEmpty": "Zatím nic naplánováno",
+      "barLabel": "Dnes: hotovo {done}, zbývá {left}",
+      "addLabel": "Nový úkol",
+      "addPlaceholder": "Zkus „Osnova eseje 45min zítra !“ – délka, den a priorita se rozpoznají",
+      "add": "Přidat",
+      "keywords": {
+        "today": "dnes",
+        "tomorrow": "zítra",
+        "minutes": "min, minut",
+        "hours": "h, hod"
+      },
+      "dayFull": "Den je plný. Nejdřív přesuň nějaký úkol na zítra.",
+      "first": {
+        "label": "Nejdřív tohle",
+        "empty": "Zatím žádný hlavní úkol. Vyber dlouhý úkol, který obvykle odkládáš, a klepni na „Na dnes“."
+      },
+      "medium": {
+        "title": "Potom tyhle",
+        "empty": "Volné místo · 25–60 min"
+      },
+      "small": {
+        "title": "Krátké mezitím",
+        "empty": "Volné místo · pod 25 min"
+      },
+      "slotCount": "Hotovo: {done, number}/{used, number} · volné: {free, number}",
+      "overflow": {
+        "title": "Dnes už není místo",
+        "hint": "Naplánováno na dnes, ale všechna místa jsou obsazená."
+      },
+      "footnote": "Jeden hlavní úkol, tři střední, pět krátkých: plný den. Nové úkoly najdou místo podle délky.",
+      "focus": "Soustředit se",
+      "toTomorrowLabel": "Přesunout „{title}“ na zítra",
+      "toIncoming": "Příchozí",
+      "toIncomingLabel": "Přesunout „{title}“ do Příchozích",
+      "edit": "Otevřít „{title}“"
+    },
+    "details": {
+      "days": {
+        "today": "Dnes",
+        "tomorrow": "Zítra",
+        "none": "Bez data"
+      },
+      "name": "Název",
+      "tags": "Štítky",
+      "tagsPlaceholder": "např. studium, programování",
+      "project": "Projekt",
+      "noProject": "Bez projektu",
+      "save": "Uložit",
+      "deleteConfirm": "Smazat tento úkol? Propojená sezení zůstanou zachována.",
+      "title": "Úkol",
+      "minutes": "Délka (min)",
+      "day": "Den",
+      "notes": "Poznámky",
+      "archive": "Archivovat",
+      "delete": "Smazat"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "Zítra",
+        "planned": "Naplánované",
+        "unsorted": "Neroztříděné"
+      },
+      "quadrant": {
+        "do": {
+          "label": "Udělat hned",
+          "hint": "Naléhavé a důležité"
+        },
+        "plan": {
+          "label": "Naplánovat",
+          "hint": "Důležité, ne naléhavé"
+        },
+        "quick": {
+          "hint": "Naléhavé, ne důležité",
+          "label": "Rychlovky"
+        },
+        "later": {
+          "label": "Později",
+          "hint": "Ani jedno"
+        }
+      },
+      "projects": "Projekty a filtry",
+      "filterLabel": "Filtrovat podle priority",
+      "empty": {
+        "tomorrow": "Na zítra zatím nic není.",
+        "planned": "Na další dny není nic naplánováno.",
+        "unsorted": "Vše je roztříděné."
+      },
+      "missed": "od {date}",
+      "important": "Důležité",
+      "urgent": "Naléhavé",
+      "importantShort": "D",
+      "urgentShort": "N",
+      "importantLabel": "„{title}“ je důležité",
+      "urgentLabel": "„{title}“ je naléhavé",
+      "toToday": "Na dnes",
+      "toTodayLabel": "Přesunout „{title}“ na dnes",
+      "plan": "Naplánuj zítřek za 2 minuty",
+      "planHint": "Seřaď až šest úkolů a začni ráno s hotovým plánem",
+      "title": "Příchozí"
+    },
+    "projects": {
+      "filterProject": "Projekt",
+      "filterTag": "Štítek",
+      "all": "Vše",
+      "name": "Název nového projektu",
+      "add": "Přidat projekt",
+      "archive": "Archivovat",
+      "restore": "Obnovit",
+      "done": "Hotovo",
+      "title": "Projekty a filtry"
+    },
+    "planner": {
+      "moveUp": "Posunout „{title}“ nahoru",
+      "remove": "Odebrat „{title}“ ze zítřka",
+      "title": "Co budeš zítra dělat?",
+      "lead": "Vyber až šest úkolů, nejdůležitější první. Zítra se první stane „Nejdřív tohle“ a ostatní zaplní tabuli.",
+      "pick": "Vybrat",
+      "order": "Pořadí na zítra · {count, number}/{max, number}",
+      "empty": "Vyber úkoly ze seznamu. První vybraný uvidíš ráno jako první.",
+      "fromToday": "z dneška",
+      "later": "Teď ne",
+      "save": "Uložit na zítra",
+      "saved": "Seznam na zítra je uložený."
+    }
+  },
+  "cards": {
+    "title": "Karty znalostí",
+    "lead": "Všechno, co se učíš, i s plánem opakování.",
+    "newSession": "Nové učební sezení",
+    "searchLabel": "Hledat karty",
+    "searchPlaceholder": "Hledat v tématech a vysvětleních",
+    "search": "Hledat",
+    "statusLabel": "Stav",
+    "active": "Aktivní",
+    "archived": "Archivované",
+    "topicLabel": "Téma",
+    "allTopics": "Všechna témata",
+    "sortLabel": "Řazení",
+    "sortDue": "Nejdřív k opakování",
+    "sortNew": "Nejdřív nejnovější",
+    "allowance": "{used, number} z {limit, number} karet v tarifu Zdarma",
+    "emptyTitle": "Zatím žádné karty",
+    "emptyText": "Dokonči učební sezení a vysvětli téma. První karta se objeví tady.",
+    "noResults": "Hledání neodpovídá žádná karta.",
+    "more": "Načíst další",
+    "due": "K opakování {when}",
+    "dueToday": "K opakování dnes",
+    "overdue": "Po termínu",
+    "box": "Přihrádka {n, number}",
+    "graduated": "Dlouhodobě",
+    "questionsCount": "{count, plural, one {# otázka} few {# otázky} many {# otázky} other {# otázek}}",
+    "detail": {
+      "back": "Všechny karty",
+      "reviewNow": "Opakovat teď",
+      "reviewNowHint": "Procvičuj kdykoli. Dřívější opakování plán nemění.",
+      "nextReview": "Další opakování",
+      "reviews": "Opakování",
+      "source": "Zdroj",
+      "method": "Metoda",
+      "created": "Vytvořeno",
+      "explanation": "Vysvětlení",
+      "editTopic": "Téma",
+      "save": "Uložit změny",
+      "saved": "Změny uloženy.",
+      "archive": "Archivovat",
+      "unarchive": "Obnovit",
+      "archivedNote": "Archivované karty se neopakují. Stále se ale počítají do limitu tarifu Zdarma.",
+      "delete": "Smazat kartu",
+      "deleteConfirm": "Smazat tuto kartu i s historií opakování? Tuto akci nelze vrátit.",
+      "history": "Historie opakování",
+      "noHistory": "Zatím žádná opakování.",
+      "passed": "Splněno",
+      "missed": "Nesplněno",
+      "early": "Procvičení",
+      "score": "{score, number} %",
+      "analysis": "Zpětná vazba od AI",
+      "error": "Uložení se nepovedlo. Zkus to prosím znovu."
+    },
+    "questions": {
+      "number": "Otázka {n, number}",
+      "type": "Typ otázky",
+      "types": {
+        "open": "Otevřená odpověď",
+        "true_false": "Pravda, nebo nepravda",
+        "cloze": "Doplň chybějící slovo"
+      },
+      "source": {
+        "ai": "AI",
+        "ai_edited": "AI, upraveno"
+      },
+      "prompt": "Otázka",
+      "answer": "Odpověď",
+      "true": "Pravda",
+      "false": "Nepravda",
+      "explanation": "Proč je to správně",
+      "explanationPlaceholder": "Nepovinné, jedna věta",
+      "clozeHint": "Chybějící slovo označ pomocí {blank}",
+      "delete": "Smazat otázku {n, number}",
+      "add": {
+        "open": "Otevřená otázka",
+        "true_false": "Pravda / nepravda",
+        "cloze": "Doplňovačka"
+      },
+      "problems": {
+        "prompt": "Napiš otázku.",
+        "answer": "Doplň odpověď.",
+        "blank": "Doplňovací otázka potřebuje právě jedno ____."
+      }
+    },
+    "boxes": {
+      "label": "Krabičky opakování",
+      "today": "Dnes",
+      "days": "{days, plural, one {# den} few {# dny} many {# dne} other {# dní}}",
+      "hint": "Správná odpověď posune kartu o krabičku dál a vrátí se později. Chybná ji brzy vrátí."
+    }
+  },
+  "limits": {
+    "cta": "Zobrazit Pro",
+    "keepWorking": "Tvoje karty a opakování fungují dál tak jako tak.",
+    "pro": {
+      "cards": "Neomezené karty znalostí",
+      "ai": "Zpětná vazba a otázky od AI ke každé kartě",
+      "lab": "Celá Laboratoř: co ti funguje nejlépe podle štítku a denní doby",
+      "weekly": "Týdenní přehled pokroku e-mailem"
+    },
+    "card_limit": {
+      "title": "Limit 20 karet v tarifu Zdarma je naplněn",
+      "text": "Karty si mazej, nebo nechávej, jak chceš; opakování pokračují. Pro ukládání nových karet přejdi na Pro."
+    },
+    "monthly_limit": {
+      "title": "Analýzy AI na tento měsíc jsou vyčerpané",
+      "text": "Tarif Zdarma zahrnuje {limit, number} analýz karet od AI měsíčně. Tuto kartu ale můžeš uložit i tak, když otázky napíšeš ručně."
+    },
+    "reanalysis_limit": {
+      "title": "Opakovaná analýza této karty už byla využita",
+      "text": "Tarif Zdarma umožňuje jednu úpravu na kartu. Uprav otázky ručně, nebo přejdi na Pro pro neomezené úpravy."
+    },
+    "budget": {
+      "title": "AI má dnes volno",
+      "text": "Zpětná vazba od AI je dočasně nedostupná. Napiš otázky ručně; karta bude fungovat úplně stejně."
+    },
+    "lab": {
+      "title": "Celá Laboratoř s Pro",
+      "text": "V tarifu Zdarma vidíš nejlepší techniku za posledních 7 dní. Pro přidá analýzu za celou dobu, výsledky podle štítku a hodiny a křivky zapamatování."
+    },
+    "weekly_report": {
+      "title": "Týdenní přehled je funkce Pro",
+      "text": "Každé pondělí dostaneš krátký e-mail s časem soustředění, nejlepší technikou, mírou zapamatování a jedním tipem."
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "Připomenutí opakování i v prohlížeči?",
+      "text": "Kromě e-mailu ti pošleme jedno oznámení, když na tebe čekají opakování.",
+      "enable": "Zapnout připomenutí v prohlížeči",
+      "enabled": "Připomenutí v prohlížeči jsou zapnutá",
+      "denied": "Oznámení jsou pro tento web blokovaná. Povolit je můžeš v nastavení prohlížeče."
+    },
+    "unsubscribe": {
+      "title": "Nastavení e-mailů",
+      "reviews": "Zrušit denní e-maily s připomenutím opakování? Oznámení v prohlížeči i plán opakování zůstanou beze změny.",
+      "weekly": "Zrušit e-maily s týdenním přehledem?",
+      "confirm": "Odhlásit odběr",
+      "done": "Hotovo. Tyto e-maily už chodit nebudou. Znovu je zapneš v nastavení.",
+      "error": "Nepovedlo se. Zkus to znovu, nebo to změň v nastavení.",
+      "invalid": "Tento odkaz není platný. E-maily můžeš spravovat v nastavení.",
+      "settings": "Spravovat všechna oznámení v nastavení"
+    }
+  },
+  "review": {
+    "title": "Opakování",
+    "lead": "Odpovídej zpaměti. Karta je splněná, když jsou všechny odpovědi správně.",
+    "progress": "Karta {current, number} z {total, number}",
+    "questionProgress": "Otázka {current, number} z {total, number}",
+    "types": {
+      "open": "Otevřená odpověď",
+      "true_false": "Pravda, nebo nepravda?",
+      "cloze": "Doplň chybějící slovo"
+    },
+    "true": "Pravda",
+    "false": "Nepravda",
+    "blankLabel": "Chybějící slovo",
+    "yourAnswer": "Tvoje odpověď",
+    "check": "Zkontrolovat",
+    "grading": "Kontrola…",
+    "modelAnswer": "Odpověď",
+    "selfGradeNote": "Automatická kontrola teď není dostupná. Porovnej svou odpověď se správnou a ohodnoť se poctivě.",
+    "self": {
+      "correct": "Správně",
+      "partial": "Částečně",
+      "incorrect": "Ještě ne"
+    },
+    "verdict": {
+      "correct": "Správně.",
+      "partial": "Částečně správně.",
+      "incorrect": "Ne úplně."
+    },
+    "nextQuestion": "Další otázka",
+    "finishCard": "Dokončit kartu",
+    "passedTitle": "Splněno",
+    "missedTitle": "Ještě ne. Karta se brzy vrátí",
+    "score": "{score, number} %",
+    "nextReview": "Další opakování: {date}",
+    "earlyNote": "Procvičovací opakování: plán zůstává stejný (další opakování {date}).",
+    "revisit": "Co si znovu projít",
+    "openExplanation": "Znovu si přečíst své vysvětlení",
+    "nextCard": "Další karta",
+    "finish": "Dokončit",
+    "passRule": "{count, plural, one {Pro splnění správně odpověz na otázku.} few {Pro splnění správně odpověz na všechny # otázky.} many {Pro splnění správně odpověz na všechny # otázky.} other {Pro splnění správně odpověz na všech # otázek.}}",
+    "saveError": "Opakování se nepodařilo uložit. Zkus to prosím znovu.",
+    "emptyTitle": "Vše hotovo",
+    "emptyText": "Teď na tebe žádná opakování nečekají. Nová se objeví 5., 10. a 30. den po uložení karty.",
+    "allDoneTitle": "Opakování dokončena",
+    "allDoneText": "Splněno {passed, number} z {total, number} karet. Dobrá práce.",
+    "learnSomething": "Naučit se něco nového",
+    "toTimer": "Zpět k časovači"
+  },
+  "stats": {
+    "title": "Statistiky",
+    "lead": "Jak ti jde soustředění a učení.",
+    "rangeLabel": "Období",
+    "range": "{days, number} dní",
+    "focused": "Soustředění",
+    "sessions": "Sezení",
+    "avgRating": "Prům. soustředění",
+    "streak": "Série",
+    "bestStreak": "Nejdelší série",
+    "days": "{count, plural, one {# den} few {# dny} many {# dne} other {# dní}}",
+    "retention30": "Zapamatování (30 dní)",
+    "retention90": "Zapamatování (90 dní)",
+    "cardsTotal": "Karty",
+    "dailyChart": "Minuty soustředění za den",
+    "showTable": "Zobrazit jako tabulku",
+    "day": "Den",
+    "minutes": "Minuty",
+    "techniques": "Techniky",
+    "technique": "Technika",
+    "noSessions": "V tomto období zatím žádná sezení.",
+    "topics": "Zapamatování podle tématu (90 dní)",
+    "topic": "Téma",
+    "reviews": "Opakování",
+    "retention": "Zapamatování",
+    "noReviews": "Zatím žádná opakování.",
+    "lab": {
+      "title": "Laboratoř",
+      "lead": "Která technika ti funguje nejlépe — podle tvých vlastních hodnocení soustředění.",
+      "weekTop": "Za posledních 7 dní přinesla nejlepší soustředění technika {technique}: {rating, number, ::.#} / 5 za {sessions, plural, one {# sezení} few {# sezení} many {# sezení} other {# sezení}}.",
+      "needData": "Ohodnoť pár sezení a výsledky se objeví tady.",
+      "allTime": "Pořadí za celou dobu",
+      "rankRow": "{technique}: {rating, number, ::.#} / 5 ({sessions, plural, one {# sezení} few {# sezení} many {# sezení} other {# sezení}})",
+      "byTag": "Nejlepší technika podle štítku",
+      "tag": "Štítek",
+      "best": "Nejlepší technika",
+      "noTags": "Přidej k úkolům štítky a uvidíš, která technika se hodí na jaký druh práce.",
+      "byHour": "Soustředění podle denní doby",
+      "hour": "Hodina",
+      "curve": "Zapamatování podle kroku opakování",
+      "step": "Krok",
+      "dayN": "Den {day, number}",
+      "graduated": "Dlouhodobě"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Ceník",
+    "title": "Začni zdarma. Na Pro přejdi, až se to vyplatí.",
+    "lead": "Všechny techniky soustředění, učení a plánování jsou zdarma. Pro odstraní limity a ukáže, co funguje nejlépe.",
+    "perMonth": "/ měsíc",
+    "perYear": "/ rok",
+    "free": {
+      "name": "Zdarma",
+      "text": "Vše, co potřebuješ k soustředění a k zapamatování toho, co se učíš.",
+      "points": {
+        "1": "Všech 18 technik, úkoly a statistiky",
+        "2": "Až 20 karet znalostí",
+        "3": "10 analýz AI měsíčně",
+        "4": "Připomenutí opakování e-mailem a v prohlížeči"
+      },
+      "cta": "Začít zdarma"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "Neomezené karty znalostí",
+        "2": "Zpětná vazba a otázky od AI ke každé kartě (férové využití)",
+        "3": "Celá Laboratoř: nejlepší technika podle štítku a denní doby",
+        "4": "Týdenní přehled pokroku e-mailem"
+      }
+    },
+    "monthly": {
+      "name": "Pro měsíčně",
+      "text": "Flexibilně. Zrušit můžeš kdykoli.",
+      "cta": "Zvolit měsíční"
+    },
+    "yearly": {
+      "name": "Pro ročně",
+      "badge": "Ušetři {percent, number} %",
+      "text": "To je {monthly} měsíčně, účtováno jednou ročně.",
+      "point": "Vše z Pro na celý rok",
+      "cta": "Zvolit roční"
+    },
+    "checkoutNote": "Platby zpracovává Polar, náš prodejce (merchant of record). Konečnou cenu včetně daně ve tvé zemi uvidíš při platbě. Zrušit můžeš kdykoli v sekci Platby.",
+    "compare": "Srovnání tarifů Zdarma a Pro",
+    "feature": "Funkce",
+    "notIncluded": "Není součástí",
+    "rows": {
+      "techniques": {
+        "label": "Časové, učební a plánovací techniky",
+        "free": "Všech 18",
+        "pro": "Všech 18"
+      },
+      "tasks": {
+        "label": "Úkoly, projekty a základní statistiky",
+        "free": "Součástí",
+        "pro": "Součástí"
+      },
+      "cards": {
+        "label": "Karty znalostí",
+        "free": "Celkem 20",
+        "pro": "Neomezeně"
+      },
+      "ai": {
+        "label": "Zpětná vazba od AI a tvorba otázek",
+        "free": "10 karet měsíčně",
+        "pro": "Neomezeně (férové využití)"
+      },
+      "grading": {
+        "label": "Hodnocení otevřených odpovědí pomocí AI při opakování",
+        "free": "Součástí",
+        "pro": "Součástí"
+      },
+      "reminders": {
+        "label": "Připomenutí opakování e-mailem a v prohlížeči",
+        "free": "Součástí",
+        "pro": "Součástí"
+      },
+      "lab": {
+        "label": "Laboratoř: která technika ti funguje nejlépe",
+        "free": "Posledních 7 dní, nejlepší technika",
+        "pro": "Celá doba, podle štítku a hodiny, křivky zapamatování"
+      },
+      "weekly": {
+        "label": "Týdenní přehled e-mailem",
+        "free": "–",
+        "pro": "Součástí"
+      },
+      "export": {
+        "label": "Export dat (JSON a CSV)",
+        "free": "Součástí",
+        "pro": "Součástí"
+      }
+    },
+    "faqTitle": "Otázky k tarifům",
+    "faq": {
+      "1": {
+        "q": "Co se stane s mými kartami, když přestanu platit?",
+        "a": "Nic se neztratí. Karty i naplánovaná opakování fungují dál. Jen nepřidáš víc karet, než dovoluje tarif Zdarma, a analýzy AI se vrátí na 10 měsíčně."
+      },
+      "2": {
+        "q": "Co znamená férové využití AI v Pro?",
+        "a": "Pro zahrnuje zpětnou vazbu od AI až pro 300 karet měsíčně, což je mnohem víc, než většina lidí vytvoří. Po dosažení limitu můžeš otázky dál psát ručně."
+      },
+      "3": {
+        "q": "Jak předplatné zruším?",
+        "a": "V aplikaci otevři Platby a zvol „Spravovat předplatné“. Pro ti zůstane do konce zaplaceného období."
+      },
+      "4": {
+        "q": "Kdo zpracovává mou platbu?",
+        "a": "Polar je náš prodejce (merchant of record) a stará se o platbu, faktury i DPH. FocusKept údaje o tvé kartě nikdy nevidí."
+      },
+      "5": {
+        "q": "Existuje doživotní tarif?",
+        "a": "Zatím ne. Pro je dostupné s měsíční nebo roční platbou."
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "Časové techniky",
+      "learning": "Metody učení",
+      "planning": "Plánovací techniky"
+    },
+    "eyebrow": "Techniky",
+    "title": "Techniky soustředění, učení a plánování",
+    "lead": "Každá technika je vysvětlená jednoduše: postup, kdy pomáhá a kdy ne. Vyzkoušej kteroukoli přímo na její stránce.",
+    "all": "Všechny techniky",
+    "tryNow": "Vyzkoušet hned",
+    "howItWorks": "Jak to funguje",
+    "steps": "Krok za krokem",
+    "bestFor": "Nejlépe se hodí na",
+    "whenNotToUse": "Kdy ji nepoužívat",
+    "faq": "Otázky",
+    "related": "Související techniky",
+    "trademarkNotice": "Pomodoro Technique® je ochranná známka, jejímž vlastníkem je Francesco Cirillo. FocusKept není nijak spojen s Pomodoro Technique® ani s Francesco Cirillo a nemá jejich podporu."
+  },
+  "tryIt": {
+    "reset": "Resetovat",
+    "notSaved": "Tato ukázka se neukládá. Začni plné sezení, aby se započítalo do statistik.",
+    "fullSession": "Použít v plném sezení",
+    "box": "Délka timeboxu (minuty)",
+    "steps": "Postupuj podle kroků",
+    "learnWith": "Učit se metodou {method}",
+    "taskPlaceholder": "Přidat úkol",
+    "where": "Kam patří",
+    "add": "Přidat",
+    "full": "Tato část je plná. O to právě jde: vybírat.",
+    "list": "Úkoly",
+    "remove": "Odebrat „{title}“",
+    "markFrog": "Nastavit „{title}“ jako dnešní žábu",
+    "frogHint": "Klepnutím na plamen vybereš dnešní žábu. Přesune se nahoru.",
+    "planFull": "Naplánuj svůj skutečný den touto technikou"
+  },
+  "home": {
+    "anonText": "Vytvoř si bezplatný účet: napíšeš vysvětlení, dostaneš z něj otázky a včas připomenutí. Sezení čeká na tomto zařízení.",
+    "anonTitle": "Zapiš, co nového víš, a získej otázky.",
+    "boxMinutes": "Blok, min",
+    "breakMinutes": "Pauza",
+    "breakNote": "Co z tohoto bloku zůstalo v paměti?",
+    "breakNoteHint": "Nepovinné · na konci to tu bude čekat",
+    "breakNotePlaceholder": "Myšlenka nebo dvě…",
+    "breakOver": "Pauza skončila",
+    "breakTitle": "Pauza · blok {current} z {total} hotový",
+    "continue": "Pokračovat",
+    "createAccount": "Vytvořit bezplatný účet",
+    "decrease": "Méně: {label}",
+    "discard": "Odejít bez uložení",
+    "endFocused": "Čas soustředění: {duration}",
+    "endSession": "Ukončit sezení",
+    "fillHint": "Karta se plní, jak se soustředíš",
+    "focusFallback": "Soustředění",
+    "focusMinutes": "Soustředění",
+    "fromPlan": "Z dnešního plánu:",
+    "haveAccount": "Mám účet",
+    "hintAsk": "Zeptáme se včas",
+    "hintFocus": "Soustřeď se",
+    "hintWrite": "Zapiš, co nového víš",
+    "howDidItGo": "Jak to šlo?",
+    "howItWorks": "Jak to funguje",
+    "increase": "Více: {label}",
+    "learn": "Učení",
+    "modeLabel": "Režim",
+    "moods": {
+      "1": "roztěkanost",
+      "2": "ujde to",
+      "3": "dobře",
+      "4": "skvěle",
+      "5": "naplno"
+    },
+    "newTopic": "Nové téma",
+    "nextBlock": "Další blok · {current}/{total}",
+    "oneStep": "Zbývá jeden krok",
+    "placeholderLearn": "např. fotosyntéza",
+    "placeholderWork": "např. úvod zprávy",
+    "reviewStart": "Začít opakovat",
+    "reviewTitle": "{count, plural, one {# karta čeká na opakování} few {# karty čekají na opakování} many {# karty čeká na opakování} other {# karet čeká na opakování}}",
+    "rhythm": "Rytmus",
+    "rhythmGuide": "Jaký rytmus a kdy? Do průvodce",
+    "rhythmHint": "soustředění · pauza, minuty",
+    "rhythmSub": {
+      "52-17": "Na dlouhou, klidnou práci",
+      "custom": "Vyber si vlastní čísla",
+      "deep-work-90": "Nejtěžší úkol dne",
+      "flowtime": "Dokud vydrží soustředění",
+      "pomodoro": "Když je těžké začít",
+      "timeboxing": "Dej úkolu časový rozpočet"
+    },
+    "runBlock": "blok {current}/{total}",
+    "save": "Uložit",
+    "skipCard": "Ukončit bez karty",
+    "start": "Začít",
+    "subjectLearn": "Co se učíš?",
+    "subjectWork": "Na čem pracuješ? (nepovinné)",
+    "summaryBox": "Když čas vyprší: hotovo, prodloužit, nebo později",
+    "summaryCycle": "{blocks, plural, one {# blok} few {# bloky} many {# bloku} other {# bloků}} · mezi nimi {minutes} min pauza",
+    "summaryFlow": "Stopky · pauza je pětina času soustředění",
+    "taskDone": "„{task}“ – hotovo",
+    "todayTotal": "Soustředění dnes: {duration}",
+    "topicHint": "Karta se uloží pod tímto názvem.",
+    "topicTitle": "Jaké bylo téma?",
+    "trailEmpty": "zatím prázdná",
+    "trailLabel": "Dnešní stopa",
+    "trailSummary": "{duration} · {cards, plural, one {# karta} few {# karty} many {# karty} other {# karet}}",
+    "work": "Práce"
+  }
+}

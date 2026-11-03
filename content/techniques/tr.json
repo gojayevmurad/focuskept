@@ -1,0 +1,715 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "25 dakika odak, 5 dakika dinlenme. Sonra yeniden.",
+    "summary": "25/5 yöntemi işi kısa, zamanlı bloklara böler ve aralara molalar koyar. Başlamayı kolaylaştırır ve uzun bir gün boyunca enerjini dengede tutar.",
+    "howItWorks": [
+      "25 dakikalık tek bir blok boyunca yalnızca bir göreve odaklanırsın. Bu blokta başka hiçbir şey yapmazsın: e-posta yok, sohbet yok, “bir bakayım” yok. Zamanlayıcı çaldığında, bir işin ortasında olsan bile durur ve 5 dakika mola verirsin.",
+      "Dört bloktan sonra 15–30 dakikalık daha uzun bir mola verirsin. Sabit ritim, “bütün öğleden sonra ders çalışacağım” gibi belirsiz bir hedefi küçük, sayılabilir birimlere dönüştürür; böylece ertelemek zorlaşır ve ilerleme görünür olur. FocusKept'te çalışma bloğunu (10–60 dk), molaları ve döngü sayısını ayarlayabilirsin."
+    ],
+    "steps": [
+      "Bir görev seç ve bu blok için “bitti”nin ne demek olduğunu yaz.",
+      "25 dakikalık zamanlayıcıyı başlat ve yalnızca o görev üzerinde çalış.",
+      "Dikkatini dağıtan bir şey çıkarsa not al ve göreve dön.",
+      "Zamanlayıcı çaldığında dur ve ekrandan uzakta 5 dakika mola ver.",
+      "Dört bloktan sonra 15–30 dakikalık daha uzun bir mola ver."
+    ],
+    "bestFor": [
+      "Uzun süredir ertelediğin işlere başlamak",
+      "Ders çalışma, okuma ve tekrar oturumları",
+      "Küçük ve sık bölünen işlerle dolu günler"
+    ],
+    "whenNotToUse": [
+      "25 dakikanın akışını böldüğü derin yaratıcı işler veya kodlama; 52/17 ya da Deep Work 90'ı dene",
+      "Toplantılar veya canlı görüşmeler gibi zamanlaması dışarıdan belirlenen işler"
+    ],
+    "faq": [
+      {
+        "q": "Neden 25 dakika?",
+        "a": "Yirmi beş dakika gerçek ilerleme için yeterince uzun, başlamayı kolay hissettirecek kadar da kısadır. Bu bir varsayılan, kural değil: alışkanlık oturunca birçok kişi 30–50 dakikaya geçer."
+      },
+      {
+        "q": "Görevi erken bitirirsem ne yapmalıyım?",
+        "a": "Kalan dakikaları gözden geçirmek, cilalamak veya sonraki adımı planlamak için kullan. Gerçekten bittiyse bloğu kapat ve sonraki göreve yeni bir blokla başla."
+      },
+      {
+        "q": "Akıştayken molayı atlamalı mıyım?",
+        "a": "Kısa molalar dikkatini saatlerce taze tutar. Molalar sürekli akışını bölüyorsa, onları atlamak yerine Flowtime'a ya da daha uzun bir çalışma bloğuna geç."
+      },
+      {
+        "q": "25/5 yöntemi ders çalışmak için işe yarar mı?",
+        "a": "Evet. Aktif hatırlamayla çok iyi uyum sağlar: bir blok okuma, bir blok kendini sınama. FocusKept'in öğrenme modu buna Feynman açıklamasını ve aralıklı tekrarları ekler."
+      }
+    ],
+    "seoTitle": "25/5 odak zamanlayıcısı: 25 dakikalık çalışma yöntemi",
+    "seoDescription": "25/5 yöntemini çevrimiçi kullan: 25 dakika odak, 5 dakika mola ve dört döngüden sonra uzun mola. Ücretsiz zamanlayıcı, adım adım rehber ve ipuçları."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 dakika derin odak, 17 dakika gerçek dinlenme.",
+    "summary": "52/17 yöntemi daha uzun odak bloklarını cömert molalarla dönüşümlü kullanır. Bir işe girmek için 25 dakikayı kısa bulanlara uygundur.",
+    "howItWorks": [
+      "52 dakika tam odakla çalışır, ardından 17 dakika işten uzaklaşırsın. Bu oran, doğal olarak yaklaşık birer saatlik dilimlerle ve bol molayla çalışan çok verimli ofis çalışanlarının zaman takibi verilerinden gelir.",
+      "Uzun mola işin özüdür: yürü, esne, su iç, pencereden dışarı bak. Gerçek bir dinlenmeden sonra dönmek, sonraki 52 dakikayı ilki kadar keskin yapar."
+    ],
+    "steps": [
+      "Uzun süreli dikkat gerektiren bir görev seç.",
+      "Bildirimleri sessize al ve 52 dakika odaklan.",
+      "Ekranından uzakta 17 dakika mola ver.",
+      "Sonraki 52 dakikalık bloğa zihnin dinlenmiş olarak başla."
+    ],
+    "bestFor": [
+      "Yazma, analiz ve odaklı ofis işleri",
+      "25/5 molalarını fazla sık bulanlar",
+      "Yarım günlük derin çalışma blokları"
+    ],
+    "whenNotToUse": [
+      "Başlamakta bile zorlanıyorsan; 25 dakikalık bir blok daha yumuşaktır",
+      "Uzun bir blok gerektirmeyen çok kısa işler"
+    ],
+    "faq": [
+      {
+        "q": "52/17, 25/5'ten daha mı iyi?",
+        "a": "Hiçbiri herkes için daha iyi değildir. 52/17 bir işe girmek için daha çok zaman verir; 25/5 başlamayı kolaylaştırır. FocusKept'in Laboratuvar'ı odak puanlarını karşılaştırır, böylece sana hangisinin uyduğunu görürsün."
+      },
+      {
+        "q": "17 dakikalık molada ne yapmalıyım?",
+        "a": "Daha fazla ekran olmayan her şeyi: hareket et, su iç, gözlerini dinlendir ya da biraz gün ışığı al. Telefonda gezinmek genelde sonraki bloğu zorlaştırır."
+      },
+      {
+        "q": "Sayıları değiştirebilir miyim?",
+        "a": "52/17 zamanlayıcısı klasik oranı korur. Kendi çalışma ve mola sürelerini istiyorsan özel zamanlayıcıyı kullan."
+      }
+    ],
+    "seoTitle": "52/17 Yöntemi: 52 dakika çalış, 17 dakika mola ver",
+    "seoDescription": "52/17 verimlilik yöntemini dene: 52 dakika odaklı çalışma ve 17 dakikalık molalar. Uzun odak oturumları için ücretsiz zamanlayıcı ve basit rehber."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Odağın azalana kadar çalış, sonra orantılı dinlen.",
+    "summary": "Flowtime sabit zamanlayıcının yerine kronometre kullanır. Dikkatin düştüğünde durur, çalıştığın süreyle orantılı bir mola verirsin.",
+    "howItWorks": [
+      "Zamanlayıcıyı başlat ve odaklı kaldığın sürece tek bir görev üzerinde çalış. Dikkatinin kaydığını fark ettiğinde dur. FocusKept, çalıştığın sürenin beşte biri kadar, 5 ile 30 dakika arasında bir mola önerir: 40 dakika çalışma 8 dakika mola, 2 saat 24 dakika mola eder.",
+      "Ne zaman duracağına sen karar verdiğin için Flowtime derin akış hâllerini korur ve yine de dinlenmeni sağlar. Zamanla oturum geçmişin doğal odak sürenin ne kadar olduğunu gösterir."
+    ],
+    "steps": [
+      "Bir görev seç ve ileri sayan zamanlayıcıyı başlat.",
+      "İlk geçiş isteğinde değil, odağın gerçekten azalınca dur.",
+      "“Mola ver”e dokun ve önerilen süre kadar dinlen (çalışma süresi ÷ 5, 5–30 dk).",
+      "Mola bitince yeniden başla."
+    ],
+    "bestFor": [
+      "Kesintilerin pahalıya mal olduğu yaratıcı işler ve kodlama",
+      "25/5 molalarını sık sık atlayanlar",
+      "Kendi doğal odak süreni keşfetmek"
+    ],
+    "whenNotToUse": [
+      "Bir son tarih olmadan kolayca dağılıyorsan; sabit zamanlayıcı daha çok yapı sunar",
+      "Toplantılar arasında katı zaman dilimleri olan günler"
+    ],
+    "faq": [
+      {
+        "q": "Flowtime molası nasıl hesaplanır?",
+        "a": "FocusKept, çalıştığın sürenin beşte birini önerir; en az 5, en fazla 30 dakika."
+      },
+      {
+        "q": "Hiç durmak istemezsem ne olacak?",
+        "a": "Yine de en geç 90 dakikada bir mola ver. Dinlenmeden geçen uzun süreler, verimli hissettirse bile kaliteyi sessizce düşürür."
+      },
+      {
+        "q": "Flowtime yeni başlayanlar için uygun mu?",
+        "a": "Odaklı çalışmayı zaten seviyorsan evet. Zor olan başlamaksa 25/5 ile başla, Flowtime'a daha sonra geç."
+      }
+    ],
+    "seoTitle": "Flowtime Tekniği: esnek odak oturumları için zamanlayıcı",
+    "seoDescription": "Flowtime Tekniği ile odağın azalana kadar çalışır, sonra orantılı bir mola verirsin. Otomatik mola önerili ücretsiz ileri sayan zamanlayıcı."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "En zorlu işin için tek bir 90 dakikalık blok.",
+    "summary": "Deep Work 90, doğal bir dikkat döngüsünün uzunluğuna denk gelen kesintisiz tek bir 90 dakikalık oturum ve ardından 20 dakika mola sunar.",
+    "howItWorks": [
+      "Birçok kişinin konsantrasyonu yaklaşık birer buçuk saatlik döngülerle yükselip düşer. 90 dakikalık bir blok, tam bir döngüyü zor ve anlamlı işe ayırır; ardından gelen 20 dakikalık mola sonrakinden önce toparlanmanı sağlar.",
+      "Bu bloğu kendinle önemli bir toplantı gibi gör: görevi önceden belirle, diğer her şeyi kapat ve bu zamanı koru. Günde bir ya da iki böyle blok en büyük projelerini ileri taşıyabilir."
+    ],
+    "steps": [
+      "En derin odağını hangi görevin hak ettiğine önceden karar ver.",
+      "E-postayı ve sohbeti kapat, telefonunu sessize al ve 90 dakikalık zamanlayıcıyı başlat.",
+      "Zamanlayıcı bitene kadar yalnızca o görev üzerinde çalış.",
+      "Zorlu başka bir şeye geçmeden önce tam 20 dakika mola ver."
+    ],
+    "bestFor": [
+      "Yazma, araştırma, tasarım ve karmaşık programlama",
+      "Günün en önemli görevi",
+      "Sabahlar ya da enerjinin yüksek olduğu diğer saatler"
+    ],
+    "whenNotToUse": [
+      "Yorgunsan ya da sık bölünüyorsan; daha kısa bloklarla başla",
+      "E-posta veya idari işler gibi yüzeysel görevler"
+    ],
+    "faq": [
+      {
+        "q": "Gerçekten 90 dakika odaklanabilir miyim?",
+        "a": "Pratik gerektirir. 50–60 dakikalık bloklarla başla ve alışkanlık geliştikçe uzat. Her oturumdan sonraki puan nasıl geçtiğini gösterir."
+      },
+      {
+        "q": "Günde kaç derin çalışma bloğu yapmalıyım?",
+        "a": "Çoğu kişi için iki ya da üç yeterlidir. Günün geri kalanını daha hafif işlere ayır."
+      },
+      {
+        "q": "Derin çalışma ne sayılır?",
+        "a": "Tam dikkatini gerektiren ve gerçek değer üreten işler: yazmak, problem çözmek ya da zor bir şey öğrenmek gibi."
+      }
+    ],
+    "seoTitle": "Deep Work zamanlayıcısı: 90 dakikalık odak oturumları",
+    "seoDescription": "20 dakikalık molalarla 90 dakikalık derin çalışma oturumları planla. Dikkat dağınıklığı olmadan çalışmak için ücretsiz zamanlayıcı ve rehber."
+  },
+  "custom": {
+    "name": "Özel zamanlayıcı",
+    "tagline": "Kendi çalışma ve mola sürelerin, ön ayar olarak kayıtlı.",
+    "summary": "Özel zamanlayıcı istediğin çalışma bloğunu, kısa ve uzun molayı ve döngü sayısını ayarlamana ve en fazla beş ön ayar kaydetmene olanak tanır.",
+    "howItWorks": [
+      "Her görev ünlü bir orana uymaz. Özel zamanlayıcıyla ne kadar çalışacağını (1–180 dakika), ne kadar dinleneceğini ve kaç bloktan sonra uzun mola vereceğini sen seçersin.",
+      "Sevdiğin kombinasyonları ön ayar olarak kaydet, bir dokunuş uzağında olsunlar; örneğin “Okuma 40/10” veya “Sınav hazırlığı 30/5”."
+    ],
+    "steps": [
+      "Çalışma bloğunu, kısa molayı, uzun molayı ve döngüleri ayarla.",
+      "İstersen kombinasyonu ön ayar olarak kaydet (en fazla beş).",
+      "Zamanlayıcıyı başlat ve tasarladığın ritmi izle."
+    ],
+    "bestFor": [
+      "Kendi ritmini bulmak için deneme yapmak",
+      "Sabit biçimli tekrarlayan rutinler",
+      "Ders, laboratuvar veya sınav süresine uymak"
+    ],
+    "whenNotToUse": [
+      "Nereden başlayacağını bilmiyorsan; önce 25/5'i dene, sonra ayarla"
+    ],
+    "faq": [
+      {
+        "q": "Kaç ön ayar kaydedebilirim?",
+        "a": "En fazla beş. Ayarlar'dan düzenleyebilir veya silebilirsin."
+      },
+      {
+        "q": "Hangi ayarların en iyi çalıştığını nasıl bilirim?",
+        "a": "Her oturumdan sonra odağını puanla. Laboratuvar puanlarını teknik ve süreye göre karşılaştırır."
+      },
+      {
+        "q": "Hangi teknikle başlamalıyım?",
+        "a": "Bir tercihin yoksa bir hafta 25/5 ile başla. Sonra odak puanlarına göre çalışma ve mola sürelerini özel bir ön ayarda düzenle."
+      }
+    ],
+    "seoTitle": "Ön ayarlı özel odak zamanlayıcısı",
+    "seoDescription": "Kendi odak zamanlayıcını oluştur: çalışma ve mola sürelerini, uzun molaları ve döngüleri seç, ön ayarları kaydet. Ücretsiz ve kullanımı kolay."
+  },
+  "timeboxing": {
+    "name": "Timeboxing",
+    "tagline": "Bir göreve sabit bir süre ver, sonra karar ver.",
+    "summary": "Timeboxing her göreve sabit bir zaman bütçesi verir. Timebox bittiğinde karar verirsin: bitti, bir kez uzat ya da sonraya ertele.",
+    "howItWorks": [
+      "Görev bitene kadar çalışmak yerine, ne kadar zamanı hak ettiğine önceden karar verirsin; örneğin bir rapor taslağı için 30 dakika. Sınır seni önemli olana odaklar ve mükemmeliyetçiliğin günü yemesini engeller.",
+      "Timebox bittiğinde FocusKept seçmeni ister: bitti olarak işaretle, timebox'ın %25'i kadar bir kez uzat ya da görevi sonraya ertele. Asıl timebox'ın ötesindeki her süre aşım olarak kaydedilir; böylece tahminlerinin ne kadar isabetli olduğunu öğrenirsin."
+    ],
+    "steps": [
+      "Bir görev seç ve kaç dakikayı hak ettiğine karar ver.",
+      "Timebox'ı başlat ve yalnızca o görev üzerinde çalış.",
+      "Süre dolunca seç: bitti, bir kez uzat (+%25) veya sonraya ertele.",
+      "Gelecekte daha iyi tahmin etmek için istatistiklerde aşımına bak."
+    ],
+    "bestFor": [
+      "Mevcut tüm zamanı dolduracak kadar uzayan işler",
+      "Mükemmeliyetçiler ve hiç bitmeyen rötuşçular",
+      "Birçok farklı görevle bir günü planlamak"
+    ],
+    "whenNotToUse": [
+      "Sonucun bilinmediği açık uçlu keşifler",
+      "Tekrarlanan döngüler gerektiren öğrenme oturumları"
+    ],
+    "faq": [
+      {
+        "q": "Zamanında bitiremezsem ne olur?",
+        "a": "Timebox'ın dörtte biri kadar bir kez uzatabilir ya da görevi sonraya erteleyebilirsin. İkisi de olur; amaç bilinçli bir karar vermek."
+      },
+      {
+        "q": "Bir timebox ne kadar olmalı?",
+        "a": "Çoğu görev için 15 ile 90 dakika arası. Kısa timebox'lar aciliyet yaratır; uzun olanlar büyük iş parçalarına uyar."
+      },
+      {
+        "q": "Aşım nedir?",
+        "a": "Asıl timebox'ın ötesinde harcanan süredir. Sürekli yüksek aşım, tahminlerinin iyimser olduğu anlamına gelir."
+      }
+    ],
+    "seoTitle": "Timeboxing tekniği: zamanlayıcı ve rehber",
+    "seoDescription": "Timeboxing'i öğren: her göreve sabit bir süre ver, sonra bitir, bir kez uzat ya da yeniden planla. Tahminlerini ve aşımlarını takip eden ücretsiz zamanlayıcı."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Basitçe açıkla. Gerçekten neyi anladığını öğren.",
+    "summary": "Feynman Tekniği, bir konuyu 12 yaşındaki birine anlatır gibi sade bir dille açıklamanı isteyerek anlayışını sınar. Açıklamandaki boşluklar sonra neyi çalışman gerektiğini gösterir.",
+    "howItWorks": [
+      "Adını fizikçi Richard Feynman'dan alan teknik basittir: bir konuyu çalıştıktan sonra, meraklı 12 yaşındaki birine öğretiyormuş gibi gündelik kelimeler ve kısa cümlelerle bir açıklama yaz. Teknik jargon bir uyarı işaretidir, çünkü çoğu zaman bir boşluğu gizler.",
+      "Takıldığın ya da geçiştirdiğin her yerde kaynağa dön, boşluğu doldur ve yeniden sadeleştir. FocusKept'te her öğrenme oturumu bir Feynman açıklamasıyla biter; ardından yapay zekâ eksikleri ve hataları gösterir, açıklamanı tekrar sorularına dönüştürür."
+    ],
+    "steps": [
+      "Konuyu kaynak materyalinle çalış.",
+      "Kaynağı kapat ve konuyu 12 yaşındaki birine anlatır gibi basit kelimelerle açıkla.",
+      "Takıldığın ya da jargon kullandığın yerleri işaretle.",
+      "O boşlukları doldurmak için kaynağa dön.",
+      "Açıklaman akıcı olana kadar yeniden sadeleştir."
+    ],
+    "bestFor": [
+      "Kavramlar, teoriler ve “nasıl çalışır” konuları",
+      "Sınavdan önce gerçek anlayışını kontrol etmek",
+      "Okuduklarını kalıcı bilgiye dönüştürmek"
+    ],
+    "whenNotToUse": [
+      "Kelime veya tarih gibi saf ezber; aktif hatırlama ya da aralıklı tekrar kullan",
+      "Açıklamadan çok uygulama gerektiren beceriler"
+    ],
+    "faq": [
+      {
+        "q": "Neden 12 yaşındaki birine açıklamalı?",
+        "a": "Bir çocuk jargonu kabul etmez, bu yüzden kelimelerin ne anlama geldiğini bilmen gerekir. Sade dil, belirsiz anlayışı hızla ortaya çıkarır."
+      },
+      {
+        "q": "Sesli söylemem gerekir mi?",
+        "a": "Yazmak da aynı derecede işe yarar ve tekrar gözden geçirebileceğin bir şey bırakır. FocusKept'te açıklaman bilgi kartının özü olur."
+      },
+      {
+        "q": "Yapay zekâ neyi kontrol ediyor?",
+        "a": "Eksik parçaları ve hataları arar, bir açıklık puanı verir ve daha sade bir sürüm önerir. Kontrol sende: her şeyi sen düzenler ve onaylarsın."
+      },
+      {
+        "q": "Açıklamam ne kadar uzun olmalı?",
+        "a": "Birkaç net paragraf idealdir. FocusKept en az 80 karakter ister ve 6.000 karaktere kadar kabul eder."
+      }
+    ],
+    "seoTitle": "Feynman Tekniği: anlatarak her şeyi öğren",
+    "seoDescription": "Feynman Tekniği nasıl kullanılır: bir konuyu basitçe açıkla, boşlukları bul ve doldur. Yapay zekâ geri bildirimi ve tekrar sorularıyla ücretsiz rehber."
+  },
+  "active-recall": {
+    "name": "Aktif hatırlama",
+    "tagline": "Bilgiyi yeniden okumak yerine hafızandan çek.",
+    "summary": "Aktif hatırlama, yeniden okumak yerine kendini sınamak demektir. Bir cevabı hafızandan her çağırdığında, bir sonraki sefer çağırmak kolaylaşır.",
+    "howItWorks": [
+      "Yeniden okumak verimli hissettirir ama çoğunlukla hafıza değil aşinalık yaratır. Aktif hatırlama bunu tersine çevirir: materyali kapatır, kendine sorular sorar, hatırladıklarını yazar ya da bakmadan problem çözersin.",
+      "Hafızayı güçlendiren şey, hatırlama çabasının kendisidir. FocusKept açıklamanı sorulara dönüştürür ve bunları 5., 10. ve 30. günde yeniden sorar; böylece aktif hatırlama kendiliğinden gerçekleşir."
+    ],
+    "steps": [
+      "Materyalinin bir bölümünü bir kez, dikkatle çalış.",
+      "Kapat ve ana fikirler hakkında sorular yaz.",
+      "Soruları bakmadan, hafızandan cevapla.",
+      "Cevaplarını kontrol et ve kaçırdıklarını işaretle.",
+      "Yalnızca yanlış yaptığın kısımları yeniden çalış."
+    ],
+    "bestFor": [
+      "Her dersten sınava hazırlık",
+      "Gerçekler, tanımlar ve süreçler",
+      "Çalışma zamanını gerçekten değerlendirmek"
+    ],
+    "whenNotToUse": ["Bir konuyla ilk karşılaşma; önce anla, sonra hatırla"],
+    "faq": [
+      {
+        "q": "Aktif hatırlama yeniden okumaktan daha mı iyi?",
+        "a": "Test etkisi üzerine yapılan araştırmalar, hatırlama pratiğinin aynı materyali yeniden okumaktan daha iyi uzun vadeli akılda tutma sağladığını tutarlı biçimde gösteriyor."
+      },
+      {
+        "q": "Hiçbir şey hatırlayamazsam ne olur?",
+        "a": "Bu da faydalı bir bilgi. Cevabı bul ve daha sonra yeniden dene. Biraz zorlanmak işin bir parçası."
+      },
+      {
+        "q": "FocusKept aktif hatırlamayı nasıl kullanıyor?",
+        "a": "Her bilgi kartının soruları vardır ve her tekrarda çözümü görmeden önce bunları cevaplaman istenir."
+      }
+    ],
+    "seoTitle": "Aktif hatırlama: çalışma yöntemi ve kullanımı",
+    "seoDescription": "Aktif hatırlama (active recall) en etkili çalışma yöntemlerinden biridir. Kendini sınamayı, daha iyi sorular sormayı ve daha çok hatırlamayı öğren."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Hatırladığın her şeyi yaz, sonra karşılaştır.",
+    "summary": "Blurting hızlı bir aktif hatırlama alıştırmasıdır: çalıştıktan sonra bir konu hakkında hatırladığın her şeyi yazar, sonra kaçırdıklarını bulmak için kaynakla karşılaştırırsın.",
+    "howItWorks": [
+      "Bir çalışma bloğundan sonra notlarını kapat ve hatırladığın her şeyi olabildiğince hızlı, herhangi bir sırayla yaz. Yapıyı dert etme; amaç kafandakini kâğıda boşaltmak.",
+      "Sonra kaynağı aç ve karşılaştır. Eksik ya da yanlış olanları başka bir renkle işaretle. Bu boşluklar, sonra çalışman gereken şeylerin ta kendisidir. FocusKept'te rehber oturumu “her şeyi yaz” ve “kaynakla karşılaştır” aşamalarına ayırır."
+    ],
+    "steps": [
+      "Bir bölüm ya da konu çalış.",
+      "Kaynağı kapat ve hatırladığın her şeyi durmadan yaz.",
+      "Kaynağı aç ve satır satır karşılaştır.",
+      "Kaçırdıklarını ya da yanlış bildiklerini işaretle.",
+      "Boşlukları çalış, sonra daha ileride blurting'i tekrarla."
+    ],
+    "bestFor": [
+      "Ders veya ders kitabı bölümlerini tekrar etmek",
+      "Tarih ya da biyoloji gibi birbirine bağlı çok bilgi içeren dersler",
+      "Çalışma blokları arasında hızlı kontroller"
+    ],
+    "whenNotToUse": [
+      "Alıştırma sorularının daha iyi işlediği, problem çözmeye dayalı dersler"
+    ],
+    "faq": [
+      {
+        "q": "Blurting düzenli olmalı mı?",
+        "a": "Hayır. Hız sıradan daha önemlidir. Yapı sonra, karşılaştırırken gelir."
+      },
+      {
+        "q": "Blurting'in Feynman Tekniği'nden farkı nedir?",
+        "a": "Blurting neyi hatırlayabildiğini, Feynman ise anlayıp anlamadığını sınar. FocusKept'te her öğrenme oturumu bir Feynman adımıyla biter, böylece ikisini de elde edersin."
+      },
+      {
+        "q": "Bir konuyu ne sıklıkla blurting yapmalıyım?",
+        "a": "Çalıştıktan hemen sonra, sonra da birkaç gün sonra yeniden. FocusKept'in 5., 10. ve 30. gündeki aralıklı tekrarları kendini yeniden sınamak için doğal anlardır."
+      }
+    ],
+    "seoTitle": "Tekrar için blurting yöntemi: adım adım rehber",
+    "seoDescription": "Blurting tekniği: hatırladığın her şeyi yaz, notlarınla karşılaştır ve boşlukları doldur. Hızlı ve etkili bir tekrar yöntemi."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: göz at, sor, oku, anlat, tekrar et.",
+    "summary": "SQ3R, ders kitaplarını aktif biçimde okumak için beş adımlı bir yöntemdir; böylece yalnızca altını çizmek yerine anlar ve hatırlarsın.",
+    "howItWorks": [
+      "SQ3R, İngilizce Survey, Question, Read, Recite ve Review kelimelerinin kısaltmasıdır. Önce yapıya göz atar, başlıkları sorulara çevirir, onları cevaplamak için okur, cevapları hafızandan anlatır ve en sonunda tüm bölümü tekrar edersin.",
+      "Her adım okumana bir amaç verir. FocusKept beş adımda seni tek tek yönlendirir ve her aşamada not alanı sunar."
+    ],
+    "steps": [
+      "Göz at: büyük resmi görmek için başlıklara, özetlere ve şekillere hızlıca bak.",
+      "Sor: her başlığı cevabını öğrenmek istediğin bir soruya çevir.",
+      "Oku: sorusunu cevaplamak için her seferinde bir bölüm oku.",
+      "Anlat: kitabı kapat ve soruyu kendi kelimelerinle cevapla.",
+      "Tekrar et: sonunda tüm soruları ve cevapları gözden geçir."
+    ],
+    "bestFor": [
+      "Ders kitapları ve uzun kurgu dışı bölümler",
+      "Çok sayıda zorunlu okuma içeren dersler",
+      "Çok altını çizip az hatırlayan öğrenciler"
+    ],
+    "whenNotToUse": [
+      "Kurgu ya da hafif okumalar",
+      "Yapısı apaçık olan çok kısa metinler"
+    ],
+    "faq": [
+      {
+        "q": "SQ3R yavaş değil mi?",
+        "a": "Hızlıca göz gezdirmekten uzun sürer, ama sınavdan önce bir bölümü üç kez yeniden okumaktan çok daha kısadır."
+      },
+      {
+        "q": "SQ3R'yi çevrimiçi makalelerle kullanabilir miyim?",
+        "a": "Evet. Makaleyi kaynak bağlantısı olarak ekle ve aynı beş adımı izle."
+      },
+      {
+        "q": "En önemli adım hangisi?",
+        "a": "Anlatmak. Hafızadan cevaplamak, okumayı bilgiye dönüştüren şeydir. Diğer adımlar seni buna hazırlar."
+      }
+    ],
+    "seoTitle": "SQ3R okuma yöntemi: göz at, sor, oku, anlat, tekrar et",
+    "seoDescription": "Ders kitaplarını aktif okumak ve daha çok hatırlamak için SQ3R yöntemini öğren. Yerleşik çalışma zamanlayıcısıyla net, beş adımlı bir rehber."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Notlar, ipucu soruları ve özet tek sayfada.",
+    "summary": "Cornell not alma sistemi notlarını üç bölüme ayırır: ana notlar, ipucu soruları ve kısa bir özet. Böylece notların hazır bir öz sınava dönüşür.",
+    "howItWorks": [
+      "Çalışırken ana notları büyük alana yazarsın. Ardından yan sütuna her fikre götüren kısa ipucu soruları veya anahtar kelimeler eklersin. En alta tüm sayfayı birkaç cümleyle özetlersin.",
+      "Tekrar ederken notları kapat ve ipucu sorularını hafızandan cevapla. FocusKept oturum sırasında aynı üç bölümlü düzeni sunar ve onu oturumunla birlikte saklar."
+    ],
+    "steps": [
+      "Çalışırken ana alana not al.",
+      "Çalıştıktan sonra her ana fikrin yanına ipucu soruları yaz.",
+      "Tüm konuyu en alta 2–3 cümleyle özetle.",
+      "Notları kapatıp ipucu sorularını cevaplayarak tekrar et."
+    ],
+    "bestFor": [
+      "Dersler, videolar ve seminerler",
+      "Sınavdan önce notları tekrar ettiğin dersler",
+      "Notları alıştırma sorularına dönüştürmek"
+    ],
+    "whenNotToUse": [
+      "Zihin haritalarının veya şemaların daha iyi işlediği çok görsel dersler"
+    ],
+    "faq": [
+      {
+        "q": "Cornell yöntemini kim buldu?",
+        "a": "Cornell Üniversitesi'nde eğitim profesörü olan Walter Pauk, 1950'lerde tanımladı."
+      },
+      {
+        "q": "Özel bir kâğıda ihtiyacım var mı?",
+        "a": "Hayır. FocusKept üç alanı ekranda gösterir: notlar, ipucu soruları ve özet."
+      },
+      {
+        "q": "Özet ne kadar uzun olmalı?",
+        "a": "İki ya da üç cümle. Sayfayı kısaca özetleyemiyorsan muhtemelen bir kısmına yeniden bakman gerekiyordur."
+      }
+    ],
+    "seoTitle": "Cornell not alma yöntemi: şablon ve rehber",
+    "seoDescription": "Cornell not alma sistemini çevrimiçi kullan: notlar, ipucu soruları ve özet tek bir düzende. Odak zamanlayıcılı ücretsiz şablon."
+  },
+  "interleaving": {
+    "name": "Karma çalışma",
+    "tagline": "İlgili konuları tek tek çalışmak yerine karıştır.",
+    "summary": "Karma çalışma (interleaving), bir çalışma oturumu içinde birbiriyle ilgili iki ila dört konu arasında geçiş yapmaktır. Blok halinde çalışmaktan daha zor hissettirir, ancak doğru yaklaşımı seçme becerini geliştirir.",
+    "howItWorks": [
+      "Bir türden yirmi problem, ardından başka bir türden yirmi problem çözmek yerine onları karıştırırsın: A, B, C, A, C, B. Beynin önce karşısındaki problemin türünü tanımak zorunda kalır; blok çalışmanın asla eğitmediği bir beceri.",
+      "FocusKept'te 2 ila 4 ilgili konu eklersin ve rehber her çalışma bloğunda konuyu değiştirir."
+    ],
+    "steps": [
+      "Birbiriyle ilgili 2–4 konu veya problem türü seç.",
+      "İlk çalışma bloğunda ilk konuyu çalış.",
+      "Her yeni blokta sırayı izleyerek sonraki konuya geç.",
+      "Konular arasındaki farklara ve her yaklaşımın neden uyduğuna dikkat et."
+    ],
+    "bestFor": [
+      "Matematik, fizik ve diğer problem çözme dersleri",
+      "Diller: farklı dilbilgisi konularını karıştırmak",
+      "Doğru yöntemi seçmenin zor olduğu beceriler"
+    ],
+    "whenNotToUse": [
+      "Bir konu tamamen yeniyse; önce her birinin temellerini öğren"
+    ],
+    "faq": [
+      {
+        "q": "Karma çalışma neden daha zor hissettiriyor?",
+        "a": "Çünkü daha zor. Geçiş yapmak, her seferinde hangi yaklaşımı kullanacağını bulmanı gerektirir. Uzun vadeli öğrenmeyi geliştiren de tam olarak bu ek çabadır."
+      },
+      {
+        "q": "Kaç konuyu karıştırmalıyım?",
+        "a": "Birbiriyle ilgili iki ila dört konu. Daha fazlası dağınık hale gelir."
+      },
+      {
+        "q": "Karma çalışmayı 25/5 ile birleştirebilir miyim?",
+        "a": "Evet. Her çalışma bloğu bir konuyu kapsar ve sonraki blok değişir; bu da karma çalışmaya doğal bir ritim kazandırır."
+      }
+    ],
+    "seoTitle": "Karma çalışma: konuları karıştır, daha çok öğren",
+    "seoDescription": "Karma çalışma, ilgili konuları tek oturumda karıştırır. Interleaving'in nasıl ve ne zaman kullanılacağını, konuları değiştiren zamanlayıcıyla öğren."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Bildiğin kartların ilerlediği kutular.",
+    "summary": "Leitner sistemi bilgi kartlarını kutulara ayırır. Doğru cevapladığın kartlar daha seyrek tekrar edilen bir kutuya geçer; bir hata kartı geri gönderir.",
+    "howItWorks": [
+      "Sebastian Leitner'ın sistemi bir dizi kutu kullanır. Yeni kartlar sık tekrar ettiğin 1. kutuda başlar. Her doğru cevap kartı bir kutu ilerletir ve orada daha seyrek tekrar edilir. Yanlış cevap onu geri gönderir.",
+      "FocusKept aynı fikri otomatik olarak uygular: her tekrar adımı (5., 10. ve 30. gün, ardından 60 gün ve daha fazlası) bir kutudur. Bir tekrarı geçersen kart ilerler; bir soruyu kaçırırsan 2 gün sonra geri gelir."
+    ],
+    "steps": [
+      "Bir yüzünde soru, diğer yüzünde cevap olan kartlar oluştur.",
+      "İlk kutudaki kartları en sık tekrar et.",
+      "Doğru cevapladığında kartı bir kutu ilerlet.",
+      "Yanlış yaptığında geri koy.",
+      "FocusKept'te sadece zamanı gelen tekrarları yap: kutular senin için yönetilir."
+    ],
+    "bestFor": [
+      "Kelimeler, tanımlar ve formüller",
+      "En az planlamayla uzun süreli hafıza",
+      "İlerlemesini görmekten hoşlananlar"
+    ],
+    "whenNotToUse": [
+      "Karmaşık fikirleri anlamak; önce Feynman Tekniği ile açıkla"
+    ],
+    "faq": [
+      {
+        "q": "Leitner, FocusKept'e nasıl uyarlanıyor?",
+        "a": "Her tekrar adımı bir kutudur: 5. gün, 10. gün, 30. gün, ardından 60 gün ve iki katına çıkarak 180'e kadar. Kartının mevcut adımı onun kutusudur."
+      },
+      {
+        "q": "Bir kartı yanlış yaparsam ne olur?",
+        "a": "Aynı adımda yeniden öğrenme tekrarı için 2 gün sonra geri gelir. O tekrarı geçersen ilerlemeye devam eder."
+      },
+      {
+        "q": "Kartları kendim mi taşımam gerekiyor?",
+        "a": "Hayır. FocusKept her kartı senin için planlar, böylece yalnızca bugün zamanı gelen tekrarları cevaplarsın."
+      }
+    ],
+    "seoTitle": "Leitner sistemi: bilgi kartı kutuları",
+    "seoDescription": "Leitner bilgi kartı sisteminin nasıl çalıştığı ve otomatik aralıklı tekrarla nasıl kullanılacağı. Örneklerle basit rehber."
+  },
+  "spaced-repetition": {
+    "name": "Aralıklı tekrar",
+    "tagline": "Tam unutmadan önce 5., 10. ve 30. günde tekrar et.",
+    "summary": "Aralıklı tekrar (spaced repetition), tekrarları giderek artan aralıklarla planlar; böylece her tekrar bir anı tam silinmeye başladığında gelir. FocusKept'teki her öğrenme oturumunun özüdür.",
+    "howItWorks": [
+      "Öğrendikten sonra hafıza hızla silinir, ama her başarılı tekrar unutmayı yavaşlatır. Tekrarları her seferinde daha uzun aralıklarla yaymak, en az tekrar süresiyle en yüksek akılda tutmayı sağlar.",
+      "FocusKept her bilgi kartını otomatik olarak planlar: ilk tekrar 5. günde, ardından 10. ve 30. günde. Sonrasında aralık 60 gün olur ve her başarılı tekrarla ikiye katlanarak en fazla 180 güne ulaşır. Bir soruyu kaçırırsan kart 2 gün sonra geri gelir. İlk üç adımı Ayarlar'dan değiştirebilirsin."
+    ],
+    "steps": [
+      "Bir öğrenme oturumunu bitir ve bilgi kartını kaydet.",
+      "Bir tekrarın zamanı geldiğinde hatırlatma al (e-posta veya tarayıcı).",
+      "Kartın sorularını hafızandan cevapla.",
+      "Geçersen sonraki aralığa geçer; kaçırırsan kart 2 gün sonra döner."
+    ],
+    "bestFor": [
+      "Günlerce değil aylarca hatırlamak istediğin her şey",
+      "Birkaç haftaya yayılan sınav hazırlığı",
+      "Nadiren kullandığın ama koruman gereken mesleki bilgi"
+    ],
+    "whenNotToUse": [
+      "Yarın için son dakika çalışması; aralıklı tekrar haftalar içinde etkili olur"
+    ],
+    "faq": [
+      {
+        "q": "Neden 5., 10. ve 30. gün?",
+        "a": "Bunlar, tekrarları unutmanın en hızlı olduğu ilk aya yayan, basit ve akılda kalıcı adımlardır. Ayarlar'dan değiştirebilirsin."
+      },
+      {
+        "q": "Bir tekrar gününü kaçırırsam ne olur?",
+        "a": "Gecikmiş kartlar sen tekrar edene kadar bekler. Hiçbir şey kaybolmaz; fırsat bulunca telafi et."
+      },
+      {
+        "q": "Bir tekrar kusursuz olmak zorunda mı?",
+        "a": "Tüm cevaplar doğru olduğunda tekrar geçer. Kısmen doğru cevap kaçırılmış sayılır, böylece kart daha erken geri gelir."
+      }
+    ],
+    "seoTitle": "Aralıklı tekrar: işe yarayan bir tekrar takvimi",
+    "seoDescription": "Aralıklı tekrar: 5., 10. ve 30. günde, sonra giderek artan aralıklarla tekrar et. FocusKept'te otomatik hatırlatmalar ve tekrar soruları."
+  },
+  "eat-the-frog": {
+    "name": "Kurbağayı ye",
+    "tagline": "En zor ve en önemli görevini önce yap.",
+    "summary": "Kurbağayı yemek, kaçınma ihtimalinin en yüksek olduğu tek görevi seçip ilk iş onu yapmak demektir. Sonrasında her şey daha kolay gelir.",
+    "howItWorks": [
+      "“Kurbağa”, yapmak istemediğin önemli görevdir. Enerjinin en yüksek olduğu gün başında ona girişirsen, günün geri kalanında o arka plandaki huzursuzluktan kurtulursun.",
+      "FocusKept'te her gün tam olarak bir kurbağa işaretleyebilirsin. Bugünün listesinin en üstüne sabitlenir ve ilk oturum olarak önerilir."
+    ],
+    "steps": [
+      "Bir önceki akşam ya da sabah ilk iş, bugünün kurbağasını seç: önemli ve kaçınması kolay.",
+      "Bugünün en üstünde dursun diye onu kurbağa olarak işaretle.",
+      "İlk odak oturumunu her şeyden önce kurbağaya ayır.",
+      "Bitene ya da belirgin şekilde ilerleyene kadar devam et."
+    ],
+    "bestFor": [
+      "Önemli işleri erteleme",
+      "Enerjinin yüksek olduğu sabahlar",
+      "Aksi takdirde küçük işlerle dolacak yoğun günler"
+    ],
+    "whenNotToUse": ["En zor görev başka birinin müsait olmasına bağlıysa"],
+    "faq": [
+      {
+        "q": "Bu ad nereden geliyor?",
+        "a": "Sıklıkla Mark Twain'e atfedilen bir sözden: canlı bir kurbağa yemek zorundaysan, sabah ilk iş bunu yap. Brian Tracy bunu bir verimlilik yöntemine dönüştürdü."
+      },
+      {
+        "q": "Birden fazla kurbağam olabilir mi?",
+        "a": "Hayır, günde bir kurbağa kararı net tutar. Yeni bir kurbağa seçmek eskisinin yerini alır."
+      },
+      {
+        "q": "Kurbağam tek oturum için çok büyükse?",
+        "a": "Onu parçalara böl ve ilk somut adımı bugünün kurbağası yap. En zor kısım başlamaktır."
+      }
+    ],
+    "seoTitle": "Kurbağayı ye: önce en zor görevi yap",
+    "seoDescription": "Kurbağayı ye yöntemiyle ertelemeyi yen: önemli bir görev seç ve önce onu yap. Basit bir rehber ve kurbağanla başlayan bir odak zamanlayıcısı."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Görevleri aciliyet ve önem derecesine göre sırala.",
+    "summary": "Eisenhower Matrisi görevleri aciliyet ve öneme göre dört dörtlüğe ayırır; böylece neyi hemen yapacağını, planlayacağını, devredeceğini ya da bırakacağını bilirsin.",
+    "howItWorks": [
+      "Her görev dört dörtlükten birine girer: Hemen yap (acil ve önemli), Planla (önemli, acil değil), Devret (acil, önemli değil) ve Bırak (ikisi de değil). Matris, acil gürültünün önemli işi ne zaman bastırdığını açıkça gösterir.",
+      "FocusKept'te görevleri dörtlükler arasında sürükler ya da klavyeyle taşırsın. Bırak dörtlüğü, görevlerin listenden çıkması için arşivlemeyi önerir."
+    ],
+    "steps": [
+      "Açık görevlerini listele.",
+      "Her görevi Hemen yap, Planla, Devret veya Bırak dörtlüğüne yerleştir.",
+      "Hemen yap dörtlüğünden bir görevle odak oturumu başlat.",
+      "Planla dörtlüğündeki görevler acil hale gelmeden onlara zaman ayır.",
+      "Devret görevlerini başkasına ver, Bırak görevlerini arşivle."
+    ],
+    "bestFor": [
+      "Taşan yapılacaklar listeleri",
+      "Haftalık planlama",
+      "Gerçek öncelikleri gürültüden ayırmak"
+    ],
+    "whenNotToUse": ["Eşit derecede önemli görevlerden oluşan kısa listeler"],
+    "faq": [
+      {
+        "q": "Her şey acil ve önemli görünüyorsa ne yapmalıyım?",
+        "a": "Bir görev bir hafta beklerse ne olacağını sor. Ciddi bir şey olmayacaksa Planla dörtlüğüne aittir."
+      },
+      {
+        "q": "Tek başıma çalışıyorum. Devret dörtlüğünü ne yapayım?",
+        "a": "Otomatikleştirebileceğin, toplu yapabileceğin ya da birinden yardım isteyebileceğin görevler için kullan."
+      },
+      {
+        "q": "Matrisimi ne sıklıkla yeniden düzenlemeliyim?",
+        "a": "Günde kısa bir bakış ve haftada daha kapsamlı bir gözden geçirme, son tarihler yaklaştıkça matrisi dürüst tutar."
+      }
+    ],
+    "seoTitle": "Eisenhower Matrisi: acil mi, önemli mi?",
+    "seoDescription": "Eisenhower Matrisi ile önceliklendir: görevleri hemen yap, planla, devret ve bırak olarak ayır. Yerleşik odak zamanlayıcılı ücretsiz sürükle-bırak pano."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Bir büyük iş, üç orta, beş küçük. İşte günün.",
+    "summary": "1-3-5 kuralı her günü bir büyük, üç orta ve beş küçük görevle sınırlar; böylece planların gerçekçi kalır.",
+    "howItWorks": [
+      "Yapılacaklar listelerinin çoğu bitirilemeyecek kadar uzundur ve her gün başarısızlık gibi hissettirir. 1-3-5 kuralı günü farklı büyüklükte dokuz görevle sınırlar: gerçek çaba isteyen bir, biraz zaman alan üç ve çabucak biten beş görev.",
+      "FocusKept bugünün planına tam olarak bu yerleri verir ve onları aşırı doldurmana izin vermez; böylece bilinçli seçersin."
+    ],
+    "steps": [
+      "Bugünün tek büyük görevini seç.",
+      "Üç orta görev ekle.",
+      "Beş küçük görevle tamamla.",
+      "Enerjin yüksekken büyük görevle başla."
+    ],
+    "bestFor": [
+      "Gerçekçi günlük planlama",
+      "Listesi hiç bitmeyenler",
+      "Derin çalışmayla küçük işleri dengelemek"
+    ],
+    "whenNotToUse": ["Toplantılarla ya da tek bir projeyle dolu günler"],
+    "faq": [
+      {
+        "q": "Her şeyi erken bitirirsem ne olur?",
+        "a": "Harika. Zamanın tadını çıkar ya da bekleyen listenden bir görev daha al."
+      },
+      {
+        "q": "Bir görevin büyüklüğüne nasıl karar veririm?",
+        "a": "Büyük birkaç saat, orta yaklaşık bir saat, küçük 15 dakika veya daha az sürer."
+      },
+      {
+        "q": "1-3-5'i başka tekniklerle birleştirebilir miyim?",
+        "a": "Evet. Büyük görevi kurbağan yap ve her göreve 25/5 ya da bir timebox ile odaklan."
+      }
+    ],
+    "seoTitle": "1-3-5 kuralı: gerçekçi bir günlük yapılacaklar listesi",
+    "seoDescription": "Gününü 1-3-5 kuralıyla planla: bir büyük, üç orta ve beş küçük görev. Sabit yerleri ve odak zamanlayıcısı olan ücretsiz planlayıcı."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Yarın için sıralı altı görev. Fazlası yok.",
+    "summary": "Ivy Lee yöntemi her akşam ertesi gün için önem sırasına göre en fazla altı görev yazmanı ve onları tek tek bitirmeni ister.",
+    "howItWorks": [
+      "Her günün sonunda yarın yapılacak en önemli altı şeyi listeler ve sıralarsın. Ertesi gün ilkinden başlar ve o bitmeden sonrakine geçmezsin. Bitmeyen görevler ertesi günün listesinin en üstüne geçer.",
+      "FocusKept sana yarın için altı sıralı yer içeren bir akşam planlama görünümü sunar ve bitmeyen görevleri aynı sırayla aktarır."
+    ],
+    "steps": [
+      "Akşam, yarın için en fazla altı görev yaz.",
+      "Onları gerçek önemlerine göre sırala.",
+      "Yarın 1. görev bitene kadar onun üzerinde çalış, sonra 2. göreve geç.",
+      "Bitmeyen görevler aynı sırayla ertesi günün listesine aktarılır."
+    ],
+    "bestFor": [
+      "Günü net bir planla kapatmak",
+      "Sabahlarını ne yapacağına karar vererek kaybedenler",
+      "Önemli işlerde istikrarlı ilerleme"
+    ],
+    "whenNotToUse": ["Önceliklerin saat başı değiştiği çok tepkisel roller"],
+    "faq": [
+      {
+        "q": "Neden sadece altı görev?",
+        "a": "Sınır seni seçmeye zorlar. Altı görev, günü aşırı yüklemeden verimli bir gün için yeterlidir."
+      },
+      {
+        "q": "Ivy Lee yöntemi nereden geliyor?",
+        "a": "Verimlilik danışmanı Ivy Lee, 1918'de bunu yöneticilere öğretti."
+      },
+      {
+        "q": "Acil bir görev çıkarsa ne olur?",
+        "a": "Onu hallet, sonra listene sırayla geri dön. Acil işler sürekli çıkıyorsa yarın için daha az görev planla."
+      }
+    ],
+    "seoTitle": "Ivy Lee yöntemi: yarın için altı görev planla",
+    "seoDescription": "Ivy Lee yöntemi: her akşam yarın için sıralı altı görev yaz. Bitmeyen görevler otomatik olarak aktarılır. Ücretsiz planlayıcı ve rehber."
+  }
+}

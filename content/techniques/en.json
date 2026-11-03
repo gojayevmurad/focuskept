@@ -1,0 +1,719 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "25 minutes of focus, 5 minutes of rest. Repeat.",
+    "summary": "The 25/5 method splits work into short, timed blocks separated by breaks. It makes starting easy and keeps your energy steady across a long day.",
+    "howItWorks": [
+      "You commit to one task for a single 25-minute block. During the block you work on nothing else: no email, no chat, no quick checks. When the timer rings, you stop and take a 5-minute break, even if you are in the middle of something.",
+      "After four blocks you take a longer break of 15 to 30 minutes. The fixed rhythm turns a vague goal like “study all afternoon” into small, countable units, which makes procrastination harder and progress visible. In FocusKept you can adjust the work block (10–60 min), the breaks and the number of cycles."
+    ],
+    "steps": [
+      "Pick one task and write down what “done” looks like for this block.",
+      "Start a 25-minute timer and work only on that task.",
+      "If a distraction pops up, note it down and return to the task.",
+      "When the timer rings, stop and take a 5-minute break away from the screen.",
+      "After four blocks, take a longer 15–30 minute break."
+    ],
+    "bestFor": [
+      "Getting started on tasks you have been putting off",
+      "Studying, reading and revision sessions",
+      "Days full of small, interruptible tasks"
+    ],
+    "whenNotToUse": [
+      "Deep creative or coding work where 25 minutes breaks your flow; try 52/17 or Deep work 90",
+      "Tasks driven by external timing, such as meetings or live calls"
+    ],
+    "faq": [
+      {
+        "q": "Why 25 minutes?",
+        "a": "Twenty-five minutes is long enough to make real progress and short enough that starting feels easy. It is a default, not a rule: many people settle on 30 to 50 minutes once the habit sticks."
+      },
+      {
+        "q": "What do I do if I finish the task early?",
+        "a": "Use the remaining minutes to review, polish or plan the next step. If you are truly done, end the block and start the next task fresh."
+      },
+      {
+        "q": "Should I skip the break when I’m in the zone?",
+        "a": "Short breaks keep your attention fresh over several hours. If breaks keep cutting your flow, switch to Flowtime or a longer work block instead of skipping them."
+      },
+      {
+        "q": "Does the 25/5 method work for studying?",
+        "a": "Yes. It pairs well with active recall: spend a block reading, then a block testing yourself. FocusKept’s Learning mode adds a Feynman explanation and spaced reviews on top."
+      }
+    ],
+    "seoTitle": "25/5 Focus Timer: The 25-Minute Work Method Explained",
+    "seoDescription": "Use the 25/5 method online: 25 minutes of focus, 5-minute breaks and a long break after four cycles. Free timer, step-by-step guide and tips."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 minutes of deep focus, 17 minutes of real rest.",
+    "summary": "The 52/17 method alternates longer focus blocks with generous breaks. It suits people who find 25 minutes too short to get into a task.",
+    "howItWorks": [
+      "You work with full concentration for 52 minutes, then step away for 17 minutes. The ratio comes from time-tracking data of highly productive office workers, who naturally worked in bursts of about an hour with substantial breaks.",
+      "The long break is the point: walk, stretch, get water, look out of a window. Coming back after a real rest makes the next 52 minutes as sharp as the first."
+    ],
+    "steps": [
+      "Choose a task that needs sustained attention.",
+      "Silence notifications and focus for 52 minutes.",
+      "Take a 17-minute break away from your screen.",
+      "Start the next 52-minute block with a fresh mind."
+    ],
+    "bestFor": [
+      "Writing, analysis and focused office work",
+      "People who find 25/5 breaks too frequent",
+      "Half-day blocks of deep work"
+    ],
+    "whenNotToUse": [
+      "When you struggle to start at all; a 25-minute block is gentler",
+      "Very short tasks that don’t need a long block"
+    ],
+    "faq": [
+      {
+        "q": "Is 52/17 better than 25/5?",
+        "a": "Neither is better for everyone. 52/17 gives more time to get into a task; 25/5 makes starting easier. FocusKept’s Lab compares your focus ratings so you can see which works for you."
+      },
+      {
+        "q": "What should I do during the 17-minute break?",
+        "a": "Anything that isn’t more screen work: move, hydrate, rest your eyes or get some daylight. Scrolling your phone tends to make the next block harder."
+      },
+      {
+        "q": "Can I change the numbers?",
+        "a": "The 52/17 timer keeps the classic ratio. Use the Custom timer if you want your own work and break lengths."
+      }
+    ],
+    "seoTitle": "52/17 Method Timer: Work 52 Minutes, Break 17",
+    "seoDescription": "Try the 52/17 productivity method: 52 minutes of focused work and 17-minute breaks. Free online timer with a simple guide to longer focus sessions."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Work until your focus fades, then rest in proportion.",
+    "summary": "Flowtime replaces a fixed timer with a stopwatch. You stop when your attention drops and take a break proportional to how long you worked.",
+    "howItWorks": [
+      "Start the timer and work on one task for as long as you stay focused. When you notice your attention slipping, stop. FocusKept suggests a break of one fifth of the time you worked, kept between 5 and 30 minutes: 40 minutes of work gives an 8-minute break, 2 hours gives 24 minutes.",
+      "Because you choose when to stop, Flowtime protects deep flow states while still making sure you rest. Over time your session log shows your natural focus length."
+    ],
+    "steps": [
+      "Pick one task and start the count-up timer.",
+      "Work until your focus genuinely fades, not at the first itch to switch.",
+      "Press “Take a break” and rest for the suggested time (worked ÷ 5, 5–30 min).",
+      "Start again when the break ends."
+    ],
+    "bestFor": [
+      "Creative work and coding where interruptions are costly",
+      "People who often skip 25/5 breaks",
+      "Learning your own natural focus span"
+    ],
+    "whenNotToUse": [
+      "When you tend to drift without a deadline; a fixed timer gives more structure",
+      "Days with hard time limits between meetings"
+    ],
+    "faq": [
+      {
+        "q": "How is the Flowtime break calculated?",
+        "a": "FocusKept suggests one fifth of the time you worked, with a minimum of 5 and a maximum of 30 minutes."
+      },
+      {
+        "q": "What if I never feel like stopping?",
+        "a": "Take a break at least every 90 minutes anyway. Long stretches without rest quietly lower quality even when they feel productive."
+      },
+      {
+        "q": "Is Flowtime good for beginners?",
+        "a": "If you already enjoy focused work, yes. If starting is the hard part, begin with 25/5 and move to Flowtime later."
+      }
+    ],
+    "seoTitle": "Flowtime Technique Timer: Flexible Focus Sessions",
+    "seoDescription": "The Flowtime Technique lets you work until your focus fades, then take a proportional break. Free count-up timer with automatic break suggestions."
+  },
+  "deep-work-90": {
+    "name": "Deep work 90",
+    "tagline": "One 90-minute block for your most demanding work.",
+    "summary": "Deep work 90 gives you a single, uninterrupted 90-minute session followed by a 20-minute break, matching the length of a natural attention cycle.",
+    "howItWorks": [
+      "Many people find their concentration rises and falls in cycles of roughly an hour and a half. A 90-minute block uses one full cycle for hard, meaningful work, then a 20-minute break lets you recover before the next one.",
+      "Treat the block like an important meeting with yourself: decide the task beforehand, close everything else and protect the time. One or two of these blocks a day can move your biggest projects forward."
+    ],
+    "steps": [
+      "Decide in advance which task deserves your deepest focus.",
+      "Close email and chat, silence your phone and start the 90-minute timer.",
+      "Work only on that task until the timer ends.",
+      "Take a full 20-minute break before anything else demanding."
+    ],
+    "bestFor": [
+      "Writing, research, design and complex programming",
+      "Your most important task of the day",
+      "Mornings or other high-energy hours"
+    ],
+    "whenNotToUse": [
+      "When you are tired or easily interrupted; start with shorter blocks",
+      "Shallow tasks like email or admin"
+    ],
+    "faq": [
+      {
+        "q": "Can I really focus for 90 minutes?",
+        "a": "It takes practice. Start with 50–60 minute blocks and lengthen them as the habit grows. The rating after each session shows how well it went."
+      },
+      {
+        "q": "How many deep work blocks should I do per day?",
+        "a": "Two to three is plenty for most people. Use the rest of the day for lighter work."
+      },
+      {
+        "q": "What counts as deep work?",
+        "a": "Work that needs your full attention and creates real value, such as writing, problem-solving or learning something difficult."
+      }
+    ],
+    "seoTitle": "Deep Work Timer: 90-Minute Focus Sessions",
+    "seoDescription": "Plan 90-minute deep work sessions with 20-minute breaks. A free timer and guide for focused, distraction-free work on what matters most."
+  },
+  "custom": {
+    "name": "Custom timer",
+    "tagline": "Your own work and break lengths, saved as presets.",
+    "summary": "The Custom timer lets you set any work block, short break, long break and cycle count, and save up to five presets.",
+    "howItWorks": [
+      "Not every task fits a famous ratio. With the Custom timer you choose how long to work (1–180 minutes), how long to rest and after how many blocks to take a long break.",
+      "Save your favourite combinations as presets so they are one tap away, for example “Reading 40/10” or “Exam prep 30/5”."
+    ],
+    "steps": [
+      "Set your work block, short break, long break and cycles.",
+      "Optionally save the combination as a preset (up to five).",
+      "Start the timer and follow the rhythm you designed."
+    ],
+    "bestFor": [
+      "Experimenting to find your own rhythm",
+      "Recurring routines with a fixed shape",
+      "Matching class, lab or exam lengths"
+    ],
+    "whenNotToUse": [
+      "When you are not sure where to start; try 25/5 first and adjust later"
+    ],
+    "faq": [
+      {
+        "q": "How many presets can I save?",
+        "a": "Up to five. You can edit or delete them in Settings."
+      },
+      {
+        "q": "How do I know which settings work best?",
+        "a": "Rate your focus after each session. The Lab compares your ratings across techniques and durations."
+      },
+      {
+        "q": "Which technique should I start with?",
+        "a": "If you have no preference, start with 25/5 for a week. Then adjust the work and break lengths in a custom preset based on your focus ratings."
+      }
+    ],
+    "seoTitle": "Custom Focus Timer with Presets",
+    "seoDescription": "Create your own focus timer: choose work and break lengths, long breaks and cycles, and save presets. Free and simple to use."
+  },
+  "timeboxing": {
+    "name": "Timeboxing",
+    "tagline": "Give a task a fixed box of time, then decide.",
+    "summary": "Timeboxing gives each task a fixed time budget. When the box ends you decide: done, extend once, or move it to later.",
+    "howItWorks": [
+      "Instead of working until a task is finished, you decide up front how much time it deserves, for example 30 minutes for a report draft. The limit pushes you to focus on what matters and stops perfectionism from eating your day.",
+      "When the box ends, FocusKept asks you to choose: mark it done, extend once by 25% of the box, or move the task to later. Any time beyond the original box is logged as overrun, so you learn how good your estimates are."
+    ],
+    "steps": [
+      "Pick a task and decide how many minutes it deserves.",
+      "Start the box and work only on that task.",
+      "When time is up, choose: done, extend once (+25%), or move to later.",
+      "Check your overrun in the stats to improve future estimates."
+    ],
+    "bestFor": [
+      "Tasks that expand to fill all available time",
+      "Perfectionists and over-polishers",
+      "Planning a day with many different tasks"
+    ],
+    "whenNotToUse": [
+      "Open-ended exploration where the outcome is unknown",
+      "Learning sessions that need repeated cycles"
+    ],
+    "faq": [
+      {
+        "q": "What happens if I don’t finish in time?",
+        "a": "You can extend once by a quarter of the box or move the task to later. Both are fine; the goal is a conscious decision."
+      },
+      {
+        "q": "How long should a timebox be?",
+        "a": "Between 15 and 90 minutes for most tasks. Shorter boxes create urgency; longer ones suit bigger pieces of work."
+      },
+      {
+        "q": "What is overrun?",
+        "a": "Time spent beyond the original box. A consistently high overrun means your estimates are optimistic."
+      }
+    ],
+    "seoTitle": "Timeboxing Technique: Timer and Guide",
+    "seoDescription": "Learn timeboxing: give each task a fixed time box, then finish, extend once or reschedule. Free timer that tracks your estimates and overrun."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Explain it simply. Find out what you really understand.",
+    "summary": "The Feynman Technique tests your understanding by explaining a topic in plain language, as if to a 12-year-old. The gaps in your explanation show you what to study next.",
+    "howItWorks": [
+      "Named after physicist Richard Feynman, the technique is simple: after studying a topic, write an explanation using everyday words and short sentences, as if teaching a curious 12-year-old. Jargon is a warning sign, because it often hides a gap.",
+      "Wherever you get stuck or wave your hands, go back to the source, fill the gap and simplify again. In FocusKept every Learning session ends with a Feynman explanation; AI then points out gaps and mistakes and turns your explanation into review questions."
+    ],
+    "steps": [
+      "Study the topic with your source material.",
+      "Close the source and explain the topic in simple words, as if to a 12-year-old.",
+      "Mark the places where you got stuck or used jargon.",
+      "Go back to the source to fill those gaps.",
+      "Simplify your explanation again until it flows."
+    ],
+    "bestFor": [
+      "Concepts, theories and how-things-work topics",
+      "Checking real understanding before an exam",
+      "Turning reading into lasting knowledge"
+    ],
+    "whenNotToUse": [
+      "Pure memorisation like vocabulary or dates; use active recall or spaced repetition",
+      "Skills that need hands-on practice rather than explanation"
+    ],
+    "faq": [
+      {
+        "q": "Why explain it to a 12-year-old?",
+        "a": "A child won’t accept jargon, so you have to know what the words mean. Simple language exposes vague understanding fast."
+      },
+      {
+        "q": "Do I need to say it out loud?",
+        "a": "Writing works just as well and leaves something you can review. In FocusKept your explanation becomes the core of your knowledge card."
+      },
+      {
+        "q": "What does the AI check?",
+        "a": "It looks for missing pieces and mistakes, gives a clarity score and suggests a simpler rewrite. You stay in charge: you edit and approve everything."
+      },
+      {
+        "q": "How long should my explanation be?",
+        "a": "A few clear paragraphs is ideal. FocusKept asks for at least 80 characters and allows up to 6,000."
+      }
+    ],
+    "seoTitle": "Feynman Technique: Learn Anything by Explaining It",
+    "seoDescription": "How to use the Feynman Technique: explain a topic simply, find the gaps and fix them. Free guide with AI feedback and automatic review questions."
+  },
+  "active-recall": {
+    "name": "Active recall",
+    "tagline": "Pull information out of memory instead of rereading it.",
+    "summary": "Active recall means testing yourself instead of rereading. Each time you retrieve an answer from memory, it becomes easier to retrieve the next time.",
+    "howItWorks": [
+      "Rereading feels productive but mostly builds familiarity, not memory. Active recall flips it: you close the material and ask yourself questions, write what you remember or solve problems without looking.",
+      "The effort of retrieval is what strengthens the memory. FocusKept turns your explanation into questions and asks them again on day 5, 10 and 30, so active recall happens automatically."
+    ],
+    "steps": [
+      "Study a section of your material once, carefully.",
+      "Close it and write down questions about the key ideas.",
+      "Answer the questions from memory, without looking.",
+      "Check your answers and mark what you missed.",
+      "Restudy only the parts you got wrong."
+    ],
+    "bestFor": [
+      "Exam preparation in any subject",
+      "Facts, definitions and processes",
+      "Making study time count"
+    ],
+    "whenNotToUse": [
+      "The very first encounter with a topic; understand it first, then recall"
+    ],
+    "faq": [
+      {
+        "q": "Is active recall better than rereading?",
+        "a": "Research on the testing effect consistently shows that retrieval practice leads to better long-term retention than rereading the same material."
+      },
+      {
+        "q": "What if I can’t remember anything?",
+        "a": "That is useful information. Look up the answer, then try again later. Struggling a little is part of how it works."
+      },
+      {
+        "q": "How does FocusKept use active recall?",
+        "a": "Every knowledge card has questions, and each review asks you to answer them before showing the solution."
+      }
+    ],
+    "seoTitle": "Active Recall Study Method: How to Use It",
+    "seoDescription": "Active recall is one of the most effective study methods. Learn how to test yourself, build better questions and remember more with less time."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Write down everything you remember, then compare.",
+    "summary": "Blurting is a quick active-recall exercise: after studying, write down everything you remember about a topic, then compare it with the source to find what you missed.",
+    "howItWorks": [
+      "After a study block, close your notes and write down everything you can remember, as fast as possible, in any order. Don’t worry about structure; the goal is to empty your head onto the page.",
+      "Then open the source and compare. Mark what was missing or wrong in another colour. Those gaps are exactly what to study next. In FocusKept the guide splits the session into a “dump everything” phase and a “compare with source” phase."
+    ],
+    "steps": [
+      "Study one section or topic.",
+      "Close the source and write everything you remember, without stopping.",
+      "Open the source and compare line by line.",
+      "Mark what you missed or got wrong.",
+      "Study the gaps, then blurt again later."
+    ],
+    "bestFor": [
+      "Revision of lecture or textbook chapters",
+      "Subjects with many connected facts, like history or biology",
+      "Quick checks between study blocks"
+    ],
+    "whenNotToUse": [
+      "Problem-solving subjects where practice questions work better"
+    ],
+    "faq": [
+      {
+        "q": "Should my blurt be organised?",
+        "a": "No. Speed matters more than order. Structure comes later when you compare."
+      },
+      {
+        "q": "How is blurting different from the Feynman Technique?",
+        "a": "Blurting checks what you can recall; Feynman checks whether you understand. FocusKept ends every Learning session with a Feynman step, so you get both."
+      },
+      {
+        "q": "How often should I blurt a topic?",
+        "a": "Right after studying it, then again a few days later. FocusKept’s spaced reviews on day 5, 10 and 30 give you natural moments to test yourself again."
+      }
+    ],
+    "seoTitle": "Blurting Method for Revision: Step-by-Step Guide",
+    "seoDescription": "The blurting technique: write down everything you remember, compare with your notes and fix the gaps. A fast, effective revision method."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review.",
+    "summary": "SQ3R is a five-step method for reading textbooks actively, so you understand and remember instead of just highlighting.",
+    "howItWorks": [
+      "SQ3R stands for Survey, Question, Read, Recite and Review. You first skim the structure, turn headings into questions, read to answer them, recite the answers from memory and finally review the whole chapter.",
+      "Each step gives your reading a purpose. FocusKept walks you through the five steps one by one with a place for notes at each stage."
+    ],
+    "steps": [
+      "Survey: skim headings, summaries and figures to see the big picture.",
+      "Question: turn each heading into a question you want answered.",
+      "Read: read one section at a time to answer its question.",
+      "Recite: close the book and answer the question in your own words.",
+      "Review: go over all questions and answers at the end."
+    ],
+    "bestFor": [
+      "Textbooks and long non-fiction chapters",
+      "Courses with lots of assigned reading",
+      "Students who highlight a lot but remember little"
+    ],
+    "whenNotToUse": [
+      "Fiction or light reading",
+      "Very short texts where the structure is obvious"
+    ],
+    "faq": [
+      {
+        "q": "Isn’t SQ3R slow?",
+        "a": "It takes longer than skimming but much less time than rereading a chapter three times before an exam."
+      },
+      {
+        "q": "Can I use SQ3R with online articles?",
+        "a": "Yes. Add the article as the source link and follow the same five steps."
+      },
+      {
+        "q": "Which step matters most?",
+        "a": "Recite. Answering from memory is what turns reading into knowledge. The other steps prepare you for it."
+      }
+    ],
+    "seoTitle": "SQ3R Reading Method: Survey, Question, Read, Recite, Review",
+    "seoDescription": "Learn the SQ3R method to read textbooks actively and remember more. A clear five-step guide with a built-in study timer."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Notes, cue questions and a summary on one page.",
+    "summary": "The Cornell note-taking system divides your notes into three parts: main notes, cue questions and a short summary, which turn notes into a ready-made self-test.",
+    "howItWorks": [
+      "During study you write main notes in the large area. Afterwards you add short cue questions or keywords in the side column that point to each idea. At the bottom you write a few sentences summarising the whole page.",
+      "To review, cover the notes and answer the cue questions from memory. FocusKept gives you the same three-part layout during the session and keeps it with your session."
+    ],
+    "steps": [
+      "Take notes in the main area while you study.",
+      "After studying, write cue questions next to each key idea.",
+      "Summarise the whole topic in 2–3 sentences at the bottom.",
+      "Review by covering the notes and answering the cues."
+    ],
+    "bestFor": [
+      "Lectures, videos and seminars",
+      "Courses where you review notes before exams",
+      "Turning notes into practice questions"
+    ],
+    "whenNotToUse": [
+      "Highly visual subjects where mind maps or diagrams work better"
+    ],
+    "faq": [
+      {
+        "q": "Who invented the Cornell method?",
+        "a": "Walter Pauk, an education professor at Cornell University, described it in the 1950s."
+      },
+      {
+        "q": "Do I need special paper?",
+        "a": "No. FocusKept provides the three areas on screen: notes, cue questions and summary."
+      },
+      {
+        "q": "How long should the summary be?",
+        "a": "Two or three sentences. If you can’t summarise the page briefly, you probably need to revisit part of it."
+      }
+    ],
+    "seoTitle": "Cornell Note-Taking Method: Template and Guide",
+    "seoDescription": "Use the Cornell note-taking system online: notes, cue questions and a summary in one layout. Free template with a focus timer."
+  },
+  "interleaving": {
+    "name": "Interleaving",
+    "tagline": "Mix related topics instead of studying one at a time.",
+    "summary": "Interleaving means switching between two to four related topics within a study session. It feels harder than blocked practice but improves your ability to choose the right approach.",
+    "howItWorks": [
+      "Instead of doing twenty problems of one type, then twenty of another, you mix them: A, B, C, A, C, B. Your brain must first recognise which kind of problem it is facing, a skill that blocked practice never trains.",
+      "In FocusKept you add 2 to 4 related topics, and the guide rotates the prompt between them at each work block."
+    ],
+    "steps": [
+      "Choose 2–4 related topics or problem types.",
+      "Study the first topic during the first work block.",
+      "Switch to the next topic at each new block, following the rotation.",
+      "Notice the differences between topics and why each approach fits."
+    ],
+    "bestFor": [
+      "Maths, physics and other problem-solving subjects",
+      "Languages: mixing grammar points",
+      "Skills where choosing the right method is the hard part"
+    ],
+    "whenNotToUse": [
+      "When a topic is completely new; learn the basics of each first"
+    ],
+    "faq": [
+      {
+        "q": "Why does interleaving feel harder?",
+        "a": "Because it is. Switching makes you work out which approach to use each time. That extra effort is what improves long-term learning."
+      },
+      {
+        "q": "How many topics should I mix?",
+        "a": "Two to four related topics. More than that becomes scattered."
+      },
+      {
+        "q": "Can I combine interleaving with 25/5?",
+        "a": "Yes. Each work block covers one topic and the next block switches, which gives interleaving a natural rhythm."
+      }
+    ],
+    "seoTitle": "Interleaving Study Technique: Mix Topics, Learn More",
+    "seoDescription": "Interleaved practice mixes related topics in one session. Learn how and when to use interleaving, with a timer that rotates topics for you."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Boxes that move cards forward when you know them.",
+    "summary": "The Leitner system sorts flashcards into boxes. Cards you answer correctly move to a box that is reviewed less often; mistakes send a card back.",
+    "howItWorks": [
+      "Sebastian Leitner’s system uses a series of boxes. New cards start in box 1, which you review often. Each correct answer moves a card one box forward, to be reviewed less frequently. A wrong answer moves it back.",
+      "FocusKept applies the same idea automatically: each review step (day 5, 10 and 30, then 60 days and longer) is a box. Pass a review and the card moves forward; miss a question and it comes back in 2 days."
+    ],
+    "steps": [
+      "Create cards with a question on one side and the answer on the other.",
+      "Review the cards in the first box most often.",
+      "Move a card forward one box when you answer correctly.",
+      "Move it back when you get it wrong.",
+      "In FocusKept, simply do your due reviews: the boxes are handled for you."
+    ],
+    "bestFor": [
+      "Vocabulary, definitions and formulas",
+      "Long-term memory with minimal planning",
+      "People who like a visible sense of progress"
+    ],
+    "whenNotToUse": [
+      "Understanding complex ideas; explain them first with the Feynman Technique"
+    ],
+    "faq": [
+      {
+        "q": "How does Leitner map onto FocusKept?",
+        "a": "Each review step is a box: day 5, day 10, day 30, then 60 days, doubling up to 180. Your card’s current step is its box."
+      },
+      {
+        "q": "What happens when I get a card wrong?",
+        "a": "It comes back for a relearning review in 2 days at the same step. Pass that review and it continues forward."
+      },
+      {
+        "q": "Do I need to move cards myself?",
+        "a": "No. FocusKept schedules every card for you, so you only answer the reviews that are due today."
+      }
+    ],
+    "seoTitle": "Leitner System: Flashcard Boxes Explained",
+    "seoDescription": "How the Leitner flashcard system works and how to use it with automatic spaced reviews. Simple guide with examples."
+  },
+  "spaced-repetition": {
+    "name": "Spaced repetition",
+    "tagline": "Review on day 5, 10 and 30, right before you’d forget.",
+    "summary": "Spaced repetition schedules reviews at growing intervals, so each review comes just as a memory starts to fade. It is the core of every FocusKept Learning session.",
+    "howItWorks": [
+      "Memory fades quickly after learning, but each successful review slows the forgetting. Spacing reviews out, with longer gaps each time, gives you the most retention for the least review time.",
+      "FocusKept schedules every knowledge card automatically: first review on day 5, then day 10 and day 30. After that the gap becomes 60 days and doubles with each pass, up to 180 days. Miss a question and the card returns in 2 days. You can change the three first steps in Settings."
+    ],
+    "steps": [
+      "Finish a Learning session and save your knowledge card.",
+      "Get a reminder when a review is due (email or browser).",
+      "Answer the card’s questions from memory.",
+      "Pass to move to the next interval; miss and the card returns in 2 days."
+    ],
+    "bestFor": [
+      "Anything you want to remember for months, not days",
+      "Exam preparation over several weeks",
+      "Professional knowledge you use rarely but need to keep"
+    ],
+    "whenNotToUse": [
+      "Cramming for tomorrow; spaced repetition works over weeks"
+    ],
+    "faq": [
+      {
+        "q": "Why day 5, 10 and 30?",
+        "a": "They are simple, memorable steps that spread reviews over the first month, when forgetting is fastest. You can adjust them in Settings."
+      },
+      {
+        "q": "What if I miss a review day?",
+        "a": "Overdue cards stay due until you review them. Nothing is lost; just catch up when you can."
+      },
+      {
+        "q": "Does a review have to be perfect?",
+        "a": "A review passes when every answer is correct. Partly right counts as a miss, so the card comes back sooner."
+      }
+    ],
+    "seoTitle": "Spaced Repetition: Review Schedule That Works",
+    "seoDescription": "Spaced repetition explained: review on day 5, 10 and 30, then at growing intervals. Automatic reminders and review questions in FocusKept."
+  },
+  "eat-the-frog": {
+    "name": "Eat the frog",
+    "tagline": "Do your hardest, most important task first.",
+    "summary": "Eat the frog means picking the one task you are most likely to avoid, and doing it first thing. Everything after feels easier.",
+    "howItWorks": [
+      "The “frog” is the important task you’d rather not do. If you tackle it at the start of the day, while your energy is highest, the rest of the day is free of that background dread.",
+      "In FocusKept you can mark exactly one frog per day. It is pinned to the top of today’s list and suggested as your first session."
+    ],
+    "steps": [
+      "The evening before or first thing, choose today’s frog: important and easy to avoid.",
+      "Mark it as the frog so it sits at the top of today.",
+      "Start your first focus session on the frog before anything else.",
+      "Keep going until it’s done or clearly moving."
+    ],
+    "bestFor": [
+      "Procrastination on important tasks",
+      "Mornings with high energy",
+      "Busy days that otherwise fill with small tasks"
+    ],
+    "whenNotToUse": [
+      "When the hardest task depends on someone else being available"
+    ],
+    "faq": [
+      {
+        "q": "Where does the name come from?",
+        "a": "From a saying often attributed to Mark Twain: if you have to eat a live frog, do it first thing in the morning. Brian Tracy turned it into a productivity method."
+      },
+      {
+        "q": "Can I have more than one frog?",
+        "a": "No, one per day keeps the decision clear. Choosing a new frog replaces the old one."
+      },
+      {
+        "q": "What if my frog is too big for one session?",
+        "a": "Break it down and make the first concrete step today’s frog. Starting is the hardest part."
+      }
+    ],
+    "seoTitle": "Eat the Frog Method: Do the Hardest Task First",
+    "seoDescription": "Beat procrastination with Eat the Frog: choose one important task and do it first. Simple guide and a focus timer that starts with your frog."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Sort tasks by urgent and important.",
+    "summary": "The Eisenhower Matrix sorts tasks into four quadrants by urgency and importance, so you know what to do now, schedule, delegate or drop.",
+    "howItWorks": [
+      "Each task goes into one of four quadrants: Do (urgent and important), Schedule (important, not urgent), Delegate (urgent, not important) and Delete (neither). The matrix makes it obvious when urgent noise is crowding out important work.",
+      "In FocusKept you drag tasks between quadrants, or move them with the keyboard. The Delete quadrant offers to archive tasks so they leave your list."
+    ],
+    "steps": [
+      "List your open tasks.",
+      "Place each task in Do, Schedule, Delegate or Delete.",
+      "Start a focus session on a task from Do.",
+      "Plan time for Schedule tasks so they don’t become urgent.",
+      "Hand off Delegate tasks and archive the Delete ones."
+    ],
+    "bestFor": [
+      "Overflowing to-do lists",
+      "Weekly planning",
+      "Telling real priorities from noise"
+    ],
+    "whenNotToUse": ["Short lists of equally important tasks"],
+    "faq": [
+      {
+        "q": "What if everything feels urgent and important?",
+        "a": "Ask what happens if a task waits a week. If nothing serious, it belongs in Schedule."
+      },
+      {
+        "q": "I work alone. What about Delegate?",
+        "a": "Use it for tasks you could automate, batch or ask someone for help with."
+      },
+      {
+        "q": "How often should I re-sort my matrix?",
+        "a": "A quick review once a day and a fuller one each week keeps the board honest as deadlines approach."
+      }
+    ],
+    "seoTitle": "Eisenhower Matrix: Urgent vs Important Task Planner",
+    "seoDescription": "Prioritise with the Eisenhower Matrix: sort tasks into do, schedule, delegate and delete. Free drag-and-drop board with a built-in focus timer."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "One big thing, three medium, five small. That’s today.",
+    "summary": "The 1-3-5 rule limits each day to one big task, three medium tasks and five small ones, which keeps plans realistic.",
+    "howItWorks": [
+      "Most to-do lists are too long to finish, which makes every day feel like failure. The 1-3-5 rule caps the day at nine tasks of different sizes: one that takes real effort, three that need some time, and five quick ones.",
+      "FocusKept gives today’s plan exactly those slots and won’t let you overfill them, so you choose deliberately."
+    ],
+    "steps": [
+      "Choose the one big task for today.",
+      "Add three medium tasks.",
+      "Fill five small tasks.",
+      "Start with the big one while your energy is high."
+    ],
+    "bestFor": [
+      "Realistic daily planning",
+      "People whose lists never end",
+      "Balancing deep work with small chores"
+    ],
+    "whenNotToUse": ["Days dominated by meetings or one single project"],
+    "faq": [
+      {
+        "q": "What if I finish everything early?",
+        "a": "Great. Enjoy the time or pull one more task from your backlog."
+      },
+      {
+        "q": "How do I decide the size of a task?",
+        "a": "Big takes a few hours, medium about an hour, small 15 minutes or less."
+      },
+      {
+        "q": "Can I combine 1-3-5 with other techniques?",
+        "a": "Yes. Make the big task your frog, and focus on each task with 25/5 or a timebox."
+      }
+    ],
+    "seoTitle": "1-3-5 Rule: A Realistic Daily To-Do List",
+    "seoDescription": "Plan your day with the 1-3-5 rule: one big task, three medium and five small. Free planner with fixed slots and a focus timer."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Six tasks for tomorrow, in order. Nothing more.",
+    "summary": "The Ivy Lee method asks you to write down up to six tasks for tomorrow each evening, in order of importance, and work through them one at a time.",
+    "howItWorks": [
+      "At the end of each day you list the six most important things to do tomorrow and rank them. The next day you start with the first and don’t move on until it’s done. Unfinished tasks go to the top of the next day’s list.",
+      "FocusKept gives you an evening planning view for tomorrow with six ordered slots, and rolls unfinished tasks over in order."
+    ],
+    "steps": [
+      "In the evening, write down up to six tasks for tomorrow.",
+      "Order them by real importance.",
+      "Tomorrow, work on task 1 until it’s done, then move to task 2.",
+      "Unfinished tasks roll over to the next day’s list, in order."
+    ],
+    "bestFor": [
+      "Ending the day with a clear plan",
+      "People who lose mornings deciding what to do",
+      "Steady progress on important work"
+    ],
+    "whenNotToUse": ["Highly reactive roles where priorities change hourly"],
+    "faq": [
+      {
+        "q": "Why only six tasks?",
+        "a": "The limit forces you to choose. Six is enough to fill a productive day without overwhelming it."
+      },
+      {
+        "q": "Where did the Ivy Lee method come from?",
+        "a": "Productivity consultant Ivy Lee taught it to executives in 1918."
+      },
+      {
+        "q": "What if an urgent task comes up?",
+        "a": "Handle it, then return to the list in order. If urgent work keeps appearing, plan fewer tasks for tomorrow."
+      }
+    ],
+    "seoTitle": "Ivy Lee Method: Plan Six Tasks for Tomorrow",
+    "seoDescription": "The Ivy Lee method: each evening, list six tasks for tomorrow in order. Unfinished tasks roll over automatically. Free planner and guide."
+  }
+}

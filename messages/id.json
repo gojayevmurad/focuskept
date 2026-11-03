@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "Navigasi utama",
+      "appNavigation": "Navigasi aplikasi",
+      "skipToContent": "Langsung ke konten",
+      "techniques": "Teknik",
+      "pricing": "Harga",
+      "about": "Tentang",
+      "signIn": "Masuk",
+      "tasks": "Tugas",
+      "cards": "Kartu",
+      "stats": "Statistik",
+      "settings": "Pengaturan",
+      "billing": "Tagihan",
+      "signOut": "Keluar",
+      "timer": "Timer",
+      "guide": "Panduan",
+      "howItWorks": "Cara kerjanya",
+      "menu": "Menu",
+      "account": "Akun dan pengaturan",
+      "reviewsDue": "Ada kartu yang menunggu diulang"
+    },
+    "theme": {
+      "label": "Tema",
+      "dark": "Gelap",
+      "light": "Terang",
+      "system": "Sistem"
+    },
+    "language": {
+      "label": "Bahasa"
+    },
+    "actions": {
+      "save": "Simpan",
+      "saving": "Menyimpan…",
+      "retry": "Coba lagi"
+    },
+    "status": {
+      "error": "Ada yang salah. Silakan coba lagi.",
+      "offline": "Kamu sedang offline. Sesimu tersimpan di perangkat ini dan akan disinkronkan saat kamu kembali online."
+    },
+    "consent": {
+      "label": "Preferensi analitik",
+      "text": "Bolehkah kami mengumpulkan data penggunaan anonim untuk meningkatkan FocusKept? Tidak ada yang dilacak sampai kamu memilih.",
+      "allow": "Izinkan",
+      "decline": "Tidak, terima kasih"
+    },
+    "footer": {
+      "tagline": "Fokus mendalam. Ingat yang kamu pelajari.",
+      "product": "Produk",
+      "company": "Perusahaan",
+      "legal": "Hukum",
+      "focusTimer": "Timer fokus",
+      "learningMode": "Mode belajar",
+      "contact": "Kontak",
+      "privacy": "Privasi",
+      "terms": "Ketentuan",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — Fokus mendalam. Ingat yang kamu pelajari.",
+    "defaultDescription": "Timer fokus dengan 18 teknik teruji, penjelasan ala Feynman, pertanyaan buatan AI, dan pengulangan berjarak otomatis di hari ke-5, 10, dan 30.",
+    "signIn": "Masuk",
+    "signUp": "Buat akunmu",
+    "verifyEmail": "Cek kotak masukmu",
+    "forgotPassword": "Atur ulang kata sandi",
+    "resetPassword": "Pilih kata sandi baru",
+    "settings": "Pengaturan",
+    "security": "Keamanan",
+    "billing": "Tagihan",
+    "focusTitle": "Timer fokus",
+    "focusDescription": "Timer fokus gratis dengan 25/5, 52/17, Flowtime, Deep Work 90, kotak waktu, dan preset kustom. Tanpa perlu akun.",
+    "tasks": "Tugas",
+    "learnTitle": "Mode belajar: pelajari, jelaskan, ingat",
+    "learnDescription": "Pelajari topik, jelaskan dengan kata-katamu sendiri, dapatkan masukan dan pertanyaan dari AI, lalu ulangi otomatis di hari ke-5, 10, dan 30.",
+    "learnNew": "Sesi belajar baru",
+    "explain": "Jelaskan yang kamu pelajari",
+    "cards": "Kartu pengetahuan",
+    "card": "Kartu pengetahuan",
+    "review": "Pengulangan",
+    "stats": "Statistik",
+    "pricingTitle": "Harga: Gratis dan Pro",
+    "pricingDescription": "FocusKept gratis untuk memulai. Pro $5 per bulan atau $40 per tahun: kartu tanpa batas, lebih banyak masukan AI, Lab lengkap, dan laporan mingguan.",
+    "techniquesTitle": "18 teknik fokus, belajar, dan perencanaan",
+    "techniquesDescription": "25/5, 52/17, Flowtime, Feynman, mengingat aktif, SQ3R, Eisenhower, dan lainnya: cara kerja tiap teknik, kapan memakainya, dan timer gratis untuk mencobanya."
+  },
+  "errors": {
+    "notFoundTitle": "Halaman ini tidak ada.",
+    "notFoundText": "Tautannya mungkin sudah lama, atau halamannya sudah dipindah.",
+    "backHome": "Kembali ke beranda",
+    "errorTitle": "Ada yang tidak berjalan sesuai rencana.",
+    "errorText": "Silakan coba lagi sebentar lagi. Kalau terus terjadi, beri tahu kami."
+  },
+  "auth": {
+    "signInTitle": "Selamat datang kembali",
+    "signInLead": "Masuk untuk melanjutkan sesi fokus dan pengulanganmu.",
+    "signUpTitle": "Buat akunmu",
+    "signUpLead": "Simpan yang kamu pelajari dan dapatkan pengingat di hari ke-5, 10, dan 30.",
+    "forgotTitle": "Atur ulang kata sandi",
+    "forgotLead": "Kami akan mengirim tautan aman lewat email untuk memilih kata sandi baru.",
+    "resetTitle": "Pilih kata sandi baru",
+    "resetLead": "Gunakan minimal 12 karakter.",
+    "verifyTitle": "Cek kotak masukmu",
+    "verifyLead": "Kami sudah mengirim tautan verifikasi. Buka untuk mengaktifkan akunmu — tautan itu akan membawamu kembali ke sini dalam keadaan sudah masuk.",
+    "verifyHint": "Tidak ketemu? Cek folder spam, atau masuk lagi untuk mendapatkan tautan baru.",
+    "name": "Namamu",
+    "namePlaceholder": "Dewi Lestari",
+    "email": "Alamat email",
+    "emailPlaceholder": "kamu@contoh.com",
+    "password": "Kata sandi",
+    "passwordPlaceholder": "Minimal 12 karakter",
+    "newPassword": "Kata sandi baru",
+    "forgotLink": "Lupa kata sandi?",
+    "submitSignIn": "Masuk",
+    "submitSignUp": "Buat akun",
+    "submitForgot": "Kirim tautan atur ulang",
+    "submitReset": "Perbarui kata sandi",
+    "google": "Lanjutkan dengan Google",
+    "or": "atau",
+    "haveAccount": "Sudah punya akun?",
+    "noAccount": "Baru di FocusKept?",
+    "createAccount": "Buat akun",
+    "signInLink": "Masuk",
+    "legal": "Dengan melanjutkan, kamu menyetujui <terms>Ketentuan</terms> dan <privacy>Kebijakan Privasi</privacy> kami.",
+    "resetSent": "Jika ada akun dengan email itu, tautan atur ulang sedang dikirim.",
+    "resetDone": "Kata sandi diperbarui. Sekarang kamu bisa masuk.",
+    "invalidCredentials": "Masukkan email yang valid dan kata sandi 12–128 karakter.",
+    "invalidPassword": "Gunakan kata sandi 12–128 karakter.",
+    "wrongCredentials": "Email dan kata sandi itu tidak cocok.",
+    "emailNotVerified": "Verifikasi email-mu dulu. Kami baru saja mengirim tautan baru.",
+    "userExists": "Akun dengan email ini sudah ada. Coba masuk.",
+    "tooManyAttempts": "Terlalu banyak percobaan. Tunggu sebentar lalu coba lagi.",
+    "invalidToken": "Tautan ini sudah kedaluwarsa atau sudah dipakai. Minta yang baru.",
+    "learningContext": "Daftar untuk memulai sesi belajar tentang “{topic}”."
+  },
+  "email": {
+    "verification": {
+      "subject": "Konfirmasi email-mu untuk FocusKept",
+      "heading": "Konfirmasi email-mu",
+      "body": "Ketuk tombol di bawah untuk mengaktifkan akun FocusKept-mu. Kamu akan langsung masuk dan kembali ke tempat terakhirmu.",
+      "button": "Konfirmasi email",
+      "ignore": "Kalau kamu tidak membuat akun, abaikan saja email ini."
+    },
+    "reset": {
+      "subject": "Atur ulang kata sandi FocusKept-mu",
+      "heading": "Atur ulang kata sandi",
+      "body": "Gunakan tautan aman di bawah untuk memilih kata sandi baru. Tautan ini segera kedaluwarsa dan hanya bisa dipakai sekali.",
+      "button": "Pilih kata sandi baru",
+      "ignore": "Kalau kamu tidak memintanya, abaikan saja email ini. Kata sandimu tetap sama."
+    },
+    "footer": {
+      "transactional": "Kamu menerima email ini karena ada tindakan di akun FocusKept-mu.",
+      "reviews": "Kamu menerima ini karena pengingat pengulangan aktif di akun FocusKept-mu.",
+      "weekly": "Kamu menerima laporan mingguan ini karena fitur ini aktif di akun FocusKept Pro-mu.",
+      "unsubscribe": "Berhenti berlangganan"
+    },
+    "digest": {
+      "subject": "{count, plural, other {# kartu untuk diulang hari ini}}",
+      "preview": "{count, plural, other {# kartu siap diulang.}}",
+      "heading": "{count, plural, other {Waktunya mengulang # kartu}}",
+      "intro": "Mengulang sekarang, tepat sebelum kamu lupa, yang membuatnya melekat:",
+      "more": "{count, plural, other {…dan # lagi}}",
+      "estimate": "{minutes, plural, other {Sekitar # menit.}}",
+      "button": "Mulai mengulang"
+    },
+    "weekly": {
+      "subject": "Minggumu di FocusKept",
+      "preview": "{minutes, plural, other {# menit fokus minggu lalu.}}",
+      "heading": "Minggumu dalam fokus",
+      "intro": "Begini minggu lalumu.",
+      "focus": "Waktu fokus",
+      "minutes": "{minutes, plural, other {# menit}}",
+      "sessions": "Sesi",
+      "best": "Teknik terbaik",
+      "cards": "Kartu dibuat",
+      "retention": "Retensi",
+      "streak": "Runtunan",
+      "days": "{count, plural, other {# hari}}",
+      "suggestionTitle": "Satu saran untuk minggu ini",
+      "suggestions": {
+        "start": "Mulai dari yang kecil: satu blok 25 menit di hari Senin sudah cukup untuk memulai.",
+        "retention": "Kamu lulus {percent, number}% pengulangan. Baca ulang penjelasanmu sebelum mengulang kartu, dan buat jawaban yang singkat.",
+        "goal": "Kamu mencapai {percent, number}% target mingguanmu. Tambahkan satu sesi lagi di tengah minggu.",
+        "bestTechnique": "Fokusmu paling baik dengan {technique}. Rencanakan dua sesi terpentingmu dengan teknik itu.",
+        "keepGoing": "Minggu yang hebat. Pertahankan ritme ini dan jaga waktu fokusmu."
+      },
+      "recapTitle": "Yang kamu pelajari di bulan {month}",
+      "recapText": "{cards, plural, other {# kartu dibuat}} · retensi {retention}",
+      "button": "Buka statistikmu"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, other {# kartu untuk diulang}}",
+      "reviewsBody": "Beberapa menit sekarang menjaganya tetap di ingatan.",
+      "streakTitle": "{count, plural, other {Jaga runtunan # harimu}}",
+      "streakBody": "Satu sesi singkat hari ini menjaganya tetap berlanjut."
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "Analitik",
+      "text": "Analitik produk anonim yang opsional. Catatan, penjelasan, dan jawabanmu tidak pernah dikirim.",
+      "allow": "Izinkan analitik",
+      "disable": "Matikan analitik",
+      "enabled": "Analitik diaktifkan.",
+      "disabled": "Analitik dimatikan.",
+      "error": "Tidak bisa memperbarui preferensimu."
+    },
+    "title": "Pengaturan",
+    "lead": "Akun, preferensi, dan pengingatmu.",
+    "account": {
+      "title": "Akun",
+      "displayName": "Nama tampilan",
+      "saved": "Perubahan disimpan.",
+      "securityLink": "Kata sandi dan sesi",
+      "billingLink": "Paket dan tagihan"
+    },
+    "security": {
+      "title": "Keamanan",
+      "lead": "Jaga akunmu tetap aman.",
+      "backToSettings": "Kembali ke pengaturan",
+      "passwordTitle": "Ganti kata sandi",
+      "passwordText": "Mengganti kata sandi akan mengeluarkanmu dari perangkat lain.",
+      "currentPassword": "Kata sandi saat ini",
+      "newPassword": "Kata sandi baru",
+      "passwordHint": "Minimal 12 karakter.",
+      "changePassword": "Ganti kata sandi",
+      "passwordChanged": "Kata sandi diganti.",
+      "passwordError": "Tidak bisa mengganti kata sandi. Periksa kata sandi saat ini lalu coba lagi.",
+      "sessionsTitle": "Sesi login",
+      "sessionsText": "Tetap masuk di sini dan keluar dari semua tempat lain.",
+      "revokeOthers": "Keluar dari sesi lain",
+      "revoked": "Sesi lain sudah dikeluarkan.",
+      "revokeError": "Tidak bisa keluar dari sesi lain."
+    },
+    "delete": {
+      "title": "Hapus akun",
+      "text": "Menghapus akunmu secara permanen beserta semua isinya: sesi, tugas, kartu, dan pengulangan. Akun dengan riwayat tagihan perlu ditinjau sebentar oleh tim dukungan agar tidak ada langganan yang tertinggal. Ekspor datamu dulu kalau ingin menyimpan salinan.",
+      "word": "HAPUS",
+      "typeToConfirm": "Ketik {word} untuk konfirmasi",
+      "password": "Kata sandimu",
+      "submit": "Hapus akunku",
+      "billingBlocked": "Akunmu punya riwayat tagihan. Kirim email ke kami dan kami akan menutupnya untukmu.",
+      "error": "Tidak bisa menghapus akunmu. Periksa kata sandimu lalu coba lagi."
+    },
+    "prefs": {
+      "saved": "Pengaturan disimpan.",
+      "general": "Umum",
+      "timezone": "Zona waktu",
+      "useDeviceZone": "Gunakan zona waktu perangkat ini ({zone})",
+      "weekStart": "Minggu dimulai pada",
+      "weeklyGoal": "Target fokus mingguan (jam)",
+      "weeklyGoalHint": "Ditampilkan di statistikmu. 0 mematikannya.",
+      "techniques": "Teknik",
+      "defaultTime": "Teknik waktu bawaan",
+      "defaultMethod": "Metode belajar bawaan",
+      "timebox": "Kotak waktu bawaan (menit)",
+      "presets": "Preset kustom",
+      "deletePreset": "Hapus preset “{name}”",
+      "reviewSteps": "Jadwal pengulangan",
+      "reviewStepsText": "Jumlah hari setelah kartu disimpan untuk tiga pengulangan pertamanya. Setelah langkah terakhir, pengulangan pindah ke 60 hari lalu berlipat dua, hingga 180 hari.",
+      "stepN": "Pengulangan {n, number} (hari)",
+      "resetSteps": "Kembalikan ke 5 / 10 / 30",
+      "stepsInvalid": "Gunakan tiga angka yang naik, antara 1 dan 365.",
+      "notifications": "Pengingat dan notifikasi",
+      "reminderTime": "Waktu pengingat harian",
+      "reminderTimeHint": "Saat ada pengulangan yang jatuh tempo, kamu mendapat satu pengingat di jam ini.",
+      "emailReviews": "Email pengingat pengulangan",
+      "emailReviewsHint": "Satu email di hari yang ada pengulangannya. Tidak pernah satu per kartu.",
+      "emailWeekly": "Email laporan mingguan",
+      "emailWeeklyHint": "Setiap Senin pukul 09.00: minggumu dalam fokus dan satu saran.",
+      "emailWeeklyPro": "Fitur Pro. Aktifkan sekarang dan akan mulai saat kamu upgrade.",
+      "streakNudge": "Pengingat runtunan",
+      "streakNudgeHint": "Notifikasi browser yang lembut pukul 19.00 jika runtunan 3+ hari akan terputus hari ini.",
+      "browser": "Notifikasi browser",
+      "browserHint": "Pengingat pengulangan di perangkat ini, selain lewat email.",
+      "browserDisable": "Matikan di perangkat ini",
+      "browserOff": "Pengingat browser mati di perangkat ini.",
+      "browserUnavailable": "Tidak tersedia di browser ini atau belum diatur.",
+      "hours": "Jam notifikasi",
+      "hoursHint": "Notifikasi browser hanya dikirim di jam-jam ini. Pengingat email harian tidak terpengaruh.",
+      "from": "{day}: dari",
+      "to": "{day}: sampai",
+      "export": "Datamu",
+      "exportText": "Unduh semua yang disimpan FocusKept tentang dirimu, di paket apa pun.",
+      "exportJson": "Semuanya (JSON)",
+      "exportCsv": {
+        "sessions": "Sesi (CSV)",
+        "cards": "Kartu (CSV)",
+        "reviews": "Pengulangan (CSV)"
+      }
+    }
+  },
+  "billing": {
+    "title": "Tagihan",
+    "lead": "Paket, faktur, dan detail pembayaranmu.",
+    "currentPlan": "Paket saat ini",
+    "free": "Gratis",
+    "pro": "Pro",
+    "syncNote": "Paketmu diperbarui otomatis setelah Polar mengonfirmasi pembayaran. Kembali dari halaman checkout saja tidak mengubahnya, jadi mungkin perlu waktu sebentar.",
+    "returned": "Terima kasih! Kami akan memperbarui paketmu segera setelah pembayaran dikonfirmasi.",
+    "manage": "Kelola langganan",
+    "seePlans": "Lihat paket",
+    "connecting": "Menghubungkan…",
+    "notConfigured": "Pembayaran belum diatur. Tidak ada yang ditagih.",
+    "unavailable": "Tagihan sedang tidak tersedia. Silakan coba lagi.",
+    "renewsOn": "Diperpanjang pada {date}.",
+    "endsOn": "Dibatalkan. Pro tetap aktif hingga {date}."
+  },
+  "landing": {
+    "heroTitle": "Fokus mendalam. Ingat yang kamu pelajari.",
+    "heroLead": "FocusKept adalah timer fokus yang tenang dengan 18 teknik teruji. Saat kamu belajar, penjelasanmu sendiri diubah menjadi pertanyaan, dan kamu diingatkan untuk mengulang di hari ke-5, 10, dan 30.",
+    "question": "Apa yang kamu kerjakan hari ini?",
+    "workTitle": "Kerja",
+    "workText": "Pilih tugas dan teknik, lalu fokus. Tanpa perlu akun.",
+    "learnTitle": "Belajar",
+    "learnText": "Pelajari topik, jelaskan dengan kata-katamu sendiri, dan ingat terus.",
+    "noCard": "Gratis untuk memulai. Tanpa kartu kredit.",
+    "loop": {
+      "eyebrow": "Cara kerjanya",
+      "title": "Dari fokus ke ingatan yang bertahan",
+      "lead": "Timer membantumu memulai. Mengingat butuh satu langkah lagi. FocusKept melengkapinya untukmu.",
+      "focus": {
+        "title": "Fokus",
+        "text": "Bekerja dalam blok waktu dengan 25/5, 52/17, Flowtime, atau teknik lain."
+      },
+      "explain": {
+        "title": "Jelaskan",
+        "text": "Tulis yang kamu pelajari seolah untuk anak 12 tahun: itulah teknik Feynman."
+      },
+      "questions": {
+        "title": "Dapatkan pertanyaan",
+        "text": "AI menunjukkan celah dan mengubah penjelasanmu menjadi pertanyaan pengulangan yang bisa kamu edit."
+      },
+      "review": {
+        "title": "Ulangi tepat waktu",
+        "text": "Kami mengingatkanmu di hari ke-5, 10, dan 30, tepat sebelum kamu lupa."
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman, dibuat praktis",
+      "title": "Jelaskan dengan sederhana. Lihat apa yang benar-benar kamu pahami.",
+      "lead": "Setelah sesi belajar, kamu menjelaskan topik dengan kata-katamu sendiri. Kamu mendapat skor kejelasan, apa yang kurang, apa yang keliru, dan pertanyaan untuk pengulangan.",
+      "cta": "Coba mode belajar",
+      "label": "Contoh penjelasan dengan masukan AI",
+      "badge": "Contoh",
+      "topic": "Topik: Fotosintesis",
+      "explanation": "Tumbuhan membuat makanannya sendiri. Daunnya menangkap sinar matahari, mengambil air dari akar dan udara lewat lubang-lubang kecil, lalu mengubahnya menjadi gula. Sisanya adalah oksigen, yang kita hirup.",
+      "feedback": "Masukan",
+      "clarity": "Kejelasan 82/100",
+      "gap": "Kurang: gas dari udara itu adalah karbon dioksida.",
+      "mistake": "Kurang jelas: sinar matahari memberi energi; sinar itu sendiri tidak berubah menjadi gula.",
+      "questionsLabel": "Pertanyaan pengulangan",
+      "q1": "Gas apa yang diambil tumbuhan dari udara untuk membuat gula?",
+      "q2": "Benar atau salah: tumbuhan melepaskan oksigen sebagai produk sampingan.",
+      "q3": "Tumbuhan memakai energi dari ____ untuk membuat gula.",
+      "schedule": "Disimpan sebagai kartu. Pengulangan di hari ke-5, 10, dan 30."
+    },
+    "techniques": {
+      "eyebrow": "18 teknik",
+      "title": "Semua teknik, dalam satu tempat",
+      "lead": "Teknik waktu untuk fokus, metode belajar untuk memahami, teknik perencanaan untuk harimu. Setiap halaman menjelaskannya dan langsung bisa dicoba."
+    },
+    "pricing": {
+      "title": "Gratis untuk memulai, adil saat kamu berkembang",
+      "lead": "Semua yang kamu butuhkan gratis. Pro {monthly} per bulan atau {yearly} per tahun.",
+      "points": {
+        "1": "Semua teknik, tugas, statistik, dan pengingat di paket Gratis",
+        "2": "Pro: kartu tanpa batas dan masukan AI untuk setiap kartu",
+        "3": "Pro: Lab lengkap dan laporan mingguan"
+      },
+      "cta": "Bandingkan paket"
+    },
+    "faq": {
+      "title": "Pertanyaan",
+      "1": {
+        "q": "Apakah aku perlu akun?",
+        "a": "Untuk mode kerja tidak: langsung mulai timer saja. Mode belajar butuh akun gratis agar kami bisa menyimpan kartumu dan mengirim pengingat pengulangan."
+      },
+      "2": {
+        "q": "Apakah ada aplikasi seluler?",
+        "a": "FocusKept berjalan di browser pada perangkat apa pun. Kamu bisa memasangnya di layar utama, dan pengingat datang lewat email dan notifikasi browser."
+      },
+      "3": {
+        "q": "Bagaimana AI memakai penjelasanku?",
+        "a": "Penjelasanmu dikirim ke OpenAI untuk membuat masukan dan pertanyaan. Jangan sertakan informasi pribadi atau sensitif. Detailnya ada di kebijakan privasi kami."
+      },
+      "4": {
+        "q": "Kenapa hari ke-5, 10, dan 30?",
+        "a": "Pengulangan yang tersebar di bulan pertama, saat lupa terjadi paling cepat, menjaga pengetahuan untuk jangka panjang dengan sedikit usaha. Kamu bisa mengubah langkahnya di Pengaturan."
+      },
+      "5": {
+        "q": "Bahasa apa saja yang tersedia?",
+        "a": "FocusKept tersedia dalam 24 bahasa. Penjelasan dan pertanyaanmu berfungsi dalam bahasa apa pun yang kamu tulis."
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "Waktu",
+    "goalLabel": "Target",
+    "paused": "Dijeda",
+    "announce": "{phase}",
+    "block": "Blok {current} dari {total}",
+    "focusedSoFar": "{duration} fokus",
+    "flowHint": "Berhenti saat fokusmu memudar",
+    "phase": {
+      "idle": "Siap kapan pun kamu siap",
+      "work": "Fokus",
+      "short_break": "Istirahat pendek",
+      "long_break": "Istirahat panjang",
+      "ready": "Siap untuk blok berikutnya",
+      "box_ended": "Waktu habis",
+      "finished": "Sesi selesai"
+    },
+    "controls": {
+      "start": "Mulai",
+      "startNext": "Mulai blok berikutnya",
+      "pause": "Jeda",
+      "resume": "Lanjutkan",
+      "skip": "Lewati",
+      "skipBreak": "Lewati istirahat",
+      "takeBreak": "Istirahat",
+      "finish": "Akhiri sesi",
+      "fullscreen": "Layar penuh",
+      "exitFullscreen": "Keluar layar penuh",
+      "shortcuts": "Pintasan",
+      "close": "Tutup"
+    },
+    "box": {
+      "title": "Waktu habis. Lalu apa?",
+      "done": "Selesai",
+      "extend": "Perpanjang sekali (+{duration})",
+      "later": "Tunda ke nanti"
+    },
+    "tips": {
+      "1": "Berdiri dan regangkan badan selama semenit.",
+      "2": "Minum segelas air.",
+      "3": "Istirahatkan mata: lihat sesuatu sekitar 6 meter jauhnya selama 20 detik.",
+      "4": "Jalan sebentar, walau hanya keliling ruangan.",
+      "5": "Putar bahumu dan tarik napas pelan beberapa kali.",
+      "6": "Buka jendela atau keluar untuk menghirup udara segar."
+    },
+    "notify": {
+      "breakTitle": "Waktunya istirahat",
+      "breakBody": "Istirahat {duration}. Jauhkan diri dari layar.",
+      "focusTitle": "Kembali fokus",
+      "readyTitle": "Istirahat selesai",
+      "readyBody": "Siap untuk blok berikutnya?",
+      "boxTitle": "Waktu habis",
+      "boxBody": "Selesai, perpanjang sekali, atau tunda ke nanti?"
+    },
+    "shortcuts": {
+      "title": "Pintasan keyboard",
+      "keySpace": "Spasi",
+      "keyEsc": "Esc",
+      "space": "Mulai, jeda, atau lanjutkan",
+      "skip": "Lewati fase saat ini",
+      "fullscreen": "Ganti layar penuh",
+      "exit": "Keluar layar penuh",
+      "help": "Tampilkan daftar ini"
+    },
+    "sound": {
+      "title": "Suara",
+      "chime": "Bunyi saat fase berganti",
+      "chimeVolume": "Volume bunyi",
+      "background": "Suara latar",
+      "backgroundVolume": "Volume suara latar",
+      "hint": "Suara latar hanya diputar saat kamu fokus.",
+      "done": "Selesai",
+      "kinds": {
+        "none": "Tidak ada",
+        "white": "Derau putih",
+        "pink": "Derau merah muda",
+        "brown": "Derau cokelat",
+        "rain": "Hujan",
+        "cafe": "Kafe",
+        "stream": "Sungai kecil",
+        "ocean": "Ombak laut",
+        "wind": "Angin",
+        "fire": "Perapian",
+        "night": "Malam musim panas",
+        "binaural": "Ketukan binaural"
+      },
+      "groups": {
+        "noise": "Derau",
+        "nature": "Alam",
+        "tones": "Nada",
+        "places": "Tempat"
+      },
+      "about": {
+        "white": "Desis rata yang menutupi obrolan",
+        "pink": "Lebih lembut, seperti hujan tetap",
+        "brown": "Gemuruh dalam, tanpa desis",
+        "rain": "Hujan ringan dengan tetesan",
+        "stream": "Sungai kecil di atas batu",
+        "ocean": "Ombak pelan setiap beberapa detik",
+        "wind": "Angin yang naik dan turun",
+        "fire": "Kayu bakar yang berderak",
+        "night": "Jangkrik di malam yang tenang",
+        "binaural": "Ketukan 16 Hz, pakai headphone",
+        "cafe": "Riuh kafe yang ramai"
+      },
+      "headphones": "Pakai headphone: tiap telinga mendengar nada yang sedikit berbeda, dan otakmu mendengar ketukan 16 Hz di antaranya. Jaga volume tetap rendah.",
+      "previewHint": "Pilih suara untuk mendengarnya. Suara hanya diputar saat kamu fokus.",
+      "tip": "Suara tanpa kata paling efektif: lirik dan percakapan memperlambat membaca dan menghafal."
+    },
+    "taskLabel": "Tugas"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "Tanpa perlu akun. Sesi disimpan di perangkat ini.",
+      "durations": {
+        "work": "Fokus (menit)",
+        "shortBreak": "Istirahat pendek (menit)",
+        "longBreak": "Istirahat panjang (menit)",
+        "cycles": "Blok sebelum istirahat panjang",
+        "box": "Panjang kotak (menit)"
+      }
+    },
+    "end": {
+      "ratingValue": "{value} dari 5",
+      "discardConfirm": "Buang sesi ini? Sesi tidak akan disimpan.",
+      "tooShort": "Sesi ini kurang dari semenit, jadi tidak dihitung dalam statistikmu."
+    },
+    "import": {
+      "title": "Bawa sesimu?",
+      "text": "Kami menemukan {sessions, plural, other {# sesi}} dan {tasks, plural, other {# tugas}} di perangkat ini. Impor ke akunmu?",
+      "confirm": "Impor",
+      "later": "Nanti saja",
+      "done": "{sessions, plural, other {# sesi}} dan {tasks, plural, other {# tugas}} berhasil diimpor.",
+      "error": "Impor gagal. Datamu masih ada di perangkat ini; coba lagi nanti."
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "Mode belajar",
+      "title": "Simpan yang kamu pelajari",
+      "lead": "Belajar dengan metode teruji, jelaskan topiknya dengan kata-katamu sendiri, dan FocusKept mengubahnya menjadi pertanyaan. Kami mengingatkanmu untuk mengulang di hari ke-5, 10, dan 30, tepat sebelum kamu lupa.",
+      "steps": {
+        "1": "Fokus pada satu topik dengan metode belajar dan timer.",
+        "2": "Jelaskan seolah untuk anak 12 tahun.",
+        "3": "AI menunjukkan celah dan menulis pertanyaan pengulangan.",
+        "4": "Ulangi otomatis di hari ke-5, 10, dan 30."
+      },
+      "topicLabel": "Apa yang ingin kamu pelajari?",
+      "topicPlaceholder": "mis. Cara vaksin melatih sistem imun",
+      "start": "Lanjut",
+      "accountNote": "Mode belajar butuh akun gratis agar kami bisa mengirim pengingat pengulanganmu.",
+      "workInstead": "Cuma butuh timer? Pakai mode kerja, tanpa perlu akun."
+    },
+    "explain": {
+      "prompt": "Jelaskan yang kamu pelajari seolah untuk anak 12 tahun.",
+      "promptHint": "Gunakan kata sederhana dan kalimat pendek. Bagian yang membuatmu tersendat itulah yang perlu dipelajari berikutnya.",
+      "openaiNotice": "Penjelasanmu diproses oleh OpenAI. Jangan sertakan informasi pribadi atau sensitif. <privacy>Kebijakan privasi</privacy>",
+      "counter": "{count} / {max} karakter (minimal {min})",
+      "analyze": "Dapatkan masukan dan pertanyaan AI",
+      "analyzing": "Membaca penjelasanmu…",
+      "manual": "Tulis pertanyaan sendiri",
+      "aiOff": "Masukan AI sedang tidak tersedia. Kamu bisa menulis pertanyaanmu sendiri.",
+      "remaining": "{count, plural, =0 {Tidak ada analisis AI tersisa bulan ini} other {# analisis AI tersisa bulan ini}}",
+      "aiFailed": "Masukan AI tidak berhasil kali ini. Penjelasanmu tersimpan; tulis pertanyaanmu di bawah, atau coba lagi nanti.",
+      "yourExplanation": "Penjelasanmu",
+      "revise": "Revisi dan analisis lagi",
+      "edit": "Edit",
+      "analysisTitle": "Masukan",
+      "clarity": "Kejelasan {score, number}/100",
+      "clarityLabel": "Skor kejelasan",
+      "gaps": "Apa yang kurang",
+      "mistakes": "Apa yang keliru atau kurang jelas",
+      "noGaps": "Tidak ada hal penting yang kurang.",
+      "noMistakes": "Tidak ada kesalahan.",
+      "rewrite": "Tampilkan versi yang lebih jelas",
+      "useRewrite": "Mulai dari versi ini",
+      "reanalysisUsed": "Kamu sudah memakai analisis ulang untuk kartu ini. Pro memungkinkan revisi tanpa batas.",
+      "questionsTitle": "Pertanyaan pengulangan",
+      "questionsHint": "Edit, hapus, atau tambahkan pertanyaanmu sendiri. Inilah yang akan kamu jawab saat mengulang.",
+      "needQuestion": "Tambahkan minimal satu pertanyaan.",
+      "fixQuestions": "Beberapa pertanyaan perlu diperbaiki sebelum disimpan.",
+      "save": "Simpan kartu",
+      "saveError": "Tidak bisa menyimpan kartu. Silakan coba lagi.",
+      "savedTitle": "Kartu disimpan",
+      "savedText": "Pengulangan pertamamu pada {date}. Kami akan mengingatkanmu.",
+      "viewCard": "Lihat kartu",
+      "another": "Mulai sesi lain",
+      "notFound": "Sesi ini sudah disimpan, atau tidak ada.",
+      "check": "Periksa",
+      "focused": "Waktu fokus: {duration}",
+      "hintLong": "Sebutkan gagasan utamanya, masing-masing satu atau dua kalimat. Catatan istirahatmu sudah ada di sini.",
+      "hintMid": "Tiga sampai lima gagasan utama, masing-masing satu atau dua kalimat, tanpa melihat buku.",
+      "hintShort": "Dua atau tiga gagasan utama sudah cukup. Tulis tanpa melihat buku.",
+      "keep": "{count, plural, other {Simpan # pertanyaan}}",
+      "keptTitle": "{count, plural, other {# pertanyaan siap.}}",
+      "newSession": "Sesi baru",
+      "readingText": "Mencari celah dan menyiapkan pertanyaan",
+      "writeTitle": "Apa yang kamu pelajari? Tulis dengan kata-katamu sendiri."
+    }
+  },
+  "tasks": {
+    "title": "Tugas",
+    "markDone": "Tandai “{title}” selesai",
+    "focusOn": "Fokus pada “{title}”",
+    "close": "Tutup",
+    "errors": {
+      "generic": "Tidak bisa menyimpan perubahan itu. Silakan coba lagi.",
+      "ivyFull": "Besok sudah ada enam tugas.",
+      "slotFull": "Bagian papan hari ini itu sudah penuh."
+    },
+    "matrix": {
+      "do": {
+        "title": "Kerjakan"
+      },
+      "schedule": {
+        "title": "Jadwalkan"
+      },
+      "delegate": {
+        "title": "Delegasikan"
+      },
+      "delete": {
+        "title": "Hapus"
+      }
+    },
+    "plan135": {
+      "big": "Besar",
+      "medium": "Sedang",
+      "small": "Kecil"
+    },
+    "ivy": {
+      "moveUp": "Naikkan “{title}”",
+      "moveDown": "Turunkan “{title}”"
+    },
+    "board": {
+      "heading": "Hari ini",
+      "chip": {
+        "today": "Hari ini",
+        "tomorrow": "Besok",
+        "full": "Hari ini penuh",
+        "slot": {
+          "big": "Slot tugas utama",
+          "medium": "Slot sedang",
+          "small": "Slot pendek"
+        }
+      },
+      "toTomorrow": "Besok",
+      "progress": "{done, number} dari {total, number} selesai",
+      "planned": "{planned} direncanakan · sisa {left}",
+      "plannedEmpty": "Belum ada rencana",
+      "barLabel": "Hari ini: {done} selesai, sisa {left}",
+      "addLabel": "Tugas baru",
+      "addPlaceholder": "Coba “Kerangka esai 45mnt besok !” — durasi, hari, dan prioritas dikenali otomatis",
+      "add": "Tambah",
+      "keywords": {
+        "today": "hari ini",
+        "tomorrow": "besok",
+        "minutes": "mnt, menit",
+        "hours": "j, jam"
+      },
+      "dayFull": "Hari ini penuh. Pindahkan dulu satu tugas ke besok.",
+      "first": {
+        "label": "Kerjakan ini dulu",
+        "empty": "Belum ada tugas utama. Pilih tugas panjang yang sering kamu tunda, lalu ketuk “Ke hari ini”."
+      },
+      "medium": {
+        "title": "Lalu ini",
+        "empty": "Slot kosong · 25–60 mnt"
+      },
+      "small": {
+        "title": "Tugas singkat di sela-sela",
+        "empty": "Slot kosong · di bawah 25 mnt"
+      },
+      "slotCount": "{done, number}/{used, number} selesai · {free, number} kosong",
+      "overflow": {
+        "title": "Tidak ada tempat hari ini",
+        "hint": "Direncanakan untuk hari ini, tetapi semua slot terisi."
+      },
+      "footnote": "Satu tugas utama, tiga sedang, lima pendek: hari yang penuh. Tugas baru menemukan slotnya sesuai durasi.",
+      "focus": "Fokus",
+      "toTomorrowLabel": "Pindahkan “{title}” ke besok",
+      "toIncoming": "Masuk",
+      "toIncomingLabel": "Pindahkan “{title}” ke Masuk",
+      "edit": "Buka “{title}”"
+    },
+    "details": {
+      "days": {
+        "today": "Hari ini",
+        "tomorrow": "Besok",
+        "none": "Tanpa tanggal"
+      },
+      "name": "Judul",
+      "tags": "Tag",
+      "tagsPlaceholder": "mis. belajar, coding",
+      "project": "Proyek",
+      "noProject": "Tanpa proyek",
+      "save": "Simpan",
+      "deleteConfirm": "Hapus tugas ini? Sesi yang terkait tetap disimpan.",
+      "title": "Tugas",
+      "minutes": "Durasi (mnt)",
+      "day": "Hari",
+      "notes": "Catatan",
+      "archive": "Arsipkan",
+      "delete": "Hapus"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "Besok",
+        "planned": "Terjadwal",
+        "unsorted": "Belum diurutkan"
+      },
+      "quadrant": {
+        "do": {
+          "label": "Kerjakan",
+          "hint": "Mendesak dan penting"
+        },
+        "plan": {
+          "label": "Jadwalkan",
+          "hint": "Penting, tidak mendesak"
+        },
+        "quick": {
+          "hint": "Mendesak, tidak penting",
+          "label": "Cepat beres"
+        },
+        "later": {
+          "label": "Nanti",
+          "hint": "Bukan keduanya"
+        }
+      },
+      "projects": "Proyek dan filter",
+      "filterLabel": "Saring menurut prioritas",
+      "empty": {
+        "tomorrow": "Belum ada apa-apa untuk besok.",
+        "planned": "Tidak ada rencana untuk hari-hari berikutnya.",
+        "unsorted": "Semuanya sudah rapi."
+      },
+      "missed": "sejak {date}",
+      "important": "Penting",
+      "urgent": "Mendesak",
+      "importantShort": "P",
+      "urgentShort": "M",
+      "importantLabel": "“{title}” penting",
+      "urgentLabel": "“{title}” mendesak",
+      "toToday": "Ke hari ini",
+      "toTodayLabel": "Pindahkan “{title}” ke hari ini",
+      "plan": "Rencanakan besok dalam 2 menit",
+      "planHint": "Urutkan hingga enam tugas dan mulai pagi dengan siap",
+      "title": "Masuk"
+    },
+    "projects": {
+      "filterProject": "Proyek",
+      "filterTag": "Tag",
+      "all": "Semua",
+      "name": "Nama proyek baru",
+      "add": "Tambah proyek",
+      "archive": "Arsipkan",
+      "restore": "Pulihkan",
+      "done": "Selesai",
+      "title": "Proyek dan filter"
+    },
+    "planner": {
+      "moveUp": "Naikkan “{title}”",
+      "remove": "Hapus “{title}” dari daftar besok",
+      "title": "Apa yang akan kamu kerjakan besok?",
+      "lead": "Pilih hingga enam tugas, yang terpenting lebih dulu. Besok yang pertama menjadi “Kerjakan ini dulu” dan sisanya mengisi papan.",
+      "pick": "Pilih",
+      "order": "Urutan besok · {count, number}/{max, number}",
+      "empty": "Pilih tugas dari daftar. Yang pertama kamu pilih akan kamu lihat pertama kali di pagi hari.",
+      "fromToday": "dari hari ini",
+      "later": "Nanti saja",
+      "save": "Simpan untuk besok",
+      "saved": "Daftar besok sudah disimpan."
+    }
+  },
+  "cards": {
+    "title": "Kartu pengetahuan",
+    "lead": "Semua yang sudah kamu pelajari, beserta jadwal pengulangannya.",
+    "newSession": "Sesi belajar baru",
+    "searchLabel": "Cari kartu",
+    "searchPlaceholder": "Cari topik dan penjelasan",
+    "search": "Cari",
+    "statusLabel": "Status",
+    "active": "Aktif",
+    "archived": "Diarsipkan",
+    "topicLabel": "Topik",
+    "allTopics": "Semua topik",
+    "sortLabel": "Urutkan",
+    "sortDue": "Jatuh tempo dulu",
+    "sortNew": "Terbaru dulu",
+    "allowance": "{used, number} dari {limit, number} kartu di paket Gratis",
+    "emptyTitle": "Belum ada kartu",
+    "emptyText": "Selesaikan satu sesi belajar dan jelaskan yang kamu pelajari. Kartu pertamamu akan muncul di sini.",
+    "noResults": "Tidak ada kartu yang cocok dengan pencarianmu.",
+    "more": "Muat lebih banyak",
+    "due": "Jatuh tempo {when}",
+    "dueToday": "Jatuh tempo hari ini",
+    "overdue": "Terlambat",
+    "box": "Kotak {n, number}",
+    "graduated": "Jangka panjang",
+    "questionsCount": "{count, plural, other {# pertanyaan}}",
+    "detail": {
+      "back": "Semua kartu",
+      "reviewNow": "Ulangi sekarang",
+      "reviewNowHint": "Berlatih kapan saja. Pengulangan lebih awal tidak mengubah jadwal.",
+      "nextReview": "Pengulangan berikutnya",
+      "reviews": "Pengulangan",
+      "source": "Sumber",
+      "method": "Metode",
+      "created": "Dibuat",
+      "explanation": "Penjelasan",
+      "editTopic": "Topik",
+      "save": "Simpan perubahan",
+      "saved": "Perubahan disimpan.",
+      "archive": "Arsipkan",
+      "unarchive": "Pulihkan",
+      "archivedNote": "Kartu yang diarsipkan tidak diulang. Kartu itu tetap dihitung dalam batas paket Gratis.",
+      "delete": "Hapus kartu",
+      "deleteConfirm": "Hapus kartu ini beserta riwayat pengulangannya? Tindakan ini tidak bisa dibatalkan.",
+      "history": "Riwayat pengulangan",
+      "noHistory": "Belum ada pengulangan.",
+      "passed": "Lulus",
+      "missed": "Belum lulus",
+      "early": "Latihan",
+      "score": "{score, number}%",
+      "analysis": "Masukan AI",
+      "error": "Tidak bisa menyimpan. Silakan coba lagi."
+    },
+    "questions": {
+      "number": "Pertanyaan {n, number}",
+      "type": "Jenis pertanyaan",
+      "types": {
+        "open": "Jawaban terbuka",
+        "true_false": "Benar atau salah",
+        "cloze": "Isi bagian kosong"
+      },
+      "source": {
+        "ai": "AI",
+        "ai_edited": "AI, diedit"
+      },
+      "prompt": "Pertanyaan",
+      "answer": "Jawaban",
+      "true": "Benar",
+      "false": "Salah",
+      "explanation": "Kenapa ini benar",
+      "explanationPlaceholder": "Opsional, satu kalimat",
+      "clozeHint": "Tandai kata yang hilang dengan {blank}",
+      "delete": "Hapus pertanyaan {n, number}",
+      "add": {
+        "open": "Pertanyaan terbuka",
+        "true_false": "Benar / salah",
+        "cloze": "Isi bagian kosong"
+      },
+      "problems": {
+        "prompt": "Tulis pertanyaannya.",
+        "answer": "Tambahkan jawabannya.",
+        "blank": "Pertanyaan isian butuh tepat satu ____."
+      }
+    },
+    "boxes": {
+      "label": "Kotak pengulangan",
+      "today": "Hari ini",
+      "days": "{days, plural, other {# hari}}",
+      "hint": "Jawaban benar memindahkan kartu satu kotak, jadi jarang kembali. Jawaban salah membawanya kembali segera."
+    }
+  },
+  "limits": {
+    "cta": "Lihat Pro",
+    "keepWorking": "Kartu dan pengulanganmu tetap berjalan apa pun pilihanmu.",
+    "pro": {
+      "cards": "Kartu pengetahuan tanpa batas",
+      "ai": "Masukan dan pertanyaan AI untuk setiap kartu",
+      "lab": "Lab lengkap: apa yang paling cocok untukmu, menurut tag dan waktu",
+      "weekly": "Laporan kemajuan mingguan lewat email"
+    },
+    "card_limit": {
+      "title": "Kamu sudah mencapai 20 kartu di paket Gratis",
+      "text": "Hapus atau simpan kartu sesukamu; pengulangan tetap berjalan. Untuk menyimpan kartu baru, upgrade ke Pro."
+    },
+    "monthly_limit": {
+      "title": "Analisis AI bulan ini sudah habis",
+      "text": "Paket Gratis mencakup {limit, number} analisis kartu AI per bulan. Kamu tetap bisa menyimpan kartu ini dengan menulis pertanyaanmu sendiri."
+    },
+    "reanalysis_limit": {
+      "title": "Analisis ulang untuk kartu ini sudah dipakai",
+      "text": "Paket Gratis memungkinkan satu revisi per kartu. Edit pertanyaanmu secara manual, atau upgrade untuk revisi tanpa batas."
+    },
+    "budget": {
+      "title": "AI sedang istirahat hari ini",
+      "text": "Masukan AI sementara tidak tersedia. Tulis pertanyaanmu sendiri; kartumu tetap berfungsi sama persis."
+    },
+    "lab": {
+      "title": "Lihat Lab lengkap dengan Pro",
+      "text": "Paket Gratis menampilkan teknik terbaikmu dalam 7 hari terakhir. Pro menambahkan analisis sepanjang waktu, hasil per tag dan jam, serta kurva retensi."
+    },
+    "weekly_report": {
+      "title": "Laporan mingguan adalah fitur Pro",
+      "text": "Dapatkan email singkat setiap Senin berisi waktu fokus, teknik terbaik, retensi, dan satu saran."
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "Mau pengingat pengulangan di browser juga?",
+      "text": "Kami akan mengirim satu notifikasi saat ada pengulangan yang jatuh tempo, selain email.",
+      "enable": "Aktifkan pengingat browser",
+      "enabled": "Pengingat browser aktif",
+      "denied": "Notifikasi diblokir untuk situs ini. Kamu bisa mengizinkannya di pengaturan browser."
+    },
+    "unsubscribe": {
+      "title": "Preferensi email",
+      "reviews": "Berhenti menerima email pengingat pengulangan harian? Notifikasi browser dan jadwal pengulanganmu tetap seperti biasa.",
+      "weekly": "Berhenti menerima email laporan mingguan?",
+      "confirm": "Berhenti berlangganan",
+      "done": "Beres. Kamu tidak akan menerima email ini lagi. Kamu bisa mengaktifkannya kembali di Pengaturan.",
+      "error": "Tidak berhasil. Silakan coba lagi atau ubah di Pengaturan.",
+      "invalid": "Tautan ini tidak valid. Kamu bisa mengelola email di Pengaturan.",
+      "settings": "Kelola semua notifikasi di Pengaturan"
+    }
+  },
+  "review": {
+    "title": "Pengulangan",
+    "lead": "Jawab dari ingatan. Kartu lulus jika semua jawaban benar.",
+    "progress": "Kartu {current, number} dari {total, number}",
+    "questionProgress": "Pertanyaan {current, number} dari {total, number}",
+    "types": {
+      "open": "Jawaban terbuka",
+      "true_false": "Benar atau salah?",
+      "cloze": "Isi bagian kosong"
+    },
+    "true": "Benar",
+    "false": "Salah",
+    "blankLabel": "Kata yang hilang",
+    "yourAnswer": "Jawabanmu",
+    "check": "Periksa",
+    "grading": "Memeriksa…",
+    "modelAnswer": "Jawaban",
+    "selfGradeNote": "Pemeriksaan otomatis sedang tidak tersedia. Bandingkan dengan jawabannya dan nilai dirimu dengan jujur.",
+    "self": {
+      "correct": "Jawabanku benar",
+      "partial": "Sebagian",
+      "incorrect": "Belum"
+    },
+    "verdict": {
+      "correct": "Benar.",
+      "partial": "Sebagian benar.",
+      "incorrect": "Belum tepat."
+    },
+    "nextQuestion": "Pertanyaan berikutnya",
+    "finishCard": "Selesaikan kartu",
+    "passedTitle": "Lulus",
+    "missedTitle": "Belum. Kartu ini akan segera kembali",
+    "score": "{score, number}%",
+    "nextReview": "Pengulangan berikutnya: {date}",
+    "earlyNote": "Pengulangan latihan: jadwalmu tetap sama (pengulangan berikutnya {date}).",
+    "revisit": "Yang perlu dilihat lagi",
+    "openExplanation": "Baca lagi penjelasanmu",
+    "nextCard": "Kartu berikutnya",
+    "finish": "Selesai",
+    "passRule": "{count, plural, other {Jawab semua # pertanyaan dengan benar untuk lulus.}}",
+    "saveError": "Tidak bisa menyimpan pengulanganmu. Silakan coba lagi.",
+    "emptyTitle": "Semua sudah beres",
+    "emptyText": "Tidak ada pengulangan yang jatuh tempo saat ini. Pengulangan baru muncul di hari ke-5, 10, dan 30 setelah kamu menyimpan kartu.",
+    "allDoneTitle": "Pengulangan selesai",
+    "allDoneText": "Kamu lulus {passed, number} dari {total, number} kartu. Kerja bagus.",
+    "learnSomething": "Pelajari hal baru",
+    "toTimer": "Kembali ke timer"
+  },
+  "stats": {
+    "title": "Statistik",
+    "lead": "Bagaimana fokus dan belajarmu berjalan.",
+    "rangeLabel": "Rentang waktu",
+    "range": "{days, number} hari",
+    "focused": "Waktu fokus",
+    "sessions": "Sesi",
+    "avgRating": "Rata-rata fokus",
+    "streak": "Runtunan",
+    "bestStreak": "Runtunan terbaik",
+    "days": "{count, plural, other {# hari}}",
+    "retention30": "Retensi (30 hari)",
+    "retention90": "Retensi (90 hari)",
+    "cardsTotal": "Kartu",
+    "dailyChart": "Menit fokus per hari",
+    "showTable": "Tampilkan sebagai tabel",
+    "day": "Hari",
+    "minutes": "Menit",
+    "techniques": "Teknik",
+    "technique": "Teknik",
+    "noSessions": "Belum ada sesi dalam rentang ini.",
+    "topics": "Retensi per topik (90 hari)",
+    "topic": "Topik",
+    "reviews": "Pengulangan",
+    "retention": "Retensi",
+    "noReviews": "Belum ada pengulangan.",
+    "lab": {
+      "title": "Lab",
+      "lead": "Teknik mana yang paling cocok untukmu, berdasarkan nilai fokusmu sendiri.",
+      "weekTop": "Dalam 7 hari terakhir, fokus terbaikmu dengan {technique}: {rating, number, ::.#} / 5 dari {sessions, plural, other {# sesi}}.",
+      "needData": "Nilai beberapa sesi dan hasilmu akan muncul di sini.",
+      "allTime": "Peringkat sepanjang waktu",
+      "rankRow": "{technique}: {rating, number, ::.#} / 5 ({sessions, plural, other {# sesi}})",
+      "byTag": "Teknik terbaik per tag tugas",
+      "tag": "Tag",
+      "best": "Teknik terbaik",
+      "noTags": "Beri tag pada tugasmu untuk melihat teknik mana yang cocok untuk tiap jenis pekerjaan.",
+      "byHour": "Fokus per jam",
+      "hour": "Jam",
+      "curve": "Retensi per langkah pengulangan",
+      "step": "Langkah",
+      "dayN": "Hari ke-{day, number}",
+      "graduated": "Jangka panjang"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Harga",
+    "title": "Mulai gratis. Upgrade saat memang sepadan.",
+    "lead": "Setiap teknik fokus, belajar, dan perencanaan gratis. Pro menghapus batasan dan menunjukkan apa yang paling cocok untukmu.",
+    "perMonth": "/ bulan",
+    "perYear": "/ tahun",
+    "free": {
+      "name": "Gratis",
+      "text": "Semua yang kamu butuhkan untuk fokus dan mulai mengingat yang kamu pelajari.",
+      "points": {
+        "1": "Semua 18 teknik, tugas, dan statistik",
+        "2": "Hingga 20 kartu pengetahuan",
+        "3": "10 analisis AI per bulan",
+        "4": "Pengingat pengulangan lewat email dan browser"
+      },
+      "cta": "Mulai gratis"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "Kartu pengetahuan tanpa batas",
+        "2": "Masukan dan pertanyaan AI untuk setiap kartu (penggunaan wajar)",
+        "3": "Lab lengkap: teknik terbaik per tag dan waktu",
+        "4": "Laporan kemajuan mingguan lewat email"
+      }
+    },
+    "monthly": {
+      "name": "Pro bulanan",
+      "text": "Fleksibel. Batalkan kapan saja.",
+      "cta": "Pilih bulanan"
+    },
+    "yearly": {
+      "name": "Pro tahunan",
+      "badge": "Hemat {percent, number}%",
+      "text": "Setara {monthly} per bulan, ditagih sekali setahun.",
+      "point": "Semua fitur Pro, selama setahun penuh",
+      "cta": "Pilih tahunan"
+    },
+    "checkoutNote": "Pembayaran ditangani oleh Polar, merchant of record kami. Harga akhir, termasuk pajak untuk negaramu, ditampilkan saat checkout. Batalkan kapan saja dari Tagihan.",
+    "compare": "Perbandingan Gratis dan Pro",
+    "feature": "Fitur",
+    "notIncluded": "Tidak termasuk",
+    "rows": {
+      "techniques": {
+        "label": "Teknik waktu, belajar, dan perencanaan",
+        "free": "Semua 18",
+        "pro": "Semua 18"
+      },
+      "tasks": {
+        "label": "Tugas, proyek, dan statistik dasar",
+        "free": "Termasuk",
+        "pro": "Termasuk"
+      },
+      "cards": {
+        "label": "Kartu pengetahuan",
+        "free": "Total 20",
+        "pro": "Tanpa batas"
+      },
+      "ai": {
+        "label": "Masukan AI dan pembuatan pertanyaan",
+        "free": "10 kartu per bulan",
+        "pro": "Tanpa batas (penggunaan wajar)"
+      },
+      "grading": {
+        "label": "Penilaian AI untuk jawaban terbuka saat pengulangan",
+        "free": "Termasuk",
+        "pro": "Termasuk"
+      },
+      "reminders": {
+        "label": "Pengingat pengulangan lewat email dan browser",
+        "free": "Termasuk",
+        "pro": "Termasuk"
+      },
+      "lab": {
+        "label": "Lab: teknik mana yang paling cocok untukmu",
+        "free": "7 hari terakhir, teknik terbaik",
+        "pro": "Sepanjang waktu, per tag, per jam, kurva retensi"
+      },
+      "weekly": {
+        "label": "Laporan email mingguan",
+        "free": "–",
+        "pro": "Termasuk"
+      },
+      "export": {
+        "label": "Ekspor data (JSON dan CSV)",
+        "free": "Termasuk",
+        "pro": "Termasuk"
+      }
+    },
+    "faqTitle": "Pertanyaan tentang paket",
+    "faq": {
+      "1": {
+        "q": "Apa yang terjadi pada kartuku kalau aku berhenti membayar?",
+        "a": "Tidak ada yang hilang. Kartu dan pengulangan terjadwalmu tetap berjalan. Kamu tidak bisa menambah kartu melebihi batas Gratis, dan analisis AI kembali ke 10 per bulan."
+      },
+      "2": {
+        "q": "Apa arti penggunaan wajar untuk AI di Pro?",
+        "a": "Pro mencakup masukan AI untuk hingga 300 kartu per bulan, jauh lebih banyak dari yang dibuat kebanyakan orang. Kalau sudah mencapainya, kamu tetap bisa menulis pertanyaan sendiri."
+      },
+      "3": {
+        "q": "Bagaimana cara membatalkan?",
+        "a": "Buka Tagihan di aplikasi dan pilih Kelola langganan. Kamu tetap punya Pro sampai akhir periode yang sudah dibayar."
+      },
+      "4": {
+        "q": "Siapa yang memproses pembayaranku?",
+        "a": "Polar bertindak sebagai merchant of record kami dan menangani pembayaran, faktur, dan pajak penjualan. FocusKept tidak pernah melihat detail kartumu."
+      },
+      "5": {
+        "q": "Apakah ada paket seumur hidup?",
+        "a": "Untuk saat ini tidak. Pro tersedia bulanan atau tahunan."
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "Teknik waktu",
+      "learning": "Metode belajar",
+      "planning": "Teknik perencanaan"
+    },
+    "eyebrow": "Teknik",
+    "title": "Teknik fokus, belajar, dan perencanaan",
+    "lead": "Setiap teknik dijelaskan dengan bahasa sederhana, lengkap dengan langkah-langkah, kapan membantu, dan kapan tidak. Coba langsung di halamannya.",
+    "all": "Semua teknik",
+    "tryNow": "Coba sekarang",
+    "howItWorks": "Cara kerjanya",
+    "steps": "Langkah demi langkah",
+    "bestFor": "Paling cocok untuk",
+    "whenNotToUse": "Kapan tidak dipakai",
+    "faq": "Pertanyaan",
+    "related": "Teknik terkait",
+    "trademarkNotice": "Pomodoro Technique® adalah merek dagang Francesco Cirillo. FocusKept tidak berafiliasi atau terkait dengan Pomodoro Technique® maupun Francesco Cirillo, dan tidak didukung oleh mereka."
+  },
+  "tryIt": {
+    "reset": "Atur ulang",
+    "notSaved": "Demo ini tidak disimpan. Mulai sesi penuh untuk menyimpan statistikmu.",
+    "fullSession": "Pakai di sesi penuh",
+    "box": "Panjang kotak (menit)",
+    "steps": "Ikuti langkahnya",
+    "learnWith": "Belajar dengan {method}",
+    "taskPlaceholder": "Tambah tugas",
+    "where": "Masuk ke mana",
+    "add": "Tambah",
+    "full": "Bagian itu sudah penuh. Justru itu intinya: pilihlah.",
+    "list": "Tugas",
+    "remove": "Hapus “{title}”",
+    "markFrog": "Jadikan “{title}” katak hari ini",
+    "frogHint": "Ketuk ikon api untuk memilih katak hari ini. Tugas itu pindah ke paling atas.",
+    "planFull": "Rencanakan harimu yang sebenarnya dengan teknik ini"
+  },
+  "home": {
+    "anonText": "Buat akun gratis untuk menulis penjelasanmu, mendapat pertanyaan darinya, dan diingatkan tepat waktu. Sesimu menunggu di perangkat ini.",
+    "anonTitle": "Tulis yang kamu pelajari, dapatkan pertanyaanmu.",
+    "boxMinutes": "Kotak, mnt",
+    "breakMinutes": "Istirahat",
+    "breakNote": "Apa yang menempel dari blok ini?",
+    "breakNoteHint": "Opsional · akan menunggumu di akhir",
+    "breakNotePlaceholder": "Satu atau dua ide…",
+    "breakOver": "Istirahat selesai",
+    "breakTitle": "Istirahat · blok {current} dari {total} selesai",
+    "continue": "Lanjut",
+    "createAccount": "Buat akun gratis",
+    "decrease": "Kurangi: {label}",
+    "discard": "Keluar tanpa menyimpan",
+    "endFocused": "Waktu fokus: {duration}",
+    "endSession": "Akhiri sesi",
+    "fillHint": "Kartu terisi selama kamu fokus",
+    "focusFallback": "Fokus",
+    "focusMinutes": "Fokus",
+    "fromPlan": "Dari rencana hari ini:",
+    "haveAccount": "Saya punya akun",
+    "hintAsk": "Kami tanyakan tepat waktu",
+    "hintFocus": "Fokus",
+    "hintWrite": "Tulis yang kamu pelajari",
+    "howDidItGo": "Bagaimana rasanya?",
+    "howItWorks": "Cara kerjanya",
+    "increase": "Tambah: {label}",
+    "learn": "Belajar",
+    "modeLabel": "Mode",
+    "moods": {
+      "1": "buyar",
+      "2": "lumayan",
+      "3": "bagus",
+      "4": "hebat",
+      "5": "tenggelam penuh"
+    },
+    "newTopic": "Topik baru",
+    "nextBlock": "Blok berikutnya · {current}/{total}",
+    "oneStep": "Tinggal satu langkah",
+    "placeholderLearn": "mis. fotosintesis",
+    "placeholderWork": "mis. pendahuluan laporan",
+    "reviewStart": "Mulai mengulang",
+    "reviewTitle": "{count, plural, other {# kartu menunggu diulang}}",
+    "rhythm": "Ritme",
+    "rhythmGuide": "Ritme mana dan kapan? Lihat panduan",
+    "rhythmHint": "fokus · istirahat, menit",
+    "rhythmSub": {
+      "52-17": "Untuk kerja panjang yang tenang",
+      "custom": "Pilih angkamu sendiri",
+      "deep-work-90": "Tugas tersulit hari ini",
+      "flowtime": "Sampai fokusmu memudar",
+      "pomodoro": "Saat sulit memulai",
+      "timeboxing": "Beri satu tugas anggaran waktu"
+    },
+    "runBlock": "blok {current}/{total}",
+    "save": "Simpan",
+    "skipCard": "Selesai tanpa kartu",
+    "start": "Mulai",
+    "subjectLearn": "Apa yang kamu pelajari?",
+    "subjectWork": "Sedang mengerjakan apa? (opsional)",
+    "summaryBox": "Saat waktu habis: selesai, perpanjang, atau nanti",
+    "summaryCycle": "{blocks, plural, other {# blok}} · istirahat {minutes} mnt di antaranya",
+    "summaryFlow": "Stopwatch · istirahatnya seperlima waktu fokus",
+    "taskDone": "“{task}” selesai",
+    "todayTotal": "Fokus hari ini: {duration}",
+    "topicHint": "Kartumu disimpan dengan nama ini.",
+    "topicTitle": "Apa topiknya?",
+    "trailEmpty": "belum ada",
+    "trailLabel": "Jejak hari ini",
+    "trailSummary": "{duration} · {cards, plural, other {# kartu}}",
+    "work": "Bekerja"
+  }
+}

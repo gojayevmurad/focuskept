@@ -1,0 +1,721 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "25 minutos de foco, 5 de descanso. E repete.",
+    "summary": "O método 25/5 divide o trabalho em blocos curtos e cronometrados, separados por pausas. Ela facilita o começo e mantém sua energia estável ao longo de um dia comprido.",
+    "howItWorks": [
+      "Você se compromete com uma única tarefa durante um bloco de 25 minutos. Nesse bloco você não faz mais nada: nada de e-mail, nada de chat, nada de “só dar uma olhadinha”. Quando o timer toca, você para e faz 5 minutos de pausa, mesmo que esteja no meio de algo.",
+      "Depois de quatro blocos, você faz uma pausa mais longa de 15 a 30 minutos. O ritmo fixo transforma uma meta vaga como “estudar a tarde toda” em unidades pequenas e contáveis, o que dificulta a procrastinação e deixa o progresso visível. No FocusKept você pode ajustar o bloco de trabalho (10–60 min), as pausas e o número de ciclos."
+    ],
+    "steps": [
+      "Escolha uma tarefa e escreva o que significa “pronto” neste bloco.",
+      "Inicie um timer de 25 minutos e trabalhe só nessa tarefa.",
+      "Se surgir uma distração, anote e volte para a tarefa.",
+      "Quando o timer tocar, pare e faça uma pausa de 5 minutos longe da tela.",
+      "Depois de quatro blocos, faça uma pausa maior, de 15–30 minutos."
+    ],
+    "bestFor": [
+      "Começar tarefas que você vem adiando",
+      "Sessões de estudo, leitura e revisão",
+      "Dias cheios de tarefas pequenas e cheias de interrupções"
+    ],
+    "whenNotToUse": [
+      "Trabalho criativo profundo ou programação, quando 25 minutos quebram o seu flow; experimente 52/17 ou Deep Work 90",
+      "Tarefas com ritmo definido de fora, como reuniões ou ligações ao vivo"
+    ],
+    "faq": [
+      {
+        "q": "Por que 25 minutos?",
+        "a": "Vinte e cinco minutos são suficientes para avançar de verdade e curtos o bastante para começar parecer fácil. É um padrão, não uma regra: muita gente acaba ficando entre 30 e 50 minutos quando o hábito se firma."
+      },
+      {
+        "q": "O que faço se terminar a tarefa antes?",
+        "a": "Use os minutos que sobraram para revisar, refinar ou planejar o próximo passo. Se terminou mesmo, encerre o bloco e comece a próxima tarefa do zero."
+      },
+      {
+        "q": "Devo pular a pausa quando estou embalado?",
+        "a": "Pausas curtas mantêm sua atenção fresca por várias horas. Se elas estão sempre cortando seu flow, troque para Flowtime ou para um bloco de trabalho mais longo em vez de pular as pausas."
+      },
+      {
+        "q": "O método 25/5 funciona para estudar?",
+        "a": "Sim. Ela combina bem com a recordação ativa: um bloco para ler, outro para se testar. O Modo Estudo do FocusKept acrescenta uma explicação Feynman e revisões espaçadas."
+      }
+    ],
+    "seoTitle": "Timer de foco 25/5: o método de 25 minutos explicado",
+    "seoDescription": "Use o método 25/5 on-line: 25 minutos de foco, 5 de pausa e uma pausa longa após quatro ciclos. Timer grátis, guia passo a passo e dicas."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 minutos de foco profundo, 17 de descanso de verdade.",
+    "summary": "O método 52/17 alterna blocos de foco mais longos com pausas generosas. Ele combina com quem acha 25 minutos pouco para entrar numa tarefa.",
+    "howItWorks": [
+      "Você trabalha com concentração total por 52 minutos e depois se afasta por 17. A proporção vem de dados de registro de tempo de profissionais de escritório muito produtivos, que naturalmente trabalhavam em períodos de cerca de uma hora com pausas consideráveis.",
+      "A pausa longa é o ponto central: caminhe, alongue-se, beba água, olhe pela janela. Voltar depois de um descanso de verdade deixa os próximos 52 minutos tão afiados quanto os primeiros."
+    ],
+    "steps": [
+      "Escolha uma tarefa que exija atenção contínua.",
+      "Silencie as notificações e foque por 52 minutos.",
+      "Faça uma pausa de 17 minutos longe da tela.",
+      "Comece o próximo bloco de 52 minutos com a cabeça descansada."
+    ],
+    "bestFor": [
+      "Escrita, análise e trabalho de escritório concentrado",
+      "Quem acha as pausas do 25/5 frequentes demais",
+      "Meios períodos de trabalho profundo"
+    ],
+    "whenNotToUse": [
+      "Quando até começar é difícil; um bloco de 25 minutos é mais leve",
+      "Tarefas muito curtas que não precisam de um bloco longo"
+    ],
+    "faq": [
+      {
+        "q": "O 52/17 é melhor que o 25/5?",
+        "a": "Nenhum é melhor para todo mundo. O 52/17 dá mais tempo para entrar na tarefa; o 25/5 facilita o começo. O Laboratório do FocusKept compara suas notas de foco para você ver o que funciona no seu caso."
+      },
+      {
+        "q": "O que faço na pausa de 17 minutos?",
+        "a": "Qualquer coisa que não seja mais tela: movimente-se, beba água, descanse os olhos ou pegue um pouco de luz natural. Rolar o feed no celular costuma deixar o próximo bloco mais difícil."
+      },
+      {
+        "q": "Posso mudar os números?",
+        "a": "O timer 52/17 mantém a proporção clássica. Use o timer personalizado se quiser durações próprias de trabalho e pausa."
+      }
+    ],
+    "seoTitle": "Método 52/17: trabalhe 52 minutos, descanse 17",
+    "seoDescription": "Experimente o método de produtividade 52/17: 52 minutos de trabalho focado e pausas de 17 minutos. Timer on-line grátis com um guia simples."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Trabalhe até o foco cair e descanse na mesma proporção.",
+    "summary": "O Flowtime troca o timer fixo por um cronômetro. Você para quando a atenção cai e faz uma pausa proporcional ao tempo trabalhado.",
+    "howItWorks": [
+      "Inicie o cronômetro e trabalhe numa tarefa enquanto o foco durar. Quando perceber que a atenção está escapando, pare. O FocusKept sugere uma pausa de um quinto do tempo trabalhado, entre 5 e 30 minutos: 40 minutos de trabalho dão 8 minutos de pausa; 2 horas dão 24 minutos.",
+      "Como é você quem decide quando parar, o Flowtime protege os estados de flow profundo e ainda garante o descanso. Com o tempo, o histórico das suas sessões mostra quanto tempo dura sua concentração natural."
+    ],
+    "steps": [
+      "Escolha uma tarefa e inicie o cronômetro.",
+      "Trabalhe até o foco cair de verdade, não na primeira vontade de trocar de tarefa.",
+      "Toque em “Fazer uma pausa” e descanse o tempo sugerido (tempo trabalhado ÷ 5, 5–30 min).",
+      "Recomece quando a pausa acabar."
+    ],
+    "bestFor": [
+      "Trabalho criativo e programação, em que interrupções custam caro",
+      "Quem costuma pular as pausas do 25/5",
+      "Descobrir a duração natural da sua concentração"
+    ],
+    "whenNotToUse": [
+      "Quando você tende a se dispersar sem um prazo; um timer fixo dá mais estrutura",
+      "Dias com janelas de tempo rígidas entre reuniões"
+    ],
+    "faq": [
+      {
+        "q": "Como é calculada a pausa do Flowtime?",
+        "a": "O FocusKept sugere um quinto do tempo trabalhado, com mínimo de 5 e máximo de 30 minutos."
+      },
+      {
+        "q": "E se eu nunca tiver vontade de parar?",
+        "a": "Faça uma pausa pelo menos a cada 90 minutos mesmo assim. Longos períodos sem descanso reduzem a qualidade sem você perceber, mesmo quando parecem produtivos."
+      },
+      {
+        "q": "O Flowtime é bom para iniciantes?",
+        "a": "Se você já gosta de trabalho focado, sim. Se o difícil é começar, comece com o 25/5 e passe para o Flowtime mais tarde."
+      }
+    ],
+    "seoTitle": "Técnica Flowtime: timer para sessões de foco flexíveis",
+    "seoDescription": "Na técnica Flowtime você trabalha até o foco cair e depois faz uma pausa proporcional. Cronômetro grátis com sugestão automática de pausa."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "Um bloco de 90 minutos para o seu trabalho mais exigente.",
+    "summary": "O Deep Work 90 dá a você uma única sessão de 90 minutos sem interrupções, seguida de 20 minutos de pausa, no tamanho de um ciclo natural de atenção.",
+    "howItWorks": [
+      "Muita gente percebe que a concentração sobe e desce em ciclos de mais ou menos uma hora e meia. Um bloco de 90 minutos usa um ciclo inteiro para um trabalho difícil e importante, e uma pausa de 20 minutos permite recuperar antes do próximo.",
+      "Trate o bloco como uma reunião importante com você mesmo: decida a tarefa antes, feche todo o resto e proteja esse tempo. Um ou dois blocos assim por dia fazem seus maiores projetos andarem."
+    ],
+    "steps": [
+      "Decida com antecedência qual tarefa merece seu foco mais profundo.",
+      "Feche e-mail e chat, silencie o celular e inicie o timer de 90 minutos.",
+      "Trabalhe só nessa tarefa até o timer acabar.",
+      "Faça uma pausa completa de 20 minutos antes de qualquer outra coisa exigente."
+    ],
+    "bestFor": [
+      "Escrita, pesquisa, design e programação complexa",
+      "A tarefa mais importante do seu dia",
+      "Manhãs ou outros horários de muita energia"
+    ],
+    "whenNotToUse": [
+      "Quando você está cansado ou é interrompido com facilidade; comece com blocos mais curtos",
+      "Tarefas superficiais, como e-mails ou burocracia"
+    ],
+    "faq": [
+      {
+        "q": "Dá mesmo para focar por 90 minutos?",
+        "a": "Exige prática. Comece com blocos de 50–60 minutos e aumente conforme o hábito cresce. A nota depois de cada sessão mostra como foi."
+      },
+      {
+        "q": "Quantos blocos de trabalho profundo devo fazer por dia?",
+        "a": "Dois ou três já são suficientes para a maioria das pessoas. Use o resto do dia para trabalhos mais leves."
+      },
+      {
+        "q": "O que conta como trabalho profundo?",
+        "a": "Trabalho que exige toda a sua atenção e cria valor real, como escrever, resolver problemas ou aprender algo difícil."
+      }
+    ],
+    "seoTitle": "Timer Deep Work: sessões de foco de 90 minutos",
+    "seoDescription": "Planeje sessões de trabalho profundo de 90 minutos com pausas de 20. Timer grátis e guia para trabalhar sem distrações no que mais importa."
+  },
+  "custom": {
+    "name": "Timer personalizado",
+    "tagline": "Suas próprias durações de trabalho e pausa, salvas como predefinições.",
+    "summary": "O timer personalizado permite definir qualquer bloco de trabalho, pausa curta, pausa longa e número de ciclos, e salvar até cinco predefinições.",
+    "howItWorks": [
+      "Nem toda tarefa cabe numa proporção famosa. Com o timer personalizado você escolhe quanto tempo trabalhar (1–180 minutos), quanto descansar e depois de quantos blocos fazer uma pausa longa.",
+      "Salve suas combinações favoritas como predefinições para tê-las a um toque, por exemplo “Leitura 40/10” ou “Preparação para prova 30/5”."
+    ],
+    "steps": [
+      "Defina bloco de trabalho, pausa curta, pausa longa e ciclos.",
+      "Se quiser, salve a combinação como predefinição (até cinco).",
+      "Inicie o timer e siga o ritmo que você criou."
+    ],
+    "bestFor": [
+      "Experimentar até achar o seu ritmo",
+      "Rotinas recorrentes com formato fixo",
+      "Acompanhar a duração de aulas, laboratórios ou provas"
+    ],
+    "whenNotToUse": [
+      "Quando você não sabe por onde começar; experimente o 25/5 primeiro e ajuste depois"
+    ],
+    "faq": [
+      {
+        "q": "Quantas predefinições posso salvar?",
+        "a": "Até cinco. Você pode editá-las ou excluí-las nas Configurações."
+      },
+      {
+        "q": "Como sei quais configurações funcionam melhor?",
+        "a": "Dê uma nota ao seu foco depois de cada sessão. O Laboratório compara suas notas entre técnicas e durações."
+      },
+      {
+        "q": "Com qual técnica devo começar?",
+        "a": "Se você não tem preferência, use o 25/5 por uma semana. Depois ajuste as durações de trabalho e pausa numa predefinição personalizada com base nas suas notas."
+      }
+    ],
+    "seoTitle": "Timer de foco personalizado com predefinições",
+    "seoDescription": "Crie seu próprio timer de foco: escolha durações de trabalho e pausa, pausas longas e ciclos, e salve predefinições. Grátis e fácil de usar."
+  },
+  "timeboxing": {
+    "name": "Timeboxing",
+    "tagline": "Dê a uma tarefa um tempo fixo e depois decida.",
+    "summary": "O timeboxing dá a cada tarefa um orçamento de tempo fixo. Quando o timebox acaba, você decide: concluído, estender uma vez ou deixar para depois.",
+    "howItWorks": [
+      "Em vez de trabalhar até a tarefa acabar, você decide antes quanto tempo ela merece, por exemplo 30 minutos para o rascunho de um relatório. O limite faz você focar no que importa e impede que o perfeccionismo engula seu dia.",
+      "Quando o timebox acaba, o FocusKept pede que você escolha: marcar como concluída, estender uma vez em 25% do timebox ou deixar a tarefa para depois. Todo tempo além do timebox original é registrado como estouro, para você aprender o quanto suas estimativas acertam."
+    ],
+    "steps": [
+      "Escolha uma tarefa e decida quantos minutos ela merece.",
+      "Inicie o timebox e trabalhe só nessa tarefa.",
+      "Quando o tempo acabar, escolha: concluído, estender uma vez (+25%) ou deixar para depois.",
+      "Confira o estouro nas estatísticas para estimar melhor no futuro."
+    ],
+    "bestFor": [
+      "Tarefas que se esticam até ocupar todo o tempo disponível",
+      "Perfeccionistas e quem nunca para de dar retoques",
+      "Planejar um dia com muitas tarefas diferentes"
+    ],
+    "whenNotToUse": [
+      "Explorações abertas, em que o resultado é desconhecido",
+      "Sessões de estudo que precisam de vários ciclos"
+    ],
+    "faq": [
+      {
+        "q": "O que acontece se eu não terminar a tempo?",
+        "a": "Você pode estender uma vez em um quarto do timebox ou deixar a tarefa para depois. As duas opções são válidas; o objetivo é uma decisão consciente."
+      },
+      {
+        "q": "Qual deve ser a duração de um timebox?",
+        "a": "Entre 15 e 90 minutos para a maioria das tarefas. Timeboxes curtos criam urgência; os mais longos servem para trabalhos maiores."
+      },
+      {
+        "q": "O que é estouro?",
+        "a": "O tempo gasto além do timebox original. Um estouro sempre alto significa que suas estimativas estão otimistas."
+      }
+    ],
+    "seoTitle": "Técnica de timeboxing: timer e guia",
+    "seoDescription": "Aprenda timeboxing: dê a cada tarefa um tempo fixo e depois conclua, estenda uma vez ou reagende. Timer grátis que registra estimativas e estouros."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Explique de forma simples. Descubra o que você realmente entende.",
+    "summary": "A técnica Feynman testa sua compreensão fazendo você explicar um assunto em linguagem simples, como se fosse para uma criança de 12 anos. As lacunas da explicação mostram o que estudar em seguida.",
+    "howItWorks": [
+      "Batizada em homenagem ao físico Richard Feynman, a técnica é simples: depois de estudar um assunto, escreva uma explicação com palavras do dia a dia e frases curtas, como se ensinasse uma criança curiosa de 12 anos. Jargão é sinal de alerta, porque muitas vezes esconde uma lacuna.",
+      "Onde você travar ou enrolar, volte à fonte, preencha a lacuna e simplifique de novo. No FocusKept, toda sessão de estudo termina com uma explicação Feynman; a IA aponta lacunas e erros e transforma sua explicação em perguntas de revisão."
+    ],
+    "steps": [
+      "Estude o assunto com o seu material.",
+      "Feche a fonte e explique o assunto com palavras simples, como para uma criança de 12 anos.",
+      "Marque os pontos em que você travou ou usou jargão.",
+      "Volte à fonte para preencher essas lacunas.",
+      "Simplifique a explicação de novo até ela fluir."
+    ],
+    "bestFor": [
+      "Conceitos, teorias e assuntos do tipo “como funciona”",
+      "Conferir se você entendeu de verdade antes de uma prova",
+      "Transformar leitura em conhecimento duradouro"
+    ],
+    "whenNotToUse": [
+      "Decoreba pura, como vocabulário ou datas; use recordação ativa ou repetição espaçada",
+      "Habilidades que pedem prática mais do que explicação"
+    ],
+    "faq": [
+      {
+        "q": "Por que explicar para uma criança de 12 anos?",
+        "a": "Uma criança não aceita jargão, então você precisa saber o que as palavras significam. A linguagem simples revela rápido uma compreensão vaga."
+      },
+      {
+        "q": "Preciso falar em voz alta?",
+        "a": "Escrever funciona tão bem quanto e deixa algo que você pode revisar. No FocusKept, sua explicação vira o centro do seu cartão de conhecimento."
+      },
+      {
+        "q": "O que a IA verifica?",
+        "a": "Ela procura partes que faltam e erros, dá uma nota de clareza e sugere uma versão mais simples. Quem decide é você: você edita e aprova tudo."
+      },
+      {
+        "q": "Qual deve ser o tamanho da minha explicação?",
+        "a": "Alguns parágrafos claros são o ideal. O FocusKept pede pelo menos 80 caracteres e aceita até 6.000."
+      }
+    ],
+    "seoTitle": "Técnica Feynman: aprenda qualquer coisa explicando",
+    "seoDescription": "Como usar a técnica Feynman: explique um assunto de forma simples, encontre as lacunas e corrija. Guia grátis com feedback da IA e perguntas de revisão."
+  },
+  "active-recall": {
+    "name": "Recordação ativa",
+    "tagline": "Puxe a informação da memória em vez de reler.",
+    "summary": "Recordação ativa é se testar em vez de reler. Cada vez que você busca uma resposta na memória, fica mais fácil encontrá-la da próxima vez.",
+    "howItWorks": [
+      "Reler parece produtivo, mas gera sobretudo familiaridade, não memória. A recordação ativa inverte isso: você fecha o material e se faz perguntas, escreve o que lembra ou resolve exercícios sem olhar.",
+      "É o esforço de lembrar que fortalece a memória. O FocusKept transforma sua explicação em perguntas e faz essas perguntas de novo nos dias 5, 10 e 30, então a recordação ativa acontece automaticamente."
+    ],
+    "steps": [
+      "Estude uma parte do material uma vez, com atenção.",
+      "Feche-o e escreva perguntas sobre as ideias principais.",
+      "Responda às perguntas de memória, sem olhar.",
+      "Confira as respostas e marque o que você errou.",
+      "Estude de novo só as partes em que errou."
+    ],
+    "bestFor": [
+      "Preparação para provas de qualquer matéria",
+      "Fatos, definições e processos",
+      "Fazer o tempo de estudo render"
+    ],
+    "whenNotToUse": [
+      "O primeiríssimo contato com um assunto; primeiro entenda, depois recorde"
+    ],
+    "faq": [
+      {
+        "q": "A recordação ativa é melhor do que reler?",
+        "a": "As pesquisas sobre o efeito de teste mostram de forma consistente que praticar a recuperação leva a uma retenção de longo prazo melhor do que reler o mesmo material."
+      },
+      {
+        "q": "E se eu não lembrar de nada?",
+        "a": "Isso é uma informação útil. Procure a resposta e tente de novo mais tarde. Um pouco de esforço faz parte do processo."
+      },
+      {
+        "q": "Como o FocusKept usa a recordação ativa?",
+        "a": "Todo cartão de conhecimento tem perguntas, e cada revisão pede que você responda antes de mostrar a solução."
+      }
+    ],
+    "seoTitle": "Recordação ativa: o método de estudo e como usar",
+    "seoDescription": "A recordação ativa (active recall) é um dos métodos de estudo mais eficazes. Aprenda a se testar, fazer perguntas melhores e lembrar mais em menos tempo."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Escreva tudo o que você lembra e depois compare.",
+    "summary": "O blurting é um exercício rápido de recordação ativa: depois de estudar, você escreve tudo o que lembra sobre um assunto e depois compara com a fonte para achar o que ficou de fora.",
+    "howItWorks": [
+      "Depois de um bloco de estudo, feche suas anotações e escreva tudo o que lembrar, o mais rápido possível, em qualquer ordem. Não se preocupe com a estrutura; a ideia é esvaziar a cabeça no papel.",
+      "Depois abra a fonte e compare. Marque com outra cor o que faltou ou estava errado. Essas lacunas são exatamente o que estudar em seguida. No FocusKept, o guia divide a sessão em uma fase de “escreva tudo” e outra de “compare com a fonte”."
+    ],
+    "steps": [
+      "Estude uma seção ou um assunto.",
+      "Feche a fonte e escreva tudo o que lembrar, sem parar.",
+      "Abra a fonte e compare linha por linha.",
+      "Marque o que você esqueceu ou errou.",
+      "Estude as lacunas e faça o blurting de novo mais tarde."
+    ],
+    "bestFor": [
+      "Revisar aulas ou capítulos de livro didático",
+      "Matérias com muitos fatos conectados, como história ou biologia",
+      "Checagens rápidas entre blocos de estudo"
+    ],
+    "whenNotToUse": [
+      "Matérias de resolução de problemas, em que exercícios práticos funcionam melhor"
+    ],
+    "faq": [
+      {
+        "q": "Meu blurting precisa ser organizado?",
+        "a": "Não. Velocidade importa mais do que ordem. A estrutura vem depois, na hora de comparar."
+      },
+      {
+        "q": "Qual a diferença entre blurting e a técnica Feynman?",
+        "a": "O blurting verifica o que você consegue lembrar; o Feynman verifica se você entendeu. No FocusKept, toda sessão de estudo termina com uma etapa Feynman, então você tem os dois."
+      },
+      {
+        "q": "Com que frequência devo fazer blurting de um assunto?",
+        "a": "Logo depois de estudar e de novo alguns dias depois. As revisões espaçadas do FocusKept nos dias 5, 10 e 30 são momentos naturais para se testar de novo."
+      }
+    ],
+    "seoTitle": "Método blurting para revisar: guia passo a passo",
+    "seoDescription": "A técnica do blurting: escreva tudo o que você lembra, compare com suas anotações e corrija as lacunas. Um método de revisão rápido e eficaz."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: explorar, perguntar, ler, recitar, revisar.",
+    "summary": "O SQ3R é um método de cinco passos para ler livros didáticos de forma ativa, para você entender e lembrar em vez de só grifar.",
+    "howItWorks": [
+      "SQ3R vem do inglês Survey, Question, Read, Recite e Review. Primeiro você explora a estrutura, transforma os títulos em perguntas, lê para respondê-las, recita as respostas de memória e, por fim, revisa o capítulo inteiro.",
+      "Cada passo dá um propósito à sua leitura. O FocusKept guia você pelos cinco passos, um de cada vez, com espaço para anotações em cada etapa."
+    ],
+    "steps": [
+      "Explorar: passe os olhos por títulos, resumos e figuras para ver o panorama geral.",
+      "Perguntar: transforme cada título numa pergunta que você quer responder.",
+      "Ler: leia uma seção por vez para responder à pergunta dela.",
+      "Recitar: feche o livro e responda à pergunta com suas palavras.",
+      "Revisar: no final, repasse todas as perguntas e respostas."
+    ],
+    "bestFor": [
+      "Livros didáticos e capítulos longos de não ficção",
+      "Disciplinas com muita leitura obrigatória",
+      "Estudantes que grifam muito, mas lembram pouco"
+    ],
+    "whenNotToUse": [
+      "Ficção ou leituras leves",
+      "Textos muito curtos com estrutura óbvia"
+    ],
+    "faq": [
+      {
+        "q": "O SQ3R não é lento?",
+        "a": "Leva mais tempo do que passar os olhos, mas muito menos do que reler um capítulo três vezes antes da prova."
+      },
+      {
+        "q": "Posso usar o SQ3R com artigos on-line?",
+        "a": "Sim. Adicione o artigo como link da fonte e siga os mesmos cinco passos."
+      },
+      {
+        "q": "Qual passo é o mais importante?",
+        "a": "Recitar. Responder de memória é o que transforma leitura em conhecimento. Os outros passos preparam você para isso."
+      }
+    ],
+    "seoTitle": "Método de leitura SQ3R: explorar, perguntar, ler, recitar",
+    "seoDescription": "Aprenda o método SQ3R para ler livros didáticos de forma ativa e lembrar mais. Um guia claro de cinco passos com timer de estudo embutido."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Notas, perguntas-chave e um resumo numa só página.",
+    "summary": "O método Cornell divide suas anotações em três partes: notas principais, perguntas-chave e um resumo curto, o que transforma as anotações num autoteste pronto.",
+    "howItWorks": [
+      "Durante o estudo, você escreve as notas principais na área grande. Depois, acrescenta na coluna lateral perguntas-chave curtas ou palavras-chave que apontam para cada ideia. Embaixo, resume a página inteira em poucas frases.",
+      "Para revisar, cubra as notas e responda às perguntas-chave de memória. O FocusKept oferece o mesmo layout de três partes durante a sessão e o guarda junto com ela."
+    ],
+    "steps": [
+      "Faça anotações na área principal enquanto estuda.",
+      "Depois de estudar, escreva perguntas-chave ao lado de cada ideia principal.",
+      "Resuma o assunto inteiro em 2–3 frases na parte de baixo.",
+      "Revise cobrindo as notas e respondendo às perguntas-chave."
+    ],
+    "bestFor": [
+      "Aulas, vídeos e seminários",
+      "Disciplinas em que você revisa as anotações antes das provas",
+      "Transformar anotações em perguntas de prática"
+    ],
+    "whenNotToUse": [
+      "Matérias muito visuais, em que mapas mentais ou diagramas funcionam melhor"
+    ],
+    "faq": [
+      {
+        "q": "Quem inventou o método Cornell?",
+        "a": "Walter Pauk, professor de educação da Universidade Cornell, descreveu o método nos anos 1950."
+      },
+      {
+        "q": "Preciso de um papel especial?",
+        "a": "Não. O FocusKept mostra as três áreas na tela: notas, perguntas-chave e resumo."
+      },
+      {
+        "q": "Qual deve ser o tamanho do resumo?",
+        "a": "Duas ou três frases. Se não der para resumir a página em pouco espaço, provavelmente vale rever uma parte dela."
+      }
+    ],
+    "seoTitle": "Método Cornell de anotações: modelo e guia",
+    "seoDescription": "Use o sistema de anotações Cornell on-line: notas, perguntas-chave e resumo num só layout. Modelo grátis com timer de foco."
+  },
+  "interleaving": {
+    "name": "Prática intercalada",
+    "tagline": "Misture assuntos relacionados em vez de estudar um de cada vez.",
+    "summary": "Prática intercalada (interleaving) é alternar entre dois e quatro assuntos relacionados numa mesma sessão de estudo. Parece mais difícil do que a prática em blocos, mas melhora sua capacidade de escolher a abordagem certa.",
+    "howItWorks": [
+      "Em vez de fazer vinte exercícios de um tipo e depois vinte de outro, você mistura: A, B, C, A, C, B. Seu cérebro precisa primeiro reconhecer que tipo de problema tem pela frente, uma habilidade que a prática em blocos nunca treina.",
+      "No FocusKept você adiciona de 2 a 4 assuntos relacionados, e o guia alterna o assunto a cada bloco de trabalho."
+    ],
+    "steps": [
+      "Escolha de 2 a 4 assuntos ou tipos de exercício relacionados.",
+      "Estude o primeiro assunto no primeiro bloco de trabalho.",
+      "Passe para o próximo assunto a cada novo bloco, seguindo o rodízio.",
+      "Observe as diferenças entre os assuntos e por que cada abordagem se encaixa."
+    ],
+    "bestFor": [
+      "Matemática, física e outras matérias de resolução de problemas",
+      "Idiomas: misturar pontos de gramática",
+      "Habilidades em que o difícil é escolher o método certo"
+    ],
+    "whenNotToUse": [
+      "Quando um assunto é totalmente novo; aprenda primeiro o básico de cada um"
+    ],
+    "faq": [
+      {
+        "q": "Por que a prática intercalada parece mais difícil?",
+        "a": "Porque é. Alternar obriga você a descobrir toda vez qual abordagem usar. Esse esforço extra é o que melhora o aprendizado no longo prazo."
+      },
+      {
+        "q": "Quantos assuntos devo misturar?",
+        "a": "De dois a quatro assuntos relacionados. Mais do que isso fica disperso."
+      },
+      {
+        "q": "Posso combinar prática intercalada com 25/5?",
+        "a": "Sim. Cada bloco de trabalho cobre um assunto e o próximo troca, o que dá à prática intercalada um ritmo natural."
+      }
+    ],
+    "seoTitle": "Prática intercalada: misture assuntos e aprenda mais",
+    "seoDescription": "A prática intercalada mistura assuntos relacionados numa sessão. Aprenda como e quando usar o interleaving, com um timer que alterna os assuntos para você."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Caixas em que os cartões avançam quando você sabe a resposta.",
+    "summary": "O sistema Leitner organiza flashcards em caixas. Cartões que você acerta vão para uma caixa revisada com menos frequência; um erro manda o cartão de volta.",
+    "howItWorks": [
+      "O sistema de Sebastian Leitner usa uma série de caixas. Cartões novos começam na caixa 1, que você revisa com frequência. Cada acerto faz o cartão avançar uma caixa, revisada com menos frequência. Um erro faz o cartão voltar.",
+      "O FocusKept aplica a mesma ideia automaticamente: cada passo de revisão (dias 5, 10 e 30, depois 60 dias ou mais) é uma caixa. Acerte uma revisão e o cartão avança; erre uma pergunta e ele volta em 2 dias."
+    ],
+    "steps": [
+      "Crie cartões com uma pergunta de um lado e a resposta do outro.",
+      "Revise com mais frequência os cartões da primeira caixa.",
+      "Passe o cartão para a próxima caixa quando acertar.",
+      "Mande-o de volta quando errar.",
+      "No FocusKept, é só fazer suas revisões pendentes: as caixas são administradas para você."
+    ],
+    "bestFor": [
+      "Vocabulário, definições e fórmulas",
+      "Memória de longo prazo com o mínimo de planejamento",
+      "Quem gosta de ver o próprio progresso"
+    ],
+    "whenNotToUse": [
+      "Entender ideias complexas; explique-as primeiro com a técnica Feynman"
+    ],
+    "faq": [
+      {
+        "q": "Como o Leitner se encaixa no FocusKept?",
+        "a": "Cada passo de revisão é uma caixa: dia 5, dia 10, dia 30, depois 60 dias, dobrando até 180. O passo atual do seu cartão é a caixa dele."
+      },
+      {
+        "q": "O que acontece quando erro um cartão?",
+        "a": "Ele volta em 2 dias para uma revisão de reaprendizado no mesmo passo. Se você acertar essa revisão, ele continua avançando."
+      },
+      {
+        "q": "Preciso mover os cartões eu mesmo?",
+        "a": "Não. O FocusKept agenda cada cartão para você, então você só responde às revisões pendentes de hoje."
+      }
+    ],
+    "seoTitle": "Sistema Leitner: as caixas de flashcards explicadas",
+    "seoDescription": "Como funciona o sistema de flashcards Leitner e como usá-lo com revisões espaçadas automáticas. Guia simples com exemplos."
+  },
+  "spaced-repetition": {
+    "name": "Repetição espaçada",
+    "tagline": "Revise nos dias 5, 10 e 30, logo antes de esquecer.",
+    "summary": "A repetição espaçada agenda revisões em intervalos cada vez maiores, para que cada uma chegue justamente quando a lembrança começa a apagar. Ela é o centro de toda sessão de estudo do FocusKept.",
+    "howItWorks": [
+      "A memória se apaga rápido depois do estudo, mas cada revisão bem-sucedida desacelera o esquecimento. Espaçar as revisões, com intervalos cada vez mais longos, dá a maior retenção com o menor tempo de revisão.",
+      "O FocusKept agenda cada cartão de conhecimento automaticamente: primeira revisão no dia 5, depois nos dias 10 e 30. Em seguida o intervalo passa a 60 dias e dobra a cada acerto, até 180 dias. Errou uma pergunta, o cartão volta em 2 dias. Você pode mudar os três primeiros passos nas Configurações."
+    ],
+    "steps": [
+      "Conclua uma sessão de estudo e salve seu cartão de conhecimento.",
+      "Receba um lembrete quando houver revisão pendente (por e-mail ou no navegador).",
+      "Responda de memória às perguntas do cartão.",
+      "Acertou: vai para o próximo intervalo; errou: o cartão volta em 2 dias."
+    ],
+    "bestFor": [
+      "Tudo o que você quer lembrar por meses, não por dias",
+      "Preparação para provas ao longo de várias semanas",
+      "Conhecimento profissional que você usa pouco, mas precisa manter"
+    ],
+    "whenNotToUse": [
+      "Estudar de véspera para amanhã; a repetição espaçada funciona ao longo de semanas"
+    ],
+    "faq": [
+      {
+        "q": "Por que nos dias 5, 10 e 30?",
+        "a": "São passos simples e fáceis de lembrar, que espalham as revisões pelo primeiro mês, quando o esquecimento é mais rápido. Você pode ajustá-los nas Configurações."
+      },
+      {
+        "q": "E se eu perder um dia de revisão?",
+        "a": "Cartões atrasados continuam pendentes até você revisá-los. Nada se perde; coloque em dia quando puder."
+      },
+      {
+        "q": "A revisão precisa ser perfeita?",
+        "a": "Uma revisão passa quando todas as respostas estão certas. Resposta parcialmente certa conta como erro, então o cartão volta mais cedo."
+      }
+    ],
+    "seoTitle": "Repetição espaçada: um calendário de revisão que funciona",
+    "seoDescription": "Repetição espaçada explicada: revise nos dias 5, 10 e 30 e depois em intervalos crescentes. Lembretes automáticos e perguntas de revisão no FocusKept."
+  },
+  "eat-the-frog": {
+    "name": "Engula o sapo",
+    "tagline": "Faça primeiro a sua tarefa mais difícil e importante.",
+    "summary": "Engolir o sapo significa escolher a tarefa que você mais tende a evitar e fazê-la logo de cara. Tudo depois parece mais fácil.",
+    "howItWorks": [
+      "O “sapo” é a tarefa importante que você preferiria não fazer. Se você encarar logo no começo do dia, quando a energia está no auge, o resto do dia fica livre daquele incômodo de fundo.",
+      "No FocusKept você pode marcar um único sapo por dia. Ele fica fixado no topo da lista de hoje e é sugerido como sua primeira sessão."
+    ],
+    "steps": [
+      "Na noite anterior ou logo cedo, escolha o sapo de hoje: importante e fácil de evitar.",
+      "Marque-o como sapo para ele ficar no topo do dia.",
+      "Comece sua primeira sessão de foco com o sapo, antes de qualquer outra coisa.",
+      "Continue até terminar ou até ele andar de forma clara."
+    ],
+    "bestFor": [
+      "Procrastinação em tarefas importantes",
+      "Manhãs com bastante energia",
+      "Dias corridos que, de outro jeito, se enchem de tarefas pequenas"
+    ],
+    "whenNotToUse": [
+      "Quando a tarefa mais difícil depende da disponibilidade de outra pessoa"
+    ],
+    "faq": [
+      {
+        "q": "De onde vem o nome?",
+        "a": "De um ditado muitas vezes atribuído a Mark Twain: se você tem que comer um sapo vivo, faça isso logo de manhã. Brian Tracy transformou a ideia num método de produtividade."
+      },
+      {
+        "q": "Posso ter mais de um sapo?",
+        "a": "Não, um por dia mantém a decisão clara. Escolher um novo sapo substitui o anterior."
+      },
+      {
+        "q": "E se o meu sapo for grande demais para uma sessão?",
+        "a": "Divida-o e faça do primeiro passo concreto o sapo de hoje. O mais difícil é começar."
+      }
+    ],
+    "seoTitle": "Engula o sapo: faça primeiro a tarefa mais difícil",
+    "seoDescription": "Vença a procrastinação engolindo o sapo: escolha uma tarefa importante e faça-a primeiro. Guia simples e um timer de foco que começa pelo seu sapo."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Organize as tarefas por urgência e importância.",
+    "summary": "A matriz de Eisenhower separa as tarefas em quatro quadrantes por urgência e importância, para você saber o que fazer agora, agendar, delegar ou eliminar.",
+    "howItWorks": [
+      "Cada tarefa vai para um de quatro quadrantes: Fazer (urgente e importante), Agendar (importante, não urgente), Delegar (urgente, não importante) e Eliminar (nenhum dos dois). A matriz deixa claro quando o barulho do urgente está sufocando o trabalho importante.",
+      "No FocusKept você arrasta as tarefas entre os quadrantes ou as move pelo teclado. O quadrante Eliminar oferece arquivar as tarefas para elas saírem da sua lista."
+    ],
+    "steps": [
+      "Liste suas tarefas abertas.",
+      "Coloque cada tarefa em Fazer, Agendar, Delegar ou Eliminar.",
+      "Comece uma sessão de foco com uma tarefa de Fazer.",
+      "Reserve tempo para as tarefas de Agendar antes que fiquem urgentes.",
+      "Passe adiante as de Delegar e arquive as de Eliminar."
+    ],
+    "bestFor": [
+      "Listas de tarefas transbordando",
+      "Planejamento semanal",
+      "Separar as prioridades reais do barulho"
+    ],
+    "whenNotToUse": ["Listas curtas de tarefas igualmente importantes"],
+    "faq": [
+      {
+        "q": "E se tudo parecer urgente e importante?",
+        "a": "Pergunte-se o que acontece se a tarefa esperar uma semana. Se nada grave acontecer, ela vai para Agendar."
+      },
+      {
+        "q": "Eu trabalho sozinho. E o Delegar?",
+        "a": "Use para tarefas que você poderia automatizar, agrupar ou pedir ajuda a alguém."
+      },
+      {
+        "q": "Com que frequência devo reorganizar a matriz?",
+        "a": "Uma olhada rápida por dia e uma revisão mais completa por semana mantêm a matriz honesta conforme os prazos se aproximam."
+      }
+    ],
+    "seoTitle": "Matriz de Eisenhower: urgente ou importante?",
+    "seoDescription": "Priorize com a matriz de Eisenhower: separe as tarefas em fazer, agendar, delegar e eliminar. Quadro grátis de arrastar e soltar com timer de foco."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Uma coisa grande, três médias, cinco pequenas. Esse é o seu dia.",
+    "summary": "A regra 1-3-5 limita cada dia a uma tarefa grande, três médias e cinco pequenas, o que mantém seus planos realistas.",
+    "howItWorks": [
+      "A maioria das listas de tarefas é longa demais para terminar, e aí todo dia parece um fracasso. A regra 1-3-5 limita o dia a nove tarefas de tamanhos diferentes: uma que exige esforço de verdade, três que tomam algum tempo e cinco rápidas.",
+      "O FocusKept dá ao plano de hoje exatamente essas vagas e não deixa você lotá-las, para que escolha com intenção."
+    ],
+    "steps": [
+      "Escolha a tarefa grande de hoje.",
+      "Adicione três tarefas médias.",
+      "Complete com cinco tarefas pequenas.",
+      "Comece pela grande enquanto a energia está alta."
+    ],
+    "bestFor": [
+      "Planejamento diário realista",
+      "Pessoas cujas listas nunca acabam",
+      "Equilibrar trabalho profundo com pequenas pendências"
+    ],
+    "whenNotToUse": ["Dias dominados por reuniões ou por um único projeto"],
+    "faq": [
+      {
+        "q": "E se eu terminar tudo antes?",
+        "a": "Ótimo. Aproveite o tempo ou puxe mais uma tarefa da sua lista de espera."
+      },
+      {
+        "q": "Como decido o tamanho de uma tarefa?",
+        "a": "Grande leva algumas horas, média cerca de uma hora, pequena 15 minutos ou menos."
+      },
+      {
+        "q": "Posso combinar o 1-3-5 com outras técnicas?",
+        "a": "Sim. Faça da tarefa grande o seu sapo e foque em cada tarefa com 25/5 ou um timebox."
+      }
+    ],
+    "seoTitle": "Regra 1-3-5: uma lista de tarefas diária realista",
+    "seoDescription": "Planeje seu dia com a regra 1-3-5: uma tarefa grande, três médias e cinco pequenas. Planejador grátis com vagas fixas e timer de foco."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Seis tarefas para amanhã, em ordem. Nada mais.",
+    "summary": "O método Ivy Lee pede que você anote, toda noite, até seis tarefas para o dia seguinte, em ordem de importância, e faça uma de cada vez.",
+    "howItWorks": [
+      "No fim de cada dia você lista as seis coisas mais importantes para fazer amanhã e as coloca em ordem. No dia seguinte você começa pela primeira e só passa para a próxima quando ela estiver pronta. As tarefas não concluídas vão para o topo da lista do dia seguinte.",
+      "O FocusKept oferece uma visão de planejamento noturno para amanhã com seis vagas ordenadas e leva as tarefas não concluídas adiante, na mesma ordem."
+    ],
+    "steps": [
+      "À noite, anote até seis tarefas para amanhã.",
+      "Coloque-as em ordem de importância real.",
+      "Amanhã, trabalhe na tarefa 1 até terminar e então passe para a 2.",
+      "As tarefas não concluídas passam para a lista do dia seguinte, na mesma ordem."
+    ],
+    "bestFor": [
+      "Terminar o dia com um plano claro",
+      "Quem perde a manhã decidindo o que fazer",
+      "Avançar com constância no trabalho importante"
+    ],
+    "whenNotToUse": [
+      "Funções muito reativas, em que as prioridades mudam de hora em hora"
+    ],
+    "faq": [
+      {
+        "q": "Por que só seis tarefas?",
+        "a": "O limite obriga você a escolher. Seis bastam para encher um dia produtivo sem sobrecarregá-lo."
+      },
+      {
+        "q": "De onde veio o método Ivy Lee?",
+        "a": "O consultor de produtividade Ivy Lee o ensinou a executivos em 1918."
+      },
+      {
+        "q": "E se aparecer uma tarefa urgente?",
+        "a": "Resolva e depois volte à lista, na ordem. Se o urgente aparecer o tempo todo, planeje menos tarefas para amanhã."
+      }
+    ],
+    "seoTitle": "Método Ivy Lee: planeje seis tarefas para amanhã",
+    "seoDescription": "O método Ivy Lee: toda noite, anote seis tarefas para amanhã, em ordem. As não concluídas passam sozinhas para o dia seguinte. Planejador e guia grátis."
+  }
+}

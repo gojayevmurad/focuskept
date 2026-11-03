@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Informativa sulla privacy",
+    "updated": "Ultimo aggiornamento: 31 ottobre 2026",
+    "intro": "Questa informativa spiega cosa raccoglie FocusKept, perché, chi ci aiuta a trattarlo e quali scelte hai. FocusKept è gestito da Murad Gojayev, Baku, Azerbaigian. Contatti: hello@focuskept.com.",
+    "sections": [
+      {
+        "heading": "Cosa raccogliamo",
+        "paragraphs": [
+          "Dati dell’account: il tuo nome, il tuo indirizzo email e una password protetta tramite hash, oppure l’identificativo del tuo account Google se accedi con Google.",
+          "Dati che crei nel prodotto: sessioni di concentrazione (tecnica, durata, valutazione della concentrazione, note e obiettivi), attività e progetti, argomenti di studio, note, spiegazioni Feynman, domande di ripasso, le tue risposte ai ripassi e i relativi risultati, e le tue impostazioni (lingua, fuso orario, orario dei promemoria e simili).",
+          "Dati del dispositivo e delle notifiche: se attivi le notifiche del browser, l’indirizzo di iscrizione push che il browser ci fornisce. Per motivi di sicurezza, le sessioni di accesso conservano il tuo indirizzo IP e lo user agent del browser.",
+          "Senza account, le sessioni e le attività della modalità Lavoro restano nella memoria locale del browser, sul tuo dispositivo. Arrivano sui nostri server solo se scegli di importarle dopo la registrazione.",
+          "Statistiche facoltative: solo se lo consenti, raccogliamo eventi d’uso anonimi (per esempio, che una sessione o un ripasso è stato completato). Non inviamo mai alle statistiche i tuoi testi, spiegazioni o risposte."
+        ]
+      },
+      {
+        "heading": "Come li usiamo",
+        "paragraphs": [
+          "Per fornire il servizio: far funzionare il timer e le statistiche, programmare i ripassi, inviare i promemoria che hai chiesto e proteggere il tuo account.",
+          "Per fornire le funzioni di IA: generare feedback, domande di ripasso e la correzione delle risposte a partire da ciò che scrivi.",
+          "Per elaborare i pagamenti e gestire il tuo piano, tramite il nostro fornitore di pagamenti.",
+          "Per capire e migliorare il prodotto, usando le statistiche solo con il tuo consenso e segnalazioni di errore da cui rimuoviamo i dati personali quando possibile."
+        ]
+      },
+      {
+        "heading": "Trattamento con l’IA di OpenAI",
+        "paragraphs": [
+          "Quando usi il feedback dell’IA, la generazione di domande o la correzione delle risposte, l’argomento, la tua spiegazione, le domande e le tue risposte vengono inviati a OpenAI per il trattamento.",
+          "Il nostro progetto OpenAI è configurato per condividere i dati dell’API con OpenAI: ciò significa che OpenAI può usare questi contenuti per migliorare i propri modelli. Non inserire informazioni personali o sensibili nelle spiegazioni o nelle risposte.",
+          "Puoi sempre usare FocusKept senza IA, scrivendo da te le domande e correggendo da te le risposte."
+        ]
+      },
+      {
+        "heading": "Fornitori di servizi",
+        "paragraphs": [
+          "Per far funzionare FocusKept ci avvaliamo di questi fornitori: OpenAI (funzioni di IA, vedi sopra); Resend (invio delle email); Polar (pagamenti, come rivenditore ufficiale, che gestisce anche fatture e imposte sulle vendite); PostHog (statistiche di prodotto, solo con il tuo consenso); Sentry (monitoraggio degli errori); Google (accesso, solo se lo scegli); Cloudflare (DNS e rete); e il nostro fornitore di hosting Hetzner Online GmbH.",
+          "Ogni fornitore riceve solo i dati necessari per il suo compito. Alcuni fornitori possono trattare dati al di fuori del tuo Paese; quando è richiesto, ci basiamo su garanzie adeguate come le clausole contrattuali standard."
+        ]
+      },
+      {
+        "heading": "Per quanto tempo conserviamo i dati",
+        "paragraphs": [
+          "Conserviamo i dati dell’account e del prodotto finché non elimini l’account. L’eliminazione dell’account rimuove dal nostro database sessioni, attività, schede, ripassi e impostazioni.",
+          "I registri delle notifiche vengono eliminati dopo 180 giorni. I backup vengono conservati per 30 giorni e poi sovrascritti. I dati dei pagamenti vengono conservati da Polar e da noi per il tempo richiesto dalla legge."
+        ]
+      },
+      {
+        "heading": "Le tue scelte e i tuoi diritti",
+        "paragraphs": [
+          "Puoi scaricare in qualsiasi momento tutti i tuoi dati dalle Impostazioni (JSON e CSV), modificarli nell’app, disattivare email e notifiche, revocare il consenso alle statistiche ed eliminare l’account.",
+          "A seconda di dove vivi, potresti avere anche il diritto di accedere ai dati, rettificarli, limitarne il trattamento od opporti, e di presentare reclamo a un’autorità per la protezione dei dati. Scrivi a hello@focuskept.com e ti risponderemo entro i tempi previsti dalla legge."
+        ]
+      },
+      {
+        "heading": "Cookie e memoria locale",
+        "paragraphs": [
+          "Usiamo cookie essenziali per mantenere l’accesso e ricordare la tua lingua. Usiamo la memoria locale del dispositivo per il timer in corso, le impostazioni e, se non hai un account, le sessioni. I cookie delle statistiche vengono impostati solo dopo il tuo consenso."
+        ]
+      },
+      {
+        "heading": "Minori",
+        "paragraphs": [
+          "FocusKept non è destinato a minori di 16 anni senza il consenso di un genitore o di chi ne ha la tutela. Se ritieni che un minore ci abbia fornito dati personali senza consenso, contattaci e li elimineremo."
+        ]
+      },
+      {
+        "heading": "Modifiche",
+        "paragraphs": [
+          "Se modifichiamo questa informativa in modo significativo, aggiorneremo la data qui sopra e avviseremo gli utenti con accesso effettuato nell’app o via email."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Termini di servizio",
+    "updated": "Ultimo aggiornamento: 3 novembre 2026",
+    "intro": "Questi termini si applicano al tuo uso di FocusKept, gestito da Murad Gojayev, Baku, Azerbaigian. Usando FocusKept li accetti.",
+    "sections": [
+      {
+        "heading": "Il servizio",
+        "paragraphs": [
+          "FocusKept offre un timer di concentrazione, la pianificazione delle attività, strumenti di studio, feedback e domande generati dall’IA e ripassi basati sulla ripetizione distanziata. Alcune funzioni richiedono un account; altre un piano a pagamento."
+        ]
+      },
+      {
+        "heading": "Il tuo account",
+        "paragraphs": [
+          "Custodisci con cura le tue credenziali e avvisaci se sospetti un uso improprio. Sei responsabile delle attività svolte con il tuo account. Devi fornire un indirizzo email valido."
+        ]
+      },
+      {
+        "heading": "Uso consentito",
+        "paragraphs": [
+          "Non fare un uso improprio del servizio: nessun tentativo di romperlo o sovraccaricarlo, nessuna estrazione automatizzata di dati, nessun contenuto illegale e nessun uso delle funzioni di IA per creare materiale dannoso. Possiamo sospendere gli account che lo fanno."
+        ]
+      },
+      {
+        "heading": "Funzioni di IA",
+        "paragraphs": [
+          "Il feedback, le domande e le correzioni dell’IA sono generati automaticamente e possono essere sbagliati o incompleti. Supportano il tuo studio ma non costituiscono una consulenza professionale. Verifica le informazioni importanti su fonti affidabili.",
+          "I piani Gratis e Pro includono limiti di utilizzo dell’IA, descritti nella pagina dei prezzi. Possiamo limitare temporaneamente le funzioni di IA per mantenere affidabile il servizio."
+        ]
+      },
+      {
+        "heading": "I tuoi contenuti",
+        "paragraphs": [
+          "Ciò che scrivi in FocusKept resta tuo. Ci autorizzi a conservarlo, trattarlo e mostrarlo, e a inviarlo ai nostri fornitori di servizi (incluso OpenAI per le funzioni di IA), solo nella misura necessaria a fornirti il servizio."
+        ]
+      },
+      {
+        "heading": "Piani, pagamento e disdetta",
+        "paragraphs": [
+          "Pro è venduto come abbonamento mensile o annuale tramite Polar, il nostro rivenditore ufficiale (merchant of record). I prezzi sono mostrati prima del pagamento; possono essere applicate imposte. Gli abbonamenti si rinnovano automaticamente fino alla disdetta.",
+          "Puoi disdire in qualsiasi momento da Fatturazione; Pro resta attivo fino alla fine del periodo pagato. I rimborsi seguono la politica di Polar e la legge del tuo Paese.",
+          "Se il tuo piano termina, le schede e i ripassi esistenti continuano a funzionare; ai nuovi contenuti si applicano i limiti del piano Gratis."
+        ]
+      },
+      {
+        "heading": "Nome, logo e codice",
+        "paragraphs": [
+          "Il nome FocusKept e il logo appartengono a noi. Qualsiasi licenza open source del nostro codice riguarda solo il codice: non concede alcun diritto di usare il nostro nome o logo, e questi termini continuano ad applicarsi al servizio FocusKept."
+        ]
+      },
+      {
+        "heading": "Disponibilità e modifiche",
+        "paragraphs": [
+          "Ci impegniamo a mantenere FocusKept disponibile, ma non possiamo garantire un funzionamento sempre ininterrotto. Possiamo modificare o interrompere funzioni; se una modifica incide in modo significativo sulle funzioni a pagamento, ti avviseremo in anticipo."
+        ]
+      },
+      {
+        "heading": "Fine dell’utilizzo",
+        "paragraphs": [
+          "Puoi eliminare il tuo account in qualsiasi momento dalle Impostazioni. Possiamo sospendere o chiudere gli account che violano questi termini in modo grave o ripetuto."
+        ]
+      },
+      {
+        "heading": "Responsabilità",
+        "paragraphs": [
+          "FocusKept è fornito così com’è. Nei limiti consentiti dalla legge, non rispondiamo di danni indiretti o perdite di dati, e la nostra responsabilità complessiva è limitata all’importo che ci hai pagato nei 12 mesi precedenti la richiesta. Nulla in questi termini limita i diritti che ti spettano in base alla normativa a tutela dei consumatori."
+        ]
+      },
+      {
+        "heading": "Legge applicabile e contatti",
+        "paragraphs": [
+          "Questi termini sono regolati dalla legge dell’Azerbaigian, fatti salvi i diritti inderogabili dei consumatori nel luogo in cui vivi. Domande: hello@focuskept.com."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Informazioni su FocusKept",
+    "intro": "FocusKept è un prodotto indipendente, creato da una sola persona che voleva un unico posto per concentrarsi e ricordare davvero ciò che studiava.",
+    "sections": [
+      {
+        "heading": "Perché esiste",
+        "paragraphs": [
+          "I timer di concentrazione ti aiutano a iniziare, ma dimenticano tutto appena la sessione finisce. Le app di flashcard ti aiutano a ricordare, ma scrivere schede a mano è una fatica. FocusKept unisce le due cose: concentrati, spiegalo con parole tue e lascia che siano i ripassi a venire da te.",
+          "FocusKept è progettato, sviluppato e gestito da Murad Gojayev, ingegnere del software con sede a Baku, in Azerbaigian. Ogni funzione si basa su metodi di apprendimento ben studiati — blocchi di lavoro concentrato, pratica del recupero e ripetizione dilazionata — e resta solo se rende più facile mantenerli nel tempo. È personalmente responsabile del prodotto, dell'assistenza e della protezione dei tuoi dati."
+        ]
+      },
+      {
+        "heading": "Come lavoriamo",
+        "paragraphs": [
+          "Niente dark pattern, niente numeri falsi. Gratis significa davvero utile, e Pro paga l’IA e il tempo necessario per tenere FocusKept in funzione e migliorarlo.",
+          "Domande, idee o bug: hello@focuskept.com. Ogni messaggio viene letto da una persona."
+        ]
+      }
+    ]
+  }
+}

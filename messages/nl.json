@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "Hoofdnavigatie",
+      "appNavigation": "App-navigatie",
+      "skipToContent": "Naar de inhoud",
+      "techniques": "Technieken",
+      "pricing": "Prijzen",
+      "about": "Over ons",
+      "signIn": "Inloggen",
+      "tasks": "Taken",
+      "cards": "Kaarten",
+      "stats": "Statistieken",
+      "settings": "Instellingen",
+      "billing": "Facturering",
+      "signOut": "Uitloggen",
+      "timer": "Timer",
+      "guide": "Gids",
+      "howItWorks": "Zo werkt het",
+      "menu": "Menu",
+      "account": "Account en instellingen",
+      "reviewsDue": "Er wachten kaarten op herhaling"
+    },
+    "theme": {
+      "label": "Thema",
+      "dark": "Donker",
+      "light": "Licht",
+      "system": "Systeem"
+    },
+    "language": {
+      "label": "Taal"
+    },
+    "actions": {
+      "save": "Opslaan",
+      "saving": "Opslaan…",
+      "retry": "Opnieuw proberen"
+    },
+    "status": {
+      "error": "Er ging iets mis. Probeer het opnieuw.",
+      "offline": "Je bent offline. Je sessie staat op dit apparaat en wordt gesynchroniseerd zodra je weer online bent."
+    },
+    "consent": {
+      "label": "Analysevoorkeuren",
+      "text": "Mogen we anonieme gebruiksgegevens verzamelen om FocusKept te verbeteren? Er wordt niets bijgehouden tot je een keuze maakt.",
+      "allow": "Toestaan",
+      "decline": "Nee, bedankt"
+    },
+    "footer": {
+      "tagline": "Focus diep. Onthoud wat je leert.",
+      "product": "Product",
+      "company": "Bedrijf",
+      "legal": "Juridisch",
+      "focusTimer": "Focustimer",
+      "learningMode": "Leermodus",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Voorwaarden",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — Focus diep. Onthoud wat je leert.",
+    "defaultDescription": "Een focustimer met 18 beproefde technieken, Feynman-uitleg, door AI gemaakte vragen en automatische gespreide herhaling op dag 5, 10 en 30.",
+    "signIn": "Inloggen",
+    "signUp": "Maak je account aan",
+    "verifyEmail": "Kijk in je inbox",
+    "forgotPassword": "Wachtwoord opnieuw instellen",
+    "resetPassword": "Kies een nieuw wachtwoord",
+    "settings": "Instellingen",
+    "security": "Beveiliging",
+    "billing": "Facturering",
+    "focusTitle": "Focustimer",
+    "focusDescription": "Een gratis focustimer met 25/5, 52/17, Flowtime, Deep Work 90, timeboxing en eigen presets. Geen account nodig.",
+    "tasks": "Taken",
+    "learnTitle": "Leermodus: studeren, uitleggen, onthouden",
+    "learnDescription": "Bestudeer een onderwerp, leg het in je eigen woorden uit, krijg AI-feedback en vragen, en herhaal automatisch op dag 5, 10 en 30.",
+    "learnNew": "Nieuwe leersessie",
+    "explain": "Leg uit wat je hebt geleerd",
+    "cards": "Kenniskaarten",
+    "card": "Kenniskaart",
+    "review": "Herhalen",
+    "stats": "Statistieken",
+    "pricingTitle": "Prijzen: Gratis en Pro",
+    "pricingDescription": "FocusKept is gratis om mee te beginnen. Pro kost $ 5 per maand of $ 40 per jaar: onbeperkt kaarten, meer AI-feedback, het volledige Lab en een weekrapport.",
+    "techniquesTitle": "18 technieken voor focus, leren en plannen",
+    "techniquesDescription": "25/5, 52/17, Flowtime, Feynman, actief ophalen, SQ3R, Eisenhower en meer: hoe elke techniek werkt, wanneer je hem gebruikt en een gratis timer om te proberen."
+  },
+  "errors": {
+    "notFoundTitle": "Deze pagina bestaat niet.",
+    "notFoundText": "De link is misschien verouderd, of de pagina is verplaatst.",
+    "backHome": "Terug naar de startpagina",
+    "errorTitle": "Er ging iets niet zoals gepland.",
+    "errorText": "Probeer het zo opnieuw. Blijft het gebeuren? Laat het ons weten."
+  },
+  "auth": {
+    "signInTitle": "Welkom terug",
+    "signInLead": "Log in om verder te gaan met je focussessies en herhalingen.",
+    "signUpTitle": "Maak je account aan",
+    "signUpLead": "Bewaar wat je leert en krijg een herinnering op dag 5, 10 en 30.",
+    "forgotTitle": "Wachtwoord opnieuw instellen",
+    "forgotLead": "We mailen je een veilige link waarmee je een nieuw wachtwoord kiest.",
+    "resetTitle": "Kies een nieuw wachtwoord",
+    "resetLead": "Gebruik minstens 12 tekens.",
+    "verifyTitle": "Kijk in je inbox",
+    "verifyLead": "We hebben je een verificatielink gestuurd. Open hem om je account te activeren — je komt dan direct ingelogd hier terug.",
+    "verifyHint": "Niets ontvangen? Kijk in je spammap of log opnieuw in voor een nieuwe link.",
+    "name": "Je naam",
+    "namePlaceholder": "Sanne de Vries",
+    "email": "E-mailadres",
+    "emailPlaceholder": "jij@voorbeeld.nl",
+    "password": "Wachtwoord",
+    "passwordPlaceholder": "Minstens 12 tekens",
+    "newPassword": "Nieuw wachtwoord",
+    "forgotLink": "Wachtwoord vergeten?",
+    "submitSignIn": "Inloggen",
+    "submitSignUp": "Account aanmaken",
+    "submitForgot": "Link versturen",
+    "submitReset": "Wachtwoord wijzigen",
+    "google": "Doorgaan met Google",
+    "or": "of",
+    "haveAccount": "Heb je al een account?",
+    "noAccount": "Nieuw bij FocusKept?",
+    "createAccount": "Account aanmaken",
+    "signInLink": "Inloggen",
+    "legal": "Door verder te gaan, ga je akkoord met onze <terms>Voorwaarden</terms> en ons <privacy>Privacybeleid</privacy>.",
+    "resetSent": "Als er een account met dit e-mailadres bestaat, is de link onderweg.",
+    "resetDone": "Wachtwoord gewijzigd. Je kunt nu inloggen.",
+    "invalidCredentials": "Vul een geldig e-mailadres in en een wachtwoord van 12–128 tekens.",
+    "invalidPassword": "Gebruik een wachtwoord van 12–128 tekens.",
+    "wrongCredentials": "Dit e-mailadres en wachtwoord horen niet bij elkaar.",
+    "emailNotVerified": "Bevestig eerst je e-mailadres. We hebben je net een nieuwe link gestuurd.",
+    "userExists": "Er bestaat al een account met dit e-mailadres. Probeer in te loggen.",
+    "tooManyAttempts": "Te veel pogingen. Wacht een minuut en probeer het opnieuw.",
+    "invalidToken": "Deze link is verlopen of al gebruikt. Vraag een nieuwe aan.",
+    "learningContext": "Meld je aan om je leersessie over ‘{topic}’ te starten."
+  },
+  "email": {
+    "verification": {
+      "subject": "Bevestig je e-mailadres voor FocusKept",
+      "heading": "Bevestig je e-mailadres",
+      "body": "Tik op de knop hieronder om je FocusKept-account te activeren. Je wordt ingelogd en gaat verder waar je gebleven was.",
+      "button": "E-mailadres bevestigen",
+      "ignore": "Heb je geen account aangemaakt? Dan kun je deze e-mail negeren."
+    },
+    "reset": {
+      "subject": "Stel je FocusKept-wachtwoord opnieuw in",
+      "heading": "Wachtwoord opnieuw instellen",
+      "body": "Gebruik de veilige link hieronder om een nieuw wachtwoord te kiezen. Hij verloopt snel en werkt maar één keer.",
+      "button": "Kies een nieuw wachtwoord",
+      "ignore": "Heb je dit niet aangevraagd? Dan kun je deze e-mail negeren. Je wachtwoord blijft hetzelfde."
+    },
+    "footer": {
+      "transactional": "Je ontvangt deze e-mail vanwege een actie in je FocusKept-account.",
+      "reviews": "Je ontvangt dit omdat herhalingsherinneringen aanstaan in je FocusKept-account.",
+      "weekly": "Je ontvangt dit weekrapport omdat het aanstaat in je FocusKept Pro-account.",
+      "unsubscribe": "Afmelden"
+    },
+    "digest": {
+      "subject": "{count, plural, one {Vandaag # kaart om te herhalen} other {Vandaag # kaarten om te herhalen}}",
+      "preview": "{count, plural, one {Er staat één kaart klaar om te herhalen.} other {Er staan # kaarten klaar om te herhalen.}}",
+      "heading": "{count, plural, one {Tijd om # kaart te herhalen} other {Tijd om # kaarten te herhalen}}",
+      "intro": "Nu herhalen, vlak voordat je het zou vergeten, zorgt ervoor dat het blijft hangen:",
+      "more": "{count, plural, one {…en nog #} other {…en nog #}}",
+      "estimate": "{minutes, plural, one {Ongeveer # minuut.} other {Ongeveer # minuten.}}",
+      "button": "Herhaling starten"
+    },
+    "weekly": {
+      "subject": "Jouw FocusKept-week",
+      "preview": "{minutes, plural, one {Vorige week # minuut gefocust.} other {Vorige week # minuten gefocust.}}",
+      "heading": "Jouw week in focus",
+      "intro": "Zo ging je afgelopen week.",
+      "focus": "Gefocust",
+      "minutes": "{minutes, plural, one {# minuut} other {# minuten}}",
+      "sessions": "Sessies",
+      "best": "Beste techniek",
+      "cards": "Gemaakte kaarten",
+      "retention": "Onthouden",
+      "streak": "Reeks",
+      "days": "{count, plural, one {# dag} other {# dagen}}",
+      "suggestionTitle": "Eén tip voor deze week",
+      "suggestions": {
+        "start": "Begin klein: één blok van 25 minuten op maandag is genoeg om op gang te komen.",
+        "retention": "Je haalde {percent, number}% van je herhalingen. Lees je uitleg nog eens voor de herhaling van een kaart en houd antwoorden kort.",
+        "goal": "Je haalde {percent, number}% van je weekdoel. Plan halverwege de week één extra sessie in.",
+        "bestTechnique": "Je focuste het best met {technique}. Plan je twee belangrijkste sessies daarmee.",
+        "keepGoing": "Een sterke week. Houd hetzelfde ritme vast en bescherm je focustijd."
+      },
+      "recapTitle": "Wat je in {month} hebt geleerd",
+      "recapText": "{cards, plural, one {# kaart gemaakt} other {# kaarten gemaakt}} · onthouden {retention}",
+      "button": "Open je statistieken"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, one {# kaart om te herhalen} other {# kaarten om te herhalen}}",
+      "reviewsBody": "Een paar minuten nu houdt het in je geheugen.",
+      "streakTitle": "{count, plural, one {Houd je reeks van # dag vast} other {Houd je reeks van # dagen vast}}",
+      "streakBody": "Eén korte sessie vandaag houdt hem in stand."
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "Analyse",
+      "text": "Optionele, anonieme productanalyse. Je notities, uitleg en antwoorden worden nooit verstuurd.",
+      "allow": "Analyse toestaan",
+      "disable": "Analyse uitzetten",
+      "enabled": "Analyse aangezet.",
+      "disabled": "Analyse uitgezet.",
+      "error": "Je voorkeur kon niet worden bijgewerkt."
+    },
+    "title": "Instellingen",
+    "lead": "Je account, voorkeuren en herinneringen.",
+    "account": {
+      "title": "Account",
+      "displayName": "Weergavenaam",
+      "saved": "Wijzigingen opgeslagen.",
+      "securityLink": "Wachtwoord en sessies",
+      "billingLink": "Abonnement en facturering"
+    },
+    "security": {
+      "title": "Beveiliging",
+      "lead": "Zodat je account van jou blijft.",
+      "backToSettings": "Terug naar instellingen",
+      "passwordTitle": "Wachtwoord wijzigen",
+      "passwordText": "Als je je wachtwoord wijzigt, word je op je andere apparaten uitgelogd.",
+      "currentPassword": "Huidig wachtwoord",
+      "newPassword": "Nieuw wachtwoord",
+      "passwordHint": "Minstens 12 tekens.",
+      "changePassword": "Wachtwoord wijzigen",
+      "passwordChanged": "Wachtwoord gewijzigd.",
+      "passwordError": "Je wachtwoord kon niet worden gewijzigd. Controleer je huidige wachtwoord en probeer het opnieuw.",
+      "sessionsTitle": "Sessies",
+      "sessionsText": "Blijf hier ingelogd en log overal anders uit.",
+      "revokeOthers": "Andere sessies uitloggen",
+      "revoked": "Andere sessies zijn uitgelogd.",
+      "revokeError": "Andere sessies konden niet worden uitgelogd."
+    },
+    "delete": {
+      "title": "Account verwijderen",
+      "text": "Verwijdert je account en alles erin definitief: sessies, taken, kaarten en herhalingen. Accounts met een betaalgeschiedenis krijgen eerst een korte controle door support, zodat er geen abonnement blijft lopen. Exporteer eerst je gegevens als je een kopie wilt.",
+      "word": "VERWIJDEREN",
+      "typeToConfirm": "Typ {word} om te bevestigen",
+      "password": "Je wachtwoord",
+      "submit": "Mijn account verwijderen",
+      "billingBlocked": "Je account heeft een betaalgeschiedenis. Mail ons, dan sluiten wij het voor je.",
+      "error": "Je account kon niet worden verwijderd. Controleer je wachtwoord en probeer het opnieuw."
+    },
+    "prefs": {
+      "saved": "Instellingen opgeslagen.",
+      "general": "Algemeen",
+      "timezone": "Tijdzone",
+      "useDeviceZone": "Tijdzone van dit apparaat gebruiken ({zone})",
+      "weekStart": "Week begint op",
+      "weeklyGoal": "Wekelijks focusdoel (uren)",
+      "weeklyGoalHint": "Zichtbaar in je statistieken. 0 zet het uit.",
+      "techniques": "Technieken",
+      "defaultTime": "Standaard tijdtechniek",
+      "defaultMethod": "Standaard leermethode",
+      "timebox": "Standaard timebox (minuten)",
+      "presets": "Eigen presets",
+      "deletePreset": "Preset ‘{name}’ verwijderen",
+      "reviewSteps": "Herhaalschema",
+      "reviewStepsText": "Dagen na het opslaan van een kaart voor de eerste drie herhalingen. Na de laatste stap gaan herhalingen naar 60 dagen en verdubbelen ze, tot 180 dagen.",
+      "stepN": "Herhaling {n, number} (dag)",
+      "resetSteps": "Terugzetten naar 5 / 10 / 30",
+      "stepsInvalid": "Gebruik drie oplopende getallen tussen 1 en 365.",
+      "notifications": "Herinneringen en meldingen",
+      "reminderTime": "Tijd van de dagelijkse herinnering",
+      "reminderTimeHint": "Als er herhalingen klaarstaan, krijg je op dit tijdstip één herinnering.",
+      "emailReviews": "Herinneringsmails voor herhalingen",
+      "emailReviewsHint": "Eén e-mail op dagen met herhalingen. Nooit één per kaart.",
+      "emailWeekly": "Weekrapport per e-mail",
+      "emailWeeklyHint": "Elke maandag om 09:00: je week in focus en één tip.",
+      "emailWeeklyPro": "Een Pro-functie. Zet hem nu aan, dan start hij zodra je overstapt.",
+      "streakNudge": "Reeksherinnering",
+      "streakNudgeHint": "Een vriendelijke browsermelding om 19:00 als een reeks van 3+ dagen vandaag zou breken.",
+      "browser": "Browsermeldingen",
+      "browserHint": "Herhalingsherinneringen op dit apparaat, naast de e-mail.",
+      "browserDisable": "Uitzetten op dit apparaat",
+      "browserOff": "Browserherinneringen staan uit op dit apparaat.",
+      "browserUnavailable": "Niet beschikbaar in deze browser of nog niet ingesteld.",
+      "hours": "Meldingstijden",
+      "hoursHint": "Browsermeldingen worden alleen binnen deze tijden verstuurd. De dagelijkse herinneringsmail verandert niet.",
+      "from": "{day}: van",
+      "to": "{day}: tot",
+      "export": "Je gegevens",
+      "exportText": "Download alles wat FocusKept over je bewaart, bij elk abonnement.",
+      "exportJson": "Alles (JSON)",
+      "exportCsv": {
+        "sessions": "Sessies (CSV)",
+        "cards": "Kaarten (CSV)",
+        "reviews": "Herhalingen (CSV)"
+      }
+    }
+  },
+  "billing": {
+    "title": "Facturering",
+    "lead": "Je abonnement, facturen en betaalgegevens.",
+    "currentPlan": "Huidig abonnement",
+    "free": "Gratis",
+    "pro": "Pro",
+    "syncNote": "Je abonnement wordt automatisch bijgewerkt zodra Polar een betaling bevestigt. Alleen terugkeren van de betaalpagina verandert niets, dus het kan even duren.",
+    "returned": "Bedankt! We werken je abonnement bij zodra de betaling is bevestigd.",
+    "manage": "Abonnement beheren",
+    "seePlans": "Abonnementen bekijken",
+    "connecting": "Verbinden…",
+    "notConfigured": "Betalingen zijn nog niet ingesteld. Er is niets afgeschreven.",
+    "unavailable": "Facturering is nu niet beschikbaar. Probeer het opnieuw.",
+    "renewsOn": "Wordt verlengd op {date}.",
+    "endsOn": "Opgezegd. Pro blijft actief tot {date}."
+  },
+  "landing": {
+    "heroTitle": "Focus diep. Onthoud wat je leert.",
+    "heroLead": "FocusKept is een rustige focustimer met 18 beproefde technieken. Als je studeert, maakt hij van je eigen uitleg vragen en herinnert hij je eraan om te herhalen op dag 5, 10 en 30.",
+    "question": "Wat ga je vandaag doen?",
+    "workTitle": "Werken",
+    "workText": "Kies een taak en een techniek en focus. Geen account nodig.",
+    "learnTitle": "Leren",
+    "learnText": "Bestudeer een onderwerp, leg het uit in je eigen woorden en onthoud het.",
+    "noCard": "Gratis om te beginnen. Geen creditcard nodig.",
+    "loop": {
+      "eyebrow": "Zo werkt het",
+      "title": "Van focus naar blijvende kennis",
+      "lead": "Timers helpen je beginnen. Onthouden vraagt om één ronde extra. FocusKept maakt die rond voor je.",
+      "focus": {
+        "title": "Focussen",
+        "text": "Werk in vaste blokken met 25/5, 52/17, Flowtime of een andere techniek."
+      },
+      "explain": {
+        "title": "Uitleggen",
+        "text": "Schrijf op wat je hebt geleerd alsof je het aan een kind van 12 uitlegt: de Feynman-techniek."
+      },
+      "questions": {
+        "title": "Vragen krijgen",
+        "text": "AI wijst gaten aan en maakt van je uitleg herhaalvragen die je kunt aanpassen."
+      },
+      "review": {
+        "title": "Op tijd herhalen",
+        "text": "We herinneren je op dag 5, 10 en 30, vlak voordat je het zou vergeten."
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman in de praktijk",
+      "title": "Leg het simpel uit. Zie wat je echt begrijpt.",
+      "lead": "Na een leersessie leg je het onderwerp uit in je eigen woorden. Je krijgt een helderheidsscore, ziet wat er ontbreekt en wat niet klopt, en krijgt vragen voor je herhalingen.",
+      "cta": "Probeer de leermodus",
+      "label": "Voorbeeld van een uitleg met AI-feedback",
+      "badge": "Voorbeeld",
+      "topic": "Onderwerp: fotosynthese",
+      "explanation": "Planten maken hun eigen eten. Hun bladeren vangen zonlicht op, halen water uit de wortels en lucht door piepkleine gaatjes, en maken daar suiker van. Wat overblijft is zuurstof, en die ademen wij in.",
+      "feedback": "Feedback",
+      "clarity": "Helderheid 82/100",
+      "gap": "Ontbreekt: het gas uit de lucht is koolstofdioxide.",
+      "mistake": "Onduidelijk: het zonlicht levert de energie; het wordt zelf geen suiker.",
+      "questionsLabel": "Herhaalvragen",
+      "q1": "Welk gas halen planten uit de lucht om suiker te maken?",
+      "q2": "Waar of niet waar: planten geven zuurstof af als bijproduct.",
+      "q3": "Planten gebruiken de energie van ____ om suiker te maken.",
+      "schedule": "Opgeslagen als kaart. Herhalingen op dag 5, 10 en 30."
+    },
+    "techniques": {
+      "eyebrow": "18 technieken",
+      "title": "Alle technieken op één plek",
+      "lead": "Tijdtechnieken om te focussen, leermethoden om te begrijpen, plantechnieken voor je dag. Elke pagina legt de techniek uit en laat je hem meteen proberen."
+    },
+    "pricing": {
+      "title": "Gratis beginnen, eerlijk als je groeit",
+      "lead": "Alles wat je nodig hebt is gratis. Pro kost {monthly} per maand of {yearly} per jaar.",
+      "points": {
+        "1": "Alle technieken, taken, statistieken en herinneringen in Gratis",
+        "2": "Pro: onbeperkt kaarten en AI-feedback voor elke kaart",
+        "3": "Pro: het volledige Lab en een weekrapport"
+      },
+      "cta": "Abonnementen vergelijken"
+    },
+    "faq": {
+      "title": "Vragen",
+      "1": {
+        "q": "Heb ik een account nodig?",
+        "a": "Niet voor de werkmodus: start gewoon de timer. De leermodus heeft een gratis account nodig, zodat we je kaarten kunnen bewaren en herhalingsherinneringen kunnen sturen."
+      },
+      "2": {
+        "q": "Is er een app voor je telefoon?",
+        "a": "FocusKept werkt in je browser op elk apparaat. Je kunt het op je beginscherm zetten, en herinneringen komen per e-mail en als browsermelding."
+      },
+      "3": {
+        "q": "Wat doet de AI met mijn uitleg?",
+        "a": "Je uitleg wordt naar OpenAI gestuurd om feedback en vragen te maken. Zet er geen persoonlijke of gevoelige informatie in. Details staan in ons privacybeleid."
+      },
+      "4": {
+        "q": "Waarom dag 5, 10 en 30?",
+        "a": "Herhalingen verspreid over de eerste maand, wanneer je het snelst vergeet, houden kennis met weinig moeite lang vast. Je kunt de stappen aanpassen in Instellingen."
+      },
+      "5": {
+        "q": "In welke talen is FocusKept beschikbaar?",
+        "a": "FocusKept is beschikbaar in 24 talen. Je uitleg en vragen werken in elke taal waarin je schrijft."
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "Tijd",
+    "goalLabel": "Doel",
+    "paused": "Gepauzeerd",
+    "announce": "{phase}",
+    "block": "Blok {current} van {total}",
+    "focusedSoFar": "{duration} gefocust",
+    "flowHint": "Stop als je focus wegzakt",
+    "phase": {
+      "idle": "Klaar wanneer jij het bent",
+      "work": "Focus",
+      "short_break": "Korte pauze",
+      "long_break": "Lange pauze",
+      "ready": "Klaar voor het volgende blok",
+      "box_ended": "De tijd is om",
+      "finished": "Sessie voltooid"
+    },
+    "controls": {
+      "start": "Starten",
+      "startNext": "Volgende blok starten",
+      "pause": "Pauzeren",
+      "resume": "Hervatten",
+      "skip": "Overslaan",
+      "skipBreak": "Pauze overslaan",
+      "takeBreak": "Pauze nemen",
+      "finish": "Sessie beëindigen",
+      "fullscreen": "Volledig scherm",
+      "exitFullscreen": "Volledig scherm sluiten",
+      "shortcuts": "Sneltoetsen",
+      "close": "Sluiten"
+    },
+    "box": {
+      "title": "De tijd is om. En nu?",
+      "done": "Klaar",
+      "extend": "Eén keer verlengen (+{duration})",
+      "later": "Naar later verplaatsen"
+    },
+    "tips": {
+      "1": "Sta op en rek je een minuutje uit.",
+      "2": "Drink een glas water.",
+      "3": "Geef je ogen rust: kijk 20 seconden naar iets op zo’n 6 meter afstand.",
+      "4": "Loop even een rondje, al is het maar door de kamer.",
+      "5": "Rol je schouders en adem een paar keer rustig in en uit.",
+      "6": "Zet een raam open of ga even naar buiten voor frisse lucht."
+    },
+    "notify": {
+      "breakTitle": "Tijd voor een pauze",
+      "breakBody": "Neem {duration}. Ga even weg van het scherm.",
+      "focusTitle": "Terug naar focus",
+      "readyTitle": "De pauze is voorbij",
+      "readyBody": "Klaar voor het volgende blok?",
+      "boxTitle": "De tijd is om",
+      "boxBody": "Klaar, één keer verlengen of naar later verplaatsen?"
+    },
+    "shortcuts": {
+      "title": "Sneltoetsen",
+      "keySpace": "Spatie",
+      "keyEsc": "Esc",
+      "space": "Starten, pauzeren of hervatten",
+      "skip": "Huidige fase overslaan",
+      "fullscreen": "Volledig scherm aan/uit",
+      "exit": "Volledig scherm sluiten",
+      "help": "Deze lijst tonen"
+    },
+    "sound": {
+      "title": "Geluiden",
+      "chime": "Belletje bij faseovergang",
+      "chimeVolume": "Volume van het belletje",
+      "background": "Achtergrondgeluid",
+      "backgroundVolume": "Volume achtergrond",
+      "hint": "Achtergrondgeluid speelt alleen terwijl je focust.",
+      "done": "Klaar",
+      "kinds": {
+        "none": "Geen",
+        "white": "Witte ruis",
+        "pink": "Roze ruis",
+        "brown": "Bruine ruis",
+        "rain": "Regen",
+        "cafe": "Café",
+        "stream": "Beek",
+        "ocean": "Golven",
+        "wind": "Wind",
+        "fire": "Haardvuur",
+        "night": "Zomernacht",
+        "binaural": "Binaurale beat"
+      },
+      "groups": {
+        "noise": "Ruis",
+        "nature": "Natuur",
+        "tones": "Tonen",
+        "places": "Plekken"
+      },
+      "about": {
+        "white": "Egaal geruis dat geklets maskeert",
+        "pink": "Zachter, als gestage regen",
+        "brown": "Diep gerommel, geen gesis",
+        "rain": "Lichte regen met druppels",
+        "stream": "Een beek over stenen",
+        "ocean": "Trage golven om de paar seconden",
+        "wind": "Wind die aanzwelt en wegsterft",
+        "fire": "Knetterende houtblokken",
+        "night": "Krekels in een stille nacht",
+        "binaural": "16-Hz-beat, voor koptelefoon",
+        "cafe": "Geroezemoes van een druk café"
+      },
+      "headphones": "Gebruik een koptelefoon: elk oor hoort een iets andere toon en je hersenen horen daartussen een beat van 16 Hz. Houd het volume laag.",
+      "previewHint": "Kies een geluid om het te horen. Het speelt alleen terwijl je focust.",
+      "tip": "Geluiden zonder woorden werken het best: songteksten en spraak vertragen lezen en onthouden."
+    },
+    "taskLabel": "Taak"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "Geen account nodig. Sessies worden op dit apparaat bewaard.",
+      "durations": {
+        "work": "Focus (min)",
+        "shortBreak": "Korte pauze (min)",
+        "longBreak": "Lange pauze (min)",
+        "cycles": "Blokken voor een lange pauze",
+        "box": "Lengte van de timebox (min)"
+      }
+    },
+    "end": {
+      "ratingValue": "{value} van 5",
+      "discardConfirm": "Deze sessie weggooien? Hij wordt niet opgeslagen.",
+      "tooShort": "Deze sessie duurde korter dan een minuut en telt daarom niet mee in je statistieken."
+    },
+    "import": {
+      "title": "Je sessies meenemen?",
+      "text": "We vonden {sessions, plural, one {# sessie} other {# sessies}} en {tasks, plural, one {# taak} other {# taken}} op dit apparaat. In je account importeren?",
+      "confirm": "Importeren",
+      "later": "Niet nu",
+      "done": "{sessions, plural, one {# sessie} other {# sessies}} en {tasks, plural, one {# taak} other {# taken}} geïmporteerd.",
+      "error": "Importeren mislukt. Je gegevens staan nog op dit apparaat; probeer het later opnieuw."
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "Leermodus",
+      "title": "Bewaar wat je leert",
+      "lead": "Studeer met een beproefde methode, leg het onderwerp uit in je eigen woorden, en FocusKept maakt er vragen van. We herinneren je eraan om te herhalen op dag 5, 10 en 30, vlak voordat je het zou vergeten.",
+      "steps": {
+        "1": "Focus op een onderwerp met een leermethode en een timer.",
+        "2": "Leg het uit alsof je het aan een kind van 12 vertelt.",
+        "3": "AI wijst gaten aan en schrijft herhaalvragen.",
+        "4": "Herhaal automatisch op dag 5, 10 en 30."
+      },
+      "topicLabel": "Wat wil je leren?",
+      "topicPlaceholder": "bijv. Hoe vaccins het immuunsysteem trainen",
+      "start": "Doorgaan",
+      "accountNote": "De leermodus heeft een gratis account nodig, zodat we je herhalingsherinneringen kunnen sturen.",
+      "workInstead": "Alleen een timer nodig? Gebruik de werkmodus, zonder account."
+    },
+    "explain": {
+      "prompt": "Leg uit wat je hebt geleerd alsof je het aan een kind van 12 vertelt.",
+      "promptHint": "Gebruik eenvoudige woorden en korte zinnen. Waar je vastloopt, zit precies wat je hierna moet leren.",
+      "openaiNotice": "Je uitleg wordt verwerkt door OpenAI. Zet er geen persoonlijke of gevoelige informatie in. <privacy>Privacybeleid</privacy>",
+      "counter": "{count} / {max} tekens (minstens {min})",
+      "analyze": "AI-feedback en vragen krijgen",
+      "analyzing": "Je uitleg wordt gelezen…",
+      "manual": "Zelf vragen schrijven",
+      "aiOff": "AI-feedback is nu niet beschikbaar. Je kunt je vragen zelf schrijven.",
+      "remaining": "{count, plural, =0 {Geen AI-analyses meer deze maand} one {Nog # AI-analyse deze maand} other {Nog # AI-analyses deze maand}}",
+      "aiFailed": "AI-feedback werkte deze keer niet. Je uitleg is opgeslagen; schrijf je vragen hieronder of probeer het later opnieuw.",
+      "yourExplanation": "Je uitleg",
+      "revise": "Aanpassen en opnieuw analyseren",
+      "edit": "Bewerken",
+      "analysisTitle": "Feedback",
+      "clarity": "Helderheid {score, number}/100",
+      "clarityLabel": "Helderheidsscore",
+      "gaps": "Wat ontbreekt",
+      "mistakes": "Wat niet klopt of onduidelijk is",
+      "noGaps": "Er ontbreekt niets belangrijks.",
+      "noMistakes": "Geen fouten gevonden.",
+      "rewrite": "Een duidelijkere versie tonen",
+      "useRewrite": "Verder met deze versie",
+      "reanalysisUsed": "Je hebt de nieuwe analyse van deze kaart al gebruikt. Met Pro zijn aanpassingen onbeperkt.",
+      "questionsTitle": "Herhaalvragen",
+      "questionsHint": "Pas ze aan, verwijder ze of voeg je eigen toe. Deze vragen beantwoord je bij je herhalingen.",
+      "needQuestion": "Voeg minstens één vraag toe.",
+      "fixQuestions": "Sommige vragen moeten nog worden aangepast voordat je opslaat.",
+      "save": "Kaart opslaan",
+      "saveError": "De kaart kon niet worden opgeslagen. Probeer het opnieuw.",
+      "savedTitle": "Kaart opgeslagen",
+      "savedText": "Je eerste herhaling is op {date}. We herinneren je eraan.",
+      "viewCard": "Kaart bekijken",
+      "another": "Nog een sessie starten",
+      "notFound": "Deze sessie is al opgeslagen of bestaat niet.",
+      "check": "Controleren",
+      "focused": "Focustijd: {duration}",
+      "hintLong": "Noem de hoofdgedachten, elk in een of twee zinnen. Je pauzenotities staan er al.",
+      "hintMid": "Drie tot vijf hoofdgedachten, elk in een of twee zinnen, zonder in het boek te kijken.",
+      "hintShort": "Twee of drie hoofdgedachten zijn genoeg. Schrijf zonder in het boek te kijken.",
+      "keep": "{count, plural, one {# vraag bewaren} other {# vragen bewaren}}",
+      "keptTitle": "{count, plural, one {# vraag staat klaar.} other {# vragen staan klaar.}}",
+      "newSession": "Nieuwe sessie",
+      "readingText": "We zoeken hiaten en maken vragen klaar",
+      "writeTitle": "Wat heb je geleerd? Schrijf het in je eigen woorden."
+    }
+  },
+  "tasks": {
+    "title": "Taken",
+    "markDone": "‘{title}’ als klaar markeren",
+    "focusOn": "Focussen op ‘{title}’",
+    "close": "Sluiten",
+    "errors": {
+      "generic": "Die wijziging kon niet worden opgeslagen. Probeer het opnieuw.",
+      "ivyFull": "Morgen heeft al zes taken.",
+      "slotFull": "Dat deel van het bord van vandaag zit al vol."
+    },
+    "matrix": {
+      "do": {
+        "title": "Nu doen"
+      },
+      "schedule": {
+        "title": "Inplannen"
+      },
+      "delegate": {
+        "title": "Delegeren"
+      },
+      "delete": {
+        "title": "Schrappen"
+      }
+    },
+    "plan135": {
+      "big": "Groot",
+      "medium": "Middel",
+      "small": "Klein"
+    },
+    "ivy": {
+      "moveUp": "‘{title}’ omhoog",
+      "moveDown": "‘{title}’ omlaag"
+    },
+    "board": {
+      "heading": "Vandaag",
+      "chip": {
+        "today": "Vandaag",
+        "tomorrow": "Morgen",
+        "full": "Vandaag zit vol",
+        "slot": {
+          "big": "Plek voor de hoofdtaak",
+          "medium": "Middelgrote plek",
+          "small": "Korte plek"
+        }
+      },
+      "toTomorrow": "Morgen",
+      "progress": "{done, number} van {total, number} klaar",
+      "planned": "{planned} gepland · {left} te gaan",
+      "plannedEmpty": "Nog niets gepland",
+      "barLabel": "Vandaag: {done} klaar, {left} te gaan",
+      "addLabel": "Nieuwe taak",
+      "addPlaceholder": "Probeer „Opzet essay 45min morgen !” – duur, dag en prioriteit worden herkend",
+      "add": "Toevoegen",
+      "keywords": {
+        "today": "vandaag",
+        "tomorrow": "morgen",
+        "minutes": "min, minuten",
+        "hours": "u, uur"
+      },
+      "dayFull": "Vandaag zit vol. Zet eerst een taak op morgen.",
+      "first": {
+        "label": "Doe dit eerst",
+        "empty": "Nog geen hoofdtaak. Kies een lange taak die je vaak uitstelt en tik op „Naar vandaag”."
+      },
+      "medium": {
+        "title": "Daarna deze",
+        "empty": "Vrije plek · 25–60 min"
+      },
+      "small": {
+        "title": "Korte klusjes tussendoor",
+        "empty": "Vrije plek · korter dan 25 min"
+      },
+      "slotCount": "{done, number}/{used, number} klaar · {free, number} vrij",
+      "overflow": {
+        "title": "Vandaag geen plek meer",
+        "hint": "Gepland voor vandaag, maar alle plekken zijn bezet."
+      },
+      "footnote": "Eén hoofdtaak, drie middelgrote, vijf korte: een volle dag. Nieuwe taken vinden hun plek op basis van hun duur.",
+      "focus": "Focussen",
+      "toTomorrowLabel": "„{title}” naar morgen verplaatsen",
+      "toIncoming": "Binnengekomen",
+      "toIncomingLabel": "„{title}” naar Binnengekomen verplaatsen",
+      "edit": "„{title}” openen"
+    },
+    "details": {
+      "days": {
+        "today": "Vandaag",
+        "tomorrow": "Morgen",
+        "none": "Geen datum"
+      },
+      "name": "Titel",
+      "tags": "Labels",
+      "tagsPlaceholder": "bijv. studie, programmeren",
+      "project": "Project",
+      "noProject": "Geen project",
+      "save": "Opslaan",
+      "deleteConfirm": "Deze taak verwijderen? Gekoppelde sessies blijven bewaard.",
+      "title": "Taak",
+      "minutes": "Duur (min)",
+      "day": "Dag",
+      "notes": "Notities",
+      "archive": "Archiveren",
+      "delete": "Verwijderen"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "Morgen",
+        "planned": "Gepland",
+        "unsorted": "Niet ingedeeld"
+      },
+      "quadrant": {
+        "do": {
+          "label": "Nu doen",
+          "hint": "Urgent en belangrijk"
+        },
+        "plan": {
+          "label": "Inplannen",
+          "hint": "Belangrijk, niet urgent"
+        },
+        "quick": {
+          "hint": "Urgent, niet belangrijk",
+          "label": "Snel klaar"
+        },
+        "later": {
+          "label": "Straks",
+          "hint": "Geen van beide"
+        }
+      },
+      "projects": "Projecten en filters",
+      "filterLabel": "Filteren op prioriteit",
+      "empty": {
+        "tomorrow": "Nog niets voor morgen.",
+        "planned": "Niets gepland voor latere dagen.",
+        "unsorted": "Alles is ingedeeld."
+      },
+      "missed": "sinds {date}",
+      "important": "Belangrijk",
+      "urgent": "Dringend",
+      "importantShort": "B",
+      "urgentShort": "D",
+      "importantLabel": "„{title}” is belangrijk",
+      "urgentLabel": "„{title}” is dringend",
+      "toToday": "Naar vandaag",
+      "toTodayLabel": "„{title}” naar vandaag verplaatsen",
+      "plan": "Plan morgen in 2 minuten",
+      "planHint": "Zet tot zes taken op volgorde en begin de ochtend meteen",
+      "title": "Binnengekomen"
+    },
+    "projects": {
+      "filterProject": "Project",
+      "filterTag": "Label",
+      "all": "Alle",
+      "name": "Naam van nieuw project",
+      "add": "Project toevoegen",
+      "archive": "Archiveren",
+      "restore": "Herstellen",
+      "done": "Klaar",
+      "title": "Projecten en filters"
+    },
+    "planner": {
+      "moveUp": "‘{title}’ omhoog",
+      "remove": "‘{title}’ van morgen halen",
+      "title": "Wat ga je morgen doen?",
+      "lead": "Kies tot zes taken, de belangrijkste eerst. Morgen wordt de eerste „Doe dit eerst” en vult de rest het bord.",
+      "pick": "Kiezen",
+      "order": "Volgorde voor morgen · {count, number}/{max, number}",
+      "empty": "Kies taken uit de lijst. De eerste die je kiest, zie je morgenochtend als eerste.",
+      "fromToday": "van vandaag",
+      "later": "Niet nu",
+      "save": "Bewaren voor morgen",
+      "saved": "De lijst voor morgen is bewaard."
+    }
+  },
+  "cards": {
+    "title": "Kenniskaarten",
+    "lead": "Alles wat je hebt geleerd, met het bijbehorende herhaalschema.",
+    "newSession": "Nieuwe leersessie",
+    "searchLabel": "Kaarten doorzoeken",
+    "searchPlaceholder": "Zoek in onderwerpen en uitleg",
+    "search": "Zoeken",
+    "statusLabel": "Status",
+    "active": "Actief",
+    "archived": "Gearchiveerd",
+    "topicLabel": "Onderwerp",
+    "allTopics": "Alle onderwerpen",
+    "sortLabel": "Sorteren",
+    "sortDue": "Eerst te herhalen",
+    "sortNew": "Nieuwste eerst",
+    "allowance": "{used, number} van {limit, number} kaarten in Gratis",
+    "emptyTitle": "Nog geen kaarten",
+    "emptyText": "Rond een leersessie af en leg uit wat je hebt geleerd. Je eerste kaart verschijnt dan hier.",
+    "noResults": "Geen kaarten gevonden voor je zoekopdracht.",
+    "more": "Meer laden",
+    "due": "Te herhalen {when}",
+    "dueToday": "Vandaag te herhalen",
+    "overdue": "Achterstallig",
+    "box": "Bak {n, number}",
+    "graduated": "Lange termijn",
+    "questionsCount": "{count, plural, one {# vraag} other {# vragen}}",
+    "detail": {
+      "back": "Alle kaarten",
+      "reviewNow": "Nu herhalen",
+      "reviewNowHint": "Oefen wanneer je wilt. Vroege herhalingen veranderen het schema niet.",
+      "nextReview": "Volgende herhaling",
+      "reviews": "Herhalingen",
+      "source": "Bron",
+      "method": "Methode",
+      "created": "Gemaakt",
+      "explanation": "Uitleg",
+      "editTopic": "Onderwerp",
+      "save": "Wijzigingen opslaan",
+      "saved": "Wijzigingen opgeslagen.",
+      "archive": "Archiveren",
+      "unarchive": "Herstellen",
+      "archivedNote": "Gearchiveerde kaarten worden niet herhaald. Ze tellen wel mee voor de limiet van Gratis.",
+      "delete": "Kaart verwijderen",
+      "deleteConfirm": "Deze kaart en de herhaalgeschiedenis verwijderen? Dit kan niet ongedaan worden gemaakt.",
+      "history": "Herhaalgeschiedenis",
+      "noHistory": "Nog geen herhalingen.",
+      "passed": "Gehaald",
+      "missed": "Niet gehaald",
+      "early": "Oefenen",
+      "score": "{score, number}%",
+      "analysis": "AI-feedback",
+      "error": "Opslaan mislukt. Probeer het opnieuw."
+    },
+    "questions": {
+      "number": "Vraag {n, number}",
+      "type": "Soort vraag",
+      "types": {
+        "open": "Open antwoord",
+        "true_false": "Waar of niet waar",
+        "cloze": "Invulvraag"
+      },
+      "source": {
+        "ai": "AI",
+        "ai_edited": "AI, bewerkt"
+      },
+      "prompt": "Vraag",
+      "answer": "Antwoord",
+      "true": "Waar",
+      "false": "Niet waar",
+      "explanation": "Waarom het klopt",
+      "explanationPlaceholder": "Optioneel, één zin",
+      "clozeHint": "Markeer het ontbrekende woord met {blank}",
+      "delete": "Vraag {n, number} verwijderen",
+      "add": {
+        "open": "Open vraag",
+        "true_false": "Waar / niet waar",
+        "cloze": "Invulvraag"
+      },
+      "problems": {
+        "prompt": "Schrijf de vraag.",
+        "answer": "Voeg het antwoord toe.",
+        "blank": "Een invulvraag heeft precies één ____ nodig."
+      }
+    },
+    "boxes": {
+      "label": "Herhalingsbakken",
+      "today": "Vandaag",
+      "days": "{days, plural, one {# dag} other {# dagen}}",
+      "hint": "Een goed antwoord schuift de kaart een bak op, zodat hij minder vaak terugkomt. Een fout haalt hem snel terug."
+    }
+  },
+  "limits": {
+    "cta": "Pro bekijken",
+    "keepWorking": "Je kaarten en herhalingen blijven hoe dan ook werken.",
+    "pro": {
+      "cards": "Onbeperkt kenniskaarten",
+      "ai": "AI-feedback en vragen voor elke kaart",
+      "lab": "Het volledige Lab: wat het best voor je werkt, per label en tijdstip",
+      "weekly": "Een wekelijks voortgangsrapport per e-mail"
+    },
+    "card_limit": {
+      "title": "Je hebt 20 kaarten bereikt in Gratis",
+      "text": "Verwijder of bewaar kaarten zoals je wilt; herhalingen gaan door. Stap over op Pro om nieuwe kaarten op te slaan."
+    },
+    "monthly_limit": {
+      "title": "AI-analyses voor deze maand opgebruikt",
+      "text": "Gratis bevat {limit, number} AI-analyses van kaarten per maand. Je kunt deze kaart nog steeds opslaan door zelf je vragen te schrijven."
+    },
+    "reanalysis_limit": {
+      "title": "Nieuwe analyse voor deze kaart al gebruikt",
+      "text": "Gratis staat één aanpassing per kaart toe. Pas je vragen met de hand aan, of stap over op Pro voor onbeperkte aanpassingen."
+    },
+    "budget": {
+      "title": "De AI rust vandaag even",
+      "text": "AI-feedback is tijdelijk niet beschikbaar. Schrijf je vragen zelf; je kaart werkt precies hetzelfde."
+    },
+    "lab": {
+      "title": "Het volledige Lab met Pro",
+      "text": "Gratis toont je beste techniek van de afgelopen 7 dagen. Pro voegt analyse over de hele periode toe, resultaten per label en per uur, en onthoudcurves."
+    },
+    "weekly_report": {
+      "title": "Het weekrapport is een Pro-functie",
+      "text": "Krijg elke maandag een korte e-mail met je focustijd, je beste techniek, hoeveel je onthoudt en één tip."
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "Herhalingsherinneringen ook in je browser?",
+      "text": "We sturen één melding als er herhalingen klaarstaan, naast de e-mail.",
+      "enable": "Browserherinneringen aanzetten",
+      "enabled": "Browserherinneringen staan aan",
+      "denied": "Meldingen zijn geblokkeerd voor deze site. Je kunt ze toestaan in je browserinstellingen."
+    },
+    "unsubscribe": {
+      "title": "E-mailvoorkeuren",
+      "reviews": "Stoppen met de dagelijkse herinneringsmails voor herhalingen? Browsermeldingen en je herhaalschema blijven zoals ze zijn.",
+      "weekly": "Stoppen met de wekelijkse rapportmails?",
+      "confirm": "Afmelden",
+      "done": "Klaar. Je ontvangt deze e-mails niet meer. Je kunt ze weer aanzetten in Instellingen.",
+      "error": "Dat werkte niet. Probeer het opnieuw of pas het aan in Instellingen.",
+      "invalid": "Deze link is niet geldig. Je kunt je e-mails beheren in Instellingen.",
+      "settings": "Alle meldingen beheren in Instellingen"
+    }
+  },
+  "review": {
+    "title": "Herhalen",
+    "lead": "Antwoord uit je geheugen. Een kaart is gehaald als alle antwoorden goed zijn.",
+    "progress": "Kaart {current, number} van {total, number}",
+    "questionProgress": "Vraag {current, number} van {total, number}",
+    "types": {
+      "open": "Open antwoord",
+      "true_false": "Waar of niet waar?",
+      "cloze": "Vul het ontbrekende woord in"
+    },
+    "true": "Waar",
+    "false": "Niet waar",
+    "blankLabel": "Ontbrekend woord",
+    "yourAnswer": "Je antwoord",
+    "check": "Controleren",
+    "grading": "Controleren…",
+    "modelAnswer": "Antwoord",
+    "selfGradeNote": "Automatisch controleren is nu niet beschikbaar. Vergelijk met het antwoord en beoordeel jezelf eerlijk.",
+    "self": {
+      "correct": "Ik had het goed",
+      "partial": "Deels",
+      "incorrect": "Nog niet"
+    },
+    "verdict": {
+      "correct": "Goed.",
+      "partial": "Deels goed.",
+      "incorrect": "Niet helemaal."
+    },
+    "nextQuestion": "Volgende vraag",
+    "finishCard": "Kaart afronden",
+    "passedTitle": "Gehaald",
+    "missedTitle": "Nog niet. Hij komt snel terug",
+    "score": "{score, number}%",
+    "nextReview": "Volgende herhaling: {date}",
+    "earlyNote": "Oefenherhaling: je schema blijft hetzelfde (volgende herhaling op {date}).",
+    "revisit": "Wat je nog eens moet bekijken",
+    "openExplanation": "Je uitleg opnieuw lezen",
+    "nextCard": "Volgende kaart",
+    "finish": "Klaar",
+    "passRule": "{count, plural, one {Beantwoord de vraag goed om te slagen.} other {Beantwoord alle # vragen goed om te slagen.}}",
+    "saveError": "Je herhaling kon niet worden opgeslagen. Probeer het opnieuw.",
+    "emptyTitle": "Je bent helemaal bij",
+    "emptyText": "Er staan nu geen herhalingen klaar. Nieuwe verschijnen op dag 5, 10 en 30 nadat je een kaart hebt opgeslagen.",
+    "allDoneTitle": "Herhalingen klaar",
+    "allDoneText": "Je haalde {passed, number} van de {total, number} kaarten. Goed gedaan.",
+    "learnSomething": "Iets nieuws leren",
+    "toTimer": "Terug naar de timer"
+  },
+  "stats": {
+    "title": "Statistieken",
+    "lead": "Hoe het gaat met je focus en je leren.",
+    "rangeLabel": "Periode",
+    "range": "{days, number} dagen",
+    "focused": "Gefocust",
+    "sessions": "Sessies",
+    "avgRating": "Gem. focus",
+    "streak": "Reeks",
+    "bestStreak": "Beste reeks",
+    "days": "{count, plural, one {# dag} other {# dagen}}",
+    "retention30": "Onthouden (30 dagen)",
+    "retention90": "Onthouden (90 dagen)",
+    "cardsTotal": "Kaarten",
+    "dailyChart": "Focusminuten per dag",
+    "showTable": "Als tabel tonen",
+    "day": "Dag",
+    "minutes": "Minuten",
+    "techniques": "Technieken",
+    "technique": "Techniek",
+    "noSessions": "Nog geen sessies in deze periode.",
+    "topics": "Onthouden per onderwerp (90 dagen)",
+    "topic": "Onderwerp",
+    "reviews": "Herhalingen",
+    "retention": "Onthouden",
+    "noReviews": "Nog geen herhalingen.",
+    "lab": {
+      "title": "Lab",
+      "lead": "Welke techniek het best voor je werkt, op basis van je eigen focusscores.",
+      "weekTop": "De afgelopen 7 dagen focuste je het best met {technique}: {rating, number, ::.#} / 5 over {sessions, plural, one {# sessie} other {# sessies}}.",
+      "needData": "Beoordeel een paar sessies, dan verschijnen je resultaten hier.",
+      "allTime": "Ranglijst over de hele periode",
+      "rankRow": "{technique}: {rating, number, ::.#} / 5 ({sessions, plural, one {# sessie} other {# sessies}})",
+      "byTag": "Beste techniek per label",
+      "tag": "Label",
+      "best": "Beste techniek",
+      "noTags": "Geef je taken labels om te zien welke techniek bij welk soort werk past.",
+      "byHour": "Focus per uur van de dag",
+      "hour": "Uur",
+      "curve": "Onthouden per herhaalstap",
+      "step": "Stap",
+      "dayN": "Dag {day, number}",
+      "graduated": "Lange termijn"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Prijzen",
+    "title": "Begin gratis. Stap over als het de moeite waard is.",
+    "lead": "Elke techniek voor focus, leren en plannen is gratis. Pro haalt de limieten weg en laat zien wat het best werkt.",
+    "perMonth": "/ maand",
+    "perYear": "/ jaar",
+    "free": {
+      "name": "Gratis",
+      "text": "Alles wat je nodig hebt om te focussen en te onthouden wat je leert.",
+      "points": {
+        "1": "Alle 18 technieken, taken en statistieken",
+        "2": "Tot 20 kenniskaarten",
+        "3": "10 AI-analyses per maand",
+        "4": "Herhalingsherinneringen per e-mail en in de browser"
+      },
+      "cta": "Gratis beginnen"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "Onbeperkt kenniskaarten",
+        "2": "AI-feedback en vragen voor elke kaart (redelijk gebruik)",
+        "3": "Het volledige Lab: beste techniek per label en tijdstip",
+        "4": "Wekelijks voortgangsrapport per e-mail"
+      }
+    },
+    "monthly": {
+      "name": "Pro per maand",
+      "text": "Flexibel. Altijd opzegbaar.",
+      "cta": "Kies maandelijks"
+    },
+    "yearly": {
+      "name": "Pro per jaar",
+      "badge": "Bespaar {percent, number}%",
+      "text": "Dat is {monthly} per maand, eenmaal per jaar gefactureerd.",
+      "point": "Alles van Pro, een heel jaar lang",
+      "cta": "Kies jaarlijks"
+    },
+    "checkoutNote": "Betalingen lopen via Polar, onze merchant of record. De eindprijs, inclusief eventuele belasting in jouw land, zie je bij het afrekenen. Opzeggen kan altijd via Facturering.",
+    "compare": "Gratis en Pro vergeleken",
+    "feature": "Functie",
+    "notIncluded": "Niet inbegrepen",
+    "rows": {
+      "techniques": {
+        "label": "Technieken voor tijd, leren en plannen",
+        "free": "Alle 18",
+        "pro": "Alle 18"
+      },
+      "tasks": {
+        "label": "Taken, projecten en basisstatistieken",
+        "free": "Inbegrepen",
+        "pro": "Inbegrepen"
+      },
+      "cards": {
+        "label": "Kenniskaarten",
+        "free": "20 in totaal",
+        "pro": "Onbeperkt"
+      },
+      "ai": {
+        "label": "AI-feedback en vragen maken",
+        "free": "10 kaarten per maand",
+        "pro": "Onbeperkt (redelijk gebruik)"
+      },
+      "grading": {
+        "label": "AI-beoordeling van open antwoorden bij herhalingen",
+        "free": "Inbegrepen",
+        "pro": "Inbegrepen"
+      },
+      "reminders": {
+        "label": "Herhalingsherinneringen per e-mail en browser",
+        "free": "Inbegrepen",
+        "pro": "Inbegrepen"
+      },
+      "lab": {
+        "label": "Lab: welke techniek het best voor je werkt",
+        "free": "Laatste 7 dagen, beste techniek",
+        "pro": "Hele periode, per label, per uur, onthoudcurves"
+      },
+      "weekly": {
+        "label": "Weekrapport per e-mail",
+        "free": "–",
+        "pro": "Inbegrepen"
+      },
+      "export": {
+        "label": "Gegevens exporteren (JSON en CSV)",
+        "free": "Inbegrepen",
+        "pro": "Inbegrepen"
+      }
+    },
+    "faqTitle": "Vragen over abonnementen",
+    "faq": {
+      "1": {
+        "q": "Wat gebeurt er met mijn kaarten als ik stop met betalen?",
+        "a": "Er gaat niets verloren. Je kaarten en geplande herhalingen blijven werken. Je kunt alleen niet meer kaarten toevoegen dan de limiet van Gratis, en AI-analyses gaan terug naar 10 per maand."
+      },
+      "2": {
+        "q": "Wat betekent redelijk gebruik voor AI in Pro?",
+        "a": "Pro bevat AI-feedback voor maximaal 300 kaarten per maand, veel meer dan de meeste mensen maken. Bereik je die grens, dan kun je je vragen nog steeds zelf schrijven."
+      },
+      "3": {
+        "q": "Hoe zeg ik op?",
+        "a": "Open Facturering in de app en kies ‘Abonnement beheren’. Je houdt Pro tot het einde van de periode die je hebt betaald."
+      },
+      "4": {
+        "q": "Wie verwerkt mijn betaling?",
+        "a": "Polar is onze merchant of record en regelt de betaling, facturen en btw. FocusKept ziet je kaartgegevens nooit."
+      },
+      "5": {
+        "q": "Is er een levenslang abonnement?",
+        "a": "Op dit moment niet. Pro is er per maand of per jaar."
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "Tijdtechnieken",
+      "learning": "Leermethoden",
+      "planning": "Plantechnieken"
+    },
+    "eyebrow": "Technieken",
+    "title": "Technieken voor focus, leren en plannen",
+    "lead": "Elke techniek wordt in gewone taal uitgelegd: de stappen, wanneer hij helpt en wanneer niet. Probeer ze direct op hun eigen pagina.",
+    "all": "Alle technieken",
+    "tryNow": "Nu proberen",
+    "howItWorks": "Zo werkt het",
+    "steps": "Stap voor stap",
+    "bestFor": "Ideaal voor",
+    "whenNotToUse": "Wanneer niet gebruiken",
+    "faq": "Vragen",
+    "related": "Verwante technieken",
+    "trademarkNotice": "Pomodoro Technique® is een handelsmerk van Francesco Cirillo. FocusKept is niet gelieerd aan of verbonden met de Pomodoro Technique® of Francesco Cirillo en wordt niet door hen onderschreven."
+  },
+  "tryIt": {
+    "reset": "Resetten",
+    "notSaved": "Deze demo wordt niet opgeslagen. Start een echte sessie om je statistieken bij te houden.",
+    "fullSession": "Gebruik het in een echte sessie",
+    "box": "Lengte van de timebox (minuten)",
+    "steps": "Volg de stappen",
+    "learnWith": "Leren met {method}",
+    "taskPlaceholder": "Taak toevoegen",
+    "where": "Waar hij komt",
+    "add": "Toevoegen",
+    "full": "Dat deel is vol. Daar gaat het juist om: kiezen.",
+    "list": "Taken",
+    "remove": "‘{title}’ verwijderen",
+    "markFrog": "‘{title}’ de kikker van vandaag maken",
+    "frogHint": "Tik op het vlammetje om de kikker van vandaag te kiezen. Hij komt bovenaan te staan.",
+    "planFull": "Plan je echte dag met deze techniek"
+  },
+  "home": {
+    "anonText": "Maak een gratis account: je schrijft je uitleg, krijgt er vragen uit en wordt op tijd herinnerd. Je sessie wacht op dit apparaat.",
+    "anonTitle": "Schrijf op wat je leerde en krijg je vragen.",
+    "boxMinutes": "Blok, min",
+    "breakMinutes": "Pauze",
+    "breakNote": "Wat is er van dit blok blijven hangen?",
+    "breakNoteHint": "Optioneel · het wacht aan het eind op je",
+    "breakNotePlaceholder": "Een of twee gedachten…",
+    "breakOver": "De pauze is voorbij",
+    "breakTitle": "Pauze · blok {current} van {total} klaar",
+    "continue": "Verder",
+    "createAccount": "Gratis account maken",
+    "decrease": "Minder: {label}",
+    "discard": "Verlaten zonder opslaan",
+    "endFocused": "Focustijd: {duration}",
+    "endSession": "Sessie beëindigen",
+    "fillHint": "De kaart vult zich terwijl je focust",
+    "focusFallback": "Focus",
+    "focusMinutes": "Focus",
+    "fromPlan": "Uit het plan van vandaag:",
+    "haveAccount": "Ik heb een account",
+    "hintAsk": "We vragen het je op tijd",
+    "hintFocus": "Focussen",
+    "hintWrite": "Schrijf op wat je leerde",
+    "howDidItGo": "Hoe ging het?",
+    "howItWorks": "Zo werkt het",
+    "increase": "Meer: {label}",
+    "learn": "Leren",
+    "modeLabel": "Modus",
+    "moods": {
+      "1": "verstrooid",
+      "2": "matig",
+      "3": "goed",
+      "4": "super",
+      "5": "helemaal erin"
+    },
+    "newTopic": "Nieuw onderwerp",
+    "nextBlock": "Volgend blok · {current}/{total}",
+    "oneStep": "Nog één stap",
+    "placeholderLearn": "bijv. fotosynthese",
+    "placeholderWork": "bijv. de inleiding van het verslag",
+    "reviewStart": "Herhaling starten",
+    "reviewTitle": "{count, plural, one {# kaart wacht op herhaling} other {# kaarten wachten op herhaling}}",
+    "rhythm": "Ritme",
+    "rhythmGuide": "Welk ritme wanneer? Bekijk de gids",
+    "rhythmHint": "focus · pauze, minuten",
+    "rhythmSub": {
+      "52-17": "Voor lang, rustig werk",
+      "custom": "Kies je eigen getallen",
+      "deep-work-90": "De zwaarste taak van de dag",
+      "flowtime": "Tot je concentratie wegzakt",
+      "pomodoro": "Als beginnen lastig is",
+      "timeboxing": "Geef een taak een tijdsbudget"
+    },
+    "runBlock": "blok {current}/{total}",
+    "save": "Opslaan",
+    "skipCard": "Afronden zonder kaart",
+    "start": "Starten",
+    "subjectLearn": "Wat leer je?",
+    "subjectWork": "Waar werk je aan? (optioneel)",
+    "summaryBox": "Als de tijd om is: klaar, verlengen of later",
+    "summaryCycle": "{blocks, plural, one {# blok} other {# blokken}} · {minutes} min pauze ertussen",
+    "summaryFlow": "Stopwatch · de pauze is een vijfde van je focustijd",
+    "taskDone": "‘{task}’ is klaar",
+    "todayTotal": "Focus vandaag: {duration}",
+    "topicHint": "Je kaart wordt onder deze naam opgeslagen.",
+    "topicTitle": "Wat was het onderwerp?",
+    "trailEmpty": "nog leeg",
+    "trailLabel": "Het spoor van vandaag",
+    "trailSummary": "{duration} · {cards, plural, one {# kaart} other {# kaarten}}",
+    "work": "Werken"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$comment": "Applied in every locale. `neverTranslate` terms stay exactly as written. `descriptive` terms use the established local term if one exists, otherwise a natural translation; the technique's own page adds the English name in parentheses for SEO.",
+  "neverTranslate": [
+    "FocusKept",
+    "25/5",
+    "Feynman",
+    "SQ3R",
+    "Cornell",
+    "Leitner",
+    "Eisenhower",
+    "Ivy Lee",
+    "Flowtime",
+    "52/17",
+    "1-3-5",
+    "OpenAI",
+    "Polar",
+    "Resend",
+    "PostHog",
+    "Sentry",
+    "Google",
+    "PWA",
+    "JSON",
+    "CSV",
+    "Pro",
+    "https://",
+    "Pomodoro Technique®",
+    "Francesco Cirillo"
+  ],
+  "descriptive": {
+    "eat-the-frog": "Eat the frog",
+    "deep-work-90": "Deep work 90",
+    "active-recall": "Active recall",
+    "blurting": "Blurting",
+    "interleaving": "Interleaving",
+    "timeboxing": "Timeboxing",
+    "spaced-repetition": "Spaced repetition",
+    "custom": "Custom timer"
+  },
+  "productTerms": {
+    "knowledge card": "A saved topic with its explanation and questions. Use the word local study apps use for flashcards/cards.",
+    "review": "A scheduled check of a card. Use the term local spaced-repetition apps use (e.g. de: Wiederholung, fr: révision).",
+    "streak": "Consecutive days with a completed focus session. Use the term local habit apps use (e.g. de: Serie, es: racha).",
+    "focus session": "One timed block of focused work.",
+    "Work mode / Learning mode": "The two product modes. Translate naturally; keep consistent across the UI."
+  }
+}

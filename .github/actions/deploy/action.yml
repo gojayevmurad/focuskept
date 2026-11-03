@@ -1,0 +1,46 @@
+name: Deploy an immutable image
+description: Deploys a GHCR digest to staging or production through the server's forced-command deploy key
+inputs:
+  target:
+    description: staging or production
+    required: true
+  host:
+    required: true
+  user:
+    required: true
+  image:
+    required: true
+  ssh-key:
+    required: true
+  known-hosts:
+    required: true
+  registry-token:
+    description: Short-lived token with packages:read, sent on stdin for the GHCR pull
+    required: true
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        TARGET: ${{ inputs.target }}
+        DEPLOY_HOST: ${{ inputs.host }}
+        DEPLOY_USER: ${{ inputs.user }}
+        IMAGE: ${{ inputs.image }}
+        SSH_KEY: ${{ inputs.ssh-key }}
+        KNOWN_HOSTS: ${{ inputs.known-hosts }}
+        REGISTRY_TOKEN: ${{ inputs.registry-token }}
+      run: |
+        set -euo pipefail
+        [[ "$TARGET" == staging || "$TARGET" == production ]]
+        [[ "$DEPLOY_HOST" =~ ^[a-zA-Z0-9][a-zA-Z0-9.-]*$ ]]
+        [[ "$DEPLOY_USER" =~ ^[a-z_][a-z0-9_-]*$ ]]
+        [[ "$IMAGE" =~ ^ghcr\.io/[a-z0-9_./-]+@sha256:[a-f0-9]{64}$ ]]
+        [[ -n "$SSH_KEY" && -n "$KNOWN_HOSTS" ]]
+        key_dir="$(mktemp -d)"
+        trap 'rm -rf "$key_dir"' EXIT
+        printf '%s\n' "$SSH_KEY" > "$key_dir/key"
+        chmod 600 "$key_dir/key"
+        printf '%s\n' "$KNOWN_HOSTS" > "$key_dir/known_hosts"
+        # The server's authorized_keys pins this key to ssh-deploy.sh, so the
+        # only remote "command" is "<target> <digest>".
+        printf '%s' "$REGISTRY_TOKEN" | ssh -i "$key_dir/key" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$key_dir/known_hosts" "$DEPLOY_USER@$DEPLOY_HOST" "$TARGET $IMAGE"

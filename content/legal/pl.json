@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Polityka prywatności",
+    "updated": "Ostatnia aktualizacja: 31 października 2026",
+    "intro": "Ta polityka wyjaśnia, jakie dane zbiera FocusKept, w jakim celu, kto pomaga nam je przetwarzać i jakie masz możliwości wyboru. Administratorem FocusKept jest Murad Gojayev, Baku, Azerbejdżan. Kontakt: hello@focuskept.com.",
+    "sections": [
+      {
+        "heading": "Jakie dane zbieramy",
+        "paragraphs": [
+          "Dane konta: imię, adres e-mail i bezpiecznie zahaszowane hasło albo identyfikator konta Google, jeśli logujesz się przez Google.",
+          "Dane tworzone w produkcie: sesje skupienia (technika, czas trwania, ocena skupienia, notatki i cele), zadania i projekty, tematy nauki, notatki, wyjaśnienia metodą Feynmana, pytania do powtórek, twoje odpowiedzi w powtórkach i ich wyniki oraz ustawienia (język, strefa czasowa, godzina przypomnienia i podobne).",
+          "Dane urządzenia i powiadomień: jeśli włączysz powiadomienia w przeglądarce, adres subskrypcji push przekazany przez przeglądarkę. Ze względów bezpieczeństwa sesje logowania przechowują adres IP i identyfikator przeglądarki (user agent).",
+          "Bez konta sesje i zadania z trybu pracy pozostają w pamięci lokalnej przeglądarki na twoim urządzeniu. Trafiają na nasze serwery tylko wtedy, gdy po rejestracji zdecydujesz się je zaimportować.",
+          "Opcjonalna analityka: wyłącznie za twoją zgodą zbieramy anonimowe zdarzenia użycia (np. informację, że sesja lub powtórka została ukończona). Nigdy nie wysyłamy do analityki twoich tekstów, wyjaśnień ani odpowiedzi."
+        ]
+      },
+      {
+        "heading": "Jak z nich korzystamy",
+        "paragraphs": [
+          "Aby świadczyć usługę: obsługiwać minutnik i statystyki, planować powtórki, wysyłać przypomnienia, o które prosisz, i chronić twoje konto.",
+          "Aby udostępniać funkcje AI: tworzyć uwagi, pytania do powtórek i ocenę odpowiedzi na podstawie tego, co piszesz.",
+          "Aby obsługiwać płatności i zarządzać twoim planem za pośrednictwem naszego dostawcy płatności.",
+          "Aby rozumieć i ulepszać produkt — z analityką wyłącznie za twoją zgodą oraz z raportami błędów, z których w miarę możliwości usuwamy dane osobowe."
+        ]
+      },
+      {
+        "heading": "Przetwarzanie przez AI OpenAI",
+        "paragraphs": [
+          "Gdy korzystasz z uwag AI, tworzenia pytań lub oceny odpowiedzi, temat, twoje wyjaśnienie, pytania i odpowiedzi są przesyłane do OpenAI w celu przetworzenia.",
+          "Nasz projekt w OpenAI jest skonfigurowany tak, aby udostępniać dane API firmie OpenAI, co oznacza, że OpenAI może wykorzystywać te treści do ulepszania swoich modeli. Nie umieszczaj w wyjaśnieniach ani odpowiedziach danych osobowych ani wrażliwych.",
+          "Z FocusKept zawsze możesz korzystać bez AI, pisząc pytania samodzielnie i samodzielnie oceniając odpowiedzi."
+        ]
+      },
+      {
+        "heading": "Dostawcy usług",
+        "paragraphs": [
+          "Do działania FocusKept korzystamy z następujących dostawców: OpenAI (funkcje AI, zob. wyżej); Resend (wysyłka e-maili); Polar (płatności jako sprzedawca, który obsługuje również faktury i podatek od sprzedaży); PostHog (analityka produktu, tylko za twoją zgodą); Sentry (monitorowanie błędów); Google (logowanie, tylko jeśli je wybierzesz); Cloudflare (DNS i sieć) oraz nasz dostawca hostingu Hetzner Online GmbH.",
+          "Każdy dostawca otrzymuje tylko dane potrzebne do swojego zadania. Niektórzy dostawcy mogą przetwarzać dane poza twoim krajem; w razie potrzeby stosujemy odpowiednie zabezpieczenia, takie jak standardowe klauzule umowne."
+        ]
+      },
+      {
+        "heading": "Jak długo przechowujemy dane",
+        "paragraphs": [
+          "Dane konta i produktu przechowujemy do czasu usunięcia konta. Usunięcie konta kasuje z naszej bazy danych twoje sesje, zadania, karty, powtórki i ustawienia.",
+          "Dzienniki powiadomień są usuwane po 180 dniach. Kopie zapasowe przechowujemy przez 30 dni, a następnie nadpisujemy. Dokumentację płatności przechowują Polar i my tak długo, jak wymaga tego prawo."
+        ]
+      },
+      {
+        "heading": "Twoje wybory i prawa",
+        "paragraphs": [
+          "W każdej chwili możesz pobrać wszystkie swoje dane w ustawieniach (JSON i CSV), zmieniać je w aplikacji, wyłączyć e-maile i powiadomienia, wycofać zgodę na analitykę i usunąć konto.",
+          "W zależności od miejsca zamieszkania możesz mieć także prawo dostępu do danych, ich sprostowania, ograniczenia przetwarzania lub sprzeciwu wobec niego oraz prawo wniesienia skargi do organu ochrony danych. Napisz na hello@focuskept.com, a odpowiemy w terminie wymaganym przez prawo."
+        ]
+      },
+      {
+        "heading": "Pliki cookie i pamięć lokalna",
+        "paragraphs": [
+          "Używamy niezbędnych plików cookie, aby utrzymać zalogowanie i zapamiętać język. Pamięci lokalnej urządzenia używamy do przechowywania bieżącego minutnika, ustawień oraz — jeśli nie masz konta — sesji. Analityczne pliki cookie są zapisywane dopiero po wyrażeniu zgody."
+        ]
+      },
+      {
+        "heading": "Dzieci",
+        "paragraphs": [
+          "FocusKept nie jest przeznaczony dla dzieci poniżej 16 roku życia bez zgody rodzica lub opiekuna. Jeśli uważasz, że dziecko przekazało nam dane osobowe bez zgody, skontaktuj się z nami, a je usuniemy."
+        ]
+      },
+      {
+        "heading": "Zmiany",
+        "paragraphs": [
+          "Jeśli istotnie zmienimy tę politykę, zaktualizujemy datę powyżej i poinformujemy zalogowanych użytkowników w aplikacji lub e-mailem."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Regulamin",
+    "updated": "Ostatnia aktualizacja: 3 listopada 2026",
+    "intro": "Niniejszy regulamin dotyczy korzystania z FocusKept, prowadzonego przez Murad Gojayev, Baku, Azerbejdżan. Korzystając z FocusKept, akceptujesz go.",
+    "sections": [
+      {
+        "heading": "Usługa",
+        "paragraphs": [
+          "FocusKept oferuje minutnik skupienia, planowanie zadań, narzędzia do nauki, uwagi i pytania tworzone przez AI oraz powtórki w odstępach. Niektóre funkcje wymagają konta, inne — płatnego planu."
+        ]
+      },
+      {
+        "heading": "Twoje konto",
+        "paragraphs": [
+          "Chroń swoje dane logowania i daj nam znać, jeśli podejrzewasz nadużycie. Odpowiadasz za aktywność na swoim koncie. Musisz podać prawidłowy adres e-mail."
+        ]
+      },
+      {
+        "heading": "Dozwolone korzystanie",
+        "paragraphs": [
+          "Nie nadużywaj usługi: żadnych prób jej zepsucia lub przeciążenia, automatycznego pobierania danych, treści niezgodnych z prawem ani wykorzystywania funkcji AI do tworzenia szkodliwych materiałów. Możemy zawiesić konta, które tak postępują."
+        ]
+      },
+      {
+        "heading": "Funkcje AI",
+        "paragraphs": [
+          "Uwagi, pytania i oceny AI są tworzone automatycznie i mogą być błędne lub niepełne. Wspierają naukę, ale nie stanowią profesjonalnej porady. Ważne informacje sprawdzaj w wiarygodnych źródłach.",
+          "Plany Darmowy i Pro obejmują limity korzystania z AI opisane w cenniku. Możemy tymczasowo ograniczyć funkcje AI, aby utrzymać niezawodność usługi."
+        ]
+      },
+      {
+        "heading": "Twoje treści",
+        "paragraphs": [
+          "To, co piszesz w FocusKept, pozostaje twoje. Udzielasz nam zgody na przechowywanie, przetwarzanie i wyświetlanie tych treści oraz na przekazywanie ich naszym dostawcom usług (w tym OpenAI w przypadku funkcji AI) wyłącznie w zakresie potrzebnym do świadczenia usługi."
+        ]
+      },
+      {
+        "heading": "Plany, płatności i rezygnacja",
+        "paragraphs": [
+          "Pro jest sprzedawane jako subskrypcja miesięczna lub roczna za pośrednictwem Polar, naszego sprzedawcy (merchant of record). Ceny są widoczne przed płatnością; mogą obowiązywać podatki. Subskrypcje odnawiają się automatycznie do czasu anulowania.",
+          "Możesz anulować w dowolnym momencie w sekcji Płatności; Pro pozostaje aktywne do końca opłaconego okresu. Zwroty podlegają zasadom Polar i prawu twojego kraju.",
+          "Gdy plan się zakończy, istniejące karty i powtórki działają dalej; do nowych treści stosuje się limity planu Darmowego."
+        ]
+      },
+      {
+        "heading": "Nazwa, logo i kod",
+        "paragraphs": [
+          "Nazwa FocusKept i logo należą do nas. Każda licencja open source na nasz kod obejmuje wyłącznie kod: nie daje prawa do używania naszej nazwy ani logo, a niniejszy regulamin nadal obowiązuje w odniesieniu do usługi FocusKept."
+        ]
+      },
+      {
+        "heading": "Dostępność i zmiany",
+        "paragraphs": [
+          "Dbamy o dostępność FocusKept, ale nie możemy zagwarantować, że zawsze będzie działać bez przerw. Możemy zmieniać lub wycofywać funkcje; jeśli zmiana istotnie wpłynie na płatne funkcje, poinformujemy cię z wyprzedzeniem."
+        ]
+      },
+      {
+        "heading": "Zakończenie korzystania",
+        "paragraphs": [
+          "Konto możesz usunąć w dowolnym momencie w ustawieniach. Możemy zawiesić lub zamknąć konta, które poważnie lub wielokrotnie naruszają niniejszy regulamin."
+        ]
+      },
+      {
+        "heading": "Odpowiedzialność",
+        "paragraphs": [
+          "FocusKept jest udostępniany w stanie, w jakim jest. W zakresie dozwolonym przez prawo nie odpowiadamy za szkody pośrednie ani utratę danych, a nasza łączna odpowiedzialność ogranicza się do kwoty zapłaconej nam w ciągu 12 miesięcy przed zgłoszeniem roszczenia. Nic w niniejszym regulaminie nie ogranicza praw przysługujących ci na podstawie przepisów o ochronie konsumentów."
+        ]
+      },
+      {
+        "heading": "Prawo właściwe i kontakt",
+        "paragraphs": [
+          "Niniejszy regulamin podlega prawu Azerbejdżanu, bez uszczerbku dla bezwzględnie obowiązujących praw konsumenta w miejscu twojego zamieszkania. Pytania: hello@focuskept.com."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "O FocusKept",
+    "intro": "FocusKept to niezależny produkt stworzony przez jedną osobę, która chciała mieć jedno miejsce do skupienia i naprawdę zapamiętywać to, czego się uczy.",
+    "sections": [
+      {
+        "heading": "Dlaczego powstał",
+        "paragraphs": [
+          "Minutniki skupienia pomagają zacząć, ale zapominają o wszystkim, gdy sesja się kończy. Aplikacje z fiszkami pomagają zapamiętywać, ale ręczne pisanie kart to żmudna praca. FocusKept łączy jedno z drugim: skup się, wyjaśnij temat własnymi słowami i pozwól, by powtórki same do ciebie przychodziły.",
+          "FocusKept projektuje, tworzy i prowadzi Murad Gojayev, inżynier oprogramowania z Baku w Azerbejdżanie. Każda funkcja opiera się na dobrze zbadanych metodach nauki — blokach skupionej pracy, aktywnym przypominaniu i powtórkach w odstępach — i zostaje tylko wtedy, gdy ułatwia ich regularne stosowanie. Osobiście odpowiada za produkt, wsparcie i ochronę twoich danych."
+        ]
+      },
+      {
+        "heading": "Jak działamy",
+        "paragraphs": [
+          "Żadnych manipulacyjnych sztuczek (dark patterns), żadnych zmyślonych liczb. Darmowy oznacza naprawdę przydatny, a Pro opłaca AI i czas potrzebny, by FocusKept działał i się rozwijał.",
+          "Pytania, pomysły lub błędy: hello@focuskept.com. Każdą wiadomość czyta człowiek."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "Fő navigáció",
+      "appNavigation": "Alkalmazásnavigáció",
+      "skipToContent": "Ugrás a tartalomra",
+      "techniques": "Technikák",
+      "pricing": "Árak",
+      "about": "Rólunk",
+      "signIn": "Bejelentkezés",
+      "tasks": "Feladatok",
+      "cards": "Kártyák",
+      "stats": "Statisztika",
+      "settings": "Beállítások",
+      "billing": "Számlázás",
+      "signOut": "Kijelentkezés",
+      "timer": "Időzítő",
+      "guide": "Útmutató",
+      "howItWorks": "Hogyan működik",
+      "menu": "Menü",
+      "account": "Fiók és beállítások",
+      "reviewsDue": "Kártyák várnak ismétlésre"
+    },
+    "theme": {
+      "label": "Téma",
+      "dark": "Sötét",
+      "light": "Világos",
+      "system": "Rendszer"
+    },
+    "language": {
+      "label": "Nyelv"
+    },
+    "actions": {
+      "save": "Mentés",
+      "saving": "Mentés…",
+      "retry": "Újra"
+    },
+    "status": {
+      "error": "Valami hiba történt. Próbáld újra.",
+      "offline": "Nincs internetkapcsolat. A munkamenet ezen az eszközön mentve van, és szinkronizálódik, amint újra online leszel."
+    },
+    "consent": {
+      "label": "Analitikai beállítások",
+      "text": "Gyűjthetünk névtelen használati adatokat a FocusKept fejlesztéséhez? Amíg nem döntesz, semmit sem követünk.",
+      "allow": "Engedélyezem",
+      "decline": "Nem, köszönöm"
+    },
+    "footer": {
+      "tagline": "Fókuszálj mélyen. Tartsd meg, amit tanulsz.",
+      "product": "Termék",
+      "company": "Cég",
+      "legal": "Jogi információk",
+      "focusTimer": "Fókuszidőzítő",
+      "learningMode": "Tanulási mód",
+      "contact": "Kapcsolat",
+      "privacy": "Adatvédelem",
+      "terms": "Feltételek",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — Fókuszálj mélyen. Tartsd meg, amit tanulsz.",
+    "defaultDescription": "Fókuszidőzítő 18 bevált technikával, Feynman-féle magyarázatokkal, MI által írt kérdésekkel és automatikus, elosztott ismétléssel az 5., 10. és 30. napon.",
+    "signIn": "Bejelentkezés",
+    "signUp": "Fiók létrehozása",
+    "verifyEmail": "Nézd meg a postafiókodat",
+    "forgotPassword": "Jelszó visszaállítása",
+    "resetPassword": "Új jelszó megadása",
+    "settings": "Beállítások",
+    "security": "Biztonság",
+    "billing": "Számlázás",
+    "focusTitle": "Fókuszidőzítő",
+    "focusDescription": "Ingyenes fókuszidőzítő 25/5-tel, 52/17-tel, Flowtime-mal, Deep Work 90-nel, timeboxinggal és saját sablonokkal. Fiók nélkül is.",
+    "tasks": "Feladatok",
+    "learnTitle": "Tanulási mód: tanulj, magyarázd el, emlékezz",
+    "learnDescription": "Tanulj meg egy témát, magyarázd el a saját szavaiddal, kapj visszajelzést és kérdéseket az MI-től, és ismételj automatikusan az 5., 10. és 30. napon.",
+    "learnNew": "Új tanulási munkamenet",
+    "explain": "Magyarázd el, amit tanultál",
+    "cards": "Tudáskártyák",
+    "card": "Tudáskártya",
+    "review": "Ismétlés",
+    "stats": "Statisztika",
+    "pricingTitle": "Árak: Ingyenes és Pro",
+    "pricingDescription": "A FocusKept ingyenesen kipróbálható. A Pro havi 5 $ vagy évi 40 $: korlátlan kártya, több MI-visszajelzés, a teljes Labor és heti összefoglaló.",
+    "techniquesTitle": "18 fókusz-, tanulási és tervezési technika",
+    "techniquesDescription": "25/5, 52/17, Flowtime, Feynman, aktív felidézés, SQ3R, Eisenhower és még sok más: hogyan működik az egyes technikák, mikor érdemes használni őket, és ingyenes időzítő a kipróbáláshoz."
+  },
+  "errors": {
+    "notFoundTitle": "Ez az oldal nem létezik.",
+    "notFoundText": "Lehet, hogy a link elavult, vagy az oldal máshová került.",
+    "backHome": "Vissza a kezdőlapra",
+    "errorTitle": "Valami nem a terv szerint alakult.",
+    "errorText": "Próbáld újra egy kicsit később. Ha továbbra is előfordul, szólj nekünk."
+  },
+  "auth": {
+    "signInTitle": "Üdv újra",
+    "signInLead": "Jelentkezz be, és folytasd a fókuszálást és az ismétléseket.",
+    "signUpTitle": "Fiók létrehozása",
+    "signUpLead": "Mentsd el, amit tanulsz, és kapj emlékeztetőt az 5., 10. és 30. napon.",
+    "forgotTitle": "Jelszó visszaállítása",
+    "forgotLead": "Küldünk egy biztonságos linket e-mailben, amellyel új jelszót adhatsz meg.",
+    "resetTitle": "Új jelszó megadása",
+    "resetLead": "Legalább 12 karakter.",
+    "verifyTitle": "Nézd meg a postafiókodat",
+    "verifyLead": "Küldtünk egy megerősítő linket. Nyisd meg a fiókod aktiválásához — bejelentkezve hoz vissza ide.",
+    "verifyHint": "Nem találod? Nézd meg a levélszemét mappát, vagy jelentkezz be újra egy új linkért.",
+    "name": "Neved",
+    "namePlaceholder": "Kovács Anna",
+    "email": "E-mail-cím",
+    "emailPlaceholder": "te@pelda.hu",
+    "password": "Jelszó",
+    "passwordPlaceholder": "Legalább 12 karakter",
+    "newPassword": "Új jelszó",
+    "forgotLink": "Elfelejtetted a jelszót?",
+    "submitSignIn": "Bejelentkezés",
+    "submitSignUp": "Fiók létrehozása",
+    "submitForgot": "Link küldése",
+    "submitReset": "Jelszó módosítása",
+    "google": "Folytatás Google-fiókkal",
+    "or": "vagy",
+    "haveAccount": "Van már fiókod?",
+    "noAccount": "Új vagy a FocusKeptben?",
+    "createAccount": "Fiók létrehozása",
+    "signInLink": "Bejelentkezés",
+    "legal": "A folytatással elfogadod a <terms>Feltételeket</terms> és az <privacy>Adatvédelmi tájékoztatót</privacy>.",
+    "resetSent": "Ha ehhez az e-mail-címhez tartozik fiók, a link már úton van.",
+    "resetDone": "A jelszó megváltozott. Most már bejelentkezhetsz.",
+    "invalidCredentials": "Adj meg egy érvényes e-mail-címet és egy 12–128 karakteres jelszót.",
+    "invalidPassword": "Adj meg egy 12–128 karakteres jelszót.",
+    "wrongCredentials": "Az e-mail-cím és a jelszó nem egyezik.",
+    "emailNotVerified": "Előbb erősítsd meg az e-mail-címedet. Most küldtünk egy új linket.",
+    "userExists": "Ezzel az e-mail-címmel már van fiók. Próbálj bejelentkezni.",
+    "tooManyAttempts": "Túl sok próbálkozás. Várj egy percet, és próbáld újra.",
+    "invalidToken": "Ez a link lejárt vagy már felhasználták. Kérj újat.",
+    "learningContext": "Regisztrálj, és indítsd el a tanulási munkamenetet ebben a témában: „{topic}”."
+  },
+  "email": {
+    "verification": {
+      "subject": "Erősítsd meg az e-mail-címedet a FocusKepthez",
+      "heading": "Erősítsd meg az e-mail-címedet",
+      "body": "Koppints az alábbi gombra a FocusKept-fiókod aktiválásához. Bejelentkeztetünk, és ott folytathatod, ahol abbahagytad.",
+      "button": "E-mail megerősítése",
+      "ignore": "Ha nem te hoztad létre a fiókot, nyugodtan hagyd figyelmen kívül ezt a levelet."
+    },
+    "reset": {
+      "subject": "FocusKept-jelszó visszaállítása",
+      "heading": "Jelszó visszaállítása",
+      "body": "Az alábbi biztonságos linkkel új jelszót adhatsz meg. Hamarosan lejár, és csak egyszer használható.",
+      "button": "Új jelszó megadása",
+      "ignore": "Ha nem te kérted, hagyd figyelmen kívül ezt a levelet. A jelszavad nem változik."
+    },
+    "footer": {
+      "transactional": "Ezt a levelet a FocusKept-fiókodban végzett művelet miatt kaptad.",
+      "reviews": "Azért kapod ezt a levelet, mert a FocusKept-fiókodban be vannak kapcsolva az ismétlési emlékeztetők.",
+      "weekly": "Azért kapod ezt a heti összefoglalót, mert be van kapcsolva a FocusKept Pro-fiókodban.",
+      "unsubscribe": "Leiratkozás"
+    },
+    "digest": {
+      "subject": "{count, plural, one {Ma # kártyát kell ismételned} other {Ma # kártyát kell ismételned}}",
+      "preview": "{count, plural, one {Egy kártya vár ismétlésre.} other {# kártya vár ismétlésre.}}",
+      "heading": "{count, plural, one {Ideje ismételni: # kártya} other {Ideje ismételni: # kártya}}",
+      "intro": "Ha most ismételsz, közvetlenül a felejtés előtt, akkor marad meg igazán:",
+      "more": "{count, plural, one {…és még #} other {…és még #}}",
+      "estimate": "{minutes, plural, one {Körülbelül # perc.} other {Körülbelül # perc.}}",
+      "button": "Ismétlés indítása"
+    },
+    "weekly": {
+      "subject": "A heted a FocusKeptben",
+      "preview": "{minutes, plural, one {Múlt héten # perc fókusz.} other {Múlt héten # perc fókusz.}}",
+      "heading": "A heted fókuszban",
+      "intro": "Így telt a múlt heted.",
+      "focus": "Fókuszidő",
+      "minutes": "{minutes, plural, one {# perc} other {# perc}}",
+      "sessions": "Munkamenetek",
+      "best": "Legjobb technika",
+      "cards": "Új kártyák",
+      "retention": "Megjegyzési arány",
+      "streak": "Sorozat",
+      "days": "{count, plural, one {# nap} other {# nap}}",
+      "suggestionTitle": "Egy tipp erre a hétre",
+      "suggestions": {
+        "start": "Kezdd kicsiben: egy 25 perces blokk hétfőn elég az induláshoz.",
+        "retention": "Sikeres ismétlések aránya: {percent, number}%. Egy kártya ismétlése előtt olvasd el újra a magyarázatodat, és válaszolj röviden.",
+        "goal": "A heti cél teljesítése: {percent, number}%. Tegyél be egy plusz munkamenetet a hét közepére.",
+        "bestTechnique": "A legjobb fókuszt ez a technika hozta: {technique}. Ezzel tervezd a két legfontosabb munkamenetedet.",
+        "keepGoing": "Erős hét volt. Tartsd meg ezt a ritmust, és védd a fókuszidődet."
+      },
+      "recapTitle": "{month}: amit tanultál",
+      "recapText": "{cards, plural, one {# új kártya} other {# új kártya}} · megjegyzési arány: {retention}",
+      "button": "Statisztika megnyitása"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, one {# kártya vár ismétlésre} other {# kártya vár ismétlésre}}",
+      "reviewsBody": "Néhány perc most, és megmarad az emlékezetedben.",
+      "streakTitle": "{count, plural, one {Tartsd meg a # napos sorozatod} other {Tartsd meg a # napos sorozatod}}",
+      "streakBody": "Egy rövid munkamenet ma elég a folytatáshoz."
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "Analitika",
+      "text": "Opcionális, névtelen termékanalitika. A jegyzeteidet, magyarázataidat és válaszaidat soha nem küldjük el.",
+      "allow": "Analitika engedélyezése",
+      "disable": "Analitika kikapcsolása",
+      "enabled": "Analitika bekapcsolva.",
+      "disabled": "Analitika kikapcsolva.",
+      "error": "Nem sikerült menteni a beállítást."
+    },
+    "title": "Beállítások",
+    "lead": "A fiókod, a beállításaid és az emlékeztetőid.",
+    "account": {
+      "title": "Fiók",
+      "displayName": "Megjelenített név",
+      "saved": "Változások mentve.",
+      "securityLink": "Jelszó és munkamenetek",
+      "billingLink": "Csomag és számlázás"
+    },
+    "security": {
+      "title": "Biztonság",
+      "lead": "Hogy a fiókod a tiéd maradjon.",
+      "backToSettings": "Vissza a beállításokhoz",
+      "passwordTitle": "Jelszó módosítása",
+      "passwordText": "A jelszó módosításával a többi eszközödön kijelentkezel.",
+      "currentPassword": "Jelenlegi jelszó",
+      "newPassword": "Új jelszó",
+      "passwordHint": "Legalább 12 karakter.",
+      "changePassword": "Jelszó módosítása",
+      "passwordChanged": "A jelszó megváltozott.",
+      "passwordError": "Nem sikerült módosítani a jelszót. Ellenőrizd a jelenlegi jelszót, és próbáld újra.",
+      "sessionsTitle": "Bejelentkezett eszközök",
+      "sessionsText": "Maradj bejelentkezve itt, és lépj ki mindenhol máshol.",
+      "revokeOthers": "Kijelentkezés a többi eszközön",
+      "revoked": "A többi eszközön kijelentkeztél.",
+      "revokeError": "Nem sikerült kijelentkezni a többi eszközön."
+    },
+    "delete": {
+      "title": "Fiók törlése",
+      "text": "Véglegesen törli a fiókodat és mindent, ami benne van: munkameneteket, feladatokat, kártyákat és ismétléseket. A fizetési előzményekkel rendelkező fiókokat az ügyfélszolgálat röviden átnézi, hogy ne maradjon aktív előfizetés. Ha másolatot szeretnél, előbb exportáld az adataidat.",
+      "word": "TÖRLÉS",
+      "typeToConfirm": "A megerősítéshez írd be: {word}",
+      "password": "Jelszavad",
+      "submit": "Fiókom törlése",
+      "billingBlocked": "A fiókodhoz fizetési előzmények tartoznak. Írj nekünk e-mailt, és lezárjuk helyetted.",
+      "error": "Nem sikerült törölni a fiókot. Ellenőrizd a jelszavadat, és próbáld újra."
+    },
+    "prefs": {
+      "saved": "Beállítások mentve.",
+      "general": "Általános",
+      "timezone": "Időzóna",
+      "useDeviceZone": "Az eszköz időzónájának használata ({zone})",
+      "weekStart": "A hét első napja",
+      "weeklyGoal": "Heti fókuszcél (óra)",
+      "weeklyGoalHint": "A statisztikádban jelenik meg. A 0 kikapcsolja.",
+      "techniques": "Technikák",
+      "defaultTime": "Alapértelmezett időtechnika",
+      "defaultMethod": "Alapértelmezett tanulási módszer",
+      "timebox": "Alapértelmezett timebox (perc)",
+      "presets": "Saját sablonok",
+      "deletePreset": "„{name}” sablon törlése",
+      "reviewSteps": "Ismétlési ütemterv",
+      "reviewStepsText": "A kártya mentése után ennyi nap múlva jön az első három ismétlés. Az utolsó lépés után az ismétlés 60 naponta következik, majd az időköz duplázódik, legfeljebb 180 napig.",
+      "stepN": "{n, number}. ismétlés (nap)",
+      "resetSteps": "Visszaállítás: 5 / 10 / 30",
+      "stepsInvalid": "Adj meg három növekvő számot 1 és 365 között.",
+      "notifications": "Emlékeztetők és értesítések",
+      "reminderTime": "Napi emlékeztető időpontja",
+      "reminderTimeHint": "Ha ismétlés vár rád, ebben az időpontban kapsz egy emlékeztetőt.",
+      "emailReviews": "Ismétlési emlékeztető e-mailek",
+      "emailReviewsHint": "Egy e-mail azokon a napokon, amikor ismétlés vár. Soha nem kártyánként egy.",
+      "emailWeekly": "Heti összefoglaló e-mailben",
+      "emailWeeklyHint": "Minden hétfőn 09:00-kor: a heted fókuszban és egy tipp.",
+      "emailWeeklyPro": "Pro funkció. Kapcsold be most, és a Pro-ra váltáskor elindul.",
+      "streakNudge": "Sorozatemlékeztető",
+      "streakNudgeHint": "Finom böngészőértesítés 19:00-kor, ha egy legalább 3 napos sorozatod ma megszakadna.",
+      "browser": "Böngészőértesítések",
+      "browserHint": "Ismétlési emlékeztetők ezen az eszközön, az e-mail mellett.",
+      "browserDisable": "Kikapcsolás ezen az eszközön",
+      "browserOff": "A böngészős emlékeztetők ki vannak kapcsolva ezen az eszközön.",
+      "browserUnavailable": "Ebben a böngészőben nem érhető el, vagy még nincs beállítva.",
+      "hours": "Értesítési idősáv",
+      "hoursHint": "Böngészőértesítést csak ebben az idősávban küldünk. A napi e-mail-emlékeztetőt ez nem érinti.",
+      "from": "{day}: ettől",
+      "to": "{day}: eddig",
+      "export": "Az adataid",
+      "exportText": "Töltsd le mindazt, amit a FocusKept rólad tárol, bármelyik csomagban.",
+      "exportJson": "Minden (JSON)",
+      "exportCsv": {
+        "sessions": "Munkamenetek (CSV)",
+        "cards": "Kártyák (CSV)",
+        "reviews": "Ismétlések (CSV)"
+      }
+    }
+  },
+  "billing": {
+    "title": "Számlázás",
+    "lead": "A csomagod, a számláid és a fizetési adataid.",
+    "currentPlan": "Jelenlegi csomag",
+    "free": "Ingyenes",
+    "pro": "Pro",
+    "syncNote": "A csomagod automatikusan frissül, amint a Polar visszaigazolja a fizetést. A fizetési oldalról való visszatérés önmagában nem változtat rajta, ezért eltarthat egy pillanatig.",
+    "returned": "Köszönjük! Amint a fizetés visszaigazolódik, frissítjük a csomagodat.",
+    "manage": "Előfizetés kezelése",
+    "seePlans": "Csomagok megtekintése",
+    "connecting": "Kapcsolódás…",
+    "notConfigured": "A fizetés még nincs beállítva. Nem történt terhelés.",
+    "unavailable": "A számlázás most nem érhető el. Próbáld újra.",
+    "renewsOn": "Megújul: {date}.",
+    "endsOn": "Lemondva. A Pro eddig marad aktív: {date}."
+  },
+  "landing": {
+    "heroTitle": "Fókuszálj mélyen. Tartsd meg, amit tanulsz.",
+    "heroLead": "A FocusKept nyugodt fókuszidőzítő 18 bevált technikával. Tanuláskor a saját magyarázatodból kérdéseket készít, és emlékeztet az ismétlésre az 5., 10. és 30. napon.",
+    "question": "Mivel foglalkozol ma?",
+    "workTitle": "Munka",
+    "workText": "Válassz feladatot és technikát, aztán fókuszálj. Fiók nélkül is.",
+    "learnTitle": "Tanulás",
+    "learnText": "Tanulj meg egy témát, magyarázd el a saját szavaiddal, és tartsd meg.",
+    "noCard": "Ingyenes kezdés. Bankkártya nélkül.",
+    "loop": {
+      "eyebrow": "Hogyan működik",
+      "title": "A fókusztól a tartós tudásig",
+      "lead": "Az időzítők segítenek elkezdeni. Az emlékezéshez még egy kör kell. A FocusKept ezt is elvégzi helyetted.",
+      "focus": {
+        "title": "Fókuszálj",
+        "text": "Dolgozz időzített blokkokban 25/5-tel, 52/17-tel, Flowtime-mal vagy más technikával."
+      },
+      "explain": {
+        "title": "Magyarázd el",
+        "text": "Írd le, amit tanultál, mintha egy 12 évesnek magyaráznád: ez a Feynman-technika."
+      },
+      "questions": {
+        "title": "Kapj kérdéseket",
+        "text": "Az MI rámutat a hiányokra, és a magyarázatodból szerkeszthető ismétlő kérdéseket készít."
+      },
+      "review": {
+        "title": "Ismételj időben",
+        "text": "Az 5., 10. és 30. napon emlékeztetünk, közvetlenül a felejtés előtt."
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman a gyakorlatban",
+      "title": "Magyarázd el egyszerűen. Lásd, mit értesz valójában.",
+      "lead": "Egy tanulási munkamenet után a saját szavaiddal magyarázod el a témát. Kapsz egy érthetőségi pontszámot, látod, mi hiányzik és mi nem stimmel, és kérdéseket kapsz az ismétlésekhez.",
+      "cta": "Tanulási mód kipróbálása",
+      "label": "Példa egy magyarázatra MI-visszajelzéssel",
+      "badge": "Példa",
+      "topic": "Téma: fotoszintézis",
+      "explanation": "A növények maguk készítik az ételüket. A leveleik elkapják a napfényt, a gyökerükkel vizet vesznek fel, apró lyukakon át levegőt, és ebből cukrot csinálnak. Ami megmarad, az az oxigén, amit belélegzünk.",
+      "feedback": "Visszajelzés",
+      "clarity": "Érthetőség: 82/100",
+      "gap": "Hiányzik: a levegőből felvett gáz a szén-dioxid.",
+      "mistake": "Pontatlan: a napfény energiát ad, de maga nem alakul cukorrá.",
+      "questionsLabel": "Ismétlő kérdések",
+      "q1": "Melyik gázt veszik fel a növények a levegőből a cukor előállításához?",
+      "q2": "Igaz vagy hamis: a növények melléktermékként oxigént bocsátanak ki.",
+      "q3": "A növények a(z) ____ energiáját használják a cukor előállításához.",
+      "schedule": "Kártyaként mentve. Ismétlés az 5., 10. és 30. napon."
+    },
+    "techniques": {
+      "eyebrow": "18 technika",
+      "title": "Minden technika egy helyen",
+      "lead": "Időtechnikák a fókuszhoz, tanulási módszerek a megértéshez, tervezési technikák a napodhoz. Minden oldal elmagyarázza a technikát, és azonnal ki is próbálhatod."
+    },
+    "pricing": {
+      "title": "Ingyenes kezdés, korrekt ár, ha fejlődsz",
+      "lead": "Minden, amire szükséged van, ingyenes. A Pro havi {monthly} vagy évi {yearly}.",
+      "points": {
+        "1": "Minden technika, feladat, statisztika és emlékeztető az Ingyenes csomagban",
+        "2": "Pro: korlátlan kártya és MI-visszajelzés minden kártyához",
+        "3": "Pro: a teljes Labor és heti összefoglaló"
+      },
+      "cta": "Csomagok összehasonlítása"
+    },
+    "faq": {
+      "title": "Kérdések",
+      "1": {
+        "q": "Kell fiók?",
+        "a": "A munka módhoz nem: csak indítsd el az időzítőt. A tanulási módhoz ingyenes fiók kell, hogy elmenthessük a kártyáidat és ismétlési emlékeztetőket küldhessünk."
+      },
+      "2": {
+        "q": "Van mobilalkalmazás?",
+        "a": "A FocusKept bármilyen eszközön fut a böngészőben. Felteheted a kezdőképernyőre, az emlékeztetők pedig e-mailben és böngészőértesítésként érkeznek."
+      },
+      "3": {
+        "q": "Mit csinál az MI a magyarázatommal?",
+        "a": "A magyarázatodat elküldjük az OpenAI-nak, hogy visszajelzést és kérdéseket készítsen. Ne írj bele személyes vagy érzékeny adatot. A részleteket az adatvédelmi tájékoztató tartalmazza."
+      },
+      "4": {
+        "q": "Miért az 5., 10. és 30. nap?",
+        "a": "Az első hónapban felejtünk a leggyorsabban; ha erre az időre osztjuk el az ismétléseket, kevés erőfeszítéssel hosszú távon megmarad a tudás. A lépéseket a beállításokban módosíthatod."
+      },
+      "5": {
+        "q": "Milyen nyelveken érhető el?",
+        "a": "A FocusKept 24 nyelven érhető el. A magyarázatok és kérdések bármilyen nyelven működnek, amelyen írsz."
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "Idő",
+    "goalLabel": "Cél",
+    "paused": "Szüneteltetve",
+    "announce": "{phase}",
+    "block": "{current}/{total}. blokk",
+    "focusedSoFar": "{duration} fókusz",
+    "flowHint": "Állj meg, amikor a fókusz lankad",
+    "phase": {
+      "idle": "Amikor készen állsz",
+      "work": "Fókusz",
+      "short_break": "Rövid szünet",
+      "long_break": "Hosszú szünet",
+      "ready": "Jöhet a következő blokk",
+      "box_ended": "Lejárt az idő",
+      "finished": "A munkamenet véget ért"
+    },
+    "controls": {
+      "start": "Indítás",
+      "startNext": "Következő blokk indítása",
+      "pause": "Szünet",
+      "resume": "Folytatás",
+      "skip": "Kihagyás",
+      "skipBreak": "Szünet kihagyása",
+      "takeBreak": "Szünetet tartok",
+      "finish": "Munkamenet befejezése",
+      "fullscreen": "Teljes képernyő",
+      "exitFullscreen": "Kilépés a teljes képernyőből",
+      "shortcuts": "Billentyűparancsok",
+      "close": "Bezárás"
+    },
+    "box": {
+      "title": "Lejárt az idő. Mi legyen?",
+      "done": "Kész",
+      "extend": "Egyszeri hosszabbítás (+{duration})",
+      "later": "Későbbre teszem"
+    },
+    "tips": {
+      "1": "Állj fel, és nyújtózkodj egy percig.",
+      "2": "Igyál meg egy pohár vizet.",
+      "3": "Pihentesd a szemed: 20 másodpercig nézz valamit, ami kb. 6 méterre van.",
+      "4": "Sétálj egy kicsit, akár csak a szobában.",
+      "5": "Körözz a válladdal, és vegyél néhány lassú lélegzetet.",
+      "6": "Nyiss ablakot, vagy menj ki egy kis friss levegőre."
+    },
+    "notify": {
+      "breakTitle": "Itt a szünet ideje",
+      "breakBody": "Tarts {duration} szünetet. Lépj el a képernyőtől.",
+      "focusTitle": "Vissza a fókuszhoz",
+      "readyTitle": "Vége a szünetnek",
+      "readyBody": "Jöhet a következő blokk?",
+      "boxTitle": "Lejárt az idő",
+      "boxBody": "Kész, egyszeri hosszabbítás vagy későbbre teszed?"
+    },
+    "shortcuts": {
+      "title": "Billentyűparancsok",
+      "keySpace": "Szóköz",
+      "keyEsc": "Esc",
+      "space": "Indítás, szünet vagy folytatás",
+      "skip": "Az aktuális szakasz kihagyása",
+      "fullscreen": "Teljes képernyő be/ki",
+      "exit": "Kilépés a teljes képernyőből",
+      "help": "Lista megjelenítése"
+    },
+    "sound": {
+      "title": "Hangok",
+      "chime": "Csengő szakaszváltáskor",
+      "chimeVolume": "Csengő hangereje",
+      "background": "Háttérhang",
+      "backgroundVolume": "Háttérhang hangereje",
+      "hint": "A háttérhang csak fókuszálás közben szól.",
+      "done": "Kész",
+      "kinds": {
+        "none": "Nincs",
+        "white": "Fehér zaj",
+        "pink": "Rózsaszín zaj",
+        "brown": "Barna zaj",
+        "rain": "Eső",
+        "cafe": "Kávézó",
+        "stream": "Patak",
+        "ocean": "Tengerhullámok",
+        "wind": "Szél",
+        "fire": "Kandalló",
+        "night": "Nyári éjszaka",
+        "binaural": "Binaurális ütem"
+      },
+      "groups": {
+        "noise": "Zaj",
+        "nature": "Természet",
+        "tones": "Hangok",
+        "places": "Helyek"
+      },
+      "about": {
+        "white": "Egyenletes zúgás, ami elfedi a beszélgetést",
+        "pink": "Lágyabb, mint a kitartó eső",
+        "brown": "Mély morajlás sziszegés nélkül",
+        "rain": "Könnyű eső cseppekkel",
+        "stream": "Patak a köveken",
+        "ocean": "Lassú hullámok néhány másodpercenként",
+        "wind": "Erősödő és halkuló szél",
+        "fire": "Pattogó fahasábok",
+        "night": "Tücskök egy csendes éjszakában",
+        "binaural": "16 Hz-es ütem, fülhallgatóhoz",
+        "cafe": "Zsúfolt kávézó zsongása"
+      },
+      "headphones": "Használj fülhallgatót: a két füled kissé eltérő hangot hall, az agyad pedig a kettő közti 16 Hz-es ütemet. Tartsd halkan.",
+      "previewHint": "Válassz egy hangot, és meghallod. Csak fókuszálás közben szól.",
+      "tip": "A szöveg nélküli hangok működnek a legjobban: a dalszöveg és a beszéd lassítja az olvasást és a memorizálást."
+    },
+    "taskLabel": "Feladat"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "Fiók nélkül is. A munkamenetek ezen az eszközön tárolódnak.",
+      "durations": {
+        "work": "Fókusz (perc)",
+        "shortBreak": "Rövid szünet (perc)",
+        "longBreak": "Hosszú szünet (perc)",
+        "cycles": "Blokkok a hosszú szünetig",
+        "box": "Timebox hossza (perc)"
+      }
+    },
+    "end": {
+      "ratingValue": "{value} / 5",
+      "discardConfirm": "Elveted ezt a munkamenetet? Nem lesz mentve.",
+      "tooShort": "Ez a munkamenet egy percnél rövidebb volt, ezért nem számít bele a statisztikába."
+    },
+    "import": {
+      "title": "Átviszed a munkameneteidet?",
+      "text": "Ezen az eszközön {sessions, plural, one {# munkamenetet} other {# munkamenetet}} és {tasks, plural, one {# feladatot} other {# feladatot}} találtunk. Importáljuk őket a fiókodba?",
+      "confirm": "Importálás",
+      "later": "Most nem",
+      "done": "Importálva: {sessions, plural, one {# munkamenet} other {# munkamenet}} és {tasks, plural, one {# feladat} other {# feladat}}.",
+      "error": "Az importálás nem sikerült. Az adataid továbbra is ezen az eszközön vannak; próbáld újra később."
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "Tanulási mód",
+      "title": "Tartsd meg, amit tanulsz",
+      "lead": "Tanulj bevált módszerrel, magyarázd el a témát a saját szavaiddal, és a FocusKept kérdéseket készít belőle. Az 5., 10. és 30. napon emlékeztetünk az ismétlésre, közvetlenül a felejtés előtt.",
+      "steps": {
+        "1": "Fókuszálj egy témára tanulási módszerrel és időzítővel.",
+        "2": "Magyarázd el úgy, mintha egy 12 évesnek mondanád.",
+        "3": "Az MI rámutat a hiányokra, és ismétlő kérdéseket ír.",
+        "4": "Ismételj automatikusan az 5., 10. és 30. napon."
+      },
+      "topicLabel": "Mit szeretnél megtanulni?",
+      "topicPlaceholder": "pl. Hogyan edzik a védőoltások az immunrendszert",
+      "start": "Tovább",
+      "accountNote": "A tanulási módhoz ingyenes fiók kell, hogy ismétlési emlékeztetőket küldhessünk.",
+      "workInstead": "Csak időzítő kell? Használd a munka módot, fiók nélkül."
+    },
+    "explain": {
+      "prompt": "Magyarázd el, amit tanultál, mintha egy 12 évesnek mondanád.",
+      "promptHint": "Használj egyszerű szavakat és rövid mondatokat. Ahol elakadsz, pontosan azt kell legközelebb tanulnod.",
+      "openaiNotice": "A magyarázatodat az OpenAI dolgozza fel. Ne írj bele személyes vagy érzékeny adatot. <privacy>Adatvédelmi tájékoztató</privacy>",
+      "counter": "{count} / {max} karakter (legalább {min})",
+      "analyze": "MI-visszajelzés és kérdések kérése",
+      "analyzing": "A magyarázatod olvasása…",
+      "manual": "Magam írom meg a kérdéseket",
+      "aiOff": "Az MI-visszajelzés most nem érhető el. A kérdéseket magad is megírhatod.",
+      "remaining": "{count, plural, =0 {Ebben a hónapban nincs több MI-elemzés} one {Ebben a hónapban még # MI-elemzés maradt} other {Ebben a hónapban még # MI-elemzés maradt}}",
+      "aiFailed": "Az MI-visszajelzés most nem sikerült. A magyarázatod mentve van; írd meg lent a kérdéseket, vagy próbáld újra később.",
+      "yourExplanation": "A magyarázatod",
+      "revise": "Átdolgozás és újraelemzés",
+      "edit": "Szerkesztés",
+      "analysisTitle": "Visszajelzés",
+      "clarity": "Érthetőség: {score, number}/100",
+      "clarityLabel": "Érthetőségi pontszám",
+      "gaps": "Ami hiányzik",
+      "mistakes": "Ami hibás vagy homályos",
+      "noGaps": "Semmi fontos nem hiányzik.",
+      "noMistakes": "Nem találtunk hibát.",
+      "rewrite": "Érthetőbb változat mutatása",
+      "useRewrite": "Folytatás ebből a változatból",
+      "reanalysisUsed": "Ennek a kártyának az újraelemzését már felhasználtad. A Pro korlátlan átdolgozást enged.",
+      "questionsTitle": "Ismétlő kérdések",
+      "questionsHint": "Szerkeszd, töröld őket, vagy adj hozzá sajátot. Ezekre válaszolsz majd az ismétlésekkor.",
+      "needQuestion": "Adj hozzá legalább egy kérdést.",
+      "fixQuestions": "Néhány kérdést javítani kell mentés előtt.",
+      "save": "Kártya mentése",
+      "saveError": "Nem sikerült menteni a kártyát. Próbáld újra.",
+      "savedTitle": "Kártya mentve",
+      "savedText": "Az első ismétlés időpontja: {date}. Emlékeztetünk rá.",
+      "viewCard": "Kártya megtekintése",
+      "another": "Új munkamenet indítása",
+      "notFound": "Ezt a munkamenetet már elmentették, vagy nem létezik.",
+      "check": "Ellenőrzés",
+      "focused": "Fókuszidő: {duration}",
+      "hintLong": "Sorold fel a fő gondolatokat, mindegyiket egy-két mondatban. A szünetekben írt jegyzeteid már itt vannak.",
+      "hintMid": "Három-öt fő gondolat, mindegyik egy-két mondatban, könyv nélkül.",
+      "hintShort": "Két-három fő gondolat elég. Írj úgy, hogy nem nézel a könyvbe.",
+      "keep": "{count, plural, one {# kérdés megtartása} other {# kérdés megtartása}}",
+      "keptTitle": "{count, plural, one {# kérdés kész.} other {# kérdés kész.}}",
+      "newSession": "Új munkamenet",
+      "readingText": "Hiányokat keresünk és kérdéseket készítünk",
+      "writeTitle": "Mit tanultál? Írd le a saját szavaiddal."
+    }
+  },
+  "tasks": {
+    "title": "Feladatok",
+    "markDone": "„{title}” megjelölése késznek",
+    "focusOn": "Fókusz erre: „{title}”",
+    "close": "Bezárás",
+    "errors": {
+      "generic": "Nem sikerült menteni a módosítást. Próbáld újra.",
+      "ivyFull": "Holnapra már hat feladat van.",
+      "slotFull": "A mai tábla ezen része már megtelt."
+    },
+    "matrix": {
+      "do": {
+        "title": "Azonnal"
+      },
+      "schedule": {
+        "title": "Ütemezd"
+      },
+      "delegate": {
+        "title": "Add át"
+      },
+      "delete": {
+        "title": "Hagyd el"
+      }
+    },
+    "plan135": {
+      "big": "Nagy",
+      "medium": "Közepes",
+      "small": "Kicsi"
+    },
+    "ivy": {
+      "moveUp": "„{title}” feljebb",
+      "moveDown": "„{title}” lejjebb"
+    },
+    "board": {
+      "heading": "Ma",
+      "chip": {
+        "today": "Ma",
+        "tomorrow": "Holnap",
+        "full": "A mai nap tele van",
+        "slot": {
+          "big": "A fő feladat helyére",
+          "medium": "Közepes helyre",
+          "small": "Rövid helyre"
+        }
+      },
+      "toTomorrow": "Holnap",
+      "progress": "Kész: {done, number} / {total, number}",
+      "planned": "Tervezett: {planned} · hátravan: {left}",
+      "plannedEmpty": "Még nincs semmi betervezve",
+      "barLabel": "Ma: kész {done}, hátravan {left}",
+      "addLabel": "Új feladat",
+      "addPlaceholder": "Próbáld: „Esszévázlat 45p holnap !” – az időtartamot, a napot és a fontosságot felismeri",
+      "add": "Hozzáadás",
+      "keywords": {
+        "today": "ma",
+        "tomorrow": "holnap",
+        "minutes": "p, perc",
+        "hours": "ó, óra"
+      },
+      "dayFull": "A mai nap tele van. Előbb tegyél át egy feladatot holnapra.",
+      "first": {
+        "label": "Ezzel kezdd",
+        "empty": "Még nincs fő feladat. Válassz egy hosszú feladatot, amit hajlamos vagy halogatni, és koppints a „Mára” gombra."
+      },
+      "medium": {
+        "title": "Aztán ezek",
+        "empty": "Szabad hely · 25–60 perc"
+      },
+      "small": {
+        "title": "Rövidek közben",
+        "empty": "Szabad hely · 25 percnél rövidebb"
+      },
+      "slotCount": "Kész: {done, number}/{used, number} · szabad: {free, number}",
+      "overflow": {
+        "title": "Ma már nincs hely",
+        "hint": "Mára tervezve, de minden hely foglalt."
+      },
+      "footnote": "Egy fő feladat, három közepes, öt rövid: tele nap. Az új feladatok az időtartamuk szerint kerülnek a helyükre.",
+      "focus": "Fókusz",
+      "toTomorrowLabel": "„{title}” áthelyezése holnapra",
+      "toIncoming": "Beérkezett",
+      "toIncomingLabel": "„{title}” áthelyezése a Beérkezettek közé",
+      "edit": "„{title}” megnyitása"
+    },
+    "details": {
+      "days": {
+        "today": "Ma",
+        "tomorrow": "Holnap",
+        "none": "Nincs dátum"
+      },
+      "name": "Cím",
+      "tags": "Címkék",
+      "tagsPlaceholder": "pl. tanulás, programozás",
+      "project": "Projekt",
+      "noProject": "Nincs projekt",
+      "save": "Mentés",
+      "deleteConfirm": "Törlöd ezt a feladatot? A hozzá kapcsolt munkamenetek megmaradnak.",
+      "title": "Feladat",
+      "minutes": "Időtartam (perc)",
+      "day": "Nap",
+      "notes": "Jegyzetek",
+      "archive": "Archiválás",
+      "delete": "Törlés"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "Holnap",
+        "planned": "Betervezett",
+        "unsorted": "Rendezetlen"
+      },
+      "quadrant": {
+        "do": {
+          "label": "Azonnal",
+          "hint": "Sürgős és fontos"
+        },
+        "plan": {
+          "label": "Ütemezd",
+          "hint": "Fontos, nem sürgős"
+        },
+        "quick": {
+          "hint": "Sürgős, nem fontos",
+          "label": "Gyors ügyek"
+        },
+        "later": {
+          "label": "Később",
+          "hint": "Egyik sem"
+        }
+      },
+      "projects": "Projektek és szűrők",
+      "filterLabel": "Szűrés fontosság szerint",
+      "empty": {
+        "tomorrow": "Holnapra még nincs semmi.",
+        "planned": "A következő napokra nincs semmi betervezve.",
+        "unsorted": "Minden a helyén van."
+      },
+      "missed": "lejárt: {date}",
+      "important": "Fontos",
+      "urgent": "Sürgős",
+      "importantShort": "F",
+      "urgentShort": "S",
+      "importantLabel": "„{title}”: fontos",
+      "urgentLabel": "„{title}”: sürgős",
+      "toToday": "Mára",
+      "toTodayLabel": "„{title}” áthelyezése mára",
+      "plan": "Tervezd meg a holnapot 2 perc alatt",
+      "planHint": "Állíts sorba legfeljebb hat feladatot, és indulj kész tervvel reggel",
+      "title": "Beérkezett"
+    },
+    "projects": {
+      "filterProject": "Projekt",
+      "filterTag": "Címke",
+      "all": "Összes",
+      "name": "Új projekt neve",
+      "add": "Projekt hozzáadása",
+      "archive": "Archiválás",
+      "restore": "Visszaállítás",
+      "done": "Kész",
+      "title": "Projektek és szűrők"
+    },
+    "planner": {
+      "moveUp": "„{title}” feljebb",
+      "remove": "„{title}” eltávolítása a holnapi listáról",
+      "title": "Mit csinálsz holnap?",
+      "lead": "Válassz legfeljebb hat feladatot, a legfontosabbal kezdve. Holnap az első lesz az „Ezzel kezdd”, a többi kitölti a táblát.",
+      "pick": "Választás",
+      "order": "Holnapi sorrend · {count, number}/{max, number}",
+      "empty": "Válassz feladatokat a listából. Amit elsőként választasz, azt látod majd reggel elsőként.",
+      "fromToday": "mai",
+      "later": "Most nem",
+      "save": "Mentés holnapra",
+      "saved": "A holnapi lista elmentve."
+    }
+  },
+  "cards": {
+    "title": "Tudáskártyák",
+    "lead": "Minden, amit tanultál, az ismétlési ütemtervével együtt.",
+    "newSession": "Új tanulási munkamenet",
+    "searchLabel": "Kártyák keresése",
+    "searchPlaceholder": "Keresés a témákban és magyarázatokban",
+    "search": "Keresés",
+    "statusLabel": "Állapot",
+    "active": "Aktív",
+    "archived": "Archivált",
+    "topicLabel": "Téma",
+    "allTopics": "Minden téma",
+    "sortLabel": "Rendezés",
+    "sortDue": "Esedékesek elöl",
+    "sortNew": "Legújabbak elöl",
+    "allowance": "{used, number} / {limit, number} kártya az Ingyenes csomagban",
+    "emptyTitle": "Még nincs kártya",
+    "emptyText": "Fejezz be egy tanulási munkamenetet, és magyarázd el, amit tanultál. Az első kártyád itt jelenik meg.",
+    "noResults": "Egyetlen kártya sem felel meg a keresésnek.",
+    "more": "Továbbiak betöltése",
+    "due": "Esedékes: {when}",
+    "dueToday": "Ma esedékes",
+    "overdue": "Lejárt",
+    "box": "{n, number}. doboz",
+    "graduated": "Hosszú távú",
+    "questionsCount": "{count, plural, one {# kérdés} other {# kérdés}}",
+    "detail": {
+      "back": "Összes kártya",
+      "reviewNow": "Ismétlés most",
+      "reviewNowHint": "Gyakorolj bármikor. Az előrehozott ismétlések nem módosítják az ütemtervet.",
+      "nextReview": "Következő ismétlés",
+      "reviews": "Ismétlések",
+      "source": "Forrás",
+      "method": "Módszer",
+      "created": "Létrehozva",
+      "explanation": "Magyarázat",
+      "editTopic": "Téma",
+      "save": "Változások mentése",
+      "saved": "Változások mentve.",
+      "archive": "Archiválás",
+      "unarchive": "Visszaállítás",
+      "archivedNote": "Az archivált kártyákat nem ismételjük. Az Ingyenes csomag korlátjába azonban beleszámítanak.",
+      "delete": "Kártya törlése",
+      "deleteConfirm": "Törlöd ezt a kártyát az ismétlési előzményeivel együtt? Ez nem vonható vissza.",
+      "history": "Ismétlési előzmények",
+      "noHistory": "Még nincs ismétlés.",
+      "passed": "Sikeres",
+      "missed": "Sikertelen",
+      "early": "Gyakorlás",
+      "score": "{score, number}%",
+      "analysis": "MI-visszajelzés",
+      "error": "Nem sikerült menteni. Próbáld újra."
+    },
+    "questions": {
+      "number": "{n, number}. kérdés",
+      "type": "Kérdéstípus",
+      "types": {
+        "open": "Nyílt válasz",
+        "true_false": "Igaz vagy hamis",
+        "cloze": "Hiányzó szó"
+      },
+      "source": {
+        "ai": "MI",
+        "ai_edited": "MI, szerkesztve"
+      },
+      "prompt": "Kérdés",
+      "answer": "Válasz",
+      "true": "Igaz",
+      "false": "Hamis",
+      "explanation": "Miért helyes",
+      "explanationPlaceholder": "Nem kötelező, egy mondat",
+      "clozeHint": "Jelöld a hiányzó szót így: {blank}",
+      "delete": "{n, number}. kérdés törlése",
+      "add": {
+        "open": "Nyílt kérdés",
+        "true_false": "Igaz / hamis",
+        "cloze": "Hiányzó szó"
+      },
+      "problems": {
+        "prompt": "Írd meg a kérdést.",
+        "answer": "Add meg a választ.",
+        "blank": "A hiányzó szavas kérdésben pontosan egy ____ kell."
+      }
+    },
+    "boxes": {
+      "label": "Ismétlési dobozok",
+      "today": "Ma",
+      "days": "{days, plural, one {# nap} other {# nap}}",
+      "hint": "A helyes válasz egy dobozzal továbbviszi a kártyát, így ritkábban jön vissza. A hibás hamar visszahozza."
+    }
+  },
+  "limits": {
+    "cta": "Pro megtekintése",
+    "keepWorking": "A kártyáid és az ismétléseid mindenképp működnek tovább.",
+    "pro": {
+      "cards": "Korlátlan tudáskártya",
+      "ai": "MI-visszajelzés és kérdések minden kártyához",
+      "lab": "A teljes Labor: mi működik nálad a legjobban, címke és napszak szerint",
+      "weekly": "Heti haladási összefoglaló e-mailben"
+    },
+    "card_limit": {
+      "title": "Elérted az Ingyenes csomag 20 kártyás korlátját",
+      "text": "Törölj vagy tarts meg kártyákat tetszés szerint; az ismétlések folytatódnak. Új kártyák mentéséhez válts Pro-ra."
+    },
+    "monthly_limit": {
+      "title": "Erre a hónapra elfogytak az MI-elemzések",
+      "text": "Az Ingyenes csomag havi {limit, number} MI-kártyaelemzést tartalmaz. Ezt a kártyát így is elmentheted, ha magad írod meg a kérdéseket."
+    },
+    "reanalysis_limit": {
+      "title": "Ennek a kártyának az újraelemzését már felhasználtad",
+      "text": "Az Ingyenes csomag kártyánként egy átdolgozást enged. Szerkeszd a kérdéseket kézzel, vagy válts Pro-ra a korlátlan átdolgozáshoz."
+    },
+    "budget": {
+      "title": "Az MI ma pihen",
+      "text": "Az MI-visszajelzés átmenetileg nem érhető el. Írd meg magad a kérdéseket; a kártyád pontosan ugyanúgy működik."
+    },
+    "lab": {
+      "title": "A teljes Labor a Pro-val",
+      "text": "Az Ingyenes csomag az elmúlt 7 nap legjobb technikáját mutatja. A Pro a teljes időszak elemzését, a címke és óra szerinti eredményeket és a megjegyzési görbéket is hozzáadja."
+    },
+    "weekly_report": {
+      "title": "A heti összefoglaló Pro funkció",
+      "text": "Minden hétfőn rövid e-mailt kapsz a fókuszidődről, a legjobb technikádról, a megjegyzési arányodról és egy tippről."
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "A böngészőben is kérsz ismétlési emlékeztetőt?",
+      "text": "Az e-mail mellett egy értesítést is küldünk, amikor ismétlés vár rád.",
+      "enable": "Böngészős emlékeztetők bekapcsolása",
+      "enabled": "A böngészős emlékeztetők be vannak kapcsolva",
+      "denied": "Az értesítések le vannak tiltva ezen az oldalon. A böngésző beállításaiban engedélyezheted őket."
+    },
+    "unsubscribe": {
+      "title": "E-mail-beállítások",
+      "reviews": "Leállítod a napi ismétlési emlékeztető e-maileket? A böngészőértesítések és az ismétlési ütemterved változatlanok maradnak.",
+      "weekly": "Leállítod a heti összefoglaló e-maileket?",
+      "confirm": "Leiratkozás",
+      "done": "Kész. Ezeket az e-maileket többé nem kapod meg. A beállításokban újra bekapcsolhatod őket.",
+      "error": "Ez nem sikerült. Próbáld újra, vagy módosítsd a beállításokban.",
+      "invalid": "Ez a link nem érvényes. Az e-maileket a beállításokban kezelheted.",
+      "settings": "Minden értesítés kezelése a beállításokban"
+    }
+  },
+  "review": {
+    "title": "Ismétlés",
+    "lead": "Válaszolj emlékezetből. Egy kártya akkor sikeres, ha minden válasz helyes.",
+    "progress": "{current, number}/{total, number}. kártya",
+    "questionProgress": "{current, number}/{total, number}. kérdés",
+    "types": {
+      "open": "Nyílt válasz",
+      "true_false": "Igaz vagy hamis?",
+      "cloze": "Hiányzó szó"
+    },
+    "true": "Igaz",
+    "false": "Hamis",
+    "blankLabel": "Hiányzó szó",
+    "yourAnswer": "A válaszod",
+    "check": "Ellenőrzés",
+    "grading": "Ellenőrzés…",
+    "modelAnswer": "Válasz",
+    "selfGradeNote": "Az automatikus ellenőrzés most nem érhető el. Hasonlítsd össze a válasszal, és értékeld magad őszintén.",
+    "self": {
+      "correct": "Tudtam",
+      "partial": "Részben",
+      "incorrect": "Még nem"
+    },
+    "verdict": {
+      "correct": "Helyes.",
+      "partial": "Részben helyes.",
+      "incorrect": "Nem egészen."
+    },
+    "nextQuestion": "Következő kérdés",
+    "finishCard": "Kártya befejezése",
+    "passedTitle": "Sikeres",
+    "missedTitle": "Még nem. Hamarosan visszatér",
+    "score": "{score, number}%",
+    "nextReview": "Következő ismétlés: {date}",
+    "earlyNote": "Gyakorló ismétlés: az ütemterv nem változik (következő ismétlés: {date}).",
+    "revisit": "Amit érdemes újranézni",
+    "openExplanation": "A magyarázatod újraolvasása",
+    "nextCard": "Következő kártya",
+    "finish": "Befejezés",
+    "passRule": "{count, plural, one {A sikerhez válaszolj helyesen a kérdésre.} other {A sikerhez válaszolj helyesen mind a # kérdésre.}}",
+    "saveError": "Nem sikerült menteni az ismétlést. Próbáld újra.",
+    "emptyTitle": "Minden kész",
+    "emptyText": "Most nincs esedékes ismétlés. Az újak a kártya mentése utáni 5., 10. és 30. napon jelennek meg.",
+    "allDoneTitle": "Ismétlések kész",
+    "allDoneText": "Sikeres kártyák: {passed, number} / {total, number}. Szép munka.",
+    "learnSomething": "Tanulj valami újat",
+    "toTimer": "Vissza az időzítőhöz"
+  },
+  "stats": {
+    "title": "Statisztika",
+    "lead": "Hogy halad a fókuszod és a tanulásod.",
+    "rangeLabel": "Időszak",
+    "range": "{days, number} nap",
+    "focused": "Fókuszidő",
+    "sessions": "Munkamenetek",
+    "avgRating": "Átl. fókusz",
+    "streak": "Sorozat",
+    "bestStreak": "Leghosszabb sorozat",
+    "days": "{count, plural, one {# nap} other {# nap}}",
+    "retention30": "Megjegyzés (30 nap)",
+    "retention90": "Megjegyzés (90 nap)",
+    "cardsTotal": "Kártyák",
+    "dailyChart": "Fókuszperc naponta",
+    "showTable": "Megjelenítés táblázatként",
+    "day": "Nap",
+    "minutes": "Perc",
+    "techniques": "Technikák",
+    "technique": "Technika",
+    "noSessions": "Ebben az időszakban még nincs munkamenet.",
+    "topics": "Megjegyzés témánként (90 nap)",
+    "topic": "Téma",
+    "reviews": "Ismétlések",
+    "retention": "Megjegyzési arány",
+    "noReviews": "Még nincs ismétlés.",
+    "lab": {
+      "title": "Labor",
+      "lead": "Melyik technika működik nálad a legjobban, a saját fókuszértékeléseid alapján.",
+      "weekTop": "Az elmúlt 7 napban a legjobb fókuszt ez hozta: {technique} — {rating, number, ::.#} / 5, {sessions, plural, one {# munkamenet} other {# munkamenet}} alapján.",
+      "needData": "Értékelj néhány munkamenetet, és itt megjelennek az eredményeid.",
+      "allTime": "Teljes időszak rangsora",
+      "rankRow": "{technique}: {rating, number, ::.#} / 5 ({sessions, plural, one {# munkamenet} other {# munkamenet}})",
+      "byTag": "Legjobb technika címkénként",
+      "tag": "Címke",
+      "best": "Legjobb technika",
+      "noTags": "Címkézd fel a feladataidat, hogy lásd, melyik technika illik az egyes munkatípusokhoz.",
+      "byHour": "Fókusz napszak szerint",
+      "hour": "Óra",
+      "curve": "Megjegyzés ismétlési lépésenként",
+      "step": "Lépés",
+      "dayN": "{day, number}. nap",
+      "graduated": "Hosszú távú"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Árak",
+    "title": "Kezdd ingyen. Válts, amikor megéri.",
+    "lead": "Minden fókusz-, tanulási és tervezési technika ingyenes. A Pro feloldja a korlátokat, és megmutatja, mi működik a legjobban.",
+    "perMonth": "/ hó",
+    "perYear": "/ év",
+    "free": {
+      "name": "Ingyenes",
+      "text": "Minden, ami a fókuszhoz és ahhoz kell, hogy elkezdd megjegyezni, amit tanulsz.",
+      "points": {
+        "1": "Mind a 18 technika, a feladatok és a statisztika",
+        "2": "Legfeljebb 20 tudáskártya",
+        "3": "Havi 10 MI-elemzés",
+        "4": "Ismétlési emlékeztetők e-mailben és a böngészőben"
+      },
+      "cta": "Ingyenes kezdés"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "Korlátlan tudáskártya",
+        "2": "MI-visszajelzés és kérdések minden kártyához (méltányos használat)",
+        "3": "A teljes Labor: legjobb technika címke és napszak szerint",
+        "4": "Heti haladási összefoglaló e-mailben"
+      }
+    },
+    "monthly": {
+      "name": "Pro havi",
+      "text": "Rugalmas. Bármikor lemondható.",
+      "cta": "Havi csomag választása"
+    },
+    "yearly": {
+      "name": "Pro éves",
+      "badge": "{percent, number}% megtakarítás",
+      "text": "Ez havi {monthly}, évente egyszer számlázva.",
+      "point": "Minden Pro funkció egy teljes évig",
+      "cta": "Éves csomag választása"
+    },
+    "checkoutNote": "A fizetést a Polar, a viszonteladónk (merchant of record) kezeli. A végső árat, az országodra vonatkozó adóval együtt, a fizetésnél látod. A Számlázás oldalon bármikor lemondhatod.",
+    "compare": "Az Ingyenes és a Pro összehasonlítása",
+    "feature": "Funkció",
+    "notIncluded": "Nem része",
+    "rows": {
+      "techniques": {
+        "label": "Idő-, tanulási és tervezési technikák",
+        "free": "Mind a 18",
+        "pro": "Mind a 18"
+      },
+      "tasks": {
+        "label": "Feladatok, projektek és alapstatisztika",
+        "free": "Benne van",
+        "pro": "Benne van"
+      },
+      "cards": {
+        "label": "Tudáskártyák",
+        "free": "Összesen 20",
+        "pro": "Korlátlan"
+      },
+      "ai": {
+        "label": "MI-visszajelzés és kérdéskészítés",
+        "free": "Havi 10 kártya",
+        "pro": "Korlátlan (méltányos használat)"
+      },
+      "grading": {
+        "label": "Nyílt válaszok MI-értékelése ismétléskor",
+        "free": "Benne van",
+        "pro": "Benne van"
+      },
+      "reminders": {
+        "label": "Ismétlési emlékeztetők e-mailben és böngészőben",
+        "free": "Benne van",
+        "pro": "Benne van"
+      },
+      "lab": {
+        "label": "Labor: melyik technika működik nálad a legjobban",
+        "free": "Elmúlt 7 nap, legjobb technika",
+        "pro": "Teljes időszak, címke és óra szerint, megjegyzési görbék"
+      },
+      "weekly": {
+        "label": "Heti összefoglaló e-mailben",
+        "free": "–",
+        "pro": "Benne van"
+      },
+      "export": {
+        "label": "Adatexport (JSON és CSV)",
+        "free": "Benne van",
+        "pro": "Benne van"
+      }
+    },
+    "faqTitle": "Kérdések a csomagokról",
+    "faq": {
+      "1": {
+        "q": "Mi lesz a kártyáimmal, ha nem fizetek tovább?",
+        "a": "Semmi sem vész el. A kártyáid és az ütemezett ismétléseid tovább működnek. Csak az Ingyenes csomag korlátja fölött nem adhatsz hozzá új kártyát, és az MI-elemzések száma visszaáll havi 10-re."
+      },
+      "2": {
+        "q": "Mit jelent a méltányos használat az MI-nél a Pro-ban?",
+        "a": "A Pro havonta legfeljebb 300 kártyához ad MI-visszajelzést, ami jóval több, mint amennyit a legtöbben létrehoznak. Ha eléred, a kérdéseket továbbra is megírhatod magad."
+      },
+      "3": {
+        "q": "Hogyan mondhatom le?",
+        "a": "Nyisd meg az alkalmazásban a Számlázást, és válaszd az „Előfizetés kezelése” lehetőséget. A Pro a kifizetett időszak végéig megmarad."
+      },
+      "4": {
+        "q": "Ki kezeli a fizetésemet?",
+        "a": "A Polar a viszonteladónk (merchant of record), ő intézi a fizetést, a számlákat és az áfát. A FocusKept soha nem látja a kártyaadataidat."
+      },
+      "5": {
+        "q": "Van élettartam-csomag?",
+        "a": "Jelenleg nincs. A Pro havi vagy éves előfizetéssel érhető el."
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "Időtechnikák",
+      "learning": "Tanulási módszerek",
+      "planning": "Tervezési technikák"
+    },
+    "eyebrow": "Technikák",
+    "title": "Fókusz-, tanulási és tervezési technikák",
+    "lead": "Minden technikát egyszerű szavakkal magyarázunk el: lépésekkel, és azzal, mikor segít és mikor nem. Bármelyiket kipróbálhatod a saját oldalán.",
+    "all": "Minden technika",
+    "tryNow": "Próbáld ki most",
+    "howItWorks": "Hogyan működik",
+    "steps": "Lépésről lépésre",
+    "bestFor": "Leginkább ehhez",
+    "whenNotToUse": "Mikor ne használd",
+    "faq": "Kérdések",
+    "related": "Kapcsolódó technikák",
+    "trademarkNotice": "A Pomodoro Technique® Francesco Cirillo védjegye. A FocusKept nem áll kapcsolatban a Pomodoro Technique®-kel vagy Francesco Cirillóval, és nem élvezi a támogatásukat."
+  },
+  "tryIt": {
+    "reset": "Visszaállítás",
+    "notSaved": "Ez a bemutató nem mentődik. Indíts teljes munkamenetet, hogy bekerüljön a statisztikádba.",
+    "fullSession": "Használd teljes munkamenetben",
+    "box": "Timebox hossza (perc)",
+    "steps": "Kövesd a lépéseket",
+    "learnWith": "Tanulás ezzel: {method}",
+    "taskPlaceholder": "Feladat hozzáadása",
+    "where": "Hová kerüljön",
+    "add": "Hozzáadás",
+    "full": "Ez a rész tele van. Pont ez a lényeg: válassz.",
+    "list": "Feladatok",
+    "remove": "„{title}” eltávolítása",
+    "markFrog": "„{title}” legyen a mai béka",
+    "frogHint": "Koppints a lángra a mai béka kiválasztásához. A lista elejére kerül.",
+    "planFull": "Tervezd meg a valódi napodat ezzel a technikával"
+  },
+  "home": {
+    "anonText": "Hozz létre ingyenes fiókot: megírod a magyarázatod, kérdéseket kapsz belőle, és időben emlékeztetünk. A munkameneted ezen az eszközön vár.",
+    "anonTitle": "Írd le, amit tanultál, és kapd meg a kérdéseidet.",
+    "boxMinutes": "Keret, perc",
+    "breakMinutes": "Szünet",
+    "breakNote": "Mi maradt meg ebből a blokkból?",
+    "breakNoteHint": "Nem kötelező · a végén vár rád",
+    "breakNotePlaceholder": "Egy-két gondolat…",
+    "breakOver": "Vége a szünetnek",
+    "breakTitle": "Szünet · {current}/{total}. blokk kész",
+    "continue": "Tovább",
+    "createAccount": "Ingyenes fiók létrehozása",
+    "decrease": "Kevesebb: {label}",
+    "discard": "Kilépés mentés nélkül",
+    "endFocused": "Fókuszidő: {duration}",
+    "endSession": "Munkamenet befejezése",
+    "fillHint": "A kártya telik, ahogy fókuszálsz",
+    "focusFallback": "Fókusz",
+    "focusMinutes": "Fókusz",
+    "fromPlan": "A mai tervből:",
+    "haveAccount": "Van fiókom",
+    "hintAsk": "Időben rákérdezünk",
+    "hintFocus": "Fókuszálj",
+    "hintWrite": "Írd le, amit tanultál",
+    "howDidItGo": "Hogy ment?",
+    "howItWorks": "Hogyan működik",
+    "increase": "Több: {label}",
+    "learn": "Tanulás",
+    "modeLabel": "Mód",
+    "moods": {
+      "1": "szétszórt",
+      "2": "közepes",
+      "3": "jó",
+      "4": "remek",
+      "5": "teljesen benne"
+    },
+    "newTopic": "Új téma",
+    "nextBlock": "Következő blokk · {current}/{total}",
+    "oneStep": "Még egy lépés",
+    "placeholderLearn": "pl. fotoszintézis",
+    "placeholderWork": "pl. a jelentés bevezetője",
+    "reviewStart": "Ismétlés indítása",
+    "reviewTitle": "{count, plural, one {# kártya vár ismétlésre} other {# kártya vár ismétlésre}}",
+    "rhythm": "Ritmus",
+    "rhythmGuide": "Melyik ritmus mikor? Irány az útmutató",
+    "rhythmHint": "fókusz · szünet, perc",
+    "rhythmSub": {
+      "52-17": "Hosszú, nyugodt munkához",
+      "custom": "Válaszd meg a saját számaidat",
+      "deep-work-90": "A nap legnehezebb feladata",
+      "flowtime": "Amíg tart a figyelem",
+      "pomodoro": "Ha nehéz belekezdeni",
+      "timeboxing": "Adj egy feladatnak időkeretet"
+    },
+    "runBlock": "blokk {current}/{total}",
+    "save": "Mentés",
+    "skipCard": "Befejezés kártya nélkül",
+    "start": "Indítás",
+    "subjectLearn": "Mit tanulsz?",
+    "subjectWork": "Min dolgozol? (nem kötelező)",
+    "summaryBox": "Ha lejár az idő: kész, hosszabbítás vagy később",
+    "summaryCycle": "{blocks, plural, one {# blokk} other {# blokk}} · köztük {minutes} perc szünet",
+    "summaryFlow": "Stopper · a szünet a fókuszidő ötöde",
+    "taskDone": "„{task}” kész",
+    "todayTotal": "Mai fókusz: {duration}",
+    "topicHint": "A kártyád ezen a néven mentődik.",
+    "topicTitle": "Mi volt a téma?",
+    "trailEmpty": "még üres",
+    "trailLabel": "A mai nyom",
+    "trailSummary": "{duration} · {cards, plural, one {# kártya} other {# kártya}}",
+    "work": "Munka"
+  }
+}

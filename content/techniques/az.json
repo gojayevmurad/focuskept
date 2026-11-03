@@ -1,0 +1,717 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "25 dəqiqə fokus, 5 dəqiqə fasilə. Sonra yenidən.",
+    "summary": "25/5 metodu işi aralarında fasilə olan qısa, vaxtla məhdud bloklara bölür. Başlamağı asanlaşdırır və uzun gün boyu enerjini sabit saxlayır.",
+    "howItWorks": [
+      "25 dəqiqəlik bir blok ərzində yalnız bir tapşırığa fokuslanırsan. Bu müddətdə başqa heç nə etmirsən: nə e-poçt, nə mesajlar, nə də “bircə baxım”. Taymer çalanda, işin ortasında olsan belə, dayan və 5 dəqiqə fasilə et.",
+      "Dörd blokdan sonra 15–30 dəqiqəlik uzun fasilə et. Bu sabit ritm “bütün günortadan sonra dərs oxuyacam” kimi qeyri-müəyyən niyyəti kiçik, sayıla bilən hissələrə çevirir; təxirə salmaq çətinləşir, irəliləyiş isə görünür olur. FocusKept-də iş müddətini (10–60 dəqiqə), fasilələri və dövrlərin sayını özün tənzimləyə bilərsən."
+    ],
+    "steps": [
+      "Bir tapşırıq seç və bu blok üçün “bitdi” nə demək olduğunu yaz.",
+      "25 dəqiqəlik taymeri başlat və yalnız həmin tapşırıq üzərində işlə.",
+      "Fikrini yayındıran nəsə olsa, onu qeyd et və işə qayıt.",
+      "Taymer çalanda dayan və 5 dəqiqə ekrandan uzaqda dincəl.",
+      "Hər dörd blokdan sonra 15–30 dəqiqəlik uzun fasilə et."
+    ],
+    "bestFor": [
+      "Çoxdandır təxirə saldığın işlərə başlamaq",
+      "Dərs, oxu və təkrar sessiyaları",
+      "Kiçik, təkrarlanan tapşırıqlarla dolu günlər"
+    ],
+    "whenNotToUse": [
+      "25 dəqiqə axını kəsəndə dərin yaradıcı iş və ya kodlaşdırma; 52/17 və ya Deep Work 90 sına",
+      "Vaxtını başqalarının təyin etdiyi işlər, məsələn, görüşlər və ya canlı zənglər"
+    ],
+    "faq": [
+      {
+        "q": "Niyə məhz 25 dəqiqə?",
+        "a": "İyirmi beş dəqiqə real irəliləyiş üçün kifayət qədər uzun, başlamağı asan hiss etdirəcək qədər isə qısadır. Bu, qayda deyil, defolt dəyərdir: vərdiş formalaşdıqdan sonra çoxları 30–50 dəqiqəyə keçir."
+      },
+      {
+        "q": "Tapşırığı tez bitirsəm nə edim?",
+        "a": "Qalan dəqiqələri yoxlamağa, cilalamağa və ya növbəti addımı planlaşdırmağa sərf et. Həqiqətən bitibsə, bloku bağla və növbəti tapşırığa yenidən başla."
+      },
+      {
+        "q": "Axındayamsa, fasiləni keçim?",
+        "a": "Qısa fasilələr diqqətini saatlarla təzə saxlayır. Fasilələr axınını tez-tez kəsirsə, onları keçmək əvəzinə Flowtime və ya daha uzun iş bloku sına."
+      },
+      {
+        "q": "25/5 metodu dərs üçün yaxşıdırmı?",
+        "a": "Bəli. Aktiv xatırlama ilə çox yaxşı uyğunlaşır: bir blok oxumaq, digəri özünü yoxlamaq üçün. FocusKept-in öyrənmə rejimi buna Feynman izahını və aralıqlı təkrarı da əlavə edir."
+      }
+    ],
+    "seoTitle": "25/5 fokus taymeri: 25 dəqiqəlik iş metodunun izahı",
+    "seoDescription": "25/5 metodunu onlayn tətbiq et: 25 dəqiqə fokus, 5 dəqiqə fasilə, dörd dövrdən sonra uzun fasilə. Pulsuz taymer, addım-addım bələdçi və məsləhətlər."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 dəqiqə dərin fokus, 17 dəqiqə əsl dincəlmə.",
+    "summary": "52/17 metodu daha uzun fokus bloklarını geniş fasilələrlə növbələşdirir. İşə dalmaq üçün 25 dəqiqəni az hesab edənlərə uyğundur.",
+    "howItWorks": [
+      "52 dəqiqə tam fokusla işləyirsən, sonra 17 dəqiqə işdən tamamilə uzaqlaşırsan. Bu nisbət çox məhsuldar ofis işçilərinin vaxt izləmə məlumatlarından çıxıb: onlar təbii olaraq təxminən bir saatlıq bloklarla işləyir və yaxşıca dincəlirdilər.",
+      "Əsas məsələ uzun fasilədir: gəzin, gərin, su iç, pəncərədən bax. Əsl dincəlmədən sonra qayıtmaq növbəti 52 dəqiqəni də birincisi qədər iti edir."
+    ],
+    "steps": [
+      "Davamlı diqqət tələb edən tapşırıq seç.",
+      "Bildirişləri söndür və 52 dəqiqə fokuslan.",
+      "17 dəqiqə ekrandan uzaqda dincəl.",
+      "Növbəti 52 dəqiqəlik bloka təzə zehnlə başla."
+    ],
+    "bestFor": [
+      "Yazı, analiz və fokus tələb edən masa işi",
+      "25/5 fasilələrini çox tez-tez hesab edənlər",
+      "Yarım günlük dərin iş"
+    ],
+    "whenNotToUse": [
+      "Başlamaq özü çətin olanda; 25 dəqiqəlik blok daha yumşaqdır",
+      "Uzun bloka ehtiyacı olmayan çox qısa tapşırıqlar"
+    ],
+    "faq": [
+      {
+        "q": "52/17 25/5-dən yaxşıdırmı?",
+        "a": "Hamı üçün daha yaxşı olan yoxdur. 52/17 işə dalmaq üçün daha çox vaxt verir, 25/5 isə başlamağı asanlaşdırır. FocusKept Laboratoriyası fokus qiymətlərini müqayisə edir ki, sənə hansının uyğun olduğunu görəsən."
+      },
+      {
+        "q": "17 dəqiqəlik fasilədə nə edim?",
+        "a": "Yenə ekrandan başqa hər şey: hərəkət et, su iç, gözlərini dincəlt və ya bir az gün işığına çıx. Telefonda sürüşdürmək adətən növbəti bloku çətinləşdirir."
+      },
+      {
+        "q": "Rəqəmləri dəyişmək olar?",
+        "a": "52/17 taymeri klassik nisbəti saxlayır. Öz iş və fasilə müddətlərini istəyirsənsə, fərdi taymerdən istifadə et."
+      }
+    ],
+    "seoTitle": "52/17 metodu: 52 dəqiqə iş, 17 dəqiqə fasilə",
+    "seoDescription": "52/17 məhsuldarlıq metodunu sına: 52 dəqiqə fokuslu iş və 17 dəqiqəlik fasilələr. Uzun fokus sessiyaları üçün pulsuz onlayn taymer və sadə bələdçi."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Fokusun qaldıqca işlə, sonra mütənasib dincəl.",
+    "summary": "Flowtime sabit taymer əvəzinə saniyəölçəndən istifadə edir. Diqqətin zəifləyəndə dayanırsan və işlədiyin müddətə mütənasib fasilə edirsən.",
+    "howItWorks": [
+      "Saniyəölçəni başlat və fokusun qaldıqca bir tapşırıq üzərində işlə. Diqqətinin dağıldığını hiss edəndə dayan. FocusKept iş vaxtının beşdə biri qədər, 5 ilə 30 dəqiqə arasında fasilə təklif edir: 40 dəqiqə iş 8 dəqiqə fasilə, 2 saat isə 24 dəqiqə deməkdir.",
+      "Nə vaxt dayanacağına özün qərar verdiyin üçün Flowtime dərin qapılmanı qoruyur və eyni zamanda dincəlməyi təmin edir. Zamanla sessiya tarixçən təbii fokusunun nə qədər çəkdiyini göstərir."
+    ],
+    "steps": [
+      "Bir tapşırıq seç və irəli sayan saniyəölçəni başlat.",
+      "Fokusun həqiqətən zəifləyənə qədər işlə, başqa işə keçmək istəyinin ilk anında yox.",
+      "“Fasilə et” düyməsini bas və təklif olunan müddət qədər dincəl (iş vaxtı ÷ 5, 5–30 dəqiqə).",
+      "Fasilə bitəndə yenidən başla."
+    ],
+    "bestFor": [
+      "Yarımçıq qalmağın baha başa gəldiyi yaradıcı iş və kodlaşdırma",
+      "25/5 fasilələrini tez-tez keçənlər",
+      "Təbii fokus müddətini öyrənmək"
+    ],
+    "whenNotToUse": [
+      "Son tarix olmayanda asanlıqla yayınırsansa; sabit taymer daha çox struktur verir",
+      "Görüşlər arasında sərt vaxt aralıqları olan günlər"
+    ],
+    "faq": [
+      {
+        "q": "Flowtime fasiləsi necə hesablanır?",
+        "a": "FocusKept iş vaxtının beşdə birini təklif edir, ən azı 5, ən çoxu 30 dəqiqə."
+      },
+      {
+        "q": "Heç dayanmaq istəmirəmsə?",
+        "a": "Yenə də ən azı hər 90 dəqiqədən bir fasilə et. Fasiləsiz uzun bloklar məhsuldar görünsə də, keyfiyyəti səssizcə aşağı salır."
+      },
+      {
+        "q": "Flowtime yeni başlayanlar üçün uyğundurmu?",
+        "a": "Fokuslu işi sevirsənsə, bəli. Çətin olan başlamaqdırsa, 25/5 ilə başla və sonra Flowtime-a keç."
+      }
+    ],
+    "seoTitle": "Flowtime texnikası: çevik fokus sessiyaları üçün taymer",
+    "seoDescription": "Flowtime texnikası ilə fokusun qaldıqca işlə, sonra mütənasib fasilə et. Fasilə müddətini avtomatik təklif edən pulsuz saniyəölçən."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "Ən çətin işin üçün 90 dəqiqəlik blok.",
+    "summary": "Deep Work 90 sənə 90 dəqiqəlik fasiləsiz sessiya və ardınca 20 dəqiqəlik fasilə verir; bu, diqqətin bir təbii dövrünə uyğundur.",
+    "howItWorks": [
+      "Çox insanın fokusu təxminən bir saat yarımlıq dövrlərlə qalxıb enir. 90 dəqiqəlik blok bir tam dövrü çətin və mənalı işə həsr edir, sonra 20 dəqiqəlik fasilə növbəti blokdan əvvəl bərpaya imkan verir.",
+      "Bu bloka özünlə vacib görüş kimi yanaş: tapşırığı əvvəlcədən seç, qalan hər şeyi bağla və bu vaxtı qoru. Gündə bir-iki belə blok ən böyük layihələrini irəli apara bilər."
+    ],
+    "steps": [
+      "Hansı tapşırığın ən dərin fokusuna layiq olduğunu əvvəlcədən qərarlaşdır.",
+      "E-poçtu və mesajları bağla, telefonu səssizə al və 90 dəqiqəlik taymeri başlat.",
+      "Taymer bitənə qədər yalnız həmin tapşırıq üzərində işlə.",
+      "Başqa ağır işdən əvvəl tam 20 dəqiqə dincəl."
+    ],
+    "bestFor": [
+      "Yazı, araşdırma, dizayn və mürəkkəb kodlaşdırma",
+      "Günün ən vacib tapşırığı",
+      "Səhərlər və ya enerjinin yüksək olduğu digər vaxtlar"
+    ],
+    "whenNotToUse": [
+      "Yorğun olanda və ya tez-tez işin bölünəndə; daha qısa bloklarla başla",
+      "E-poçt və ya inzibati işlər kimi səthi işlər"
+    ],
+    "faq": [
+      {
+        "q": "Həqiqətən 90 dəqiqə fokuslanmaq olar?",
+        "a": "Bunun üçün məşq lazımdır. 50–60 dəqiqəlik bloklarla başla və vərdiş möhkəmləndikcə uzat. Hər sessiyadan sonrakı qiymət necə keçdiyini göstərir."
+      },
+      {
+        "q": "Gündə neçə dərin iş bloku etməli?",
+        "a": "Çoxları üçün iki-üç blok kifayətdir. Günün qalanını yüngül işlərə ayır."
+      },
+      {
+        "q": "Dərin iş nədir?",
+        "a": "Tam diqqətini tələb edən və real dəyər yaradan iş: yazmaq, problem həll etmək və ya çətin bir şey öyrənmək."
+      }
+    ],
+    "seoTitle": "Dərin iş taymeri: 90 dəqiqəlik fokus sessiyaları",
+    "seoDescription": "20 dəqiqəlik fasilələrlə 90 dəqiqəlik dərin iş sessiyaları planlaşdır. Vacib tapşırıqlara yayınmadan fokuslanmaq üçün pulsuz taymer və bələdçi."
+  },
+  "custom": {
+    "name": "Fərdi taymer",
+    "tagline": "Öz iş və fasilə müddətlərin, şablon kimi saxlanılmış.",
+    "summary": "Fərdi taymer istənilən iş müddəti, qısa və uzun fasilələr, dövrlərin sayını təyin etməyə və beşə qədər şablon saxlamağa imkan verir.",
+    "howItWorks": [
+      "Hər iş məşhur nisbətə sığmır. Fərdi taymerlə nə qədər işləyəcəyini (1–180 dəqiqə), nə qədər dincələcəyini və neçə blokdan sonra uzun fasilə edəcəyini özün seçirsən.",
+      "Sevdiyin kombinasiyaları şablon kimi saxla ki, bir toxunuşla əlçatan olsun, məsələn “Oxu 40/10” və ya “İmtahana hazırlıq 30/5”."
+    ],
+    "steps": [
+      "İş müddətini, qısa fasiləni, uzun fasiləni və dövrlərin sayını təyin et.",
+      "İstəsən, kombinasiyanı şablon kimi saxla (beşə qədər).",
+      "Taymeri başlat və qurduğun ritmi izlə."
+    ],
+    "bestFor": [
+      "Öz ritmini tapmaq üçün sınaqlar",
+      "Sabit forması olan təkrarlanan rutinlər",
+      "Dərs, laboratoriya və ya imtahan müddətinə uyğunlaşmaq"
+    ],
+    "whenNotToUse": [
+      "Haradan başlayacağını bilmirsənsə; əvvəlcə 25/5-i sına, sonra tənzimlə"
+    ],
+    "faq": [
+      {
+        "q": "Neçə şablon saxlamaq olar?",
+        "a": "Beşə qədər. Onları Ayarlarda redaktə edə və ya silə bilərsən."
+      },
+      {
+        "q": "Hansı ayarın daha yaxşı işlədiyini necə bilim?",
+        "a": "Hər sessiyadan sonra fokusunu qiymətləndir. Laboratoriya qiymətlərini texnikalar və müddətlər üzrə müqayisə edir."
+      },
+      {
+        "q": "Hansı texnika ilə başlayım?",
+        "a": "Xüsusi seçimin yoxdursa, bir həftə 25/5 ilə başla. Sonra fokus qiymətlərinə əsasən iş və fasilə müddətlərini fərdi şablonda tənzimlə."
+      }
+    ],
+    "seoTitle": "Şablonlu fərdi fokus taymeri",
+    "seoDescription": "Öz fokus taymerini qur: iş və fasilə müddətlərini, uzun fasilələri və dövrləri seç, şablonlar saxla. Pulsuz və sadə."
+  },
+  "timeboxing": {
+    "name": "Zaman qutusu",
+    "tagline": "Hər tapşırığa sabit vaxt ver, sonra qərar ver.",
+    "summary": "Zaman qutusu (timeboxing) hər tapşırığa sabit vaxt büdcəsi verir. Qutu bitəndə qərar verirsən: hazırdır, bir dəfə uzat və ya sonraya saxla.",
+    "howItWorks": [
+      "Tapşırıq bitənə qədər işləmək əvəzinə, onun nə qədər vaxta dəydiyini əvvəlcədən qərarlaşdırırsan, məsələn, hesabatın qaralaması üçün 30 dəqiqə. Bu məhdudiyyət səni vacib olana yönəldir və mükəmməlliyətçiliyin bütün günü udmasına imkan vermir.",
+      "Zaman qutusu bitəndə FocusKept səndən seçim etməyi istəyir: hazır kimi qeyd et, qutunun 25%-i qədər bir dəfə uzat və ya tapşırığı sonraya köçür. İlkin qutudan artıq sərf olunan vaxt “artıq vaxt” kimi qeydə alınır ki, təxminlərinin nə qədər dəqiq olduğunu görəsən."
+    ],
+    "steps": [
+      "Tapşırıq seç və onun neçə dəqiqəyə dəydiyini qərarlaşdır.",
+      "Zaman qutusunu başlat və yalnız həmin tapşırıq üzərində işlə.",
+      "Vaxt bitəndə seç: hazırdır, bir dəfə uzat (+25%) və ya sonraya saxla.",
+      "Növbəti təxminləri dəqiqləşdirmək üçün statistikada artıq vaxta bax."
+    ],
+    "bestFor": [
+      "Mövcud bütün vaxtı dolduranadək genişlənən tapşırıqlar",
+      "Mükəmməlliyətçilər və bitməyən düzəlişlər edənlər",
+      "Müxtəlif tapşırıqlı günün planlaşdırılması"
+    ],
+    "whenNotToUse": [
+      "Nəticəsi bəlli olmayan açıq araşdırma",
+      "Təkrarlanan dövrlər tələb edən öyrənmə sessiyaları"
+    ],
+    "faq": [
+      {
+        "q": "Vaxtında bitirməsəm nə olur?",
+        "a": "Qutunun dörddə biri qədər bir dəfə uzada və ya tapşırığı sonraya köçürə bilərsən. Hər ikisi doğrudur; məqsəd şüurlu qərardır."
+      },
+      {
+        "q": "Zaman qutusu nə qədər olmalıdır?",
+        "a": "Əksər tapşırıqlar üçün 15–90 dəqiqə. Qısa qutular təcililik hissi yaradır, uzunları isə böyük tapşırıqlara uyğundur."
+      },
+      {
+        "q": "Artıq vaxt nədir?",
+        "a": "İlkin qutudan artıq sərf olunan vaxt. Artıq vaxt həmişə çoxdursa, təxminlərin həddindən artıq nikbindir."
+      }
+    ],
+    "seoTitle": "Zaman qutusu (timeboxing) texnikası: taymer və bələdçi",
+    "seoDescription": "Zaman qutusunu öyrən: hər tapşırığa sabit vaxt ver, sonra bitir, bir dəfə uzat və ya yenidən planlaşdır. Təxminlərini ölçən pulsuz taymer."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Sadə izah et. Həqiqətən nəyi başa düşdüyünü öyrən.",
+    "summary": "Feynman texnikası mövzunu sadə sözlərlə, sanki 12 yaşlı uşağa izah etdirərək anlayışını yoxlayır. İzahındakı boşluqlar növbəti nəyi öyrənməli olduğunu göstərir.",
+    "howItWorks": [
+      "Fizik Richard Feynman-ın adını daşıyan bu texnika sadədir: mövzunu öyrəndikdən sonra onu gündəlik sözlərlə və qısa cümlələrlə, maraqlı 12 yaşlı uşağa öyrədirmiş kimi izah et. Termin işlətmək xəbərdarlıq siqnalıdır, çünki çox vaxt boşluğu gizlədir.",
+      "İlişdiyin və ya ümumi danışdığın yerdə mənbəyə qayıt, boşluğu doldur və yenidən sadələşdir. FocusKept-də hər öyrənmə sessiyası Feynman izahı ilə bitir; sonra AI boşluqları və səhvləri göstərir və izahını təkrar suallarına çevirir."
+    ],
+    "steps": [
+      "Mövzunu mənbələrinlə öyrən.",
+      "Mənbəni bağla və mövzunu 12 yaşlı uşağa danışırmış kimi sadə sözlərlə izah et.",
+      "İlişdiyin və ya termin işlətdiyin yerləri qeyd et.",
+      "Həmin boşluqları doldurmaq üçün mənbəyə qayıt.",
+      "İzahını rahat oxunana qədər sadələşdir."
+    ],
+    "bestFor": [
+      "Anlayışlar, nəzəriyyələr və “necə işləyir” mövzuları",
+      "İmtahandan əvvəl real anlayışı yoxlamaq",
+      "Oxuduqlarını qalıcı biliyə çevirmək"
+    ],
+    "whenNotToUse": [
+      "Sırf əzbərləmə, məsələn, sözlər və ya tarixlər; aktiv xatırlama və ya aralıqlı təkrardan istifadə et",
+      "İzah deyil, praktik məşq tələb edən bacarıqlar"
+    ],
+    "faq": [
+      {
+        "q": "Niyə məhz 12 yaşlı uşağa izah etməli?",
+        "a": "Uşaq termin qəbul etmir, ona görə sözlərin mənasını bilməli olursan. Sadə dil dumanlı anlayışı tez üzə çıxarır."
+      },
+      {
+        "q": "Ucadan danışmaq lazımdır?",
+        "a": "Yazmaq da eyni dərəcədə işləyir və təkrar üçün nəsə qalır. FocusKept-də izahın bilik kartının əsasına çevrilir."
+      },
+      {
+        "q": "AI nəyi yoxlayır?",
+        "a": "Çatışmayan hissələri və səhvləri axtarır, aydınlıq balı verir və daha sadə variant təklif edir. Qərar səndədir: hər şeyi özün redaktə edir və təsdiqləyirsən."
+      },
+      {
+        "q": "İzahım nə qədər uzun olmalıdır?",
+        "a": "Bir neçə aydın abzas idealdır. FocusKept ən azı 80 simvol tələb edir və 6000 simvola qədər qəbul edir."
+      }
+    ],
+    "seoTitle": "Feynman texnikası: izah edərək istənilən şeyi öyrən",
+    "seoDescription": "Feynman texnikasından necə istifadə etməli: mövzunu sadə izah et, boşluqları tap və doldur. AI rəyi və təkrar sualları ilə pulsuz bələdçi."
+  },
+  "active-recall": {
+    "name": "Aktiv xatırlama",
+    "tagline": "Yenidən oxumaq əvəzinə məlumatı yaddaşdan çıxar.",
+    "summary": "Aktiv xatırlama yenidən oxumaq əvəzinə özünü yoxlamaq deməkdir. Cavabı yaddaşdan hər dəfə çıxardıqda növbəti dəfə xatırlamaq asanlaşır.",
+    "howItWorks": [
+      "Yenidən oxumaq məhsuldar hiss etdirir, amma yaddaşdan çox tanışlıq yaradır. Aktiv xatırlama bunu tərsinə çevirir: materialı bağlayır və özünə sual verirsən, yadında qalanı yazırsan və ya baxmadan məsələ həll edirsən.",
+      "Məhz xatırlamaq üçün göstərilən səy yaddaşı gücləndirir. FocusKept izahını suallara çevirir və 5-ci, 10-cu və 30-cu gün yenidən soruşur, beləliklə aktiv xatırlama öz-özünə baş verir."
+    ],
+    "steps": [
+      "Materialın bir hissəsini bir dəfə diqqətlə öyrən.",
+      "Onu bağla və əsas fikirlər haqqında suallar yaz.",
+      "Baxmadan, yaddaşdan cavab ver.",
+      "Cavablarını yoxla və buraxdıqlarını qeyd et.",
+      "Yalnız səhv etdiyin hissələri yenidən oxu."
+    ],
+    "bestFor": [
+      "İstənilən fəndən imtahana hazırlıq",
+      "Faktlar, təriflər və proseslər",
+      "Dərs vaxtından həqiqətən səmərəli istifadə"
+    ],
+    "whenNotToUse": ["Mövzu ilə ilk tanışlıq; əvvəlcə anla, sonra xatırla"],
+    "faq": [
+      {
+        "q": "Aktiv xatırlama yenidən oxumaqdan yaxşıdırmı?",
+        "a": "“Test effekti” üzrə tədqiqatlar dəfələrlə göstərib ki, xatırlama məşqi eyni materialı yenidən oxumaqdan daha yaxşı uzunmüddətli yadda saxlama yaradır."
+      },
+      {
+        "q": "Heç nə yadıma düşməsə?",
+        "a": "Bu da faydalı məlumatdır. Cavaba bax və sonra yenidən cəhd et. Bir az çətinlik metodun bir hissəsidir."
+      },
+      {
+        "q": "FocusKept aktiv xatırlamadan necə istifadə edir?",
+        "a": "Hər bilik kartında suallar var və hər təkrarda cavabı görməzdən əvvəl onlara cavab verməlisən."
+      }
+    ],
+    "seoTitle": "Aktiv xatırlama: öyrənmə metodu və tətbiqi",
+    "seoDescription": "Aktiv xatırlama (active recall) ən təsirli öyrənmə metodlarından biridir. Özünü yoxlamağı, daha yaxşı suallar qurmağı və daha çox yadda saxlamağı öyrən."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Yadında qalan hər şeyi yaz, sonra müqayisə et.",
+    "summary": "Blurting aktiv xatırlamanın sürətli məşqidir: öyrəndikdən sonra mövzu haqqında bildiyin hər şeyi yazırsan, sonra nəyi buraxdığını görmək üçün mənbə ilə müqayisə edirsən.",
+    "howItWorks": [
+      "Öyrənmə blokundan sonra qeydlərini bağla və yadına düşən hər şeyi bacardığın qədər sürətlə, istənilən ardıcıllıqla yaz. Struktur barədə düşünmə; məqsəd başındakıları kağıza boşaltmaqdır.",
+      "Sonra mənbəni aç və müqayisə et. Çatışmayan və ya səhv olanı başqa rənglə qeyd et. Bu boşluqlar məhz növbəti öyrənməli olduğun şeydir. FocusKept-də bələdçi sessiyanı “hər şeyi yaz” və “mənbə ilə müqayisə et” mərhələlərinə bölür."
+    ],
+    "steps": [
+      "Bir bölməni və ya mövzunu öyrən.",
+      "Mənbəni bağla və dayanmadan yadında qalan hər şeyi yaz.",
+      "Mənbəni aç və sətir-sətir müqayisə et.",
+      "Buraxdığını və ya səhv yazdığını qeyd et.",
+      "Boşluqları öyrən və sonra yenidən blurting et."
+    ],
+    "bestFor": [
+      "Mühazirələrin və ya dərslik fəsillərinin təkrarı",
+      "Tarix və ya biologiya kimi bir-birinə bağlı çoxlu faktı olan fənlər",
+      "Öyrənmə blokları arasında sürətli yoxlama"
+    ],
+    "whenNotToUse": ["Məşqin daha yaxşı işlədiyi məsələ həlli fənləri"],
+    "faq": [
+      {
+        "q": "Blurting səliqəli olmalıdır?",
+        "a": "Xeyr. Sürət ardıcıllıqdan vacibdir. Struktur sonra, müqayisə zamanı yaranır."
+      },
+      {
+        "q": "Blurting Feynman texnikasından nə ilə fərqlənir?",
+        "a": "Blurting nəyi xatırlaya bildiyini yoxlayır; Feynman isə onu başa düşüb-düşmədiyini. FocusKept-də hər öyrənmə sessiyası Feynman addımı ilə bitir, beləliklə hər ikisini əldə edirsən."
+      },
+      {
+        "q": "Hər mövzunu neçə dəfə blurting etməli?",
+        "a": "Öyrəndikdən dərhal sonra və bir neçə gün sonra yenə. FocusKept-in 5-ci, 10-cu və 30-cu gün təkrarları özünü yenidən yoxlamaq üçün təbii fürsətlərdir."
+      }
+    ],
+    "seoTitle": "Təkrar üçün blurting metodu: addım-addım",
+    "seoDescription": "Blurting texnikası: yadında qalanı yaz, qeydlərlə müqayisə et və boşluqları doldur. Təkrar etməyin sürətli və təsirli yolu."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: nəzər sal, sual qoy, oxu, danış, təkrarla.",
+    "summary": "SQ3R dərslikləri aktiv oxumaq üçün beş addımlı metoddur; sadəcə xətt çəkmək əvəzinə anlayır və yadda saxlayırsan.",
+    "howItWorks": [
+      "SQ3R ingilis dilindəki Survey, Question, Read, Recite və Review sözlərinin baş hərfləridir. Əvvəlcə strukturu nəzərdən keçirir, başlıqları suallara çevirir, onlara cavab tapmaq üçün oxuyur, cavabları yaddaşdan danışır və sonda bütün fəsli təkrarlayırsan.",
+      "Hər addım oxumağına məqsəd verir. FocusKept səni beş addımın hər birindən ardıcıl keçirir və hər mərhələdə qeydlər üçün yer verir."
+    ],
+    "steps": [
+      "Nəzər sal: ümumi mənzərəni görmək üçün başlıqlara, xülasələrə və şəkillərə bax.",
+      "Sual qoy: hər başlığı cavabını bilmək istədiyin suala çevir.",
+      "Oxu: hər dəfə bir bölmə oxu ki, onun sualına cavab verəsən.",
+      "Danış: kitabı bağla və suala öz sözlərinlə cavab ver.",
+      "Təkrarla: sonda bütün sual və cavablara yenidən bax."
+    ],
+    "bestFor": [
+      "Dərsliklər və uzun qeyri-bədii fəsillər",
+      "Çoxlu məcburi oxusu olan kurslar",
+      "Çox xətt çəkib az yadda saxlayan tələbələr"
+    ],
+    "whenNotToUse": [
+      "Bədii ədəbiyyat və ya yüngül oxu",
+      "Strukturu aydın olan çox qısa mətnlər"
+    ],
+    "faq": [
+      {
+        "q": "SQ3R yavaş deyil?",
+        "a": "Sürətli baxışdan çox vaxt aparır, amma imtahandan əvvəl fəsli üç dəfə oxumaqdan xeyli az."
+      },
+      {
+        "q": "SQ3R onlayn məqalələr üçün də işləyirmi?",
+        "a": "Bəli. Məqaləni mənbə keçidi kimi əlavə et və eyni beş addımı izlə."
+      },
+      {
+        "q": "Ən vacib addım hansıdır?",
+        "a": "Danışmaq. Yaddaşdan cavab vermək oxunanı biliyə çevirir. Digər addımlar səni buna hazırlayır."
+      }
+    ],
+    "seoTitle": "SQ3R oxu metodu: nəzər sal, sual qoy, oxu, danış",
+    "seoDescription": "Dərslikləri aktiv oxumaq və daha çox yadda saxlamaq üçün SQ3R metodunu öyrən. Daxili öyrənmə taymeri ilə aydın beş addımlı bələdçi."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Qeydlər, ipucu sualları və xülasə bir səhifədə.",
+    "summary": "Cornell qeyd metodu qeydlərini üç hissəyə bölür: əsas qeydlər, ipucu sualları və qısa xülasə; qeydlərini özünü yoxlamağa hazır vəziyyətə gətirir.",
+    "howItWorks": [
+      "Öyrənərkən əsas qeydləri böyük sahəyə yazırsan. Sonra yan sütunda hər fikrə yönəldən qısa ipucu sualları və ya açar sözlər yazırsan. Səhifənin aşağısında bütün səhifəni bir neçə cümlədə xülasə edirsən.",
+      "Təkrar üçün qeydləri ört və ipucu suallarına yaddaşdan cavab ver. FocusKept sessiya ərzində sənə bu üç hissəli düzülüşü verir və onu sessiya ilə birlikdə saxlayır."
+    ],
+    "steps": [
+      "Öyrənərkən əsas sahədə qeyd götür.",
+      "Öyrəndikdən sonra hər əsas fikrin yanına ipucu sualı yaz.",
+      "Səhifənin aşağısında bütün mövzunu 2–3 cümlədə xülasə et.",
+      "Qeydləri örtüb ipucu suallarına cavab verərək təkrarla."
+    ],
+    "bestFor": [
+      "Dərslər, videolar və seminarlar",
+      "İmtahandan əvvəl qeydlərini təkrarladığın fənlər",
+      "Qeydləri məşq suallarına çevirmək"
+    ],
+    "whenNotToUse": [
+      "Zehin xəritələrinin və ya diaqramların daha yaxşı işlədiyi çox vizual fənlər"
+    ],
+    "faq": [
+      {
+        "q": "Cornell metodunu kim yaradıb?",
+        "a": "Cornell Universitetinin pedaqoqu Walter Pauk onu 1950-ci illərdə təsvir edib."
+      },
+      {
+        "q": "Xüsusi kağız lazımdır?",
+        "a": "Xeyr. FocusKept üç hissəni ekranda göstərir: qeydlər, ipucu sualları və xülasə."
+      },
+      {
+        "q": "Xülasə nə qədər uzun olmalıdır?",
+        "a": "İki-üç cümlə. Səhifəni qısa xülasə edə bilmirsənsə, yəqin onun bir hissəsinə yenidən baxmaq lazımdır."
+      }
+    ],
+    "seoTitle": "Cornell qeyd metodu: şablon və bələdçi",
+    "seoDescription": "Cornell qeyd sistemindən onlayn istifadə et: qeydlər, ipucu sualları və xülasə bir düzülüşdə. Fokus taymeri ilə pulsuz şablon."
+  },
+  "interleaving": {
+    "name": "Növbəli öyrənmə",
+    "tagline": "Əlaqəli mövzuları bir-bir yox, qarışıq öyrən.",
+    "summary": "Növbəli öyrənmə (interleaving) bir öyrənmə sessiyasında iki-dörd əlaqəli mövzu arasında növbələşmək deməkdir. Bloklu məşqdən çətin görünür, amma düzgün yanaşmanı seçmək bacarığını yaxşılaşdırır.",
+    "howItWorks": [
+      "Bir növdən iyirmi, sonra başqa növdən iyirmi məsələ həll etmək əvəzinə onları qarışdırırsan: A, B, C, A, C, B. Beynin əvvəlcə qarşısındakı məsələnin hansı növ olduğunu tanımalıdır; bloklu məşq bu bacarığı heç vaxt inkişaf etdirmir.",
+      "FocusKept-də iki-dörd əlaqəli mövzu əlavə edirsən və bələdçi hər iş blokunda mövzunu dəyişir."
+    ],
+    "steps": [
+      "2–4 əlaqəli mövzu və ya məsələ növü seç.",
+      "Birinci iş blokunda birinci mövzunu öyrən.",
+      "Hər yeni blokda növbəyə görə növbəti mövzuya keç.",
+      "Mövzular arasındakı fərqlərə və hər yanaşmanın niyə uyğun olduğuna diqqət et."
+    ],
+    "bestFor": [
+      "Riyaziyyat, fizika və digər məsələ həlli fənləri",
+      "Dillər: müxtəlif qrammatik mövzuları qarışdırmaq",
+      "Çətin hissəsi düzgün metodu seçmək olan bacarıqlar"
+    ],
+    "whenNotToUse": [
+      "Mövzu tamamilə yenidirsə; əvvəlcə hər birinin əsaslarını öyrən"
+    ],
+    "faq": [
+      {
+        "q": "Növbəli öyrənmə niyə daha çətin görünür?",
+        "a": "Çünki həqiqətən daha çətindir. Növbələşmə səni hər dəfə hansı yanaşmanı tətbiq edəcəyini tanımağa məcbur edir. Məhz bu əlavə səy uzunmüddətli öyrənməni gücləndirir."
+      },
+      {
+        "q": "Neçə mövzu qarışdırmalı?",
+        "a": "İki-dörd əlaqəli mövzu. Daha çoxu dağınıqlıq yaradır."
+      },
+      {
+        "q": "Növbəli öyrənməni 25/5 ilə birləşdirmək olar?",
+        "a": "Bəli. Hər iş bloku bir mövzunu əhatə edir, növbəti blok isə onu dəyişir; bu, qarışdırmağa təbii ritm verir."
+      }
+    ],
+    "seoTitle": "Növbəli öyrənmə: mövzuları qarışdır, daha çox öyrən",
+    "seoDescription": "Növbəli öyrənmə bir sessiyada əlaqəli mövzuları qarışdırır. Interleaving-dən necə və nə vaxt istifadə etməli, mövzuları sənin yerinə dəyişən taymerlə öyrən."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Bildiyin kartların irəli getdiyi qutular.",
+    "summary": "Leitner sistemi fləşkartları qutulara düzür. Düzgün cavab verdiyin kartlar daha az təkrarlanan qutuya keçir; səhv kartı geri göndərir.",
+    "howItWorks": [
+      "Sebastian Leitner-in sistemi bir sıra qutudan istifadə edir. Yeni kartlar tez-tez təkrarladığın 1-ci qutudan başlayır. Hər düzgün cavab kartı bir qutu irəli aparır, orada onu daha az görürsən. Səhv cavab onu geri qaytarır.",
+      "FocusKept bu ideyanı avtomatik tətbiq edir: hər təkrar addımı (5-ci, 10-cu və 30-cu gün, sonra 60 gün və daha çox) bir qutudur. Təkrardan keçəndə kart irəli gedir; bir suala cavab verə bilməyəndə 2 gün sonra qayıdır."
+    ],
+    "steps": [
+      "Bir tərəfində sual, digər tərəfində cavab olan kartlar hazırla.",
+      "Birinci qutudakı kartları ən tez-tez təkrarla.",
+      "Düzgün cavab verəndə kartı bir qutu irəli apar.",
+      "Səhv edəndə onu geri qaytar.",
+      "FocusKept-də sadəcə vaxtı çatan təkrarları et: qutular avtomatik idarə olunur."
+    ],
+    "bestFor": [
+      "Sözlər, təriflər və düsturlar",
+      "Minimum planlaşdırma ilə uzunmüddətli yaddaş",
+      "İrəliləyişini görməyi sevənlər"
+    ],
+    "whenNotToUse": [
+      "Mürəkkəb fikirləri anlamaq; əvvəlcə onları Feynman texnikası ilə izah et"
+    ],
+    "faq": [
+      {
+        "q": "Leitner FocusKept-də necə həyata keçirilib?",
+        "a": "Hər təkrar addımı bir qutudur: 5-ci gün, 10-cu gün, 30-cu gün, sonra 60 gün, 180-ə qədər ikiqat artaraq. Kartın hazırkı addımı onun qutusudur."
+      },
+      {
+        "q": "Karta səhv cavab versəm nə olur?",
+        "a": "2 gün sonra eyni addımda yenidən öyrənmə təkrarı üçün qayıdır. Keçsən, irəli gedir."
+      },
+      {
+        "q": "Kartları özüm köçürməliyəm?",
+        "a": "Xeyr. FocusKept hər kartı sənin üçün planlaşdırır və sən sadəcə bugünkü təkrarlara cavab verirsən."
+      }
+    ],
+    "seoTitle": "Leitner sistemi: fləşkart qutuları sadə dillə",
+    "seoDescription": "Leitner fləşkart sistemi necə işləyir və ondan avtomatik aralıqlı təkrarla necə istifadə etməli. Nümunələrlə sadə bələdçi."
+  },
+  "spaced-repetition": {
+    "name": "Aralıqlı təkrar",
+    "tagline": "5-ci, 10-cu və 30-cu gün, unutmazdan az əvvəl təkrarla.",
+    "summary": "Aralıqlı təkrar (spaced repetition) təkrarları artan aralıqlarla planlaşdırır ki, hər təkrar yaddaşın solmağa başladığı anda gəlsin. Bu, FocusKept-də hər öyrənmə sessiyasının özəyidir.",
+    "howItWorks": [
+      "Yaddaş öyrəndikdən sonra tez solur, amma hər uğurlu təkrar unutmanı yavaşladır. Təkrarları getdikcə uzanan aralıqlara yaymaq ən az təkrar vaxtı ilə ən çox yadda saxlama verir.",
+      "FocusKept hər bilik kartını avtomatik planlaşdırır: ilk təkrar 5-ci gün, sonra 10-cu və 30-cu gün. Bundan sonra aralıq 60 gün olur və hər uğurla ikiqat artır, ən çoxu 180 günə qədər. Bir suala cavab verə bilməsən, kart 2 gün sonra qayıdır. İlk üç addımı Ayarlarda dəyişə bilərsən."
+    ],
+    "steps": [
+      "Öyrənmə sessiyasını bitir və bilik kartını saxla.",
+      "Təkrar vaxtı çatanda xatırlatma al (e-poçt və ya brauzerdə).",
+      "Kartın suallarına yaddaşdan cavab ver.",
+      "Keçmək növbəti aralıq deməkdir; keçməmək isə kartın 2 gün sonra qayıtması."
+    ],
+    "bestFor": [
+      "Bir neçə gün yox, aylarla yadda saxlamaq istədiyin hər şey",
+      "Bir neçə həftəyə yayılan imtahan hazırlığı",
+      "Az istifadə etdiyin, amma unutmamalı olduğun peşəkar bilik"
+    ],
+    "whenNotToUse": [
+      "Sabahkı imtahan üçün gecə boyu əzbərləmə; aralıqlı təkrar həftələr ərzində işləyir"
+    ],
+    "faq": [
+      {
+        "q": "Niyə 5-ci, 10-cu və 30-cu gün?",
+        "a": "Bunlar unutmanın ən sürətli olduğu ilk aya təkrarları yayan sadə və yadda qalan addımlardır. Onları Ayarlarda dəyişə bilərsən."
+      },
+      {
+        "q": "Təkrar gününü buraxsam?",
+        "a": "Gecikmiş kartlar sən təkrarlayana qədər vaxtı çatmış qalır. Heç nə itmir; imkan olanda çatdır."
+      },
+      {
+        "q": "Təkrar qüsursuz olmalıdır?",
+        "a": "Bütün cavablar doğru olanda təkrar keçir. Qismən doğru cavab keçməmək sayılır ki, kart daha tez qayıtsın."
+      }
+    ],
+    "seoTitle": "Aralıqlı təkrar: işləyən təkrar cədvəli",
+    "seoDescription": "Aralıqlı təkrar sadə dillə: 5-ci, 10-cu və 30-cu gün, sonra artan aralıqlarla təkrarla. FocusKept-də avtomatik xatırlatmalar və təkrar sualları."
+  },
+  "eat-the-frog": {
+    "name": "Qurbağanı ye",
+    "tagline": "Ən çətin və ən vacib işini birinci et.",
+    "summary": "“Qurbağanı ye” ən çox qaçacağın bir tapşırığı seçib onu ilk növbədə etmək deməkdir. Ondan sonra qalan hər şey asan görünür.",
+    "howItWorks": [
+      "“Qurbağa” etmək istəmədiyin vacib tapşırıqdır. Onu enerjinin ən yüksək olduğu günün əvvəlində həll etsən, günün qalanında arxa planda qalan narahatlıqdan azad olursan.",
+      "FocusKept-də hər gün dəqiq bir qurbağa qeyd edə bilərsən. O, bugünkü siyahının ən yuxarısına bərkidilir və ilk sessiya kimi təklif olunur."
+    ],
+    "steps": [
+      "Axşamdan və ya səhər tezdən bugünkü qurbağanı seç: vacib və qaçmağı asan olan.",
+      "Onu qurbağa kimi qeyd et ki, günün ən yuxarısında qalsın.",
+      "Hər şeydən əvvəl ilk fokus sessiyanı qurbağaya ver.",
+      "Bitənə və ya aydın irəliləyiş olana qədər onunla məşğul ol."
+    ],
+    "bestFor": [
+      "Vacib tapşırıqları təxirə salmaq",
+      "Enerjili səhərlər",
+      "Əks halda xırda işlərlə dolacaq gərgin günlər"
+    ],
+    "whenNotToUse": ["Ən çətin tapşırıq başqasının vaxtından asılı olanda"],
+    "faq": [
+      {
+        "q": "Bu ad haradan gəlir?",
+        "a": "Tez-tez Mark Twain-ə aid edilən bir sözdən: diri qurbağa yeməlisənsə, onu səhər ilk iş olaraq ye. Brian Tracy bunu məhsuldarlıq metoduna çevirib."
+      },
+      {
+        "q": "Birdən çox qurbağa ola bilərmi?",
+        "a": "Xeyr, gündə bir qurbağa qərarı aydın saxlayır. Yeni qurbağa seçmək əvvəlkini əvəz edir."
+      },
+      {
+        "q": "Qurbağam bir sessiya üçün çox böyükdürsə?",
+        "a": "Onu hissələrə böl və ilk konkret addımı bugünkü qurbağa et. Ən çətin hissə başlamaqdır."
+      }
+    ],
+    "seoTitle": "Qurbağanı ye: ən çətin işi birinci et",
+    "seoDescription": "“Qurbağanı ye” metodu ilə təxirəsalmanı yen: bir vacib tapşırıq seç və onu birinci et. Sadə bələdçi və qurbağanla başlayan taymer."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Tapşırıqları təcililik və vaciblik üzrə çeşidlə.",
+    "summary": "Eisenhower matrisi tapşırıqları təcililiyə və vacibliyə görə dörd kvadranta bölür ki, nəyi indi edəcəyini, planlaşdıracağını, həvalə edəcəyini və ya siləcəyini biləsən.",
+    "howItWorks": [
+      "Hər tapşırıq dörd kvadrantdan birinə düşür: İndi et (təcili və vacib), Planlaşdır (vacib, təcili deyil), Həvalə et (təcili, vacib deyil) və Sil (heç biri). Matris təcili işlərin səs-küyünün vacib işi sıxışdırdığı anları aydın göstərir.",
+      "FocusKept-də tapşırıqları kvadrantlar arasında sürüşdürür və ya klaviatura ilə köçürürsən. Sil kvadrantı tapşırıqları arxivləməyi təklif edir ki, siyahından çıxsınlar."
+    ],
+    "steps": [
+      "Bütün açıq tapşırıqlarını siyahıya al.",
+      "Hər tapşırığı “İndi et”, “Planlaşdır”, “Həvalə et” və ya “Sil” kvadrantına qoy.",
+      "Fokus sessiyasına “İndi et” kvadrantından bir tapşırıqla başla.",
+      "“Planlaşdır” tapşırıqlarına təcili olmamışdan əvvəl vaxt ayır.",
+      "“Həvalə et” tapşırıqlarını ötür, “Sil” tapşırıqlarını arxivlə."
+    ],
+    "bestFor": [
+      "Daşan tapşırıq siyahıları",
+      "Həftəlik planlaşdırma",
+      "Real prioritetləri səs-küydən ayırmaq"
+    ],
+    "whenNotToUse": [
+      "Eyni dərəcədə vacib tapşırıqlardan ibarət qısa siyahılar"
+    ],
+    "faq": [
+      {
+        "q": "Hər şey həm təcili, həm də vacib görünürsə?",
+        "a": "Özündən soruş: tapşırıq bir həftə gözləsə nə olar? Ciddi heç nə olmayacaqsa, onun yeri “Planlaşdır”dır."
+      },
+      {
+        "q": "Tək işləyirəm. “Həvalə et” ilə nə edim?",
+        "a": "Onu avtomatlaşdıra, bir dəfəyə topluca edə və ya kiminsə köməyini istəyə biləcəyin tapşırıqlar üçün istifadə et."
+      },
+      {
+        "q": "Matrisi nə qədər tez-tez yenidən çeşidləməli?",
+        "a": "Gündəlik qısa baxış və həftəlik ətraflı nəzərdən keçirmə son tarixlər yaxınlaşanda matrisi dəqiq saxlayır."
+      }
+    ],
+    "seoTitle": "Eisenhower matrisi: təcili, yoxsa vacib?",
+    "seoDescription": "Eisenhower matrisi ilə prioritet müəyyən et: et, planlaşdır, həvalə et və sil. Daxili fokus taymerli pulsuz sürüşdür-burax lövhəsi."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Bir böyük, üç orta, beş kiçik iş. Bu, sənin günündür.",
+    "summary": "1-3-5 qaydası hər günü bir böyük, üç orta və beş kiçik tapşırıqla məhdudlaşdırır ki, planların real qalsın.",
+    "howItWorks": [
+      "Əksər tapşırıq siyahıları bitməyəcək qədər uzundur və hər gün uğursuzluq hissi yaradır. 1-3-5 qaydası günü müxtəlif ölçülü doqquz tapşırıqla məhdudlaşdırır: real səy tələb edən bir, bir az vaxt aparan üç və tez bitən beş.",
+      "FocusKept bugünkü planda məhz bu qədər yer verir və onları artıq doldurmağa imkan vermir ki, şüurlu seçim edəsən."
+    ],
+    "steps": [
+      "Bu günün bir böyük tapşırığını seç.",
+      "Üç orta tapşırıq əlavə et.",
+      "Beş kiçik tapşırıq yerləşdir.",
+      "Enerjin yüksək ikən böyük tapşırıqla başla."
+    ],
+    "bestFor": [
+      "Real gündəlik planlaşdırma",
+      "Siyahısı heç vaxt bitməyənlər",
+      "Dərin iş ilə kiçik işlər arasında tarazlıq"
+    ],
+    "whenNotToUse": ["Görüşlərlə və ya tək bir layihə ilə dolu günlər"],
+    "faq": [
+      {
+        "q": "Hamısını tez bitirsəm?",
+        "a": "Əla. Vaxtından həzz al və ya gözləmə siyahısından bir tapşırıq da götür."
+      },
+      {
+        "q": "Tapşırığın ölçüsünü necə müəyyən edim?",
+        "a": "Böyük tapşırıq bir neçə saat, orta təxminən bir saat, kiçik isə 15 dəqiqə və ya daha az çəkir."
+      },
+      {
+        "q": "1-3-5-i başqa texnikalarla birləşdirmək olar?",
+        "a": "Bəli. Böyük tapşırığı qurbağan et və hər tapşırığa 25/5 və ya zaman qutusu ilə fokuslan."
+      }
+    ],
+    "seoTitle": "1-3-5 qaydası: real gündəlik tapşırıq siyahısı",
+    "seoDescription": "Gününü 1-3-5 qaydası ilə planlaşdır: bir böyük, üç orta və beş kiçik tapşırıq. Sabit yerləri və fokus taymeri olan pulsuz planlayıcı."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Sabah üçün altı tapşırıq, sıra ilə. Daha çox yox.",
+    "summary": "Ivy Lee metodu hər axşam növbəti gün üçün vaciblik sırası ilə altıya qədər tapşırıq yazmağı və onları bir-bir yerinə yetirməyi tələb edir.",
+    "howItWorks": [
+      "Hər günün sonunda sabahın altı vacib tapşırığını yazır və sıralayırsan. Növbəti gün birincidən başlayırsan və o bitməyincə növbətiyə keçmirsən. Bitməmiş tapşırıqlar növbəti günün siyahısının ən yuxarısına keçir.",
+      "FocusKept sabah üçün altı sıralı yeri olan axşam planlaşdırma görünüşü verir və bitməmiş tapşırıqları eyni sıra ilə köçürür."
+    ],
+    "steps": [
+      "Axşam sabah üçün altıya qədər tapşırıq yaz.",
+      "Onları real vacibliyə görə sırala.",
+      "Sabah 1-ci tapşırıq bitənə qədər onunla işlə, sonra 2-ciyə keç.",
+      "Bitməmiş tapşırıqlar eyni sıra ilə növbəti günün siyahısına keçir."
+    ],
+    "bestFor": [
+      "Günü aydın planla bitirmək",
+      "Səhəri nə edəcəyinə qərar verməklə keçirənlər",
+      "Vacib tapşırıqlarda davamlı irəliləyiş"
+    ],
+    "whenNotToUse": [
+      "Prioritetlərin saatbasaat dəyişdiyi çox reaktiv vəzifələr"
+    ],
+    "faq": [
+      {
+        "q": "Niyə yalnız altı tapşırıq?",
+        "a": "Məhdudiyyət səni seçim etməyə məcbur edir. Altı tapşırıq yükləmədən dolğun bir günü doldurmağa kifayətdir."
+      },
+      {
+        "q": "Ivy Lee metodu haradan gəlir?",
+        "a": "Məhsuldarlıq məsləhətçisi Ivy Lee onu 1918-ci ildə rəhbərlərə öyrədib."
+      },
+      {
+        "q": "Təcili bir iş çıxsa?",
+        "a": "Onu həll et, sonra sıra ilə siyahıya qayıt. Təcili işlər tez-tez çıxırsa, sabah üçün daha az tapşırıq planlaşdır."
+      }
+    ],
+    "seoTitle": "Ivy Lee metodu: sabah üçün altı tapşırıq planlaşdır",
+    "seoDescription": "Ivy Lee metodu: hər axşam sabahın altı tapşırığını sıra ilə yaz. Bitməmiş tapşırıqlar avtomatik keçir. Pulsuz planlayıcı və bələdçi."
+  }
+}

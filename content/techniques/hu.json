@@ -1,0 +1,719 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "25 perc fókusz, 5 perc pihenő. Aztán újra.",
+    "summary": "A 25/5 módszer rövid, időzített blokkokra bontja a munkát, köztük szünetekkel. Megkönnyíti az indulást, és egész nap egyenletesen tartja az energiádat.",
+    "howItWorks": [
+      "Egyetlen 25 perces blokkra egyetlen feladatot vállalsz. A blokk alatt semmi mást nem csinálsz: se e-mail, se chat, se gyors pillantás. Amikor az időzítő megszólal, abbahagyod, és tartasz 5 perc szünetet, még ha valaminek a közepén vagy is.",
+      "Négy blokk után hosszabb, 15–30 perces szünetet tartasz. A kötött ritmus egy homályos célt, például hogy „egész délután tanulok”, kis, megszámolható egységekre bont: így nehezebb halogatni, és látszik a haladás. A FocusKeptben beállíthatod a munkablokk hosszát (10–60 perc), a szüneteket és a ciklusok számát."
+    ],
+    "steps": [
+      "Válassz egy feladatot, és írd le, mit jelent ebben a blokkban, hogy „kész”.",
+      "Indíts egy 25 perces időzítőt, és csak ezen a feladaton dolgozz.",
+      "Ha közbejön valami, jegyezd fel, és térj vissza a feladathoz.",
+      "Amikor megszólal az időzítő, állj meg, és tarts 5 perc szünetet a képernyőtől távol.",
+      "Négy blokk után tarts egy hosszabb, 15–30 perces szünetet."
+    ],
+    "bestFor": [
+      "Régóta halogatott feladatok elkezdése",
+      "Tanulás, olvasás és ismétlés",
+      "Apró, gyakran megszakított feladatokkal teli napok"
+    ],
+    "whenNotToUse": [
+      "Mély kreatív munka vagy programozás, amikor a 25 perc megtöri a flow-t; próbáld az 52/17-et vagy a Deep Work 90-et",
+      "Kívülről ütemezett feladatok, például megbeszélések vagy élő hívások"
+    ],
+    "faq": [
+      {
+        "q": "Miért éppen 25 perc?",
+        "a": "Huszonöt perc elég ahhoz, hogy valóban haladj, és elég rövid ahhoz, hogy könnyű legyen belekezdeni. Ez alapérték, nem szabály: sokan 30–50 percnél állapodnak meg, amint a szokás kialakul."
+      },
+      {
+        "q": "Mit csináljak, ha hamarabb végzek?",
+        "a": "A maradék percekben nézd át, csiszold vagy tervezd meg a következő lépést. Ha tényleg kész vagy, zárd le a blokkot, és a következő feladatot kezdd tiszta lappal."
+      },
+      {
+        "q": "Kihagyjam a szünetet, ha jól megy a munka?",
+        "a": "A rövid szünetek órákon át frissen tartják a figyelmet. Ha folyton kizökkentenek, inkább válts Flowtime-ra vagy hosszabb munkablokkra, mint hogy kihagyd őket."
+      },
+      {
+        "q": "Beválik a 25/5 módszer tanuláshoz?",
+        "a": "Igen. Jól párosítható az aktív felidézéssel: egy blokk olvasás, egy blokk önellenőrzés. A FocusKept tanulási módja ehhez Feynman-féle magyarázatot és elosztott ismétlést ad."
+      }
+    ],
+    "seoTitle": "25/5 fókuszidőzítő: a 25 perces módszer bemutatása",
+    "seoDescription": "Használd a 25/5 módszert online: 25 perc fókusz, 5 perc szünet és hosszú szünet négy ciklus után. Ingyenes időzítő, lépésről lépésre útmutató és tippek."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 perc mély fókusz, 17 perc valódi pihenés.",
+    "summary": "Az 52/17 módszer hosszabb fókuszblokkokat váltogat bőséges szünetekkel. Azoknak való, akiknek 25 perc kevés ahhoz, hogy belemerüljenek egy feladatba.",
+    "howItWorks": [
+      "52 percig teljes figyelemmel dolgozol, aztán 17 percre félreteszed a munkát. Az arány nagyon hatékony irodai dolgozók időmérési adataiból származik, akik maguktól is nagyjából egyórás szakaszokban dolgoztak, alapos szünetekkel.",
+      "A hosszú szünet a lényeg: sétálj, nyújtózz, igyál vizet, nézz ki az ablakon. Valódi pihenés után a következő 52 perc ugyanolyan éles lesz, mint az első."
+    ],
+    "steps": [
+      "Válassz egy kitartó figyelmet igénylő feladatot.",
+      "Némítsd el az értesítéseket, és fókuszálj 52 percig.",
+      "Tarts 17 perc szünetet a képernyőtől távol.",
+      "A következő 52 perces blokkot friss fejjel kezdd."
+    ],
+    "bestFor": [
+      "Írás, elemzés és elmélyült irodai munka",
+      "Akiknek a 25/5 szünetei túl gyakoriak",
+      "Félnapos mélymunka-blokkok"
+    ],
+    "whenNotToUse": [
+      "Ha egyáltalán nehéz elkezdeni; a 25 perces blokk kíméletesebb",
+      "Nagyon rövid feladatok, amelyekhez nem kell hosszú blokk"
+    ],
+    "faq": [
+      {
+        "q": "Jobb az 52/17, mint a 25/5?",
+        "a": "Egyik sem jobb mindenkinek. Az 52/17 több időt ad az elmélyülésre, a 25/5 megkönnyíti az indulást. A FocusKept Labor funkciója összeveti a fókuszértékeléseidet, így látod, mi működik nálad."
+      },
+      {
+        "q": "Mit csináljak a 17 perces szünetben?",
+        "a": "Bármit, ami nem újabb képernyős munka: mozogj, igyál, pihentesd a szemed, vagy menj ki egy kis napfényre. A telefon görgetése általában megnehezíti a következő blokkot."
+      },
+      {
+        "q": "Megváltoztathatom a számokat?",
+        "a": "Az 52/17-es időzítő a klasszikus arányt tartja. Ha saját munka- és szünethosszt szeretnél, használd a saját időzítőt."
+      }
+    ],
+    "seoTitle": "52/17 módszer: 52 perc munka, 17 perc szünet",
+    "seoDescription": "Próbáld ki az 52/17 termelékenységi módszert: 52 perc elmélyült munka és 17 perc szünet. Ingyenes online időzítő egyszerű útmutatóval."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Dolgozz, amíg a fókusz tart, aztán pihenj arányosan.",
+    "summary": "A Flowtime a kötött időzítő helyett stoppert használ. Akkor állsz meg, amikor lankad a figyelmed, és a munkával arányos szünetet tartasz.",
+    "howItWorks": [
+      "Indítsd el az időmérést, és dolgozz egy feladaton, amíg fókuszban maradsz. Amikor érzed, hogy elillan a figyelmed, állj meg. A FocusKept a munkaidő ötödét javasolja szünetnek, 5 és 30 perc között: 40 perc munka után 8 perc, 2 óra után 24 perc jár.",
+      "Mivel te döntöd el, mikor állsz meg, a Flowtime megvédi a mély flow-állapotot, és mégis gondoskodik a pihenésről. Idővel a munkamenet-előzményeid megmutatják, meddig tart a természetes fókuszod."
+    ],
+    "steps": [
+      "Válassz egy feladatot, és indítsd el a felfelé számoló időzítőt.",
+      "Dolgozz, amíg a fókusz valóban lankad, ne az első váltási késztetésnél állj meg.",
+      "Koppints a „Szünetet tartok” gombra, és pihenj a javasolt ideig (munkaidő ÷ 5, 5–30 perc).",
+      "A szünet végén kezdd újra."
+    ],
+    "bestFor": [
+      "Kreatív munka és programozás, ahol drága minden megszakítás",
+      "Akik gyakran kihagyják a 25/5 szüneteit",
+      "A saját természetes fókuszidőd megismerése"
+    ],
+    "whenNotToUse": [
+      "Ha határidő nélkül könnyen elkalandozol; a kötött időzítő több keretet ad",
+      "Megbeszélések közötti kötött idősávokkal teli napok"
+    ],
+    "faq": [
+      {
+        "q": "Hogyan számolódik a Flowtime szünete?",
+        "a": "A FocusKept a munkaidő ötödét javasolja, legalább 5 és legfeljebb 30 percet."
+      },
+      {
+        "q": "Mi van, ha soha nincs kedvem abbahagyni?",
+        "a": "Akkor is tarts szünetet legalább 90 percenként. A pihenő nélküli hosszú szakaszok csendben rontják a minőséget, még ha termelékenynek érződnek is."
+      },
+      {
+        "q": "Jó a Flowtime kezdőknek?",
+        "a": "Ha már szeretsz elmélyülten dolgozni, igen. Ha a belekezdés a nehéz, indulj a 25/5-tel, és később válts Flowtime-ra."
+      }
+    ],
+    "seoTitle": "Flowtime-technika: időzítő rugalmas fókuszhoz",
+    "seoDescription": "A Flowtime-technikával addig dolgozol, amíg a fókusz tart, aztán arányos szünetet tartasz. Ingyenes stopper automatikus szünetjavaslattal."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "Egy 90 perces blokk a legnehezebb munkádra.",
+    "summary": "A Deep Work 90 egyetlen, zavartalan 90 perces munkamenetet ad, utána 20 perc szünettel, ami egy természetes figyelmi ciklus hosszának felel meg.",
+    "howItWorks": [
+      "Sokaknál a koncentráció nagyjából másfél órás ciklusokban emelkedik és süllyed. Egy 90 perces blokk egy teljes ciklust szán nehéz, értelmes munkára, a 20 perces szünet pedig segít regenerálódni a következő előtt.",
+      "Kezeld a blokkot fontos találkozóként önmagaddal: előre döntsd el a feladatot, zárj be minden mást, és védd meg ezt az időt. Napi egy-két ilyen blokk a legnagyobb projektjeidet is előre tudja vinni."
+    ],
+    "steps": [
+      "Döntsd el előre, melyik feladat érdemli meg a legmélyebb fókuszodat.",
+      "Zárd be az e-mailt és a chatet, némítsd le a telefont, és indítsd el a 90 perces időzítőt.",
+      "Az időzítő végéig csak ezen a feladaton dolgozz.",
+      "Tarts egy teljes 20 perces szünetet, mielőtt bármi más megterhelőbe kezdenél."
+    ],
+    "bestFor": [
+      "Írás, kutatás, tervezés és összetett programozás",
+      "A nap legfontosabb feladata",
+      "Reggelek vagy más energikus napszakok"
+    ],
+    "whenNotToUse": [
+      "Ha fáradt vagy, vagy gyakran megzavarnak; kezdj rövidebb blokkokkal",
+      "Felszínes feladatok, például e-mailek vagy ügyintézés"
+    ],
+    "faq": [
+      {
+        "q": "Tényleg lehet 90 percig fókuszálni?",
+        "a": "Gyakorlás kérdése. Kezdj 50–60 perces blokkokkal, és hosszabbítsd őket, ahogy a szokás erősödik. Az egyes munkamenetek utáni értékelés megmutatja, hogyan ment."
+      },
+      {
+        "q": "Napi hány mélymunka-blokk legyen?",
+        "a": "A legtöbb embernek kettő-három bőven elég. A nap többi részét szánd könnyebb munkára."
+      },
+      {
+        "q": "Mi számít mélymunkának?",
+        "a": "Olyan munka, amely teljes figyelmet kíván és valódi értéket teremt, például írás, problémamegoldás vagy valami nehéz dolog megtanulása."
+      }
+    ],
+    "seoTitle": "Deep Work időzítő: 90 perces fókuszmunkamenetek",
+    "seoDescription": "Tervezz 90 perces mélymunka-blokkokat 20 perces szünetekkel. Ingyenes időzítő és útmutató a zavartalan, a lényegre fókuszáló munkához."
+  },
+  "custom": {
+    "name": "Saját időzítő",
+    "tagline": "Saját munka- és szünethosszaid, sablonként mentve.",
+    "summary": "A saját időzítővel bármilyen munkablokkot, rövid és hosszú szünetet, valamint ciklusszámot beállíthatsz, és legfeljebb öt sablont menthetsz.",
+    "howItWorks": [
+      "Nem minden feladat illik egy híres arányhoz. A saját időzítővel te döntöd el, mennyit dolgozol (1–180 perc), mennyit pihensz, és hány blokk után jön a hosszú szünet.",
+      "Mentsd el a kedvenc kombinációidat sablonként, hogy egy koppintással elérd őket, például „Olvasás 40/10” vagy „Vizsgafelkészülés 30/5”."
+    ],
+    "steps": [
+      "Állítsd be a munkablokkot, a rövid szünetet, a hosszú szünetet és a ciklusokat.",
+      "Ha szeretnéd, mentsd el a kombinációt sablonként (legfeljebb ötöt).",
+      "Indítsd el az időzítőt, és kövesd a saját ritmusodat."
+    ],
+    "bestFor": [
+      "Kísérletezés a saját ritmusod megtalálásához",
+      "Visszatérő, kötött formájú rutinok",
+      "Órák, gyakorlatok vagy vizsgák hosszához igazodás"
+    ],
+    "whenNotToUse": [
+      "Ha nem tudod, hol kezdd; próbáld ki előbb a 25/5-öt, és később igazíts rajta"
+    ],
+    "faq": [
+      {
+        "q": "Hány sablont menthetek?",
+        "a": "Legfeljebb ötöt. A beállításokban szerkesztheted vagy törölheted őket."
+      },
+      {
+        "q": "Honnan tudom, melyik beállítás működik a legjobban?",
+        "a": "Minden munkamenet után értékeld a fókuszodat. A Labor összeveti az értékeléseket technikák és hosszak szerint."
+      },
+      {
+        "q": "Melyik technikával kezdjem?",
+        "a": "Ha nincs preferenciád, használd egy hétig a 25/5-öt. Utána a fókuszértékeléseid alapján igazítsd a munka- és szünethosszt egy saját sablonban."
+      }
+    ],
+    "seoTitle": "Saját fókuszidőzítő sablonokkal",
+    "seoDescription": "Készíts saját fókuszidőzítőt: válaszd meg a munka- és szünethosszt, a hosszú szünetet és a ciklusokat, és ments sablonokat. Ingyenes és egyszerű."
+  },
+  "timeboxing": {
+    "name": "Timeboxing",
+    "tagline": "Adj a feladatnak fix időkeretet, aztán dönts.",
+    "summary": "A timeboxing minden feladatnak fix időkeretet ad. Amikor a timebox lejár, döntesz: kész, egyszeri hosszabbítás, vagy későbbre teszed.",
+    "howItWorks": [
+      "Ahelyett, hogy addig dolgoznál, amíg a feladat elkészül, előre eldöntöd, mennyi időt érdemel, például 30 percet egy jelentés vázlatára. A korlát a lényegre irányítja a figyelmet, és nem hagyja, hogy a maximalizmus elvigye a napodat.",
+      "Amikor a timebox lejár, a FocusKept megkérdezi: késznek jelölöd, egyszer meghosszabbítod a timebox 25%-ával, vagy későbbre teszed. Az eredeti kereten felüli időt túllépésként rögzítjük, így látod, mennyire pontosak a becsléseid."
+    ],
+    "steps": [
+      "Válassz egy feladatot, és döntsd el, hány percet érdemel.",
+      "Indítsd el a timeboxot, és csak ezen a feladaton dolgozz.",
+      "Amikor lejár az idő, válassz: kész, egyszeri hosszabbítás (+25%) vagy későbbre.",
+      "Nézd meg a túllépést a statisztikában, hogy legközelebb pontosabban becsülj."
+    ],
+    "bestFor": [
+      "Feladatok, amelyek kitöltik az összes rendelkezésre álló időt",
+      "Maximalisták és örök csiszolgatók",
+      "Sokféle feladattal teli nap tervezése"
+    ],
+    "whenNotToUse": [
+      "Nyitott felfedezés, amikor az eredmény ismeretlen",
+      "Ismételt ciklusokat igénylő tanulási munkamenetek"
+    ],
+    "faq": [
+      {
+        "q": "Mi történik, ha nem végzek időben?",
+        "a": "Egyszer meghosszabbíthatod a timebox negyedével, vagy későbbre teheted a feladatot. Mindkettő rendben van; a cél a tudatos döntés."
+      },
+      {
+        "q": "Milyen hosszú legyen egy timebox?",
+        "a": "A legtöbb feladathoz 15 és 90 perc között. A rövidebb timebox sürgetőbb, a hosszabb nagyobb munkadarabokhoz illik."
+      },
+      {
+        "q": "Mi a túllépés?",
+        "a": "Az eredeti timeboxon felül eltöltött idő. Ha tartósan magas, a becsléseid túl optimisták."
+      }
+    ],
+    "seoTitle": "Timeboxing: időzítő és útmutató",
+    "seoDescription": "Ismerd meg a timeboxingot: adj minden feladatnak fix időt, aztán fejezd be, hosszabbíts egyszer vagy ütemezd át. Ingyenes időzítő, amely méri a becsléseidet."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Magyarázd el egyszerűen. Derítsd ki, mit értesz valójában.",
+    "summary": "A Feynman-technika úgy teszi próbára a megértésedet, hogy egyszerű nyelven, egy 12 évesnek szólva magyarázod el a témát. A magyarázat hiányai megmutatják, mit tanulj ezután.",
+    "howItWorks": [
+      "Richard Feynman fizikusról kapta a nevét, és egyszerű: miután megtanultál egy témát, írj róla magyarázatot hétköznapi szavakkal és rövid mondatokkal, mintha egy kíváncsi 12 évesnek tanítanád. A szakzsargon figyelmeztető jel, mert gyakran hiányt takar.",
+      "Ahol elakadsz vagy mellébeszélsz, menj vissza a forráshoz, pótold a hiányt, és egyszerűsíts újra. A FocusKeptben minden tanulási munkamenet Feynman-féle magyarázattal zárul; utána az MI rámutat a hiányokra és hibákra, és a magyarázatodból ismétlő kérdéseket készít."
+    ],
+    "steps": [
+      "Tanuld meg a témát a forrásanyagból.",
+      "Zárd be a forrást, és magyarázd el a témát egyszerű szavakkal, mintha egy 12 évesnek mondanád.",
+      "Jelöld meg, hol akadtál el vagy hol használtál zsargont.",
+      "Menj vissza a forráshoz, és pótold ezeket a hiányokat.",
+      "Egyszerűsítsd tovább a magyarázatot, amíg gördülékeny nem lesz."
+    ],
+    "bestFor": [
+      "Fogalmak, elméletek és „hogyan működik” típusú témák",
+      "A valódi megértés ellenőrzése vizsga előtt",
+      "Az olvasottak tartós tudássá alakítása"
+    ],
+    "whenNotToUse": [
+      "Tiszta memorizálás, például szavak vagy évszámok; használj aktív felidézést vagy elosztott ismétlést",
+      "Gyakorlást, nem magyarázatot igénylő készségek"
+    ],
+    "faq": [
+      {
+        "q": "Miért egy 12 évesnek magyarázd?",
+        "a": "Egy gyerek nem fogadja el a zsargont, ezért tudnod kell, mit jelentenek a szavak. Az egyszerű nyelv gyorsan leleplezi a homályos megértést."
+      },
+      {
+        "q": "Hangosan kell mondanom?",
+        "a": "Az írás ugyanolyan jól működik, és marad utána valami, amit átnézhetsz. A FocusKeptben a magyarázatod lesz a tudáskártyád magja."
+      },
+      {
+        "q": "Mit ellenőriz az MI?",
+        "a": "Keresi a hiányzó részeket és a hibákat, érthetőségi pontszámot ad, és egyszerűbb változatot javasol. Te irányítasz: mindent te szerkesztesz és hagysz jóvá."
+      },
+      {
+        "q": "Milyen hosszú legyen a magyarázatom?",
+        "a": "Néhány világos bekezdés az ideális. A FocusKept legalább 80 karaktert kér, és legfeljebb 6000-et fogad el."
+      }
+    ],
+    "seoTitle": "Feynman-technika: tanulj meg bármit magyarázva",
+    "seoDescription": "Így használd a Feynman-technikát: magyarázd el egyszerűen a témát, keresd meg a hiányokat, és pótold őket. Ingyenes útmutató MI-visszajelzéssel és kérdésekkel."
+  },
+  "active-recall": {
+    "name": "Aktív felidézés",
+    "tagline": "Hívd elő az emlékezetedből az információt, ahelyett hogy újraolvasnád.",
+    "summary": "Az aktív felidézés azt jelenti, hogy újraolvasás helyett kikérdezed magad. Minden alkalommal, amikor emlékezetből előhívsz egy választ, legközelebb könnyebben megy.",
+    "howItWorks": [
+      "Az újraolvasás produktívnak tűnik, de főleg ismerősség-érzetet épít, nem emléket. Az aktív felidézés megfordítja ezt: becsukod az anyagot, és kérdéseket teszel fel magadnak, leírod, amire emlékszel, vagy feladatokat oldasz meg puskázás nélkül.",
+      "Éppen a felidézés erőfeszítése erősíti meg az emléket. A FocusKept a magyarázatodból kérdéseket készít, és az 5., 10. és 30. napon újra felteszi őket, így az aktív felidézés magától megtörténik."
+    ],
+    "steps": [
+      "Tanulj meg alaposan egyszer egy részt az anyagból.",
+      "Csukd be, és írj kérdéseket a fő gondolatokról.",
+      "Válaszolj a kérdésekre emlékezetből, puskázás nélkül.",
+      "Ellenőrizd a válaszaidat, és jelöld, mi maradt ki.",
+      "Csak azokat a részeket tanuld újra, amelyek nem sikerültek."
+    ],
+    "bestFor": [
+      "Vizsgafelkészülés bármilyen tárgyból",
+      "Tények, definíciók és folyamatok",
+      "Hogy a tanulásra szánt idő tényleg megérje"
+    ],
+    "whenNotToUse": [
+      "A témával való legelső találkozás; előbb értsd meg, aztán idézd fel"
+    ],
+    "faq": [
+      {
+        "q": "Az aktív felidézés jobb az újraolvasásnál?",
+        "a": "A tesztelési hatással foglalkozó kutatások következetesen azt mutatják, hogy a felidézés gyakorlása hosszú távon jobb megjegyzést eredményez, mint ugyanannak az anyagnak az újraolvasása."
+      },
+      {
+        "q": "Mi van, ha semmire sem emlékszem?",
+        "a": "Ez is hasznos információ. Nézd meg a választ, és próbáld újra később. Egy kis küzdelem része a folyamatnak."
+      },
+      {
+        "q": "Hogyan használja a FocusKept az aktív felidézést?",
+        "a": "Minden tudáskártyához kérdések tartoznak, és minden ismétléskor előbb válaszolsz, csak utána látod a megoldást."
+      }
+    ],
+    "seoTitle": "Aktív felidézés: a tanulási módszer és használata",
+    "seoDescription": "Az aktív felidézés (active recall) az egyik leghatékonyabb tanulási módszer. Tanuld meg kikérdezni magad, jobb kérdéseket feltenni és többet megjegyezni."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Írj le mindent, amire emlékszel, aztán vesd össze.",
+    "summary": "A blurting gyors aktív felidézési gyakorlat: tanulás után leírsz mindent, amit a témáról tudsz, majd összeveted a forrással, hogy lásd, mi maradt ki.",
+    "howItWorks": [
+      "Egy tanulási blokk után csukd be a jegyzeteidet, és írj le mindent, amire emlékszel, a lehető leggyorsabban, bármilyen sorrendben. A szerkezettel ne törődj; a cél, hogy kiürítsd a fejed a papírra.",
+      "Ezután nyisd ki a forrást, és vesd össze. Jelöld más színnel, ami hiányzott vagy hibás volt. Pontosan ezeket a hiányokat kell legközelebb tanulnod. A FocusKeptben az útmutató a munkamenetet „írj le mindent” és „vesd össze a forrással” szakaszra bontja."
+    ],
+    "steps": [
+      "Tanulj meg egy részt vagy témát.",
+      "Csukd be a forrást, és megállás nélkül írj le mindent, amire emlékszel.",
+      "Nyisd ki a forrást, és vesd össze sorról sorra.",
+      "Jelöld, ami kimaradt vagy hibás.",
+      "Tanuld meg a hiányokat, és később ismételd meg a blurtinget."
+    ],
+    "bestFor": [
+      "Előadások vagy tankönyvi fejezetek ismétlése",
+      "Sok összefüggő tényt tartalmazó tárgyak, például történelem vagy biológia",
+      "Gyors ellenőrzés tanulási blokkok között"
+    ],
+    "whenNotToUse": [
+      "Feladatmegoldásra épülő tárgyak, ahol a gyakorlófeladatok jobban működnek"
+    ],
+    "faq": [
+      {
+        "q": "Rendezettnek kell lennie a blurtingnek?",
+        "a": "Nem. A gyorsaság fontosabb a sorrendnél. A szerkezet később, az összevetéskor jön."
+      },
+      {
+        "q": "Miben különbözik a blurting a Feynman-technikától?",
+        "a": "A blurting azt ellenőrzi, mit tudsz felidézni; a Feynman-technika azt, hogy érted-e. A FocusKeptben minden tanulási munkamenet Feynman-lépéssel zárul, így mindkettőt megkapod."
+      },
+      {
+        "q": "Milyen gyakran csináljak blurtinget egy témából?",
+        "a": "Közvetlenül a tanulás után, majd néhány nappal később újra. A FocusKept elosztott ismétlései az 5., 10. és 30. napon természetes alkalmak az újabb önellenőrzésre."
+      }
+    ],
+    "seoTitle": "Blurting módszer ismétléshez: lépésről lépésre",
+    "seoDescription": "A blurting technika: írj le mindent, amire emlékszel, vesd össze a jegyzeteiddel, és pótold a hiányokat. Gyors és hatékony ismétlési módszer."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: áttekintés, kérdések, olvasás, felmondás, ismétlés.",
+    "summary": "Az SQ3R ötlépéses módszer a tankönyvek aktív olvasásához, hogy megértsd és megjegyezd az anyagot, ne csak aláhúzogass.",
+    "howItWorks": [
+      "Az SQ3R az angol Survey, Question, Read, Recite és Review szavak rövidítése. Először áttekinted a szerkezetet, a címekből kérdéseket csinálsz, olvasol, hogy megválaszold őket, emlékezetből felmondod a válaszokat, végül átismétled az egész fejezetet.",
+      "Minden lépés célt ad az olvasásnak. A FocusKept egyenként végigvezet az öt lépésen, minden szakaszban helyet adva a jegyzeteknek."
+    ],
+    "steps": [
+      "Áttekintés: fusd át a címeket, összefoglalókat és ábrákat, hogy lásd az egészet.",
+      "Kérdések: minden címből csinálj egy kérdést, amelyre választ szeretnél.",
+      "Olvasás: egyszerre egy részt olvass el, hogy megválaszold a hozzá tartozó kérdést.",
+      "Felmondás: csukd be a könyvet, és válaszolj a kérdésre a saját szavaiddal.",
+      "Ismétlés: a végén menj végig újra az összes kérdésen és válaszon."
+    ],
+    "bestFor": [
+      "Tankönyvek és hosszú ismeretterjesztő fejezetek",
+      "Sok kötelező olvasmánnyal járó kurzusok",
+      "Diákok, akik sokat húznak alá, de keveset jegyeznek meg"
+    ],
+    "whenNotToUse": [
+      "Szépirodalom vagy könnyed olvasmányok",
+      "Nagyon rövid, nyilvánvaló szerkezetű szövegek"
+    ],
+    "faq": [
+      {
+        "q": "Nem lassú az SQ3R?",
+        "a": "Tovább tart, mint egy gyors átfutás, de sokkal rövidebb, mint egy fejezetet háromszor újraolvasni a vizsga előtt."
+      },
+      {
+        "q": "Használhatom az SQ3R-t online cikkekhez?",
+        "a": "Igen. Add meg a cikket forráslinkként, és kövesd ugyanazt az öt lépést."
+      },
+      {
+        "q": "Melyik lépés a legfontosabb?",
+        "a": "A felmondás. Az emlékezetből adott válasz alakítja tudássá az olvasottakat. A többi lépés erre készít fel."
+      }
+    ],
+    "seoTitle": "SQ3R olvasási módszer: áttekintés, kérdések, olvasás",
+    "seoDescription": "Ismerd meg az SQ3R módszert, hogy aktívan olvasd a tankönyveket és többet jegyezz meg. Áttekinthető, ötlépéses útmutató beépített tanulási időzítővel."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Jegyzetek, kulcskérdések és összefoglalás egy oldalon.",
+    "summary": "A Cornell-módszer három részre osztja a jegyzeteidet: fő jegyzetekre, kulcskérdésekre és rövid összefoglalásra. Így a jegyzeteid kész önellenőrző teszté válnak.",
+    "howItWorks": [
+      "Tanulás közben a nagy mezőbe írod a fő jegyzeteket. Utána az oldalsó oszlopba rövid kulcskérdéseket vagy kulcsszavakat írsz, amelyek az egyes gondolatokhoz vezetnek. Alul néhány mondatban összefoglalod az egész oldalt.",
+      "Ismétléskor takard le a jegyzeteket, és válaszolj a kulcskérdésekre emlékezetből. A FocusKept a munkamenet alatt ugyanezt a háromrészes elrendezést adja, és a munkamenettel együtt menti."
+    ],
+    "steps": [
+      "Tanulás közben jegyzetelj a fő mezőbe.",
+      "Tanulás után írj kulcskérdéseket minden fontos gondolat mellé.",
+      "Alul foglald össze az egész témát 2–3 mondatban.",
+      "Ismételj úgy, hogy letakarod a jegyzeteket, és a kulcskérdésekre válaszolsz."
+    ],
+    "bestFor": [
+      "Előadások, videók és szemináriumok",
+      "Tárgyak, amelyeknél vizsga előtt átnézed a jegyzeteidet",
+      "Jegyzetek gyakorlókérdésekké alakítása"
+    ],
+    "whenNotToUse": [
+      "Erősen vizuális tárgyak, ahol a gondolattérképek vagy ábrák jobban működnek"
+    ],
+    "faq": [
+      {
+        "q": "Ki találta ki a Cornell-módszert?",
+        "a": "Walter Pauk, a Cornell Egyetem neveléstudományi professzora írta le az 1950-es években."
+      },
+      {
+        "q": "Kell hozzá különleges papír?",
+        "a": "Nem. A FocusKept a képernyőn mutatja a három mezőt: jegyzetek, kulcskérdések és összefoglalás."
+      },
+      {
+        "q": "Milyen hosszú legyen az összefoglalás?",
+        "a": "Két-három mondat. Ha nem tudod röviden összefoglalni az oldalt, valószínűleg egy részét újra át kell nézned."
+      }
+    ],
+    "seoTitle": "Cornell-jegyzetelési módszer: sablon és útmutató",
+    "seoDescription": "Jegyzetelj online a Cornell-módszerrel: jegyzetek, kulcskérdések és összefoglalás egyetlen elrendezésben. Ingyenes sablon fókuszidőzítővel."
+  },
+  "interleaving": {
+    "name": "Váltogatott tanulás",
+    "tagline": "Keverd a kapcsolódó témákat, ahelyett hogy egyenként tanulnád őket.",
+    "summary": "A váltogatott tanulás (interleaving) azt jelenti, hogy egy tanulási munkameneten belül két-négy kapcsolódó téma között váltasz. Nehezebbnek tűnik, mint a blokkos gyakorlás, de javítja a helyes megközelítés kiválasztásának képességét.",
+    "howItWorks": [
+      "Ahelyett, hogy húsz egyforma típusú feladatot oldanál meg, aztán húszat egy másikból, összekevered őket: A, B, C, A, C, B. Az agyadnak előbb fel kell ismernie, milyen típusú problémával áll szemben — ezt a készséget a blokkos gyakorlás sosem edzi.",
+      "A FocusKeptben 2–4 kapcsolódó témát adsz meg, és az útmutató minden munkablokknál a következőre vált."
+    ],
+    "steps": [
+      "Válassz 2–4 kapcsolódó témát vagy feladattípust.",
+      "Az első munkablokkban az első témával foglalkozz.",
+      "Minden új blokknál válts a következő témára a sorrend szerint.",
+      "Figyeld a témák közötti különbségeket, és azt, miért illik egyik vagy másik megközelítés."
+    ],
+    "bestFor": [
+      "Matematika, fizika és más feladatmegoldó tárgyak",
+      "Nyelvek: különböző nyelvtani pontok keverése",
+      "Készségek, ahol a helyes módszer kiválasztása a nehéz rész"
+    ],
+    "whenNotToUse": [
+      "Ha egy téma teljesen új; előbb mindegyiknek az alapjait tanuld meg"
+    ],
+    "faq": [
+      {
+        "q": "Miért tűnik nehezebbnek a váltogatott tanulás?",
+        "a": "Mert az. A váltás miatt minden alkalommal ki kell találnod, melyik megközelítést használd. Éppen ez a többletmunka javítja a hosszú távú tanulást."
+      },
+      {
+        "q": "Hány témát keverjek?",
+        "a": "Kettő-négy kapcsolódó témát. Ennél több már szétszórttá válik."
+      },
+      {
+        "q": "Kombinálható a váltogatott tanulás a 25/5-tel?",
+        "a": "Igen. Minden munkablokk egy témát fed le, a következő vált, így a váltogatás természetes ritmust kap."
+      }
+    ],
+    "seoTitle": "Váltogatott tanulás: keverd a témákat, tanulj többet",
+    "seoDescription": "A váltogatott gyakorlás egy munkameneten belül keveri a kapcsolódó témákat. Tudd meg, hogyan és mikor használd az interleavinget, témaváltó időzítővel."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Dobozok, amelyekben a kártyák továbblépnek, ha tudod őket.",
+    "summary": "A Leitner-rendszer dobozokba rendezi a szókártyákat. A helyesen megválaszolt kártyák ritkábban ismételt dobozba kerülnek; a hiba visszaküldi a kártyát.",
+    "howItWorks": [
+      "Sebastian Leitner rendszere dobozok sorát használja. Az új kártyák az 1. dobozban kezdenek, amelyet gyakran ismételsz. Minden helyes válasz egy dobozzal előrébb lépteti a kártyát, ahol ritkábban kerül sorra. A rossz válasz visszalépteti.",
+      "A FocusKept automatikusan ugyanezt az elvet követi: minden ismétlési lépés (5., 10. és 30. nap, aztán 60 nap és több) egy doboz. Sikeres ismétlés után a kártya továbblép; ha egy kérdés nem megy, 2 nap múlva visszatér."
+    ],
+    "steps": [
+      "Készíts kártyákat, egyik oldalukon kérdéssel, a másikon a válasszal.",
+      "Az első doboz kártyáit ismételd a leggyakrabban.",
+      "Helyes válasz után léptesd a kártyát egy dobozzal előrébb.",
+      "Hiba esetén tedd vissza.",
+      "A FocusKeptben egyszerűen végezd el az esedékes ismétléseket: a dobozokat a rendszer kezeli."
+    ],
+    "bestFor": [
+      "Szavak, definíciók és képletek",
+      "Hosszú távú memória minimális tervezéssel",
+      "Akik szeretik látni a haladásukat"
+    ],
+    "whenNotToUse": [
+      "Összetett gondolatok megértése; előbb magyarázd el őket a Feynman-technikával"
+    ],
+    "faq": [
+      {
+        "q": "Hogyan jelenik meg a Leitner-rendszer a FocusKeptben?",
+        "a": "Minden ismétlési lépés egy doboz: 5. nap, 10. nap, 30. nap, aztán 60 nap, duplázódva egészen 180-ig. A kártya aktuális lépése a doboza."
+      },
+      {
+        "q": "Mi történik, ha elrontok egy kártyát?",
+        "a": "2 nap múlva visszatér egy újratanuló ismétlésre ugyanazon a lépésen. Ha az sikerül, továbblép."
+      },
+      {
+        "q": "Nekem kell mozgatnom a kártyákat?",
+        "a": "Nem. A FocusKept minden kártyát ütemez helyetted, így csak a mára esedékes ismétlésekre kell válaszolnod."
+      }
+    ],
+    "seoTitle": "Leitner-rendszer: a kártyadobozok magyarázata",
+    "seoDescription": "Hogyan működik a Leitner-féle szókártyarendszer, és hogyan használd automatikus elosztott ismétléssel. Egyszerű útmutató példákkal."
+  },
+  "spaced-repetition": {
+    "name": "Elosztott ismétlés",
+    "tagline": "Ismételj az 5., 10. és 30. napon, közvetlenül a felejtés előtt.",
+    "summary": "Az elosztott ismétlés (spaced repetition) egyre nagyobb időközökre ütemezi az ismétléseket, így mindegyik pont akkor jön, amikor az emlék halványulni kezd. Ez minden FocusKept-tanulási munkamenet alapja.",
+    "howItWorks": [
+      "Tanulás után az emlékezet gyorsan halványul, de minden sikeres ismétlés lassítja a felejtést. Ha az ismétléseket egyre hosszabb időközökre osztod el, a legkevesebb ismétlési idővel a legtöbbet jegyezheted meg.",
+      "A FocusKept minden tudáskártyát automatikusan ütemez: az első ismétlés az 5. napon, utána a 10. és a 30. napon. Ezt követően az időköz 60 nap, és minden sikeres ismétléssel duplázódik, legfeljebb 180 napig. Ha egy kérdés nem megy, a kártya 2 nap múlva visszatér. Az első három lépést a beállításokban módosíthatod."
+    ],
+    "steps": [
+      "Fejezz be egy tanulási munkamenetet, és mentsd el a tudáskártyádat.",
+      "Kapj emlékeztetőt, amikor ismétlés esedékes (e-mailben vagy a böngészőben).",
+      "Válaszolj a kártya kérdéseire emlékezetből.",
+      "Siker: jön a következő időköz; hiba: a kártya 2 nap múlva visszatér."
+    ],
+    "bestFor": [
+      "Bármi, amire hónapokig, nem napokig szeretnél emlékezni",
+      "Több hétre elosztott vizsgafelkészülés",
+      "Ritkán használt, de megtartandó szakmai tudás"
+    ],
+    "whenNotToUse": ["Magolás holnapra; az elosztott ismétlés hetek alatt hat"],
+    "faq": [
+      {
+        "q": "Miért az 5., 10. és 30. nap?",
+        "a": "Egyszerű, könnyen megjegyezhető lépések, amelyek az első hónapra osztják el az ismétléseket, amikor a leggyorsabban felejtünk. A beállításokban módosíthatod őket."
+      },
+      {
+        "q": "Mi van, ha kihagyok egy ismétlési napot?",
+        "a": "A lejárt kártyák addig esedékesek maradnak, amíg át nem ismétled őket. Semmi sem vész el; pótold, amikor tudod."
+      },
+      {
+        "q": "Tökéletesnek kell lennie egy ismétlésnek?",
+        "a": "Az ismétlés akkor sikeres, ha minden válasz helyes. A részben helyes válasz sikertelennek számít, így a kártya hamarabb visszatér."
+      }
+    ],
+    "seoTitle": "Elosztott ismétlés: működő ismétlési ütemterv",
+    "seoDescription": "Az elosztott ismétlés röviden: ismételj az 5., 10. és 30. napon, aztán egyre nagyobb időközökkel. Automatikus emlékeztetők és kérdések a FocusKeptben."
+  },
+  "eat-the-frog": {
+    "name": "Edd meg a békát",
+    "tagline": "A legnehezebb, legfontosabb feladatot csináld elsőként.",
+    "summary": "Az „edd meg a békát” azt jelenti, hogy kiválasztod azt az egy feladatot, amelyet a legszívesebben elkerülnél, és azzal kezded a napot. Utána minden könnyebbnek tűnik.",
+    "howItWorks": [
+      "A „béka” az a fontos feladat, amelyhez a legkevésbé van kedved. Ha a nap elején, a legnagyobb energiád idején nekiállsz, a nap hátralévő részében megszabadulsz ettől a háttérben motoszkáló nyomástól.",
+      "A FocusKeptben naponta pontosan egy békát jelölhetsz meg. A mai lista tetejére kerül, és első munkamenetként ajánljuk."
+    ],
+    "steps": [
+      "Előző este vagy reggel első dolgod legyen kiválasztani a mai békát: fontos és könnyen halogatható.",
+      "Jelöld meg békaként, hogy a nap tetején legyen.",
+      "Az első fókuszmunkamenetet a békának szenteld, minden más előtt.",
+      "Folytasd, amíg kész nem lesz, vagy láthatóan halad."
+    ],
+    "bestFor": [
+      "Fontos feladatok halogatása",
+      "Energikus reggelek",
+      "Zsúfolt napok, amelyek különben megtelnek apróságokkal"
+    ],
+    "whenNotToUse": [
+      "Ha a legnehezebb feladat attól függ, hogy valaki más ráér-e"
+    ],
+    "faq": [
+      {
+        "q": "Honnan ered a név?",
+        "a": "Egy gyakran Mark Twainnek tulajdonított mondásból: ha meg kell enned egy élő békát, tedd meg reggel elsőként. Brian Tracy termelékenységi módszert alkotott belőle."
+      },
+      {
+        "q": "Lehet egynél több békám?",
+        "a": "Nem, a napi egy béka tisztán tartja a döntést. Ha újat választasz, az lecseréli a régit."
+      },
+      {
+        "q": "Mi van, ha a békám túl nagy egy munkamenethez?",
+        "a": "Bontsd részekre, és az első konkrét lépés legyen a mai béka. A kezdés a legnehezebb."
+      }
+    ],
+    "seoTitle": "Edd meg a békát: a legnehezebb feladat először",
+    "seoDescription": "Győzd le a halogatást az „edd meg a békát” módszerrel: válassz egy fontos feladatot, és kezdd azzal. Egyszerű útmutató és a békáddal induló fókuszidőzítő."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Rendezd a feladatokat sürgősség és fontosság szerint.",
+    "summary": "Az Eisenhower-mátrix a sürgősség és a fontosság alapján négy negyedbe sorolja a feladatokat, így tudod, mit csinálj azonnal, mit ütemezz, mit adj át, és mit hagyj el.",
+    "howItWorks": [
+      "Minden feladat a négy negyed egyikébe kerül: Azonnal (sürgős és fontos), Ütemezd (fontos, nem sürgős), Add át (sürgős, nem fontos) és Hagyd el (egyik sem). A mátrix világosan megmutatja, mikor szorítja ki a sürgős zaj a fontos munkát.",
+      "A FocusKeptben a feladatokat a negyedek között húzhatod, vagy billentyűzettel mozgathatod. A Hagyd el negyed felajánlja a feladatok archiválását, hogy lekerüljenek a listádról."
+    ],
+    "steps": [
+      "Írd össze a nyitott feladataidat.",
+      "Tegyél minden feladatot az Azonnal, Ütemezd, Add át vagy Hagyd el negyedbe.",
+      "Indíts fókuszmunkamenetet egy Azonnal negyedbeli feladattal.",
+      "Szánj időt az Ütemezd feladatokra, mielőtt sürgőssé válnak.",
+      "Az Add át feladatokat bízd másra, a Hagyd el feladatokat archiváld."
+    ],
+    "bestFor": [
+      "Túlcsorduló teendőlisták",
+      "Heti tervezés",
+      "A valódi prioritások elválasztása a zajtól"
+    ],
+    "whenNotToUse": ["Egyformán fontos feladatokból álló rövid listák"],
+    "faq": [
+      {
+        "q": "Mi van, ha minden sürgősnek és fontosnak tűnik?",
+        "a": "Kérdezd meg magadtól, mi történik, ha a feladat egy hetet vár. Ha semmi komoly, az Ütemezd negyedbe való."
+      },
+      {
+        "q": "Egyedül dolgozom. Mit kezdjek az Add át negyeddel?",
+        "a": "Használd azokra a feladatokra, amelyeket automatizálhatsz, csoportosíthatsz, vagy amelyekhez segítséget kérhetsz."
+      },
+      {
+        "q": "Milyen gyakran rendezzem át a mátrixot?",
+        "a": "Egy gyors napi pillantás és egy alaposabb heti átnézés a határidők közeledtével is valósághűen tartja a mátrixot."
+      }
+    ],
+    "seoTitle": "Eisenhower-mátrix: sürgős vagy fontos?",
+    "seoDescription": "Priorizálj az Eisenhower-mátrixszal: azonnal, ütemezd, add át vagy hagyd el. Ingyenes, húzással kezelhető tábla beépített fókuszidőzítővel."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Egy nagy dolog, három közepes, öt kicsi. Ez a napod.",
+    "summary": "Az 1-3-5 szabály minden napot egy nagy, három közepes és öt kis feladatra korlátoz, így a terveid reálisak maradnak.",
+    "howItWorks": [
+      "A legtöbb teendőlista túl hosszú ahhoz, hogy végére érj, így minden nap kudarcnak érződik. Az 1-3-5 szabály kilenc, különböző méretű feladatra korlátozza a napot: egy valódi erőfeszítést kívánóra, háromra, amely némi időt vesz igénybe, és ötre, amely gyorsan megvan.",
+      "A FocusKept pontosan ennyi helyet ad a mai tervben, és nem engedi túltölteni őket, hogy tudatosan válassz."
+    ],
+    "steps": [
+      "Válaszd ki a mai nagy feladatot.",
+      "Adj hozzá három közepes feladatot.",
+      "Töltsd fel öt kis feladattal.",
+      "A naggyal kezdd, amíg magas az energiád."
+    ],
+    "bestFor": [
+      "Reális napi tervezés",
+      "Akiknek a listája sosem ér véget",
+      "A mélymunka és az apró teendők egyensúlya"
+    ],
+    "whenNotToUse": ["Megbeszélésekkel vagy egyetlen projekttel teli napok"],
+    "faq": [
+      {
+        "q": "Mi van, ha mindennel hamarabb végzek?",
+        "a": "Remek. Élvezd a szabadidőt, vagy vegyél elő még egy feladatot a tartaléklistádról."
+      },
+      {
+        "q": "Hogyan döntsem el egy feladat méretét?",
+        "a": "A nagy néhány órát vesz igénybe, a közepes nagyjából egy órát, a kicsi legfeljebb 15 percet."
+      },
+      {
+        "q": "Kombinálható az 1-3-5 más technikákkal?",
+        "a": "Igen. A nagy feladat legyen a békád, és minden feladatra 25/5-tel vagy timeboxszal fókuszálj."
+      }
+    ],
+    "seoTitle": "1-3-5 szabály: reális napi teendőlista",
+    "seoDescription": "Tervezd meg a napod az 1-3-5 szabállyal: egy nagy, három közepes és öt kis feladat. Ingyenes tervező fix helyekkel és fókuszidőzítővel."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Hat feladat holnapra, sorrendben. Semmi több.",
+    "summary": "Az Ivy Lee-módszer szerint minden este felírsz legfeljebb hat feladatot a következő napra, fontossági sorrendben, és egyenként végigmész rajtuk.",
+    "howItWorks": [
+      "Minden nap végén összeírod a holnapi hat legfontosabb teendőt, és rangsorolod őket. Másnap az elsővel kezdesz, és csak akkor lépsz tovább, ha az elkészült. A befejezetlen feladatok a következő napi lista elejére kerülnek.",
+      "A FocusKept esti tervezőnézetet ad holnapra hat sorba rendezett hellyel, és a befejezetlen feladatokat ugyanabban a sorrendben viszi tovább."
+    ],
+    "steps": [
+      "Este írj fel legfeljebb hat feladatot holnapra.",
+      "Rendezd őket valódi fontosságuk szerint.",
+      "Holnap az 1. feladaton dolgozz, amíg kész nincs, aztán jöhet a 2.",
+      "A befejezetlen feladatok ugyanabban a sorrendben átkerülnek a következő napi listára."
+    ],
+    "bestFor": [
+      "A nap lezárása világos tervvel",
+      "Akik a reggelüket azzal töltik, hogy eldöntsék, mit csináljanak",
+      "Egyenletes haladás a fontos munkában"
+    ],
+    "whenNotToUse": [
+      "Nagyon reaktív munkakörök, ahol óránként változnak a prioritások"
+    ],
+    "faq": [
+      {
+        "q": "Miért csak hat feladat?",
+        "a": "A korlát választásra kényszerít. Hat elég egy termékeny naphoz anélkül, hogy túlterhelné."
+      },
+      {
+        "q": "Honnan származik az Ivy Lee-módszer?",
+        "a": "Ivy Lee termelékenységi tanácsadó 1918-ban tanította vállalatvezetőknek."
+      },
+      {
+        "q": "Mi van, ha közbejön valami sürgős?",
+        "a": "Intézd el, aztán térj vissza a listához a sorrendet követve. Ha folyton jön valami sürgős, holnapra tervezz kevesebb feladatot."
+      }
+    ],
+    "seoTitle": "Ivy Lee-módszer: tervezz hat feladatot holnapra",
+    "seoDescription": "Az Ivy Lee-módszer: minden este írj fel hat feladatot holnapra, sorrendben. A befejezetlenek automatikusan továbbkerülnek. Ingyenes tervező és útmutató."
+  }
+}

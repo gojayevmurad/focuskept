@@ -1,0 +1,1229 @@
+{
+  "common": {
+    "nav": {
+      "mainNavigation": "Điều hướng chính",
+      "appNavigation": "Điều hướng ứng dụng",
+      "skipToContent": "Chuyển đến nội dung",
+      "techniques": "Phương pháp",
+      "pricing": "Bảng giá",
+      "about": "Giới thiệu",
+      "signIn": "Đăng nhập",
+      "tasks": "Việc cần làm",
+      "cards": "Thẻ",
+      "stats": "Thống kê",
+      "settings": "Cài đặt",
+      "billing": "Thanh toán",
+      "signOut": "Đăng xuất",
+      "timer": "Hẹn giờ",
+      "guide": "Hướng dẫn",
+      "howItWorks": "Cách hoạt động",
+      "menu": "Menu",
+      "account": "Tài khoản và cài đặt",
+      "reviewsDue": "Có thẻ đang chờ ôn tập"
+    },
+    "theme": {
+      "label": "Giao diện",
+      "dark": "Tối",
+      "light": "Sáng",
+      "system": "Hệ thống"
+    },
+    "language": {
+      "label": "Ngôn ngữ"
+    },
+    "actions": {
+      "save": "Lưu",
+      "saving": "Đang lưu…",
+      "retry": "Thử lại"
+    },
+    "status": {
+      "error": "Đã xảy ra lỗi. Vui lòng thử lại.",
+      "offline": "Bạn đang ngoại tuyến. Phiên của bạn được lưu trên thiết bị này và sẽ đồng bộ khi bạn có mạng trở lại."
+    },
+    "consent": {
+      "label": "Tùy chọn phân tích",
+      "text": "Chúng tôi có thể thu thập số liệu sử dụng ẩn danh để cải thiện FocusKept không? Không có gì được ghi lại cho đến khi bạn chọn.",
+      "allow": "Cho phép",
+      "decline": "Không, cảm ơn"
+    },
+    "footer": {
+      "tagline": "Tập trung sâu. Nhớ lâu điều đã học.",
+      "product": "Sản phẩm",
+      "company": "Công ty",
+      "legal": "Pháp lý",
+      "focusTimer": "Đồng hồ tập trung",
+      "learningMode": "Chế độ học",
+      "contact": "Liên hệ",
+      "privacy": "Quyền riêng tư",
+      "terms": "Điều khoản",
+      "copyright": "© {year} {brand}"
+    }
+  },
+  "meta": {
+    "defaultTitle": "FocusKept — Tập trung sâu. Nhớ lâu điều đã học.",
+    "defaultDescription": "Đồng hồ tập trung với 18 phương pháp đã được kiểm chứng, giải thích kiểu Feynman, câu hỏi do AI tạo và ôn tập lặp lại ngắt quãng tự động vào ngày 5, 10 và 30.",
+    "signIn": "Đăng nhập",
+    "signUp": "Tạo tài khoản",
+    "verifyEmail": "Kiểm tra hộp thư",
+    "forgotPassword": "Đặt lại mật khẩu",
+    "resetPassword": "Chọn mật khẩu mới",
+    "settings": "Cài đặt",
+    "security": "Bảo mật",
+    "billing": "Thanh toán",
+    "focusTitle": "Đồng hồ tập trung",
+    "focusDescription": "Đồng hồ tập trung miễn phí với 25/5, 52/17, Flowtime, Deep Work 90, hộp thời gian và cài đặt sẵn tùy chỉnh. Không cần tài khoản.",
+    "tasks": "Việc cần làm",
+    "learnTitle": "Chế độ học: học, giải thích, ghi nhớ",
+    "learnDescription": "Học một chủ đề, giải thích bằng lời của bạn, nhận phản hồi và câu hỏi từ AI, rồi tự động ôn tập vào ngày 5, 10 và 30.",
+    "learnNew": "Phiên học mới",
+    "explain": "Giải thích điều bạn đã học",
+    "cards": "Thẻ kiến thức",
+    "card": "Thẻ kiến thức",
+    "review": "Ôn tập",
+    "stats": "Thống kê",
+    "pricingTitle": "Bảng giá: Miễn phí và Pro",
+    "pricingDescription": "FocusKept miễn phí để bắt đầu. Pro có giá $5/tháng hoặc $40/năm: thẻ không giới hạn, nhiều phản hồi AI hơn, Lab đầy đủ và báo cáo hằng tuần.",
+    "techniquesTitle": "18 phương pháp tập trung, học tập và lập kế hoạch",
+    "techniquesDescription": "25/5, 52/17, Flowtime, Feynman, gợi nhớ chủ động, SQ3R, Eisenhower và hơn thế: cách từng phương pháp hoạt động, khi nào nên dùng và đồng hồ miễn phí để thử."
+  },
+  "errors": {
+    "notFoundTitle": "Trang này không tồn tại.",
+    "notFoundText": "Liên kết có thể đã cũ, hoặc trang đã được chuyển đi.",
+    "backHome": "Về trang chủ",
+    "errorTitle": "Có điều gì đó không như dự kiến.",
+    "errorText": "Vui lòng thử lại sau giây lát. Nếu lỗi cứ lặp lại, hãy báo cho chúng tôi."
+  },
+  "auth": {
+    "signInTitle": "Chào mừng bạn quay lại",
+    "signInLead": "Đăng nhập để tiếp tục các phiên tập trung và ôn tập.",
+    "signUpTitle": "Tạo tài khoản",
+    "signUpLead": "Lưu lại điều bạn học và nhận nhắc nhở vào ngày 5, 10 và 30.",
+    "forgotTitle": "Đặt lại mật khẩu",
+    "forgotLead": "Chúng tôi sẽ gửi email cho bạn một liên kết an toàn để chọn mật khẩu mới.",
+    "resetTitle": "Chọn mật khẩu mới",
+    "resetLead": "Dùng ít nhất 12 ký tự.",
+    "verifyTitle": "Kiểm tra hộp thư",
+    "verifyLead": "Chúng tôi đã gửi cho bạn liên kết xác minh. Mở liên kết để kích hoạt tài khoản — bạn sẽ được đưa thẳng về đây ở trạng thái đã đăng nhập.",
+    "verifyHint": "Không thấy thư? Hãy kiểm tra thư mục spam, hoặc đăng nhập lại để nhận liên kết mới.",
+    "name": "Tên của bạn",
+    "namePlaceholder": "Nguyễn Minh Anh",
+    "email": "Địa chỉ email",
+    "emailPlaceholder": "ban@vidu.com",
+    "password": "Mật khẩu",
+    "passwordPlaceholder": "Ít nhất 12 ký tự",
+    "newPassword": "Mật khẩu mới",
+    "forgotLink": "Quên mật khẩu?",
+    "submitSignIn": "Đăng nhập",
+    "submitSignUp": "Tạo tài khoản",
+    "submitForgot": "Gửi liên kết đặt lại",
+    "submitReset": "Cập nhật mật khẩu",
+    "google": "Tiếp tục với Google",
+    "or": "hoặc",
+    "haveAccount": "Đã có tài khoản?",
+    "noAccount": "Lần đầu dùng FocusKept?",
+    "createAccount": "Tạo tài khoản",
+    "signInLink": "Đăng nhập",
+    "legal": "Khi tiếp tục, bạn đồng ý với <terms>Điều khoản</terms> và <privacy>Chính sách quyền riêng tư</privacy> của chúng tôi.",
+    "resetSent": "Nếu có tài khoản dùng email đó, liên kết đặt lại đang được gửi đi.",
+    "resetDone": "Đã cập nhật mật khẩu. Giờ bạn có thể đăng nhập.",
+    "invalidCredentials": "Nhập email hợp lệ và mật khẩu dài 12–128 ký tự.",
+    "invalidPassword": "Dùng mật khẩu dài 12–128 ký tự.",
+    "wrongCredentials": "Email và mật khẩu không khớp.",
+    "emailNotVerified": "Vui lòng xác minh email trước. Chúng tôi vừa gửi cho bạn liên kết mới.",
+    "userExists": "Đã có tài khoản dùng email này. Hãy thử đăng nhập.",
+    "tooManyAttempts": "Quá nhiều lần thử. Vui lòng đợi một phút rồi thử lại.",
+    "invalidToken": "Liên kết này đã hết hạn hoặc đã được dùng. Hãy yêu cầu liên kết mới.",
+    "learningContext": "Đăng ký để bắt đầu phiên học về “{topic}”."
+  },
+  "email": {
+    "verification": {
+      "subject": "Xác nhận email của bạn cho FocusKept",
+      "heading": "Xác nhận email",
+      "body": "Nhấn nút bên dưới để kích hoạt tài khoản FocusKept. Bạn sẽ được đăng nhập và quay lại đúng chỗ đang dở.",
+      "button": "Xác nhận email",
+      "ignore": "Nếu bạn không tạo tài khoản, bạn có thể bỏ qua email này."
+    },
+    "reset": {
+      "subject": "Đặt lại mật khẩu FocusKept",
+      "heading": "Đặt lại mật khẩu",
+      "body": "Dùng liên kết an toàn bên dưới để chọn mật khẩu mới. Liên kết sẽ sớm hết hạn và chỉ dùng được một lần.",
+      "button": "Chọn mật khẩu mới",
+      "ignore": "Nếu bạn không yêu cầu, bạn có thể bỏ qua email này. Mật khẩu của bạn vẫn giữ nguyên."
+    },
+    "footer": {
+      "transactional": "Bạn nhận được email này vì một thao tác trên tài khoản FocusKept của bạn.",
+      "reviews": "Bạn nhận được email này vì nhắc nhở ôn tập đang bật trong tài khoản FocusKept của bạn.",
+      "weekly": "Bạn nhận được báo cáo hằng tuần này vì tính năng đang bật trong tài khoản FocusKept Pro của bạn.",
+      "unsubscribe": "Hủy đăng ký"
+    },
+    "digest": {
+      "subject": "{count, plural, other {Hôm nay có # thẻ cần ôn}}",
+      "preview": "{count, plural, other {# thẻ đã sẵn sàng để ôn.}}",
+      "heading": "{count, plural, other {Đến lúc ôn # thẻ rồi}}",
+      "intro": "Ôn ngay bây giờ, ngay trước khi bạn quên, chính là điều giúp ghi nhớ lâu:",
+      "more": "{count, plural, other {…và thêm # thẻ}}",
+      "estimate": "{minutes, plural, other {Khoảng # phút.}}",
+      "button": "Bắt đầu ôn tập"
+    },
+    "weekly": {
+      "subject": "Tuần của bạn trên FocusKept",
+      "preview": "{minutes, plural, other {# phút tập trung tuần trước.}}",
+      "heading": "Tuần tập trung của bạn",
+      "intro": "Đây là tuần trước của bạn.",
+      "focus": "Thời gian tập trung",
+      "minutes": "{minutes, plural, other {# phút}}",
+      "sessions": "Phiên",
+      "best": "Phương pháp hiệu quả nhất",
+      "cards": "Thẻ đã tạo",
+      "retention": "Tỷ lệ ghi nhớ",
+      "streak": "Chuỗi ngày",
+      "days": "{count, plural, other {# ngày}}",
+      "suggestionTitle": "Một gợi ý cho tuần này",
+      "suggestions": {
+        "start": "Bắt đầu từ việc nhỏ: một khối 25 phút vào thứ Hai là đủ để khởi động.",
+        "retention": "Bạn đã vượt qua {percent, number}% lượt ôn tập. Hãy đọc lại phần giải thích trước khi ôn thẻ, và trả lời ngắn gọn.",
+        "goal": "Bạn đã đạt {percent, number}% mục tiêu tuần. Hãy thêm một phiên vào giữa tuần.",
+        "bestTechnique": "Bạn tập trung tốt nhất với {technique}. Hãy lên kế hoạch cho hai phiên quan trọng nhất với phương pháp này.",
+        "keepGoing": "Một tuần tuyệt vời. Hãy giữ nhịp này và bảo vệ thời gian tập trung của bạn."
+      },
+      "recapTitle": "Điều bạn đã học trong {month}",
+      "recapText": "{cards, plural, other {Đã tạo # thẻ}} · tỷ lệ ghi nhớ {retention}",
+      "button": "Mở thống kê"
+    },
+    "push": {
+      "reviewsTitle": "{count, plural, other {# thẻ cần ôn}}",
+      "reviewsBody": "Vài phút bây giờ giúp bạn nhớ lâu hơn.",
+      "streakTitle": "{count, plural, other {Giữ chuỗi # ngày của bạn}}",
+      "streakBody": "Một phiên ngắn hôm nay là đủ để giữ chuỗi."
+    }
+  },
+  "settings": {
+    "analytics": {
+      "title": "Phân tích",
+      "text": "Phân tích sản phẩm ẩn danh, không bắt buộc. Ghi chú, phần giải thích và câu trả lời của bạn không bao giờ được gửi đi.",
+      "allow": "Cho phép phân tích",
+      "disable": "Tắt phân tích",
+      "enabled": "Đã bật phân tích.",
+      "disabled": "Đã tắt phân tích.",
+      "error": "Không thể cập nhật tùy chọn của bạn."
+    },
+    "title": "Cài đặt",
+    "lead": "Tài khoản, tùy chọn và nhắc nhở của bạn.",
+    "account": {
+      "title": "Tài khoản",
+      "displayName": "Tên hiển thị",
+      "saved": "Đã lưu thay đổi.",
+      "securityLink": "Mật khẩu và phiên đăng nhập",
+      "billingLink": "Gói và thanh toán"
+    },
+    "security": {
+      "title": "Bảo mật",
+      "lead": "Giữ tài khoản luôn an toàn.",
+      "backToSettings": "Quay lại cài đặt",
+      "passwordTitle": "Đổi mật khẩu",
+      "passwordText": "Đổi mật khẩu sẽ đăng xuất bạn khỏi các thiết bị khác.",
+      "currentPassword": "Mật khẩu hiện tại",
+      "newPassword": "Mật khẩu mới",
+      "passwordHint": "Ít nhất 12 ký tự.",
+      "changePassword": "Đổi mật khẩu",
+      "passwordChanged": "Đã đổi mật khẩu.",
+      "passwordError": "Không thể đổi mật khẩu. Hãy kiểm tra mật khẩu hiện tại rồi thử lại.",
+      "sessionsTitle": "Phiên đăng nhập",
+      "sessionsText": "Giữ đăng nhập ở đây và đăng xuất ở mọi nơi khác.",
+      "revokeOthers": "Đăng xuất các phiên khác",
+      "revoked": "Đã đăng xuất các phiên khác.",
+      "revokeError": "Không thể đăng xuất các phiên khác."
+    },
+    "delete": {
+      "title": "Xóa tài khoản",
+      "text": "Xóa vĩnh viễn tài khoản và mọi thứ bên trong: phiên, việc cần làm, thẻ và lượt ôn tập. Tài khoản có lịch sử thanh toán cần bộ phận hỗ trợ kiểm tra nhanh để không còn gói đăng ký nào sót lại. Hãy xuất dữ liệu trước nếu bạn muốn giữ một bản sao.",
+      "word": "XÓA",
+      "typeToConfirm": "Nhập {word} để xác nhận",
+      "password": "Mật khẩu của bạn",
+      "submit": "Xóa tài khoản của tôi",
+      "billingBlocked": "Tài khoản của bạn có lịch sử thanh toán. Hãy gửi email cho chúng tôi, chúng tôi sẽ đóng tài khoản giúp bạn.",
+      "error": "Không thể xóa tài khoản. Hãy kiểm tra mật khẩu rồi thử lại."
+    },
+    "prefs": {
+      "saved": "Đã lưu cài đặt.",
+      "general": "Chung",
+      "timezone": "Múi giờ",
+      "useDeviceZone": "Dùng múi giờ của thiết bị này ({zone})",
+      "weekStart": "Tuần bắt đầu vào",
+      "weeklyGoal": "Mục tiêu tập trung mỗi tuần (giờ)",
+      "weeklyGoalHint": "Hiển thị trong thống kê. 0 để tắt.",
+      "techniques": "Phương pháp",
+      "defaultTime": "Phương pháp thời gian mặc định",
+      "defaultMethod": "Phương pháp học mặc định",
+      "timebox": "Hộp thời gian mặc định (phút)",
+      "presets": "Cài đặt sẵn tùy chỉnh",
+      "deletePreset": "Xóa cài đặt sẵn “{name}”",
+      "reviewSteps": "Lịch ôn tập",
+      "reviewStepsText": "Số ngày sau khi lưu thẻ cho ba lần ôn đầu tiên. Sau bước cuối, lần ôn chuyển sang 60 ngày rồi tăng gấp đôi, tối đa 180 ngày.",
+      "stepN": "Lần ôn {n, number} (ngày)",
+      "resetSteps": "Đặt lại thành 5 / 10 / 30",
+      "stepsInvalid": "Dùng ba số tăng dần trong khoảng từ 1 đến 365.",
+      "notifications": "Nhắc nhở và thông báo",
+      "reminderTime": "Giờ nhắc hằng ngày",
+      "reminderTimeHint": "Khi có thẻ đến hạn ôn, bạn nhận một lời nhắc vào giờ này.",
+      "emailReviews": "Email nhắc ôn tập",
+      "emailReviewsHint": "Một email vào ngày có thẻ đến hạn. Không bao giờ gửi mỗi thẻ một email.",
+      "emailWeekly": "Email báo cáo hằng tuần",
+      "emailWeeklyHint": "Mỗi thứ Hai lúc 09:00: tuần tập trung của bạn và một gợi ý.",
+      "emailWeeklyPro": "Tính năng Pro. Bật ngay bây giờ, tính năng sẽ chạy khi bạn nâng cấp.",
+      "streakNudge": "Nhắc giữ chuỗi",
+      "streakNudgeHint": "Một thông báo trình duyệt nhẹ nhàng lúc 19:00 nếu chuỗi từ 3 ngày trở lên sắp bị đứt hôm nay.",
+      "browser": "Thông báo trình duyệt",
+      "browserHint": "Nhắc ôn tập trên thiết bị này, bên cạnh email.",
+      "browserDisable": "Tắt trên thiết bị này",
+      "browserOff": "Nhắc nhở trình duyệt đang tắt trên thiết bị này.",
+      "browserUnavailable": "Không khả dụng trên trình duyệt này hoặc chưa được thiết lập.",
+      "hours": "Khung giờ thông báo",
+      "hoursHint": "Thông báo trình duyệt chỉ được gửi trong khung giờ này. Email nhắc hằng ngày không bị ảnh hưởng.",
+      "from": "{day}: từ",
+      "to": "{day}: đến",
+      "export": "Dữ liệu của bạn",
+      "exportText": "Tải xuống mọi thứ FocusKept lưu về bạn, ở bất kỳ gói nào.",
+      "exportJson": "Tất cả (JSON)",
+      "exportCsv": {
+        "sessions": "Phiên (CSV)",
+        "cards": "Thẻ (CSV)",
+        "reviews": "Ôn tập (CSV)"
+      }
+    }
+  },
+  "billing": {
+    "title": "Thanh toán",
+    "lead": "Gói, hóa đơn và thông tin thanh toán của bạn.",
+    "currentPlan": "Gói hiện tại",
+    "free": "Miễn phí",
+    "pro": "Pro",
+    "syncNote": "Gói của bạn tự động cập nhật khi Polar xác nhận thanh toán. Chỉ quay lại từ trang thanh toán thì chưa thay đổi gói, nên có thể mất một lúc.",
+    "returned": "Cảm ơn bạn! Chúng tôi sẽ cập nhật gói ngay khi thanh toán được xác nhận.",
+    "manage": "Quản lý gói đăng ký",
+    "seePlans": "Xem các gói",
+    "connecting": "Đang kết nối…",
+    "notConfigured": "Thanh toán chưa được thiết lập. Bạn chưa bị trừ tiền.",
+    "unavailable": "Thanh toán hiện không khả dụng. Vui lòng thử lại.",
+    "renewsOn": "Gia hạn vào {date}.",
+    "endsOn": "Đã hủy. Pro vẫn hoạt động đến {date}."
+  },
+  "landing": {
+    "heroTitle": "Tập trung sâu. Nhớ lâu điều đã học.",
+    "heroLead": "FocusKept là đồng hồ tập trung nhẹ nhàng với 18 phương pháp đã được kiểm chứng. Khi bạn học, nó biến chính lời giải thích của bạn thành câu hỏi và nhắc bạn ôn tập vào ngày 5, 10 và 30.",
+    "question": "Hôm nay bạn làm gì?",
+    "workTitle": "Làm việc",
+    "workText": "Chọn một việc và một phương pháp, rồi tập trung. Không cần tài khoản.",
+    "learnTitle": "Học tập",
+    "learnText": "Học một chủ đề, giải thích bằng lời của bạn và ghi nhớ nó.",
+    "noCard": "Miễn phí để bắt đầu. Không cần thẻ tín dụng.",
+    "loop": {
+      "eyebrow": "Cách hoạt động",
+      "title": "Từ tập trung đến ghi nhớ lâu dài",
+      "lead": "Đồng hồ giúp bạn bắt đầu. Ghi nhớ cần thêm một vòng nữa. FocusKept khép lại vòng đó cho bạn.",
+      "focus": {
+        "title": "Tập trung",
+        "text": "Làm việc theo từng khối thời gian với 25/5, 52/17, Flowtime hoặc phương pháp khác."
+      },
+      "explain": {
+        "title": "Giải thích",
+        "text": "Viết lại điều bạn học như đang giảng cho một đứa trẻ 12 tuổi: đó là phương pháp Feynman."
+      },
+      "questions": {
+        "title": "Nhận câu hỏi",
+        "text": "AI chỉ ra chỗ còn thiếu và biến lời giải thích của bạn thành câu hỏi ôn tập mà bạn có thể chỉnh sửa."
+      },
+      "review": {
+        "title": "Ôn đúng lúc",
+        "text": "Chúng tôi nhắc bạn vào ngày 5, 10 và 30, ngay trước khi bạn quên."
+      }
+    },
+    "demo": {
+      "eyebrow": "Feynman, áp dụng thực tế",
+      "title": "Giải thích thật đơn giản. Xem bạn thực sự hiểu đến đâu.",
+      "lead": "Sau một phiên học, bạn giải thích chủ đề bằng lời của mình. Bạn nhận điểm rõ ràng, phần còn thiếu, phần chưa đúng và câu hỏi để ôn tập.",
+      "cta": "Thử chế độ học",
+      "label": "Ví dụ về một lời giải thích kèm phản hồi AI",
+      "badge": "Ví dụ",
+      "topic": "Chủ đề: Quang hợp",
+      "explanation": "Cây tự làm ra thức ăn cho mình. Lá cây hứng ánh nắng, lấy nước từ rễ và không khí qua những lỗ nhỏ, rồi biến chúng thành đường. Phần còn lại là khí oxy, thứ chúng ta hít thở.",
+      "feedback": "Phản hồi",
+      "clarity": "Độ rõ ràng 82/100",
+      "gap": "Còn thiếu: khí lấy từ không khí là khí carbon dioxide.",
+      "mistake": "Chưa rõ: ánh nắng cung cấp năng lượng; bản thân ánh nắng không biến thành đường.",
+      "questionsLabel": "Câu hỏi ôn tập",
+      "q1": "Cây lấy khí gì từ không khí để tạo ra đường?",
+      "q2": "Đúng hay sai: cây thải ra oxy như một sản phẩm phụ.",
+      "q3": "Cây dùng năng lượng của ____ để tạo ra đường.",
+      "schedule": "Đã lưu thành thẻ. Ôn tập vào ngày 5, 10 và 30."
+    },
+    "techniques": {
+      "eyebrow": "18 phương pháp",
+      "title": "Mọi phương pháp, ở cùng một nơi",
+      "lead": "Phương pháp thời gian để tập trung, phương pháp học để hiểu, phương pháp lập kế hoạch cho ngày của bạn. Mỗi trang đều giải thích và cho bạn thử ngay."
+    },
+    "pricing": {
+      "title": "Miễn phí để bắt đầu, hợp lý khi bạn phát triển",
+      "lead": "Mọi thứ bạn cần đều miễn phí. Pro có giá {monthly}/tháng hoặc {yearly}/năm.",
+      "points": {
+        "1": "Mọi phương pháp, việc cần làm, thống kê và nhắc nhở trong gói Miễn phí",
+        "2": "Pro: thẻ không giới hạn và phản hồi AI cho mọi thẻ",
+        "3": "Pro: Lab đầy đủ và báo cáo hằng tuần"
+      },
+      "cta": "So sánh các gói"
+    },
+    "faq": {
+      "title": "Câu hỏi",
+      "1": {
+        "q": "Tôi có cần tài khoản không?",
+        "a": "Chế độ làm việc thì không: chỉ cần bấm giờ. Chế độ học cần tài khoản miễn phí để chúng tôi lưu thẻ và gửi nhắc nhở ôn tập."
+      },
+      "2": {
+        "q": "Có ứng dụng di động không?",
+        "a": "FocusKept chạy trong trình duyệt trên mọi thiết bị. Bạn có thể cài lên màn hình chính, và nhắc nhở đến qua email và thông báo trình duyệt."
+      },
+      "3": {
+        "q": "AI dùng lời giải thích của tôi như thế nào?",
+        "a": "Lời giải thích của bạn được gửi đến OpenAI để tạo phản hồi và câu hỏi. Đừng đưa thông tin cá nhân hay nhạy cảm vào. Chi tiết có trong chính sách quyền riêng tư của chúng tôi."
+      },
+      "4": {
+        "q": "Tại sao là ngày 5, 10 và 30?",
+        "a": "Các lần ôn trải đều trong tháng đầu, lúc quên nhanh nhất, giúp giữ kiến thức lâu dài mà không tốn nhiều công sức. Bạn có thể đổi các bước trong Cài đặt."
+      },
+      "5": {
+        "q": "Có những ngôn ngữ nào?",
+        "a": "FocusKept có 24 ngôn ngữ. Lời giải thích và câu hỏi của bạn hoạt động với bất kỳ ngôn ngữ nào bạn viết."
+      }
+    }
+  },
+  "timer": {
+    "timerLabel": "Thời gian",
+    "goalLabel": "Mục tiêu",
+    "paused": "Đã tạm dừng",
+    "announce": "{phase}",
+    "block": "Khối {current}/{total}",
+    "focusedSoFar": "Đã tập trung {duration}",
+    "flowHint": "Dừng lại khi sự tập trung giảm",
+    "phase": {
+      "idle": "Sẵn sàng khi bạn sẵn sàng",
+      "work": "Tập trung",
+      "short_break": "Nghỉ ngắn",
+      "long_break": "Nghỉ dài",
+      "ready": "Sẵn sàng cho khối tiếp theo",
+      "box_ended": "Hết giờ",
+      "finished": "Hoàn thành phiên"
+    },
+    "controls": {
+      "start": "Bắt đầu",
+      "startNext": "Bắt đầu khối tiếp theo",
+      "pause": "Tạm dừng",
+      "resume": "Tiếp tục",
+      "skip": "Bỏ qua",
+      "skipBreak": "Bỏ qua giờ nghỉ",
+      "takeBreak": "Nghỉ một lát",
+      "finish": "Kết thúc phiên",
+      "fullscreen": "Toàn màn hình",
+      "exitFullscreen": "Thoát toàn màn hình",
+      "shortcuts": "Phím tắt",
+      "close": "Đóng"
+    },
+    "box": {
+      "title": "Hết giờ. Giờ làm gì?",
+      "done": "Xong",
+      "extend": "Gia hạn một lần (+{duration})",
+      "later": "Để sau"
+    },
+    "tips": {
+      "1": "Đứng dậy và vươn vai trong một phút.",
+      "2": "Uống một cốc nước.",
+      "3": "Cho mắt nghỉ: nhìn vật ở xa khoảng 6 mét trong 20 giây.",
+      "4": "Đi bộ một chút, dù chỉ quanh phòng.",
+      "5": "Xoay vai và hít thở chậm vài lần.",
+      "6": "Mở cửa sổ hoặc ra ngoài hít thở không khí trong lành."
+    },
+    "notify": {
+      "breakTitle": "Đến giờ nghỉ",
+      "breakBody": "Nghỉ {duration}. Rời xa màn hình nhé.",
+      "focusTitle": "Quay lại tập trung",
+      "readyTitle": "Hết giờ nghỉ",
+      "readyBody": "Sẵn sàng cho khối tiếp theo chưa?",
+      "boxTitle": "Hết giờ",
+      "boxBody": "Xong, gia hạn một lần hay để sau?"
+    },
+    "shortcuts": {
+      "title": "Phím tắt",
+      "keySpace": "Phím cách",
+      "keyEsc": "Esc",
+      "space": "Bắt đầu, tạm dừng hoặc tiếp tục",
+      "skip": "Bỏ qua giai đoạn hiện tại",
+      "fullscreen": "Bật/tắt toàn màn hình",
+      "exit": "Thoát toàn màn hình",
+      "help": "Hiện danh sách này"
+    },
+    "sound": {
+      "title": "Âm thanh",
+      "chime": "Chuông khi đổi giai đoạn",
+      "chimeVolume": "Âm lượng chuông",
+      "background": "Âm thanh nền",
+      "backgroundVolume": "Âm lượng âm thanh nền",
+      "hint": "Âm thanh nền chỉ phát khi bạn đang tập trung.",
+      "done": "Xong",
+      "kinds": {
+        "none": "Không có",
+        "white": "Tiếng ồn trắng",
+        "pink": "Tiếng ồn hồng",
+        "brown": "Tiếng ồn nâu",
+        "rain": "Tiếng mưa",
+        "cafe": "Quán cà phê",
+        "stream": "Suối",
+        "ocean": "Sóng biển",
+        "wind": "Gió",
+        "fire": "Lò sưởi",
+        "night": "Đêm hè",
+        "binaural": "Nhịp binaural"
+      },
+      "groups": {
+        "noise": "Tiếng ồn",
+        "nature": "Thiên nhiên",
+        "tones": "Âm sắc",
+        "places": "Địa điểm"
+      },
+      "about": {
+        "white": "Tiếng rì đều át tiếng nói chuyện",
+        "pink": "Êm hơn, như mưa đều",
+        "brown": "Tiếng ầm trầm, không rít",
+        "rain": "Mưa nhẹ có giọt",
+        "stream": "Suối chảy qua đá",
+        "ocean": "Sóng chậm sau vài giây",
+        "wind": "Gió lúc mạnh lúc nhẹ",
+        "fire": "Củi cháy lách tách",
+        "night": "Dế kêu trong đêm yên",
+        "binaural": "Nhịp 16 Hz, dùng tai nghe",
+        "cafe": "Tiếng rì rầm của quán cà phê đông khách"
+      },
+      "headphones": "Hãy dùng tai nghe: mỗi tai nghe một âm hơi khác nhau và não bạn nghe ra nhịp 16 Hz giữa chúng. Giữ âm lượng nhỏ.",
+      "previewHint": "Chọn một âm thanh để nghe thử. Âm thanh chỉ phát khi bạn tập trung.",
+      "tip": "Âm thanh không lời hiệu quả nhất: lời bài hát và tiếng nói làm chậm việc đọc và ghi nhớ."
+    },
+    "taskLabel": "Việc"
+  },
+  "focus": {
+    "setup": {
+      "anonymousNote": "Không cần tài khoản. Các phiên được lưu trên thiết bị này.",
+      "durations": {
+        "work": "Tập trung (phút)",
+        "shortBreak": "Nghỉ ngắn (phút)",
+        "longBreak": "Nghỉ dài (phút)",
+        "cycles": "Số khối trước khi nghỉ dài",
+        "box": "Độ dài hộp (phút)"
+      }
+    },
+    "end": {
+      "ratingValue": "{value}/5",
+      "discardConfirm": "Bỏ phiên này? Phiên sẽ không được lưu.",
+      "tooShort": "Phiên này ngắn hơn một phút nên sẽ không được tính vào thống kê."
+    },
+    "import": {
+      "title": "Mang theo các phiên của bạn?",
+      "text": "Chúng tôi tìm thấy {sessions, plural, other {# phiên}} và {tasks, plural, other {# việc}} trên thiết bị này. Nhập vào tài khoản của bạn?",
+      "confirm": "Nhập",
+      "later": "Để sau",
+      "done": "Đã nhập {sessions, plural, other {# phiên}} và {tasks, plural, other {# việc}}.",
+      "error": "Nhập không thành công. Dữ liệu vẫn còn trên thiết bị này; hãy thử lại sau."
+    }
+  },
+  "learn": {
+    "public": {
+      "eyebrow": "Chế độ học",
+      "title": "Lưu lại điều bạn học",
+      "lead": "Học bằng một phương pháp đã kiểm chứng, giải thích chủ đề bằng lời của bạn, và FocusKept biến nó thành câu hỏi. Chúng tôi nhắc bạn ôn tập vào ngày 5, 10 và 30, ngay trước khi bạn quên.",
+      "steps": {
+        "1": "Tập trung vào một chủ đề với phương pháp học và đồng hồ.",
+        "2": "Giải thích như đang giảng cho một đứa trẻ 12 tuổi.",
+        "3": "AI chỉ ra chỗ hổng và viết câu hỏi ôn tập.",
+        "4": "Tự động ôn tập vào ngày 5, 10 và 30."
+      },
+      "topicLabel": "Bạn muốn học gì?",
+      "topicPlaceholder": "VD: Vắc-xin huấn luyện hệ miễn dịch như thế nào",
+      "start": "Tiếp tục",
+      "accountNote": "Chế độ học cần tài khoản miễn phí để chúng tôi gửi nhắc nhở ôn tập cho bạn.",
+      "workInstead": "Chỉ cần đồng hồ? Dùng chế độ làm việc, không cần tài khoản."
+    },
+    "explain": {
+      "prompt": "Giải thích điều bạn đã học như đang giảng cho một đứa trẻ 12 tuổi.",
+      "promptHint": "Dùng từ đơn giản và câu ngắn. Chỗ bạn bị vấp chính là điều cần học tiếp.",
+      "openaiNotice": "Lời giải thích của bạn được OpenAI xử lý. Đừng đưa thông tin cá nhân hay nhạy cảm vào. <privacy>Chính sách quyền riêng tư</privacy>",
+      "counter": "{count} / {max} ký tự (tối thiểu {min})",
+      "analyze": "Nhận phản hồi và câu hỏi từ AI",
+      "analyzing": "Đang đọc lời giải thích của bạn…",
+      "manual": "Tự viết câu hỏi",
+      "aiOff": "Phản hồi AI hiện không khả dụng. Bạn có thể tự viết câu hỏi.",
+      "remaining": "{count, plural, =0 {Tháng này đã hết lượt phân tích AI} other {Tháng này còn # lượt phân tích AI}}",
+      "aiFailed": "Lần này phản hồi AI không chạy được. Lời giải thích của bạn đã được lưu; hãy viết câu hỏi bên dưới hoặc thử lại sau.",
+      "yourExplanation": "Lời giải thích của bạn",
+      "revise": "Sửa và phân tích lại",
+      "edit": "Sửa",
+      "analysisTitle": "Phản hồi",
+      "clarity": "Độ rõ ràng {score, number}/100",
+      "clarityLabel": "Điểm rõ ràng",
+      "gaps": "Còn thiếu gì",
+      "mistakes": "Chỗ sai hoặc chưa rõ",
+      "noGaps": "Không thiếu điều gì quan trọng.",
+      "noMistakes": "Không tìm thấy lỗi.",
+      "rewrite": "Xem phiên bản rõ ràng hơn",
+      "useRewrite": "Bắt đầu từ phiên bản này",
+      "reanalysisUsed": "Bạn đã dùng lượt phân tích lại của thẻ này. Pro cho phép sửa không giới hạn.",
+      "questionsTitle": "Câu hỏi ôn tập",
+      "questionsHint": "Sửa, xóa hoặc thêm câu hỏi của bạn. Đây là những câu bạn sẽ trả lời khi ôn tập.",
+      "needQuestion": "Thêm ít nhất một câu hỏi.",
+      "fixQuestions": "Một số câu hỏi cần sửa trước khi lưu.",
+      "save": "Lưu thẻ",
+      "saveError": "Không thể lưu thẻ. Vui lòng thử lại.",
+      "savedTitle": "Đã lưu thẻ",
+      "savedText": "Lần ôn đầu tiên của bạn vào {date}. Chúng tôi sẽ nhắc bạn.",
+      "viewCard": "Xem thẻ",
+      "another": "Bắt đầu phiên khác",
+      "notFound": "Phiên này đã được lưu, hoặc không tồn tại.",
+      "check": "Kiểm tra",
+      "focused": "Thời gian tập trung: {duration}",
+      "hintLong": "Liệt kê các ý chính, mỗi ý một hai câu. Ghi chú lúc nghỉ đã có ở đây.",
+      "hintMid": "Ba đến năm ý chính, mỗi ý một hai câu, không nhìn sách.",
+      "hintShort": "Hai ba ý chính là đủ. Viết mà không nhìn sách.",
+      "keep": "{count, plural, other {Giữ # câu hỏi}}",
+      "keptTitle": "{count, plural, other {# câu hỏi đã sẵn sàng.}}",
+      "newSession": "Phiên mới",
+      "readingText": "Đang tìm lỗ hổng và chuẩn bị câu hỏi",
+      "writeTitle": "Bạn đã học được gì? Viết bằng lời của bạn."
+    }
+  },
+  "tasks": {
+    "title": "Việc cần làm",
+    "markDone": "Đánh dấu “{title}” là đã xong",
+    "focusOn": "Tập trung vào “{title}”",
+    "close": "Đóng",
+    "errors": {
+      "generic": "Không thể lưu thay đổi đó. Vui lòng thử lại.",
+      "ivyFull": "Ngày mai đã có sáu việc rồi.",
+      "slotFull": "Phần đó của bảng hôm nay đã kín."
+    },
+    "matrix": {
+      "do": {
+        "title": "Làm ngay"
+      },
+      "schedule": {
+        "title": "Lên lịch"
+      },
+      "delegate": {
+        "title": "Giao việc"
+      },
+      "delete": {
+        "title": "Loại bỏ"
+      }
+    },
+    "plan135": {
+      "big": "Lớn",
+      "medium": "Vừa",
+      "small": "Nhỏ"
+    },
+    "ivy": {
+      "moveUp": "Đưa “{title}” lên",
+      "moveDown": "Đưa “{title}” xuống"
+    },
+    "board": {
+      "heading": "Hôm nay",
+      "chip": {
+        "today": "Hôm nay",
+        "tomorrow": "Ngày mai",
+        "full": "Hôm nay đã kín",
+        "slot": {
+          "big": "Chỗ cho việc chính",
+          "medium": "Chỗ vừa",
+          "small": "Chỗ ngắn"
+        }
+      },
+      "toTomorrow": "Ngày mai",
+      "progress": "Xong {done, number}/{total, number}",
+      "planned": "Đã lên kế hoạch {planned} · còn {left}",
+      "plannedEmpty": "Chưa có kế hoạch nào",
+      "barLabel": "Hôm nay: xong {done}, còn {left}",
+      "addLabel": "Việc mới",
+      "addPlaceholder": "Thử “Dàn ý bài luận 45p ngày mai !” — thời lượng, ngày và mức ưu tiên được tự nhận ra",
+      "add": "Thêm",
+      "keywords": {
+        "today": "hôm nay",
+        "tomorrow": "ngày mai, mai",
+        "minutes": "p, phút",
+        "hours": "g, giờ, tiếng"
+      },
+      "dayFull": "Hôm nay đã kín. Hãy dời một việc sang ngày mai trước.",
+      "first": {
+        "label": "Làm việc này trước",
+        "empty": "Chưa có việc chính. Chọn một việc dài bạn hay trì hoãn rồi bấm “Cho hôm nay”."
+      },
+      "medium": {
+        "title": "Rồi đến những việc này",
+        "empty": "Chỗ trống · 25–60 phút"
+      },
+      "small": {
+        "title": "Việc ngắn xen giữa",
+        "empty": "Chỗ trống · dưới 25 phút"
+      },
+      "slotCount": "Xong {done, number}/{used, number} · trống {free, number}",
+      "overflow": {
+        "title": "Hôm nay hết chỗ",
+        "hint": "Đã lên lịch hôm nay nhưng mọi chỗ đều đã kín."
+      },
+      "footnote": "Một việc chính, ba việc vừa, năm việc ngắn: một ngày trọn vẹn. Việc mới tự tìm chỗ theo thời lượng.",
+      "focus": "Tập trung",
+      "toTomorrowLabel": "Dời “{title}” sang ngày mai",
+      "toIncoming": "Hộp đến",
+      "toIncomingLabel": "Chuyển “{title}” vào Hộp đến",
+      "edit": "Mở “{title}”"
+    },
+    "details": {
+      "days": {
+        "today": "Hôm nay",
+        "tomorrow": "Ngày mai",
+        "none": "Không có ngày"
+      },
+      "name": "Tiêu đề",
+      "tags": "Thẻ gắn",
+      "tagsPlaceholder": "VD: học, lập trình",
+      "project": "Dự án",
+      "noProject": "Không có dự án",
+      "save": "Lưu",
+      "deleteConfirm": "Xóa việc này? Các phiên liên quan vẫn được giữ lại.",
+      "title": "Việc",
+      "minutes": "Thời lượng (phút)",
+      "day": "Ngày",
+      "notes": "Ghi chú",
+      "archive": "Lưu trữ",
+      "delete": "Xóa"
+    },
+    "incoming": {
+      "groups": {
+        "tomorrow": "Ngày mai",
+        "planned": "Đã lên lịch",
+        "unsorted": "Chưa sắp xếp"
+      },
+      "quadrant": {
+        "do": {
+          "label": "Làm ngay",
+          "hint": "Khẩn cấp và quan trọng"
+        },
+        "plan": {
+          "label": "Lên lịch",
+          "hint": "Quan trọng, không khẩn cấp"
+        },
+        "quick": {
+          "hint": "Khẩn cấp, không quan trọng",
+          "label": "Làm nhanh"
+        },
+        "later": {
+          "label": "Để sau",
+          "hint": "Không cái nào"
+        }
+      },
+      "projects": "Dự án và bộ lọc",
+      "filterLabel": "Lọc theo mức ưu tiên",
+      "empty": {
+        "tomorrow": "Chưa có gì cho ngày mai.",
+        "planned": "Chưa có kế hoạch cho những ngày sau.",
+        "unsorted": "Mọi thứ đã gọn gàng."
+      },
+      "missed": "từ {date}",
+      "important": "Quan trọng",
+      "urgent": "Gấp",
+      "importantShort": "Q",
+      "urgentShort": "G",
+      "importantLabel": "“{title}” quan trọng",
+      "urgentLabel": "“{title}” gấp",
+      "toToday": "Cho hôm nay",
+      "toTodayLabel": "Chuyển “{title}” sang hôm nay",
+      "plan": "Lên kế hoạch ngày mai trong 2 phút",
+      "planHint": "Xếp tối đa sáu việc theo thứ tự và bắt đầu buổi sáng thật sẵn sàng",
+      "title": "Hộp đến"
+    },
+    "projects": {
+      "filterProject": "Dự án",
+      "filterTag": "Thẻ gắn",
+      "all": "Tất cả",
+      "name": "Tên dự án mới",
+      "add": "Thêm dự án",
+      "archive": "Lưu trữ",
+      "restore": "Khôi phục",
+      "done": "Xong",
+      "title": "Dự án và bộ lọc"
+    },
+    "planner": {
+      "moveUp": "Đưa “{title}” lên",
+      "remove": "Bỏ “{title}” khỏi ngày mai",
+      "title": "Ngày mai bạn sẽ làm gì?",
+      "lead": "Chọn tối đa sáu việc, việc quan trọng nhất trước. Ngày mai việc đầu tiên thành “Làm việc này trước”, các việc còn lại lấp đầy bảng.",
+      "pick": "Chọn",
+      "order": "Thứ tự ngày mai · {count, number}/{max, number}",
+      "empty": "Chọn việc từ danh sách. Việc bạn chọn đầu tiên sẽ là việc bạn thấy đầu tiên vào sáng mai.",
+      "fromToday": "từ hôm nay",
+      "later": "Lúc khác",
+      "save": "Lưu cho ngày mai",
+      "saved": "Đã lưu danh sách ngày mai."
+    }
+  },
+  "cards": {
+    "title": "Thẻ kiến thức",
+    "lead": "Mọi điều bạn đã học, kèm lịch ôn tập.",
+    "newSession": "Phiên học mới",
+    "searchLabel": "Tìm thẻ",
+    "searchPlaceholder": "Tìm chủ đề và lời giải thích",
+    "search": "Tìm",
+    "statusLabel": "Trạng thái",
+    "active": "Đang dùng",
+    "archived": "Đã lưu trữ",
+    "topicLabel": "Chủ đề",
+    "allTopics": "Mọi chủ đề",
+    "sortLabel": "Sắp xếp",
+    "sortDue": "Đến hạn trước",
+    "sortNew": "Mới nhất trước",
+    "allowance": "{used, number}/{limit, number} thẻ của gói Miễn phí",
+    "emptyTitle": "Chưa có thẻ nào",
+    "emptyText": "Hoàn thành một phiên học và giải thích điều bạn đã học. Thẻ đầu tiên sẽ xuất hiện ở đây.",
+    "noResults": "Không có thẻ nào khớp với tìm kiếm.",
+    "more": "Tải thêm",
+    "due": "Đến hạn {when}",
+    "dueToday": "Đến hạn hôm nay",
+    "overdue": "Quá hạn",
+    "box": "Hộp {n, number}",
+    "graduated": "Dài hạn",
+    "questionsCount": "{count, plural, other {# câu hỏi}}",
+    "detail": {
+      "back": "Tất cả thẻ",
+      "reviewNow": "Ôn ngay",
+      "reviewNowHint": "Luyện tập bất cứ lúc nào. Ôn sớm không làm thay đổi lịch.",
+      "nextReview": "Lần ôn tiếp theo",
+      "reviews": "Lượt ôn",
+      "source": "Nguồn",
+      "method": "Phương pháp",
+      "created": "Ngày tạo",
+      "explanation": "Lời giải thích",
+      "editTopic": "Chủ đề",
+      "save": "Lưu thay đổi",
+      "saved": "Đã lưu thay đổi.",
+      "archive": "Lưu trữ",
+      "unarchive": "Khôi phục",
+      "archivedNote": "Thẻ đã lưu trữ không được ôn. Thẻ vẫn được tính vào giới hạn của gói Miễn phí.",
+      "delete": "Xóa thẻ",
+      "deleteConfirm": "Xóa thẻ này cùng lịch sử ôn tập? Không thể hoàn tác.",
+      "history": "Lịch sử ôn tập",
+      "noHistory": "Chưa có lượt ôn nào.",
+      "passed": "Đạt",
+      "missed": "Chưa đạt",
+      "early": "Luyện tập",
+      "score": "{score, number}%",
+      "analysis": "Phản hồi AI",
+      "error": "Không thể lưu. Vui lòng thử lại."
+    },
+    "questions": {
+      "number": "Câu hỏi {n, number}",
+      "type": "Loại câu hỏi",
+      "types": {
+        "open": "Trả lời tự do",
+        "true_false": "Đúng hay sai",
+        "cloze": "Điền vào chỗ trống"
+      },
+      "source": {
+        "ai": "AI",
+        "ai_edited": "AI, đã sửa"
+      },
+      "prompt": "Câu hỏi",
+      "answer": "Đáp án",
+      "true": "Đúng",
+      "false": "Sai",
+      "explanation": "Vì sao đúng",
+      "explanationPlaceholder": "Không bắt buộc, một câu",
+      "clozeHint": "Đánh dấu từ còn thiếu bằng {blank}",
+      "delete": "Xóa câu hỏi {n, number}",
+      "add": {
+        "open": "Câu hỏi tự do",
+        "true_false": "Đúng / sai",
+        "cloze": "Điền vào chỗ trống"
+      },
+      "problems": {
+        "prompt": "Viết câu hỏi.",
+        "answer": "Thêm đáp án.",
+        "blank": "Câu hỏi điền chỗ trống cần đúng một ____."
+      }
+    },
+    "boxes": {
+      "label": "Hộp ôn tập",
+      "today": "Hôm nay",
+      "days": "{days, plural, other {# ngày}}",
+      "hint": "Trả lời đúng đưa thẻ sang hộp tiếp theo nên thẻ ít quay lại hơn. Trả lời sai sẽ sớm đưa thẻ trở lại."
+    }
+  },
+  "limits": {
+    "cta": "Xem Pro",
+    "keepWorking": "Dù thế nào, thẻ và lượt ôn của bạn vẫn hoạt động bình thường.",
+    "pro": {
+      "cards": "Thẻ kiến thức không giới hạn",
+      "ai": "Phản hồi và câu hỏi AI cho mọi thẻ",
+      "lab": "Lab đầy đủ: điều gì hiệu quả nhất với bạn, theo thẻ gắn và giờ trong ngày",
+      "weekly": "Báo cáo tiến độ hằng tuần qua email"
+    },
+    "card_limit": {
+      "title": "Bạn đã đạt 20 thẻ của gói Miễn phí",
+      "text": "Xóa hoặc giữ thẻ tùy ý; các lượt ôn vẫn tiếp tục. Để lưu thẻ mới, hãy nâng cấp lên Pro."
+    },
+    "monthly_limit": {
+      "title": "Đã dùng hết lượt phân tích AI tháng này",
+      "text": "Gói Miễn phí có {limit, number} lượt phân tích thẻ bằng AI mỗi tháng. Bạn vẫn có thể lưu thẻ này bằng cách tự viết câu hỏi."
+    },
+    "reanalysis_limit": {
+      "title": "Thẻ này đã dùng lượt phân tích lại",
+      "text": "Gói Miễn phí cho phép sửa một lần mỗi thẻ. Hãy tự sửa câu hỏi, hoặc nâng cấp để sửa không giới hạn."
+    },
+    "budget": {
+      "title": "Hôm nay AI đang nghỉ",
+      "text": "Phản hồi AI tạm thời không khả dụng. Hãy tự viết câu hỏi; thẻ của bạn vẫn hoạt động y hệt."
+    },
+    "lab": {
+      "title": "Xem Lab đầy đủ với Pro",
+      "text": "Gói Miễn phí hiện phương pháp tốt nhất của bạn trong 7 ngày qua. Pro bổ sung phân tích toàn thời gian, kết quả theo thẻ gắn và theo giờ, cùng đường cong ghi nhớ."
+    },
+    "weekly_report": {
+      "title": "Báo cáo hằng tuần là tính năng Pro",
+      "text": "Nhận một email ngắn mỗi thứ Hai với thời gian tập trung, phương pháp tốt nhất, tỷ lệ ghi nhớ và một gợi ý."
+    }
+  },
+  "notifications": {
+    "push": {
+      "question": "Nhận nhắc ôn tập trên trình duyệt nữa nhé?",
+      "text": "Chúng tôi sẽ gửi một thông báo khi có thẻ đến hạn, bên cạnh email.",
+      "enable": "Bật nhắc nhở trình duyệt",
+      "enabled": "Nhắc nhở trình duyệt đang bật",
+      "denied": "Thông báo bị chặn cho trang này. Bạn có thể cho phép trong cài đặt trình duyệt."
+    },
+    "unsubscribe": {
+      "title": "Tùy chọn email",
+      "reviews": "Ngừng nhận email nhắc ôn tập hằng ngày? Thông báo trình duyệt và lịch ôn tập vẫn giữ nguyên.",
+      "weekly": "Ngừng nhận email báo cáo hằng tuần?",
+      "confirm": "Hủy đăng ký",
+      "done": "Xong. Bạn sẽ không nhận các email này nữa. Bạn có thể bật lại trong Cài đặt.",
+      "error": "Không thành công. Vui lòng thử lại hoặc thay đổi trong Cài đặt.",
+      "invalid": "Liên kết này không hợp lệ. Bạn có thể quản lý email trong Cài đặt.",
+      "settings": "Quản lý mọi thông báo trong Cài đặt"
+    }
+  },
+  "review": {
+    "title": "Ôn tập",
+    "lead": "Trả lời theo trí nhớ. Thẻ đạt khi mọi câu trả lời đều đúng.",
+    "progress": "Thẻ {current, number}/{total, number}",
+    "questionProgress": "Câu {current, number}/{total, number}",
+    "types": {
+      "open": "Trả lời tự do",
+      "true_false": "Đúng hay sai?",
+      "cloze": "Điền vào chỗ trống"
+    },
+    "true": "Đúng",
+    "false": "Sai",
+    "blankLabel": "Từ còn thiếu",
+    "yourAnswer": "Câu trả lời của bạn",
+    "check": "Kiểm tra",
+    "grading": "Đang kiểm tra…",
+    "modelAnswer": "Đáp án",
+    "selfGradeNote": "Chấm tự động hiện không khả dụng. Hãy đối chiếu với đáp án và tự chấm thật trung thực.",
+    "self": {
+      "correct": "Tôi trả lời đúng",
+      "partial": "Đúng một phần",
+      "incorrect": "Chưa đúng"
+    },
+    "verdict": {
+      "correct": "Chính xác.",
+      "partial": "Đúng một phần.",
+      "incorrect": "Chưa đúng lắm."
+    },
+    "nextQuestion": "Câu tiếp theo",
+    "finishCard": "Hoàn thành thẻ",
+    "passedTitle": "Đạt",
+    "missedTitle": "Chưa đạt. Thẻ sẽ sớm quay lại",
+    "score": "{score, number}%",
+    "nextReview": "Lần ôn tiếp theo: {date}",
+    "earlyNote": "Ôn luyện tập: lịch của bạn vẫn giữ nguyên (lần ôn tiếp theo {date}).",
+    "revisit": "Nội dung cần xem lại",
+    "openExplanation": "Đọc lại lời giải thích của bạn",
+    "nextCard": "Thẻ tiếp theo",
+    "finish": "Hoàn thành",
+    "passRule": "{count, plural, other {Trả lời đúng cả # câu hỏi để đạt.}}",
+    "saveError": "Không thể lưu lượt ôn. Vui lòng thử lại.",
+    "emptyTitle": "Bạn đã ôn hết",
+    "emptyText": "Hiện chưa có thẻ nào đến hạn. Lượt ôn mới xuất hiện vào ngày 5, 10 và 30 sau khi bạn lưu thẻ.",
+    "allDoneTitle": "Đã ôn xong",
+    "allDoneText": "Bạn đạt {passed, number}/{total, number} thẻ. Làm tốt lắm.",
+    "learnSomething": "Học điều mới",
+    "toTimer": "Quay lại hẹn giờ"
+  },
+  "stats": {
+    "title": "Thống kê",
+    "lead": "Tình hình tập trung và học tập của bạn.",
+    "rangeLabel": "Khoảng thời gian",
+    "range": "{days, number} ngày",
+    "focused": "Thời gian tập trung",
+    "sessions": "Phiên",
+    "avgRating": "Tập trung TB",
+    "streak": "Chuỗi ngày",
+    "bestStreak": "Chuỗi dài nhất",
+    "days": "{count, plural, other {# ngày}}",
+    "retention30": "Tỷ lệ ghi nhớ (30 ngày)",
+    "retention90": "Tỷ lệ ghi nhớ (90 ngày)",
+    "cardsTotal": "Thẻ",
+    "dailyChart": "Số phút tập trung mỗi ngày",
+    "showTable": "Hiện dạng bảng",
+    "day": "Ngày",
+    "minutes": "Phút",
+    "techniques": "Phương pháp",
+    "technique": "Phương pháp",
+    "noSessions": "Chưa có phiên nào trong khoảng thời gian này.",
+    "topics": "Tỷ lệ ghi nhớ theo chủ đề (90 ngày)",
+    "topic": "Chủ đề",
+    "reviews": "Lượt ôn",
+    "retention": "Tỷ lệ ghi nhớ",
+    "noReviews": "Chưa có lượt ôn nào.",
+    "lab": {
+      "title": "Lab",
+      "lead": "Phương pháp nào hiệu quả nhất với bạn, dựa trên điểm tập trung của chính bạn.",
+      "weekTop": "Trong 7 ngày qua, bạn tập trung tốt nhất với {technique}: {rating, number, ::.#} / 5 qua {sessions, plural, other {# phiên}}.",
+      "needData": "Chấm điểm vài phiên và kết quả sẽ hiện ở đây.",
+      "allTime": "Xếp hạng toàn thời gian",
+      "rankRow": "{technique}: {rating, number, ::.#} / 5 ({sessions, plural, other {# phiên}})",
+      "byTag": "Phương pháp tốt nhất theo thẻ gắn công việc",
+      "tag": "Thẻ gắn",
+      "best": "Phương pháp tốt nhất",
+      "noTags": "Gắn thẻ cho công việc để xem phương pháp nào hợp với từng loại việc.",
+      "byHour": "Mức tập trung theo giờ trong ngày",
+      "hour": "Giờ",
+      "curve": "Tỷ lệ ghi nhớ theo bước ôn tập",
+      "step": "Bước",
+      "dayN": "Ngày {day, number}",
+      "graduated": "Dài hạn"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Bảng giá",
+    "title": "Bắt đầu miễn phí. Nâng cấp khi xứng đáng.",
+    "lead": "Mọi phương pháp tập trung, học tập và lập kế hoạch đều miễn phí. Pro gỡ bỏ giới hạn và cho bạn thấy điều gì hiệu quả nhất.",
+    "perMonth": "/ tháng",
+    "perYear": "/ năm",
+    "free": {
+      "name": "Miễn phí",
+      "text": "Mọi thứ bạn cần để tập trung và bắt đầu ghi nhớ điều đã học.",
+      "points": {
+        "1": "Cả 18 phương pháp, việc cần làm và thống kê",
+        "2": "Tối đa 20 thẻ kiến thức",
+        "3": "10 lượt phân tích AI mỗi tháng",
+        "4": "Nhắc ôn tập qua email và trình duyệt"
+      },
+      "cta": "Bắt đầu miễn phí"
+    },
+    "pro": {
+      "name": "Pro",
+      "points": {
+        "1": "Thẻ kiến thức không giới hạn",
+        "2": "Phản hồi và câu hỏi AI cho mọi thẻ (sử dụng hợp lý)",
+        "3": "Lab đầy đủ: phương pháp tốt nhất theo thẻ gắn và giờ trong ngày",
+        "4": "Báo cáo tiến độ hằng tuần qua email"
+      }
+    },
+    "monthly": {
+      "name": "Pro hằng tháng",
+      "text": "Linh hoạt. Hủy bất cứ lúc nào.",
+      "cta": "Chọn gói tháng"
+    },
+    "yearly": {
+      "name": "Pro hằng năm",
+      "badge": "Tiết kiệm {percent, number}%",
+      "text": "Tương đương {monthly}/tháng, thanh toán mỗi năm một lần.",
+      "point": "Mọi tính năng Pro, trong cả năm",
+      "cta": "Chọn gói năm"
+    },
+    "checkoutNote": "Thanh toán do Polar xử lý, đơn vị bán hàng chính thức (merchant of record) của chúng tôi. Giá cuối cùng, gồm cả thuế ở quốc gia của bạn, hiển thị khi thanh toán. Hủy bất cứ lúc nào trong mục Thanh toán.",
+    "compare": "So sánh Miễn phí và Pro",
+    "feature": "Tính năng",
+    "notIncluded": "Không bao gồm",
+    "rows": {
+      "techniques": {
+        "label": "Phương pháp thời gian, học tập và lập kế hoạch",
+        "free": "Cả 18",
+        "pro": "Cả 18"
+      },
+      "tasks": {
+        "label": "Việc cần làm, dự án và thống kê cơ bản",
+        "free": "Có",
+        "pro": "Có"
+      },
+      "cards": {
+        "label": "Thẻ kiến thức",
+        "free": "Tổng cộng 20",
+        "pro": "Không giới hạn"
+      },
+      "ai": {
+        "label": "Phản hồi AI và tạo câu hỏi",
+        "free": "10 thẻ mỗi tháng",
+        "pro": "Không giới hạn (sử dụng hợp lý)"
+      },
+      "grading": {
+        "label": "AI chấm câu trả lời tự do khi ôn tập",
+        "free": "Có",
+        "pro": "Có"
+      },
+      "reminders": {
+        "label": "Nhắc ôn tập qua email và trình duyệt",
+        "free": "Có",
+        "pro": "Có"
+      },
+      "lab": {
+        "label": "Lab: phương pháp nào hiệu quả nhất với bạn",
+        "free": "7 ngày qua, phương pháp tốt nhất",
+        "pro": "Toàn thời gian, theo thẻ gắn, theo giờ, đường cong ghi nhớ"
+      },
+      "weekly": {
+        "label": "Báo cáo email hằng tuần",
+        "free": "–",
+        "pro": "Có"
+      },
+      "export": {
+        "label": "Xuất dữ liệu (JSON và CSV)",
+        "free": "Có",
+        "pro": "Có"
+      }
+    },
+    "faqTitle": "Câu hỏi về các gói",
+    "faq": {
+      "1": {
+        "q": "Thẻ của tôi sẽ ra sao nếu tôi ngừng trả phí?",
+        "a": "Không mất gì cả. Thẻ và các lượt ôn đã lên lịch vẫn hoạt động. Bạn không thể thêm thẻ vượt giới hạn Miễn phí, và lượt phân tích AI trở về 10 mỗi tháng."
+      },
+      "2": {
+        "q": "Sử dụng hợp lý cho AI trong gói Pro nghĩa là gì?",
+        "a": "Pro bao gồm phản hồi AI cho tối đa 300 thẻ mỗi tháng, nhiều hơn hẳn số thẻ mà hầu hết mọi người tạo. Nếu chạm mức đó, bạn vẫn có thể tự viết câu hỏi."
+      },
+      "3": {
+        "q": "Làm sao để hủy?",
+        "a": "Mở mục Thanh toán trong ứng dụng và chọn Quản lý gói đăng ký. Bạn vẫn dùng Pro đến hết kỳ đã thanh toán."
+      },
+      "4": {
+        "q": "Ai xử lý thanh toán của tôi?",
+        "a": "Polar là đơn vị bán hàng chính thức của chúng tôi và xử lý thanh toán, hóa đơn và thuế bán hàng. FocusKept không bao giờ thấy thông tin thẻ của bạn."
+      },
+      "5": {
+        "q": "Có gói trọn đời không?",
+        "a": "Hiện tại thì chưa. Pro có gói tháng hoặc gói năm."
+      }
+    }
+  },
+  "techniquesPage": {
+    "groups": {
+      "time": "Phương pháp thời gian",
+      "learning": "Phương pháp học",
+      "planning": "Phương pháp lập kế hoạch"
+    },
+    "eyebrow": "Phương pháp",
+    "title": "Phương pháp tập trung, học tập và lập kế hoạch",
+    "lead": "Mỗi phương pháp được giải thích bằng lời dễ hiểu, kèm các bước, khi nào hữu ích và khi nào không. Bạn có thể thử ngay trên trang của từng phương pháp.",
+    "all": "Tất cả phương pháp",
+    "tryNow": "Thử ngay",
+    "howItWorks": "Cách hoạt động",
+    "steps": "Từng bước",
+    "bestFor": "Phù hợp nhất cho",
+    "whenNotToUse": "Khi nào không nên dùng",
+    "faq": "Câu hỏi",
+    "related": "Phương pháp liên quan",
+    "trademarkNotice": "Pomodoro Technique® là nhãn hiệu của Francesco Cirillo. FocusKept không liên kết hay liên quan đến Pomodoro Technique® hoặc Francesco Cirillo và không được họ xác nhận."
+  },
+  "tryIt": {
+    "reset": "Đặt lại",
+    "notSaved": "Bản thử này không được lưu. Hãy bắt đầu một phiên đầy đủ để giữ thống kê.",
+    "fullSession": "Dùng trong phiên đầy đủ",
+    "box": "Độ dài hộp (phút)",
+    "steps": "Làm theo các bước",
+    "learnWith": "Học với {method}",
+    "taskPlaceholder": "Thêm việc",
+    "where": "Xếp vào đâu",
+    "add": "Thêm",
+    "full": "Phần đó đã đầy. Đó chính là mục đích: hãy chọn lọc.",
+    "list": "Việc cần làm",
+    "remove": "Bỏ “{title}”",
+    "markFrog": "Chọn “{title}” làm con ếch hôm nay",
+    "frogHint": "Nhấn vào ngọn lửa để chọn con ếch hôm nay. Việc đó sẽ chuyển lên đầu.",
+    "planFull": "Lên kế hoạch cho ngày thực của bạn với phương pháp này"
+  },
+  "home": {
+    "anonText": "Tạo tài khoản miễn phí để viết phần giải thích, nhận câu hỏi từ đó và được nhắc đúng lúc. Phiên của bạn đang chờ trên thiết bị này.",
+    "anonTitle": "Ghi lại điều đã học, nhận câu hỏi của bạn.",
+    "boxMinutes": "Khung, phút",
+    "breakMinutes": "Nghỉ",
+    "breakNote": "Bạn nhớ được gì từ khối này?",
+    "breakNoteHint": "Không bắt buộc · sẽ chờ bạn ở cuối",
+    "breakNotePlaceholder": "Một hai ý…",
+    "breakOver": "Hết giờ nghỉ",
+    "breakTitle": "Nghỉ · xong khối {current}/{total}",
+    "continue": "Tiếp tục",
+    "createAccount": "Tạo tài khoản miễn phí",
+    "decrease": "Giảm: {label}",
+    "discard": "Thoát không lưu",
+    "endFocused": "Thời gian tập trung: {duration}",
+    "endSession": "Kết thúc phiên",
+    "fillHint": "Thẻ đầy dần khi bạn tập trung",
+    "focusFallback": "Tập trung",
+    "focusMinutes": "Tập trung",
+    "fromPlan": "Từ kế hoạch hôm nay:",
+    "haveAccount": "Tôi đã có tài khoản",
+    "hintAsk": "Hỏi lại đúng lúc",
+    "hintFocus": "Tập trung",
+    "hintWrite": "Ghi lại điều đã học",
+    "howDidItGo": "Thế nào rồi?",
+    "howItWorks": "Cách hoạt động",
+    "increase": "Tăng: {label}",
+    "learn": "Học",
+    "modeLabel": "Chế độ",
+    "moods": {
+      "1": "phân tán",
+      "2": "tạm được",
+      "3": "tốt",
+      "4": "tuyệt",
+      "5": "hoàn toàn nhập tâm"
+    },
+    "newTopic": "Chủ đề mới",
+    "nextBlock": "Khối tiếp theo · {current}/{total}",
+    "oneStep": "Còn một bước",
+    "placeholderLearn": "ví dụ: quang hợp",
+    "placeholderWork": "ví dụ: phần mở đầu báo cáo",
+    "reviewStart": "Bắt đầu ôn tập",
+    "reviewTitle": "{count, plural, other {# thẻ đang chờ ôn tập}}",
+    "rhythm": "Nhịp",
+    "rhythmGuide": "Nhịp nào, khi nào? Xem hướng dẫn",
+    "rhythmHint": "tập trung · nghỉ, phút",
+    "rhythmSub": {
+      "52-17": "Cho việc dài, yên tĩnh",
+      "custom": "Tự chọn con số",
+      "deep-work-90": "Việc khó nhất trong ngày",
+      "flowtime": "Đến khi hết tập trung",
+      "pomodoro": "Khi khó bắt đầu",
+      "timeboxing": "Đặt ngân sách thời gian cho một việc"
+    },
+    "runBlock": "khối {current}/{total}",
+    "save": "Lưu",
+    "skipCard": "Kết thúc không tạo thẻ",
+    "start": "Bắt đầu",
+    "subjectLearn": "Bạn đang học gì?",
+    "subjectWork": "Bạn đang làm gì? (không bắt buộc)",
+    "summaryBox": "Khi hết giờ: xong, gia hạn hoặc để sau",
+    "summaryCycle": "{blocks, plural, other {# khối}} · nghỉ {minutes} phút giữa các khối",
+    "summaryFlow": "Bấm giờ · thời gian nghỉ bằng một phần năm thời gian tập trung",
+    "taskDone": "“{task}” đã xong",
+    "todayTotal": "Tập trung hôm nay: {duration}",
+    "topicHint": "Thẻ của bạn được lưu với tên này.",
+    "topicTitle": "Chủ đề là gì?",
+    "trailEmpty": "chưa có gì",
+    "trailLabel": "Dấu vết hôm nay",
+    "trailSummary": "{duration} · {cards, plural, other {# thẻ}}",
+    "work": "Làm việc"
+  }
+}

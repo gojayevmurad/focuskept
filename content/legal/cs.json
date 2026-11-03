@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Zásady ochrany soukromí",
+    "updated": "Poslední aktualizace: 31. října 2026",
+    "intro": "Tyto zásady vysvětlují, jaké údaje FocusKept shromažďuje, proč, kdo nám je pomáhá zpracovávat a jaké máš možnosti. FocusKept provozuje Murad Gojayev, Baku, Ázerbájdžán. Kontakt: hello@focuskept.com.",
+    "sections": [
+      {
+        "heading": "Jaké údaje shromažďujeme",
+        "paragraphs": [
+          "Údaje o účtu: jméno, e-mailová adresa a bezpečně zahashované heslo, případně identifikátor účtu Google, pokud se přihlašuješ přes Google.",
+          "Údaje, které v produktu vytváříš: sezení soustředění (technika, délka, hodnocení soustředění, poznámky a cíle), úkoly a projekty, témata učení, poznámky, vysvětlení Feynmanovou metodou, otázky k opakování, tvoje odpovědi při opakování a jejich výsledky a nastavení (jazyk, časové pásmo, čas připomenutí a podobně).",
+          "Údaje o zařízení a oznámeních: pokud zapneš oznámení v prohlížeči, adresu odběru push, kterou nám prohlížeč předá. Z bezpečnostních důvodů přihlašovací relace uchovávají IP adresu a identifikaci prohlížeče (user agent).",
+          "Bez účtu zůstávají sezení a úkoly z režimu práce v místním úložišti prohlížeče ve tvém zařízení. Na naše servery se dostanou, jen pokud se je po registraci rozhodneš importovat.",
+          "Volitelná analytika: pouze s tvým souhlasem sbíráme anonymní události o používání (například že bylo dokončeno sezení nebo opakování). Tvoje texty, vysvětlení ani odpovědi do analytiky nikdy neposíláme."
+        ]
+      },
+      {
+        "heading": "K čemu je používáme",
+        "paragraphs": [
+          "K poskytování služby: provoz časovače a statistik, plánování opakování, zasílání připomenutí, o která sis řekl, a zabezpečení účtu.",
+          "K poskytování funkcí AI: tvorba zpětné vazby, otázek k opakování a hodnocení odpovědí z toho, co napíšeš.",
+          "Ke zpracování plateb a správě tarifu prostřednictvím našeho platebního poskytovatele.",
+          "K pochopení a zlepšování produktu — analytiku používáme jen s tvým souhlasem a z hlášení chyb pokud možno odstraňujeme osobní údaje."
+        ]
+      },
+      {
+        "heading": "Zpracování pomocí AI od OpenAI",
+        "paragraphs": [
+          "Když používáš zpětnou vazbu od AI, tvorbu otázek nebo hodnocení odpovědí, odesílá se téma, tvoje vysvětlení, otázky a odpovědi ke zpracování do OpenAI.",
+          "Náš projekt v OpenAI je nastaven tak, aby sdílel data z API se společností OpenAI. To znamená, že OpenAI může tento obsah používat ke zlepšování svých modelů. Do vysvětlení ani odpovědí proto neuváděj osobní ani citlivé údaje.",
+          "FocusKept můžeš vždy používat i bez AI — otázky si napíšeš sám a odpovědi si sám ohodnotíš."
+        ]
+      },
+      {
+        "heading": "Poskytovatelé služeb",
+        "paragraphs": [
+          "K provozu FocusKept využíváme tyto poskytovatele: OpenAI (funkce AI, viz výše); Resend (odesílání e-mailů); Polar (platby jako prodejce, který zajišťuje i faktury a daň z prodeje); PostHog (analytika produktu, jen s tvým souhlasem); Sentry (sledování chyb); Google (přihlášení, jen pokud ho zvolíš); Cloudflare (DNS a síť) a náš poskytovatel hostingu Hetzner Online GmbH.",
+          "Každý poskytovatel dostává jen údaje, které potřebuje ke svému úkolu. Někteří poskytovatelé mohou údaje zpracovávat mimo tvou zemi; kde je to nutné, opíráme se o vhodné záruky, například standardní smluvní doložky."
+        ]
+      },
+      {
+        "heading": "Jak dlouho údaje uchováváme",
+        "paragraphs": [
+          "Údaje o účtu a produktu uchováváme, dokud účet nesmažeš. Smazáním účtu se z naší databáze odstraní tvoje sezení, úkoly, karty, opakování a nastavení.",
+          "Záznamy o oznámeních mažeme po 180 dnech. Zálohy uchováváme po dobu 30 dnů a poté je přepisujeme. Platební záznamy uchovává Polar i my po dobu, kterou vyžaduje zákon."
+        ]
+      },
+      {
+        "heading": "Tvoje volby a práva",
+        "paragraphs": [
+          "Kdykoli si můžeš v nastavení stáhnout všechna svá data (JSON a CSV), měnit je v aplikaci, vypnout e-maily a oznámení, odvolat souhlas s analytikou a smazat účet.",
+          "Podle toho, kde žiješ, můžeš mít i právo na přístup k údajům, jejich opravu, omezení zpracování nebo vznesení námitky a právo podat stížnost u úřadu pro ochranu osobních údajů. Napiš na hello@focuskept.com a odpovíme ve lhůtě stanovené zákonem."
+        ]
+      },
+      {
+        "heading": "Cookies a místní úložiště",
+        "paragraphs": [
+          "Nezbytné cookies používáme k udržení přihlášení a zapamatování jazyka. Místní úložiště zařízení používáme pro běžící časovač, nastavení a — pokud nemáš účet — pro sezení. Analytické cookies se ukládají až po tvém souhlasu."
+        ]
+      },
+      {
+        "heading": "Děti",
+        "paragraphs": [
+          "FocusKept není určen dětem mladším 16 let bez souhlasu rodiče nebo zákonného zástupce. Pokud se domníváš, že nám dítě poskytlo osobní údaje bez souhlasu, kontaktuj nás a údaje smažeme."
+        ]
+      },
+      {
+        "heading": "Změny",
+        "paragraphs": [
+          "Pokud tyto zásady podstatně změníme, aktualizujeme datum výše a přihlášené uživatele informujeme v aplikaci nebo e-mailem."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Podmínky používání",
+    "updated": "Poslední aktualizace: 3. listopadu 2026",
+    "intro": "Tyto podmínky platí pro používání FocusKept, který provozuje Murad Gojayev, Baku, Ázerbájdžán. Používáním FocusKept s nimi souhlasíš.",
+    "sections": [
+      {
+        "heading": "Služba",
+        "paragraphs": [
+          "FocusKept nabízí časovač soustředění, plánování úkolů, nástroje pro učení, zpětnou vazbu a otázky generované AI a opakování na principu rozloženého opakování. Některé funkce vyžadují účet, jiné placený tarif."
+        ]
+      },
+      {
+        "heading": "Tvůj účet",
+        "paragraphs": [
+          "Chraň své přihlašovací údaje a dej nám vědět, pokud máš podezření na zneužití. Za činnost na svém účtu odpovídáš. Musíš uvést platnou e-mailovou adresu."
+        ]
+      },
+      {
+        "heading": "Přípustné používání",
+        "paragraphs": [
+          "Službu nezneužívej: žádné pokusy ji rozbít nebo přetížit, žádné automatizované stahování dat, žádný nezákonný obsah a žádné využívání funkcí AI k tvorbě škodlivého obsahu. Účty, které to dělají, můžeme pozastavit."
+        ]
+      },
+      {
+        "heading": "Funkce AI",
+        "paragraphs": [
+          "Zpětná vazba, otázky a hodnocení od AI se vytvářejí automaticky a mohou být chybné nebo neúplné. Podporují tvé učení, ale nejsou odborným poradenstvím. Důležité informace si ověřuj ve spolehlivých zdrojích.",
+          "Tarify Zdarma i Pro obsahují limity používání AI popsané v ceníku. Funkce AI můžeme dočasně omezit, aby služba zůstala spolehlivá."
+        ]
+      },
+      {
+        "heading": "Tvůj obsah",
+        "paragraphs": [
+          "Co ve FocusKept napíšeš, zůstává tvoje. Udílíš nám svolení obsah ukládat, zpracovávat a zobrazovat a předávat ho našim poskytovatelům služeb (včetně OpenAI pro funkce AI), a to jen v rozsahu nutném k poskytování služby."
+        ]
+      },
+      {
+        "heading": "Tarify, platby a zrušení",
+        "paragraphs": [
+          "Pro se prodává jako měsíční nebo roční předplatné prostřednictvím Polar, našeho prodejce (merchant of record). Ceny se zobrazí před platbou; mohou se uplatnit daně. Předplatné se automaticky obnovuje, dokud není zrušeno.",
+          "Zrušit ho můžeš kdykoli v sekci Platby; Pro zůstane aktivní do konce zaplaceného období. Vrácení peněz se řídí pravidly Polar a právem tvé země.",
+          "Když tarif skončí, stávající karty a opakování fungují dál; na nový obsah se uplatní limity tarifu Zdarma."
+        ]
+      },
+      {
+        "heading": "Název, logo a kód",
+        "paragraphs": [
+          "Název FocusKept a logo patří nám. Jakákoli open source licence na náš kód se vztahuje pouze na kód: nedává žádné právo používat náš název nebo logo a tyto podmínky se na službu FocusKept nadále vztahují."
+        ]
+      },
+      {
+        "heading": "Dostupnost a změny",
+        "paragraphs": [
+          "Snažíme se, aby byl FocusKept dostupný, ale nemůžeme zaručit nepřetržitý provoz. Funkce můžeme měnit nebo ukončit; pokud změna podstatně ovlivní placené funkce, dáme ti vědět předem."
+        ]
+      },
+      {
+        "heading": "Ukončení používání",
+        "paragraphs": [
+          "Účet můžeš kdykoli smazat v nastavení. Účty, které tyto podmínky vážně nebo opakovaně porušují, můžeme pozastavit nebo zrušit."
+        ]
+      },
+      {
+        "heading": "Odpovědnost",
+        "paragraphs": [
+          "FocusKept je poskytován tak, jak je. V rozsahu, který dovoluje zákon, neodpovídáme za nepřímé škody ani ztrátu dat a naše celková odpovědnost je omezena na částku, kterou jsi nám zaplatil během 12 měsíců před uplatněním nároku. Nic v těchto podmínkách neomezuje práva, která ti náleží podle předpisů na ochranu spotřebitele."
+        ]
+      },
+      {
+        "heading": "Rozhodné právo a kontakt",
+        "paragraphs": [
+          "Tyto podmínky se řídí právem Ázerbájdžánu, aniž by tím byla dotčena kogentní práva spotřebitele v místě tvého bydliště. Dotazy: hello@focuskept.com."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "O FocusKept",
+    "intro": "FocusKept je nezávislý produkt, který vytvořil jeden člověk, jenž chtěl jedno místo, kde se soustředit a skutečně si pamatovat, co se naučí.",
+    "sections": [
+      {
+        "heading": "Proč vznikl",
+        "paragraphs": [
+          "Časovače soustředění pomáhají začít, ale jakmile sezení skončí, všechno zapomenou. Aplikace s kartičkami pomáhají pamatovat si, ale psát kartičky ručně je dřina. FocusKept obojí spojuje: soustřeď se, vysvětli téma vlastními slovy a nech opakování, ať přijdou za tebou.",
+          "FocusKept navrhuje, vyvíjí a provozuje Murad Gojayev, softwarový inženýr z Baku v Ázerbájdžánu. Každá funkce stojí na dobře prozkoumaných metodách učení — blocích soustředěné práce, aktivním vybavování a rozloženém opakování — a zůstává jen tehdy, když usnadňuje je dlouhodobě dodržovat. Osobně odpovídá za produkt, podporu i ochranu tvých dat."
+        ]
+      },
+      {
+        "heading": "Jak pracujeme",
+        "paragraphs": [
+          "Žádné manipulativní triky (dark patterns), žádná vymyšlená čísla. Zdarma znamená opravdu užitečné a Pro platí AI a čas potřebný k provozu a zlepšování FocusKept.",
+          "Dotazy, nápady nebo chyby: hello@focuskept.com. Každou zprávu čte člověk."
+        ]
+      }
+    ]
+  }
+}

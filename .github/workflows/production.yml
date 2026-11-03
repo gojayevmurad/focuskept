@@ -1,0 +1,161 @@
+name: Release
+# Every main push that passes Quality is built once and deployed to staging.
+# Production is a manual promotion of an image staging already runs
+# (Actions → Release → Run workflow), so production never gets an untested build.
+on:
+  workflow_run:
+    workflows: [Quality]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: Commit on main to promote to production (empty = latest main)
+        type: string
+        required: false
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ github.event_name }}
+  cancel-in-progress: false
+jobs:
+  image:
+    if: >-
+      vars.DEPLOY_ACTORS != '' &&
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image: ${{ steps.ref.outputs.image }}
+      sha: ${{ steps.gate.outputs.sha }}
+    steps:
+      - name: Only the current main ships
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          CANDIDATE: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          [[ "$CANDIDATE" =~ ^[a-f0-9]{40}$ ]]
+          main_sha="$(gh api "repos/$REPOSITORY/commits/main" --jq .sha)"
+          [[ "$CANDIDATE" == "$main_sha" ]] || { echo 'main has moved on; its own run deploys the newer commit.' >&2; exit 1; }
+          echo "sha=$CANDIDATE" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ steps.gate.outputs.sha }}
+          persist-credentials: false
+      - uses: docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130 # v3
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
+      - uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: name
+        env:
+          REPOSITORY: ${{ github.repository }}
+        run: echo "name=ghcr.io/${REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+      - uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
+        id: build
+        with:
+          context: .
+          push: true
+          platforms: linux/arm64
+          # The server is ARM64; QEMU builds are slow, so reuse layers across runs.
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          tags: ${{ steps.name.outputs.name }}:${{ steps.gate.outputs.sha }}
+          build-args: |
+            NEXT_PUBLIC_POSTHOG_KEY=${{ vars.NEXT_PUBLIC_POSTHOG_KEY }}
+            NEXT_PUBLIC_POSTHOG_HOST=${{ vars.NEXT_PUBLIC_POSTHOG_HOST }}
+            NEXT_PUBLIC_SENTRY_DSN=${{ vars.NEXT_PUBLIC_SENTRY_DSN }}
+            NEXT_PUBLIC_SENTRY_RELEASE=${{ steps.gate.outputs.sha }}
+      - id: ref
+        env:
+          NAME: ${{ steps.name.outputs.name }}
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: |
+          echo "image=$NAME@$DIGEST" >> "$GITHUB_OUTPUT"
+          echo "Image: $NAME@$DIGEST" >> "$GITHUB_STEP_SUMMARY"
+  staging:
+    needs: image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.image.outputs.sha }}
+          persist-credentials: false
+      - uses: ./.github/actions/deploy
+        with:
+          target: staging
+          host: ${{ secrets.DEPLOY_HOST }}
+          user: ${{ secrets.DEPLOY_USER }}
+          image: ${{ needs.image.outputs.image }}
+          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          known-hosts: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          registry-token: ${{ github.token }}
+  promote:
+    if: vars.DEPLOY_ACTORS != '' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      packages: read
+    steps:
+      - name: Authorize and find the image staging deployed
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          ACTOR: ${{ github.actor }}
+          ALLOWED_ACTORS: ${{ vars.DEPLOY_ACTORS }}
+          REQUESTED: ${{ inputs.sha }}
+        run: |
+          set -euo pipefail
+          [[ ",${ALLOWED_ACTORS// /}," == *",$ACTOR,"* ]] || { echo 'Only actors listed in DEPLOY_ACTORS can promote.' >&2; exit 1; }
+          sha="${REQUESTED:-$(gh api "repos/$REPOSITORY/commits/main" --jq .sha)}"
+          [[ "$sha" =~ ^[a-f0-9]{40}$ ]] || { echo 'Pass a full 40-character commit SHA.' >&2; exit 1; }
+          status="$(gh api "repos/$REPOSITORY/compare/main...$sha" --jq .status)"
+          [[ "$status" == identical || "$status" == behind ]] || { echo 'That commit is not on main.' >&2; exit 1; }
+          # A successful Release run for this commit means its image passed staging.
+          gh api "repos/$REPOSITORY/actions/workflows/production.yml/runs?head_sha=$sha&event=workflow_run&status=success" --jq '.total_count > 0' | grep -qx true || { echo 'This commit has not been deployed to staging successfully.' >&2; exit 1; }
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "name=ghcr.io/${REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+      - uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: ref
+        env:
+          NAME: ${{ steps.gate.outputs.name }}
+          SHA: ${{ steps.gate.outputs.sha }}
+        run: |
+          set -euo pipefail
+          digest="$(docker buildx imagetools inspect "$NAME:$SHA" --format '{{json .Manifest}}' | jq -r .digest)"
+          [[ "$digest" =~ ^sha256:[a-f0-9]{64}$ ]]
+          echo "image=$NAME@$digest" >> "$GITHUB_OUTPUT"
+          echo "Promoting $SHA: $NAME@$digest" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ steps.gate.outputs.sha }}
+          persist-credentials: false
+      - uses: ./.github/actions/deploy
+        with:
+          target: production
+          host: ${{ secrets.DEPLOY_HOST }}
+          user: ${{ secrets.DEPLOY_USER }}
+          image: ${{ steps.ref.outputs.image }}
+          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          known-hosts: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          registry-token: ${{ github.token }}

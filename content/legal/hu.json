@@ -1,0 +1,171 @@
+{
+  "privacy": {
+    "title": "Adatvédelmi tájékoztató",
+    "updated": "Utolsó frissítés: 2026. október 31.",
+    "intro": "Ez a tájékoztató elmagyarázza, milyen adatokat gyűjt a FocusKept, miért, kik segítenek a kezelésükben, és milyen lehetőségeid vannak. A FocusKept üzemeltetője: Murad Gojayev, Baku, Azerbajdzsán. Kapcsolat: hello@focuskept.com.",
+    "sections": [
+      {
+        "heading": "Milyen adatokat gyűjtünk",
+        "paragraphs": [
+          "Fiókadatok: a neved, az e-mail-címed és egy biztonságosan hashelt jelszó, illetve Google-bejelentkezés esetén a Google-fiókod azonosítója.",
+          "A termékben általad létrehozott adatok: fókuszmunkamenetek (technika, időtartam, fókuszértékelés, jegyzetek és célok), feladatok és projektek, tanulási témák, jegyzetek, Feynman-féle magyarázatok, ismétlő kérdések, az ismétléskor adott válaszaid és azok eredménye, valamint a beállításaid (nyelv, időzóna, emlékeztető időpontja és hasonlók).",
+          "Eszköz- és értesítési adatok: ha bekapcsolod a böngészőértesítéseket, a böngésződ által megadott push-feliratkozási cím. Biztonsági okból a bejelentkezési munkamenetek tárolják az IP-címedet és a böngésződ azonosítóját (user agent).",
+          "Fiók nélkül a munka mód munkamenetei és feladatai a böngésződ helyi tárolójában maradnak, az eszközödön. Csak akkor kerülnek a szervereinkre, ha regisztráció után úgy döntesz, hogy importálod őket.",
+          "Opcionális analitika: csak ha engedélyezed, gyűjtünk névtelen használati eseményeket (például hogy egy munkamenet vagy ismétlés befejeződött). A szövegeidet, magyarázataidat és válaszaidat soha nem küldjük az analitikába."
+        ]
+      },
+      {
+        "heading": "Mire használjuk",
+        "paragraphs": [
+          "A szolgáltatás nyújtására: az időzítő és a statisztika működtetésére, az ismétlések ütemezésére, a kért emlékeztetők küldésére és a fiókod védelmére.",
+          "Az MI-funkciók nyújtására: visszajelzés, ismétlő kérdések és a válaszok értékelése az általad írtak alapján.",
+          "A fizetések feldolgozására és a csomagod kezelésére a fizetési szolgáltatónkon keresztül.",
+          "A termék megértésére és fejlesztésére: analitikával csak a hozzájárulásoddal, valamint hibajelentésekkel, amelyekből amennyire lehet, eltávolítjuk a személyes adatokat."
+        ]
+      },
+      {
+        "heading": "MI-alapú feldolgozás az OpenAI-nál",
+        "paragraphs": [
+          "Amikor MI-visszajelzést, kérdéskészítést vagy válaszértékelést használsz, a témát, a magyarázatodat, a kérdéseket és a válaszaidat feldolgozásra elküldjük az OpenAI-nak.",
+          "OpenAI-projektünk úgy van beállítva, hogy megossza az API-adatokat az OpenAI-jal, ami azt jelenti, hogy az OpenAI felhasználhatja ezt a tartalmat a modelljei fejlesztésére. Kérjük, ne írj személyes vagy érzékeny adatot a magyarázataidba vagy a válaszaidba.",
+          "A FocusKeptet mindig használhatod MI nélkül is: a kérdéseket magad írod, a válaszaidat magad értékeled."
+        ]
+      },
+      {
+        "heading": "Szolgáltatók",
+        "paragraphs": [
+          "A FocusKept működtetéséhez ezeket a szolgáltatókat vesszük igénybe: OpenAI (MI-funkciók, lásd fent); Resend (e-mail-küldés); Polar (fizetés, viszonteladóként, amely a számlákat és a forgalmi adót is kezeli); PostHog (termékanalitika, csak a hozzájárulásoddal); Sentry (hibafigyelés); Google (bejelentkezés, csak ha ezt választod); Cloudflare (DNS és hálózat); valamint tárhelyszolgáltatónk Hetzner Online GmbH.",
+          "Minden szolgáltató csak a feladatához szükséges adatokat kapja meg. Egyes szolgáltatók az országodon kívül is kezelhetnek adatokat; ahol szükséges, megfelelő garanciákra, például általános szerződési feltételekre támaszkodunk."
+        ]
+      },
+      {
+        "heading": "Meddig tároljuk az adatokat",
+        "paragraphs": [
+          "A fiók- és termékadataidat a fiókod törléséig tároljuk. A fiók törlésével a munkameneteid, feladataid, kártyáid, ismétléseid és beállításaid törlődnek az adatbázisunkból.",
+          "Az értesítési naplókat 180 nap után töröljük. A biztonsági mentéseket 30 nap ideig őrizzük, majd felülírjuk. A fizetési nyilvántartásokat a Polar és mi a jogszabályok által előírt ideig őrizzük."
+        ]
+      },
+      {
+        "heading": "A választási lehetőségeid és jogaid",
+        "paragraphs": [
+          "Bármikor letöltheted az összes adatodat a beállításokban (JSON és CSV), módosíthatod őket az alkalmazásban, kikapcsolhatod az e-maileket és értesítéseket, visszavonhatod az analitikai hozzájárulást, és törölheted a fiókodat.",
+          "Lakóhelyedtől függően jogod lehet az adataidhoz való hozzáféréshez, azok helyesbítéséhez, a kezelés korlátozásához vagy a kezelés elleni tiltakozáshoz, valamint panaszt tehetsz egy adatvédelmi hatóságnál. Írj a hello@focuskept.com címre, és a jogszabályban előírt határidőn belül válaszolunk."
+        ]
+      },
+      {
+        "heading": "Sütik és helyi tároló",
+        "paragraphs": [
+          "Szükséges sütiket használunk, hogy bejelentkezve maradj és megjegyezzük a nyelvedet. Az eszközöd helyi tárolóját a futó időzítőhöz, a beállításaidhoz és — fiók nélkül — a munkameneteidhez használjuk. Analitikai sütiket csak a hozzájárulásod után helyezünk el."
+        ]
+      },
+      {
+        "heading": "Gyermekek",
+        "paragraphs": [
+          "A FocusKept nem 16 év alatti gyermekeknek szól szülő vagy gondviselő hozzájárulása nélkül. Ha úgy gondolod, hogy egy gyermek hozzájárulás nélkül adott meg nekünk személyes adatot, lépj kapcsolatba velünk, és töröljük."
+        ]
+      },
+      {
+        "heading": "Változások",
+        "paragraphs": [
+          "Ha lényegesen módosítjuk ezt a tájékoztatót, frissítjük a fenti dátumot, és a bejelentkezett felhasználókat az alkalmazásban vagy e-mailben értesítjük."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Felhasználási feltételek",
+    "updated": "Utolsó frissítés: 2026. november 3.",
+    "intro": "Ezek a feltételek a FocusKept használatára vonatkoznak, amelyet Murad Gojayev, Baku, Azerbajdzsán üzemeltet. A FocusKept használatával elfogadod őket.",
+    "sections": [
+      {
+        "heading": "A szolgáltatás",
+        "paragraphs": [
+          "A FocusKept fókuszidőzítőt, feladattervezést, tanulási eszközöket, MI által készített visszajelzést és kérdéseket, valamint elosztott ismétlésen alapuló ismétléseket kínál. Egyes funkciókhoz fiók, másokhoz fizetős csomag szükséges."
+        ]
+      },
+      {
+        "heading": "A fiókod",
+        "paragraphs": [
+          "Tartsd biztonságban a belépési adataidat, és szólj nekünk, ha visszaélést gyanítasz. A fiókodban végzett tevékenységért te felelsz. Érvényes e-mail-címet kell megadnod."
+        ]
+      },
+      {
+        "heading": "Elfogadható használat",
+        "paragraphs": [
+          "Ne élj vissza a szolgáltatással: ne próbáld feltörni vagy túlterhelni, ne gyűjts automatizáltan adatokat, ne tölts fel jogellenes tartalmat, és ne használd az MI-funkciókat ártalmas anyag készítésére. Az ilyen fiókokat felfüggeszthetjük."
+        ]
+      },
+      {
+        "heading": "MI-funkciók",
+        "paragraphs": [
+          "Az MI által készített visszajelzés, kérdések és értékelés automatikusan jön létre, és lehet hibás vagy hiányos. Támogatja a tanulásodat, de nem minősül szakmai tanácsadásnak. A fontos információkat ellenőrizd megbízható forrásokból.",
+          "Az Ingyenes és a Pro csomag az árak oldalon leírt MI-használati korlátokat tartalmaz. A szolgáltatás megbízhatósága érdekében ideiglenesen korlátozhatjuk az MI-funkciókat."
+        ]
+      },
+      {
+        "heading": "A tartalmad",
+        "paragraphs": [
+          "Amit a FocusKeptbe írsz, a tiéd marad. Engedélyt adsz nekünk, hogy tároljuk, feldolgozzuk és megjelenítsük, valamint továbbítsuk a szolgáltatóinknak (beleértve az OpenAI-t az MI-funkciókhoz), kizárólag a szolgáltatás nyújtásához szükséges mértékben."
+        ]
+      },
+      {
+        "heading": "Csomagok, fizetés és lemondás",
+        "paragraphs": [
+          "A Pro havi vagy éves előfizetésként érhető el a Polaron, a viszonteladónkon (merchant of record) keresztül. Az árakat fizetés előtt megjelenítjük; adók merülhetnek fel. Az előfizetések lemondásig automatikusan megújulnak.",
+          "Bármikor lemondhatod a Számlázás oldalon; a Pro a kifizetett időszak végéig aktív marad. A visszatérítésekre a Polar szabályzata és az országod joga irányadó.",
+          "Ha a csomagod lejár, a meglévő kártyáid és ismétléseid tovább működnek; az új tartalomra az Ingyenes csomag korlátai vonatkoznak."
+        ]
+      },
+      {
+        "heading": "Név, logó és kód",
+        "paragraphs": [
+          "A FocusKept név és a logó a miénk. A kódunkra vonatkozó bármely nyílt forráskódú licenc csak a kódra terjed ki: nem ad jogot a nevünk vagy a logónk használatára, és ezek a feltételek továbbra is érvényesek a FocusKept szolgáltatásra."
+        ]
+      },
+      {
+        "heading": "Elérhetőség és változások",
+        "paragraphs": [
+          "Igyekszünk a FocusKeptet elérhetőnek tartani, de nem garantálhatjuk a folyamatos, megszakítás nélküli működést. Funkciókat módosíthatunk vagy megszüntethetünk; ha egy változás jelentősen érinti a fizetős funkciókat, előre szólunk."
+        ]
+      },
+      {
+        "heading": "A használat befejezése",
+        "paragraphs": [
+          "A fiókodat bármikor törölheted a beállításokban. Felfüggeszthetjük vagy megszüntethetjük azokat a fiókokat, amelyek súlyosan vagy ismételten megsértik ezeket a feltételeket."
+        ]
+      },
+      {
+        "heading": "Felelősség",
+        "paragraphs": [
+          "A FocusKeptet a jelenlegi állapotában biztosítjuk. A jogszabályok által megengedett mértékben nem felelünk a közvetett károkért vagy az adatvesztésért, teljes felelősségünk pedig az igény előtti 12 hónapban nekünk fizetett összegre korlátozódik. E feltételekben semmi sem korlátozza a fogyasztóvédelmi jogszabályok szerinti jogaidat."
+        ]
+      },
+      {
+        "heading": "Irányadó jog és kapcsolat",
+        "paragraphs": [
+          "E feltételekre Azerbajdzsán joga az irányadó, a lakóhelyed szerinti kötelező fogyasztói jogok sérelme nélkül. Kérdések: hello@focuskept.com."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "A FocusKeptről",
+    "intro": "A FocusKept független termék, amelyet egyetlen ember készített, mert egy helyet szeretett volna, ahol fókuszálhat, és valóban megjegyezheti, amit tanul.",
+    "sections": [
+      {
+        "heading": "Miért létezik",
+        "paragraphs": [
+          "A fókuszidőzítők segítenek elkezdeni, de a munkamenet végeztével mindent elfelejtenek. A szókártyás alkalmazások segítenek emlékezni, de a kártyák kézzel írása fárasztó. A FocusKept összeköti a kettőt: fókuszálj, magyarázd el a saját szavaiddal, és hagyd, hogy az ismétlések érkezzenek hozzád.",
+          "A FocusKeptet Murad Gojayev tervezi, fejleszti és üzemelteti, aki szoftvermérnök Bakuban, Azerbajdzsánban. Minden funkció jól kutatott tanulási módszerekre épül — fókuszált munkablokkokra, előhívásos gyakorlásra és időközönkénti ismétlésre —, és csak akkor marad, ha megkönnyíti ezek kitartó alkalmazását. Személyesen felel a termékért, a támogatásért és az adataid védelméért."
+        ]
+      },
+      {
+        "heading": "Hogyan dolgozunk",
+        "paragraphs": [
+          "Nincsenek trükkös csapdák (dark patterns), nincsenek kitalált számok. Az ingyenes valóban hasznosat jelent, a Pro pedig az MI-t és azt az időt fizeti, amely a FocusKept működtetéséhez és fejlesztéséhez kell.",
+          "Kérdések, ötletek vagy hibák: hello@focuskept.com. Minden üzenetet ember olvas el."
+        ]
+      }
+    ]
+  }
+}

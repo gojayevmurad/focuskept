@@ -1,0 +1,721 @@
+{
+  "pomodoro": {
+    "name": "25/5",
+    "tagline": "25 minuten focus, 5 minuten rust. En weer opnieuw.",
+    "summary": "De 25/5-methode verdeelt werk in korte, getimede blokken met pauzes ertussen. Zo is beginnen makkelijk en blijft je energie de hele dag op peil.",
+    "howItWorks": [
+      "Je richt je op één taak gedurende één blok van 25 minuten. In dat blok doe je niets anders: geen e-mail, geen chat, niet even snel iets checken. Als de timer gaat, stop je en neem je 5 minuten pauze, ook als je midden in iets zit.",
+      "Na vier blokken neem je een langere pauze van 15 tot 30 minuten. Het vaste ritme maakt van een vaag doel als ‘de hele middag studeren’ kleine, telbare eenheden. Zo wordt uitstellen lastiger en zie je je voortgang. In FocusKept kun je het werkblok (10–60 min), de pauzes en het aantal rondes aanpassen."
+    ],
+    "steps": [
+      "Kies één taak en schrijf op wanneer hij voor dit blok ‘klaar’ is.",
+      "Start een timer van 25 minuten en werk alleen aan die taak.",
+      "Komt er een afleiding op, noteer hem en ga terug naar je taak.",
+      "Gaat de timer, stop dan en neem 5 minuten pauze, weg van het scherm.",
+      "Neem na vier blokken een langere pauze van 15–30 minuten."
+    ],
+    "bestFor": [
+      "Beginnen aan taken die je al lang voor je uit schuift",
+      "Studeren, lezen en herhalen",
+      "Dagen vol kleine taken met veel onderbrekingen"
+    ],
+    "whenNotToUse": [
+      "Diep creatief werk of programmeren waarbij 25 minuten je flow onderbreekt; probeer 52/17 of Deep Work 90",
+      "Taken met een ritme van buitenaf, zoals vergaderingen of live gesprekken"
+    ],
+    "faq": [
+      {
+        "q": "Waarom 25 minuten?",
+        "a": "Vijfentwintig minuten is lang genoeg om echt op te schieten en kort genoeg om beginnen makkelijk te maken. Het is een standaard, geen regel: veel mensen komen uit op 30 tot 50 minuten zodra de gewoonte er is."
+      },
+      {
+        "q": "Wat als ik de taak eerder af heb?",
+        "a": "Gebruik de resterende minuten om na te kijken, bij te schaven of de volgende stap te plannen. Ben je echt klaar? Rond het blok af en begin fris aan de volgende taak."
+      },
+      {
+        "q": "Moet ik de pauze overslaan als het lekker loopt?",
+        "a": "Korte pauzes houden je aandacht urenlang fris. Halen ze je steeds uit je flow, stap dan over op Flowtime of een langer werkblok in plaats van ze over te slaan."
+      },
+      {
+        "q": "Werkt de 25/5-methode voor studeren?",
+        "a": "Ja. Hij gaat goed samen met actief ophalen: één blok lezen, één blok jezelf overhoren. De leermodus van FocusKept voegt daar een Feynman-uitleg en gespreide herhalingen aan toe."
+      }
+    ],
+    "seoTitle": "25/5-focustimer: de methode van 25 minuten uitgelegd",
+    "seoDescription": "Gebruik de 25/5-methode online: 25 minuten focus, 5 minuten pauze en een lange pauze na vier cycli. Gratis timer, stappenplan en tips."
+  },
+  "52-17": {
+    "name": "52/17",
+    "tagline": "52 minuten diepe focus, 17 minuten echte rust.",
+    "summary": "De 52/17-methode wisselt langere focusblokken af met ruime pauzes. Hij past bij iedereen die 25 minuten te kort vindt om echt in een taak te komen.",
+    "howItWorks": [
+      "Je werkt 52 minuten volledig geconcentreerd en loopt daarna 17 minuten weg. De verhouding komt uit tijdregistraties van zeer productieve kantoorwerkers, die vanzelf werkten in rondes van ongeveer een uur met flinke pauzes.",
+      "Die lange pauze is de kern: loop een stukje, rek je uit, drink water, kijk naar buiten. Na echte rust zijn de volgende 52 minuten net zo scherp als de eerste."
+    ],
+    "steps": [
+      "Kies een taak die langdurige aandacht vraagt.",
+      "Zet meldingen uit en focus 52 minuten.",
+      "Neem 17 minuten pauze, weg van je scherm.",
+      "Start het volgende blok van 52 minuten met een frisse blik."
+    ],
+    "bestFor": [
+      "Schrijven, analyseren en geconcentreerd kantoorwerk",
+      "Mensen die de pauzes van 25/5 te vaak vinden",
+      "Halve dagen diep werk"
+    ],
+    "whenNotToUse": [
+      "Als beginnen op zich al lastig is; een blok van 25 minuten is milder",
+      "Heel korte taken die geen lang blok nodig hebben"
+    ],
+    "faq": [
+      {
+        "q": "Is 52/17 beter dan 25/5?",
+        "a": "Geen van beide is voor iedereen beter. 52/17 geeft meer tijd om in een taak te komen; 25/5 maakt beginnen makkelijker. Het Lab van FocusKept vergelijkt je focusscores, zodat je ziet wat voor jou werkt."
+      },
+      {
+        "q": "Wat doe ik in de pauze van 17 minuten?",
+        "a": "Alles behalve nog meer schermwerk: bewegen, drinken, je ogen rust geven of daglicht opzoeken. Scrollen op je telefoon maakt het volgende blok meestal zwaarder."
+      },
+      {
+        "q": "Kan ik de getallen aanpassen?",
+        "a": "De 52/17-timer houdt de klassieke verhouding aan. Gebruik de eigen timer als je je eigen werk- en pauzetijden wilt."
+      }
+    ],
+    "seoTitle": "52/17-methode: 52 minuten werken, 17 minuten pauze",
+    "seoDescription": "Probeer de 52/17-methode: 52 minuten geconcentreerd werken en 17 minuten pauze. Gratis online timer met een eenvoudige uitleg voor langere focussessies."
+  },
+  "flowtime": {
+    "name": "Flowtime",
+    "tagline": "Werk tot je focus wegzakt en rust naar verhouding.",
+    "summary": "Flowtime vervangt een vaste timer door een stopwatch. Je stopt als je aandacht wegzakt en neemt een pauze die past bij hoe lang je hebt gewerkt.",
+    "howItWorks": [
+      "Start de timer en werk aan één taak zolang je gefocust blijft. Merk je dat je aandacht wegglijdt, stop dan. FocusKept stelt een pauze voor van een vijfde van je werktijd, tussen 5 en 30 minuten: 40 minuten werk geeft 8 minuten pauze, 2 uur geeft 24 minuten.",
+      "Omdat jij bepaalt wanneer je stopt, beschermt Flowtime diepe flow en zorgt het toch dat je rust neemt. Na verloop van tijd laat je sessiegeschiedenis zien hoe lang jouw natuurlijke focus duurt."
+    ],
+    "steps": [
+      "Kies één taak en start de optellende timer.",
+      "Werk tot je focus echt wegzakt, niet bij de eerste neiging om te wisselen.",
+      "Tik op ‘Pauze nemen’ en rust de voorgestelde tijd (werktijd ÷ 5, 5–30 min).",
+      "Begin opnieuw als de pauze voorbij is."
+    ],
+    "bestFor": [
+      "Creatief werk en programmeren, waar onderbrekingen duur zijn",
+      "Mensen die 25/5-pauzes vaak overslaan",
+      "Ontdekken hoe lang jouw natuurlijke focus duurt"
+    ],
+    "whenNotToUse": [
+      "Als je zonder deadline snel afdwaalt; een vaste timer geeft meer structuur",
+      "Dagen met vaste tijdvakken tussen vergaderingen"
+    ],
+    "faq": [
+      {
+        "q": "Hoe wordt de Flowtime-pauze berekend?",
+        "a": "FocusKept stelt een vijfde van je werktijd voor, met een minimum van 5 en een maximum van 30 minuten."
+      },
+      {
+        "q": "En als ik nooit zin heb om te stoppen?",
+        "a": "Neem toch minstens elke 90 minuten een pauze. Lange stukken zonder rust verlagen ongemerkt de kwaliteit, ook als ze productief voelen."
+      },
+      {
+        "q": "Is Flowtime geschikt voor beginners?",
+        "a": "Als je al van geconcentreerd werken houdt, ja. Is beginnen het lastige deel, start dan met 25/5 en stap later over op Flowtime."
+      }
+    ],
+    "seoTitle": "Flowtime-techniek: timer voor flexibele focussessies",
+    "seoDescription": "Met de Flowtime-techniek werk je tot je focus wegzakt en neem je daarna een passende pauze. Gratis optellende timer met automatisch pauzevoorstel."
+  },
+  "deep-work-90": {
+    "name": "Deep Work 90",
+    "tagline": "Eén blok van 90 minuten voor je zwaarste werk.",
+    "summary": "Deep Work 90 geeft je één ononderbroken sessie van 90 minuten, gevolgd door 20 minuten pauze, passend bij de lengte van een natuurlijke aandachtscyclus.",
+    "howItWorks": [
+      "Bij veel mensen gaat de concentratie op en neer in cycli van ongeveer anderhalf uur. Een blok van 90 minuten gebruikt één volledige cyclus voor moeilijk, betekenisvol werk; daarna laat een pauze van 20 minuten je herstellen voor het volgende.",
+      "Behandel het blok als een belangrijke afspraak met jezelf: kies de taak vooraf, sluit al het andere en bescherm die tijd. Eén of twee van zulke blokken per dag brengen je grootste projecten verder."
+    ],
+    "steps": [
+      "Bepaal vooraf welke taak je diepste focus verdient.",
+      "Sluit mail en chat, zet je telefoon op stil en start de timer van 90 minuten.",
+      "Werk alleen aan die taak tot de timer afloopt.",
+      "Neem een volle pauze van 20 minuten voordat je aan iets anders zwaars begint."
+    ],
+    "bestFor": [
+      "Schrijven, onderzoek, ontwerp en complex programmeerwerk",
+      "Je belangrijkste taak van de dag",
+      "Ochtenden of andere momenten met veel energie"
+    ],
+    "whenNotToUse": [
+      "Als je moe bent of vaak wordt gestoord; begin met kortere blokken",
+      "Oppervlakkige taken zoals e-mail of administratie"
+    ],
+    "faq": [
+      {
+        "q": "Kan ik me echt 90 minuten concentreren?",
+        "a": "Dat vraagt oefening. Begin met blokken van 50–60 minuten en maak ze langer naarmate de gewoonte groeit. De score na elke sessie laat zien hoe het ging."
+      },
+      {
+        "q": "Hoeveel blokken diep werk per dag?",
+        "a": "Twee tot drie is voor de meeste mensen ruim voldoende. Gebruik de rest van de dag voor lichter werk."
+      },
+      {
+        "q": "Wat telt als diep werk?",
+        "a": "Werk dat je volle aandacht vraagt en echte waarde oplevert, zoals schrijven, problemen oplossen of iets moeilijks leren."
+      }
+    ],
+    "seoTitle": "Deep Work-timer: focussessies van 90 minuten",
+    "seoDescription": "Plan sessies diep werk van 90 minuten met 20 minuten pauze. Gratis timer en uitleg voor geconcentreerd werk zonder afleiding aan wat er echt toe doet."
+  },
+  "custom": {
+    "name": "Eigen timer",
+    "tagline": "Je eigen werk- en pauzetijden, opgeslagen als presets.",
+    "summary": "Met de eigen timer stel je elk werkblok, elke korte en lange pauze en het aantal rondes in, en sla je tot vijf presets op.",
+    "howItWorks": [
+      "Niet elke taak past bij een bekende verhouding. Met de eigen timer kies je hoe lang je werkt (1–180 minuten), hoe lang je rust en na hoeveel blokken een lange pauze volgt.",
+      "Sla je favoriete combinaties op als presets, zodat ze één tik verwijderd zijn, bijvoorbeeld ‘Lezen 40/10’ of ‘Examentraining 30/5’."
+    ],
+    "steps": [
+      "Stel je werkblok, korte pauze, lange pauze en rondes in.",
+      "Sla de combinatie eventueel op als preset (maximaal vijf).",
+      "Start de timer en volg het ritme dat je zelf hebt bedacht."
+    ],
+    "bestFor": [
+      "Experimenteren om je eigen ritme te vinden",
+      "Terugkerende routines met een vaste vorm",
+      "Aansluiten op de lengte van een les, practicum of examen"
+    ],
+    "whenNotToUse": [
+      "Als je niet weet waar je moet beginnen; probeer eerst 25/5 en stel later bij"
+    ],
+    "faq": [
+      {
+        "q": "Hoeveel presets kan ik opslaan?",
+        "a": "Tot vijf. Je kunt ze aanpassen of verwijderen in Instellingen."
+      },
+      {
+        "q": "Hoe weet ik welke instellingen het best werken?",
+        "a": "Beoordeel je focus na elke sessie. Het Lab vergelijkt je scores per techniek en duur."
+      },
+      {
+        "q": "Met welke techniek begin ik het best?",
+        "a": "Heb je geen voorkeur, begin dan een week met 25/5. Pas daarna de werk- en pauzetijden aan in een eigen preset, op basis van je focusscores."
+      }
+    ],
+    "seoTitle": "Eigen focustimer met presets",
+    "seoDescription": "Maak je eigen focustimer: kies werk- en pauzetijden, lange pauzes en rondes, en sla presets op. Gratis en eenvoudig in gebruik."
+  },
+  "timeboxing": {
+    "name": "Timeboxing",
+    "tagline": "Geef een taak een vaste hoeveelheid tijd en beslis dan.",
+    "summary": "Bij timeboxing krijgt elke taak een vast tijdbudget. Loopt de timebox af, dan beslis je: klaar, één keer verlengen of naar later verplaatsen.",
+    "howItWorks": [
+      "In plaats van door te werken tot een taak af is, bepaal je vooraf hoeveel tijd hij verdient, bijvoorbeeld 30 minuten voor een eerste versie van een rapport. De grens dwingt je tot de kern en voorkomt dat perfectionisme je dag opslokt.",
+      "Loopt de timebox af, dan vraagt FocusKept je te kiezen: als klaar markeren, één keer verlengen met 25% van de timebox, of de taak naar later verplaatsen. Alle tijd boven de oorspronkelijke timebox wordt vastgelegd als overschrijding, zodat je ziet hoe goed je inschat."
+    ],
+    "steps": [
+      "Kies een taak en bepaal hoeveel minuten hij verdient.",
+      "Start de timebox en werk alleen aan die taak.",
+      "Is de tijd om, kies dan: klaar, één keer verlengen (+25%) of naar later.",
+      "Bekijk je overschrijding in de statistieken om beter te leren inschatten."
+    ],
+    "bestFor": [
+      "Taken die uitdijen tot ze alle beschikbare tijd vullen",
+      "Perfectionisten en eindeloze bijschavers",
+      "Een dag plannen met veel verschillende taken"
+    ],
+    "whenNotToUse": [
+      "Open verkenningen waarvan de uitkomst onbekend is",
+      "Leersessies die herhaalde rondes nodig hebben"
+    ],
+    "faq": [
+      {
+        "q": "Wat als ik het niet op tijd af heb?",
+        "a": "Je kunt één keer verlengen met een kwart van de timebox of de taak naar later verplaatsen. Allebei prima; het gaat om een bewuste keuze."
+      },
+      {
+        "q": "Hoe lang moet een timebox zijn?",
+        "a": "Voor de meeste taken tussen 15 en 90 minuten. Korte timeboxen geven urgentie; langere passen bij grotere klussen."
+      },
+      {
+        "q": "Wat is overschrijding?",
+        "a": "De tijd die je na de oorspronkelijke timebox nog besteedt. Is die steeds hoog, dan zijn je inschattingen te optimistisch."
+      }
+    ],
+    "seoTitle": "Timeboxing: timer en uitleg van de techniek",
+    "seoDescription": "Leer timeboxing: geef elke taak een vaste tijd en rond af, verleng één keer of plan opnieuw. Gratis timer die je inschattingen en overschrijdingen bijhoudt."
+  },
+  "feynman": {
+    "name": "Feynman",
+    "tagline": "Leg het simpel uit. Ontdek wat je echt begrijpt.",
+    "summary": "De Feynman-techniek test je begrip doordat je een onderwerp in eenvoudige taal uitlegt, alsof je het aan een kind van 12 vertelt. De gaten in je uitleg laten zien wat je hierna moet leren.",
+    "howItWorks": [
+      "De techniek is vernoemd naar natuurkundige Richard Feynman en is eenvoudig: schrijf na het bestuderen van een onderwerp een uitleg in alledaagse woorden en korte zinnen, alsof je een nieuwsgierig kind van 12 iets leert. Vakjargon is een waarschuwingssignaal, want het verbergt vaak een gat.",
+      "Waar je vastloopt of vaag wordt, ga je terug naar de bron, vul je het gat en maak je het opnieuw eenvoudiger. In FocusKept eindigt elke leersessie met een Feynman-uitleg; AI wijst daarna gaten en fouten aan en maakt van je uitleg herhaalvragen."
+    ],
+    "steps": [
+      "Bestudeer het onderwerp met je bronmateriaal.",
+      "Sluit de bron en leg het onderwerp in eenvoudige woorden uit, alsof het voor een kind van 12 is.",
+      "Markeer de plekken waar je vastliep of jargon gebruikte.",
+      "Ga terug naar de bron om die gaten te vullen.",
+      "Maak je uitleg opnieuw eenvoudiger tot hij soepel loopt."
+    ],
+    "bestFor": [
+      "Begrippen, theorieën en ‘hoe werkt het’-onderwerpen",
+      "Je echte begrip toetsen voor een tentamen",
+      "Van lezen blijvende kennis maken"
+    ],
+    "whenNotToUse": [
+      "Puur stampwerk zoals woordjes of jaartallen; gebruik actief ophalen of gespreide herhaling",
+      "Vaardigheden die oefenen vragen in plaats van uitleggen"
+    ],
+    "faq": [
+      {
+        "q": "Waarom uitleggen aan een kind van 12?",
+        "a": "Een kind pikt geen jargon, dus je moet weten wat de woorden betekenen. Eenvoudige taal legt vaag begrip snel bloot."
+      },
+      {
+        "q": "Moet ik het hardop zeggen?",
+        "a": "Schrijven werkt net zo goed en levert iets op wat je kunt herhalen. In FocusKept wordt je uitleg de kern van je kenniskaart."
+      },
+      {
+        "q": "Wat controleert de AI?",
+        "a": "Hij zoekt naar ontbrekende stukken en fouten, geeft een helderheidsscore en stelt een eenvoudigere versie voor. Jij houdt de regie: je past alles aan en keurt alles goed."
+      },
+      {
+        "q": "Hoe lang moet mijn uitleg zijn?",
+        "a": "Een paar heldere alinea’s is ideaal. FocusKept vraagt minstens 80 tekens en staat er tot 6000 toe."
+      }
+    ],
+    "seoTitle": "Feynman-techniek: leer alles door het uit te leggen",
+    "seoDescription": "Zo gebruik je de Feynman-techniek: leg een onderwerp eenvoudig uit, vind de gaten en vul ze. Gratis uitleg met AI-feedback en automatische herhaalvragen."
+  },
+  "active-recall": {
+    "name": "Actief ophalen",
+    "tagline": "Haal informatie uit je geheugen in plaats van hem te herlezen.",
+    "summary": "Actief ophalen betekent jezelf overhoren in plaats van herlezen. Elke keer dat je een antwoord uit je geheugen haalt, lukt dat de volgende keer makkelijker.",
+    "howItWorks": [
+      "Herlezen voelt productief, maar zorgt vooral voor herkenning, niet voor onthouden. Actief ophalen draait het om: je sluit het materiaal en stelt jezelf vragen, schrijft op wat je je herinnert of maakt opgaven zonder te kijken.",
+      "Juist de moeite van het ophalen versterkt de herinnering. FocusKept maakt van je uitleg vragen en stelt die opnieuw op dag 5, 10 en 30, zodat actief ophalen vanzelf gebeurt."
+    ],
+    "steps": [
+      "Bestudeer een deel van je materiaal één keer, aandachtig.",
+      "Sluit het en schrijf vragen op over de kernideeën.",
+      "Beantwoord de vragen uit je geheugen, zonder te kijken.",
+      "Controleer je antwoorden en markeer wat je miste.",
+      "Bestudeer alleen opnieuw wat je fout had."
+    ],
+    "bestFor": [
+      "Je voorbereiden op tentamens in elk vak",
+      "Feiten, definities en processen",
+      "Je studietijd echt laten tellen"
+    ],
+    "whenNotToUse": [
+      "De allereerste kennismaking met een onderwerp; eerst begrijpen, dan ophalen"
+    ],
+    "faq": [
+      {
+        "q": "Is actief ophalen beter dan herlezen?",
+        "a": "Onderzoek naar het testeffect laat steeds weer zien dat oefenen met ophalen op de lange termijn beter onthouden oplevert dan hetzelfde materiaal herlezen."
+      },
+      {
+        "q": "Wat als ik me niets herinner?",
+        "a": "Dat is nuttige informatie. Zoek het antwoord op en probeer het later opnieuw. Een beetje moeite hoort erbij."
+      },
+      {
+        "q": "Hoe gebruikt FocusKept actief ophalen?",
+        "a": "Elke kenniskaart heeft vragen, en bij elke herhaling beantwoord je ze voordat je de oplossing ziet."
+      }
+    ],
+    "seoTitle": "Actief ophalen: de studiemethode en hoe je hem gebruikt",
+    "seoDescription": "Actief ophalen (active recall) is een van de effectiefste studiemethoden. Leer jezelf te overhoren, betere vragen te stellen en meer te onthouden."
+  },
+  "blurting": {
+    "name": "Blurting",
+    "tagline": "Schrijf alles op wat je je herinnert en vergelijk daarna.",
+    "summary": "Blurting is een snelle oefening in actief ophalen: na het studeren schrijf je alles op wat je over een onderwerp weet, en vergelijk je dat met de bron om te zien wat je miste.",
+    "howItWorks": [
+      "Sluit na een studieblok je aantekeningen en schrijf zo snel mogelijk alles op wat je je herinnert, in willekeurige volgorde. Maak je niet druk om structuur; het doel is je hoofd op papier leeg te gooien.",
+      "Open daarna de bron en vergelijk. Markeer in een andere kleur wat ontbrak of niet klopte. Die gaten zijn precies wat je hierna moet leren. In FocusKept splitst de gids de sessie in een fase ‘alles opschrijven’ en een fase ‘vergelijken met de bron’."
+    ],
+    "steps": [
+      "Bestudeer één onderdeel of onderwerp.",
+      "Sluit de bron en schrijf zonder te stoppen alles op wat je je herinnert.",
+      "Open de bron en vergelijk regel voor regel.",
+      "Markeer wat je vergat of fout had.",
+      "Bestudeer de gaten en doe later opnieuw een blurt."
+    ],
+    "bestFor": [
+      "Colleges of hoofdstukken uit een studieboek herhalen",
+      "Vakken met veel samenhangende feiten, zoals geschiedenis of biologie",
+      "Snelle checks tussen studieblokken"
+    ],
+    "whenNotToUse": [
+      "Vakken waarin je vooral problemen oplost en oefenopgaven beter werken"
+    ],
+    "faq": [
+      {
+        "q": "Moet mijn blurt geordend zijn?",
+        "a": "Nee. Snelheid is belangrijker dan volgorde. Structuur komt later, bij het vergelijken."
+      },
+      {
+        "q": "Wat is het verschil met de Feynman-techniek?",
+        "a": "Blurting toetst wat je kunt ophalen; Feynman toetst of je het begrijpt. In FocusKept eindigt elke leersessie met een Feynman-stap, dus je krijgt allebei."
+      },
+      {
+        "q": "Hoe vaak moet ik een onderwerp blurten?",
+        "a": "Direct na het studeren en een paar dagen later nog eens. De gespreide herhalingen van FocusKept op dag 5, 10 en 30 zijn natuurlijke momenten om jezelf opnieuw te testen."
+      }
+    ],
+    "seoTitle": "Blurting-methode om te herhalen: stap voor stap",
+    "seoDescription": "De blurting-techniek: schrijf alles op wat je je herinnert, vergelijk met je aantekeningen en vul de gaten. Een snelle, effectieve manier van herhalen."
+  },
+  "sq3r": {
+    "name": "SQ3R",
+    "tagline": "Survey, Question, Read, Recite, Review: verkennen, vragen, lezen, opzeggen, herhalen.",
+    "summary": "SQ3R is een methode in vijf stappen om studieboeken actief te lezen, zodat je begrijpt en onthoudt in plaats van alleen te markeren.",
+    "howItWorks": [
+      "SQ3R staat voor Survey, Question, Read, Recite en Review. Je verkent eerst de opbouw, maakt van kopjes vragen, leest om ze te beantwoorden, zegt de antwoorden uit je hoofd op en herhaalt tot slot het hele hoofdstuk.",
+      "Elke stap geeft je lezen een doel. FocusKept leidt je één voor één door de vijf stappen, met bij elke fase ruimte voor notities."
+    ],
+    "steps": [
+      "Verkennen: blader door kopjes, samenvattingen en figuren voor het grote geheel.",
+      "Vragen: maak van elk kopje een vraag die je beantwoord wilt zien.",
+      "Lezen: lees één onderdeel tegelijk om de bijbehorende vraag te beantwoorden.",
+      "Opzeggen: sluit het boek en beantwoord de vraag in je eigen woorden.",
+      "Herhalen: loop aan het eind alle vragen en antwoorden nog eens door."
+    ],
+    "bestFor": [
+      "Studieboeken en lange hoofdstukken non-fictie",
+      "Vakken met veel verplichte leesstof",
+      "Studenten die veel markeren maar weinig onthouden"
+    ],
+    "whenNotToUse": [
+      "Fictie of licht leeswerk",
+      "Heel korte teksten met een overduidelijke opbouw"
+    ],
+    "faq": [
+      {
+        "q": "Is SQ3R niet traag?",
+        "a": "Het kost meer tijd dan vluchtig doorbladeren, maar veel minder dan een hoofdstuk drie keer herlezen voor het tentamen."
+      },
+      {
+        "q": "Kan ik SQ3R gebruiken bij online artikelen?",
+        "a": "Ja. Voeg het artikel toe als link naar de bron en volg dezelfde vijf stappen."
+      },
+      {
+        "q": "Welke stap is het belangrijkst?",
+        "a": "Opzeggen. Antwoorden uit je geheugen maakt van lezen kennis. De andere stappen bereiden je daarop voor."
+      }
+    ],
+    "seoTitle": "SQ3R-leesmethode: verkennen, vragen, lezen, opzeggen",
+    "seoDescription": "Leer de SQ3R-methode om studieboeken actief te lezen en meer te onthouden. Een duidelijke uitleg in vijf stappen met ingebouwde studietimer."
+  },
+  "cornell": {
+    "name": "Cornell",
+    "tagline": "Notities, sleutelvragen en een samenvatting op één pagina.",
+    "summary": "De Cornell-methode verdeelt je aantekeningen in drie delen: hoofdnotities, sleutelvragen en een korte samenvatting. Zo worden je aantekeningen een kant-en-klare zelftoets.",
+    "howItWorks": [
+      "Tijdens het studeren schrijf je hoofdnotities in het grote vak. Daarna zet je in de zijkolom korte sleutelvragen of trefwoorden die naar elk idee verwijzen. Onderaan vat je de hele pagina samen in een paar zinnen.",
+      "Om te herhalen dek je de notities af en beantwoord je de sleutelvragen uit je hoofd. FocusKept geeft je tijdens de sessie dezelfde indeling in drie delen en bewaart die bij je sessie."
+    ],
+    "steps": [
+      "Maak tijdens het studeren notities in het hoofdvak.",
+      "Schrijf na het studeren sleutelvragen naast elk kernidee.",
+      "Vat het hele onderwerp onderaan samen in 2–3 zinnen.",
+      "Herhaal door de notities af te dekken en de sleutelvragen te beantwoorden."
+    ],
+    "bestFor": [
+      "Colleges, video’s en werkgroepen",
+      "Vakken waarbij je voor tentamens je aantekeningen herhaalt",
+      "Van aantekeningen oefenvragen maken"
+    ],
+    "whenNotToUse": [
+      "Heel visuele vakken waarin mindmaps of schema’s beter werken"
+    ],
+    "faq": [
+      {
+        "q": "Wie heeft de Cornell-methode bedacht?",
+        "a": "Walter Pauk, hoogleraar onderwijskunde aan Cornell University, beschreef haar in de jaren 50."
+      },
+      {
+        "q": "Heb ik speciaal papier nodig?",
+        "a": "Nee. FocusKept toont de drie vakken op het scherm: notities, sleutelvragen en samenvatting."
+      },
+      {
+        "q": "Hoe lang moet de samenvatting zijn?",
+        "a": "Twee of drie zinnen. Lukt het niet om de pagina kort samen te vatten, dan moet je waarschijnlijk een deel ervan opnieuw bekijken."
+      }
+    ],
+    "seoTitle": "Cornell-methode voor aantekeningen: sjabloon en uitleg",
+    "seoDescription": "Gebruik de Cornell-methode online: notities, sleutelvragen en een samenvatting in één indeling. Gratis sjabloon met focustimer."
+  },
+  "interleaving": {
+    "name": "Afwisselend oefenen",
+    "tagline": "Wissel verwante onderwerpen af in plaats van ze één voor één te leren.",
+    "summary": "Afwisselend oefenen (interleaving) betekent dat je binnen één studiesessie wisselt tussen twee tot vier verwante onderwerpen. Het voelt lastiger dan in blokken oefenen, maar je leert er beter de juiste aanpak te kiezen.",
+    "howItWorks": [
+      "In plaats van twintig opgaven van één soort en dan twintig van een andere, meng je ze: A, B, C, A, C, B. Je brein moet eerst herkennen met wat voor probleem het te maken heeft, een vaardigheid die je bij blokoefenen nooit traint.",
+      "In FocusKept voeg je 2 tot 4 verwante onderwerpen toe, en de gids wisselt bij elk werkblok van onderwerp."
+    ],
+    "steps": [
+      "Kies 2–4 verwante onderwerpen of soorten opgaven.",
+      "Bestudeer het eerste onderwerp in het eerste werkblok.",
+      "Ga bij elk nieuw blok door naar het volgende onderwerp, volgens de rotatie.",
+      "Let op de verschillen tussen de onderwerpen en waarom elke aanpak past."
+    ],
+    "bestFor": [
+      "Wiskunde, natuurkunde en andere vakken met veel opgaven",
+      "Talen: verschillende grammaticapunten mengen",
+      "Vaardigheden waarbij het kiezen van de juiste methode het moeilijkst is"
+    ],
+    "whenNotToUse": [
+      "Als een onderwerp helemaal nieuw is; leer eerst van elk de basis"
+    ],
+    "faq": [
+      {
+        "q": "Waarom voelt afwisselend oefenen moeilijker?",
+        "a": "Omdat het moeilijker is. Door te wisselen moet je elke keer bedenken welke aanpak je gebruikt. Juist die extra moeite verbetert het leren op de lange termijn."
+      },
+      {
+        "q": "Hoeveel onderwerpen moet ik mengen?",
+        "a": "Twee tot vier verwante onderwerpen. Meer wordt al snel versnipperd."
+      },
+      {
+        "q": "Kan ik afwisselend oefenen combineren met 25/5?",
+        "a": "Ja. Elk werkblok behandelt één onderwerp en het volgende blok wisselt, wat het afwisselen een natuurlijk ritme geeft."
+      }
+    ],
+    "seoTitle": "Interleaving: afwisselend oefenen, meer leren",
+    "seoDescription": "Afwisselend oefenen mengt verwante onderwerpen in één sessie. Ontdek hoe en wanneer je interleaving gebruikt, met een timer die de onderwerpen voor je wisselt."
+  },
+  "leitner": {
+    "name": "Leitner",
+    "tagline": "Bakken waarin kaarten doorschuiven als je ze kent.",
+    "summary": "Het Leitner-systeem verdeelt flashcards over bakken. Kaarten die je goed beantwoordt, gaan naar een bak die minder vaak wordt herhaald; een fout stuurt de kaart terug.",
+    "howItWorks": [
+      "Het systeem van Sebastian Leitner gebruikt een reeks bakken. Nieuwe kaarten beginnen in bak 1, die je vaak herhaalt. Elk goed antwoord schuift een kaart één bak door, waar hij minder vaak langskomt. Een fout antwoord stuurt hem terug.",
+      "FocusKept past hetzelfde idee automatisch toe: elke herhaalstap (dag 5, 10 en 30, daarna 60 dagen en langer) is een bak. Haal je een herhaling, dan schuift de kaart door; mis je een vraag, dan komt hij na 2 dagen terug."
+    ],
+    "steps": [
+      "Maak kaarten met aan de ene kant een vraag en aan de andere kant het antwoord.",
+      "Herhaal de kaarten in de eerste bak het vaakst.",
+      "Schuif een kaart één bak door als je hem goed beantwoordt.",
+      "Zet hem terug als je hem fout hebt.",
+      "Doe in FocusKept gewoon je openstaande herhalingen: de bakken worden voor je bijgehouden."
+    ],
+    "bestFor": [
+      "Woordjes, definities en formules",
+      "Langetermijngeheugen met zo min mogelijk planning",
+      "Mensen die graag zien dat ze vooruitgaan"
+    ],
+    "whenNotToUse": [
+      "Complexe ideeën begrijpen; leg ze eerst uit met de Feynman-techniek"
+    ],
+    "faq": [
+      {
+        "q": "Hoe past Leitner in FocusKept?",
+        "a": "Elke herhaalstap is een bak: dag 5, dag 10, dag 30, daarna 60 dagen, verdubbelend tot 180. De huidige stap van je kaart is zijn bak."
+      },
+      {
+        "q": "Wat gebeurt er als ik een kaart fout heb?",
+        "a": "Hij komt na 2 dagen terug voor een herleerherhaling op dezelfde stap. Haal je die, dan schuift hij weer door."
+      },
+      {
+        "q": "Moet ik kaarten zelf verplaatsen?",
+        "a": "Nee. FocusKept plant elke kaart voor je in, dus je beantwoordt alleen de herhalingen die vandaag klaarstaan."
+      }
+    ],
+    "seoTitle": "Leitner-systeem: flashcardbakken uitgelegd",
+    "seoDescription": "Zo werkt het Leitner-systeem voor flashcards en zo gebruik je het met automatische gespreide herhaling. Eenvoudige uitleg met voorbeelden."
+  },
+  "spaced-repetition": {
+    "name": "Gespreide herhaling",
+    "tagline": "Herhaal op dag 5, 10 en 30, vlak voordat je het zou vergeten.",
+    "summary": "Gespreide herhaling plant herhalingen met steeds grotere tussenpozen, zodat elke herhaling komt op het moment dat een herinnering begint te vervagen. Het is de kern van elke leersessie in FocusKept.",
+    "howItWorks": [
+      "Na het leren vervaagt je geheugen snel, maar elke geslaagde herhaling remt het vergeten af. Door herhalingen te spreiden met steeds langere tussenpozen onthoud je het meest met de minste herhaaltijd.",
+      "FocusKept plant elke kenniskaart automatisch in: eerste herhaling op dag 5, dan dag 10 en dag 30. Daarna wordt de tussenpoos 60 dagen en verdubbelt hij bij elke geslaagde herhaling, tot 180 dagen. Mis je een vraag, dan komt de kaart na 2 dagen terug. De eerste drie stappen kun je aanpassen in Instellingen."
+    ],
+    "steps": [
+      "Rond een leersessie af en sla je kenniskaart op.",
+      "Krijg een herinnering als er een herhaling klaarstaat (per e-mail of in de browser).",
+      "Beantwoord de vragen van de kaart uit je geheugen.",
+      "Gehaald: door naar de volgende tussenpoos; gemist: de kaart komt na 2 dagen terug."
+    ],
+    "bestFor": [
+      "Alles wat je maanden in plaats van dagen wilt onthouden",
+      "Tentamenvoorbereiding over meerdere weken",
+      "Vakkennis die je zelden gebruikt maar wel moet bijhouden"
+    ],
+    "whenNotToUse": [
+      "Stampen voor morgen; gespreide herhaling werkt over weken"
+    ],
+    "faq": [
+      {
+        "q": "Waarom dag 5, 10 en 30?",
+        "a": "Het zijn eenvoudige, makkelijk te onthouden stappen die herhalingen spreiden over de eerste maand, wanneer je het snelst vergeet. Je kunt ze aanpassen in Instellingen."
+      },
+      {
+        "q": "Wat als ik een herhaaldag mis?",
+        "a": "Achterstallige kaarten blijven openstaan tot je ze herhaalt. Er gaat niets verloren; haal het gewoon in wanneer het uitkomt."
+      },
+      {
+        "q": "Moet een herhaling perfect zijn?",
+        "a": "Een herhaling is gehaald als alle antwoorden goed zijn. Deels goed telt als gemist, zodat de kaart eerder terugkomt."
+      }
+    ],
+    "seoTitle": "Gespreide herhaling: een herhaalschema dat werkt",
+    "seoDescription": "Gespreide herhaling uitgelegd: herhaal op dag 5, 10 en 30 en daarna met steeds grotere tussenpozen. Automatische herinneringen en vragen in FocusKept."
+  },
+  "eat-the-frog": {
+    "name": "Eet die kikker",
+    "tagline": "Doe je moeilijkste, belangrijkste taak als eerste.",
+    "summary": "‘Eet die kikker’ betekent: kies de ene taak die je het liefst zou ontlopen en doe die meteen als eerste. Alles daarna voelt lichter.",
+    "howItWorks": [
+      "De ‘kikker’ is de belangrijke taak waar je het minst zin in hebt. Pak je hem aan het begin van de dag aan, als je de meeste energie hebt, dan ben je de rest van de dag dat zeurende gevoel kwijt.",
+      "In FocusKept kun je precies één kikker per dag markeren. Hij staat bovenaan je lijst van vandaag en wordt voorgesteld als je eerste sessie."
+    ],
+    "steps": [
+      "Kies de avond ervoor of meteen ’s ochtends de kikker van vandaag: belangrijk en makkelijk te ontlopen.",
+      "Markeer hem als kikker, zodat hij bovenaan je dag staat.",
+      "Start je eerste focussessie met de kikker, vóór al het andere.",
+      "Ga door tot hij af is of duidelijk opschiet."
+    ],
+    "bestFor": [
+      "Uitstelgedrag bij belangrijke taken",
+      "Ochtenden met veel energie",
+      "Drukke dagen die anders vollopen met kleine klusjes"
+    ],
+    "whenNotToUse": [
+      "Als de moeilijkste taak afhangt van de beschikbaarheid van iemand anders"
+    ],
+    "faq": [
+      {
+        "q": "Waar komt de naam vandaan?",
+        "a": "Van een gezegde dat vaak aan Mark Twain wordt toegeschreven: als je een levende kikker moet eten, doe het dan meteen ’s ochtends. Brian Tracy maakte er een productiviteitsmethode van."
+      },
+      {
+        "q": "Mag ik meer dan één kikker hebben?",
+        "a": "Nee, één per dag houdt de keuze helder. Kies je een nieuwe kikker, dan vervangt die de oude."
+      },
+      {
+        "q": "Wat als mijn kikker te groot is voor één sessie?",
+        "a": "Hak hem in stukken en maak de eerste concrete stap de kikker van vandaag. Beginnen is het moeilijkste deel."
+      }
+    ],
+    "seoTitle": "Eet die kikker: de moeilijkste taak eerst",
+    "seoDescription": "Versla uitstelgedrag met ‘eet die kikker’: kies één belangrijke taak en doe die als eerste. Eenvoudige uitleg en een focustimer die met je kikker begint."
+  },
+  "eisenhower": {
+    "name": "Eisenhower",
+    "tagline": "Sorteer taken op urgent en belangrijk.",
+    "summary": "De Eisenhower-matrix verdeelt taken over vier kwadranten op basis van urgentie en belang, zodat je weet wat je nu doet, inplant, delegeert of schrapt.",
+    "howItWorks": [
+      "Elke taak komt in een van vier kwadranten: Nu doen (urgent en belangrijk), Inplannen (belangrijk, niet urgent), Delegeren (urgent, niet belangrijk) en Schrappen (geen van beide). De matrix laat duidelijk zien wanneer urgente ruis het belangrijke werk verdringt.",
+      "In FocusKept sleep je taken tussen de kwadranten of verplaats je ze met het toetsenbord. Het kwadrant Schrappen biedt aan taken te archiveren, zodat ze van je lijst verdwijnen."
+    ],
+    "steps": [
+      "Zet je openstaande taken op een rij.",
+      "Plaats elke taak in Nu doen, Inplannen, Delegeren of Schrappen.",
+      "Start een focussessie met een taak uit Nu doen.",
+      "Plan tijd in voor taken uit Inplannen voordat ze urgent worden.",
+      "Geef taken uit Delegeren uit handen en archiveer die uit Schrappen."
+    ],
+    "bestFor": [
+      "Overvolle takenlijsten",
+      "Weekplanning",
+      "Echte prioriteiten onderscheiden van ruis"
+    ],
+    "whenNotToUse": ["Korte lijsten met taken die even belangrijk zijn"],
+    "faq": [
+      {
+        "q": "Wat als alles urgent en belangrijk voelt?",
+        "a": "Vraag jezelf af wat er gebeurt als een taak een week wacht. Gebeurt er niets ernstigs, dan hoort hij bij Inplannen."
+      },
+      {
+        "q": "Ik werk alleen. Wat doe ik met Delegeren?",
+        "a": "Gebruik het voor taken die je kunt automatiseren, bundelen of waarvoor je iemand om hulp kunt vragen."
+      },
+      {
+        "q": "Hoe vaak moet ik mijn matrix opnieuw indelen?",
+        "a": "Een snelle blik per dag en een grondigere ronde per week houden de matrix eerlijk naarmate deadlines dichterbij komen."
+      }
+    ],
+    "seoTitle": "Eisenhower-matrix: urgent of belangrijk?",
+    "seoDescription": "Stel prioriteiten met de Eisenhower-matrix: nu doen, inplannen, delegeren of schrappen. Gratis bord met slepen en neerzetten en een ingebouwde focustimer."
+  },
+  "1-3-5": {
+    "name": "1-3-5",
+    "tagline": "Eén groot ding, drie middelgrote, vijf kleine. Dat is je dag.",
+    "summary": "De 1-3-5-regel beperkt elke dag tot één grote taak, drie middelgrote en vijf kleine. Zo blijven je plannen realistisch.",
+    "howItWorks": [
+      "De meeste takenlijsten zijn te lang om af te krijgen, waardoor elke dag als falen voelt. De 1-3-5-regel begrenst de dag tot negen taken van verschillende grootte: één die echt moeite kost, drie die wat tijd vragen en vijf snelle.",
+      "FocusKept geeft je plan voor vandaag precies die plekken en laat je ze niet overvullen, zodat je bewust kiest."
+    ],
+    "steps": [
+      "Kies de ene grote taak voor vandaag.",
+      "Voeg drie middelgrote taken toe.",
+      "Vul vijf kleine taken aan.",
+      "Begin met de grote zolang je energie hoog is."
+    ],
+    "bestFor": [
+      "Realistisch dagplannen",
+      "Mensen bij wie de lijst nooit eindigt",
+      "Diep werk afwisselen met kleine klusjes"
+    ],
+    "whenNotToUse": ["Dagen vol vergaderingen of met maar één project"],
+    "faq": [
+      {
+        "q": "Wat als ik alles eerder af heb?",
+        "a": "Mooi. Geniet van de tijd of pak nog één taak van je lijst met ‘ooit’."
+      },
+      {
+        "q": "Hoe bepaal ik hoe groot een taak is?",
+        "a": "Groot kost een paar uur, middel ongeveer een uur, klein 15 minuten of minder."
+      },
+      {
+        "q": "Kan ik 1-3-5 combineren met andere technieken?",
+        "a": "Ja. Maak de grote taak je kikker en focus op elke taak met 25/5 of een timebox."
+      }
+    ],
+    "seoTitle": "1-3-5-regel: een realistische takenlijst voor elke dag",
+    "seoDescription": "Plan je dag met de 1-3-5-regel: één grote taak, drie middelgrote en vijf kleine. Gratis planner met vaste plekken en een focustimer."
+  },
+  "ivy-lee": {
+    "name": "Ivy Lee",
+    "tagline": "Zes taken voor morgen, op volgorde. Meer niet.",
+    "summary": "Bij de Ivy Lee-methode schrijf je elke avond tot zes taken voor morgen op, gerangschikt op belang, en werk je ze één voor één af.",
+    "howItWorks": [
+      "Aan het eind van elke dag zet je de zes belangrijkste dingen voor morgen op een rij en geef je ze een volgorde. De volgende dag begin je met de eerste en ga je pas verder als die af is. Onafgemaakte taken komen bovenaan de lijst van de volgende dag.",
+      "FocusKept geeft je ’s avonds een planweergave voor morgen met zes geordende plekken, en schuift onafgemaakte taken in dezelfde volgorde door."
+    ],
+    "steps": [
+      "Schrijf ’s avonds tot zes taken voor morgen op.",
+      "Zet ze op volgorde van echt belang.",
+      "Werk morgen aan taak 1 tot hij af is en ga dan naar taak 2.",
+      "Onafgemaakte taken schuiven in dezelfde volgorde door naar de lijst van de volgende dag."
+    ],
+    "bestFor": [
+      "De dag afsluiten met een helder plan",
+      "Mensen die hun ochtend verliezen aan kiezen wat ze gaan doen",
+      "Gestaag vooruitgaan met belangrijk werk"
+    ],
+    "whenNotToUse": [
+      "Zeer reactieve functies waarin prioriteiten elk uur veranderen"
+    ],
+    "faq": [
+      {
+        "q": "Waarom maar zes taken?",
+        "a": "De grens dwingt je te kiezen. Zes is genoeg voor een productieve dag zonder die te overladen."
+      },
+      {
+        "q": "Waar komt de Ivy Lee-methode vandaan?",
+        "a": "Productiviteitsadviseur Ivy Lee leerde haar in 1918 aan bestuurders."
+      },
+      {
+        "q": "Wat als er een dringende taak tussendoor komt?",
+        "a": "Handel hem af en ga daarna verder met je lijst op volgorde. Komt er steeds iets dringends tussen, plan dan minder taken voor morgen."
+      }
+    ],
+    "seoTitle": "Ivy Lee-methode: plan zes taken voor morgen",
+    "seoDescription": "De Ivy Lee-methode: schrijf elke avond zes taken voor morgen op volgorde op. Onafgemaakte taken schuiven automatisch door. Gratis planner en uitleg."
+  }
+}
