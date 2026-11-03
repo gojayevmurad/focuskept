@@ -1,6 +1,6 @@
-# Deployment
+# Self-hosting
 
-The app ships as one ARM64 Docker image, with a reverse proxy in front and PostgreSQL on a private network. `pnpm setup` generates the production `.env` and `runtime.env` in `deploy/generated/`, which is ignored by Git.
+The app ships as one ARM64 Docker image, with a reverse proxy in front and PostgreSQL on a private network. Before anything else, set your `domain`, `repository` and `deployPath` in `saas.config.json`. `pnpm setup` then generates the production `.env` and `runtime.env` in `deploy/generated/`, which is ignored by Git. Copy `compose.production.yaml` and `deploy.sh` from `deploy/`, plus those two files, to the server.
 
 ## Services
 
