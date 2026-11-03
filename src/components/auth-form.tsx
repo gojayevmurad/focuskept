@@ -103,7 +103,8 @@ export function AuthForm({
         });
         if (result.error) throw result.error;
         track("user_logged_in");
-        router.push(next);
+        // Replace, so Back doesn't return to the sign-in form.
+        router.replace(next);
         router.refresh();
       }
     } catch (error) {

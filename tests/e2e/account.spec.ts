@@ -36,6 +36,11 @@ test("verified registration, login, profile and paid access", async ({
     // The verification link signs the user in and returns to the app.
     await page.goto(result.rows[0].url);
     await expect(page).toHaveURL(/\/en\/app/);
+    // Signed-in users never see the sign-in or sign-up forms.
+    await page.goto("/en/sign-in");
+    await expect(page).toHaveURL(/\/en\/app$/);
+    await page.goto("/en/sign-up?next=/app/tasks");
+    await expect(page).toHaveURL(/\/en\/app\/tasks$/);
     await page.goto("/en/app/settings");
     await page.getByLabel("Display name").fill("Updated Builder");
     await page

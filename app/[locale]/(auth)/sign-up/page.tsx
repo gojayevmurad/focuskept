@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { connection } from "next/server";
 import { getTranslations } from "next-intl/server";
+import { redirectIfSignedIn } from "@/src/lib/auth/session";
 import { AuthPage } from "@/src/components/auth-page";
 import {
   type LocaleParams,
@@ -21,10 +22,11 @@ export default async function Page({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ topic?: string }>;
+  searchParams: Promise<{ topic?: string; next?: string }>;
 }) {
   await resolveLocale(params);
   await connection();
+  await redirectIfSignedIn((await searchParams).next);
   const t = await getTranslations("auth");
   const topic = (await searchParams).topic?.slice(0, 200);
   return (

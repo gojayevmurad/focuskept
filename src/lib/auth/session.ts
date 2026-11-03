@@ -2,6 +2,7 @@ import "server-only";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { getLocale } from "next-intl/server";
+import { safeRedirect } from "@/src/lib/security/validation";
 import { auth } from ".";
 export async function getSession() {
   const requestHeaders = await headers();
@@ -18,6 +19,14 @@ export async function requireSession(next?: string) {
     );
   }
   return session;
+}
+/** For the sign-in and sign-up pages: signed-in users go straight to the app. */
+export async function redirectIfSignedIn(next?: string) {
+  const session = await getSession();
+  if (session?.user.emailVerified) {
+    const locale = await getLocale();
+    redirect(`/${locale}${safeRedirect(next)}`);
+  }
 }
 /** For route handlers: a verified session or null (caller answers 401). */
 export async function getVerifiedSession() {
