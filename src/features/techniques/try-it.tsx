@@ -182,7 +182,7 @@ export function TryGuide({ name, steps }: { name: string; steps: string[] }) {
               <label className="flex items-start gap-2 small">
                 <input
                   type="checkbox"
-                  className="checkbox mt-0.5"
+                  className="checkbox mt-0.5 shrink-0"
                   checked={done[i]}
                   onChange={(e) =>
                     setDone(
