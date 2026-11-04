@@ -123,7 +123,8 @@ async function assertPlanningRules(
 export async function createTask(userId: string, input: TaskCreate) {
   await assertProject(userId, input.projectId);
   await assertPlanningRules(userId, input);
-  const id = crypto.randomUUID();
+  // The board shows a new task before this returns, so it keeps the same id.
+  const id = input.clientId ?? crypto.randomUUID();
   const inserted = await db()
     .insert(task)
     .values({

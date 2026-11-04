@@ -160,8 +160,9 @@ function PlanTomorrow({
           disabled={saving}
           onClick={async () => {
             setSaving(true);
-            await board.saveTomorrow(order);
+            const saved = await board.saveTomorrow(order);
             setSaving(false);
+            if (!saved) return;
             onClose();
             toast(t("saved"));
           }}

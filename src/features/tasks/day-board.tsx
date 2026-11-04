@@ -82,20 +82,23 @@ function useBoard(initial: ClientTask[], today: string, tomorrow: string) {
 
   /** Tomorrow's list in this order (Ivy Lee); tasks left out keep the day, lose the rank. */
   const saveTomorrow = async (ids: string[]) => {
+    let saved = true;
     for (const x of tasks)
       if (
         x.plannedFor === tomorrow &&
         x.ivyRank !== null &&
         !ids.includes(x.id)
       )
-        await update(x.id, { ivyRank: null });
+        saved = (await update(x.id, { ivyRank: null })) && saved;
     for (const [i, id] of ids.entries())
-      await update(id, {
-        plannedFor: tomorrow,
-        ivyRank: i + 1,
-        size135: null,
-        isFrogOn: null,
-      });
+      saved =
+        (await update(id, {
+          plannedFor: tomorrow,
+          ivyRank: i + 1,
+          size135: null,
+          isFrogOn: null,
+        })) && saved;
+    return saved;
   };
 
   return {
