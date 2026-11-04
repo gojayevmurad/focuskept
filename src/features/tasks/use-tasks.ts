@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { toast } from "@/src/components/ui/toast";
 import type { TaskCreate, TaskUpdate } from "./schema";
@@ -55,6 +55,8 @@ export function useTasks(initial: ClientTask[]) {
     setSource(initial);
     setTasks(initial);
   }
+  // A new task can be edited before the server has it; those edits wait here.
+  const creating = useRef(new Map<string, Promise<ClientTask | null>>());
 
   const fail = useCallback(
     (error: unknown) => {
@@ -72,9 +74,10 @@ export function useTasks(initial: ClientTask[]) {
   );
 
   const create = useCallback(
-    async (input: TaskCreate) => {
-      const temp: ClientTask = {
-        id: `temp-${crypto.randomUUID()}`,
+    (input: TaskCreate) => {
+      const id = crypto.randomUUID();
+      const draft: ClientTask = {
+        id,
         title: input.title,
         notes: input.notes ?? null,
         tags: input.tags ?? [],
@@ -90,19 +93,20 @@ export function useTasks(initial: ClientTask[]) {
         estimatedMinutes: input.estimatedMinutes ?? null,
         completedAt: null,
       };
-      setTasks((list) => [temp, ...list]);
-      try {
-        const row = (await send("/api/tasks", "POST", {
-          ...input,
-          clientId: crypto.randomUUID(),
-        })) as ClientTask;
-        setTasks((list) => list.map((x) => (x.id === temp.id ? row : x)));
-        return row;
-      } catch (error) {
-        setTasks((list) => list.filter((x) => x.id !== temp.id));
-        fail(error);
-        return null;
-      }
+      setTasks((list) => [draft, ...list]);
+      const request = send("/api/tasks", "POST", { ...input, clientId: id })
+        .then((row: ClientTask) => {
+          setTasks((list) => list.map((x) => (x.id === id ? row : x)));
+          return row;
+        })
+        .catch((error: unknown) => {
+          setTasks((list) => list.filter((x) => x.id !== id));
+          fail(error);
+          return null;
+        })
+        .finally(() => creating.current.delete(id));
+      creating.current.set(id, request);
+      return request;
     },
     [fail],
   );
@@ -110,25 +114,33 @@ export function useTasks(initial: ClientTask[]) {
   const update = useCallback(
     async (id: string, patch: TaskUpdate) => {
       let before: ClientTask | undefined;
-      setTasks((list) =>
-        list.map((x) => {
-          if (x.id === id) before = x;
-          if (patch.isFrogOn && x.isFrogOn === patch.isFrogOn && x.id !== id)
-            return { ...x, isFrogOn: null };
-          return x.id === id
-            ? {
-                ...x,
-                ...patch,
-                completedAt:
-                  patch.status === "done"
-                    ? (x.completedAt ?? new Date().toISOString())
-                    : patch.status
-                      ? null
-                      : x.completedAt,
-              }
-            : x;
-        }),
-      );
+      const apply = () =>
+        setTasks((list) =>
+          list.map((x) => {
+            if (x.id === id) before = x;
+            if (patch.isFrogOn && x.isFrogOn === patch.isFrogOn && x.id !== id)
+              return { ...x, isFrogOn: null };
+            return x.id === id
+              ? {
+                  ...x,
+                  ...patch,
+                  completedAt:
+                    patch.status === "done"
+                      ? (x.completedAt ?? new Date().toISOString())
+                      : patch.status
+                        ? null
+                        : x.completedAt,
+                }
+              : x;
+          }),
+        );
+      apply();
+      const created = creating.current.get(id);
+      if (created) {
+        if (!(await created)) return false;
+        // The server's copy of the new task just replaced this edit.
+        apply();
+      }
       try {
         const row = (await send(
           `/api/tasks/${id}`,
@@ -154,6 +166,7 @@ export function useTasks(initial: ClientTask[]) {
         before = list;
         return list.filter((x) => x.id !== id);
       });
+      if (creating.current.has(id) && !(await creating.current.get(id))) return;
       try {
         await send(`/api/tasks/${id}`, "DELETE");
       } catch (error) {

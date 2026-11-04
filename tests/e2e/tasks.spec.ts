@@ -65,3 +65,79 @@ test("day board: quick add fills slots, Incoming flags, plan tomorrow", async ({
     await pool.end();
   }
 });
+
+test("day board: edits made while a new task is saving are kept", async ({
+  page,
+}) => {
+  test.setTimeout(90000);
+  const pool = new Pool({ connectionString: url });
+  const email = `e2e-tasks-slow-${Date.now()}@example.test`;
+  try {
+    await signUpAndVerify(page, pool, email, "/app/tasks");
+    await page.goto("/en/app/tasks");
+    const notNow = page.getByRole("button", { name: "Not now" });
+    if (await notNow.isVisible().catch(() => false)) await notNow.click();
+
+    await page.route("**/api/tasks", async (route) => {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await route.continue();
+    });
+    await page.getByLabel("New task").fill("Slow task");
+    await page.getByLabel("New task").press("Enter");
+
+    const incoming = page.locator(".board-aside");
+    await incoming
+      .getByRole("button", { name: "“Slow task” is important" })
+      .click();
+    await incoming.getByRole("button", { name: /Plan tomorrow/ }).click();
+    const dialog = page.getByRole("dialog");
+    await dialog.getByRole("button", { name: /Slow task/ }).click();
+    await dialog.getByRole("button", { name: "Save for tomorrow" }).click();
+    await expect(page.getByText("Tomorrow’s list is saved.")).toBeVisible();
+
+    await page.reload();
+    const tomorrow = page.locator(".board-aside .incoming-group").first();
+    await expect(tomorrow.locator(".incoming-row").first()).toContainText(
+      "Slow task",
+    );
+    await expect(
+      tomorrow.getByRole("button", { name: "“Slow task” is important" }),
+    ).toHaveAttribute("aria-pressed", "true");
+  } finally {
+    await cleanupUser(pool, email);
+    await pool.end();
+  }
+});
+
+test("day board: the planner does not say saved when saving fails", async ({
+  page,
+}) => {
+  test.setTimeout(90000);
+  const pool = new Pool({ connectionString: url });
+  const email = `e2e-tasks-fail-${Date.now()}@example.test`;
+  try {
+    await signUpAndVerify(page, pool, email, "/app/tasks");
+    await page.goto("/en/app/tasks");
+    const notNow = page.getByRole("button", { name: "Not now" });
+    if (await notNow.isVisible().catch(() => false)) await notNow.click();
+
+    await page.getByLabel("New task").fill("Failing task");
+    await page.getByLabel("New task").press("Enter");
+    const incoming = page.locator(".board-aside");
+    await expect(incoming).toContainText("Failing task");
+
+    await page.route("**/api/tasks/*", (route) =>
+      route.fulfill({ status: 500, json: { error: "internal" } }),
+    );
+    await incoming.getByRole("button", { name: /Plan tomorrow/ }).click();
+    const dialog = page.getByRole("dialog");
+    await dialog.getByRole("button", { name: /Failing task/ }).click();
+    await dialog.getByRole("button", { name: "Save for tomorrow" }).click();
+
+    await expect(dialog).toBeVisible();
+    await expect(page.getByText("Tomorrow’s list is saved.")).toHaveCount(0);
+  } finally {
+    await cleanupUser(pool, email);
+    await pool.end();
+  }
+});

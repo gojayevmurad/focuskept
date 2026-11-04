@@ -201,6 +201,7 @@ describe.skipIf(!testDatabaseUrl)("data model", () => {
     const clientId = crypto.randomUUID();
     const first = await createTask(A, { title: "Imported", clientId });
     const second = await createTask(A, { title: "Imported", clientId });
+    expect(first.id).toBe(clientId);
     expect(second.id).toBe(first.id);
   });
 
