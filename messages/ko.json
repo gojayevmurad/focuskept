@@ -701,7 +701,8 @@
       "deleteLabel": "{title} — 삭제",
       "deleted": "{title} — 삭제됨",
       "deletedMany": "삭제한 할 일: {count, number}",
-      "undo": "되돌리기"
+      "undo": "되돌리기",
+      "keepAsText": "글자로 두기"
     },
     "details": {
       "days": {

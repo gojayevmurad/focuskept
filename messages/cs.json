@@ -701,7 +701,8 @@
       "deleteLabel": "Smazat „{title}“",
       "deleted": "„{title}“ smazáno",
       "deletedMany": "Smazané úkoly: {count, number}",
-      "undo": "Zpět"
+      "undo": "Zpět",
+      "keepAsText": "Ponechat jako text"
     },
     "details": {
       "days": {

@@ -701,7 +701,8 @@
       "deleteLabel": "“{title}” हटाएँ",
       "deleted": "“{title}” हटाया गया",
       "deletedMany": "हटाए गए काम: {count, number}",
-      "undo": "वापस लाएँ"
+      "undo": "वापस लाएँ",
+      "keepAsText": "टेक्स्ट ही रहने दें"
     },
     "details": {
       "days": {

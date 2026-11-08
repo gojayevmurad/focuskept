@@ -8,7 +8,11 @@ import {
   quadrantOf,
   sizeForMinutes,
 } from "@/src/features/tasks/planning";
-import { parseQuickAdd, wordList } from "@/src/features/tasks/quick-add";
+import {
+  parseQuickAdd,
+  weekdayNames,
+  wordList,
+} from "@/src/features/tasks/quick-add";
 
 const none = { today: [], tomorrow: [], minutes: [], hours: [] };
 const az = {
@@ -20,7 +24,9 @@ const az = {
 
 describe("quick add", () => {
   it("reads duration, day, flags and tags in English", () => {
-    expect(parseQuickAdd("Essay outline 45m tomorrow ! #uni", none)).toEqual({
+    expect(
+      parseQuickAdd("Essay outline 45m tomorrow ! #uni", none),
+    ).toMatchObject({
       title: "Essay outline",
       minutes: 45,
       when: "tomorrow",
@@ -68,6 +74,49 @@ describe("quick add", () => {
 
   it("rejects durations out of range", () => {
     expect(parseQuickAdd("Marathon 2000m", none).minutes).toBeNull();
+  });
+
+  it("reports what it recognised as spans of the original line", () => {
+    const line = "Essay 45 min tomorrow! #uni";
+    const parsed = parseQuickAdd(line, none);
+    expect(
+      parsed.spans.map((s) => [s.kind, line.slice(s.start, s.end)]),
+    ).toEqual([
+      ["duration", "45 min"],
+      ["day", "tomorrow"],
+      ["priority", "!"],
+      ["tag", "#uni"],
+    ]);
+  });
+
+  it("keeps an ignored span in the title", () => {
+    const line = "Call mom tomorrow";
+    const start = line.indexOf("tomorrow");
+    expect(parseQuickAdd(line, none, true, new Set([start]))).toMatchObject({
+      title: "Call mom tomorrow",
+      when: null,
+    });
+  });
+
+  it("reads weekday names in the user's language", () => {
+    const de = { ...none, weekdays: weekdayNames("de") };
+    expect(parseQuickAdd("Bericht schreiben Freitag 2h", de)).toMatchObject({
+      title: "Bericht schreiben",
+      weekday: 5,
+      minutes: 120,
+    });
+    expect(parseQuickAdd("Plan monday", none).weekday).toBe(1);
+    const az = { ...none, weekdays: weekdayNames("az") };
+    expect(parseQuickAdd("Hesabat bazar ertəsi", az)).toMatchObject({
+      title: "Hesabat",
+      weekday: 1,
+    });
+    expect(parseQuickAdd("Görüş cümə", az).weekday).toBe(5);
+    expect(parseQuickAdd("Sunday is fun today", none)).toMatchObject({
+      when: "today",
+      weekday: null,
+      title: "Sunday is fun",
+    });
   });
 });
 

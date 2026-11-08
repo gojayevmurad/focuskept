@@ -701,7 +701,8 @@
       "deleteLabel": "“{title}” görevini sil",
       "deleted": "“{title}” silindi",
       "deletedMany": "Silinen görev: {count, number}",
-      "undo": "Geri al"
+      "undo": "Geri al",
+      "keepAsText": "Metin olarak bırak"
     },
     "details": {
       "days": {

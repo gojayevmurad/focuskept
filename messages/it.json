@@ -701,7 +701,8 @@
       "deleteLabel": "Elimina «{title}»",
       "deleted": "«{title}» eliminata",
       "deletedMany": "Attività eliminate: {count, number}",
-      "undo": "Annulla"
+      "undo": "Annulla",
+      "keepAsText": "Lascia come testo"
     },
     "details": {
       "days": {

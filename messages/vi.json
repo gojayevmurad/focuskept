@@ -701,7 +701,8 @@
       "deleteLabel": "Xóa “{title}”",
       "deleted": "Đã xóa “{title}”",
       "deletedMany": "Đã xóa {count, number} việc",
-      "undo": "Hoàn tác"
+      "undo": "Hoàn tác",
+      "keepAsText": "Giữ làm chữ"
     },
     "details": {
       "days": {

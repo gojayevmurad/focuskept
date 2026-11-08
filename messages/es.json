@@ -701,7 +701,8 @@
       "deleteLabel": "Eliminar «{title}»",
       "deleted": "«{title}» eliminada",
       "deletedMany": "Tareas eliminadas: {count, number}",
-      "undo": "Deshacer"
+      "undo": "Deshacer",
+      "keepAsText": "Dejar como texto"
     },
     "details": {
       "days": {

@@ -701,7 +701,8 @@
       "deleteLabel": "حذف «{title}»",
       "deleted": "«{title}» حذف شد",
       "deletedMany": "کارهای حذف‌شده: {count, number}",
-      "undo": "برگرداندن"
+      "undo": "برگرداندن",
+      "keepAsText": "به‌صورت متن بماند"
     },
     "details": {
       "days": {

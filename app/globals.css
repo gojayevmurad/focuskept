@@ -2156,13 +2156,54 @@
     flex-shrink: 0;
     color: var(--subtle);
   }
-  .board-add-input {
+  .board-add-field {
+    position: relative;
     flex: 1;
     min-inline-size: 0;
+    display: flex;
+  }
+  .board-add-input,
+  .board-add-mirror {
+    block-size: 40px;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: normal;
+  }
+  .board-add-input {
+    inline-size: 100%;
     border: 0;
     background: transparent;
     color: var(--fg);
-    font-size: 16px;
+  }
+  /* Same box and font as the input, drawn on top; only the marks catch clicks. */
+  .board-add-mirror {
+    position: absolute;
+    inset: 0;
+    line-height: 40px;
+    overflow: hidden;
+    white-space: pre;
+    color: transparent;
+    pointer-events: none;
+  }
+  .board-add-token {
+    border-radius: 5px;
+    background: var(--accent-soft);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+    color: transparent;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  .board-add-token:hover {
+    text-decoration: line-through;
+    text-decoration-color: var(--muted);
+  }
+  .board-add-token.is-priority {
+    background: var(--amber-soft);
+    box-shadow: 0 0 0 2px var(--amber-soft);
+  }
+  .board-add-token.is-tag {
+    background: color-mix(in srgb, var(--fg) 12%, transparent);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--fg) 12%, transparent);
   }
   .board-add-input::placeholder {
     color: var(--placeholder);
