@@ -2,6 +2,8 @@
 
 Bug reports, fixes and translation corrections are welcome. For a larger change, open an issue first so we can agree on the approach.
 
+New here? Issues labelled [good first issue](https://github.com/gojayevmurad/focuskept/labels/good%20first%20issue) are small and self-contained. [ROADMAP.md](ROADMAP.md) shows what's planned, and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) covers how we talk to each other.
+
 ## Set up
 
 Follow [Getting started](README.md#getting-started). You need Node 24, pnpm and Docker. Without API keys the app still runs: AI features fall back to manual questions and billing stays off.

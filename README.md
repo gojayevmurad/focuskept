@@ -111,7 +111,7 @@ See [DEPLOYMENT.md](DEPLOYMENT.md). How the code fits together is in [ARCHITECTU
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). To report a vulnerability, see [SECURITY.md](SECURITY.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md) and the [roadmap](ROADMAP.md). To report a vulnerability, see [SECURITY.md](SECURITY.md).
 
 ## License
 
