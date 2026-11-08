@@ -45,6 +45,8 @@ export const sessionCreateSchema = z
     learningMethod: z.enum(LEARNING_METHODS).optional(),
     planningTechnique: z.enum(PLANNING_TECHNIQUES).optional(),
     taskId: z.string().max(64).optional(),
+    projectId: z.string().max(64).optional(),
+    subjectId: z.string().max(64).optional(),
     taskDone: z.boolean().optional(),
     goal: z.string().trim().max(200).default(""),
     startedAt: z.iso.datetime({ offset: true }),

@@ -20,6 +20,7 @@ One Next.js 16 App Router application, one PostgreSQL database, one Docker image
 | `tasks`         | Tasks/projects, frog, 1-3-5 slots, Eisenhower quadrants, Ivy Lee list with rollover                       |
 | `import`        | One-time import of anonymous device data after sign-up                                                    |
 | `cards`         | Learning drafts, Feynman explanation, AI analysis, question editor, knowledge cards                       |
+| `subjects`      | Subjects that group Learning sessions and cards, so reviews can run per subject                           |
 | `reviews`       | Spaced-repetition scheduler (pure), grading (rules, AI, self-grade), review flow                          |
 | `limits`        | Free/Pro rules (20 cards, 10 AI analyses a month, Pro fair use, daily token budget), upgrade cards        |
 | `notifications` | Cron jobs (digest, weekly report, streak nudge, cleanup), email templates, web push, unsubscribe tokens   |
@@ -31,7 +32,7 @@ One Next.js 16 App Router application, one PostgreSQL database, one Docker image
 
 ## Data model
 
-Drizzle schema in `src/lib/db/schema.ts`, SQL migrations in `drizzle/` (applied explicitly with `pnpm local:migrate` / the bundled `scripts/migrate.cjs`). Product tables: `user_preferences`, `project`, `task`, `focus_session`, `learning_draft`, `learning_item` (knowledge card + schedule), `question`, `review`, `review_answer`, `ai_usage`, `ai_daily_usage`, `notification_log`, `push_subscription`, alongside the auth, billing, analytics-outbox and rate-limit tables. Every product row carries `user_id` with `ON DELETE CASCADE`, so account deletion removes everything (integration-tested). Dates that matter to the user ("today", due dates, streaks) are computed in the user's time zone (`src/lib/dates.ts`).
+Drizzle schema in `src/lib/db/schema.ts`, SQL migrations in `drizzle/` (applied explicitly with `pnpm local:migrate` / the bundled `scripts/migrate.cjs`). Product tables: `user_preferences`, `project`, `subject`, `task`, `focus_session`, `learning_draft`, `learning_item` (knowledge card + schedule), `question`, `review`, `review_answer`, `ai_usage`, `ai_daily_usage`, `notification_log`, `push_subscription`, alongside the auth, billing, analytics-outbox and rate-limit tables. Every product row carries `user_id` with `ON DELETE CASCADE`, so account deletion removes everything (integration-tested). Dates that matter to the user ("today", due dates, streaks) are computed in the user's time zone (`src/lib/dates.ts`).
 
 ## Spaced repetition
 

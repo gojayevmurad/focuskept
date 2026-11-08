@@ -8,6 +8,7 @@ import {
   question,
   review,
   reviewAnswer,
+  subject,
   task,
   user,
   userPreferences,
@@ -49,6 +50,10 @@ export async function exportAll(userId: string) {
       .select()
       .from(project)
       .where(eq(project.userId, userId)),
+    subjects: await db()
+      .select()
+      .from(subject)
+      .where(eq(subject.userId, userId)),
     tasks: await db()
       .select()
       .from(task)

@@ -46,6 +46,7 @@ export const cardUpdateSchema = z
     topic: z.string().trim().min(1).max(200),
     explanation: explanationSchema,
     status: z.enum(["active", "archived"]),
+    subjectId: z.string().max(64).nullable(),
     questions: z.array(questionInputSchema).min(1).max(MAX_QUESTIONS),
   })
   .partial()

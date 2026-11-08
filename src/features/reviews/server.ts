@@ -19,6 +19,7 @@ import { DAILY_GRADING_LIMIT } from "@/src/features/limits/rules";
 import { rateLimit } from "@/src/lib/security/rate-limit";
 import { gradeByRule, reviewResult, type Verdict } from "./grading";
 import { scheduleAfterReview } from "./scheduler";
+import { subjectCondition } from "@/src/features/subjects/server";
 import type { ReviewSubmit } from "./schema";
 
 export type ReviewCard = {
@@ -71,7 +72,12 @@ async function withQuestions(
 }
 
 /** Active cards due on or before `today` (overdue first). */
-export async function dueCards(userId: string, today: string, limit = 50) {
+export async function dueCards(
+  userId: string,
+  today: string,
+  limit = 50,
+  subject?: string,
+) {
   const cards = await db()
     .select()
     .from(learningItem)
@@ -80,6 +86,7 @@ export async function dueCards(userId: string, today: string, limit = 50) {
         eq(learningItem.userId, userId),
         eq(learningItem.status, "active"),
         lte(learningItem.dueOn, today),
+        subject ? subjectCondition(subject) : undefined,
       ),
     )
     .orderBy(asc(learningItem.dueOn), asc(learningItem.createdAt))
@@ -87,7 +94,11 @@ export async function dueCards(userId: string, today: string, limit = 50) {
   return withQuestions(cards);
 }
 
-export async function countDue(userId: string, today: string) {
+export async function countDue(
+  userId: string,
+  today: string,
+  subject?: string,
+) {
   const [row] = await db()
     .select({ n: sql<number>`count(*)::int` })
     .from(learningItem)
@@ -96,6 +107,7 @@ export async function countDue(userId: string, today: string) {
         eq(learningItem.userId, userId),
         eq(learningItem.status, "active"),
         lte(learningItem.dueOn, today),
+        subject ? subjectCondition(subject) : undefined,
       ),
     );
   return row.n;
