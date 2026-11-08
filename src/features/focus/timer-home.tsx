@@ -10,7 +10,13 @@ import {
   type TimeTechnique,
 } from "@/src/features/techniques/slugs";
 import { getPreferences, today } from "@/src/features/preferences/server";
-import { listTasks } from "@/src/features/tasks/server";
+import {
+  listDoneOn,
+  listProjects,
+  listTasks,
+} from "@/src/features/tasks/server";
+import { listSubjects, recentTopics } from "@/src/features/subjects/server";
+import type { DayData } from "./day-panel";
 import {
   recommendationSessions,
   todayTrail,
@@ -33,14 +39,50 @@ export async function SignedInTimerHome({
   const locale = await getLocale();
   const prefs = await getPreferences(userId);
   const day = today(prefs);
-  const [labels, tasks, sessions, due, dueSample, trail] = await Promise.all([
+  const [
+    labels,
+    tasks,
+    sessions,
+    due,
+    dueSample,
+    trail,
+    doneToday,
+    projects,
+    subjects,
+    topics,
+  ] = await Promise.all([
     techniqueLabels(locale),
     listTasks(userId),
     recommendationSessions(userId),
     countDue(userId, day),
     dueCards(userId, day, 3),
     todayTrail(userId, prefs.timezone),
+    listDoneOn(userId, prefs.timezone, day),
+    listProjects(userId),
+    listSubjects(userId),
+    recentTopics(userId),
   ]);
+  const dayData: DayData = {
+    today: day,
+    tasks: [...tasks, ...doneToday]
+      .filter((x) => x.plannedFor === day)
+      .map((x) => ({
+        id: x.id,
+        title: x.title,
+        estimatedMinutes: x.estimatedMinutes,
+        size135: x.size135,
+        status: x.status === "done" ? "done" : "todo",
+        projectId: x.projectId,
+        notes: x.notes,
+      })),
+    projects: projects
+      .filter((p) => !p.archivedAt)
+      .map((p) => ({ id: p.id, name: p.name, color: p.color })),
+    subjects: subjects
+      .filter((s) => !s.archivedAt)
+      .map((s) => ({ id: s.id, name: s.name, color: s.color })),
+    topics,
+  };
   const initialTasks = tasks
     .map((t) => ({
       id: t.id,
@@ -48,6 +90,7 @@ export async function SignedInTimerHome({
       tags: t.tags,
       frog: t.isFrogOn === day,
       estimatedMinutes: t.estimatedMinutes,
+      projectId: t.projectId,
     }))
     .sort((a, b) => Number(b.frog) - Number(a.frog));
   const initialTechnique =
@@ -74,6 +117,7 @@ export async function SignedInTimerHome({
         initialTechnique={initialTechnique}
         defaultTechnique={prefs.defaultTimeTechnique as TimeTechnique}
         initialTaskId={task}
+        day={dayData}
         initialSubject={topic?.slice(0, 200)}
         secondaryStart={due > 0}
         above={

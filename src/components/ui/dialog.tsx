@@ -11,6 +11,7 @@ export function Dialog({
   label,
   variant = "dialog",
   wide = false,
+  side = false,
 }: {
   open: boolean;
   onClose: () => void;
@@ -22,6 +23,8 @@ export function Dialog({
   /** "sheet": bottom sheet on phones, centred panel on larger screens. */
   variant?: "dialog" | "sheet";
   wide?: boolean;
+  /** A sheet that docks to the inline end on larger screens. */
+  side?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -33,7 +36,7 @@ export function Dialog({
   return (
     <dialog
       ref={ref}
-      className={`${variant}${wide ? " dialog-wide" : ""}`}
+      className={`${variant}${wide ? " dialog-wide" : ""}${side ? " sheet-side" : ""}`}
       aria-labelledby={labelledBy}
       aria-label={label}
       onClose={onClose}

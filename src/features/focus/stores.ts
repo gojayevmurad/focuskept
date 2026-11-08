@@ -14,6 +14,7 @@ export type StoreTask = {
   tags: string[];
   frog?: boolean;
   estimatedMinutes?: number | null;
+  projectId?: string | null;
 };
 
 export type TodaySummary = {
@@ -221,6 +222,7 @@ export function remoteStore(
           tags: string[];
           isFrogOn: string | null;
           estimatedMinutes: number | null;
+          projectId: string | null;
         }[];
         return rows
           .map((t) => ({
@@ -229,6 +231,7 @@ export function remoteStore(
             tags: t.tags,
             frog: t.isFrogOn === today,
             estimatedMinutes: t.estimatedMinutes,
+            projectId: t.projectId,
           }))
           .sort((a, b) => Number(Boolean(b.frog)) - Number(Boolean(a.frog)));
       } catch {

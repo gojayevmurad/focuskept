@@ -1232,6 +1232,9 @@
     color: var(--muted);
   }
   .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     min-block-size: 34px;
     padding: 0 12px;
     border-radius: 999px;
@@ -1244,6 +1247,292 @@
   .chip:hover {
     color: var(--fg);
   }
+  .timer-groups {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .chip.is-active {
+    border-color: var(--accent-line);
+    background: var(--accent-soft);
+    color: var(--fg);
+  }
+  .chip.is-dashed {
+    border-style: dashed;
+  }
+  .timer-new-group {
+    display: inline-flex;
+    gap: 6px;
+  }
+  .timer-new-group .input {
+    inline-size: 170px;
+    block-size: 34px;
+    font-size: 14px;
+  }
+  .timer-suggest.is-topics {
+    margin-block-start: -6px;
+  }
+  .project-dot.is-round {
+    border-radius: 50%;
+  }
+
+  .day-strip {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-block-size: 64px;
+    padding: 10px 16px 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: color-mix(in srgb, var(--surface), var(--bg) 40%);
+    color: var(--fg);
+    text-align: start;
+    cursor: pointer;
+  }
+  .day-strip:hover {
+    border-color: var(--border-strong);
+  }
+  .day-strip-count,
+  .day-strip-next {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .day-strip-count {
+    flex-shrink: 0;
+    padding-inline-end: 16px;
+    border-inline-end: 1px solid var(--border);
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .day-strip-next {
+    flex: 1;
+    min-inline-size: 0;
+  }
+  .day-strip-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .day-strip-label.is-next {
+    color: var(--amber-ink);
+  }
+  .day-strip-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .day-sheet {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .day-sheet-title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+  .day-sheet-bar {
+    block-size: 8px;
+    border-radius: 4px;
+    background: var(--track);
+    overflow: hidden;
+  }
+  .day-sheet-bar > span {
+    display: block;
+    block-size: 100%;
+    background: var(--accent);
+  }
+  .day-sheet-add {
+    display: flex;
+    gap: 8px;
+  }
+  .day-sheet-add .input {
+    flex: 1;
+    min-inline-size: 0;
+  }
+  .day-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .day-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-block-size: 50px;
+    border-block-start: 1px solid var(--divider);
+  }
+  .day-row-title {
+    flex: 1;
+    min-inline-size: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 14.5px;
+  }
+  .day-row-title.is-done {
+    color: var(--subtle);
+    text-decoration: line-through;
+  }
+  .day-row-title .board-meta {
+    margin: 2px 0 0;
+  }
+  .day-empty {
+    padding: 10px 0;
+    font-size: 13px;
+    color: var(--subtle);
+  }
+  .day-sheet-link {
+    align-self: flex-start;
+    border: 0;
+    background: none;
+    padding: 0;
+    color: var(--accent-ink);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  @media (min-width: 761px) {
+    dialog.sheet.sheet-side {
+      margin-block: 0;
+      margin-inline: auto 0;
+      block-size: 100dvh;
+      max-block-size: 100dvh;
+      inline-size: 420px;
+      border-radius: 0;
+      overflow-y: auto;
+    }
+  }
+
+  .focus-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    inline-size: 100%;
+  }
+  .focus-layout > .focus-stage {
+    flex: 1 1 auto;
+    margin-inline: 0;
+  }
+  .focus-panel {
+    display: none;
+    flex: 0 0 320px;
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px;
+    border-radius: 26px;
+    background: color-mix(in srgb, var(--surface), var(--bg) 40%);
+    box-shadow: inset 0 0 0 1px var(--border);
+    transition: opacity 250ms var(--ease);
+  }
+  .focus-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .focus-panel-head h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .focus-panel-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 18px;
+    background: var(--surface);
+  }
+  .focus-panel-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .focus-panel-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .focus-panel-note {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--soft);
+  }
+  .focus-panel-note.is-pre {
+    white-space: pre-line;
+  }
+  .focus-panel-h3 {
+    margin-block-end: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .focus-panel-topic {
+    padding: 8px 0;
+    border-block-start: 1px solid var(--divider);
+    font-size: 14px;
+  }
+  .focus-panel-rail {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    inline-size: 56px;
+    padding-block: 18px;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background: color-mix(in srgb, var(--surface), var(--bg) 40%);
+    color: var(--soft);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 250ms var(--ease);
+  }
+  .focus-day-button {
+    position: fixed;
+    inset-block-end: 16px;
+    inset-inline-start: 16px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    block-size: 44px;
+    padding-inline: 16px;
+    border: 1px solid var(--border-strong);
+    border-radius: 22px;
+    background: var(--surface);
+    color: var(--fg);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 250ms var(--ease);
+  }
+  @media (min-width: 1100px) {
+    .focus-panel {
+      display: flex;
+    }
+    .focus-panel-rail {
+      display: flex;
+    }
+    .focus-day-button {
+      display: none;
+    }
+  }
+  /* The panel goes quiet with the rest of the chrome while the timer runs untouched. */
+  .focus-layout:has(.focus-stage.is-idle) .focus-chrome {
+    opacity: 0;
+  }
+  .focus-layout:has(.focus-stage.is-idle) .focus-chrome:focus-within {
+    opacity: 1;
+  }
+
   .timer-controls {
     display: flex;
     flex-wrap: wrap;
