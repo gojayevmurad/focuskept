@@ -200,6 +200,17 @@ test("day board: pickers, delete with undo, and the All view", async ({
     await page
       .getByRole("checkbox", { name: "Select “Call the bank”" })
       .click();
+    // Both moves are PATCHes that wait for their task to be created first;
+    // reloading before they finish would cancel them.
+    let moved = 0;
+    page.on("response", (r) => {
+      if (
+        r.request().method() === "PATCH" &&
+        r.url().includes("/api/tasks/") &&
+        r.ok()
+      )
+        moved += 1;
+    });
     await page
       .getByRole("toolbar", { name: "Selected tasks" })
       .getByRole("button", { name: "Tomorrow" })
@@ -208,6 +219,7 @@ test("day board: pickers, delete with undo, and the All view", async ({
       "Call the bank",
     );
 
+    await expect.poll(() => moved, { timeout: 30000 }).toBe(2);
     await page.reload();
     await expect(page.locator(".board-aside")).not.toContainText(
       "Read chapter 4",
