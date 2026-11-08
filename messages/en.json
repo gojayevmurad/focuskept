@@ -866,7 +866,9 @@
       "early": "Practice",
       "score": "{score, number}%",
       "analysis": "AI feedback",
-      "error": "Couldn’t save. Please try again."
+      "error": "Couldn’t save. Please try again.",
+      "subject": "Subject",
+      "noSubject": "No subject"
     },
     "questions": {
       "number": "Question {n, number}",
@@ -904,6 +906,21 @@
       "today": "Today",
       "days": "{days, plural, one {# day} other {# days}}",
       "hint": "A right answer moves a card one box on, so it comes back less often. A wrong one brings it back soon."
+    },
+    "subjects": {
+      "label": "Subjects",
+      "all": "All",
+      "none": "No subject",
+      "review": "Review {subject} · {count, number}",
+      "reviewNone": "Review without subject · {count, number}",
+      "rename": "Rename",
+      "renameLabel": "New name",
+      "save": "Save",
+      "cancel": "Cancel",
+      "archive": "Archive subject",
+      "archived": "“{name}” archived. Its cards stay.",
+      "nameTaken": "You already have a subject with that name.",
+      "error": "Couldn’t save. Please try again."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Step",
       "dayN": "Day {day, number}",
       "graduated": "Long-term"
-    }
+    },
+    "byProject": "Time by project",
+    "bySubject": "Time by subject",
+    "noProjects": "Pick a project on the timer to see your time here.",
+    "noSubjects": "Pick a subject on the timer to see your time here."
   },
   "pricing": {
     "eyebrow": "Pricing",

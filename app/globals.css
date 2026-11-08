@@ -1247,6 +1247,50 @@
   .chip:hover {
     color: var(--fg);
   }
+  .subject-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-block-end: 12px;
+  }
+  .subject-chips .chip {
+    text-decoration: none;
+  }
+  .group-bars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .group-bars li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 12px;
+    font-size: 14px;
+  }
+  .group-bars-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-inline-size: 0;
+  }
+  .group-bars-value {
+    color: var(--muted);
+  }
+  .group-bars-track {
+    grid-column: 1 / -1;
+    block-size: 6px;
+    border-radius: 3px;
+    background: var(--track);
+    overflow: hidden;
+  }
+  .group-bars-track > span {
+    display: block;
+    block-size: 100%;
+    border-radius: 3px;
+  }
   .timer-groups {
     display: flex;
     flex-wrap: wrap;

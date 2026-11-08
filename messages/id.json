@@ -866,7 +866,9 @@
       "early": "Latihan",
       "score": "{score, number}%",
       "analysis": "Masukan AI",
-      "error": "Tidak bisa menyimpan. Silakan coba lagi."
+      "error": "Tidak bisa menyimpan. Silakan coba lagi.",
+      "subject": "Mata pelajaran",
+      "noSubject": "Tanpa mata pelajaran"
     },
     "questions": {
       "number": "Pertanyaan {n, number}",
@@ -904,6 +906,21 @@
       "today": "Hari ini",
       "days": "{days, plural, other {# hari}}",
       "hint": "Jawaban benar memindahkan kartu satu kotak, jadi jarang kembali. Jawaban salah membawanya kembali segera."
+    },
+    "subjects": {
+      "label": "Mata pelajaran",
+      "all": "Semua",
+      "none": "Tanpa mata pelajaran",
+      "review": "Ulas {subject} · {count, number}",
+      "reviewNone": "Ulas tanpa mata pelajaran · {count, number}",
+      "rename": "Ganti nama",
+      "renameLabel": "Nama baru",
+      "save": "Simpan",
+      "cancel": "Batal",
+      "archive": "Arsipkan mata pelajaran",
+      "archived": "“{name}” diarsipkan. Kartunya tetap ada.",
+      "nameTaken": "Kamu sudah punya mata pelajaran dengan nama itu.",
+      "error": "Tidak bisa menyimpan. Silakan coba lagi."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Langkah",
       "dayN": "Hari ke-{day, number}",
       "graduated": "Jangka panjang"
-    }
+    },
+    "byProject": "Waktu per proyek",
+    "bySubject": "Waktu per mata pelajaran",
+    "noProjects": "Pilih proyek di timer untuk melihat waktumu di sini.",
+    "noSubjects": "Pilih mata pelajaran di timer untuk melihat waktumu di sini."
   },
   "pricing": {
     "eyebrow": "Harga",

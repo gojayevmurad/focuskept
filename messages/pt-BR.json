@@ -866,7 +866,9 @@
       "early": "Prática",
       "score": "{score, number}%",
       "analysis": "Feedback da IA",
-      "error": "Não foi possível salvar. Tente de novo."
+      "error": "Não foi possível salvar. Tente de novo.",
+      "subject": "Matéria",
+      "noSubject": "Sem matéria"
     },
     "questions": {
       "number": "Pergunta {n, number}",
@@ -904,6 +906,21 @@
       "today": "Hoje",
       "days": "{days, plural, one {# dia} many {# dias} other {# dias}}",
       "hint": "Uma resposta certa move o cartão uma caixa adiante e ele volta menos vezes. Uma errada o traz de volta logo."
+    },
+    "subjects": {
+      "label": "Matérias",
+      "all": "Todas",
+      "none": "Sem matéria",
+      "review": "Revisar {subject} · {count, number}",
+      "reviewNone": "Revisar sem matéria · {count, number}",
+      "rename": "Renomear",
+      "renameLabel": "Novo nome",
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "archive": "Arquivar matéria",
+      "archived": "“{name}” arquivada. Os cartões continuam.",
+      "nameTaken": "Você já tem uma matéria com esse nome.",
+      "error": "Não foi possível salvar. Tente de novo."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Passo",
       "dayN": "Dia {day, number}",
       "graduated": "Longo prazo"
-    }
+    },
+    "byProject": "Tempo por projeto",
+    "bySubject": "Tempo por matéria",
+    "noProjects": "Escolha um projeto no timer para ver seu tempo aqui.",
+    "noSubjects": "Escolha uma matéria no timer para ver seu tempo aqui."
   },
   "pricing": {
     "eyebrow": "Preços",

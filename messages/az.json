@@ -866,7 +866,9 @@
       "early": "Məşq",
       "score": "{score, number}%",
       "analysis": "AI rəyi",
-      "error": "Saxlamaq mümkün olmadı. Yenidən cəhd et."
+      "error": "Saxlamaq mümkün olmadı. Yenidən cəhd et.",
+      "subject": "Fənn",
+      "noSubject": "Fənnsiz"
     },
     "questions": {
       "number": "Sual {n, number}",
@@ -904,6 +906,21 @@
       "today": "Bu gün",
       "days": "{days, plural, one {# gün} other {# gün}}",
       "hint": "Düz cavab kartı bir qutu irəli aparır və o daha seyrək gəlir. Səhv cavab onu tezliklə geri qaytarır."
+    },
+    "subjects": {
+      "label": "Fənlər",
+      "all": "Hamısı",
+      "none": "Fənnsiz",
+      "review": "{subject} təkrarı · {count, number}",
+      "reviewNone": "Fənnsiz təkrar · {count, number}",
+      "rename": "Adını dəyiş",
+      "renameLabel": "Yeni ad",
+      "save": "Saxla",
+      "cancel": "Ləğv et",
+      "archive": "Fənni arxivlə",
+      "archived": "«{name}» arxivləndi. Kartları qalır.",
+      "nameTaken": "Bu adda fənnin artıq var.",
+      "error": "Saxlamaq mümkün olmadı. Yenidən cəhd et."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Addım",
       "dayN": "{day, number}-ci gün",
       "graduated": "Uzunmüddətli"
-    }
+    },
+    "byProject": "Layihələr üzrə vaxt",
+    "bySubject": "Fənlər üzrə vaxt",
+    "noProjects": "Vaxtını burada görmək üçün taymerdə layihə seç.",
+    "noSubjects": "Vaxtını burada görmək üçün taymerdə fənn seç."
   },
   "pricing": {
     "eyebrow": "Qiymətlər",

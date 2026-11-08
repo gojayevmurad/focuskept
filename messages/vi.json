@@ -866,7 +866,9 @@
       "early": "Luyện tập",
       "score": "{score, number}%",
       "analysis": "Phản hồi AI",
-      "error": "Không thể lưu. Vui lòng thử lại."
+      "error": "Không thể lưu. Vui lòng thử lại.",
+      "subject": "Môn học",
+      "noSubject": "Không có môn"
     },
     "questions": {
       "number": "Câu hỏi {n, number}",
@@ -904,6 +906,21 @@
       "today": "Hôm nay",
       "days": "{days, plural, other {# ngày}}",
       "hint": "Trả lời đúng đưa thẻ sang hộp tiếp theo nên thẻ ít quay lại hơn. Trả lời sai sẽ sớm đưa thẻ trở lại."
+    },
+    "subjects": {
+      "label": "Môn học",
+      "all": "Tất cả",
+      "none": "Không có môn",
+      "review": "Ôn {subject} · {count, number}",
+      "reviewNone": "Ôn không theo môn · {count, number}",
+      "rename": "Đổi tên",
+      "renameLabel": "Tên mới",
+      "save": "Lưu",
+      "cancel": "Hủy",
+      "archive": "Lưu trữ môn học",
+      "archived": "Đã lưu trữ “{name}”. Thẻ vẫn còn.",
+      "nameTaken": "Bạn đã có môn học tên này.",
+      "error": "Không thể lưu. Vui lòng thử lại."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Bước",
       "dayN": "Ngày {day, number}",
       "graduated": "Dài hạn"
-    }
+    },
+    "byProject": "Thời gian theo dự án",
+    "bySubject": "Thời gian theo môn",
+    "noProjects": "Chọn dự án trên bộ hẹn giờ để xem thời gian ở đây.",
+    "noSubjects": "Chọn môn học trên bộ hẹn giờ để xem thời gian ở đây."
   },
   "pricing": {
     "eyebrow": "Bảng giá",

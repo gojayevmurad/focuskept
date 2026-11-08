@@ -21,6 +21,7 @@ import { createProject, createTask } from "@/src/features/tasks/server";
 import { cardBoxes, listCards, updateCard } from "@/src/features/cards/server";
 import { countDue, dueCards } from "@/src/features/reviews/server";
 import { exportAll } from "@/src/features/export/server";
+import { focusByGroup } from "@/src/features/stats/server";
 
 vi.mock("@/src/features/analytics/server", () => ({
   captureProductEvent: vi.fn(),
@@ -188,6 +189,42 @@ describe.skipIf(!testDatabaseUrl)("subjects", () => {
       .from(learningItem)
       .where(eq(learningItem.id, id));
     expect(row.subjectId).toBeNull();
+  });
+
+  it("sums focused time per project and per subject", async () => {
+    const proj = await createProject(B, { name: "Stats project", color });
+    const subj = await createSubject(B, { name: "Stats subject", color });
+    await createSession(B, session({ projectId: proj.id }));
+    await createSession(B, session({ projectId: proj.id }));
+    await createSession(
+      B,
+      session({
+        mode: "learning",
+        learningMethod: "feynman",
+        learning: { topic: "Atoms", notes: {} },
+        subjectId: subj.id,
+      }),
+    );
+    const today = new Date().toISOString().slice(0, 10);
+    const rows = await focusByGroup(B, {
+      timezone: "UTC",
+      from: "2000-01-01",
+      to: today,
+    });
+    expect(rows).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          kind: "project",
+          name: "Stats project",
+          seconds: 3000,
+        }),
+        expect.objectContaining({
+          kind: "subject",
+          name: "Stats subject",
+          seconds: 1500,
+        }),
+      ]),
+    );
   });
 
   it("includes subjects in the data export", async () => {

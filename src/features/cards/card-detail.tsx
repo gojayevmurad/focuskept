@@ -16,12 +16,16 @@ export function CardEditor({
   topic: initialTopic,
   explanation: initialExplanation,
   status,
+  subjectId,
+  subjects,
   questions: initialQuestions,
 }: {
   id: string;
   topic: string;
   explanation: string;
   status: "active" | "archived";
+  subjectId: string | null;
+  subjects: { id: string; name: string }[];
   questions: Omit<EditableQuestion, "key">[];
 }) {
   const t = useTranslations("cards.detail");
@@ -69,6 +73,22 @@ export function CardEditor({
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
           />
+        </label>
+        <label className="field">
+          <span className="label">{t("subject")}</span>
+          <select
+            className="select"
+            value={subjectId ?? ""}
+            disabled={busy}
+            onChange={(e) => void patch({ subjectId: e.target.value || null })}
+          >
+            <option value="">{t("noSubject")}</option>
+            {subjects.map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.name}
+              </option>
+            ))}
+          </select>
         </label>
         <label className="field">
           <span className="label">{t("explanation")}</span>

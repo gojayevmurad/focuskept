@@ -4,6 +4,10 @@ import { Brain, Plus, Search } from "lucide-react";
 import { PageHeader } from "@/src/components/page-header";
 import { Link } from "@/src/i18n/navigation";
 import { cardBoxes, listCards, listTopics } from "@/src/features/cards/server";
+import { listSubjects } from "@/src/features/subjects/server";
+import { SubjectActions } from "@/src/features/subjects/subject-actions";
+import { ClientIntl } from "@/src/components/client-intl";
+import { idSchema } from "@/src/lib/api";
 import { cardAllowance } from "@/src/features/limits/server";
 import { getPreferences, today } from "@/src/features/preferences/server";
 import { dueLabel } from "@/src/features/cards/due-label";
@@ -28,6 +32,7 @@ type Query = {
   topic?: string;
   sort?: string;
   cursor?: string;
+  subject?: string;
 };
 
 export default async function Page({
@@ -41,28 +46,40 @@ export default async function Page({
   const sort = query.sort === "new" ? "new" : "due";
   const q = query.q?.slice(0, 200) || undefined;
   const topic = query.topic?.slice(0, 200) || undefined;
-  const [prefs, { cards, nextCursor }, topics, allowance] = await Promise.all([
-    getPreferences(user.id),
-    listCards(user.id, {
-      q,
-      status,
-      topic,
-      sort,
-      cursor: query.cursor?.slice(0, 200),
-    }),
-    listTopics(user.id),
-    cardAllowance(user.id),
-  ]);
+  const subject =
+    query.subject === "none" || idSchema.safeParse(query.subject).success
+      ? query.subject
+      : undefined;
+  const [prefs, { cards, nextCursor }, topics, allowance, subjects] =
+    await Promise.all([
+      getPreferences(user.id),
+      listCards(user.id, {
+        q,
+        status,
+        topic,
+        subject,
+        sort,
+        cursor: query.cursor?.slice(0, 200),
+      }),
+      listTopics(user.id),
+      cardAllowance(user.id),
+      listSubjects(user.id),
+    ]);
+  const activeSubjects = subjects.filter((s) => !s.archivedAt);
+  const current = subjects.find((s) => s.id === subject);
+  const reviewHref = subject
+    ? { pathname: "/app/review", query: { subject } }
+    : "/app/review";
   const t = await getTranslations("cards");
   const home = await getTranslations("home");
   const locale = await getLocale();
   const day = today(prefs);
-  const boxes = await cardBoxes(user.id, day, prefs.reviewSteps);
+  const boxes = await cardBoxes(user.id, day, prefs.reviewSteps, subject);
   const nf = new Intl.NumberFormat(locale);
   const groups = new Map<string, typeof cards>();
   for (const card of cards)
     groups.set(card.topic, [...(groups.get(card.topic) ?? []), card]);
-  const hasFilters = Boolean(q || topic || status === "archived");
+  const hasFilters = Boolean(q || topic || subject || status === "archived");
   return (
     <>
       <PageHeader
@@ -78,13 +95,57 @@ export default async function Page({
               {t("newSession")}
             </Link>
             {boxes[0] > 0 && (
-              <Link href="/app/review" className="btn btn-amber">
-                {home("reviewStart")} · {nf.format(boxes[0])}
+              <Link href={reviewHref} className="btn btn-amber">
+                {current
+                  ? t("subjects.review", {
+                      subject: current.name,
+                      count: boxes[0],
+                    })
+                  : subject === "none"
+                    ? t("subjects.reviewNone", { count: boxes[0] })
+                    : `${home("reviewStart")} · ${nf.format(boxes[0])}`}
               </Link>
             )}
           </div>
         }
       />
+      {activeSubjects.length > 0 && (
+        <nav className="subject-chips" aria-label={t("subjects.label")}>
+          {[
+            { id: undefined, name: t("subjects.all"), color: null },
+            ...activeSubjects.map((s) => ({
+              id: s.id as string | undefined,
+              name: s.name,
+              color: s.color as string | null,
+            })),
+            { id: "none", name: t("subjects.none"), color: null },
+          ].map((s) => (
+            <Link
+              key={s.id ?? "all"}
+              href={{
+                pathname: "/app/cards",
+                query: s.id ? { subject: s.id } : {},
+              }}
+              className={subject === s.id ? "chip is-active" : "chip"}
+              aria-current={subject === s.id ? "page" : undefined}
+            >
+              {s.color && (
+                <span
+                  className="project-dot is-round"
+                  style={{ background: s.color }}
+                  aria-hidden="true"
+                />
+              )}
+              {s.name}
+            </Link>
+          ))}
+        </nav>
+      )}
+      {current && (
+        <ClientIntl namespaces={["cards"]}>
+          <SubjectActions id={current.id} name={current.name} />
+        </ClientIntl>
+      )}
       <section className="boxes" aria-label={t("boxes.label")}>
         <ol className="boxes-row">
           {boxes.map((count, i) => (
@@ -111,6 +172,7 @@ export default async function Page({
         className="card card-sm mb-5 flex flex-wrap items-end gap-3"
         role="search"
       >
+        {subject && <input type="hidden" name="subject" value={subject} />}
         <label className="field" style={{ flex: "1 1 220px" }}>
           <span className="label tiny">{t("searchLabel")}</span>
           <input

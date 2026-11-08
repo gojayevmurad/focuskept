@@ -866,7 +866,9 @@
       "early": "Práctica",
       "score": "{score, number} %",
       "analysis": "Comentarios de la IA",
-      "error": "No se pudo guardar. Inténtalo de nuevo."
+      "error": "No se pudo guardar. Inténtalo de nuevo.",
+      "subject": "Materia",
+      "noSubject": "Sin materia"
     },
     "questions": {
       "number": "Pregunta {n, number}",
@@ -904,6 +906,21 @@
       "today": "Hoy",
       "days": "{days, plural, one {# día} many {# días} other {# días}}",
       "hint": "Una respuesta correcta mueve la tarjeta una caja y vuelve con menos frecuencia. Una incorrecta la trae pronto."
+    },
+    "subjects": {
+      "label": "Materias",
+      "all": "Todas",
+      "none": "Sin materia",
+      "review": "Repasar {subject} · {count, number}",
+      "reviewNone": "Repasar sin materia · {count, number}",
+      "rename": "Renombrar",
+      "renameLabel": "Nuevo nombre",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "archive": "Archivar materia",
+      "archived": "«{name}» archivada. Sus tarjetas se quedan.",
+      "nameTaken": "Ya tienes una materia con ese nombre.",
+      "error": "No se pudo guardar. Inténtalo de nuevo."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Paso",
       "dayN": "Día {day, number}",
       "graduated": "Largo plazo"
-    }
+    },
+    "byProject": "Tiempo por proyecto",
+    "bySubject": "Tiempo por materia",
+    "noProjects": "Elige un proyecto en el temporizador para ver aquí tu tiempo.",
+    "noSubjects": "Elige una materia en el temporizador para ver aquí tu tiempo."
   },
   "pricing": {
     "eyebrow": "Precios",

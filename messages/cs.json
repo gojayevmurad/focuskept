@@ -866,7 +866,9 @@
       "early": "Procvičení",
       "score": "{score, number} %",
       "analysis": "Zpětná vazba od AI",
-      "error": "Uložení se nepovedlo. Zkus to prosím znovu."
+      "error": "Uložení se nepovedlo. Zkus to prosím znovu.",
+      "subject": "Předmět",
+      "noSubject": "Bez předmětu"
     },
     "questions": {
       "number": "Otázka {n, number}",
@@ -904,6 +906,21 @@
       "today": "Dnes",
       "days": "{days, plural, one {# den} few {# dny} many {# dne} other {# dní}}",
       "hint": "Správná odpověď posune kartu o krabičku dál a vrátí se později. Chybná ji brzy vrátí."
+    },
+    "subjects": {
+      "label": "Předměty",
+      "all": "Vše",
+      "none": "Bez předmětu",
+      "review": "Opakovat {subject} · {count, number}",
+      "reviewNone": "Opakovat bez předmětu · {count, number}",
+      "rename": "Přejmenovat",
+      "renameLabel": "Nový název",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "archive": "Archivovat předmět",
+      "archived": "„{name}“ archivováno. Kartičky zůstávají.",
+      "nameTaken": "Předmět s tímto názvem už máš.",
+      "error": "Uložení se nepovedlo. Zkus to prosím znovu."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Krok",
       "dayN": "Den {day, number}",
       "graduated": "Dlouhodobě"
-    }
+    },
+    "byProject": "Čas podle projektu",
+    "bySubject": "Čas podle předmětu",
+    "noProjects": "Vyber v časovači projekt a uvidíš tu svůj čas.",
+    "noSubjects": "Vyber v časovači předmět a uvidíš tu svůj čas."
   },
   "pricing": {
     "eyebrow": "Ceník",
