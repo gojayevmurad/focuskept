@@ -701,7 +701,8 @@
       "deleteLabel": "«{title}» işini sil",
       "deleted": "«{title}» silindi",
       "deletedMany": "Silinən tapşırıq: {count, number}",
-      "undo": "Geri al"
+      "undo": "Geri al",
+      "keepAsText": "Mətn kimi saxla"
     },
     "details": {
       "days": {

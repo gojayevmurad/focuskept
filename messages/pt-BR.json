@@ -701,7 +701,8 @@
       "deleteLabel": "Excluir “{title}”",
       "deleted": "“{title}” excluída",
       "deletedMany": "Tarefas excluídas: {count, number}",
-      "undo": "Desfazer"
+      "undo": "Desfazer",
+      "keepAsText": "Manter como texto"
     },
     "details": {
       "days": {

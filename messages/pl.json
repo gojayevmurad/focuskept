@@ -701,7 +701,8 @@
       "deleteLabel": "Usuń „{title}”",
       "deleted": "Usunięto „{title}”",
       "deletedMany": "Usunięte zadania: {count, number}",
-      "undo": "Cofnij"
+      "undo": "Cofnij",
+      "keepAsText": "Zostaw jako tekst"
     },
     "details": {
       "days": {

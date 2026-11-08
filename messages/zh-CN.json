@@ -701,7 +701,8 @@
       "deleteLabel": "删除“{title}”",
       "deleted": "已删除“{title}”",
       "deletedMany": "已删除任务：{count, number}",
-      "undo": "撤销"
+      "undo": "撤销",
+      "keepAsText": "保留为文字"
     },
     "details": {
       "days": {

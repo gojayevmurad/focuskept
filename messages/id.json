@@ -701,7 +701,8 @@
       "deleteLabel": "Hapus “{title}”",
       "deleted": "“{title}” dihapus",
       "deletedMany": "Tugas dihapus: {count, number}",
-      "undo": "Urungkan"
+      "undo": "Urungkan",
+      "keepAsText": "Biarkan sebagai teks"
     },
     "details": {
       "days": {

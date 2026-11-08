@@ -701,7 +701,8 @@
       "deleteLabel": "Delete “{title}”",
       "deleted": "“{title}” deleted",
       "deletedMany": "Tasks deleted: {count, number}",
-      "undo": "Undo"
+      "undo": "Undo",
+      "keepAsText": "Keep as text"
     },
     "details": {
       "days": {

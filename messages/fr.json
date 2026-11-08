@@ -701,7 +701,8 @@
       "deleteLabel": "Supprimer « {title} »",
       "deleted": "« {title} » supprimée",
       "deletedMany": "Tâches supprimées : {count, number}",
-      "undo": "Annuler"
+      "undo": "Annuler",
+      "keepAsText": "Garder comme texte"
     },
     "details": {
       "days": {

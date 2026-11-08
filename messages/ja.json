@@ -701,7 +701,8 @@
       "deleteLabel": "「{title}」を削除",
       "deleted": "「{title}」を削除しました",
       "deletedMany": "削除したタスク：{count, number}",
-      "undo": "元に戻す"
+      "undo": "元に戻す",
+      "keepAsText": "テキストのままにする"
     },
     "details": {
       "days": {

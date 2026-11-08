@@ -701,7 +701,8 @@
       "deleteLabel": "احذف «{title}»",
       "deleted": "حُذفت «{title}»",
       "deletedMany": "المهام المحذوفة: {count, number}",
-      "undo": "تراجع"
+      "undo": "تراجع",
+      "keepAsText": "أبقِها نصًا"
     },
     "details": {
       "days": {

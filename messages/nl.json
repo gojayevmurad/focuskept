@@ -701,7 +701,8 @@
       "deleteLabel": "„{title}” verwijderen",
       "deleted": "„{title}” verwijderd",
       "deletedMany": "Verwijderde taken: {count, number}",
-      "undo": "Ongedaan maken"
+      "undo": "Ongedaan maken",
+      "keepAsText": "Als tekst houden"
     },
     "details": {
       "days": {

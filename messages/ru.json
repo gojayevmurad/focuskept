@@ -701,7 +701,8 @@
       "deleteLabel": "Удалить «{title}»",
       "deleted": "«{title}» удалена",
       "deletedMany": "Удалено задач: {count, number}",
-      "undo": "Отменить"
+      "undo": "Отменить",
+      "keepAsText": "Оставить текстом"
     },
     "details": {
       "days": {

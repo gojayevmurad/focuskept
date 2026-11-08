@@ -701,7 +701,8 @@
       "deleteLabel": "“{title}” حذف کریں",
       "deleted": "“{title}” حذف ہو گیا",
       "deletedMany": "حذف شدہ کام: {count, number}",
-      "undo": "واپس لائیں"
+      "undo": "واپس لائیں",
+      "keepAsText": "متن ہی رہنے دیں"
     },
     "details": {
       "days": {

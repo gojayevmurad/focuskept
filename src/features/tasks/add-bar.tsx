@@ -13,7 +13,12 @@ import { toast } from "@/src/components/ui/toast";
 import { formatMinutes } from "@/src/features/focus/format";
 import { addDays, startOfWeek, weekdayOf } from "@/src/lib/dates";
 import { eisenhowerFor } from "./planning";
-import { parseQuickAdd, wordList } from "./quick-add";
+import {
+  parseQuickAdd,
+  weekdayNames,
+  wordList,
+  type QuickAddSpan,
+} from "./quick-add";
 import { projectRequest, type ClientProject } from "./use-tasks";
 import type { Board } from "./day-board";
 
@@ -45,7 +50,10 @@ export function AddBar({
   const [projectId, setProjectId] = useState<string | null>(null);
   const [important, setImportant] = useState(false);
   const [open, setOpen] = useState<Open>(null);
+  // Words the user clicked to keep as plain text ("tomorrow" in a title).
+  const [ignored, setIgnored] = useState<string[]>([]);
   const input = useRef<HTMLInputElement>(null);
+  const mirror = useRef<HTMLDivElement>(null);
 
   const words = useMemo(
     () => ({
@@ -53,10 +61,19 @@ export function AddBar({
       tomorrow: wordList(t("board.keywords.tomorrow")),
       minutes: wordList(t("board.keywords.minutes")),
       hours: wordList(t("board.keywords.hours")),
+      weekdays: weekdayNames(locale),
     }),
-    [t],
+    [t, locale],
   );
-  const parsed = parseQuickAdd(text, words, !UNSPACED.has(locale));
+  const spaced = !UNSPACED.has(locale);
+  const keep = new Set(
+    parseQuickAdd(text, words, spaced)
+      .spans.filter((s) =>
+        ignored.includes(text.slice(s.start, s.end).toLowerCase()),
+      )
+      .map((s) => s.start),
+  );
+  const parsed = parseQuickAdd(text, words, spaced, keep);
   const ready = parsed.title.trim().length > 0;
   const day =
     date !== undefined
@@ -65,7 +82,12 @@ export function AddBar({
         ? board.today
         : parsed.when === "tomorrow"
           ? board.tomorrow
-          : null;
+          : parsed.weekday !== null
+            ? addDays(
+                board.today,
+                (parsed.weekday - weekdayOf(board.today) + 7) % 7,
+              )
+            : null;
   const duration = minutes !== undefined ? minutes : parsed.minutes;
   const isImportant = important || parsed.important;
   const size = day === board.today ? board.slotFor(duration) : undefined;
@@ -77,6 +99,7 @@ export function AddBar({
     setDate(undefined);
     setMinutes(undefined);
     setImportant(false);
+    setIgnored([]);
     setOpen(null);
     input.current?.focus();
   }
@@ -124,16 +147,33 @@ export function AddBar({
     >
       <div className="board-add-row">
         <Plus size={20} aria-hidden="true" className="board-add-icon" />
-        <input
-          ref={input}
-          className="board-add-input"
-          value={text}
-          maxLength={260}
-          onChange={(e) => setText(e.target.value)}
-          aria-label={t("board.addLabel")}
-          placeholder={t("board.addPlaceholder")}
-          dir="auto"
-        />
+        <div className="board-add-field">
+          <input
+            ref={input}
+            className="board-add-input"
+            value={text}
+            maxLength={260}
+            onChange={(e) => setText(e.target.value)}
+            onScroll={(e) => {
+              if (mirror.current)
+                mirror.current.scrollLeft = e.currentTarget.scrollLeft;
+            }}
+            aria-label={t("board.addLabel")}
+            aria-describedby="board-add-hint"
+            placeholder={t("board.addPlaceholder")}
+            dir="auto"
+          />
+          <Highlights
+            ref={mirror}
+            text={text}
+            spans={parsed.spans}
+            label={t("board.keepAsText")}
+            onKeep={(word) => {
+              setIgnored((list) => [...list, word.toLowerCase()]);
+              input.current?.focus();
+            }}
+          />
+        </div>
         <button className="btn btn-inverse btn-sm" disabled={!ready}>
           {t("board.add")}
         </button>
@@ -227,7 +267,11 @@ export function AddBar({
           {t("incoming.important")}
         </button>
         {ready && (
-          <span className="board-tools-info" aria-live="polite">
+          <span
+            id="board-add-hint"
+            className="board-tools-info"
+            aria-live="polite"
+          >
             {[
               where,
               parsed.urgent ? t("incoming.urgent") : null,
@@ -239,6 +283,49 @@ export function AddBar({
         )}
       </div>
     </form>
+  );
+}
+
+/**
+ * Recognised words drawn over the input in the same font, so they look
+ * highlighted in place. Clicking one keeps it as part of the title.
+ */
+function Highlights({
+  ref,
+  text,
+  spans,
+  label,
+  onKeep,
+}: {
+  ref: React.Ref<HTMLDivElement>;
+  text: string;
+  spans: QuickAddSpan[];
+  label: string;
+  onKeep: (word: string) => void;
+}) {
+  const parts: React.ReactNode[] = [];
+  let at = 0;
+  for (const s of spans) {
+    parts.push(text.slice(at, s.start));
+    const word = text.slice(s.start, s.end);
+    parts.push(
+      <mark
+        key={s.start}
+        className={`board-add-token is-${s.kind}`}
+        title={label}
+        onMouseDown={(e) => e.preventDefault()}
+        onClick={() => onKeep(word)}
+      >
+        {word}
+      </mark>,
+    );
+    at = s.end;
+  }
+  parts.push(text.slice(at));
+  return (
+    <div ref={ref} className="board-add-mirror" aria-hidden="true" dir="auto">
+      {parts}
+    </div>
   );
 }
 

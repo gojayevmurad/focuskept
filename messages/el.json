@@ -701,7 +701,8 @@
       "deleteLabel": "Διαγραφή του «{title}»",
       "deleted": "Το «{title}» διαγράφηκε",
       "deletedMany": "Διαγραμμένες εργασίες: {count, number}",
-      "undo": "Αναίρεση"
+      "undo": "Αναίρεση",
+      "keepAsText": "Κράτησέ το ως κείμενο"
     },
     "details": {
       "days": {

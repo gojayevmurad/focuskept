@@ -701,7 +701,8 @@
       "deleteLabel": "„{title}” törlése",
       "deleted": "„{title}” törölve",
       "deletedMany": "Törölt feladatok: {count, number}",
-      "undo": "Visszavonás"
+      "undo": "Visszavonás",
+      "keepAsText": "Maradjon szöveg"
     },
     "details": {
       "days": {

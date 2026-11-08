@@ -701,7 +701,8 @@
       "deleteLabel": "„{title}“ löschen",
       "deleted": "„{title}“ gelöscht",
       "deletedMany": "Gelöschte Aufgaben: {count, number}",
-      "undo": "Rückgängig"
+      "undo": "Rückgängig",
+      "keepAsText": "Als Text behalten"
     },
     "details": {
       "days": {
