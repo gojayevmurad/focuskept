@@ -677,7 +677,31 @@
       "toTomorrowLabel": "「{title}」を明日に移す",
       "toIncoming": "受信箱",
       "toIncomingLabel": "「{title}」を受信箱に移す",
-      "edit": "「{title}」を開く"
+      "edit": "「{title}」を開く",
+      "date": {
+        "label": "日付",
+        "today": "今日",
+        "tomorrow": "明日",
+        "weekend": "今週末",
+        "nextWeek": "来週",
+        "none": "日付なし",
+        "previous": "前の月",
+        "next": "次の月"
+      },
+      "minutes": {
+        "label": "所要時間",
+        "none": "時間なし"
+      },
+      "project": {
+        "label": "プロジェクト",
+        "new": "新しいプロジェクト",
+        "create": "作成"
+      },
+      "delete": "削除",
+      "deleteLabel": "「{title}」を削除",
+      "deleted": "「{title}」を削除しました",
+      "deletedMany": "削除したタスク：{count, number}",
+      "undo": "元に戻す"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "プロジェクト",
       "noProject": "プロジェクトなし",
       "save": "保存",
-      "deleteConfirm": "このタスクを削除しますか？関連するセッションは残ります。",
       "title": "タスク",
       "minutes": "所要時間（分）",
       "day": "日",
@@ -766,6 +789,29 @@
       "later": "今はしない",
       "save": "明日の分として保存",
       "saved": "明日のリストを保存しました。"
+    },
+    "all": {
+      "heading": "すべてのタスク",
+      "view": "表示",
+      "tab": "すべて · {count, number}",
+      "search": "タスクを検索",
+      "allProjects": "すべて",
+      "select": "選択",
+      "selectDone": "キャンセル",
+      "bulk": "選択したタスク",
+      "selected": "選択中：{count, number}",
+      "markDone": "完了",
+      "selectLabel": "「{title}」を選択",
+      "empty": "見つかりませんでした。",
+      "groups": {
+        "late": "期限切れ",
+        "today": "今日",
+        "tomorrow": "明日",
+        "week": "今後7日間",
+        "later": "あとで",
+        "none": "日付なし",
+        "done": "今日完了"
+      }
     }
   },
   "cards": {

@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Перенести «{title}» на завтра",
       "toIncoming": "Вхідні",
       "toIncomingLabel": "Перенести «{title}» у вхідні",
-      "edit": "Відкрити «{title}»"
+      "edit": "Відкрити «{title}»",
+      "date": {
+        "label": "Дата",
+        "today": "Сьогодні",
+        "tomorrow": "Завтра",
+        "weekend": "Цими вихідними",
+        "nextWeek": "Наступного тижня",
+        "none": "Без дати",
+        "previous": "Попередній місяць",
+        "next": "Наступний місяць"
+      },
+      "minutes": {
+        "label": "Тривалість",
+        "none": "Без тривалості"
+      },
+      "project": {
+        "label": "Проєкт",
+        "new": "Новий проєкт",
+        "create": "Створити"
+      },
+      "delete": "Видалити",
+      "deleteLabel": "Видалити «{title}»",
+      "deleted": "«{title}» видалено",
+      "deletedMany": "Видалено завдань: {count, number}",
+      "undo": "Скасувати"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Проєкт",
       "noProject": "Без проєкту",
       "save": "Зберегти",
-      "deleteConfirm": "Видалити це завдання? Пов’язані сесії збережуться.",
       "title": "Завдання",
       "minutes": "Тривалість (хв)",
       "day": "День",
@@ -766,6 +789,29 @@
       "later": "Не зараз",
       "save": "Зберегти на завтра",
       "saved": "Список на завтра збережено."
+    },
+    "all": {
+      "heading": "Усі завдання",
+      "view": "Вигляд",
+      "tab": "Усі · {count, number}",
+      "search": "Шукати завдання",
+      "allProjects": "Усі",
+      "select": "Вибрати",
+      "selectDone": "Скасувати",
+      "bulk": "Вибрані завдання",
+      "selected": "Вибрано: {count, number}",
+      "markDone": "Готово",
+      "selectLabel": "Вибрати «{title}»",
+      "empty": "Нічого не знайдено.",
+      "groups": {
+        "late": "Прострочено",
+        "today": "Сьогодні",
+        "tomorrow": "Завтра",
+        "week": "Наступні 7 днів",
+        "later": "Пізніше",
+        "none": "Без дати",
+        "done": "Зроблено сьогодні"
+      }
     }
   },
   "cards": {

@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Move “{title}” to tomorrow",
       "toIncoming": "Incoming",
       "toIncomingLabel": "Move “{title}” to Incoming",
-      "edit": "Open “{title}”"
+      "edit": "Open “{title}”",
+      "date": {
+        "label": "Date",
+        "today": "Today",
+        "tomorrow": "Tomorrow",
+        "weekend": "This weekend",
+        "nextWeek": "Next week",
+        "none": "No date",
+        "previous": "Previous month",
+        "next": "Next month"
+      },
+      "minutes": {
+        "label": "Duration",
+        "none": "No duration"
+      },
+      "project": {
+        "label": "Project",
+        "new": "New project",
+        "create": "Create"
+      },
+      "delete": "Delete",
+      "deleteLabel": "Delete “{title}”",
+      "deleted": "“{title}” deleted",
+      "deletedMany": "Tasks deleted: {count, number}",
+      "undo": "Undo"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Project",
       "noProject": "No project",
       "save": "Save",
-      "deleteConfirm": "Delete this task? Sessions linked to it are kept.",
       "title": "Task",
       "minutes": "Duration (min)",
       "day": "Day",
@@ -766,6 +789,29 @@
       "later": "Not now",
       "save": "Save for tomorrow",
       "saved": "Tomorrow’s list is saved."
+    },
+    "all": {
+      "heading": "All tasks",
+      "view": "View",
+      "tab": "All · {count, number}",
+      "search": "Search tasks",
+      "allProjects": "All",
+      "select": "Select",
+      "selectDone": "Cancel",
+      "bulk": "Selected tasks",
+      "selected": "Selected: {count, number}",
+      "markDone": "Mark done",
+      "selectLabel": "Select “{title}”",
+      "empty": "Nothing found.",
+      "groups": {
+        "late": "Overdue",
+        "today": "Today",
+        "tomorrow": "Tomorrow",
+        "week": "Next 7 days",
+        "later": "Later",
+        "none": "No date",
+        "done": "Done today"
+      }
     }
   },
   "cards": {

@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Sposta «{title}» a domani",
       "toIncoming": "In arrivo",
       "toIncomingLabel": "Sposta «{title}» in In arrivo",
-      "edit": "Apri «{title}»"
+      "edit": "Apri «{title}»",
+      "date": {
+        "label": "Data",
+        "today": "Oggi",
+        "tomorrow": "Domani",
+        "weekend": "Questo weekend",
+        "nextWeek": "La prossima settimana",
+        "none": "Senza data",
+        "previous": "Mese precedente",
+        "next": "Mese successivo"
+      },
+      "minutes": {
+        "label": "Durata",
+        "none": "Senza durata"
+      },
+      "project": {
+        "label": "Progetto",
+        "new": "Nuovo progetto",
+        "create": "Crea"
+      },
+      "delete": "Elimina",
+      "deleteLabel": "Elimina «{title}»",
+      "deleted": "«{title}» eliminata",
+      "deletedMany": "Attività eliminate: {count, number}",
+      "undo": "Annulla"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Progetto",
       "noProject": "Nessun progetto",
       "save": "Salva",
-      "deleteConfirm": "Eliminare questa attività? Le sessioni collegate vengono conservate.",
       "title": "Attività",
       "minutes": "Durata (min)",
       "day": "Giorno",
@@ -766,6 +789,29 @@
       "later": "Non ora",
       "save": "Salva per domani",
       "saved": "L’elenco di domani è salvato."
+    },
+    "all": {
+      "heading": "Tutte le attività",
+      "view": "Vista",
+      "tab": "Tutte · {count, number}",
+      "search": "Cerca attività",
+      "allProjects": "Tutti",
+      "select": "Seleziona",
+      "selectDone": "Chiudi",
+      "bulk": "Attività selezionate",
+      "selected": "Selezionate: {count, number}",
+      "markDone": "Fatta",
+      "selectLabel": "Seleziona «{title}»",
+      "empty": "Nessun risultato.",
+      "groups": {
+        "late": "In ritardo",
+        "today": "Oggi",
+        "tomorrow": "Domani",
+        "week": "Prossimi 7 giorni",
+        "later": "Più avanti",
+        "none": "Senza data",
+        "done": "Fatte oggi"
+      }
     }
   },
   "cards": {

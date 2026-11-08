@@ -677,7 +677,31 @@
       "toTomorrowLabel": "انقل «{title}» إلى الغد",
       "toIncoming": "الوارد",
       "toIncomingLabel": "انقل «{title}» إلى الوارد",
-      "edit": "افتح «{title}»"
+      "edit": "افتح «{title}»",
+      "date": {
+        "label": "التاريخ",
+        "today": "اليوم",
+        "tomorrow": "غدًا",
+        "weekend": "نهاية الأسبوع",
+        "nextWeek": "الأسبوع القادم",
+        "none": "بلا تاريخ",
+        "previous": "الشهر السابق",
+        "next": "الشهر التالي"
+      },
+      "minutes": {
+        "label": "المدة",
+        "none": "بلا مدة"
+      },
+      "project": {
+        "label": "المشروع",
+        "new": "مشروع جديد",
+        "create": "إنشاء"
+      },
+      "delete": "حذف",
+      "deleteLabel": "احذف «{title}»",
+      "deleted": "حُذفت «{title}»",
+      "deletedMany": "المهام المحذوفة: {count, number}",
+      "undo": "تراجع"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "المشروع",
       "noProject": "بلا مشروع",
       "save": "حفظ",
-      "deleteConfirm": "هل تريد حذف هذه المهمة؟ ستبقى الجلسات المرتبطة بها.",
       "title": "مهمة",
       "minutes": "المدة (دقيقة)",
       "day": "الموعد",
@@ -766,6 +789,29 @@
       "later": "ليس الآن",
       "save": "احفظ للغد",
       "saved": "حُفظت قائمة الغد."
+    },
+    "all": {
+      "heading": "كل المهام",
+      "view": "العرض",
+      "tab": "الكل · {count, number}",
+      "search": "ابحث في المهام",
+      "allProjects": "الكل",
+      "select": "تحديد",
+      "selectDone": "إلغاء",
+      "bulk": "المهام المحددة",
+      "selected": "المحدد: {count, number}",
+      "markDone": "أُنجزت",
+      "selectLabel": "حدد «{title}»",
+      "empty": "لم يُعثر على شيء.",
+      "groups": {
+        "late": "متأخرة",
+        "today": "اليوم",
+        "tomorrow": "غدًا",
+        "week": "الأيام السبعة القادمة",
+        "later": "لاحقًا",
+        "none": "بلا تاريخ",
+        "done": "أُنجزت اليوم"
+      }
     }
   },
   "cards": {

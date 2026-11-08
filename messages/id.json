@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Pindahkan “{title}” ke besok",
       "toIncoming": "Masuk",
       "toIncomingLabel": "Pindahkan “{title}” ke Masuk",
-      "edit": "Buka “{title}”"
+      "edit": "Buka “{title}”",
+      "date": {
+        "label": "Tanggal",
+        "today": "Hari ini",
+        "tomorrow": "Besok",
+        "weekend": "Akhir pekan ini",
+        "nextWeek": "Minggu depan",
+        "none": "Tanpa tanggal",
+        "previous": "Bulan sebelumnya",
+        "next": "Bulan berikutnya"
+      },
+      "minutes": {
+        "label": "Durasi",
+        "none": "Tanpa durasi"
+      },
+      "project": {
+        "label": "Proyek",
+        "new": "Proyek baru",
+        "create": "Buat"
+      },
+      "delete": "Hapus",
+      "deleteLabel": "Hapus “{title}”",
+      "deleted": "“{title}” dihapus",
+      "deletedMany": "Tugas dihapus: {count, number}",
+      "undo": "Urungkan"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Proyek",
       "noProject": "Tanpa proyek",
       "save": "Simpan",
-      "deleteConfirm": "Hapus tugas ini? Sesi yang terkait tetap disimpan.",
       "title": "Tugas",
       "minutes": "Durasi (mnt)",
       "day": "Hari",
@@ -766,6 +789,29 @@
       "later": "Nanti saja",
       "save": "Simpan untuk besok",
       "saved": "Daftar besok sudah disimpan."
+    },
+    "all": {
+      "heading": "Semua tugas",
+      "view": "Tampilan",
+      "tab": "Semua · {count, number}",
+      "search": "Cari tugas",
+      "allProjects": "Semua",
+      "select": "Pilih",
+      "selectDone": "Batal",
+      "bulk": "Tugas terpilih",
+      "selected": "Terpilih: {count, number}",
+      "markDone": "Selesai",
+      "selectLabel": "Pilih “{title}”",
+      "empty": "Tidak ada yang ditemukan.",
+      "groups": {
+        "late": "Terlambat",
+        "today": "Hari ini",
+        "tomorrow": "Besok",
+        "week": "7 hari ke depan",
+        "later": "Nanti",
+        "none": "Tanpa tanggal",
+        "done": "Selesai hari ini"
+      }
     }
   },
   "cards": {

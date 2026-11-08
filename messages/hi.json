@@ -677,7 +677,31 @@
       "toTomorrowLabel": "“{title}” को कल पर ले जाएँ",
       "toIncoming": "आने वाले",
       "toIncomingLabel": "“{title}” को आने वाले में ले जाएँ",
-      "edit": "“{title}” खोलें"
+      "edit": "“{title}” खोलें",
+      "date": {
+        "label": "तारीख",
+        "today": "आज",
+        "tomorrow": "कल",
+        "weekend": "इस वीकेंड",
+        "nextWeek": "अगले हफ़्ते",
+        "none": "कोई तारीख नहीं",
+        "previous": "पिछला महीना",
+        "next": "अगला महीना"
+      },
+      "minutes": {
+        "label": "अवधि",
+        "none": "कोई अवधि नहीं"
+      },
+      "project": {
+        "label": "प्रोजेक्ट",
+        "new": "नया प्रोजेक्ट",
+        "create": "बनाएँ"
+      },
+      "delete": "हटाएँ",
+      "deleteLabel": "“{title}” हटाएँ",
+      "deleted": "“{title}” हटाया गया",
+      "deletedMany": "हटाए गए काम: {count, number}",
+      "undo": "वापस लाएँ"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "प्रोजेक्ट",
       "noProject": "कोई प्रोजेक्ट नहीं",
       "save": "सेव करें",
-      "deleteConfirm": "यह काम हटाएँ? इससे जुड़े सत्र बने रहेंगे।",
       "title": "काम",
       "minutes": "अवधि (मिनट)",
       "day": "दिन",
@@ -766,6 +789,29 @@
       "later": "अभी नहीं",
       "save": "कल के लिए सहेजें",
       "saved": "कल की सूची सहेज ली गई।"
+    },
+    "all": {
+      "heading": "सभी काम",
+      "view": "दृश्य",
+      "tab": "सभी · {count, number}",
+      "search": "काम खोजें",
+      "allProjects": "सभी",
+      "select": "चुनें",
+      "selectDone": "रद्द करें",
+      "bulk": "चुने गए काम",
+      "selected": "चुने गए: {count, number}",
+      "markDone": "पूरा",
+      "selectLabel": "“{title}” चुनें",
+      "empty": "कुछ नहीं मिला।",
+      "groups": {
+        "late": "देर हो गई",
+        "today": "आज",
+        "tomorrow": "कल",
+        "week": "अगले 7 दिन",
+        "later": "बाद में",
+        "none": "कोई तारीख नहीं",
+        "done": "आज पूरे हुए"
+      }
     }
   },
   "cards": {

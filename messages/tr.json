@@ -677,7 +677,31 @@
       "toTomorrowLabel": "“{title}” görevini yarına taşı",
       "toIncoming": "Gelenler",
       "toIncomingLabel": "“{title}” görevini Gelenlere taşı",
-      "edit": "“{title}” görevini aç"
+      "edit": "“{title}” görevini aç",
+      "date": {
+        "label": "Tarih",
+        "today": "Bugün",
+        "tomorrow": "Yarın",
+        "weekend": "Bu hafta sonu",
+        "nextWeek": "Gelecek hafta",
+        "none": "Tarih yok",
+        "previous": "Önceki ay",
+        "next": "Sonraki ay"
+      },
+      "minutes": {
+        "label": "Süre",
+        "none": "Süresiz"
+      },
+      "project": {
+        "label": "Proje",
+        "new": "Yeni proje",
+        "create": "Oluştur"
+      },
+      "delete": "Sil",
+      "deleteLabel": "“{title}” görevini sil",
+      "deleted": "“{title}” silindi",
+      "deletedMany": "Silinen görev: {count, number}",
+      "undo": "Geri al"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Proje",
       "noProject": "Proje yok",
       "save": "Kaydet",
-      "deleteConfirm": "Bu görev silinsin mi? Bağlı oturumlar korunur.",
       "title": "Görev",
       "minutes": "Süre (dk)",
       "day": "Gün",
@@ -766,6 +789,29 @@
       "later": "Şimdi değil",
       "save": "Yarın için kaydet",
       "saved": "Yarının listesi kaydedildi."
+    },
+    "all": {
+      "heading": "Tüm görevler",
+      "view": "Görünüm",
+      "tab": "Tümü · {count, number}",
+      "search": "Görev ara",
+      "allProjects": "Tümü",
+      "select": "Seç",
+      "selectDone": "İptal",
+      "bulk": "Seçili görevler",
+      "selected": "Seçili: {count, number}",
+      "markDone": "Bitti",
+      "selectLabel": "“{title}” görevini seç",
+      "empty": "Hiçbir şey bulunamadı.",
+      "groups": {
+        "late": "Gecikmiş",
+        "today": "Bugün",
+        "tomorrow": "Yarın",
+        "week": "Önümüzdeki 7 gün",
+        "later": "Sonra",
+        "none": "Tarih yok",
+        "done": "Bugün bitenler"
+      }
     }
   },
   "cards": {

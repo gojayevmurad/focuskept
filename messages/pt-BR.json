@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Passar “{title}” para amanhã",
       "toIncoming": "Entrada",
       "toIncomingLabel": "Mover “{title}” para a Entrada",
-      "edit": "Abrir “{title}”"
+      "edit": "Abrir “{title}”",
+      "date": {
+        "label": "Data",
+        "today": "Hoje",
+        "tomorrow": "Amanhã",
+        "weekend": "Este fim de semana",
+        "nextWeek": "Semana que vem",
+        "none": "Sem data",
+        "previous": "Mês anterior",
+        "next": "Próximo mês"
+      },
+      "minutes": {
+        "label": "Duração",
+        "none": "Sem duração"
+      },
+      "project": {
+        "label": "Projeto",
+        "new": "Novo projeto",
+        "create": "Criar"
+      },
+      "delete": "Excluir",
+      "deleteLabel": "Excluir “{title}”",
+      "deleted": "“{title}” excluída",
+      "deletedMany": "Tarefas excluídas: {count, number}",
+      "undo": "Desfazer"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Projeto",
       "noProject": "Sem projeto",
       "save": "Salvar",
-      "deleteConfirm": "Excluir esta tarefa? As sessões ligadas a ela são mantidas.",
       "title": "Tarefa",
       "minutes": "Duração (min)",
       "day": "Dia",
@@ -766,6 +789,29 @@
       "later": "Agora não",
       "save": "Salvar para amanhã",
       "saved": "A lista de amanhã foi salva."
+    },
+    "all": {
+      "heading": "Todas as tarefas",
+      "view": "Visualização",
+      "tab": "Todas · {count, number}",
+      "search": "Buscar tarefas",
+      "allProjects": "Todos",
+      "select": "Selecionar",
+      "selectDone": "Cancelar",
+      "bulk": "Tarefas selecionadas",
+      "selected": "Selecionadas: {count, number}",
+      "markDone": "Concluída",
+      "selectLabel": "Selecionar “{title}”",
+      "empty": "Nada encontrado.",
+      "groups": {
+        "late": "Atrasadas",
+        "today": "Hoje",
+        "tomorrow": "Amanhã",
+        "week": "Próximos 7 dias",
+        "later": "Depois",
+        "none": "Sem data",
+        "done": "Concluídas hoje"
+      }
     }
   },
   "cards": {

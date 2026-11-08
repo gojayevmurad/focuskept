@@ -12,6 +12,7 @@ import {
 } from "./planning";
 import type { ClientTask } from "./use-tasks";
 import type { Board } from "./day-board";
+import { DeleteButton } from "./task-actions";
 
 export type IncomingFilter = {
   quadrant: Quadrant | null;
@@ -193,6 +194,7 @@ export function IncomingPanel({
                       >
                         {t("toToday")}
                       </button>
+                      <DeleteButton task={task} board={board} />
                     </li>
                   );
                 })}

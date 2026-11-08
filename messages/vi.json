@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Dời “{title}” sang ngày mai",
       "toIncoming": "Hộp đến",
       "toIncomingLabel": "Chuyển “{title}” vào Hộp đến",
-      "edit": "Mở “{title}”"
+      "edit": "Mở “{title}”",
+      "date": {
+        "label": "Ngày",
+        "today": "Hôm nay",
+        "tomorrow": "Ngày mai",
+        "weekend": "Cuối tuần này",
+        "nextWeek": "Tuần sau",
+        "none": "Không có ngày",
+        "previous": "Tháng trước",
+        "next": "Tháng sau"
+      },
+      "minutes": {
+        "label": "Thời lượng",
+        "none": "Không thời lượng"
+      },
+      "project": {
+        "label": "Dự án",
+        "new": "Dự án mới",
+        "create": "Tạo"
+      },
+      "delete": "Xóa",
+      "deleteLabel": "Xóa “{title}”",
+      "deleted": "Đã xóa “{title}”",
+      "deletedMany": "Đã xóa {count, number} việc",
+      "undo": "Hoàn tác"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Dự án",
       "noProject": "Không có dự án",
       "save": "Lưu",
-      "deleteConfirm": "Xóa việc này? Các phiên liên quan vẫn được giữ lại.",
       "title": "Việc",
       "minutes": "Thời lượng (phút)",
       "day": "Ngày",
@@ -766,6 +789,29 @@
       "later": "Lúc khác",
       "save": "Lưu cho ngày mai",
       "saved": "Đã lưu danh sách ngày mai."
+    },
+    "all": {
+      "heading": "Tất cả việc",
+      "view": "Chế độ xem",
+      "tab": "Tất cả · {count, number}",
+      "search": "Tìm việc",
+      "allProjects": "Tất cả",
+      "select": "Chọn",
+      "selectDone": "Hủy",
+      "bulk": "Việc đã chọn",
+      "selected": "Đã chọn: {count, number}",
+      "markDone": "Xong",
+      "selectLabel": "Chọn “{title}”",
+      "empty": "Không tìm thấy gì.",
+      "groups": {
+        "late": "Quá hạn",
+        "today": "Hôm nay",
+        "tomorrow": "Ngày mai",
+        "week": "7 ngày tới",
+        "later": "Sau này",
+        "none": "Không có ngày",
+        "done": "Xong hôm nay"
+      }
     }
   },
   "cards": {

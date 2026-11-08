@@ -24,7 +24,8 @@
     "techniquesPage.faq",
     "common.nav.guide",
     "common.nav.menu",
-    "home.modeLabel"
+    "home.modeLabel",
+    "tasks.board.date.label"
   ],
   "techniques:fr": ["blurting.name", "timeboxing.name"],
   "es": ["common.footer.legal", "settings.prefs.general"],
@@ -64,7 +65,9 @@
     "common.nav.menu",
     "home.focusFallback",
     "home.focusMinutes",
-    "timer.sound.kinds.wind"
+    "timer.sound.kinds.wind",
+    "tasks.board.project.label",
+    "tasks.all.groups.later"
   ],
   "techniques:nl": ["blurting.name", "timeboxing.name"],
   "pl": [

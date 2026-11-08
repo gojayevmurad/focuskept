@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Pasar «{title}» a mañana",
       "toIncoming": "Entrantes",
       "toIncomingLabel": "Mover «{title}» a Entrantes",
-      "edit": "Abrir «{title}»"
+      "edit": "Abrir «{title}»",
+      "date": {
+        "label": "Fecha",
+        "today": "Hoy",
+        "tomorrow": "Mañana",
+        "weekend": "Este fin de semana",
+        "nextWeek": "La próxima semana",
+        "none": "Sin fecha",
+        "previous": "Mes anterior",
+        "next": "Mes siguiente"
+      },
+      "minutes": {
+        "label": "Duración",
+        "none": "Sin duración"
+      },
+      "project": {
+        "label": "Proyecto",
+        "new": "Nuevo proyecto",
+        "create": "Crear"
+      },
+      "delete": "Eliminar",
+      "deleteLabel": "Eliminar «{title}»",
+      "deleted": "«{title}» eliminada",
+      "deletedMany": "Tareas eliminadas: {count, number}",
+      "undo": "Deshacer"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Proyecto",
       "noProject": "Sin proyecto",
       "save": "Guardar",
-      "deleteConfirm": "¿Eliminar esta tarea? Las sesiones vinculadas se conservan.",
       "title": "Tarea",
       "minutes": "Duración (min)",
       "day": "Día",
@@ -766,6 +789,29 @@
       "later": "Ahora no",
       "save": "Guardar para mañana",
       "saved": "La lista de mañana está guardada."
+    },
+    "all": {
+      "heading": "Todas las tareas",
+      "view": "Vista",
+      "tab": "Todas · {count, number}",
+      "search": "Buscar tareas",
+      "allProjects": "Todos",
+      "select": "Seleccionar",
+      "selectDone": "Cancelar",
+      "bulk": "Tareas seleccionadas",
+      "selected": "Seleccionadas: {count, number}",
+      "markDone": "Hecha",
+      "selectLabel": "Seleccionar «{title}»",
+      "empty": "No se encontró nada.",
+      "groups": {
+        "late": "Atrasadas",
+        "today": "Hoy",
+        "tomorrow": "Mañana",
+        "week": "Próximos 7 días",
+        "later": "Más tarde",
+        "none": "Sin fecha",
+        "done": "Hechas hoy"
+      }
     }
   },
   "cards": {

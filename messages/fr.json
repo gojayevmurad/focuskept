@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Déplacer « {title} » à demain",
       "toIncoming": "En attente",
       "toIncomingLabel": "Déplacer « {title} » vers En attente",
-      "edit": "Ouvrir « {title} »"
+      "edit": "Ouvrir « {title} »",
+      "date": {
+        "label": "Date",
+        "today": "Aujourd’hui",
+        "tomorrow": "Demain",
+        "weekend": "Ce week-end",
+        "nextWeek": "La semaine prochaine",
+        "none": "Sans date",
+        "previous": "Mois précédent",
+        "next": "Mois suivant"
+      },
+      "minutes": {
+        "label": "Durée",
+        "none": "Sans durée"
+      },
+      "project": {
+        "label": "Projet",
+        "new": "Nouveau projet",
+        "create": "Créer"
+      },
+      "delete": "Supprimer",
+      "deleteLabel": "Supprimer « {title} »",
+      "deleted": "« {title} » supprimée",
+      "deletedMany": "Tâches supprimées : {count, number}",
+      "undo": "Annuler"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Projet",
       "noProject": "Aucun projet",
       "save": "Enregistrer",
-      "deleteConfirm": "Supprimer cette tâche ? Les séances qui y sont liées sont conservées.",
       "title": "Tâche",
       "minutes": "Durée (min)",
       "day": "Jour",
@@ -766,6 +789,29 @@
       "later": "Pas maintenant",
       "save": "Enregistrer pour demain",
       "saved": "La liste de demain est enregistrée."
+    },
+    "all": {
+      "heading": "Toutes les tâches",
+      "view": "Vue",
+      "tab": "Toutes · {count, number}",
+      "search": "Chercher une tâche",
+      "allProjects": "Tous",
+      "select": "Sélectionner",
+      "selectDone": "Fermer",
+      "bulk": "Tâches sélectionnées",
+      "selected": "Sélection : {count, number}",
+      "markDone": "Faite",
+      "selectLabel": "Sélectionner « {title} »",
+      "empty": "Rien trouvé.",
+      "groups": {
+        "late": "En retard",
+        "today": "Aujourd’hui",
+        "tomorrow": "Demain",
+        "week": "7 prochains jours",
+        "later": "Plus tard",
+        "none": "Sans date",
+        "done": "Faites aujourd’hui"
+      }
     }
   },
   "cards": {

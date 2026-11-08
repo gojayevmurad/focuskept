@@ -677,7 +677,31 @@
       "toTomorrowLabel": "انتقال «{title}» به فردا",
       "toIncoming": "ورودی‌ها",
       "toIncomingLabel": "انتقال «{title}» به ورودی‌ها",
-      "edit": "باز کردن «{title}»"
+      "edit": "باز کردن «{title}»",
+      "date": {
+        "label": "تاریخ",
+        "today": "امروز",
+        "tomorrow": "فردا",
+        "weekend": "این آخر هفته",
+        "nextWeek": "هفتهٔ بعد",
+        "none": "بدون تاریخ",
+        "previous": "ماه قبل",
+        "next": "ماه بعد"
+      },
+      "minutes": {
+        "label": "مدت",
+        "none": "بدون مدت"
+      },
+      "project": {
+        "label": "پروژه",
+        "new": "پروژهٔ جدید",
+        "create": "ساختن"
+      },
+      "delete": "حذف",
+      "deleteLabel": "حذف «{title}»",
+      "deleted": "«{title}» حذف شد",
+      "deletedMany": "کارهای حذف‌شده: {count, number}",
+      "undo": "برگرداندن"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "پروژه",
       "noProject": "بدون پروژه",
       "save": "ذخیره",
-      "deleteConfirm": "این کار حذف شود؟ جلسه‌های مرتبط با آن باقی می‌مانند.",
       "title": "کار",
       "minutes": "مدت (دقیقه)",
       "day": "روز",
@@ -766,6 +789,29 @@
       "later": "حالا نه",
       "save": "ذخیره برای فردا",
       "saved": "فهرست فردا ذخیره شد."
+    },
+    "all": {
+      "heading": "همهٔ کارها",
+      "view": "نما",
+      "tab": "همه · {count, number}",
+      "search": "جستجوی کارها",
+      "allProjects": "همه",
+      "select": "انتخاب",
+      "selectDone": "لغو",
+      "bulk": "کارهای انتخاب‌شده",
+      "selected": "انتخاب‌شده: {count, number}",
+      "markDone": "انجام شد",
+      "selectLabel": "انتخاب «{title}»",
+      "empty": "چیزی پیدا نشد.",
+      "groups": {
+        "late": "عقب‌افتاده",
+        "today": "امروز",
+        "tomorrow": "فردا",
+        "week": "۷ روز آینده",
+        "later": "بعداً",
+        "none": "بدون تاریخ",
+        "done": "امروز انجام شد"
+      }
     }
   },
   "cards": {

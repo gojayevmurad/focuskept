@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Přesunout „{title}“ na zítra",
       "toIncoming": "Příchozí",
       "toIncomingLabel": "Přesunout „{title}“ do Příchozích",
-      "edit": "Otevřít „{title}“"
+      "edit": "Otevřít „{title}“",
+      "date": {
+        "label": "Datum",
+        "today": "Dnes",
+        "tomorrow": "Zítra",
+        "weekend": "Tento víkend",
+        "nextWeek": "Příští týden",
+        "none": "Bez data",
+        "previous": "Předchozí měsíc",
+        "next": "Další měsíc"
+      },
+      "minutes": {
+        "label": "Délka",
+        "none": "Bez délky"
+      },
+      "project": {
+        "label": "Projekt",
+        "new": "Nový projekt",
+        "create": "Vytvořit"
+      },
+      "delete": "Smazat",
+      "deleteLabel": "Smazat „{title}“",
+      "deleted": "„{title}“ smazáno",
+      "deletedMany": "Smazané úkoly: {count, number}",
+      "undo": "Zpět"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Projekt",
       "noProject": "Bez projektu",
       "save": "Uložit",
-      "deleteConfirm": "Smazat tento úkol? Propojená sezení zůstanou zachována.",
       "title": "Úkol",
       "minutes": "Délka (min)",
       "day": "Den",
@@ -766,6 +789,29 @@
       "later": "Teď ne",
       "save": "Uložit na zítra",
       "saved": "Seznam na zítra je uložený."
+    },
+    "all": {
+      "heading": "Všechny úkoly",
+      "view": "Zobrazení",
+      "tab": "Vše · {count, number}",
+      "search": "Hledat úkoly",
+      "allProjects": "Vše",
+      "select": "Vybrat",
+      "selectDone": "Zrušit",
+      "bulk": "Vybrané úkoly",
+      "selected": "Vybráno: {count, number}",
+      "markDone": "Hotovo",
+      "selectLabel": "Vybrat „{title}“",
+      "empty": "Nic nenalezeno.",
+      "groups": {
+        "late": "Po termínu",
+        "today": "Dnes",
+        "tomorrow": "Zítra",
+        "week": "Příštích 7 dní",
+        "later": "Později",
+        "none": "Bez data",
+        "done": "Dnes hotovo"
+      }
     }
   },
   "cards": {

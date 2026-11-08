@@ -677,7 +677,31 @@
       "toTomorrowLabel": "«{title}» işini sabaha köçür",
       "toIncoming": "Gələnlər",
       "toIncomingLabel": "«{title}» işini Gələnlərə köçür",
-      "edit": "«{title}» işini aç"
+      "edit": "«{title}» işini aç",
+      "date": {
+        "label": "Tarix",
+        "today": "Bu gün",
+        "tomorrow": "Sabah",
+        "weekend": "Həftə sonu",
+        "nextWeek": "Gələn həftə",
+        "none": "Tarixsiz",
+        "previous": "Əvvəlki ay",
+        "next": "Növbəti ay"
+      },
+      "minutes": {
+        "label": "Müddət",
+        "none": "Müddətsiz"
+      },
+      "project": {
+        "label": "Layihə",
+        "new": "Yeni layihə",
+        "create": "Yarat"
+      },
+      "delete": "Sil",
+      "deleteLabel": "«{title}» işini sil",
+      "deleted": "«{title}» silindi",
+      "deletedMany": "Silinən tapşırıq: {count, number}",
+      "undo": "Geri al"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Layihə",
       "noProject": "Layihə yoxdur",
       "save": "Yadda saxla",
-      "deleteConfirm": "Bu tapşırıq silinsin? Ona bağlı sessiyalar saxlanılır.",
       "title": "Tapşırıq",
       "minutes": "Müddət (dəq)",
       "day": "Gün",
@@ -766,6 +789,29 @@
       "later": "İndi yox",
       "save": "Sabah üçün saxla",
       "saved": "Sabahın siyahısı saxlandı."
+    },
+    "all": {
+      "heading": "Bütün tapşırıqlar",
+      "view": "Görünüş",
+      "tab": "Hamısı · {count, number}",
+      "search": "Tapşırıq axtar",
+      "allProjects": "Hamısı",
+      "select": "Seç",
+      "selectDone": "Ləğv et",
+      "bulk": "Seçilən tapşırıqlar",
+      "selected": "Seçildi: {count, number}",
+      "markDone": "Bitdi",
+      "selectLabel": "«{title}» seç",
+      "empty": "Heç nə tapılmadı.",
+      "groups": {
+        "late": "Gecikib",
+        "today": "Bu gün",
+        "tomorrow": "Sabah",
+        "week": "Növbəti 7 gün",
+        "later": "Sonra",
+        "none": "Tarixsiz",
+        "done": "Bu gün bitənlər"
+      }
     }
   },
   "cards": {
