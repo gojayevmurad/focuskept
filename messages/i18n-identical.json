@@ -67,7 +67,9 @@
     "home.focusMinutes",
     "timer.sound.kinds.wind",
     "tasks.board.project.label",
-    "tasks.all.groups.later"
+    "tasks.all.groups.later",
+    "home.projects",
+    "home.day.recentIn"
   ],
   "techniques:nl": ["blurting.name", "timeboxing.name"],
   "pl": [

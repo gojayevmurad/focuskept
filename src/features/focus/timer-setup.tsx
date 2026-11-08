@@ -19,6 +19,7 @@ import type { TechniqueLabels } from "./labels";
 import { RhythmPicker } from "./rhythm-picker";
 import { RHYTHMS, WORK_ONLY, rhythmMeta, rhythmShape } from "./rhythm";
 import { formatClock } from "./format";
+import type { Day } from "./day-panel";
 
 export type Mode = "work" | "learning";
 
@@ -30,6 +31,8 @@ export type SetupResult = {
   task?: StoreTask | { title: string; isNew: true };
   durations?: TimerDurations;
   boxMinutes?: number;
+  projectId?: string | null;
+  subjectId?: string | null;
 };
 
 const clamp = (v: number, min: number, max: number) =>
@@ -47,6 +50,7 @@ export function TimerSetup({
   initialSubject = "",
   defaultTechnique,
   secondaryStart,
+  day,
   onSettingsChange,
   onStart,
 }: {
@@ -63,6 +67,8 @@ export function TimerSetup({
   signedIn?: boolean;
   /** Start is secondary when reviews are due (the review strip is primary). */
   secondaryStart?: boolean;
+  /** Signed in: projects, subjects and recent topics to pick from. */
+  day?: Day;
   onSettingsChange: (settings: TechniqueSettings) => void;
   onStart: (result: SetupResult) => void;
 }) {
@@ -73,6 +79,11 @@ export function TimerSetup({
   const [subject, setSubject] = useState(initialTask?.title ?? initialSubject);
   const [taskId, setTaskId] = useState<string | undefined>(initialTask?.id);
   const [open, setOpen] = useState(false);
+  const [projectId, setProjectId] = useState<string | null>(
+    initialTask?.projectId ?? null,
+  );
+  const [subjectId, setSubjectId] = useState<string | null>(null);
+  const [newSubject, setNewSubject] = useState<string | null>(null);
 
   const task = tasks.find((x) => x.id === taskId);
   const recommendation = useMemo(
@@ -174,8 +185,34 @@ export function TimerSetup({
   );
   const suggestions =
     mode === "work" && !trimmed
-      ? [...tasks].sort((a, b) => Number(b.frog) - Number(a.frog)).slice(0, 3)
+      ? [...tasks]
+          .filter((x) => !projectId || x.projectId === projectId)
+          .sort((a, b) => Number(b.frog) - Number(a.frog))
+          .slice(0, 3)
       : [];
+  const topicSuggestions =
+    mode === "learning" && !trimmed && day
+      ? [
+          ...new Set(
+            day.topics
+              .filter((x) => !subjectId || x.subjectId === subjectId)
+              .map((x) => x.topic),
+          ),
+        ].slice(0, 3)
+      : [];
+  const groups =
+    mode === "learning" ? (day?.subjects ?? []) : (day?.projects ?? []);
+  const groupId = mode === "learning" ? subjectId : projectId;
+  const setGroup = (id: string | null) =>
+    mode === "learning" ? setSubjectId(id) : setProjectId(id);
+
+  async function createSubject() {
+    const name = newSubject?.trim();
+    if (!name || !day) return setNewSubject(null);
+    const created = await day.addSubject(name.slice(0, 60));
+    if (created) setSubjectId(created.id);
+    setNewSubject(null);
+  }
 
   return (
     <form
@@ -204,6 +241,8 @@ export function TimerSetup({
                 ? durationsFor("pomodoro", settings)!
                 : undefined,
           boxMinutes: technique === "timeboxing" ? boxMinutes : undefined,
+          projectId: mode === "work" ? projectId : null,
+          subjectId: mode === "learning" ? subjectId : null,
         });
       }}
     >
@@ -225,6 +264,77 @@ export function TimerSetup({
           </button>
         ))}
       </div>
+
+      {day && (groups.length > 0 || mode === "learning") && (
+        <div
+          className="timer-groups"
+          role="group"
+          aria-label={mode === "learning" ? t("subjects") : t("projects")}
+        >
+          {groups.map((g) => (
+            <button
+              key={g.id}
+              type="button"
+              className={groupId === g.id ? "chip is-active" : "chip"}
+              aria-pressed={groupId === g.id}
+              onClick={() => {
+                setGroup(groupId === g.id ? null : g.id);
+                if (mode === "work") {
+                  setSubject("");
+                  setTaskId(undefined);
+                }
+              }}
+            >
+              <span
+                className={
+                  mode === "learning" ? "project-dot is-round" : "project-dot"
+                }
+                style={{ background: g.color }}
+                aria-hidden="true"
+              />
+              {g.name}
+            </button>
+          ))}
+          {mode === "learning" &&
+            (newSubject === null ? (
+              <button
+                type="button"
+                className="chip is-dashed"
+                onClick={() => setNewSubject("")}
+              >
+                <Plus size={14} aria-hidden="true" />
+                {t("newSubject")}
+              </button>
+            ) : (
+              <span className="timer-new-group">
+                <input
+                  className="input"
+                  autoFocus
+                  value={newSubject}
+                  maxLength={60}
+                  placeholder={t("newSubjectPlaceholder")}
+                  aria-label={t("newSubject")}
+                  onChange={(e) => setNewSubject(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      void createSubject();
+                    }
+                    if (e.key === "Escape") setNewSubject(null);
+                  }}
+                  dir="auto"
+                />
+                <button
+                  type="button"
+                  className="btn btn-secondary btn-sm"
+                  onClick={() => void createSubject()}
+                >
+                  {t("addSubject")}
+                </button>
+              </span>
+            ))}
+        </div>
+      )}
 
       <div className="timer-subject">
         <label htmlFor="timer-subject">
@@ -256,6 +366,7 @@ export function TimerSetup({
                 onClick={() => {
                   setSubject(s.title);
                   setTaskId(s.id);
+                  if (s.projectId) setProjectId(s.projectId);
                   if (s.estimatedMinutes)
                     setBoxMinutes(
                       clamp(
@@ -272,6 +383,23 @@ export function TimerSetup({
           </div>
         )}
       </div>
+
+      {topicSuggestions.length > 0 && (
+        <div className="timer-suggest is-topics">
+          <span>{t("continueTopic")}</span>
+          {topicSuggestions.map((topic) => (
+            <button
+              key={topic}
+              type="button"
+              className="chip"
+              dir="auto"
+              onClick={() => setSubject(topic)}
+            >
+              {topic}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="timer-controls">
         <RhythmPicker

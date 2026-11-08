@@ -83,6 +83,22 @@ export async function deleteSubject(userId: string, id: string) {
   return deleted.length > 0;
 }
 
+/** Latest distinct topics with their subject, newest first. */
+export async function recentTopics(userId: string, limit = 80) {
+  const rows = await db()
+    .select({
+      subjectId: learningItem.subjectId,
+      topic: learningItem.topic,
+      at: sql<Date>`max(${learningItem.createdAt})`,
+    })
+    .from(learningItem)
+    .where(eq(learningItem.userId, userId))
+    .groupBy(learningItem.subjectId, learningItem.topic)
+    .orderBy(sql`3 desc`)
+    .limit(limit);
+  return rows.map(({ subjectId, topic }) => ({ subjectId, topic }));
+}
+
 /** The id when the user owns that subject, otherwise null. */
 export async function ownedSubjectId(
   userId: string,

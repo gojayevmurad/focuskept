@@ -35,6 +35,21 @@ import { unlockAudio } from "./audio";
 import { requestNotificationPermission } from "./notify";
 import type { TechniqueLabels } from "./labels";
 import { useHydrated } from "@/src/lib/use-hydrated";
+import {
+  DaySheet,
+  DayStrip,
+  FocusPanel,
+  useDay,
+  type DayData,
+} from "./day-panel";
+
+const NO_DAY: DayData = {
+  today: "",
+  tasks: [],
+  projects: [],
+  subjects: [],
+  topics: [],
+};
 
 type View =
   | { name: "setup" }
@@ -66,6 +81,8 @@ type FocusAppProps = {
   below?: React.ReactNode;
   /** Reviews are due: Start becomes the secondary action. */
   secondaryStart?: boolean;
+  /** Signed in: today's tasks, projects and subjects for the day panel. */
+  day?: DayData;
 };
 
 /** Restores browser-only state (running session, device settings) after hydration. */
@@ -91,7 +108,11 @@ function FocusAppClient({
   above,
   below,
   secondaryStart,
+  day: dayData,
 }: FocusAppProps) {
+  const day = useDay(dayData ?? NO_DAY);
+  const [daySheet, setDaySheet] = useState(false);
+  const [pickedTask, setPickedTask] = useState<string | undefined>();
   const t = useTranslations("common");
   const home = useTranslations("home");
   const locale = useLocale();
@@ -203,6 +224,8 @@ function FocusAppClient({
       events: [{ type: "start", at }],
       goal: result.subject,
       task,
+      projectId: result.projectId ?? null,
+      subjectId: result.subjectId ?? null,
       // One explanation step ends every Learning session.
       learning:
         result.mode === "learning"
@@ -234,6 +257,8 @@ function FocusAppClient({
       learningMethod: live.learning?.method,
       planningTechnique: live.planning,
       taskId: live.task?.id,
+      projectId: live.projectId ?? undefined,
+      subjectId: live.subjectId ?? undefined,
       taskDone: Boolean(live.task?.id) && input.taskDone,
       moveTaskToLater: view.decision === "later",
       goal: live.goal,
@@ -301,6 +326,8 @@ function FocusAppClient({
       <div className="timer-home">
         {above}
         <TimerSetup
+          key={pickedTask}
+          day={dayData ? day : undefined}
           tasks={tasks}
           labels={labels}
           sessions={sessions}
@@ -309,7 +336,7 @@ function FocusAppClient({
             initialTechnique ??
             (signedIn ? undefined : readLocal().settings.lastTechnique)
           }
-          initialTaskId={initialTaskId}
+          initialTaskId={pickedTask ?? initialTaskId}
           initialMode={initialMode}
           initialSubject={initialSubject}
           defaultTechnique={defaultTechnique}
@@ -321,28 +348,54 @@ function FocusAppClient({
           }}
           onStart={(result) => void start(result)}
         />
+        {dayData && (
+          <>
+            <DayStrip day={day} onOpen={() => setDaySheet(true)} />
+            <DaySheet
+              open={daySheet}
+              onClose={() => setDaySheet(false)}
+              day={day}
+              onFocus={(task) => {
+                setPickedTask(task.id);
+                setDaySheet(false);
+              }}
+            />
+          </>
+        )}
         {below}
       </div>
     );
 
   if (view.name === "focus" && active)
     return (
-      <FocusScreen
-        session={active}
-        onSessionChange={(next) => {
-          saveActive(next);
-          setActive(next);
-        }}
-        onFinished={(state, decision) =>
-          setView({ name: "end", state, decision })
-        }
-        sound={sound}
-        onSoundChange={(next) => {
-          setSound(next);
-          persist({ soundSettings: next });
-        }}
-        techniqueName={labels[active.technique]?.name ?? active.technique}
-      />
+      <div className={dayData ? "focus-layout" : "contents"}>
+        <FocusScreen
+          session={active}
+          onSessionChange={(next) => {
+            saveActive(next);
+            setActive(next);
+          }}
+          onFinished={(state, decision) =>
+            setView({ name: "end", state, decision })
+          }
+          sound={sound}
+          onSoundChange={(next) => {
+            setSound(next);
+            persist({ soundSettings: next });
+          }}
+          techniqueName={labels[active.technique]?.name ?? active.technique}
+        />
+        {dayData && (
+          <FocusPanel
+            session={active}
+            day={day}
+            onSessionChange={(next) => {
+              saveActive(next);
+              setActive(next);
+            }}
+          />
+        )}
+      </div>
     );
 
   if (view.name === "end" && active) {

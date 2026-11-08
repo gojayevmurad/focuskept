@@ -18,6 +18,9 @@ export type ActiveSession = {
   events: TimerEvent[];
   goal: string;
   task?: { id?: string; clientId?: string; title: string };
+  /** Signed-in only: what the session counts toward in stats. */
+  projectId?: string | null;
+  subjectId?: string | null;
   planning?: PlanningTechnique;
   learning?: {
     method: LearningMethod;
