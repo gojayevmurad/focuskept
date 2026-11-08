@@ -866,7 +866,9 @@
       "early": "Esercizio",
       "score": "{score, number}%",
       "analysis": "Feedback dell’IA",
-      "error": "Salvataggio non riuscito. Riprova."
+      "error": "Salvataggio non riuscito. Riprova.",
+      "subject": "Materia",
+      "noSubject": "Senza materia"
     },
     "questions": {
       "number": "Domanda {n, number}",
@@ -904,6 +906,21 @@
       "today": "Oggi",
       "days": "{days, plural, one {# giorno} many {# giorni} other {# giorni}}",
       "hint": "Una risposta giusta sposta la scheda di una scatola, così torna più di rado. Una sbagliata la riporta presto."
+    },
+    "subjects": {
+      "label": "Materie",
+      "all": "Tutte",
+      "none": "Senza materia",
+      "review": "Ripassa {subject} · {count, number}",
+      "reviewNone": "Ripassa senza materia · {count, number}",
+      "rename": "Rinomina",
+      "renameLabel": "Nuovo nome",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "archive": "Archivia materia",
+      "archived": "«{name}» archiviata. Le sue schede restano.",
+      "nameTaken": "Hai già una materia con questo nome.",
+      "error": "Salvataggio non riuscito. Riprova."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Passaggio",
       "dayN": "Giorno {day, number}",
       "graduated": "Lungo termine"
-    }
+    },
+    "byProject": "Tempo per progetto",
+    "bySubject": "Tempo per materia",
+    "noProjects": "Scegli un progetto nel timer per vedere qui il tuo tempo.",
+    "noSubjects": "Scegli una materia nel timer per vedere qui il tuo tempo."
   },
   "pricing": {
     "eyebrow": "Prezzi",

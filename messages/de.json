@@ -866,7 +866,9 @@
       "early": "Übung",
       "score": "{score, number} %",
       "analysis": "KI-Rückmeldung",
-      "error": "Speichern fehlgeschlagen. Bitte versuch es erneut."
+      "error": "Speichern fehlgeschlagen. Bitte versuch es erneut.",
+      "subject": "Fach",
+      "noSubject": "Kein Fach"
     },
     "questions": {
       "number": "Frage {n, number}",
@@ -904,6 +906,21 @@
       "today": "Heute",
       "days": "{days, plural, one {# Tag} other {# Tage}}",
       "hint": "Eine richtige Antwort schiebt die Karte eine Box weiter, sie kommt seltener. Eine falsche holt sie bald zurück."
+    },
+    "subjects": {
+      "label": "Fächer",
+      "all": "Alle",
+      "none": "Kein Fach",
+      "review": "{subject} wiederholen · {count, number}",
+      "reviewNone": "Ohne Fach wiederholen · {count, number}",
+      "rename": "Umbenennen",
+      "renameLabel": "Neuer Name",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "archive": "Fach archivieren",
+      "archived": "„{name}“ archiviert. Die Karten bleiben.",
+      "nameTaken": "Du hast schon ein Fach mit diesem Namen.",
+      "error": "Speichern fehlgeschlagen. Bitte versuch es erneut."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Stufe",
       "dayN": "Tag {day, number}",
       "graduated": "Langzeit"
-    }
+    },
+    "byProject": "Zeit nach Projekt",
+    "bySubject": "Zeit nach Fach",
+    "noProjects": "Wähle im Timer ein Projekt, um hier deine Zeit zu sehen.",
+    "noSubjects": "Wähle im Timer ein Fach, um hier deine Zeit zu sehen."
   },
   "pricing": {
     "eyebrow": "Preise",

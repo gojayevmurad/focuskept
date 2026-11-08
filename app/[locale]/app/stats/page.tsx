@@ -19,6 +19,7 @@ import {
   dailyFocus,
   focusByHour,
   focusByTag,
+  focusByGroup,
   focusSummary,
   lifetimeTotals,
   retentionByStep,
@@ -72,6 +73,7 @@ export default async function Page({
     r90,
     topics,
     labels,
+    groups,
   ] = await Promise.all([
     focusSummary(user.id, range),
     dailyFocus(
@@ -90,6 +92,7 @@ export default async function Page({
     retentionSince(user.id, 90),
     retentionByTopic(user.id, 90),
     techniqueLabels(locale),
+    focusByGroup(user.id, range),
   ]);
   // The full Lab is computed only for Pro users (server-side gating).
   const lab = pro
@@ -235,6 +238,55 @@ export default async function Page({
             <p className="small muted">{t("noReviews")}</p>
           )}
         </section>
+      </div>
+
+      <div className="grid-2">
+        {(["project", "subject"] as const).map((kind) => {
+          const rows = groups.filter((g) => g.kind === kind);
+          const max = Math.max(1, ...rows.map((r) => r.seconds));
+          return (
+            <section key={kind} className="card stack">
+              <h2 className="card-title">
+                {kind === "project" ? t("byProject") : t("bySubject")}
+              </h2>
+              {rows.length ? (
+                <ul className="group-bars">
+                  {rows.map((row) => (
+                    <li key={row.name}>
+                      <span className="group-bars-name" dir="auto">
+                        <span
+                          className={
+                            kind === "subject"
+                              ? "project-dot is-round"
+                              : "project-dot"
+                          }
+                          style={{ background: row.color }}
+                          aria-hidden="true"
+                        />
+                        {row.name}
+                      </span>
+                      <span className="group-bars-value tabular">
+                        {formatMinutes(row.seconds / 60, lang)}
+                      </span>
+                      <span className="group-bars-track" aria-hidden="true">
+                        <span
+                          style={{
+                            inlineSize: `${(row.seconds / max) * 100}%`,
+                            background: row.color,
+                          }}
+                        />
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="small muted">
+                  {kind === "project" ? t("noProjects") : t("noSubjects")}
+                </p>
+              )}
+            </section>
+          );
+        })}
       </div>
 
       <section className="stack" aria-labelledby="lab-title">

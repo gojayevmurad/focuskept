@@ -866,7 +866,9 @@
       "early": "Entraînement",
       "score": "{score, number} %",
       "analysis": "Avis de l’IA",
-      "error": "Impossible d’enregistrer. Réessaie, s’il te plaît."
+      "error": "Impossible d’enregistrer. Réessaie, s’il te plaît.",
+      "subject": "Matière",
+      "noSubject": "Sans matière"
     },
     "questions": {
       "number": "Question {n, number}",
@@ -904,6 +906,21 @@
       "today": "Aujourd’hui",
       "days": "{days, plural, one {# jour} many {# jours} other {# jours}}",
       "hint": "Une bonne réponse fait avancer la carte d’une boîte : elle revient moins souvent. Une erreur la ramène vite."
+    },
+    "subjects": {
+      "label": "Matières",
+      "all": "Toutes",
+      "none": "Sans matière",
+      "review": "Réviser {subject} · {count, number}",
+      "reviewNone": "Réviser sans matière · {count, number}",
+      "rename": "Renommer",
+      "renameLabel": "Nouveau nom",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "archive": "Archiver la matière",
+      "archived": "« {name} » archivée. Ses cartes restent.",
+      "nameTaken": "Tu as déjà une matière avec ce nom.",
+      "error": "Impossible d’enregistrer. Réessaie, s’il te plaît."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Étape",
       "dayN": "Jour {day, number}",
       "graduated": "Long terme"
-    }
+    },
+    "byProject": "Temps par projet",
+    "bySubject": "Temps par matière",
+    "noProjects": "Choisis un projet dans le minuteur pour voir ton temps ici.",
+    "noSubjects": "Choisis une matière dans le minuteur pour voir ton temps ici."
   },
   "pricing": {
     "eyebrow": "Tarifs",

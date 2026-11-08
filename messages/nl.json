@@ -866,7 +866,9 @@
       "early": "Oefenen",
       "score": "{score, number}%",
       "analysis": "AI-feedback",
-      "error": "Opslaan mislukt. Probeer het opnieuw."
+      "error": "Opslaan mislukt. Probeer het opnieuw.",
+      "subject": "Vak",
+      "noSubject": "Geen vak"
     },
     "questions": {
       "number": "Vraag {n, number}",
@@ -904,6 +906,21 @@
       "today": "Vandaag",
       "days": "{days, plural, one {# dag} other {# dagen}}",
       "hint": "Een goed antwoord schuift de kaart een bak op, zodat hij minder vaak terugkomt. Een fout haalt hem snel terug."
+    },
+    "subjects": {
+      "label": "Vakken",
+      "all": "Alle",
+      "none": "Geen vak",
+      "review": "{subject} herhalen · {count, number}",
+      "reviewNone": "Herhalen zonder vak · {count, number}",
+      "rename": "Hernoemen",
+      "renameLabel": "Nieuwe naam",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "archive": "Vak archiveren",
+      "archived": "„{name}” gearchiveerd. De kaarten blijven.",
+      "nameTaken": "Je hebt al een vak met die naam.",
+      "error": "Opslaan mislukt. Probeer het opnieuw."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Stap",
       "dayN": "Dag {day, number}",
       "graduated": "Lange termijn"
-    }
+    },
+    "byProject": "Tijd per project",
+    "bySubject": "Tijd per vak",
+    "noProjects": "Kies een project in de timer om hier je tijd te zien.",
+    "noSubjects": "Kies een vak in de timer om hier je tijd te zien."
   },
   "pricing": {
     "eyebrow": "Prijzen",

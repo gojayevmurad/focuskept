@@ -866,7 +866,9 @@
       "early": "Pratik",
       "score": "%{score, number}",
       "analysis": "Yapay zekâ geri bildirimi",
-      "error": "Kaydedilemedi. Lütfen tekrar dene."
+      "error": "Kaydedilemedi. Lütfen tekrar dene.",
+      "subject": "Ders",
+      "noSubject": "Derssiz"
     },
     "questions": {
       "number": "Soru {n, number}",
@@ -904,6 +906,21 @@
       "today": "Bugün",
       "days": "{days, plural, one {# gün} other {# gün}}",
       "hint": "Doğru cevap kartı bir kutu ileri taşır, daha seyrek gelir. Yanlış cevap onu yakında geri getirir."
+    },
+    "subjects": {
+      "label": "Dersler",
+      "all": "Tümü",
+      "none": "Derssiz",
+      "review": "{subject} tekrarı · {count, number}",
+      "reviewNone": "Derssiz tekrar · {count, number}",
+      "rename": "Yeniden adlandır",
+      "renameLabel": "Yeni ad",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "archive": "Dersi arşivle",
+      "archived": "“{name}” arşivlendi. Kartları kalır.",
+      "nameTaken": "Bu adda bir dersin zaten var.",
+      "error": "Kaydedilemedi. Lütfen tekrar dene."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Adım",
       "dayN": "{day, number}. gün",
       "graduated": "Uzun vadeli"
-    }
+    },
+    "byProject": "Projeye göre süre",
+    "bySubject": "Derse göre süre",
+    "noProjects": "Süreni burada görmek için zamanlayıcıda proje seç.",
+    "noSubjects": "Süreni burada görmek için zamanlayıcıda ders seç."
   },
   "pricing": {
     "eyebrow": "Fiyatlar",

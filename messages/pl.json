@@ -866,7 +866,9 @@
       "early": "Ćwiczenie",
       "score": "{score, number}%",
       "analysis": "Uwagi od AI",
-      "error": "Nie udało się zapisać. Spróbuj ponownie."
+      "error": "Nie udało się zapisać. Spróbuj ponownie.",
+      "subject": "Przedmiot",
+      "noSubject": "Bez przedmiotu"
     },
     "questions": {
       "number": "Pytanie {n, number}",
@@ -904,6 +906,21 @@
       "today": "Dziś",
       "days": "{days, plural, one {# dzień} few {# dni} many {# dni} other {# dnia}}",
       "hint": "Dobra odpowiedź przesuwa kartę o pudełko dalej, więc wraca rzadziej. Błędna szybko ją przywraca."
+    },
+    "subjects": {
+      "label": "Przedmioty",
+      "all": "Wszystkie",
+      "none": "Bez przedmiotu",
+      "review": "Powtórz {subject} · {count, number}",
+      "reviewNone": "Powtórz bez przedmiotu · {count, number}",
+      "rename": "Zmień nazwę",
+      "renameLabel": "Nowa nazwa",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "archive": "Archiwizuj przedmiot",
+      "archived": "Zarchiwizowano „{name}”. Fiszki zostają.",
+      "nameTaken": "Masz już przedmiot o tej nazwie.",
+      "error": "Nie udało się zapisać. Spróbuj ponownie."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Krok",
       "dayN": "Dzień {day, number}",
       "graduated": "Długoterminowe"
-    }
+    },
+    "byProject": "Czas według projektu",
+    "bySubject": "Czas według przedmiotu",
+    "noProjects": "Wybierz projekt w minutniku, a zobaczysz tu swój czas.",
+    "noSubjects": "Wybierz przedmiot w minutniku, a zobaczysz tu swój czas."
   },
   "pricing": {
     "eyebrow": "Cennik",

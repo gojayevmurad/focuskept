@@ -866,7 +866,9 @@
       "early": "练习",
       "score": "{score, number}%",
       "analysis": "AI 反馈",
-      "error": "无法保存，请重试。"
+      "error": "无法保存，请重试。",
+      "subject": "科目",
+      "noSubject": "无科目"
     },
     "questions": {
       "number": "问题 {n, number}",
@@ -904,6 +906,21 @@
       "today": "今天",
       "days": "{days, plural, other {# 天}}",
       "hint": "答对会把卡片移到下一个盒子，出现得更少；答错会让它很快回来。"
+    },
+    "subjects": {
+      "label": "科目",
+      "all": "全部",
+      "none": "无科目",
+      "review": "复习{subject} · {count, number}",
+      "reviewNone": "复习无科目卡片 · {count, number}",
+      "rename": "重命名",
+      "renameLabel": "新名称",
+      "save": "保存",
+      "cancel": "取消",
+      "archive": "归档科目",
+      "archived": "已归档“{name}”，卡片保留。",
+      "nameTaken": "已有同名科目。",
+      "error": "无法保存，请重试。"
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "阶段",
       "dayN": "第 {day, number} 天",
       "graduated": "长期记忆"
-    }
+    },
+    "byProject": "按项目统计时间",
+    "bySubject": "按科目统计时间",
+    "noProjects": "在计时器中选择项目后，这里会显示你的时间。",
+    "noSubjects": "在计时器中选择科目后，这里会显示你的时间。"
   },
   "pricing": {
     "eyebrow": "价格",

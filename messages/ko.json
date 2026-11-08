@@ -866,7 +866,9 @@
       "early": "연습",
       "score": "{score, number}%",
       "analysis": "AI 피드백",
-      "error": "저장하지 못했어요. 다시 시도해 주세요."
+      "error": "저장하지 못했어요. 다시 시도해 주세요.",
+      "subject": "과목",
+      "noSubject": "과목 없음"
     },
     "questions": {
       "number": "문제 {n, number}",
@@ -904,6 +906,21 @@
       "today": "오늘",
       "days": "{days, plural, other {#일}}",
       "hint": "맞히면 카드가 다음 상자로 옮겨져 덜 자주 나와요. 틀리면 곧 다시 나와요."
+    },
+    "subjects": {
+      "label": "과목",
+      "all": "전체",
+      "none": "과목 없음",
+      "review": "{subject} 복습 · {count, number}",
+      "reviewNone": "과목 없이 복습 · {count, number}",
+      "rename": "이름 바꾸기",
+      "renameLabel": "새 이름",
+      "save": "저장",
+      "cancel": "취소",
+      "archive": "과목 보관",
+      "archived": "{name} 보관됨. 카드는 남아요.",
+      "nameTaken": "같은 이름의 과목이 이미 있어요.",
+      "error": "저장하지 못했어요. 다시 시도해 주세요."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "단계",
       "dayN": "{day, number}일째",
       "graduated": "장기 기억"
-    }
+    },
+    "byProject": "프로젝트별 시간",
+    "bySubject": "과목별 시간",
+    "noProjects": "타이머에서 프로젝트를 고르면 여기에 시간이 보여요.",
+    "noSubjects": "타이머에서 과목을 고르면 여기에 시간이 보여요."
   },
   "pricing": {
     "eyebrow": "요금",

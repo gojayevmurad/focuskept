@@ -866,7 +866,9 @@
       "early": "Gyakorlás",
       "score": "{score, number}%",
       "analysis": "MI-visszajelzés",
-      "error": "Nem sikerült menteni. Próbáld újra."
+      "error": "Nem sikerült menteni. Próbáld újra.",
+      "subject": "Tantárgy",
+      "noSubject": "Nincs tantárgy"
     },
     "questions": {
       "number": "{n, number}. kérdés",
@@ -904,6 +906,21 @@
       "today": "Ma",
       "days": "{days, plural, one {# nap} other {# nap}}",
       "hint": "A helyes válasz egy dobozzal továbbviszi a kártyát, így ritkábban jön vissza. A hibás hamar visszahozza."
+    },
+    "subjects": {
+      "label": "Tantárgyak",
+      "all": "Mind",
+      "none": "Nincs tantárgy",
+      "review": "{subject} ismétlése · {count, number}",
+      "reviewNone": "Ismétlés tantárgy nélkül · {count, number}",
+      "rename": "Átnevezés",
+      "renameLabel": "Új név",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "archive": "Tantárgy archiválása",
+      "archived": "„{name}” archiválva. A kártyák maradnak.",
+      "nameTaken": "Már van ilyen nevű tantárgyad.",
+      "error": "Nem sikerült menteni. Próbáld újra."
     }
   },
   "limits": {
@@ -1050,7 +1067,11 @@
       "step": "Lépés",
       "dayN": "{day, number}. nap",
       "graduated": "Hosszú távú"
-    }
+    },
+    "byProject": "Idő projektenként",
+    "bySubject": "Idő tantárgyanként",
+    "noProjects": "Válassz projektet az időzítőben, és itt látod az idődet.",
+    "noSubjects": "Válassz tantárgyat az időzítőben, és itt látod az idődet."
   },
   "pricing": {
     "eyebrow": "Árak",

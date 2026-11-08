@@ -29,6 +29,28 @@ export async function focusSummary(userId: string, range: Range) {
   return result.rows[0];
 }
 
+/** Focused time per project and per subject in the range, largest first. */
+export async function focusByGroup(userId: string, range: Range) {
+  const day = localDay("s.started_at", range.timezone);
+  const result = await db().execute<{
+    kind: "project" | "subject";
+    name: string;
+    color: string;
+    seconds: number;
+  }>(sql`
+    select 'project' as kind, p.name, p.color, sum(s.focused_seconds)::int as seconds
+    from focus_session s join project p on p.id = s.project_id
+    where s.user_id = ${userId} and s.completed and ${day} between ${range.from}::date and ${range.to}::date
+    group by p.id, p.name, p.color
+    union all
+    select 'subject' as kind, g.name, g.color, sum(s.focused_seconds)::int as seconds
+    from focus_session s join subject g on g.id = s.subject_id
+    where s.user_id = ${userId} and s.completed and ${day} between ${range.from}::date and ${range.to}::date
+    group by g.id, g.name, g.color
+    order by seconds desc`);
+  return result.rows;
+}
+
 /** Techniques ranked by average focus rating (ties → more sessions). */
 export async function techniqueRanking(
   userId: string,

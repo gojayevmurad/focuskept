@@ -5,6 +5,7 @@ import { ArrowLeft, Repeat } from "lucide-react";
 import { ClientIntl } from "@/src/components/client-intl";
 import { Link } from "@/src/i18n/navigation";
 import { getCard } from "@/src/features/cards/server";
+import { listSubjects } from "@/src/features/subjects/server";
 import { CardEditor } from "@/src/features/cards/card-detail";
 import { dueLabel } from "@/src/features/cards/due-label";
 import { getPreferences, today } from "@/src/features/preferences/server";
@@ -35,11 +36,12 @@ export default async function Page({
   const data = await getCard(user.id, id);
   if (!data) notFound();
   const { card, questions, reviews } = data;
-  const [prefs, labels, t, tc] = await Promise.all([
+  const [prefs, labels, t, tc, subjects] = await Promise.all([
     getPreferences(user.id),
     techniqueLabels(locale),
     getTranslations("cards.detail"),
     getTranslations("cards"),
+    listSubjects(user.id),
   ]);
   const lang = await getLocale();
   const day = today(prefs);
@@ -148,6 +150,10 @@ export default async function Page({
           topic={card.topic}
           explanation={card.explanation}
           status={card.status}
+          subjectId={card.subjectId}
+          subjects={subjects
+            .filter((s) => !s.archivedAt || s.id === card.subjectId)
+            .map((s) => ({ id: s.id, name: s.name }))}
           questions={questions.map((q) => ({
             id: q.id,
             type: q.type,
