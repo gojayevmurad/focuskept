@@ -24,6 +24,10 @@ import { captureProductEvent } from "@/src/features/analytics/server";
 import { cardLimit } from "@/src/features/limits/rules";
 import { countCards, getPlan, LimitError } from "@/src/features/limits/server";
 import { initialSchedule } from "@/src/features/reviews/scheduler";
+import {
+  ownedSubjectId,
+  subjectCondition,
+} from "@/src/features/subjects/server";
 import type { QuestionInput } from "./schema";
 
 export type Card = typeof learningItem.$inferSelect;
@@ -94,6 +98,7 @@ export async function createCardFromDraft(
         userId,
         sessionId: draft.sessionId,
         topic: draft.topic,
+        subjectId: draft.subjectId,
         sourceUrl: draft.sourceUrl,
         learningMethod: draft.learningMethod,
         explanation: input.explanation,
@@ -139,6 +144,8 @@ export type CardFilters = {
   q?: string;
   status?: "active" | "archived";
   topic?: string;
+  /** A subject id, or "none" for cards without one. */
+  subject?: string;
   sort?: "due" | "new";
   cursor?: string;
   limit?: number;
@@ -168,6 +175,7 @@ export async function listCards(userId: string, filters: CardFilters = {}) {
     eq(learningItem.status, filters.status ?? "active"),
   ];
   if (filters.topic) conditions.push(eq(learningItem.topic, filters.topic));
+  if (filters.subject) conditions.push(subjectCondition(filters.subject));
   if (filters.q) conditions.push(searchCondition(filters.q));
   if (filters.cursor) {
     const [key, id] = filters.cursor.split("|");
@@ -185,6 +193,7 @@ export async function listCards(userId: string, filters: CardFilters = {}) {
     .select({
       id: learningItem.id,
       topic: learningItem.topic,
+      subjectId: learningItem.subjectId,
       status: learningItem.status,
       dueOn: learningItem.dueOn,
       currentStep: learningItem.currentStep,
@@ -252,9 +261,15 @@ export async function updateCard(
     topic?: string;
     explanation?: string;
     status?: "active" | "archived";
+    subjectId?: string | null;
     questions?: QuestionInput[];
   },
 ) {
+  const subjectId =
+    patch.subjectId === undefined
+      ? undefined
+      : await ownedSubjectId(userId, patch.subjectId);
+  if (patch.subjectId && !subjectId) return undefined;
   return db().transaction(async (tx) => {
     const [row] = await tx
       .update(learningItem)
@@ -262,6 +277,7 @@ export async function updateCard(
         topic: patch.topic,
         explanation: patch.explanation,
         status: patch.status,
+        subjectId,
         updatedAt: new Date(),
       })
       .where(and(eq(learningItem.userId, userId), eq(learningItem.id, id)))
@@ -338,6 +354,7 @@ export async function cardBoxes(
   userId: string,
   today: string,
   steps: readonly number[],
+  subject?: string,
 ) {
   const rows = await db()
     .select({
@@ -347,7 +364,11 @@ export async function cardBoxes(
     })
     .from(learningItem)
     .where(
-      and(eq(learningItem.userId, userId), eq(learningItem.status, "active")),
+      and(
+        eq(learningItem.userId, userId),
+        eq(learningItem.status, "active"),
+        subject ? subjectCondition(subject) : undefined,
+      ),
     )
     .groupBy(sql`1`, learningItem.currentStep);
   const boxes = [0, ...steps.map(() => 0), 0];

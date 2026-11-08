@@ -247,6 +247,22 @@ export const project = pgTable(
   (t) => [index("project_user_idx").on(t.userId)],
 );
 
+/** What a Learning session is about (e.g. "Biology"); cards are reviewed per subject. */
+export const subject = pgTable(
+  "subject",
+  {
+    id: text("id").primaryKey(),
+    userId: userRef(),
+    name: text("name").notNull(),
+    color: text("color").notNull().default("#5FC3A8"),
+    archivedAt: time("archived_at"),
+    ...stamps,
+  },
+  (t) => [
+    uniqueIndex("subject_user_name_unique").on(t.userId, sql`lower(${t.name})`),
+  ],
+);
+
 export const task = pgTable(
   "task",
   {
@@ -318,6 +334,12 @@ export const focusSession = pgTable(
     learningMethod: text("learning_method"),
     planningTechnique: text("planning_technique"),
     taskId: text("task_id").references(() => task.id, { onDelete: "set null" }),
+    projectId: text("project_id").references(() => project.id, {
+      onDelete: "set null",
+    }),
+    subjectId: text("subject_id").references(() => subject.id, {
+      onDelete: "set null",
+    }),
     learningItemId: text("learning_item_id").references(
       (): AnyPgColumn => learningItem.id,
       { onDelete: "set null" },
@@ -362,6 +384,9 @@ export const learningItem = pgTable(
       onDelete: "set null",
     }),
     topic: text("topic").notNull(),
+    subjectId: text("subject_id").references(() => subject.id, {
+      onDelete: "set null",
+    }),
     sourceUrl: text("source_url"),
     learningMethod: text("learning_method").notNull(),
     explanation: text("explanation").notNull(),
@@ -389,6 +414,7 @@ export const learningItem = pgTable(
       .on(t.userId, t.dueOn)
       .where(sql`${t.status} = 'active'`),
     index("card_user_created_idx").on(t.userId, t.createdAt.desc(), t.id),
+    index("card_user_subject_idx").on(t.userId, t.subjectId),
     index("card_search_idx").using("gin", t.search),
     check("card_status", sql`${t.status} in ('active','archived')`),
     check("card_step", sql`${t.currentStep} >= 0`),
@@ -491,6 +517,9 @@ export const learningDraft = pgTable(
       .unique()
       .references(() => focusSession.id, { onDelete: "cascade" }),
     topic: text("topic").notNull(),
+    subjectId: text("subject_id").references(() => subject.id, {
+      onDelete: "set null",
+    }),
     sourceUrl: text("source_url"),
     learningMethod: text("learning_method").notNull(),
     notes: jsonb("notes").$type<LearningNotes>().notNull().default({}),

@@ -5,6 +5,8 @@ import {
   focusSession,
   learningDraft,
   learningItem,
+  project,
+  subject,
   task,
 } from "@/src/lib/db/schema";
 import { localDate } from "@/src/lib/dates";
@@ -27,12 +29,34 @@ export type FocusSession = typeof focusSession.$inferSelect;
 export async function createSession(userId: string, input: SessionCreate) {
   const result = await db().transaction(async (tx) => {
     let taskId: string | null = null;
+    let projectId: string | null = null;
     if (input.taskId) {
       const [owned] = await tx
-        .select({ id: task.id })
+        .select({ id: task.id, projectId: task.projectId })
         .from(task)
         .where(and(eq(task.userId, userId), eq(task.id, input.taskId)));
       taskId = owned?.id ?? null;
+      projectId = owned?.projectId ?? null;
+    }
+    // Ids the user doesn't own are dropped, like an unknown task.
+    if (input.projectId) {
+      const [owned] = await tx
+        .select({ id: project.id })
+        .from(project)
+        .where(
+          and(eq(project.userId, userId), eq(project.id, input.projectId)),
+        );
+      projectId = owned?.id ?? projectId;
+    }
+    let subjectId: string | null = null;
+    if (input.mode === "learning" && input.subjectId) {
+      const [owned] = await tx
+        .select({ id: subject.id })
+        .from(subject)
+        .where(
+          and(eq(subject.userId, userId), eq(subject.id, input.subjectId)),
+        );
+      subjectId = owned?.id ?? null;
     }
     const [inserted] = await tx
       .insert(focusSession)
@@ -45,6 +69,8 @@ export async function createSession(userId: string, input: SessionCreate) {
         learningMethod: input.learningMethod ?? null,
         planningTechnique: input.planningTechnique ?? null,
         taskId,
+        projectId: input.mode === "work" ? projectId : null,
+        subjectId,
         goal: input.goal,
         ...correctClockSkew(input.startedAt, input.endedAt),
         focusedSeconds: input.focusedSeconds,
@@ -83,6 +109,7 @@ export async function createSession(userId: string, input: SessionCreate) {
           userId,
           sessionId: inserted.id,
           topic: input.learning.topic,
+          subjectId,
           sourceUrl: input.learning.sourceUrl ?? null,
           learningMethod: input.learningMethod,
           notes: input.learning.notes,

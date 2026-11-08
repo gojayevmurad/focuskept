@@ -26,20 +26,30 @@ export async function generateMetadata({
 export default async function Page({
   params,
   searchParams,
-}: LocaleParams & { searchParams: Promise<{ card?: string }> }) {
+}: LocaleParams & {
+  searchParams: Promise<{ card?: string; subject?: string }>;
+}) {
   await resolveLocale(params);
   const query = await searchParams;
+  const subject =
+    query.subject === "none" || idSchema.safeParse(query.subject).success
+      ? query.subject
+      : undefined;
   const { user } = await requireSession(
     query.card
       ? `/app/review?card=${encodeURIComponent(query.card)}`
-      : "/app/review",
+      : subject
+        ? `/app/review?subject=${encodeURIComponent(subject)}`
+        : "/app/review",
   );
   const prefs = await getPreferences(user.id);
   const single =
     query.card && idSchema.safeParse(query.card).success
       ? await cardForReview(user.id, query.card)
       : undefined;
-  const cards = single ? [single] : await dueCards(user.id, today(prefs));
+  const cards = single
+    ? [single]
+    : await dueCards(user.id, today(prefs), 50, subject);
   const plan = await getPlan(user.id);
   const t = await getTranslations("review");
   return (
