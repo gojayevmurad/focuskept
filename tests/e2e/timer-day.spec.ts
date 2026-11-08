@@ -23,6 +23,17 @@ test("timer: today's tasks from the day sheet and the side panel", async ({
     await add.fill("Email the team 10m today");
     await add.press("Enter");
     await expect(page.locator(".board-main")).toContainText("Email the team");
+    // A full navigation cancels requests still in flight; wait for both saves.
+    await expect
+      .poll(async () => {
+        const { rows } = await pool.query(
+          `select count(*)::int as n from task t join "user" u on u.id = t.user_id
+           where u.email = $1`,
+          [email],
+        );
+        return rows[0].n;
+      })
+      .toBe(2);
 
     await page.goto("/en/app");
     const strip = page.locator(".day-strip");
