@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Перенести «{title}» на завтра",
       "toIncoming": "Входящие",
       "toIncomingLabel": "Перенести «{title}» во входящие",
-      "edit": "Открыть «{title}»"
+      "edit": "Открыть «{title}»",
+      "date": {
+        "label": "Дата",
+        "today": "Сегодня",
+        "tomorrow": "Завтра",
+        "weekend": "В эти выходные",
+        "nextWeek": "На следующей неделе",
+        "none": "Без даты",
+        "previous": "Предыдущий месяц",
+        "next": "Следующий месяц"
+      },
+      "minutes": {
+        "label": "Длительность",
+        "none": "Без длительности"
+      },
+      "project": {
+        "label": "Проект",
+        "new": "Новый проект",
+        "create": "Создать"
+      },
+      "delete": "Удалить",
+      "deleteLabel": "Удалить «{title}»",
+      "deleted": "«{title}» удалена",
+      "deletedMany": "Удалено задач: {count, number}",
+      "undo": "Отменить"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Проект",
       "noProject": "Без проекта",
       "save": "Сохранить",
-      "deleteConfirm": "Удалить эту задачу? Связанные сессии сохранятся.",
       "title": "Задача",
       "minutes": "Длительность (мин)",
       "day": "День",
@@ -766,6 +789,29 @@
       "later": "Не сейчас",
       "save": "Сохранить на завтра",
       "saved": "Список на завтра сохранён."
+    },
+    "all": {
+      "heading": "Все задачи",
+      "view": "Вид",
+      "tab": "Все · {count, number}",
+      "search": "Найти задачу",
+      "allProjects": "Все",
+      "select": "Выбрать",
+      "selectDone": "Отмена",
+      "bulk": "Выбранные задачи",
+      "selected": "Выбрано: {count, number}",
+      "markDone": "Готово",
+      "selectLabel": "Выбрать «{title}»",
+      "empty": "Ничего не найдено.",
+      "groups": {
+        "late": "Просрочено",
+        "today": "Сегодня",
+        "tomorrow": "Завтра",
+        "week": "Следующие 7 дней",
+        "later": "Позже",
+        "none": "Без даты",
+        "done": "Сделано сегодня"
+      }
     }
   },
   "cards": {

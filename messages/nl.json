@@ -677,7 +677,31 @@
       "toTomorrowLabel": "„{title}” naar morgen verplaatsen",
       "toIncoming": "Binnengekomen",
       "toIncomingLabel": "„{title}” naar Binnengekomen verplaatsen",
-      "edit": "„{title}” openen"
+      "edit": "„{title}” openen",
+      "date": {
+        "label": "Datum",
+        "today": "Vandaag",
+        "tomorrow": "Morgen",
+        "weekend": "Dit weekend",
+        "nextWeek": "Volgende week",
+        "none": "Geen datum",
+        "previous": "Vorige maand",
+        "next": "Volgende maand"
+      },
+      "minutes": {
+        "label": "Duur",
+        "none": "Geen duur"
+      },
+      "project": {
+        "label": "Project",
+        "new": "Nieuw project",
+        "create": "Maken"
+      },
+      "delete": "Verwijderen",
+      "deleteLabel": "„{title}” verwijderen",
+      "deleted": "„{title}” verwijderd",
+      "deletedMany": "Verwijderde taken: {count, number}",
+      "undo": "Ongedaan maken"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Project",
       "noProject": "Geen project",
       "save": "Opslaan",
-      "deleteConfirm": "Deze taak verwijderen? Gekoppelde sessies blijven bewaard.",
       "title": "Taak",
       "minutes": "Duur (min)",
       "day": "Dag",
@@ -766,6 +789,29 @@
       "later": "Niet nu",
       "save": "Bewaren voor morgen",
       "saved": "De lijst voor morgen is bewaard."
+    },
+    "all": {
+      "heading": "Alle taken",
+      "view": "Weergave",
+      "tab": "Alle · {count, number}",
+      "search": "Taken zoeken",
+      "allProjects": "Alle",
+      "select": "Selecteren",
+      "selectDone": "Annuleren",
+      "bulk": "Geselecteerde taken",
+      "selected": "Geselecteerd: {count, number}",
+      "markDone": "Klaar",
+      "selectLabel": "„{title}” selecteren",
+      "empty": "Niets gevonden.",
+      "groups": {
+        "late": "Te laat",
+        "today": "Vandaag",
+        "tomorrow": "Morgen",
+        "week": "Komende 7 dagen",
+        "later": "Later",
+        "none": "Geen datum",
+        "done": "Vandaag klaar"
+      }
     }
   },
   "cards": {

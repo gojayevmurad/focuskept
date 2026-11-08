@@ -1,22 +1,23 @@
 "use client";
 import { useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, Play, Plus } from "lucide-react";
+import { Play } from "lucide-react";
 import { Link } from "@/src/i18n/navigation";
 import { Dialog } from "@/src/components/ui/dialog";
 import { toast } from "@/src/components/ui/toast";
 import { formatMinutes } from "@/src/features/focus/format";
 import { SLOTS_135 } from "./schema";
+import { freeSlot, sizeForMinutes, taskMeta, type Size } from "./planning";
 import {
-  eisenhowerFor,
-  freeSlot,
-  sizeForMinutes,
-  taskMeta,
-  type Size,
-} from "./planning";
-import { parseQuickAdd, wordList } from "./quick-add";
-import { useTasks, type ClientProject, type ClientTask } from "./use-tasks";
+  UNDO_MS,
+  useTasks,
+  type ClientProject,
+  type ClientTask,
+} from "./use-tasks";
 import { IncomingPanel, type IncomingFilter } from "./incoming";
+import { AddBar } from "./add-bar";
+import { AllTasks } from "./all-tasks";
+import { CheckButton, DeleteButton } from "./task-actions";
 import {
   PlanTomorrowDialog,
   ProjectsDialog,
@@ -24,8 +25,6 @@ import {
 } from "./board-dialogs";
 
 const IVY_MAX = 6;
-/** Scripts written without spaces: day words match inside the line. */
-const UNSPACED = new Set(["ja", "zh-CN"]);
 
 export type Board = ReturnType<typeof useBoard>;
 
@@ -79,6 +78,32 @@ function useBoard(initial: ClientTask[], today: string, tomorrow: string) {
     });
   const setDone = (task: ClientTask, done: boolean) =>
     update(task.id, { status: done ? "done" : "todo" });
+  /** Any day: today and tomorrow keep their slot and order rules. */
+  const toDay = (task: ClientTask, day: string | null) =>
+    day === today
+      ? toToday(task)
+      : day === tomorrow
+        ? toTomorrow(task)
+        : day === null
+          ? toIncoming(task)
+          : update(task.id, {
+              plannedFor: day,
+              size135: null,
+              isFrogOn: null,
+              ivyRank: null,
+            });
+  /** Deletes at once, with Undo for a few seconds. */
+  const deleteTasks = (list: ClientTask[]) => {
+    if (!list.length) return;
+    const undo = store.removeLater(list.map((x) => x.id));
+    toast(
+      list.length === 1
+        ? t("board.deleted", { title: list[0].title })
+        : t("board.deletedMany", { count: list.length }),
+      "info",
+      { action: { label: t("board.undo"), onClick: undo }, ms: UNDO_MS },
+    );
+  };
 
   /** Tomorrow's list in this order (Ivy Lee); tasks left out keep the day, lose the rank. */
   const saveTomorrow = async (ids: string[]) => {
@@ -110,7 +135,9 @@ function useBoard(initial: ClientTask[], today: string, tomorrow: string) {
     toToday,
     toTomorrow,
     toIncoming,
+    toDay,
     setDone,
+    deleteTasks,
     saveTomorrow,
   };
 }
@@ -120,11 +147,13 @@ export function DayBoard({
   projects: initialProjects,
   today,
   tomorrow,
+  weekStartsOn,
 }: {
   initialTasks: ClientTask[];
   projects: ClientProject[];
   today: string;
   tomorrow: string;
+  weekStartsOn: number;
 }) {
   const t = useTranslations("tasks");
   const locale = useLocale();
@@ -140,6 +169,10 @@ export function DayBoard({
   const [dialog, setDialog] = useState<
     "incoming" | "planner" | "projects" | null
   >(null);
+  const [view, setView] = useState<"today" | "all">("today");
+  const openCount = tasks.filter(
+    (x) => x.status === "todo" || x.status === "doing",
+  ).length;
 
   const onToday = tasks.filter(
     (x) => x.plannedFor === today && x.status !== "archived",
@@ -187,9 +220,27 @@ export function DayBoard({
       <div className="board-top">
         <div>
           <p className="board-date">{dateLine}</p>
-          <h1 className="board-title">{t("board.heading")}</h1>
+          <h1 className="board-title">
+            {view === "all" ? t("all.heading") : t("board.heading")}
+          </h1>
         </div>
-        <div className="board-meter">
+        <div className="board-view" role="group" aria-label={t("all.view")}>
+          <button
+            type="button"
+            aria-pressed={view === "today"}
+            onClick={() => setView("today")}
+          >
+            {t("board.heading")}
+          </button>
+          <button
+            type="button"
+            aria-pressed={view === "all"}
+            onClick={() => setView("all")}
+          >
+            {t("all.tab", { count: openCount })}
+          </button>
+        </div>
+        <div className="board-meter" hidden={view === "all"}>
           <div className="board-meter-text">
             <span>
               {t("board.progress", {
@@ -222,9 +273,23 @@ export function DayBoard({
         </div>
       </div>
 
-      <QuickAdd board={board} />
+      <AddBar
+        board={board}
+        projects={projects}
+        onProjectCreated={(p) => setProjects((list) => [...list, p])}
+        weekStartsOn={weekStartsOn}
+      />
 
-      <div className="board-layout">
+      {view === "all" && (
+        <AllTasks
+          board={board}
+          projects={projects}
+          onOpenTask={setDetails}
+          duration={duration}
+        />
+      )}
+
+      <div className="board-layout" hidden={view === "all"}>
         <section className="board-main" aria-labelledby="board-heading-first">
           <FirstCard
             task={big}
@@ -335,6 +400,7 @@ export function DayBoard({
         className="board-incoming-button"
         onClick={() => setDialog("incoming")}
         aria-haspopup="dialog"
+        hidden={view === "all"}
       >
         <span>{t("incoming.title")}</span>
         <span className="board-count">{incomingCount}</span>
@@ -405,108 +471,6 @@ function SlotHeader({
   );
 }
 
-function QuickAdd({ board }: { board: Board }) {
-  const t = useTranslations("tasks");
-  const locale = useLocale();
-  const [text, setText] = useState("");
-  const words = useMemo(
-    () => ({
-      today: wordList(t("board.keywords.today")),
-      tomorrow: wordList(t("board.keywords.tomorrow")),
-      minutes: wordList(t("board.keywords.minutes")),
-      hours: wordList(t("board.keywords.hours")),
-    }),
-    [t],
-  );
-  const parsed = parseQuickAdd(text, words, !UNSPACED.has(locale));
-  const ready = parsed.title.trim().length > 0;
-  const size =
-    parsed.when === "today" ? board.slotFor(parsed.minutes) : undefined;
-
-  const chips: { label: string; tone?: "accent" | "amber" }[] = [];
-  if (ready) {
-    chips.push({
-      label:
-        parsed.when === "today"
-          ? t("board.chip.today")
-          : parsed.when === "tomorrow"
-            ? t("board.chip.tomorrow")
-            : t("incoming.title"),
-    });
-    if (parsed.minutes)
-      chips.push({ label: formatMinutes(parsed.minutes, locale) });
-    if (parsed.when === "today")
-      chips.push(
-        size
-          ? { label: t(`board.chip.slot.${size}`), tone: "accent" }
-          : { label: t("board.chip.full"), tone: "amber" },
-      );
-    if (parsed.important)
-      chips.push({ label: t("incoming.important"), tone: "accent" });
-    if (parsed.urgent)
-      chips.push({ label: t("incoming.urgent"), tone: "amber" });
-    for (const tag of parsed.tags) chips.push({ label: `#${tag}` });
-  }
-
-  async function add() {
-    if (!ready) return;
-    const today = parsed.when === "today" ? size : undefined;
-    if (parsed.when === "today" && !today) toast(t("board.dayFull"), "error");
-    setText("");
-    await board.create({
-      title: parsed.title,
-      estimatedMinutes: parsed.minutes,
-      tags: parsed.tags,
-      eisenhower: eisenhowerFor(parsed.important, parsed.urgent),
-      plannedFor: today
-        ? board.today
-        : parsed.when === "tomorrow"
-          ? board.tomorrow
-          : null,
-      size135: today ?? null,
-      isFrogOn: today === "big" ? board.today : null,
-      ivyRank: parsed.when === "tomorrow" ? board.nextRank() : null,
-    });
-  }
-
-  return (
-    <form
-      className={ready ? "board-add is-ready" : "board-add"}
-      onSubmit={(e) => {
-        e.preventDefault();
-        void add();
-      }}
-    >
-      <div className="board-add-row">
-        <Plus size={20} aria-hidden="true" className="board-add-icon" />
-        <input
-          className="board-add-input"
-          value={text}
-          maxLength={260}
-          onChange={(e) => setText(e.target.value)}
-          aria-label={t("board.addLabel")}
-          aria-describedby="board-add-chips"
-          placeholder={t("board.addPlaceholder")}
-          dir="auto"
-        />
-        {ready && (
-          <button className="btn btn-inverse btn-sm">{t("board.add")}</button>
-        )}
-      </div>
-      <div id="board-add-chips" className="board-chips" aria-live="polite">
-        {chips.map((chip, i) => (
-          <span
-            key={i}
-            className={chip.tone ? `board-chip is-${chip.tone}` : "board-chip"}
-          >
-            {chip.label}
-          </span>
-        ))}
-      </div>
-    </form>
-  );
-}
-
 function FirstCard({
   task,
   board,
@@ -548,6 +512,7 @@ function FirstCard({
         <p className="board-meta">{taskMeta(task, duration)}</p>
       </div>
       <div className="board-first-actions">
+        <DeleteButton task={task} board={board} />
         {!done && (
           <button
             className="btn btn-secondary"
@@ -572,33 +537,6 @@ function FirstCard({
         )}
       </div>
     </article>
-  );
-}
-
-function CheckButton({
-  task,
-  board,
-  large,
-}: {
-  task: ClientTask;
-  board: Board;
-  large?: boolean;
-}) {
-  const t = useTranslations("tasks");
-  const done = task.status === "done";
-  return (
-    <button
-      type="button"
-      role="checkbox"
-      aria-checked={done}
-      aria-label={t("markDone", { title: task.title })}
-      className={`board-check${done ? " is-done" : ""}${large ? " is-large" : ""}`}
-      onClick={() => void board.setDone(task, !done)}
-    >
-      {done && (
-        <Check size={large ? 16 : 13} strokeWidth={3} aria-hidden="true" />
-      )}
-    </button>
   );
 }
 
@@ -642,6 +580,7 @@ function TaskLine({
           <Play size={14} aria-hidden="true" />
         </Link>
       )}
+      <DeleteButton task={task} board={board} />
     </span>
   );
   const title = (

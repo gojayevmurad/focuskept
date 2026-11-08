@@ -677,7 +677,31 @@
       "toTomorrowLabel": "„{title}“ auf morgen verschieben",
       "toIncoming": "Eingang",
       "toIncomingLabel": "„{title}“ in den Eingang verschieben",
-      "edit": "„{title}“ öffnen"
+      "edit": "„{title}“ öffnen",
+      "date": {
+        "label": "Datum",
+        "today": "Heute",
+        "tomorrow": "Morgen",
+        "weekend": "Dieses Wochenende",
+        "nextWeek": "Nächste Woche",
+        "none": "Kein Datum",
+        "previous": "Vorheriger Monat",
+        "next": "Nächster Monat"
+      },
+      "minutes": {
+        "label": "Dauer",
+        "none": "Keine Dauer"
+      },
+      "project": {
+        "label": "Projekt",
+        "new": "Neues Projekt",
+        "create": "Anlegen"
+      },
+      "delete": "Löschen",
+      "deleteLabel": "„{title}“ löschen",
+      "deleted": "„{title}“ gelöscht",
+      "deletedMany": "Gelöschte Aufgaben: {count, number}",
+      "undo": "Rückgängig"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Projekt",
       "noProject": "Kein Projekt",
       "save": "Speichern",
-      "deleteConfirm": "Diese Aufgabe löschen? Verknüpfte Sitzungen bleiben erhalten.",
       "title": "Aufgabe",
       "minutes": "Dauer (Min.)",
       "day": "Tag",
@@ -766,6 +789,29 @@
       "later": "Nicht jetzt",
       "save": "Für morgen speichern",
       "saved": "Die Liste für morgen ist gespeichert."
+    },
+    "all": {
+      "heading": "Alle Aufgaben",
+      "view": "Ansicht",
+      "tab": "Alle · {count, number}",
+      "search": "Aufgaben suchen",
+      "allProjects": "Alle",
+      "select": "Auswählen",
+      "selectDone": "Abbrechen",
+      "bulk": "Ausgewählte Aufgaben",
+      "selected": "Ausgewählt: {count, number}",
+      "markDone": "Erledigt",
+      "selectLabel": "„{title}“ auswählen",
+      "empty": "Nichts gefunden.",
+      "groups": {
+        "late": "Überfällig",
+        "today": "Heute",
+        "tomorrow": "Morgen",
+        "week": "Nächste 7 Tage",
+        "later": "Später",
+        "none": "Kein Datum",
+        "done": "Heute erledigt"
+      }
     }
   },
   "cards": {

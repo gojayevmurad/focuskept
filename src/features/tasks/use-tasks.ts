@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { toast } from "@/src/components/ui/toast";
 import type { TaskCreate, TaskUpdate } from "./schema";
@@ -30,11 +30,20 @@ export type ClientProject = {
   archivedAt: string | null;
 };
 
-async function send(url: string, method: string, body?: unknown) {
+/** How long a deleted task can be brought back. */
+export const UNDO_MS = 5000;
+
+async function send(
+  url: string,
+  method: string,
+  body?: unknown,
+  keepalive = false,
+) {
   const response = await fetch(url, {
     method,
     headers: body ? { "Content-Type": "application/json" } : undefined,
     body: body ? JSON.stringify(body) : undefined,
+    keepalive,
   });
   if (!response.ok) {
     const data = await response.json().catch(() => ({}));
@@ -177,7 +186,66 @@ export function useTasks(initial: ClientTask[]) {
     [fail],
   );
 
-  return { tasks, setTasks, create, update, remove };
+  // Deleted tasks disappear at once; the request waits UNDO_MS so it can be
+  // undone. Leaving the page sends the waiting deletes right away.
+  const pendingDeletes = useRef(
+    new Map<string, ReturnType<typeof setTimeout>>(),
+  );
+  const sendDelete = useCallback(
+    async (id: string, leaving = false) => {
+      pendingDeletes.current.delete(id);
+      const created = creating.current.get(id);
+      if (created && !(await created)) return;
+      try {
+        await send(`/api/tasks/${id}`, "DELETE", undefined, leaving);
+      } catch (error) {
+        if (!leaving) fail(error);
+      }
+    },
+    [fail],
+  );
+
+  const removeLater = useCallback(
+    (ids: string[]) => {
+      const order = tasks.map((x) => x.id);
+      const removed = tasks.filter((x) => ids.includes(x.id));
+      setTasks((list) => list.filter((x) => !ids.includes(x.id)));
+      for (const id of ids)
+        pendingDeletes.current.set(
+          id,
+          setTimeout(() => void sendDelete(id), UNDO_MS),
+        );
+      return () => {
+        for (const id of ids) {
+          clearTimeout(pendingDeletes.current.get(id));
+          pendingDeletes.current.delete(id);
+        }
+        setTasks((list) =>
+          [...list, ...removed.filter((x) => !list.includes(x))].sort(
+            (a, b) => order.indexOf(a.id) - order.indexOf(b.id),
+          ),
+        );
+      };
+    },
+    [tasks, sendDelete],
+  );
+
+  useEffect(() => {
+    const pending = pendingDeletes.current;
+    const flush = () => {
+      for (const [id, timer] of pending) {
+        clearTimeout(timer);
+        void sendDelete(id, true);
+      }
+    };
+    window.addEventListener("pagehide", flush);
+    return () => {
+      window.removeEventListener("pagehide", flush);
+      flush();
+    };
+  }, [sendDelete]);
+
+  return { tasks, setTasks, create, update, remove, removeLater };
 }
 
 export async function projectRequest(

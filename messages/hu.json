@@ -677,7 +677,31 @@
       "toTomorrowLabel": "„{title}” áthelyezése holnapra",
       "toIncoming": "Beérkezett",
       "toIncomingLabel": "„{title}” áthelyezése a Beérkezettek közé",
-      "edit": "„{title}” megnyitása"
+      "edit": "„{title}” megnyitása",
+      "date": {
+        "label": "Dátum",
+        "today": "Ma",
+        "tomorrow": "Holnap",
+        "weekend": "Ezen a hétvégén",
+        "nextWeek": "Jövő héten",
+        "none": "Nincs dátum",
+        "previous": "Előző hónap",
+        "next": "Következő hónap"
+      },
+      "minutes": {
+        "label": "Időtartam",
+        "none": "Nincs időtartam"
+      },
+      "project": {
+        "label": "Projekt",
+        "new": "Új projekt",
+        "create": "Létrehozás"
+      },
+      "delete": "Törlés",
+      "deleteLabel": "„{title}” törlése",
+      "deleted": "„{title}” törölve",
+      "deletedMany": "Törölt feladatok: {count, number}",
+      "undo": "Visszavonás"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Projekt",
       "noProject": "Nincs projekt",
       "save": "Mentés",
-      "deleteConfirm": "Törlöd ezt a feladatot? A hozzá kapcsolt munkamenetek megmaradnak.",
       "title": "Feladat",
       "minutes": "Időtartam (perc)",
       "day": "Nap",
@@ -766,6 +789,29 @@
       "later": "Most nem",
       "save": "Mentés holnapra",
       "saved": "A holnapi lista elmentve."
+    },
+    "all": {
+      "heading": "Minden feladat",
+      "view": "Nézet",
+      "tab": "Mind · {count, number}",
+      "search": "Feladat keresése",
+      "allProjects": "Mind",
+      "select": "Kijelölés",
+      "selectDone": "Mégse",
+      "bulk": "Kijelölt feladatok",
+      "selected": "Kijelölve: {count, number}",
+      "markDone": "Kész",
+      "selectLabel": "„{title}” kijelölése",
+      "empty": "Nincs találat.",
+      "groups": {
+        "late": "Lejárt",
+        "today": "Ma",
+        "tomorrow": "Holnap",
+        "week": "Következő 7 nap",
+        "later": "Később",
+        "none": "Nincs dátum",
+        "done": "Ma kész"
+      }
     }
   },
   "cards": {

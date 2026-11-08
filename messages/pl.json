@@ -677,7 +677,31 @@
       "toTomorrowLabel": "Przenieś „{title}” na jutro",
       "toIncoming": "Przychodzące",
       "toIncomingLabel": "Przenieś „{title}” do Przychodzących",
-      "edit": "Otwórz „{title}”"
+      "edit": "Otwórz „{title}”",
+      "date": {
+        "label": "Data",
+        "today": "Dziś",
+        "tomorrow": "Jutro",
+        "weekend": "Ten weekend",
+        "nextWeek": "Przyszły tydzień",
+        "none": "Bez daty",
+        "previous": "Poprzedni miesiąc",
+        "next": "Następny miesiąc"
+      },
+      "minutes": {
+        "label": "Czas trwania",
+        "none": "Bez czasu"
+      },
+      "project": {
+        "label": "Projekt",
+        "new": "Nowy projekt",
+        "create": "Utwórz"
+      },
+      "delete": "Usuń",
+      "deleteLabel": "Usuń „{title}”",
+      "deleted": "Usunięto „{title}”",
+      "deletedMany": "Usunięte zadania: {count, number}",
+      "undo": "Cofnij"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "Projekt",
       "noProject": "Bez projektu",
       "save": "Zapisz",
-      "deleteConfirm": "Usunąć to zadanie? Powiązane sesje zostaną zachowane.",
       "title": "Zadanie",
       "minutes": "Czas (min)",
       "day": "Dzień",
@@ -766,6 +789,29 @@
       "later": "Nie teraz",
       "save": "Zapisz na jutro",
       "saved": "Lista na jutro została zapisana."
+    },
+    "all": {
+      "heading": "Wszystkie zadania",
+      "view": "Widok",
+      "tab": "Wszystkie · {count, number}",
+      "search": "Szukaj zadań",
+      "allProjects": "Wszystkie",
+      "select": "Zaznacz",
+      "selectDone": "Anuluj",
+      "bulk": "Zaznaczone zadania",
+      "selected": "Zaznaczono: {count, number}",
+      "markDone": "Zrobione",
+      "selectLabel": "Zaznacz „{title}”",
+      "empty": "Nic nie znaleziono.",
+      "groups": {
+        "late": "Zaległe",
+        "today": "Dziś",
+        "tomorrow": "Jutro",
+        "week": "Najbliższe 7 dni",
+        "later": "Później",
+        "none": "Bez daty",
+        "done": "Zrobione dziś"
+      }
     }
   },
   "cards": {

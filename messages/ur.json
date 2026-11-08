@@ -677,7 +677,31 @@
       "toTomorrowLabel": "“{title}” کو کل پر منتقل کریں",
       "toIncoming": "آنے والے",
       "toIncomingLabel": "“{title}” کو آنے والے میں منتقل کریں",
-      "edit": "“{title}” کھولیں"
+      "edit": "“{title}” کھولیں",
+      "date": {
+        "label": "تاریخ",
+        "today": "آج",
+        "tomorrow": "کل",
+        "weekend": "اس ویک اینڈ",
+        "nextWeek": "اگلے ہفتے",
+        "none": "کوئی تاریخ نہیں",
+        "previous": "پچھلا مہینہ",
+        "next": "اگلا مہینہ"
+      },
+      "minutes": {
+        "label": "دورانیہ",
+        "none": "کوئی دورانیہ نہیں"
+      },
+      "project": {
+        "label": "پراجیکٹ",
+        "new": "نیا پروجیکٹ",
+        "create": "بنائیں"
+      },
+      "delete": "حذف کریں",
+      "deleteLabel": "“{title}” حذف کریں",
+      "deleted": "“{title}” حذف ہو گیا",
+      "deletedMany": "حذف شدہ کام: {count, number}",
+      "undo": "واپس لائیں"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "پراجیکٹ",
       "noProject": "کوئی پراجیکٹ نہیں",
       "save": "محفوظ کریں",
-      "deleteConfirm": "یہ کام حذف کریں؟ اس سے جڑے سیشنز محفوظ رہیں گے۔",
       "title": "کام",
       "minutes": "دورانیہ (منٹ)",
       "day": "دن",
@@ -766,6 +789,29 @@
       "later": "ابھی نہیں",
       "save": "کل کے لیے محفوظ کریں",
       "saved": "کل کی فہرست محفوظ ہو گئی۔"
+    },
+    "all": {
+      "heading": "سب کام",
+      "view": "منظر",
+      "tab": "سب · {count, number}",
+      "search": "کام تلاش کریں",
+      "allProjects": "سب",
+      "select": "منتخب کریں",
+      "selectDone": "منسوخ",
+      "bulk": "منتخب کام",
+      "selected": "منتخب: {count, number}",
+      "markDone": "مکمل",
+      "selectLabel": "“{title}” منتخب کریں",
+      "empty": "کچھ نہیں ملا۔",
+      "groups": {
+        "late": "تاخیر",
+        "today": "آج",
+        "tomorrow": "کل",
+        "week": "اگلے 7 دن",
+        "later": "بعد میں",
+        "none": "کوئی تاریخ نہیں",
+        "done": "آج مکمل"
+      }
     }
   },
   "cards": {

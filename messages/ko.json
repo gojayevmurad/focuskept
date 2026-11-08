@@ -677,7 +677,31 @@
       "toTomorrowLabel": "{title} — 내일로 옮기기",
       "toIncoming": "들어온 일",
       "toIncomingLabel": "{title} — 들어온 일로 옮기기",
-      "edit": "{title} — 열기"
+      "edit": "{title} — 열기",
+      "date": {
+        "label": "날짜",
+        "today": "오늘",
+        "tomorrow": "내일",
+        "weekend": "이번 주말",
+        "nextWeek": "다음 주",
+        "none": "날짜 없음",
+        "previous": "이전 달",
+        "next": "다음 달"
+      },
+      "minutes": {
+        "label": "소요 시간",
+        "none": "시간 없음"
+      },
+      "project": {
+        "label": "프로젝트",
+        "new": "새 프로젝트",
+        "create": "만들기"
+      },
+      "delete": "삭제",
+      "deleteLabel": "{title} — 삭제",
+      "deleted": "{title} — 삭제됨",
+      "deletedMany": "삭제한 할 일: {count, number}",
+      "undo": "되돌리기"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "프로젝트",
       "noProject": "프로젝트 없음",
       "save": "저장",
-      "deleteConfirm": "이 할 일을 삭제할까요? 연결된 세션은 남아 있어요.",
       "title": "작업",
       "minutes": "소요 시간(분)",
       "day": "날짜",
@@ -766,6 +789,29 @@
       "later": "지금은 안 할래요",
       "save": "내일로 저장",
       "saved": "내일 목록을 저장했어요."
+    },
+    "all": {
+      "heading": "모든 할 일",
+      "view": "보기",
+      "tab": "전체 · {count, number}",
+      "search": "할 일 검색",
+      "allProjects": "전체",
+      "select": "선택",
+      "selectDone": "취소",
+      "bulk": "선택한 할 일",
+      "selected": "선택: {count, number}",
+      "markDone": "완료",
+      "selectLabel": "{title} — 선택",
+      "empty": "찾은 항목이 없어요.",
+      "groups": {
+        "late": "기한 지남",
+        "today": "오늘",
+        "tomorrow": "내일",
+        "week": "앞으로 7일",
+        "later": "나중에",
+        "none": "날짜 없음",
+        "done": "오늘 완료"
+      }
     }
   },
   "cards": {

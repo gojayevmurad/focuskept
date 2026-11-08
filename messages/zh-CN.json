@@ -677,7 +677,31 @@
       "toTomorrowLabel": "把“{title}”移到明天",
       "toIncoming": "待处理",
       "toIncomingLabel": "把“{title}”移到待处理",
-      "edit": "打开“{title}”"
+      "edit": "打开“{title}”",
+      "date": {
+        "label": "日期",
+        "today": "今天",
+        "tomorrow": "明天",
+        "weekend": "这个周末",
+        "nextWeek": "下周",
+        "none": "无日期",
+        "previous": "上个月",
+        "next": "下个月"
+      },
+      "minutes": {
+        "label": "时长",
+        "none": "无时长"
+      },
+      "project": {
+        "label": "项目",
+        "new": "新项目",
+        "create": "创建"
+      },
+      "delete": "删除",
+      "deleteLabel": "删除“{title}”",
+      "deleted": "已删除“{title}”",
+      "deletedMany": "已删除任务：{count, number}",
+      "undo": "撤销"
     },
     "details": {
       "days": {
@@ -691,7 +715,6 @@
       "project": "项目",
       "noProject": "无项目",
       "save": "保存",
-      "deleteConfirm": "删除这项任务？与它关联的专注记录会保留。",
       "title": "任务",
       "minutes": "时长（分钟）",
       "day": "日期",
@@ -766,6 +789,29 @@
       "later": "暂不",
       "save": "保存到明天",
       "saved": "明天的清单已保存。"
+    },
+    "all": {
+      "heading": "全部任务",
+      "view": "视图",
+      "tab": "全部 · {count, number}",
+      "search": "搜索任务",
+      "allProjects": "全部",
+      "select": "选择",
+      "selectDone": "取消",
+      "bulk": "已选任务",
+      "selected": "已选：{count, number}",
+      "markDone": "完成",
+      "selectLabel": "选择“{title}”",
+      "empty": "没有找到。",
+      "groups": {
+        "late": "已逾期",
+        "today": "今天",
+        "tomorrow": "明天",
+        "week": "未来 7 天",
+        "later": "以后",
+        "none": "无日期",
+        "done": "今天完成"
+      }
     }
   },
   "cards": {

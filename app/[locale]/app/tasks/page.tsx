@@ -48,6 +48,7 @@ export default async function Page({ params }: LocaleParams) {
         projects={projects.map(serialize)}
         today={day}
         tomorrow={addDays(day, 1)}
+        weekStartsOn={prefs.weekStartsOn}
       />
     </ClientIntl>
   );

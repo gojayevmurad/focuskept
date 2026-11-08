@@ -355,10 +355,9 @@ function TaskDetails({
         <button
           type="button"
           className="btn btn-ghost btn-sm text-danger"
-          onClick={async () => {
-            if (!window.confirm(t("deleteConfirm"))) return;
+          onClick={() => {
             onClose();
-            await board.remove(task.id);
+            board.deleteTasks([task]);
           }}
         >
           {t("delete")}
