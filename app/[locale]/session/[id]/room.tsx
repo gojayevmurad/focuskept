@@ -139,6 +139,7 @@ export function Room(props: {
   const [reportFor, setReportFor] = useState<string | null>(null);
   const [favorites, setFavorites] = useState(props.favorites);
   const [left, setLeft] = useState(false);
+  const [blockedNotice, setBlockedNotice] = useState(false);
 
   const client = useRef<VideoClient | null>(null);
   const localStream = useRef<MediaStream | null>(null);
@@ -185,7 +186,13 @@ export function Room(props: {
     return () => clearInterval(timer);
   }, []);
 
-  // Local preview before joining.
+  // Local preview before joining. Runs once: the timer re-renders twice a second.
+  const mediaMessages = useRef({
+    denied: t("media.denied"),
+    not_found: t("media.not_found"),
+    in_use: t("media.in_use"),
+    unknown: t("media.unknown"),
+  });
   useEffect(() => {
     let cancelled = false;
     getLocalMedia({ audio: true })
@@ -195,17 +202,19 @@ export function Room(props: {
         if (localVideo.current) localVideo.current.srcObject = stream;
         setMediaReady(true);
       })
-      .catch((error: unknown) =>
+      .catch((error: unknown) => {
+        if (cancelled) return;
+        const messages = mediaMessages.current;
         setMediaError(
           error instanceof LocalMediaError
-            ? t(`media.${error.code}`)
-            : t("media.unknown"),
-        ),
-      );
+            ? messages[error.code]
+            : messages.unknown,
+        );
+      });
     return () => {
       cancelled = true;
     };
-  }, [t]);
+  }, []);
 
   useEffect(() => {
     if (localVideo.current && localStream.current)
@@ -372,6 +381,7 @@ export function Room(props: {
   if (phase === "ended" || left || state.window === "over") {
     return (
       <Summary
+        blocked={blockedNotice}
         state={state}
         outcome={outcome}
         onOutcome={chooseOutcome}
@@ -620,6 +630,7 @@ export function Room(props: {
         onChangeTarget={setReportFor}
         onClose={() => setReportFor(null)}
         onBlocked={async () => {
+          setBlockedNotice(true);
           await leave();
           router.refresh();
         }}
@@ -695,6 +706,7 @@ function Outcomes({
 }
 
 function Summary(props: {
+  blocked: boolean;
   state: RoomState;
   outcome: Outcome | null;
   onOutcome: (v: Outcome) => void;
@@ -714,6 +726,11 @@ function Summary(props: {
         <span className="overline">{t("summaryOverline")}</span>
         <h1>{t("summaryTitle")}</h1>
       </div>
+      {props.blocked && (
+        <p className="notice ok" role="status">
+          {t("reportSentBody")}
+        </p>
+      )}
       <section className="card stack">
         <strong>{t("howDidItGo")}</strong>
         <Outcomes value={props.outcome} onChange={props.onOutcome} />

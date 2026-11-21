@@ -4,7 +4,9 @@ import { test, expect } from "@playwright/test";
 import {
   PASSWORD,
   createMember,
+  hydrated,
   removeUsers,
+  resetRateLimits,
   signIn,
   testDb,
   verificationUrl,
@@ -20,9 +22,10 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
 }) => {
   const pool = testDb();
   const email = `e2e-core-${Date.now()}@example.test`;
+  await resetRateLimits(pool);
   try {
     await page.goto("/sign-up");
-    await page.waitForLoadState("networkidle");
+    await hydrated(page);
     await page.getByLabel("Your name").fill("Casey Tester");
     await page.getByLabel("Email address").fill(email);
     await page.getByLabel("Password", { exact: true }).fill(PASSWORD);
@@ -38,12 +41,19 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
     await signIn(page, email);
 
     await expect(page).toHaveURL(/onboarding/);
+    await hydrated(page);
     await page
       .getByRole("checkbox", { name: "I confirm I am 18 or older." })
       .check();
-    await page.getByRole("button", { name: "Next" }).first().click();
+    await page
+      .getByRole("button", { name: "Next", exact: true })
+      .first()
+      .click();
     await page.getByText("Studying").click();
-    await page.getByRole("button", { name: "Next" }).last().click();
+    await page
+      .getByRole("button", { name: "Next", exact: true })
+      .last()
+      .click();
     await page.getByRole("button", { name: "I'll book later" }).click();
     await expect(page).toHaveURL(/dashboard/);
     await expect(
@@ -52,6 +62,7 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
 
     // Book three sessions on the same day (same week), then hit the free limit.
     await page.goto("/book");
+    await hydrated(page);
     const tomorrow = 2; // grid columns: time, today, tomorrow
     const slots = page.locator(
       `.cal-scroll > button.slot:nth-child(8n+${tomorrow + 1}):not([disabled])`,
@@ -106,10 +117,23 @@ test("two partners meet in the room, share goals and one blocks the other", asyn
   browser,
 }) => {
   const pool = testDb();
-  const a = await browser.newContext();
-  const b = await browser.newContext();
+  const options = {
+    permissions: ["camera", "microphone"],
+    baseURL: "http://localhost:3000",
+  };
+  const a = await browser.newContext(options);
+  const b = await browser.newContext(options);
   const pageA = await a.newPage();
   const pageB = await b.newPage();
+  for (const [label, p] of [
+    ["A", pageA],
+    ["B", pageB],
+  ] as const)
+    p.on(
+      "console",
+      (m) => m.type() === "error" && console.log(label, m.text()),
+    );
+  await resetRateLimits(pool);
   await pageA.goto("/");
   await pageB.goto("/");
   const alice = await createMember(pageA, pool, "Alice");
@@ -153,7 +177,9 @@ test("two partners meet in the room, share goals and one blocks the other", asyn
 
     await pageB.getByRole("button", { name: "Report" }).click();
     await pageB.getByRole("button", { name: "Block only" }).click();
-    await expect(pageB.getByRole("heading", { name: "Blocked" })).toBeVisible();
+    await expect(pageB.getByRole("status")).toContainText(
+      "won't be matched with this person again",
+    );
     const blocked = await pool.query(
       "select 1 from block where blocker_id=$1 and blocked_id=$2",
       [bob.id, alice.id],

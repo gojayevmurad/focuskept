@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { test, expect } from "@playwright/test";
+import { hydrated } from "./helpers";
 
 test("landing and registration navigation", async ({ page }) => {
   await page.goto("/");
+  await hydrated(page);
   await expect(
     page.getByRole("heading", {
       name: "Get it done with someone beside you",
@@ -15,10 +17,10 @@ test("landing and registration navigation", async ({ page }) => {
   await expect(
     page.getByRole("link", { name: "FAQ", exact: true }).first(),
   ).toHaveAttribute("href", "/faq");
-  // The public e2e environment disables billing; pricing must not be advertised.
+  // Billing is on in the browser test environment, so pricing is linked.
   await expect(
-    page.getByRole("link", { name: "Pricing", exact: true }),
-  ).toHaveCount(0);
+    page.getByRole("link", { name: "Pricing", exact: true }).first(),
+  ).toHaveAttribute("href", "/pricing");
   await page
     .getByRole("link", { name: "Get started free", exact: true })
     .first()
@@ -50,6 +52,7 @@ for (const path of ["/", "/blog"]) {
   }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(path);
+    await hydrated(page);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     expect(
       await page.evaluate(
@@ -61,6 +64,7 @@ for (const path of ["/", "/blog"]) {
 
 test("theme can be switched", async ({ page }) => {
   await page.goto("/");
+  await hydrated(page);
   const html = page.locator("html");
   await expect(html).toHaveAttribute("data-theme", /light|dark/);
   const before = await html.getAttribute("data-theme");

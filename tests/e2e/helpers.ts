@@ -11,6 +11,11 @@ export function testDb() {
   return new Pool({ connectionString: url });
 }
 
+/** Auth rate limits are stored in the database; tests sign up more often than people do. */
+export async function resetRateLimits(pool: Pool) {
+  await pool.query("delete from rate_limit");
+}
+
 export async function verificationUrl(pool: Pool, email: string) {
   for (let i = 0; i < 20; i++) {
     const r = await pool.query(
@@ -51,8 +56,17 @@ export async function createMember(page: Page, pool: Pool, name: string) {
   return { id, email, username };
 }
 
+/** Waits until React has attached handlers, so clicks don't fall through to native forms. */
+export async function hydrated(page: Page) {
+  await page.waitForFunction(() => {
+    const el = document.querySelector("form, button");
+    return Boolean(el && Object.keys(el).some((k) => k.startsWith("__react")));
+  });
+}
+
 export async function signIn(page: Page, email: string) {
   await page.goto("/sign-in");
+  await hydrated(page);
   await page.getByLabel("Email address").fill(email);
   await page.getByLabel("Password", { exact: true }).fill(PASSWORD);
   await page.getByRole("button", { name: "Sign in", exact: true }).click();

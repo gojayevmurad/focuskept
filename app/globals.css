@@ -1505,6 +1505,15 @@ dialog.dialog::backdrop {
     font-size: 24px;
   }
 }
+@media (max-width: 430px) {
+  /* Signed-out header: mark only, so both auth buttons fit. */
+  .site-header .logo span {
+    display: none;
+  }
+  .header-actions {
+    gap: 4px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
