@@ -31,6 +31,7 @@ export async function verificationUrl(pool: Pool, email: string) {
 /** Creates a verified, onboarded account through the real auth API. */
 export async function createMember(page: Page, pool: Pool, name: string) {
   const email = `${name.toLowerCase()}-${Date.now()}-${Math.round(Math.random() * 1e6)}@example.test`;
+  await resetRateLimits(pool);
   const base = new URL(
     page.context().pages()[0]?.url() || "http://localhost:3000",
   ).origin;

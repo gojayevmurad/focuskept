@@ -13,7 +13,11 @@ FocusKept is an open-source virtual coworking and body doubling app. Book a time
 
 ## Screenshots
 
-Screenshots coming soon.
+| Landing page | Booking calendar | Session room |
+| --- | --- | --- |
+| ![Landing page](docs/screenshots/home.png) | ![Weekly booking calendar](docs/screenshots/calendar.png) | ![Session room with goals](docs/screenshots/room.png) |
+
+The room screenshot uses the browser's test camera.
 
 ## Hosted version
 
