@@ -6,7 +6,13 @@ import { AppShell } from "@/src/components/app-shell";
 import { Avatar } from "@/src/components/avatar";
 import { requireAppUser } from "@/src/lib/app-user";
 import { db } from "@/src/lib/db";
-import { block, favorite, focusSession, profile, sessionParticipant } from "@/src/lib/db/schema";
+import {
+  block,
+  favorite,
+  focusSession,
+  profile,
+  sessionParticipant,
+} from "@/src/lib/db/schema";
 import { getPlan } from "@/src/lib/billing/plan";
 import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
@@ -23,7 +29,12 @@ export default async function Page() {
   const mine = alias(sessionParticipant, "mine");
   const [favorites, recent, blocked] = await Promise.all([
     db()
-      .select({ id: profile.userId, name: profile.displayName, username: profile.username, avatar: profile.avatarUrl })
+      .select({
+        id: profile.userId,
+        name: profile.displayName,
+        username: profile.username,
+        avatar: profile.avatarUrl,
+      })
       .from(favorite)
       .innerJoin(profile, eq(profile.userId, favorite.partnerId))
       .where(eq(favorite.userId, user.id)),
@@ -37,9 +48,21 @@ export default async function Page() {
       })
       .from(mine)
       .innerJoin(focusSession, eq(focusSession.id, mine.sessionId))
-      .innerJoin(sessionParticipant, and(eq(sessionParticipant.sessionId, mine.sessionId), ne(sessionParticipant.userId, user.id)))
+      .innerJoin(
+        sessionParticipant,
+        and(
+          eq(sessionParticipant.sessionId, mine.sessionId),
+          ne(sessionParticipant.userId, user.id),
+        ),
+      )
       .innerJoin(profile, eq(profile.userId, sessionParticipant.userId))
-      .where(and(eq(mine.userId, user.id), eq(focusSession.status, "ended"), inArray(focusSession.type, ["pair", "group"])))
+      .where(
+        and(
+          eq(mine.userId, user.id),
+          eq(focusSession.status, "ended"),
+          inArray(focusSession.type, ["pair", "group"]),
+        ),
+      )
       .orderBy(desc(focusSession.startAt))
       .limit(40),
     db()
@@ -50,7 +73,10 @@ export default async function Page() {
   ]);
   const favIds = new Set(favorites.map((f) => f.id));
   const seen = new Set<string>();
-  const recentUnique = recent.filter((r) => !seen.has(r.id) && seen.add(r.id) && !blocked.some((b) => b.id === r.id));
+  const recentUnique = recent.filter(
+    (r) =>
+      !seen.has(r.id) && seen.add(r.id) && !blocked.some((b) => b.id === r.id),
+  );
   const link = `${app.url.replace(/^https?:\/\//, "")}/u/${me.username}`;
 
   return (
@@ -66,7 +92,16 @@ export default async function Page() {
       </section>
       <section className="card stack">
         <h2>{t("favorites")}</h2>
-        {!plus && <p className="notice warn">{t("favoritesPlus")} {app.billingEnabled && <Link href="/pricing" className="link">{t("seePlus")}</Link>}</p>}
+        {!plus && (
+          <p className="notice warn">
+            {t("favoritesPlus")}{" "}
+            {app.billingEnabled && (
+              <Link href="/pricing" className="link">
+                {t("seePlus")}
+              </Link>
+            )}
+          </p>
+        )}
         {favorites.length ? (
           <div className="list">
             {favorites.map((f) => (
@@ -76,7 +111,12 @@ export default async function Page() {
                   <strong>{f.name}</strong>
                   <div className="small faint">@{f.username}</div>
                 </div>
-                <Link href={`/u/${f.username}`} className="button secondary small">{t("bookWith")}</Link>
+                <Link
+                  href={`/u/${f.username}`}
+                  className="button secondary small"
+                >
+                  {t("bookWith")}
+                </Link>
                 <FavoriteButton userId={f.id} active />
               </div>
             ))}
@@ -94,9 +134,19 @@ export default async function Page() {
                 <Avatar name={r.name} src={r.avatar} />
                 <div className="grow">
                   <strong>{r.name}</strong>
-                  <div className="small faint">{format.dateTime(r.at, { timeZone: me.timezone, month: "short", day: "numeric" })}</div>
+                  <div className="small faint">
+                    {format.dateTime(r.at, {
+                      timeZone: me.timezone,
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </div>
                 </div>
-                <FavoriteButton userId={r.id} active={favIds.has(r.id)} disabled={!plus} />
+                <FavoriteButton
+                  userId={r.id}
+                  active={favIds.has(r.id)}
+                  disabled={!plus}
+                />
               </div>
             ))}
           </div>

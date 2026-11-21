@@ -13,10 +13,12 @@ export function RealtimeRefresh({ userId }: { userId: string }) {
     (message) => {
       if (message.topic !== `user:${userId}`) return;
       if (message.event === "booking.matched") setToast(t("matched"));
-      if (message.event === "booking.partner_changed") setToast(t("partnerChanged"));
+      if (message.event === "booking.partner_changed")
+        setToast(t("partnerChanged"));
       if (message.event === "booking.fallback") setToast(t("fallback"));
       router.refresh();
-      if (message.event !== "booking.updated") setTimeout(() => setToast(""), 6000);
+      if (message.event !== "booking.updated")
+        setTimeout(() => setToast(""), 6000);
     },
     { onReconnect: () => router.refresh() },
   );

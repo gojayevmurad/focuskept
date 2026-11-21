@@ -4,10 +4,23 @@ import { getTranslations } from "next-intl/server";
 import { AppShell } from "@/src/components/app-shell";
 import { requireAppUser } from "@/src/lib/app-user";
 import { db } from "@/src/lib/db";
-import { booking, favorite, profile, sessionParticipant } from "@/src/lib/db/schema";
+import {
+  booking,
+  favorite,
+  profile,
+  sessionParticipant,
+} from "@/src/lib/db/schema";
 import { getPlan, weeklyUsage } from "@/src/lib/billing/plan";
-import { groupSessionsBetween, slotDemand } from "@/src/lib/bookings/availability";
-import { addMinutes, isPopularSlot, localDayStart, weekGrid } from "@/src/lib/scheduling/slots";
+import {
+  groupSessionsBetween,
+  slotDemand,
+} from "@/src/lib/bookings/availability";
+import {
+  addMinutes,
+  isPopularSlot,
+  localDayStart,
+  weekGrid,
+} from "@/src/lib/scheduling/slots";
 import { getAppConfig } from "@/src/config/app";
 import { Calendar, type CalendarData } from "./calendar";
 
@@ -24,7 +37,8 @@ export default async function Page({
   const tz = me.timezone;
   const now = new Date();
   const requested = params.start ? new Date(params.start) : now;
-  const anchor = Number.isNaN(requested.getTime()) || requested < now ? now : requested;
+  const anchor =
+    Number.isNaN(requested.getTime()) || requested < now ? now : requested;
   const first = localDayStart(anchor, tz);
   const grid = weekGrid(first, tz, 7);
   const from = grid[0].start;
@@ -60,10 +74,16 @@ export default async function Page({
       .where(eq(favorite.userId, user.id)),
   ]);
   // Partner names for matched pair sessions.
-  const sessionIds = mine.map((b) => b.sessionId).filter((x): x is string => Boolean(x));
+  const sessionIds = mine
+    .map((b) => b.sessionId)
+    .filter((x): x is string => Boolean(x));
   const partners = sessionIds.length
     ? await db()
-        .select({ sessionId: sessionParticipant.sessionId, userId: sessionParticipant.userId, name: profile.displayName })
+        .select({
+          sessionId: sessionParticipant.sessionId,
+          userId: sessionParticipant.userId,
+          name: profile.displayName,
+        })
         .from(sessionParticipant)
         .innerJoin(profile, eq(profile.userId, sessionParticipant.userId))
         .where(inArray(sessionParticipant.sessionId, sessionIds))
@@ -79,7 +99,11 @@ export default async function Page({
       start: d.start.toISOString(),
       slots: d.slots.map((s) => {
         const key = s.toISOString();
-        return { at: key, demand: demand.get(key) ?? {}, popular: isPopularSlot(s) };
+        return {
+          at: key,
+          demand: demand.get(key) ?? {},
+          popular: isPopularSlot(s),
+        };
       }),
     })),
     mine: mine.map((b) => ({
@@ -89,7 +113,10 @@ export default async function Page({
       status: b.status,
       kind: b.kind,
       sessionId: b.sessionId,
-      partner: partners.find((p) => p.sessionId === b.sessionId && p.userId !== user.id)?.name ?? null,
+      partner:
+        partners.find(
+          (p) => p.sessionId === b.sessionId && p.userId !== user.id,
+        )?.name ?? null,
     })),
     groups: groups.map((g) => ({
       id: g.id,
@@ -110,7 +137,8 @@ export default async function Page({
       partner: params.with ?? null,
       duration: Number(params.duration) || null,
     },
-    prevWeek: first > now ? addMinutes(first, -7 * 24 * 60).toISOString() : null,
+    prevWeek:
+      first > now ? addMinutes(first, -7 * 24 * 60).toISOString() : null,
     nextWeek: addMinutes(first, 7 * 24 * 60).toISOString(),
   };
   return (

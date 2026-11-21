@@ -9,9 +9,16 @@ import { db } from "@/src/lib/db";
 import { favorite } from "@/src/lib/db/schema";
 import { Room } from "./room";
 
-export const metadata: Metadata = { title: "Session", robots: { index: false } };
+export const metadata: Metadata = {
+  title: "Session",
+  robots: { index: false },
+};
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const { user, profile } = await requireAppUser();
   const state = await roomState(id, user.id);
@@ -19,7 +26,10 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   const app = getAppConfig();
   const [plan, favs] = await Promise.all([
     getPlan(user.id),
-    db().select({ id: favorite.partnerId }).from(favorite).where(eq(favorite.userId, user.id)),
+    db()
+      .select({ id: favorite.partnerId })
+      .from(favorite)
+      .where(eq(favorite.userId, user.id)),
   ]);
   return (
     <Room

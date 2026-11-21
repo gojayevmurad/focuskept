@@ -1,7 +1,20 @@
 "use client";
-import { useEffect, useMemo, useRef, useState, useSyncExternalStore, useTransition } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useSyncExternalStore,
+  useTransition,
+} from "react";
 import { useFormatter, useTranslations } from "next-intl";
-import { ChevronLeft, ChevronRight, LoaderCircle, Users, UsersRound } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  LoaderCircle,
+  Users,
+  UsersRound,
+} from "lucide-react";
 import { Link, useRouter } from "@/src/i18n/navigation";
 import { bookSlot, cancel, joinGroup, type ActionResult } from "./actions";
 
@@ -9,7 +22,11 @@ type Demand = Record<number, number>;
 export type CalendarData = {
   timeZone: string;
   now: string;
-  days: { key: string; start: string; slots: { at: string; demand: Demand; popular: boolean }[] }[];
+  days: {
+    key: string;
+    start: string;
+    slots: { at: string; demand: Demand; popular: boolean }[];
+  }[];
   mine: {
     id: string;
     startAt: string;
@@ -33,7 +50,11 @@ export type CalendarData = {
   plan: "free" | "plus";
   billingEnabled: boolean;
   usage: { used: number; limit: number } | null;
-  prefill: { start: string | null; partner: string | null; duration: number | null };
+  prefill: {
+    start: string | null;
+    partner: string | null;
+    duration: number | null;
+  };
   prevWeek: string | null;
   nextWeek: string;
 };
@@ -68,10 +89,14 @@ export function Calendar({ data }: { data: CalendarData }) {
   const [duration, setDuration] = useState<number>(data.prefill.duration ?? 50);
   const [dayIndex, setDayIndex] = useState(0);
   const [selected, setSelected] = useState<Selection>(
-    data.prefill.start ? { type: "slot", at: new Date(data.prefill.start).toISOString() } : null,
+    data.prefill.start
+      ? { type: "slot", at: new Date(data.prefill.start).toISOString() }
+      : null,
   );
   const [partner, setPartner] = useState(data.prefill.partner ?? "");
-  const [message, setMessage] = useState<{ text: string; ok?: boolean } | null>(null);
+  const [message, setMessage] = useState<{ text: string; ok?: boolean } | null>(
+    null,
+  );
   const [pending, start] = useTransition();
   const dialog = useRef<HTMLDialogElement>(null);
   const scroller = useRef<HTMLDivElement>(null);
@@ -82,15 +107,20 @@ export function Calendar({ data }: { data: CalendarData }) {
     else dialog.current?.close();
   }, [selected]);
 
-  // Start the grid at the current hour (or 8:00) instead of midnight.
+  // Start the grid at the current hour this week, or 8:00 for later weeks.
   useEffect(() => {
     const el = scroller.current;
     if (!el) return;
     const hour = Number(
-      new Intl.DateTimeFormat("en-US", { timeZone: data.timeZone, hour: "numeric", hourCycle: "h23" }).format(new Date()),
+      new Intl.DateTimeFormat("en-US", {
+        timeZone: data.timeZone,
+        hour: "numeric",
+        hourCycle: "h23",
+      }).format(new Date()),
     );
-    el.scrollTop = Math.max(0, Math.min(hour - 1, 8) * 88);
-  }, [data.timeZone, narrow]);
+    const thisWeek = new Date(data.days[0].start).getTime() <= Date.now();
+    el.scrollTop = (thisWeek ? Math.max(0, hour - 1) : 8) * 88;
+  }, [data.timeZone, data.days, narrow]);
 
   const mineByStart = useMemo(() => {
     const map = new Map<string, CalendarData["mine"][number]>();
@@ -115,7 +145,11 @@ export function Calendar({ data }: { data: CalendarData }) {
   }, [data.groups]);
 
   const time = (iso: string) =>
-    format.dateTime(new Date(iso), { timeZone: data.timeZone, hour: "numeric", minute: "2-digit" });
+    format.dateTime(new Date(iso), {
+      timeZone: data.timeZone,
+      hour: "numeric",
+      minute: "2-digit",
+    });
   const longWhen = (iso: string) =>
     format.dateTime(new Date(iso), {
       timeZone: data.timeZone,
@@ -142,26 +176,45 @@ export function Calendar({ data }: { data: CalendarData }) {
   }
 
   const days = narrow ? data.days.slice(dayIndex, dayIndex + 1) : data.days;
-  const rows = data.days[0].slots.length ? Math.max(...data.days.map((d) => d.slots.length)) : 48;
-  const todayKey = new Intl.DateTimeFormat("en-CA", { timeZone: data.timeZone }).format(new Date());
+  const rows = data.days[0].slots.length
+    ? Math.max(...data.days.map((d) => d.slots.length))
+    : 48;
+  const todayKey = new Intl.DateTimeFormat("en-CA", {
+    timeZone: data.timeZone,
+  }).format(new Date());
 
   const selectedSlot = selected?.type === "slot" ? selected.at : null;
-  const selectedMine = selected?.type === "mine" ? data.mine.find((b) => b.id === selected.id) : null;
-  const selectedGroup = selected?.type === "group" ? data.groups.find((g) => g.id === selected.id) : null;
+  const selectedMine =
+    selected?.type === "mine"
+      ? data.mine.find((b) => b.id === selected.id)
+      : null;
+  const selectedGroup =
+    selected?.type === "group"
+      ? data.groups.find((g) => g.id === selected.id)
+      : null;
   const waitingAt = (at: string) =>
-    data.days.flatMap((d) => d.slots).find((s) => s.at === at)?.demand[duration] ?? 0;
-  const limitReached = Boolean(data.usage && data.usage.used >= data.usage.limit);
+    data.days.flatMap((d) => d.slots).find((s) => s.at === at)?.demand[
+      duration
+    ] ?? 0;
+  const limitReached = Boolean(
+    data.usage && data.usage.used >= data.usage.limit,
+  );
 
   return (
     <div className="stack">
       <div className="row-between">
         <div className="page-title">
           <h1>{t("title")}</h1>
-          <p className="muted">{t("lead", { zone: data.timeZone.replaceAll("_", " ") })}</p>
+          <p className="muted">
+            {t("lead", { zone: data.timeZone.replaceAll("_", " ") })}
+          </p>
         </div>
         {data.usage && data.billingEnabled && (
           <span className={`badge ${limitReached ? "warm" : ""}`}>
-            {t("usage", { used: Math.min(data.usage.used, data.usage.limit), limit: data.usage.limit })}
+            {t("usage", {
+              used: Math.min(data.usage.used, data.usage.limit),
+              limit: data.usage.limit,
+            })}
           </span>
         )}
       </div>
@@ -169,7 +222,11 @@ export function Calendar({ data }: { data: CalendarData }) {
       <div className="cal-toolbar">
         <div className="segmented" role="group" aria-label={t("length")}>
           {DURATIONS.map((d) => (
-            <button key={d} aria-pressed={duration === d} onClick={() => setDuration(d)}>
+            <button
+              key={d}
+              aria-pressed={duration === d}
+              onClick={() => setDuration(d)}
+            >
               {c("minutes", { count: d })}
             </button>
           ))}
@@ -199,7 +256,9 @@ export function Calendar({ data }: { data: CalendarData }) {
               onClick={() =>
                 dayIndex < data.days.length - 1
                   ? setDayIndex((i) => i + 1)
-                  : router.push(`/book?start=${encodeURIComponent(data.nextWeek)}`)
+                  : router.push(
+                      `/book?start=${encodeURIComponent(data.nextWeek)}`,
+                    )
               }
             >
               <ChevronRight size={16} />
@@ -208,18 +267,30 @@ export function Calendar({ data }: { data: CalendarData }) {
         ) : (
           <div className="row">
             {data.prevWeek ? (
-              <Link className="button secondary small icon" aria-label={t("prevWeek")} href={`/book?start=${encodeURIComponent(data.prevWeek)}`}>
+              <Link
+                className="button secondary small icon"
+                aria-label={t("prevWeek")}
+                href={`/book?start=${encodeURIComponent(data.prevWeek)}`}
+              >
                 <ChevronLeft size={16} />
               </Link>
             ) : (
-              <button className="button secondary small icon" aria-label={t("prevWeek")} disabled>
+              <button
+                className="button secondary small icon"
+                aria-label={t("prevWeek")}
+                disabled
+              >
                 <ChevronLeft size={16} />
               </button>
             )}
             <Link className="button secondary small" href="/book">
               {t("today")}
             </Link>
-            <Link className="button secondary small icon" aria-label={t("nextWeek")} href={`/book?start=${encodeURIComponent(data.nextWeek)}`}>
+            <Link
+              className="button secondary small icon"
+              aria-label={t("nextWeek")}
+              href={`/book?start=${encodeURIComponent(data.nextWeek)}`}
+            >
               <ChevronRight size={16} />
             </Link>
           </div>
@@ -232,18 +303,37 @@ export function Calendar({ data }: { data: CalendarData }) {
         </p>
       )}
 
-      <div className="cal" style={{ ["--days" as string]: days.length, gridTemplateColumns: `64px repeat(${days.length}, minmax(0, 1fr))` }}>
+      <div
+        className="cal"
+        style={{
+          ["--days" as string]: days.length,
+          gridTemplateColumns: `64px repeat(${days.length}, minmax(0, 1fr))`,
+        }}
+      >
         <div className="cal-head" />
         {days.map((d) => (
-          <div key={d.key} className={`cal-head ${d.key === todayKey ? "today" : ""}`}>
-            {format.dateTime(new Date(d.start), { timeZone: data.timeZone, weekday: "short" })}
-            <strong>{format.dateTime(new Date(d.start), { timeZone: data.timeZone, day: "numeric" })}</strong>
+          <div
+            key={d.key}
+            className={`cal-head ${d.key === todayKey ? "today" : ""}`}
+          >
+            {format.dateTime(new Date(d.start), {
+              timeZone: data.timeZone,
+              weekday: "short",
+            })}
+            <strong>
+              {format.dateTime(new Date(d.start), {
+                timeZone: data.timeZone,
+                day: "numeric",
+              })}
+            </strong>
           </div>
         ))}
         <div
           className="cal-scroll"
           ref={scroller}
-          style={{ gridTemplateColumns: `64px repeat(${days.length}, minmax(0, 1fr))` }}
+          style={{
+            gridTemplateColumns: `64px repeat(${days.length}, minmax(0, 1fr))`,
+          }}
         >
           {Array.from({ length: rows }).map((_, row) => (
             <Row
@@ -264,10 +354,27 @@ export function Calendar({ data }: { data: CalendarData }) {
       </div>
 
       <div className="legend">
-        <span><i style={{ background: "color-mix(in srgb, var(--warm-soft), transparent 45%)", border: "1px solid var(--line)" }} />{t("legendPopular")}</span>
-        <span><Users size={12} /> {t("legendWaiting")}</span>
-        <span><i style={{ background: "var(--accent)" }} />{t("legendMine")}</span>
-        <span><i style={{ background: "var(--warm)" }} />{t("legendGroup")}</span>
+        <span>
+          <i
+            style={{
+              background:
+                "color-mix(in srgb, var(--warm-soft), transparent 45%)",
+              border: "1px solid var(--line)",
+            }}
+          />
+          {t("legendPopular")}
+        </span>
+        <span>
+          <Users size={12} /> {t("legendWaiting")}
+        </span>
+        <span>
+          <i style={{ background: "var(--accent)" }} />
+          {t("legendMine")}
+        </span>
+        <span>
+          <i style={{ background: "var(--warm)" }} />
+          {t("legendGroup")}
+        </span>
       </div>
 
       <dialog ref={dialog} className="dialog" onClose={() => setSelected(null)}>
@@ -285,7 +392,11 @@ export function Calendar({ data }: { data: CalendarData }) {
               </div>
               <div className="segmented" role="group" aria-label={t("length")}>
                 {DURATIONS.map((d) => (
-                  <button key={d} aria-pressed={duration === d} onClick={() => setDuration(d)}>
+                  <button
+                    key={d}
+                    aria-pressed={duration === d}
+                    onClick={() => setDuration(d)}
+                  >
                     {c("minutes", { count: d })}
                   </button>
                 ))}
@@ -293,11 +404,15 @@ export function Calendar({ data }: { data: CalendarData }) {
               {data.favorites.length > 0 || partner ? (
                 <label className="field">
                   {t("with")}
-                  <select value={partner} onChange={(e) => setPartner(e.target.value)}>
+                  <select
+                    value={partner}
+                    onChange={(e) => setPartner(e.target.value)}
+                  >
                     <option value="">{t("anyone")}</option>
-                    {partner && !data.favorites.some((f) => f.username === partner) && (
-                      <option value={partner}>@{partner}</option>
-                    )}
+                    {partner &&
+                      !data.favorites.some((f) => f.username === partner) && (
+                        <option value={partner}>@{partner}</option>
+                      )}
                     {data.favorites.map((f) => (
                       <option key={f.username} value={f.username}>
                         {f.displayName} (@{f.username})
@@ -309,14 +424,22 @@ export function Calendar({ data }: { data: CalendarData }) {
               ) : null}
               {limitReached && data.billingEnabled ? (
                 <p className="notice warn">
-                  {t("errors.limit")} <Link href="/pricing" className="link">{c("upgrade")}</Link>
+                  {t("errors.limit")}{" "}
+                  <Link href="/pricing" className="link">
+                    {c("upgrade")}
+                  </Link>
                 </p>
               ) : (
                 <p className="small faint">{t("policy")}</p>
               )}
-              {message && !message.ok && <p className="notice error">{message.text}</p>}
+              {message && !message.ok && (
+                <p className="notice error">{message.text}</p>
+              )}
               <div className="dialog-actions">
-                <button className="button secondary" onClick={() => setSelected(null)}>
+                <button
+                  className="button secondary"
+                  onClick={() => setSelected(null)}
+                >
                   {c("cancel")}
                 </button>
                 <button
@@ -324,7 +447,12 @@ export function Calendar({ data }: { data: CalendarData }) {
                   disabled={pending || (limitReached && data.billingEnabled)}
                   onClick={() =>
                     run(
-                      () => bookSlot({ startAt: selectedSlot, duration, partner: partner || undefined }),
+                      () =>
+                        bookSlot({
+                          startAt: selectedSlot,
+                          duration,
+                          partner: partner || undefined,
+                        }),
                       t("booked"),
                     )
                   }
@@ -350,16 +478,29 @@ export function Calendar({ data }: { data: CalendarData }) {
                 </p>
               </div>
               <p className="small faint">
-                {new Date(selectedMine.startAt).getTime() - now >= 3600_000 ? t("freeCancel") : t("lateCancel")}
+                {new Date(selectedMine.startAt).getTime() - now >= 3600_000
+                  ? t("freeCancel")
+                  : t("lateCancel")}
               </p>
-              {message && !message.ok && <p className="notice error">{message.text}</p>}
+              {message && !message.ok && (
+                <p className="notice error">{message.text}</p>
+              )}
               <div className="dialog-actions">
                 {selectedMine.sessionId && (
-                  <Link className="button secondary" href={`/session/${selectedMine.sessionId}`}>
+                  <Link
+                    className="button secondary"
+                    href={`/session/${selectedMine.sessionId}`}
+                  >
                     {t("openRoom")}
                   </Link>
                 )}
-                <button className="button danger secondary" disabled={pending} onClick={() => run(() => cancel(selectedMine.id), t("cancelled"))}>
+                <button
+                  className="button danger secondary"
+                  disabled={pending}
+                  onClick={() =>
+                    run(() => cancel(selectedMine.id), t("cancelled"))
+                  }
+                >
                   {t("cancelBooking")}
                 </button>
               </div>
@@ -371,23 +512,47 @@ export function Calendar({ data }: { data: CalendarData }) {
                 <span className="overline">{t("groupSession")}</span>
                 <h2>{selectedGroup.title ?? t("groupSession")}</h2>
                 <p className="muted">
-                  {longWhen(selectedGroup.startAt)} · {c("minutes", { count: selectedGroup.durationMin })}
+                  {longWhen(selectedGroup.startAt)} ·{" "}
+                  {c("minutes", { count: selectedGroup.durationMin })}
                 </p>
-                {selectedGroup.hostName && <p className="small">{t("hostedBy", { name: selectedGroup.hostName })}</p>}
-                <p className="small faint">{t("seats", { taken: selectedGroup.taken, capacity: selectedGroup.capacity })}</p>
+                {selectedGroup.hostName && (
+                  <p className="small">
+                    {t("hostedBy", { name: selectedGroup.hostName })}
+                  </p>
+                )}
+                <p className="small faint">
+                  {t("seats", {
+                    taken: selectedGroup.taken,
+                    capacity: selectedGroup.capacity,
+                  })}
+                </p>
               </div>
-              {message && !message.ok && <p className="notice error">{message.text}</p>}
+              {message && !message.ok && (
+                <p className="notice error">{message.text}</p>
+              )}
               <div className="dialog-actions">
-                <button className="button secondary" onClick={() => setSelected(null)}>
+                <button
+                  className="button secondary"
+                  onClick={() => setSelected(null)}
+                >
                   {c("close")}
                 </button>
                 {selectedGroup.joined ? (
-                  <Link className="button" href={`/session/${selectedGroup.id}`}>{t("openRoom")}</Link>
+                  <Link
+                    className="button"
+                    href={`/session/${selectedGroup.id}`}
+                  >
+                    {t("openRoom")}
+                  </Link>
                 ) : (
                   <button
                     className="button"
-                    disabled={pending || selectedGroup.taken >= selectedGroup.capacity}
-                    onClick={() => run(() => joinGroup(selectedGroup.id), t("booked"))}
+                    disabled={
+                      pending || selectedGroup.taken >= selectedGroup.capacity
+                    }
+                    onClick={() =>
+                      run(() => joinGroup(selectedGroup.id), t("booked"))
+                    }
                   >
                     {t("takeSeat")}
                   </button>
@@ -413,18 +578,26 @@ function Row(props: {
   onSelect: (s: Selection) => void;
   t: ReturnType<typeof useTranslations<"book">>;
 }) {
-  const reference = props.days.find((d) => d.slots[props.row])?.slots[props.row];
-  const half = reference ? new Date(reference.at).getUTCMinutes() === 30 : false;
+  const reference = props.days.find((d) => d.slots[props.row])?.slots[
+    props.row
+  ];
+  const half = reference
+    ? new Date(reference.at).getUTCMinutes() === 30
+    : false;
   return (
     <>
-      <div className={`cal-time ${half ? "half" : ""}`}>{reference ? props.time(reference.at) : ""}</div>
+      <div className={`cal-time ${half ? "half" : ""}`}>
+        {reference ? props.time(reference.at) : ""}
+      </div>
       {props.days.map((d) => {
         const slot = d.slots[props.row];
-        if (!slot) return <div key={d.key} className="slot" aria-hidden="true" />;
+        if (!slot)
+          return <div key={d.key} className="slot" aria-hidden="true" />;
         const at = new Date(slot.at).getTime();
         const past = at - props.now < CUTOFF_MS;
         const mine = props.mineByStart.get(slot.at);
-        const covered = !mine && props.busyUntil.some((b) => at > b.from && at < b.to);
+        const covered =
+          !mine && props.busyUntil.some((b) => at > b.from && at < b.to);
         const groups = props.groupsByStart.get(slot.at) ?? [];
         const waiting = slot.demand[props.duration] ?? 0;
         const label = `${props.time(slot.at)}${waiting ? `, ${props.t("waitingCount", { count: waiting })}` : ""}`;
@@ -447,13 +620,15 @@ function Row(props: {
             {mine ? (
               <span className={`mine ${mine.kind === "group" ? "group" : ""}`}>
                 {mine.status === "matched"
-                  ? mine.partner ?? props.t("groupShort")
+                  ? (mine.partner ?? props.t("groupShort"))
                   : props.t("waitingShort")}{" "}
                 · {mine.durationMin}m
               </span>
             ) : groups[0] ? (
               <span className="mine group">
-                <UsersRound size={11} /> {groups[0].title ?? props.t("groupShort")} {groups[0].taken}/{groups[0].capacity}
+                <UsersRound size={11} />{" "}
+                {groups[0].title ?? props.t("groupShort")} {groups[0].taken}/
+                {groups[0].capacity}
               </span>
             ) : (
               !past &&

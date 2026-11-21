@@ -6,7 +6,11 @@ import { db } from "@/src/lib/db";
  * Fixed-window limiter on the boilerplate's rate_limit table. Returns false
  * once `max` requests were made for `key` within `windowSeconds`.
  */
-export async function rateLimit(key: string, max: number, windowSeconds: number) {
+export async function rateLimit(
+  key: string,
+  max: number,
+  windowSeconds: number,
+) {
   const now = Date.now();
   const id = `app:${key}`;
   const result = await db().execute<{ count: number }>(sql`

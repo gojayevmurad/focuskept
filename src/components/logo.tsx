@@ -5,7 +5,14 @@ export function LogoMark({ size = 26 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
       <circle cx="12" cy="16" r="9" fill="var(--accent)" />
-      <circle cx="20" cy="16" r="9" fill="none" stroke="var(--warm)" strokeWidth="3" />
+      <circle
+        cx="20"
+        cy="16"
+        r="9"
+        fill="none"
+        stroke="var(--warm)"
+        strokeWidth="3"
+      />
     </svg>
   );
 }

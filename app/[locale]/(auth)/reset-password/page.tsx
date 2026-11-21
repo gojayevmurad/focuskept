@@ -3,7 +3,10 @@ import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import { AuthForm } from "@/src/components/auth-form";
 
-export const metadata: Metadata = { title: "Choose a new password", robots: { index: false } };
+export const metadata: Metadata = {
+  title: "Choose a new password",
+  robots: { index: false },
+};
 
 export default async function Page() {
   const t = await getTranslations("auth");

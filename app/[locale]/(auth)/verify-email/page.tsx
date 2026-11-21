@@ -3,7 +3,10 @@ import { MailCheck } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/src/i18n/navigation";
 
-export const metadata: Metadata = { title: "Check your inbox", robots: { index: false } };
+export const metadata: Metadata = {
+  title: "Check your inbox",
+  robots: { index: false },
+};
 
 export default async function Page() {
   const t = await getTranslations("auth");

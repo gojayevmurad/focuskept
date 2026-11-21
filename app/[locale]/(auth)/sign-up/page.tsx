@@ -40,7 +40,11 @@ export default async function Page() {
         </>
       ) : (
         <Suspense>
-          <AuthForm mode="sign-up" google={app.googleEnabled} appName={app.name} />
+          <AuthForm
+            mode="sign-up"
+            google={app.googleEnabled}
+            appName={app.name}
+          />
         </Suspense>
       )}
     </>

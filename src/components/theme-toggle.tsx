@@ -5,7 +5,9 @@ import { useSyncExternalStore } from "react";
 
 function subscribe(callback: () => void) {
   const observer = new MutationObserver(callback);
-  observer.observe(document.documentElement, { attributeFilter: ["data-theme"] });
+  observer.observe(document.documentElement, {
+    attributeFilter: ["data-theme"],
+  });
   return () => observer.disconnect();
 }
 

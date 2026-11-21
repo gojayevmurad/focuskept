@@ -18,7 +18,9 @@ export async function SiteHeader() {
           {app.marketingEnabled && (
             <>
               <Link href="/how-it-works">{t("how")}</Link>
-              {app.billingEnabled && <Link href="/pricing">{t("pricing")}</Link>}
+              {app.billingEnabled && (
+                <Link href="/pricing">{t("pricing")}</Link>
+              )}
               <Link href="/faq">{t("faq")}</Link>
               <Link href="/blog">{t("blog")}</Link>
             </>

@@ -19,7 +19,10 @@ export function OnboardingForm(props: {
   const s = useTranslations("segments");
   const c = useTranslations("common");
   const format = useFormatter();
-  const [state, action, pending] = useActionState<OnboardingState, FormData>(completeOnboarding, {});
+  const [state, action, pending] = useActionState<OnboardingState, FormData>(
+    completeOnboarding,
+    {},
+  );
   const [step, setStep] = useState(1);
   const [username, setUsername] = useState(props.username);
   const [timezone, setTimezone] = useState(props.timezone);
@@ -29,10 +32,12 @@ export function OnboardingForm(props: {
   useEffect(() => {
     // Only replace the stored default when the browser knows better.
     const detected = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    if (detected && props.timezone === "America/New_York") setTimezone(detected);
+    if (detected && props.timezone === "America/New_York")
+      setTimezone(detected);
   }, [props.timezone]);
   useEffect(() => {
-    if (state.error?.startsWith("username") || state.error === "age") setStep(1);
+    if (state.error?.startsWith("username") || state.error === "age")
+      setStep(1);
   }, [state]);
 
   const errorText =
@@ -45,7 +50,9 @@ export function OnboardingForm(props: {
           : state.error
             ? c("somethingWrong")
             : null;
-  const zones = props.timezones.includes(timezone) ? props.timezones : [timezone, ...props.timezones];
+  const zones = props.timezones.includes(timezone)
+    ? props.timezones
+    : [timezone, ...props.timezones];
 
   return (
     <form action={action} className="stack-lg">
@@ -59,7 +66,12 @@ export function OnboardingForm(props: {
         </div>
         <label className="field">
           {t("displayName")}
-          <input name="displayName" defaultValue={props.displayName} required maxLength={60} />
+          <input
+            name="displayName"
+            defaultValue={props.displayName}
+            required
+            maxLength={60}
+          />
           <small>{t("displayNameHint")}</small>
         </label>
         <label className="field">
@@ -73,11 +85,19 @@ export function OnboardingForm(props: {
             maxLength={24}
             pattern="[a-z0-9][a-z0-9_\-]{1,22}[a-z0-9]"
           />
-          <small>{t("usernameHint", { url: `${props.appUrl.replace(/^https?:\/\//, "")}/u/${username}` })}</small>
+          <small>
+            {t("usernameHint", {
+              url: `${props.appUrl.replace(/^https?:\/\//, "")}/u/${username}`,
+            })}
+          </small>
         </label>
         <label className="field">
           {t("timezone")}
-          <select name="timezone" value={timezone} onChange={(e) => setTimezone(e.target.value)}>
+          <select
+            name="timezone"
+            value={timezone}
+            onChange={(e) => setTimezone(e.target.value)}
+          >
             {zones.map((z) => (
               <option key={z} value={z}>
                 {z.replaceAll("_", " ")}
@@ -101,10 +121,19 @@ export function OnboardingForm(props: {
         <h2>{t("goalTitle")}</h2>
         <label className="field">
           {t("goal")}
-          <input name="goal" maxLength={200} placeholder={t("goalPlaceholder")} />
+          <input
+            name="goal"
+            maxLength={200}
+            placeholder={t("goalPlaceholder")}
+          />
         </label>
-        <fieldset className="stack-sm" style={{ border: 0, padding: 0, margin: 0 }}>
-          <legend className="field" style={{ marginBottom: 8 }}>{t("segments")}</legend>
+        <fieldset
+          className="stack-sm"
+          style={{ border: 0, padding: 0, margin: 0 }}
+        >
+          <legend className="field" style={{ marginBottom: 8 }}>
+            {t("segments")}
+          </legend>
           <div className="chips">
             {SEGMENTS.map((seg) => (
               <label key={seg} className="chip">
@@ -115,7 +144,11 @@ export function OnboardingForm(props: {
           </div>
         </fieldset>
         <div className="row">
-          <button type="button" className="button secondary" onClick={() => setStep(1)}>
+          <button
+            type="button"
+            className="button secondary"
+            onClick={() => setStep(1)}
+          >
             {c("back")}
           </button>
           <button type="button" className="button" onClick={() => setStep(3)}>
@@ -133,7 +166,12 @@ export function OnboardingForm(props: {
           <span className="small muted">{t("duration")}</span>
           <div className="segmented" role="group">
             {[25, 50, 75].map((d) => (
-              <button type="button" key={d} aria-pressed={duration === d} onClick={() => setDuration(d)}>
+              <button
+                type="button"
+                key={d}
+                aria-pressed={duration === d}
+                onClick={() => setDuration(d)}
+              >
                 {c("minutes", { count: d })}
               </button>
             ))}
@@ -162,7 +200,9 @@ export function OnboardingForm(props: {
                     <Users size={12} /> {sl.waiting}
                   </span>
                 )}
-                {sl.popular && !sl.waiting && <span className="badge warm">{t("popular")}</span>}
+                {sl.popular && !sl.waiting && (
+                  <span className="badge warm">{t("popular")}</span>
+                )}
               </button>
             ))}
           </div>
@@ -170,7 +210,11 @@ export function OnboardingForm(props: {
           <p className="muted">{t("noSlots")}</p>
         )}
         <div className="row">
-          <button type="button" className="button secondary" onClick={() => setStep(2)}>
+          <button
+            type="button"
+            className="button secondary"
+            onClick={() => setStep(2)}
+          >
             {c("back")}
           </button>
           <button className="button" disabled={pending}>

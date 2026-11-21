@@ -25,7 +25,10 @@ export async function generateMetadata({
   const app = getAppConfig();
   return {
     metadataBase: new URL(app.url),
-    title: { default: t("title", { app: app.name }), template: `%s · ${app.name}` },
+    title: {
+      default: t("title", { app: app.name }),
+      template: `%s · ${app.name}`,
+    },
     description: t("description"),
     applicationName: app.name,
     manifest: "/manifest.webmanifest",

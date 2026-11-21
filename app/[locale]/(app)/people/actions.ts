@@ -12,11 +12,16 @@ export async function toggleFavorite(partnerId: string) {
   const { user } = await requireAppUser();
   const id = z.string().min(1).max(100).parse(partnerId);
   if (id === user.id) return { ok: false as const };
-  if ((await getPlan(user.id)).plan !== "plus") return { ok: false as const, reason: "plus" };
+  if ((await getPlan(user.id)).plan !== "plus")
+    return { ok: false as const, reason: "plus" };
   const where = and(eq(favorite.userId, user.id), eq(favorite.partnerId, id));
   const [existing] = await db().select().from(favorite).where(where);
   if (existing) await db().delete(favorite).where(where);
-  else await db().insert(favorite).values({ userId: user.id, partnerId: id }).onConflictDoNothing();
+  else
+    await db()
+      .insert(favorite)
+      .values({ userId: user.id, partnerId: id })
+      .onConflictDoNothing();
   revalidatePath("/[locale]/people", "page");
   return { ok: true as const, favorite: !existing };
 }

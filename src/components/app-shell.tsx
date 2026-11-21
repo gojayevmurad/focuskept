@@ -56,7 +56,9 @@ export async function AppShell({
     ...(app.billingEnabled
       ? [{ href: "/billing", label: t("billing"), icon: CreditCard }]
       : []),
-    ...(isAdmin ? [{ href: "/admin", label: t("admin"), icon: ShieldCheck }] : []),
+    ...(isAdmin
+      ? [{ href: "/admin", label: t("admin"), icon: ShieldCheck }]
+      : []),
   ];
   return (
     <div className="app">
@@ -89,7 +91,12 @@ export async function AppShell({
             <div className="plan-box">
               {usage ? (
                 <>
-                  <span>{t("freeLeft", { used: Math.min(usage.used, usage.limit), limit: usage.limit })}</span>
+                  <span>
+                    {t("freeLeft", {
+                      used: Math.min(usage.used, usage.limit),
+                      limit: usage.limit,
+                    })}
+                  </span>
                   <Link href="/pricing" className="button small">
                     {t("unlimited")}
                   </Link>
@@ -100,7 +107,11 @@ export async function AppShell({
             </div>
           )}
           <div className="row">
-            <Avatar name={profile.displayName} src={profile.avatarUrl} size="sm" />
+            <Avatar
+              name={profile.displayName}
+              src={profile.avatarUrl}
+              size="sm"
+            />
             <span className="grow small">{profile.displayName}</span>
             <SignOut compact />
           </div>
@@ -118,7 +129,10 @@ export async function AppShell({
         </main>
       </div>
       <nav className="mobile-nav" aria-label={app.name}>
-        {[...primary, { href: "/settings", label: t("settings"), icon: Settings }].map((n) => (
+        {[
+          ...primary,
+          { href: "/settings", label: t("settings"), icon: Settings },
+        ].map((n) => (
           <NavLink key={n.href} href={n.href}>
             <n.icon size={20} />
             {n.label}

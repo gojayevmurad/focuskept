@@ -3,7 +3,10 @@ import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
 import { SignOut } from "@/src/components/sign-out";
 
-export const metadata: Metadata = { title: "Account paused", robots: { index: false } };
+export const metadata: Metadata = {
+  title: "Account paused",
+  robots: { index: false },
+};
 
 export default async function Page() {
   const t = await getTranslations("auth");

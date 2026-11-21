@@ -27,33 +27,48 @@ const notFound = () => Response.json({ error: "Not found" }, { status: 404 });
 export const GET = (request: Request, ctx: Ctx) =>
   withRequestLogging(async () => {
     const session = await getSession();
-    if (!session?.user.emailVerified) return new Response(null, { status: 401 });
+    if (!session?.user.emailVerified)
+      return new Response(null, { status: 401 });
     const { id, action } = await ctx.params;
     if (action !== "state") return notFound();
     const state = await roomState(id, session.user.id);
-    return state ? Response.json(state, { headers: { "Cache-Control": "no-store" } }) : notFound();
+    return state
+      ? Response.json(state, { headers: { "Cache-Control": "no-store" } })
+      : notFound();
   }, "session-state")(request);
 
-const quality = z.record(z.string().max(40), z.union([z.number().finite(), z.boolean()])).refine(
-  (v) => Object.keys(v).length <= 20,
-);
+const quality = z
+  .record(z.string().max(40), z.union([z.number().finite(), z.boolean()]))
+  .refine((v) => Object.keys(v).length <= 20);
 
 export const POST = (request: Request, ctx: Ctx) =>
   withRequestLogging(async (req) => {
-    if (!sameOrigin(req, getEnv().APP_URL)) return new Response(null, { status: 403 });
+    if (!sameOrigin(req, getEnv().APP_URL))
+      return new Response(null, { status: 403 });
     const session = await getSession();
-    if (!session?.user.emailVerified) return new Response(null, { status: 401 });
+    if (!session?.user.emailVerified)
+      return new Response(null, { status: 401 });
     const userId = session.user.id;
     const { id, action } = await ctx.params;
-    if (!(await rateLimit(`room:${userId}`, 120, 60))) return new Response(null, { status: 429 });
-    const body = req.headers.get("content-length") === "0" ? {} : await req.json().catch(() => ({}));
+    if (!(await rateLimit(`room:${userId}`, 120, 60)))
+      return new Response(null, { status: 429 });
+    const body =
+      req.headers.get("content-length") === "0"
+        ? {}
+        : await req.json().catch(() => ({}));
     switch (action) {
       case "join":
-        return (await joinRoom(id, userId)) ? Response.json({ ok: true }) : notFound();
+        return (await joinRoom(id, userId))
+          ? Response.json({ ok: true })
+          : notFound();
       case "leave":
-        return (await leaveRoom(id, userId)) ? Response.json({ ok: true }) : notFound();
+        return (await leaveRoom(id, userId))
+          ? Response.json({ ok: true })
+          : notFound();
       case "goal": {
-        const parsed = z.object({ text: z.string().max(GOAL_MAX * 2) }).safeParse(body);
+        const parsed = z
+          .object({ text: z.string().max(GOAL_MAX * 2) })
+          .safeParse(body);
         if (!parsed.success) return new Response(null, { status: 400 });
         const goal = await setGoal(id, userId, parsed.data.text);
         return goal === null ? notFound() : Response.json({ goal });

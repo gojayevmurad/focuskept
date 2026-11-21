@@ -16,7 +16,11 @@ import {
 import { Link, useRouter } from "@/src/i18n/navigation";
 import { useRealtime } from "@/src/lib/realtime/client";
 import type { RoomState } from "@/src/lib/sessions/lifecycle";
-import type { QualityStats, VideoClient, VideoProviderName } from "@/src/lib/video/types";
+import type {
+  QualityStats,
+  VideoClient,
+  VideoProviderName,
+} from "@/src/lib/video/types";
 import { createVideoClient } from "@/src/lib/video/client";
 import { getLocalMedia, LocalMediaError } from "@/src/lib/video/client/media";
 import { Avatar } from "@/src/components/avatar";
@@ -30,15 +34,22 @@ function phaseLengths(duration: number) {
   return duration <= 25 ? { intro: 2, wrap: 2 } : { intro: 3, wrap: 3 };
 }
 
-function computePhase(startMs: number, duration: number, now: number): { phase: Phase; remainingMs: number; progress: number } {
+function computePhase(
+  startMs: number,
+  duration: number,
+  now: number,
+): { phase: Phase; remainingMs: number; progress: number } {
   const end = startMs + duration * 60_000;
   const { intro, wrap } = phaseLengths(duration);
-  if (now < startMs) return { phase: "waiting", remainingMs: startMs - now, progress: 0 };
+  if (now < startMs)
+    return { phase: "waiting", remainingMs: startMs - now, progress: 0 };
   if (now >= end) return { phase: "ended", remainingMs: 0, progress: 1 };
   const elapsed = now - startMs;
   const progress = elapsed / (duration * 60_000);
-  if (elapsed < intro * 60_000) return { phase: "intro", remainingMs: end - now, progress };
-  if (now >= end - wrap * 60_000) return { phase: "wrap", remainingMs: end - now, progress };
+  if (elapsed < intro * 60_000)
+    return { phase: "intro", remainingMs: end - now, progress };
+  if (now >= end - wrap * 60_000)
+    return { phase: "wrap", remainingMs: end - now, progress };
   return { phase: "focus", remainingMs: end - now, progress };
 }
 
@@ -96,17 +107,23 @@ export function Room(props: {
   const format = useFormatter();
   const router = useRouter();
   const [state, setState] = useState(props.initial);
-  const [offset, setOffset] = useState(() => new Date(props.initial.serverTime).getTime() - Date.now());
+  const [offset, setOffset] = useState(
+    () => new Date(props.initial.serverTime).getTime() - Date.now(),
+  );
   const [now, setNow] = useState(() => Date.now());
   const [joined, setJoined] = useState(false);
   const [joining, setJoining] = useState(false);
   const [mediaError, setMediaError] = useState<string | null>(null);
   const [videoError, setVideoError] = useState<string | null>(null);
   const [micOn, setMicOn] = useState(props.microphoneDefault);
-  const [goal, setGoal] = useState(props.initial.participants.find((p) => p.userId === props.initial.me)?.goalText ?? "");
+  const [goal, setGoal] = useState(
+    props.initial.participants.find((p) => p.userId === props.initial.me)
+      ?.goalText ?? "",
+  );
   const [goalSaved, setGoalSaved] = useState(Boolean(goal));
   const [outcome, setOutcome] = useState<Outcome | null>(
-    (props.initial.participants.find((p) => p.userId === props.initial.me)?.outcome as Outcome | null) ?? null,
+    (props.initial.participants.find((p) => p.userId === props.initial.me)
+      ?.outcome as Outcome | null) ?? null,
   );
   const [remote, setRemote] = useState<Record<string, MediaStream>>({});
   const [quality, setQuality] = useState<"good" | "reduced">("good");
@@ -125,13 +142,19 @@ export function Room(props: {
 
   const startMs = new Date(state.session.startAt).getTime();
   const serverNow = now + offset;
-  const { phase, remainingMs, progress } = computePhase(startMs, state.session.durationMin, serverNow);
+  const { phase, remainingMs, progress } = computePhase(
+    startMs,
+    state.session.durationMin,
+    serverNow,
+  );
   const me = state.participants.find((p) => p.userId === state.me);
   const others = state.participants.filter((p) => p.userId !== state.me);
   const group = state.session.type === "group";
 
   const refresh = useCallback(async () => {
-    const response = await fetch(`/api/sessions/${state.session.id}/state`, { cache: "no-store" });
+    const response = await fetch(`/api/sessions/${state.session.id}/state`, {
+      cache: "no-store",
+    });
     if (!response.ok) return;
     const next = (await response.json()) as RoomState;
     setOffset(new Date(next.serverTime).getTime() - Date.now());
@@ -161,7 +184,11 @@ export function Room(props: {
         if (localVideo.current) localVideo.current.srcObject = stream;
       })
       .catch((error: unknown) =>
-        setMediaError(error instanceof LocalMediaError ? t(`media.${error.code}`) : t("media.unknown")),
+        setMediaError(
+          error instanceof LocalMediaError
+            ? t(`media.${error.code}`)
+            : t("media.unknown"),
+        ),
       );
     return () => {
       cancelled = true;
@@ -169,7 +196,8 @@ export function Room(props: {
   }, [t]);
 
   useEffect(() => {
-    if (localVideo.current && localStream.current) localVideo.current.srcObject = localStream.current;
+    if (localVideo.current && localStream.current)
+      localVideo.current.srcObject = localStream.current;
   }, [joined]);
 
   // Phase changes: chimes, and the mic follows the session rhythm unless the person set it themselves.
@@ -214,7 +242,11 @@ export function Room(props: {
         }),
       );
       video.on("quality", setQuality);
-      await video.publishTracks(localStream.current, { audio: true, video: true, simulcast: group });
+      await video.publishTracks(localStream.current, {
+        audio: true,
+        video: true,
+        simulcast: group,
+      });
       const startOn = phase === "focus" ? false : props.microphoneDefault;
       await applyMic(startOn);
       lastPhase.current = phase;
@@ -244,14 +276,20 @@ export function Room(props: {
       if (subscribed.current.get(p.userId) === key) continue;
       subscribed.current.set(p.userId, key);
       void video
-        .subscribe({ userId: p.userId, displayName: p.displayName, tracks: p.tracks }, { lowQuality: group && others.length > 2 })
+        .subscribe(
+          { userId: p.userId, displayName: p.displayName, tracks: p.tracks },
+          { lowQuality: group && others.length > 2 },
+        )
         .catch(() => subscribed.current.delete(p.userId));
     }
   }, [joined, others, group]);
 
   // Save bandwidth while the tab is hidden.
   useEffect(() => {
-    const onVisibility = () => void client.current?.setRemoteVideo(document.visibilityState === "visible").catch(() => {});
+    const onVisibility = () =>
+      void client.current
+        ?.setRemoteVideo(document.visibilityState === "visible")
+        .catch(() => {});
     document.addEventListener("visibilitychange", onVisibility);
     return () => document.removeEventListener("visibilitychange", onVisibility);
   }, []);
@@ -268,10 +306,15 @@ export function Room(props: {
   const finish = useCallback(async () => {
     const stats = lastStats.current;
     const summary = Object.fromEntries(
-      Object.entries(stats).filter(([, v]) => typeof v === "number" || typeof v === "boolean"),
+      Object.entries(stats).filter(
+        ([, v]) => typeof v === "number" || typeof v === "boolean",
+      ),
     ) as Record<string, number | boolean>;
     summary.quality_reduced = quality === "reduced";
-    if (client.current) void post(`/api/sessions/${state.session.id}/quality`, summary).catch(() => {});
+    if (client.current)
+      void post(`/api/sessions/${state.session.id}/quality`, summary).catch(
+        () => {},
+      );
     await client.current?.leave().catch(() => {});
     client.current = null;
     localStream.current?.getTracks().forEach((tr) => tr.stop());
@@ -279,7 +322,8 @@ export function Room(props: {
   }, [quality, state.session.id]);
 
   useEffect(() => {
-    const onUnload = () => navigator.sendBeacon?.(`/api/sessions/${state.session.id}/leave`);
+    const onUnload = () =>
+      navigator.sendBeacon?.(`/api/sessions/${state.session.id}/leave`);
     window.addEventListener("pagehide", onUnload);
     return () => {
       window.removeEventListener("pagehide", onUnload);
@@ -290,12 +334,16 @@ export function Room(props: {
 
   async function saveGoal() {
     if (!goal.trim()) return;
-    await post(`/api/sessions/${state.session.id}/goal`, { text: goal }).catch(() => {});
+    await post(`/api/sessions/${state.session.id}/goal`, { text: goal }).catch(
+      () => {},
+    );
     setGoalSaved(true);
   }
   async function chooseOutcome(value: Outcome) {
     setOutcome(value);
-    await post(`/api/sessions/${state.session.id}/outcome`, { outcome: value }).catch(() => {});
+    await post(`/api/sessions/${state.session.id}/outcome`, {
+      outcome: value,
+    }).catch(() => {});
   }
   async function leave() {
     await finish();
@@ -329,11 +377,21 @@ export function Room(props: {
         favorites={favorites}
         onFavorite={async (userId) => {
           const result = await toggleFavorite(userId);
-          if (result.ok) setFavorites(result.favorite ? [...favorites, userId] : favorites.filter((f) => f !== userId));
+          if (result.ok)
+            setFavorites(
+              result.favorite
+                ? [...favorites, userId]
+                : favorites.filter((f) => f !== userId),
+            );
         }}
         onReport={setReportFor}
         reportDialog={
-          <ReportDialog dialogRef={reportDialog} targetId={reportFor} sessionId={state.session.id} onClose={() => setReportFor(null)} />
+          <ReportDialog
+            dialogRef={reportDialog}
+            targetId={reportFor}
+            sessionId={state.session.id}
+            onClose={() => setReportFor(null)}
+          />
         }
       />
     );
@@ -344,14 +402,22 @@ export function Room(props: {
       <header className="room-top">
         <LogoMark size={22} />
         <div className="grow stack-sm" style={{ gap: 0 }}>
-          <strong>{state.session.title ?? (group ? t("groupTitle") : t("pairTitle"))}</strong>
+          <strong>
+            {state.session.title ?? (group ? t("groupTitle") : t("pairTitle"))}
+          </strong>
           <span className="room-phase">
             {phaseLabel} ·{" "}
-            {format.dateTime(new Date(state.session.startAt), { timeZone: props.timeZone, hour: "numeric", minute: "2-digit" })} ·{" "}
-            {c("minutes", { count: state.session.durationMin })}
+            {format.dateTime(new Date(state.session.startAt), {
+              timeZone: props.timeZone,
+              hour: "numeric",
+              minute: "2-digit",
+            })}{" "}
+            · {c("minutes", { count: state.session.durationMin })}
           </span>
         </div>
-        {quality === "reduced" && <span className="badge warm">{t("lowBandwidth")}</span>}
+        {quality === "reduced" && (
+          <span className="badge warm">{t("lowBandwidth")}</span>
+        )}
         <span className="timer" aria-live="off">
           {phase === "waiting" ? clock(remainingMs) : clock(remainingMs)}
         </span>
@@ -365,7 +431,13 @@ export function Room(props: {
       <div className="room-stage">
         <div className={`tiles ${group ? "group" : ""}`}>
           <div className="tile">
-            <video ref={localVideo} autoPlay playsInline muted className="mirror" />
+            <video
+              ref={localVideo}
+              autoPlay
+              playsInline
+              muted
+              className="mirror"
+            />
             <div className="tile-label">
               <span className="tile-name">
                 {c("you")} {!micOn && <MicOff size={12} />}
@@ -387,7 +459,15 @@ export function Room(props: {
               goal={p.goalText}
               present={p.present}
               stream={remote[p.userId]}
-              hint={!joined ? t("joinToSee") : props.provider === "none" ? t("noVideoProvider") : p.present ? t("connecting") : t("notHereYet")}
+              hint={
+                !joined
+                  ? t("joinToSee")
+                  : props.provider === "none"
+                    ? t("noVideoProvider")
+                    : p.present
+                      ? t("connecting")
+                      : t("notHereYet")
+              }
               isHost={p.userId === state.session.hostId}
               hostLabel={t("host")}
             />
@@ -400,8 +480,16 @@ export function Room(props: {
               <h2>{phase === "waiting" ? t("readyTitle") : t("joinTitle")}</h2>
               <p className="muted small">{t("cameraRequired")}</p>
               {videoError && <p className="notice error">{videoError}</p>}
-              <button className="button full" disabled={joining || Boolean(mediaError)} onClick={join}>
-                {joining ? <LoaderCircle size={16} className="spin" /> : <VideoIcon size={16} />}
+              <button
+                className="button full"
+                disabled={joining || Boolean(mediaError)}
+                onClick={join}
+              >
+                {joining ? (
+                  <LoaderCircle size={16} className="spin" />
+                ) : (
+                  <VideoIcon size={16} />
+                )}
                 {t("join")}
               </button>
               <p className="small faint">{t("neverRecorded")}</p>
@@ -423,7 +511,11 @@ export function Room(props: {
                   }}
                 />
               </label>
-              <button className="button secondary small" onClick={saveGoal} disabled={!goal.trim() || goalSaved}>
+              <button
+                className="button secondary small"
+                onClick={saveGoal}
+                disabled={!goal.trim() || goalSaved}
+              >
                 {goalSaved ? c("saved") : t("shareGoal")}
               </button>
             </div>
@@ -457,7 +549,14 @@ export function Room(props: {
           {micOn ? t("mute") : t("unmute")}
         </button>
         {others.length > 0 && (
-          <button className="button secondary" onClick={() => setReportFor(others.length === 1 ? others[0].userId : others[0].userId)}>
+          <button
+            className="button secondary"
+            onClick={() =>
+              setReportFor(
+                others.length === 1 ? others[0].userId : others[0].userId,
+              )
+            }
+          >
             <Flag size={16} /> {t("report")}
           </button>
         )}
@@ -507,7 +606,10 @@ function RemoteTile(props: {
       )}
       <div className="tile-label">
         <span className="tile-name">
-          {props.name} {props.isHost && <span className="badge warm">{props.hostLabel}</span>}
+          {props.name}{" "}
+          {props.isHost && (
+            <span className="badge warm">{props.hostLabel}</span>
+          )}
         </span>
         {props.goal && <span className="tile-goal">{props.goal}</span>}
       </div>
@@ -515,7 +617,13 @@ function RemoteTile(props: {
   );
 }
 
-function Outcomes({ value, onChange }: { value: Outcome | null; onChange: (v: Outcome) => void }) {
+function Outcomes({
+  value,
+  onChange,
+}: {
+  value: Outcome | null;
+  onChange: (v: Outcome) => void;
+}) {
   const t = useTranslations("room");
   const options: { v: Outcome; icon: React.ReactNode }[] = [
     { v: "done", icon: <CheckCircle2 size={20} /> },
@@ -525,7 +633,11 @@ function Outcomes({ value, onChange }: { value: Outcome | null; onChange: (v: Ou
   return (
     <div className="outcomes" role="group">
       {options.map((o) => (
-        <button key={o.v} aria-pressed={value === o.v} onClick={() => onChange(o.v)}>
+        <button
+          key={o.v}
+          aria-pressed={value === o.v}
+          onClick={() => onChange(o.v)}
+        >
           {o.icon}
           {t(`outcome.${o.v}`)}
         </button>
@@ -545,7 +657,9 @@ function Summary(props: {
   reportDialog: React.ReactNode;
 }) {
   const t = useTranslations("room");
-  const others = props.state.participants.filter((p) => p.userId !== props.state.me);
+  const others = props.state.participants.filter(
+    (p) => p.userId !== props.state.me,
+  );
   return (
     <main className="content content-narrow" style={{ paddingTop: 48 }}>
       <div className="page-title">
@@ -565,19 +679,38 @@ function Summary(props: {
                 <Avatar name={p.displayName} src={p.avatarUrl} />
                 <div className="grow stack-sm" style={{ gap: 2 }}>
                   <strong>{p.displayName}</strong>
-                  {p.goalText && <span className="small muted">{p.goalText}</span>}
-                  {p.outcome && <span className="small faint">{t(`outcome.${p.outcome}`)}</span>}
+                  {p.goalText && (
+                    <span className="small muted">{p.goalText}</span>
+                  )}
+                  {p.outcome && (
+                    <span className="small faint">
+                      {t(`outcome.${p.outcome}`)}
+                    </span>
+                  )}
                 </div>
                 {props.canFavorite ? (
-                  <button className={`button small ${props.favorites.includes(p.userId) ? "on" : "secondary"}`} onClick={() => props.onFavorite(p.userId)}>
-                    <Star size={14} /> {props.favorites.includes(p.userId) ? t("favorited") : t("favorite")}
+                  <button
+                    className={`button small ${props.favorites.includes(p.userId) ? "on" : "secondary"}`}
+                    onClick={() => props.onFavorite(p.userId)}
+                  >
+                    <Star size={14} />{" "}
+                    {props.favorites.includes(p.userId)
+                      ? t("favorited")
+                      : t("favorite")}
                   </button>
                 ) : (
-                  <Link href={`/u/${p.username}`} className="button ghost small">
+                  <Link
+                    href={`/u/${p.username}`}
+                    className="button ghost small"
+                  >
                     {t("profile")}
                   </Link>
                 )}
-                <button className="button ghost small icon" aria-label={t("report")} onClick={() => props.onReport(p.userId)}>
+                <button
+                  className="button ghost small icon"
+                  aria-label={t("report")}
+                  onClick={() => props.onReport(p.userId)}
+                >
                   <Flag size={14} />
                 </button>
               </div>
@@ -598,7 +731,14 @@ function Summary(props: {
   );
 }
 
-const REASONS = ["inappropriate", "harassment", "no_camera", "spam", "underage", "other"] as const;
+const REASONS = [
+  "inappropriate",
+  "harassment",
+  "no_camera",
+  "spam",
+  "underage",
+  "other",
+] as const;
 
 function ReportDialog(props: {
   dialogRef: React.RefObject<HTMLDialogElement | null>;
@@ -611,7 +751,8 @@ function ReportDialog(props: {
 }) {
   const t = useTranslations("room");
   const c = useTranslations("common");
-  const [reason, setReason] = useState<(typeof REASONS)[number]>("inappropriate");
+  const [reason, setReason] =
+    useState<(typeof REASONS)[number]>("inappropriate");
   const [details, setDetails] = useState("");
   const [busy, setBusy] = useState(false);
   const [done, setDone] = useState<"report" | "block" | null>(null);
@@ -622,7 +763,12 @@ function ReportDialog(props: {
       await post(
         `/api/safety/${kind}`,
         kind === "report"
-          ? { targetId: props.targetId, sessionId: props.sessionId, reason, details }
+          ? {
+              targetId: props.targetId,
+              sessionId: props.sessionId,
+              reason,
+              details,
+            }
           : { targetId: props.targetId, sessionId: props.sessionId },
       );
       setDone(kind);
@@ -632,14 +778,21 @@ function ReportDialog(props: {
     }
   }
   return (
-    <dialog ref={props.dialogRef} className="dialog" onClose={props.onClose} style={{ color: "var(--text)" }}>
+    <dialog
+      ref={props.dialogRef}
+      className="dialog"
+      onClose={props.onClose}
+      style={{ color: "var(--text)" }}
+    >
       <div className="dialog-body">
         {done ? (
           <>
             <h2>{done === "report" ? t("reportSent") : t("blocked")}</h2>
             <p className="muted">{t("reportSentBody")}</p>
             <div className="dialog-actions">
-              <button className="button" onClick={props.onClose}>{c("close")}</button>
+              <button className="button" onClick={props.onClose}>
+                {c("close")}
+              </button>
             </div>
           </>
         ) : (
@@ -649,29 +802,60 @@ function ReportDialog(props: {
             {props.people && props.people.length > 1 && (
               <label className="field">
                 {t("who")}
-                <select value={props.targetId ?? ""} onChange={(e) => props.onChangeTarget?.(e.target.value)}>
+                <select
+                  value={props.targetId ?? ""}
+                  onChange={(e) => props.onChangeTarget?.(e.target.value)}
+                >
                   {props.people.map((p) => (
-                    <option key={p.id} value={p.id}>{p.name}</option>
+                    <option key={p.id} value={p.id}>
+                      {p.name}
+                    </option>
                   ))}
                 </select>
               </label>
             )}
             <label className="field">
               {t("reason")}
-              <select value={reason} onChange={(e) => setReason(e.target.value as (typeof REASONS)[number])}>
+              <select
+                value={reason}
+                onChange={(e) =>
+                  setReason(e.target.value as (typeof REASONS)[number])
+                }
+              >
                 {REASONS.map((r) => (
-                  <option key={r} value={r}>{t(`reasons.${r}`)}</option>
+                  <option key={r} value={r}>
+                    {t(`reasons.${r}`)}
+                  </option>
                 ))}
               </select>
             </label>
             <label className="field">
               {t("details")}
-              <textarea value={details} onChange={(e) => setDetails(e.target.value)} maxLength={2000} rows={3} />
+              <textarea
+                value={details}
+                onChange={(e) => setDetails(e.target.value)}
+                maxLength={2000}
+                rows={3}
+              />
             </label>
             <div className="dialog-actions">
-              <button className="button ghost" onClick={props.onClose}>{c("cancel")}</button>
-              <button className="button secondary" disabled={busy} onClick={() => send("block")}>{t("blockOnly")}</button>
-              <button className="button danger" disabled={busy} onClick={() => send("report")}>{t("reportAndBlock")}</button>
+              <button className="button ghost" onClick={props.onClose}>
+                {c("cancel")}
+              </button>
+              <button
+                className="button secondary"
+                disabled={busy}
+                onClick={() => send("block")}
+              >
+                {t("blockOnly")}
+              </button>
+              <button
+                className="button danger"
+                disabled={busy}
+                onClick={() => send("report")}
+              >
+                {t("reportAndBlock")}
+              </button>
             </div>
           </>
         )}

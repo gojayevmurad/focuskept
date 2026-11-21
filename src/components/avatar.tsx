@@ -9,9 +9,14 @@ export function Avatar({
   src?: string | null;
   size?: "sm" | "md" | "lg";
 }) {
-  const style = size === "sm" ? { width: 30, height: 30, fontSize: 12 } : undefined;
+  const style =
+    size === "sm" ? { width: 30, height: 30, fontSize: 12 } : undefined;
   return (
-    <span className={`avatar ${size === "lg" ? "lg" : ""}`} style={style} aria-hidden="true">
+    <span
+      className={`avatar ${size === "lg" ? "lg" : ""}`}
+      style={style}
+      aria-hidden="true"
+    >
       {src ? (
         // Avatars come from OAuth providers or user uploads on other hosts.
         // eslint-disable-next-line @next/next/no-img-element

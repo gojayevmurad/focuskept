@@ -7,7 +7,10 @@ import { getAppConfig } from "@/src/config/app";
 import { getSession } from "@/src/lib/auth/session";
 import { redirect } from "next/navigation";
 
-export const metadata: Metadata = { title: "Sign in", robots: { index: false } };
+export const metadata: Metadata = {
+  title: "Sign in",
+  robots: { index: false },
+};
 
 export default async function Page() {
   await connection();
@@ -21,7 +24,11 @@ export default async function Page() {
         <p className="muted">{t("signInLead")}</p>
       </div>
       <Suspense>
-        <AuthForm mode="sign-in" google={app.googleEnabled} appName={app.name} />
+        <AuthForm
+          mode="sign-in"
+          google={app.googleEnabled}
+          appName={app.name}
+        />
       </Suspense>
     </>
   );

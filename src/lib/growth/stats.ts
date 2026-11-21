@@ -5,7 +5,11 @@ import { booking, sessionParticipant } from "@/src/lib/db/schema";
 import { localDayKey } from "@/src/lib/scheduling/slots";
 import { dailyStreak, longestDailyStreak, weeklyStreak } from "./streaks";
 
-export async function completedSessions(userId: string, from?: Date, to?: Date) {
+export async function completedSessions(
+  userId: string,
+  from?: Date,
+  to?: Date,
+) {
   return db()
     .select({
       startAt: booking.startAt,
@@ -16,7 +20,10 @@ export async function completedSessions(userId: string, from?: Date, to?: Date) 
     .from(booking)
     .leftJoin(
       sessionParticipant,
-      and(eq(sessionParticipant.sessionId, booking.sessionId), eq(sessionParticipant.userId, booking.userId)),
+      and(
+        eq(sessionParticipant.sessionId, booking.sessionId),
+        eq(sessionParticipant.userId, booking.userId),
+      ),
     )
     .where(
       and(
@@ -31,11 +38,17 @@ export async function completedSessions(userId: string, from?: Date, to?: Date) 
 
 export type UserStats = Awaited<ReturnType<typeof userStats>>;
 
-export async function userStats(userId: string, timeZone: string, now = new Date()) {
+export async function userStats(
+  userId: string,
+  timeZone: string,
+  now = new Date(),
+) {
   const rows = await completedSessions(userId);
   const starts = rows.map((r) => r.startAt);
   const minutes = rows.reduce((sum, r) => sum + r.durationMin, 0);
-  const monthStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
+  const monthStart = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1),
+  );
   const thisMonth = rows.filter((r) => r.startAt >= monthStart);
   const done = rows.filter((r) => r.outcome === "done").length;
   const rated = rows.filter((r) => r.outcome).length;
@@ -49,7 +62,9 @@ export async function userStats(userId: string, timeZone: string, now = new Date
     sessions: rows.length,
     hours: Math.round((minutes / 60) * 10) / 10,
     monthSessions: thisMonth.length,
-    monthHours: Math.round((thisMonth.reduce((s, r) => s + r.durationMin, 0) / 60) * 10) / 10,
+    monthHours:
+      Math.round((thisMonth.reduce((s, r) => s + r.durationMin, 0) / 60) * 10) /
+      10,
     dailyStreak: dailyStreak(starts, timeZone, now),
     weeklyStreak: weeklyStreak(starts, timeZone, now),
     longestStreak: longestDailyStreak(starts, timeZone),

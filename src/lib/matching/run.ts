@@ -27,31 +27,30 @@ type Tx = Parameters<Parameters<ReturnType<typeof db>["transaction"]>[0]>[0];
 async function loadCandidates(tx: Tx, rows: (typeof booking.$inferSelect)[]) {
   const userIds = rows.map((r) => r.userId);
   if (!userIds.length) return { candidates: [], blocked: new Set<string>() };
-  const [profiles, favorites, blocks, memberships] = await Promise.all([
-    tx.select().from(profile).where(inArray(profile.userId, userIds)),
-    tx
-      .select()
-      .from(favorite)
-      .where(
-        and(
-          inArray(favorite.userId, userIds),
-          inArray(favorite.partnerId, userIds),
-        ),
+  // One transaction means one connection, so these run one after another.
+  const profiles = await tx
+    .select()
+    .from(profile)
+    .where(inArray(profile.userId, userIds));
+  const favorites = await tx
+    .select()
+    .from(favorite)
+    .where(
+      and(
+        inArray(favorite.userId, userIds),
+        inArray(favorite.partnerId, userIds),
       ),
-    tx
-      .select()
-      .from(block)
-      .where(
-        or(
-          inArray(block.blockerId, userIds),
-          inArray(block.blockedId, userIds),
-        ),
-      ),
-    tx
-      .select()
-      .from(communityMember)
-      .where(inArray(communityMember.userId, userIds)),
-  ]);
+    );
+  const blocks = await tx
+    .select()
+    .from(block)
+    .where(
+      or(inArray(block.blockerId, userIds), inArray(block.blockedId, userIds)),
+    );
+  const memberships = await tx
+    .select()
+    .from(communityMember)
+    .where(inArray(communityMember.userId, userIds));
   const plans = new Map(
     await Promise.all(
       userIds.map(async (id) => [id, (await getPlan(id)).plan] as const),

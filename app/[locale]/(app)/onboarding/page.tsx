@@ -8,11 +8,15 @@ import { redirect } from "@/src/i18n/navigation";
 import { Logo } from "@/src/components/logo";
 import { OnboardingForm } from "./onboarding-form";
 
-export const metadata: Metadata = { title: "Welcome", robots: { index: false } };
+export const metadata: Metadata = {
+  title: "Welcome",
+  robots: { index: false },
+};
 
 export default async function Page() {
   const { user, profile } = await requireAppUser(true);
-  if (profile.onboardedAt) redirect({ href: "/dashboard", locale: await getLocale() });
+  if (profile.onboardedAt)
+    redirect({ href: "/dashboard", locale: await getLocale() });
   const t = await getTranslations("onboarding");
   const app = getAppConfig();
   const slots = await suggestedSlots(user.id, 50);
@@ -26,7 +30,11 @@ export default async function Page() {
         timezone={profile.timezone}
         appUrl={app.url}
         timezones={Intl.supportedValuesOf("timeZone")}
-        slots={slots.map((s) => ({ startAt: s.startAt.toISOString(), waiting: s.waiting, popular: s.popular }))}
+        slots={slots.map((s) => ({
+          startAt: s.startAt.toISOString(),
+          waiting: s.waiting,
+          popular: s.popular,
+        }))}
       />
     </main>
   );

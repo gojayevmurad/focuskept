@@ -1,8 +1,17 @@
 import "server-only";
 import { and, eq, gte, inArray, lt, ne, sql } from "drizzle-orm";
 import { db } from "@/src/lib/db";
-import { booking, focusSession, profile, sessionParticipant } from "@/src/lib/db/schema";
-import { addMinutes, isPopularSlot, nextSlot } from "@/src/lib/scheduling/slots";
+import {
+  booking,
+  focusSession,
+  profile,
+  sessionParticipant,
+} from "@/src/lib/db/schema";
+import {
+  addMinutes,
+  isPopularSlot,
+  nextSlot,
+} from "@/src/lib/scheduling/slots";
 
 /** How many other people are waiting in each slot of a range, per duration. */
 export async function slotDemand(from: Date, to: Date, excludeUserId?: string) {
@@ -32,7 +41,12 @@ export async function slotDemand(from: Date, to: Date, excludeUserId?: string) {
 }
 
 /** Good first slots in the next day: people waiting first, then popular hours. */
-export async function suggestedSlots(userId: string, durationMin: number, now = new Date(), count = 6) {
+export async function suggestedSlots(
+  userId: string,
+  durationMin: number,
+  now = new Date(),
+  count = 6,
+) {
   const from = nextSlot(addMinutes(now, 10));
   const to = addMinutes(now, 24 * 60);
   const demand = await slotDemand(from, to, userId);
@@ -42,7 +56,11 @@ export async function suggestedSlots(userId: string, durationMin: number, now = 
     slots.push({ startAt: t, waiting, popular: isPopularSlot(t) });
   }
   return slots
-    .map((s) => ({ ...s, score: s.waiting * 10 + (s.popular ? 3 : 0) - s.startAt.getTime() / 3.6e9 / 24 }))
+    .map((s) => ({
+      ...s,
+      score:
+        s.waiting * 10 + (s.popular ? 3 : 0) - s.startAt.getTime() / 3.6e9 / 24,
+    }))
     .sort((a, b) => b.score - a.score)
     .slice(0, count)
     .sort((a, b) => a.startAt.getTime() - b.startAt.getTime());

@@ -13,7 +13,11 @@ function previousDayKey(key: string) {
  * from today. A streak survives until the end of today even if today has no
  * session yet.
  */
-export function dailyStreak(sessionStarts: Date[], timeZone: string, now = new Date()) {
+export function dailyStreak(
+  sessionStarts: Date[],
+  timeZone: string,
+  now = new Date(),
+) {
   const days = new Set(sessionStarts.map((d) => localDayKey(d, timeZone)));
   let key = localDayKey(now, timeZone);
   if (!days.has(key)) key = previousDayKey(key);
@@ -26,10 +30,17 @@ export function dailyStreak(sessionStarts: Date[], timeZone: string, now = new D
 }
 
 /** Consecutive local weeks (Monday start) with at least one completed session. */
-export function weeklyStreak(sessionStarts: Date[], timeZone: string, now = new Date()) {
-  const weeks = new Set(sessionStarts.map((d) => weekBounds(d, timeZone).start.getTime()));
+export function weeklyStreak(
+  sessionStarts: Date[],
+  timeZone: string,
+  now = new Date(),
+) {
+  const weeks = new Set(
+    sessionStarts.map((d) => weekBounds(d, timeZone).start.getTime()),
+  );
   let start = weekBounds(now, timeZone).start;
-  if (!weeks.has(start.getTime())) start = weekBounds(new Date(start.getTime() - DAY), timeZone).start;
+  if (!weeks.has(start.getTime()))
+    start = weekBounds(new Date(start.getTime() - DAY), timeZone).start;
   let streak = 0;
   while (weeks.has(start.getTime())) {
     streak++;
@@ -39,7 +50,9 @@ export function weeklyStreak(sessionStarts: Date[], timeZone: string, now = new 
 }
 
 export function longestDailyStreak(sessionStarts: Date[], timeZone: string) {
-  const keys = [...new Set(sessionStarts.map((d) => localDayKey(d, timeZone)))].sort();
+  const keys = [
+    ...new Set(sessionStarts.map((d) => localDayKey(d, timeZone))),
+  ].sort();
   let best = 0;
   let run = 0;
   let prev: string | null = null;

@@ -1,7 +1,12 @@
 import "server-only";
 import { and, count, eq, gte } from "drizzle-orm";
 import { db } from "@/src/lib/db";
-import { block, profile, report, sessionParticipant } from "@/src/lib/db/schema";
+import {
+  block,
+  profile,
+  report,
+  sessionParticipant,
+} from "@/src/lib/db/schema";
 import { notifyAdmins } from "@/src/lib/notifications";
 
 export const REPORT_REASONS = [
@@ -26,7 +31,11 @@ async function sharedSession(a: string, b: string, sessionId: string) {
   return ids.has(a) && ids.has(b);
 }
 
-export async function blockUser(blockerId: string, blockedId: string, sessionId?: string) {
+export async function blockUser(
+  blockerId: string,
+  blockedId: string,
+  sessionId?: string,
+) {
   if (blockerId === blockedId) return false;
   await db()
     .insert(block)
@@ -50,17 +59,22 @@ export async function reportUser(input: {
 }) {
   if (input.reporterId === input.targetId) return null;
   // Reports tied to a session must come from someone who was in it.
-  if (input.sessionId && !(await sharedSession(input.reporterId, input.targetId, input.sessionId)))
+  if (
+    input.sessionId &&
+    !(await sharedSession(input.reporterId, input.targetId, input.sessionId))
+  )
     return null;
   const id = crypto.randomUUID();
-  await db().insert(report).values({
-    id,
-    reporterId: input.reporterId,
-    targetId: input.targetId,
-    sessionId: input.sessionId ?? null,
-    reason: input.reason,
-    details: input.details.slice(0, 2000),
-  });
+  await db()
+    .insert(report)
+    .values({
+      id,
+      reporterId: input.reporterId,
+      targetId: input.targetId,
+      sessionId: input.sessionId ?? null,
+      reason: input.reason,
+      details: input.details.slice(0, 2000),
+    });
   // Reporting always blocks too, so the two are never matched again.
   await blockUser(input.reporterId, input.targetId, input.sessionId);
 
@@ -68,13 +82,21 @@ export async function reportUser(input: {
   const [{ n }] = await db()
     .select({ n: count(report.reporterId) })
     .from(report)
-    .where(and(eq(report.targetId, input.targetId), gte(report.createdAt, since)));
+    .where(
+      and(eq(report.targetId, input.targetId), gte(report.createdAt, since)),
+    );
   const reporters = await db()
     .selectDistinct({ id: report.reporterId })
     .from(report)
-    .where(and(eq(report.targetId, input.targetId), gte(report.createdAt, since)));
-  const urgent = input.reason === "underage" || input.reason === "inappropriate";
-  if (reporters.length >= AUTO_SUSPEND_REPORTERS || (urgent && reporters.length >= 2))
+    .where(
+      and(eq(report.targetId, input.targetId), gte(report.createdAt, since)),
+    );
+  const urgent =
+    input.reason === "underage" || input.reason === "inappropriate";
+  if (
+    reporters.length >= AUTO_SUSPEND_REPORTERS ||
+    (urgent && reporters.length >= 2)
+  )
     await db()
       .update(profile)
       .set({ suspendedAt: new Date() })
@@ -83,7 +105,10 @@ export async function reportUser(input: {
     "report",
     id,
     `New report: ${input.reason}`,
-    [`A member reported another member (${n} report(s) on this account in 30 days).`, "Review it in the admin panel."],
+    [
+      `A member reported another member (${n} report(s) on this account in 30 days).`,
+      "Review it in the admin panel.",
+    ],
     "/admin/reports",
   ).catch(() => {});
   return id;

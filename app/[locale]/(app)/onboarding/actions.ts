@@ -23,7 +23,15 @@ const schema = z.object({
   duration: z.coerce.number().optional(),
 });
 
-export type OnboardingState = { error?: "username_taken" | "username_format" | "username_reserved" | "age" | "invalid" | "booking" };
+export type OnboardingState = {
+  error?:
+    | "username_taken"
+    | "username_format"
+    | "username_reserved"
+    | "age"
+    | "invalid"
+    | "booking";
+};
 
 export async function completeOnboarding(
   _prev: OnboardingState,
@@ -41,10 +49,19 @@ export async function completeOnboarding(
     duration: form.get("duration") ?? undefined,
   });
   if (!parsed.success)
-    return { error: parsed.error.issues.some((i) => i.path[0] === "age") ? "age" : "invalid" };
+    return {
+      error: parsed.error.issues.some((i) => i.path[0] === "age")
+        ? "age"
+        : "invalid",
+    };
   const name = validateUsername(parsed.data.username);
-  if (!name.ok) return { error: name.reason === "reserved" ? "username_reserved" : "username_format" };
-  if (await isUsernameTaken(name.username, user.id)) return { error: "username_taken" };
+  if (!name.ok)
+    return {
+      error:
+        name.reason === "reserved" ? "username_reserved" : "username_format",
+    };
+  if (await isUsernameTaken(name.username, user.id))
+    return { error: "username_taken" };
 
   await db()
     .update(profile)
@@ -60,7 +77,9 @@ export async function completeOnboarding(
       updatedAt: new Date(),
     })
     .where(eq(profile.userId, user.id));
-  void trackForUser(user.id, "onboarding_completed", { segments: parsed.data.segments.length });
+  void trackForUser(user.id, "onboarding_completed", {
+    segments: parsed.data.segments.length,
+  });
 
   if (parsed.data.startAt) {
     try {

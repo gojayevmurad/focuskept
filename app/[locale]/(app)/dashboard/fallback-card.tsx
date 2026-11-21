@@ -4,7 +4,13 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "@/src/i18n/navigation";
 import { chooseFallback } from "../book/actions";
 
-export function FallbackCard({ bookingId, when }: { bookingId: string; when: string }) {
+export function FallbackCard({
+  bookingId,
+  when,
+}: {
+  bookingId: string;
+  when: string;
+}) {
   const t = useTranslations("dashboard");
   const c = useTranslations("common");
   const router = useRouter();
@@ -26,13 +32,25 @@ export function FallbackCard({ bookingId, when }: { bookingId: string; when: str
       </div>
       {error && <p className="notice error">{c("somethingWrong")}</p>}
       <div className="row">
-        <button className="button" disabled={pending} onClick={() => choose("room")}>
+        <button
+          className="button"
+          disabled={pending}
+          onClick={() => choose("room")}
+        >
           {t("fallbackRoom")}
         </button>
-        <button className="button secondary" disabled={pending} onClick={() => choose("next")}>
+        <button
+          className="button secondary"
+          disabled={pending}
+          onClick={() => choose("next")}
+        >
           {t("fallbackNext")}
         </button>
-        <button className="button ghost" disabled={pending} onClick={() => choose("cancel")}>
+        <button
+          className="button ghost"
+          disabled={pending}
+          onClick={() => choose("cancel")}
+        >
           {t("fallbackCancel")}
         </button>
       </div>
