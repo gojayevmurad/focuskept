@@ -12,6 +12,8 @@ export async function generateMetadata({ params }: LocaleProps) {
     `${t("terms")} | ${getAppConfig().name}`,
     t("terms"),
     "/terms",
+    "en",
+    ["en"],
   );
 }
 export default async function Legal({ params }: LocaleProps) {

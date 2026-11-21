@@ -20,7 +20,13 @@ export default async function Page() {
     redirect({ href: "/dashboard", locale: await getLocale() });
   const t = await getTranslations("onboarding");
   const app = getAppConfig();
-  const slots = await suggestedSlots(user.id, 50);
+  const slots = await suggestedSlots(
+    user.id,
+    50,
+    new Date(),
+    6,
+    profile.timezone,
+  );
   return (
     <main className="content content-narrow" style={{ paddingTop: 40 }}>
       <Logo name={app.name} logoUrl={app.logoUrl} href="/onboarding" />

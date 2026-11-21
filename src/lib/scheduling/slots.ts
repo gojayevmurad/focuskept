@@ -135,7 +135,19 @@ export const US_ZONES = [
   "America/Denver",
   "America/Los_Angeles",
 ] as const;
-export const EU_ZONES = ["Europe/London", "Europe/Berlin"] as const;
+export const EU_ZONES = [
+  "Europe/London",
+  "Europe/Paris",
+  "Europe/Berlin",
+  "Europe/Amsterdam",
+] as const;
+
+/** People in Europe see European working hours as popular; everyone else the US ones. */
+export function popularZonesFor(timeZone: string): readonly string[] {
+  return timeZone.startsWith("Europe/") || timeZone === "Atlantic/Reykjavik"
+    ? EU_ZONES
+    : US_ZONES;
+}
 
 function localParts(date: Date, timeZone: string) {
   const parts = new Intl.DateTimeFormat("en-US", {

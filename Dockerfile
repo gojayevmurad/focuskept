@@ -25,6 +25,8 @@ COPY --from=build --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=build --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=build --chown=nextjs:nodejs /app/public ./public
 COPY --from=build --chown=nextjs:nodejs /app/drizzle ./drizzle
+# Blog posts are read from disk at request time.
+COPY --from=build --chown=nextjs:nodejs /app/content ./content
 COPY --from=build --chown=nextjs:nodejs /app/.migration-runner.cjs ./scripts/migrate.cjs
 COPY --from=build --chown=nextjs:nodejs /app/.worker.cjs ./worker.cjs
 # esbuild embeds the original map filename in the bundle.

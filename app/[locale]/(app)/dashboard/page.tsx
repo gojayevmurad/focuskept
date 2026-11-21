@@ -38,7 +38,7 @@ export default async function Page({
   const [upcoming, stats, suggestions] = await Promise.all([
     upcomingBookings(user.id),
     userStats(user.id, tz),
-    suggestedSlots(user.id, 50, new Date(), 4),
+    suggestedSlots(user.id, 50, new Date(), 4, tz),
   ]);
   const sessionIds = upcoming
     .map((b) => b.sessionId)

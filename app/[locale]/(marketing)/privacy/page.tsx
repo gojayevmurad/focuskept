@@ -12,6 +12,8 @@ export async function generateMetadata({ params }: LocaleProps) {
     `${t("privacy")} | ${getAppConfig().name}`,
     t("privacy"),
     "/privacy",
+    "en",
+    ["en"],
   );
 }
 export default async function Legal({ params }: LocaleProps) {

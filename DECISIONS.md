@@ -50,3 +50,23 @@ A community gets Plus seats and an end date from the admin panel. Invoicing for 
 ## D12. Host perk threshold
 
 Hosts get Plus for a month after hosting at least `HOST_PERK_SESSIONS` group sessions (default 8) in the previous calendar month.
+
+## D13. The microphone follows the session rhythm
+
+The mic is on during the intro (if the person's default is on), muted automatically when focus starts, and the person is prompted (not forced) to unmute for the wrap-up. Unmuting someone automatically felt intrusive. Anyone can change it at any time with one click, and once they do we stop changing it for them.
+
+## D14. Pages render per request
+
+All pages are server-rendered on request instead of at build time. One Docker image then works for any `APP_NAME`, `APP_URL` and feature flags set at runtime, which self-hosting needs. Public pages are cheap to render; a CDN (Cloudflare) in front absorbs crawler traffic.
+
+## D15. Prices come from Polar at runtime
+
+The pricing page reads the Plus monthly and yearly prices from Polar and caches them for 10 minutes. Nothing about prices is in the code. If Polar is unreachable the page says the price is shown at checkout.
+
+## D16. Reporting also blocks
+
+A report always blocks the reported person for the reporter as well. An account reported by three different people within 30 days (two for "underage" or "inappropriate") is paused until an admin reviews it.
+
+## D17. Next.js 16.4.6
+
+The boilerplate pinned 16.4.2, which has a published security issue. Upgraded to the patched 16.4.6.

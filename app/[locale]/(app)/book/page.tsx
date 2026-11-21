@@ -20,6 +20,7 @@ import {
   addMinutes,
   isPopularSlot,
   localDayStart,
+  popularZonesFor,
   weekGrid,
 } from "@/src/lib/scheduling/slots";
 import { getAppConfig } from "@/src/config/app";
@@ -103,7 +104,7 @@ export default async function Page({
         return {
           at: key,
           demand: demand.get(key) ?? {},
-          popular: isPopularSlot(s),
+          popular: isPopularSlot(s, popularZonesFor(tz)),
         };
       }),
     })),

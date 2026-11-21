@@ -21,7 +21,13 @@ export async function generateMetadata({ params }: SlugProps) {
   requireMarketing();
   const post = getBlogPost(slug);
   if (!post) notFound();
-  const metadata = pageMetadata(post.title, post.description, `/blog/${slug}`);
+  const metadata = pageMetadata(
+    post.title,
+    post.description,
+    `/blog/${slug}`,
+    "en",
+    ["en"],
+  );
   return {
     ...metadata,
     openGraph: {

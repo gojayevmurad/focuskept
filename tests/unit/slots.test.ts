@@ -102,3 +102,14 @@ describe("slots", () => {
     expect(isPopularSlot(utc("2026-03-14T17:00:00Z"))).toBe(false);
   });
 });
+
+describe("popular zones", () => {
+  it("uses European hours for European users", async () => {
+    const { popularZonesFor, isPopularSlot } =
+      await import("@/src/lib/scheduling/slots");
+    // 10:00 in Berlin on a Tuesday: popular in Europe, 4:00 in New York.
+    const at = new Date("2026-03-10T09:00:00Z");
+    expect(isPopularSlot(at, popularZonesFor("Europe/Berlin"))).toBe(true);
+    expect(isPopularSlot(at, popularZonesFor("America/New_York"))).toBe(false);
+  });
+});

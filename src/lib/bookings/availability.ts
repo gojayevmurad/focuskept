@@ -11,6 +11,7 @@ import {
 import {
   addMinutes,
   isPopularSlot,
+  popularZonesFor,
   nextSlot,
 } from "@/src/lib/scheduling/slots";
 
@@ -47,6 +48,7 @@ export async function suggestedSlots(
   durationMin: number,
   now = new Date(),
   count = 6,
+  timeZone = "America/New_York",
 ) {
   const from = nextSlot(addMinutes(now, 10));
   const to = addMinutes(now, 24 * 60);
@@ -54,7 +56,11 @@ export async function suggestedSlots(
   const slots: { startAt: Date; waiting: number; popular: boolean }[] = [];
   for (let t = from; t < to; t = addMinutes(t, 30)) {
     const waiting = demand.get(t.toISOString())?.[durationMin] ?? 0;
-    slots.push({ startAt: t, waiting, popular: isPopularSlot(t) });
+    slots.push({
+      startAt: t,
+      waiting,
+      popular: isPopularSlot(t, popularZonesFor(timeZone)),
+    });
   }
   return slots
     .map((s) => ({
