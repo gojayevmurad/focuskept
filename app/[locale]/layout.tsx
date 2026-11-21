@@ -12,9 +12,9 @@ import { ConsentBanner } from "@/src/components/consent";
 const sans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+// Pages render per request so one image serves any APP_NAME, APP_URL and
+// feature flags set at runtime. Put a CDN in front for public pages.
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,

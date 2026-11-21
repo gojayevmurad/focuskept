@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import type { MetadataRoute } from "next";
 import { getAppConfig } from "@/src/config/app";
+
+export const dynamic = "force-dynamic";
 export default function manifest(): MetadataRoute.Manifest {
   const { name } = getAppConfig();
   return {

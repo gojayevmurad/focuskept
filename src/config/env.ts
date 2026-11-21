@@ -71,7 +71,9 @@ export const envSchema = z
   .superRefine((v, ctx) => {
     const issue = (message: string) =>
       ctx.addIssue({ code: "custom", message });
-    if (v.NODE_ENV === "production") {
+    // `next build` runs with NODE_ENV=production but without runtime secrets.
+    const building = process.env.NEXT_PHASE === "phase-production-build";
+    if (v.NODE_ENV === "production" && !building) {
       if (!v.DATABASE_URL) issue("DATABASE_URL is required in production");
       if (
         !v.BETTER_AUTH_SECRET ||
@@ -85,7 +87,7 @@ export const envSchema = z
       if (v.EMAIL_MODE !== "send")
         issue("Production authentication requires EMAIL_MODE=send");
     }
-    if (v.NODE_ENV === "production" && v.VIDEO_PROVIDER === "none")
+    if (v.NODE_ENV === "production" && !building && v.VIDEO_PROVIDER === "none")
       issue("VIDEO_PROVIDER=none is for development only");
     if (
       v.VIDEO_PROVIDER === "cloudflare" &&

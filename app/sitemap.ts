@@ -3,6 +3,8 @@ import type { MetadataRoute } from "next";
 import { getAppConfig } from "@/src/config/app";
 import { listSeoPages, templates } from "@/src/lib/content/seo";
 import { listBlogPosts } from "@/src/lib/content/blog";
+
+export const dynamic = "force-dynamic";
 export default function sitemap(): MetadataRoute.Sitemap {
   const app = getAppConfig();
   const paths = ["/privacy", "/terms"];
