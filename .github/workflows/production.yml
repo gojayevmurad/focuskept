@@ -1,0 +1,132 @@
+name: Production
+on:
+  workflow_run:
+    workflows: [Quality]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      provision_only:
+        description: Publish verified image for first provisioning without SSH deployment
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: production
+  cancel-in-progress: false
+jobs:
+  image:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') ||
+      (vars.DEPLOY_MODE == 'protected' && github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      pull-requests: read
+      packages: write
+    outputs:
+      image: ${{ steps.ref.outputs.image }}
+      sha: ${{ steps.gate.outputs.sha }}
+      mode: ${{ steps.gate.outputs.mode }}
+    steps:
+      - name: Validate authorization and exact successful main commit
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          CANDIDATE: ${{ github.event.workflow_run.head_sha || github.sha }}
+          EVENT: ${{ github.event_name }}
+          MODE: ${{ vars.DEPLOY_MODE || 'manual' }}
+          ACTOR: ${{ github.actor }}
+          ALLOWED_ACTORS: ${{ vars.DEPLOY_ACTORS }}
+        run: |
+          set -euo pipefail
+          [[ "$MODE" == protected || "$MODE" == manual ]]
+          [[ "$CANDIDATE" =~ ^[a-f0-9]{40}$ ]]
+          main_sha="$(gh api "repos/$REPOSITORY/commits/main" --jq .sha)"
+          [[ "$CANDIDATE" == "$main_sha" ]] || { echo 'Stale release: main has changed. Run Quality on current main.' >&2; exit 1; }
+          gh api "repos/$REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$CANDIDATE&event=push" --jq '.workflow_runs[0] | .conclusion == "success" and .head_branch == "main"' | grep -qx true
+          gh api "repos/$REPOSITORY/commits/$CANDIDATE/pulls" --jq 'any(.merged_at != null and .base.ref == "main")' | grep -qx true || { echo 'Deployment requires a merged pull request.' >&2; exit 1; }
+          if [[ "$MODE" == protected ]]; then
+            gh api "repos/$REPOSITORY/environments/production" --jq '.protection_rules | any(.type == "required_reviewers" and (.reviewers | length) > 0)' | grep -qx true || { echo 'Protected mode requires an actual production environment reviewer rule supported by this repository plan.' >&2; exit 1; }
+          else
+            [[ "$EVENT" == workflow_dispatch ]]
+            [[ ",${ALLOWED_ACTORS// /}," == *",$ACTOR,"* ]] || { echo 'Manual operator must be listed in DEPLOY_ACTORS.' >&2; exit 1; }
+          fi
+          echo "sha=$CANDIDATE" >> "$GITHUB_OUTPUT"
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.gate.outputs.sha }}
+          persist-credentials: false
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: name
+        env:
+          REPOSITORY: ${{ github.repository }}
+        run: echo "name=ghcr.io/${REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+      - uses: docker/build-push-action@v6
+        id: build
+        with:
+          context: .
+          push: true
+          platforms: linux/arm64
+          tags: ${{ steps.name.outputs.name }}:${{ steps.gate.outputs.sha }}
+          build-args: |
+            NEXT_PUBLIC_POSTHOG_KEY=${{ vars.NEXT_PUBLIC_POSTHOG_KEY }}
+            NEXT_PUBLIC_POSTHOG_HOST=${{ vars.NEXT_PUBLIC_POSTHOG_HOST }}
+            NEXT_PUBLIC_SENTRY_DSN=${{ vars.NEXT_PUBLIC_SENTRY_DSN }}
+            NEXT_PUBLIC_SENTRY_RELEASE=${{ steps.gate.outputs.sha }}
+      - id: ref
+        env:
+          NAME: ${{ steps.name.outputs.name }}
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: |
+          echo "image=$NAME@$DIGEST" >> "$GITHUB_OUTPUT"
+          echo "Image: $NAME@$DIGEST" >> "$GITHUB_STEP_SUMMARY"
+  deploy-protected:
+    needs: image
+    if: needs.image.outputs.mode == 'protected' && inputs.provision_only != true
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.image.outputs.sha }}
+          persist-credentials: false
+      - uses: ./.github/actions/deploy
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          user: ${{ secrets.DEPLOY_USER }}
+          path: ${{ vars.DEPLOY_PATH }}
+          image: ${{ needs.image.outputs.image }}
+          sha: ${{ needs.image.outputs.sha }}
+          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          known-hosts: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+  deploy-manual:
+    needs: image
+    if: needs.image.outputs.mode == 'manual' && github.event_name == 'workflow_dispatch' && inputs.provision_only != true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.image.outputs.sha }}
+          persist-credentials: false
+      - uses: ./.github/actions/deploy
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          user: ${{ secrets.DEPLOY_USER }}
+          path: ${{ vars.DEPLOY_PATH }}
+          image: ${{ needs.image.outputs.image }}
+          sha: ${{ needs.image.outputs.sha }}
+          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          known-hosts: ${{ secrets.DEPLOY_KNOWN_HOSTS }}

@@ -1,0 +1,8 @@
+:root {
+  --accent: #7461d9;
+  --accent-hover: #6250c7;
+}
+[data-theme="dark"] {
+  --accent: #a28bec;
+  --accent-hover: #b29bf5;
+}

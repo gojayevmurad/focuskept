@@ -1,0 +1,46 @@
+name: Deploy an immutable image
+description: Uses pre-provisioned per-project deployment files over verified SSH
+inputs:
+  host:
+    required: true
+  user:
+    required: true
+  path:
+    required: true
+  image:
+    required: true
+  sha:
+    required: true
+  ssh-key:
+    required: true
+  known-hosts:
+    required: true
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        DEPLOY_HOST: ${{ inputs.host }}
+        DEPLOY_USER: ${{ inputs.user }}
+        DEPLOY_PATH: ${{ inputs.path }}
+        IMAGE: ${{ inputs.image }}
+        EXPECTED_SHA: ${{ inputs.sha }}
+        GH_TOKEN: ${{ github.token }}
+        REPOSITORY: ${{ github.repository }}
+        SSH_KEY: ${{ inputs.ssh-key }}
+        KNOWN_HOSTS: ${{ inputs.known-hosts }}
+      run: |
+        set -euo pipefail
+        [[ "$DEPLOY_HOST" =~ ^[a-zA-Z0-9][a-zA-Z0-9.-]*$ ]]
+        [[ "$DEPLOY_USER" =~ ^[a-z_][a-z0-9_-]*$ ]]
+        [[ "$DEPLOY_PATH" =~ ^/srv/saas/[a-z][a-z0-9-]*/deploy$ ]]
+        [[ "$IMAGE" =~ ^ghcr\.io/[a-z0-9_./-]+@sha256:[a-f0-9]{64}$ ]]
+        [[ -n "$SSH_KEY" && -n "$KNOWN_HOSTS" ]]
+        [[ "$EXPECTED_SHA" =~ ^[a-f0-9]{40}$ ]]
+        [[ "$(gh api "repos/$REPOSITORY/commits/main" --jq .sha)" == "$EXPECTED_SHA" ]] || { echo 'main changed while deployment waited. Dispatch the latest release.' >&2; exit 1; }
+        key_dir="$(mktemp -d)"
+        trap 'rm -rf "$key_dir"' EXIT
+        printf '%s\n' "$SSH_KEY" > "$key_dir/key"
+        chmod 600 "$key_dir/key"
+        printf '%s\n' "$KNOWN_HOSTS" > "$key_dir/known_hosts"
+        ssh -i "$key_dir/key" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$key_dir/known_hosts" "$DEPLOY_USER@$DEPLOY_HOST" "bash '$DEPLOY_PATH/deploy.sh' '$IMAGE'"
