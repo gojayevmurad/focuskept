@@ -5,6 +5,8 @@ import { getSession } from "@/src/lib/auth/session";
 import { getEnv } from "@/src/config/env";
 import { sameOrigin } from "@/src/lib/security/validation";
 import { polar, products } from "@/src/lib/billing/provider";
+import { pendingDiscountCode } from "@/src/lib/growth/referrals";
+import { trackForUser } from "@/src/lib/analytics/product";
 export async function POST(
   request: Request,
   ctx: { params: Promise<{ action: string }> },
@@ -15,7 +17,7 @@ export async function POST(
   const session = await getSession();
   if (!session?.user.emailVerified)
     return Response.json({ error: "Sign in first" }, { status: 401 });
-  if (!env.POLAR_ACCESS_TOKEN)
+  if (!env.BILLING_ENABLED || !env.POLAR_ACCESS_TOKEN)
     return Response.json(
       { error: "Billing is not configured. No payment has been taken." },
       { status: 503 },
@@ -45,8 +47,19 @@ export async function POST(
       .insert(billingCustomer)
       .values({ userId: session.user.id })
       .onConflictDoNothing();
+    // A referral reward waiting for this person is applied automatically.
+    const code = await pendingDiscountCode(session.user.id);
+    let discountId: string | undefined;
+    if (code) {
+      const found = await polar().discounts.list({ query: code, limit: 1 });
+      discountId = found.items.find((d) => d.code === code)?.id;
+    }
+    void trackForUser(session.user.id, "upgrade_started", {
+      plan: body.data.plan,
+    });
     const checkout = await polar().checkouts.create({
       products: [product],
+      ...(discountId ? { discount_id: discountId } : {}),
       external_customer_id: session.user.id,
       customer_email: session.user.email,
       success_url: env.APP_URL + "/billing?checkout=returned",

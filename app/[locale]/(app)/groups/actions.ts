@@ -1,0 +1,68 @@
+"use server";
+import { z } from "zod";
+import { revalidatePath } from "next/cache";
+import { getLocale } from "next-intl/server";
+import { requireAppUser } from "@/src/lib/app-user";
+import {
+  COMMUNITY_KINDS,
+  createCommunity,
+  joinByCode,
+  leaveCommunity,
+  removeMember,
+  rotateJoinCode,
+} from "@/src/lib/community";
+import { redirect } from "@/src/i18n/navigation";
+
+export async function createGroup(_prev: { error?: string }, form: FormData) {
+  const { user } = await requireAppUser();
+  const parsed = z
+    .object({
+      name: z.string().trim().min(2).max(80),
+      description: z.string().trim().max(400),
+      kind: z.enum(COMMUNITY_KINDS),
+    })
+    .safeParse({
+      name: form.get("name"),
+      description: form.get("description") ?? "",
+      kind: form.get("kind"),
+    });
+  if (!parsed.success) return { error: "invalid" };
+  const slug = await createCommunity(user.id, parsed.data);
+  redirect({ href: `/groups/${slug}`, locale: await getLocale() });
+  return {};
+}
+
+export async function joinGroupByCode(
+  _prev: { error?: string },
+  form: FormData,
+) {
+  const { user } = await requireAppUser();
+  const raw = String(form.get("code") ?? "").trim();
+  const code = raw.includes("/") ? raw.split("/").filter(Boolean).at(-1)! : raw;
+  const slug = await joinByCode(code.slice(0, 40), user.id);
+  if (!slug) return { error: "notFound" };
+  redirect({ href: `/groups/${slug}`, locale: await getLocale() });
+  return {};
+}
+
+export async function leaveGroup(communityId: string) {
+  const { user } = await requireAppUser();
+  await leaveCommunity(z.string().uuid().parse(communityId), user.id);
+  revalidatePath("/[locale]/groups", "layout");
+}
+
+export async function removeFromGroup(communityId: string, userId: string) {
+  const { user } = await requireAppUser();
+  await removeMember(
+    z.string().uuid().parse(communityId),
+    user.id,
+    z.string().max(100).parse(userId),
+  );
+  revalidatePath("/[locale]/groups", "layout");
+}
+
+export async function newInviteCode(communityId: string) {
+  const { user } = await requireAppUser();
+  await rotateJoinCode(z.string().uuid().parse(communityId), user.id);
+  revalidatePath("/[locale]/groups", "layout");
+}

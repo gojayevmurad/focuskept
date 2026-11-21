@@ -209,6 +209,9 @@ export const focusSession = pgTable(
     isFallbackRoom: boolean("is_fallback_room").notNull().default(false),
     videoRoomId: text("video_room_id"),
     startedAt: time("started_at"),
+    // Hosts can move the group into focus or wrap-up early.
+    focusAt: time("focus_at"),
+    wrapAt: time("wrap_at"),
     endedAt: time("ended_at"),
     createdAt: time("created_at").notNull().defaultNow(),
   },

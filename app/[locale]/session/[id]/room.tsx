@@ -38,18 +38,25 @@ function computePhase(
   startMs: number,
   duration: number,
   now: number,
+  overrides: { focusAt?: string | null; wrapAt?: string | null } = {},
 ): { phase: Phase; remainingMs: number; progress: number } {
   const end = startMs + duration * 60_000;
   const { intro, wrap } = phaseLengths(duration);
+  // A host can start focus or wrap-up early.
+  const focusFrom = overrides.focusAt
+    ? new Date(overrides.focusAt).getTime()
+    : startMs + intro * 60_000;
+  const wrapFrom = overrides.wrapAt
+    ? new Date(overrides.wrapAt).getTime()
+    : end - wrap * 60_000;
   if (now < startMs)
     return { phase: "waiting", remainingMs: startMs - now, progress: 0 };
   if (now >= end) return { phase: "ended", remainingMs: 0, progress: 1 };
-  const elapsed = now - startMs;
-  const progress = elapsed / (duration * 60_000);
-  if (elapsed < intro * 60_000)
-    return { phase: "intro", remainingMs: end - now, progress };
-  if (now >= end - wrap * 60_000)
+  const progress = (now - startMs) / (duration * 60_000);
+  if (now >= wrapFrom)
     return { phase: "wrap", remainingMs: end - now, progress };
+  if (now < focusFrom)
+    return { phase: "intro", remainingMs: end - now, progress };
   return { phase: "focus", remainingMs: end - now, progress };
 }
 
@@ -146,7 +153,9 @@ export function Room(props: {
     startMs,
     state.session.durationMin,
     serverNow,
+    { focusAt: state.session.focusAt, wrapAt: state.session.wrapAt },
   );
+  const isHost = state.session.hostId === state.me;
   const me = state.participants.find((p) => p.userId === state.me);
   const others = state.participants.filter((p) => p.userId !== state.me);
   const group = state.session.type === "group";
@@ -521,6 +530,52 @@ export function Room(props: {
             </div>
           )}
 
+          {isHost && joined && (phase === "intro" || phase === "focus") && (
+            <div className="card stack-sm">
+              <strong>{t("hostControls")}</strong>
+              <p className="small muted">{t("hostControlsLead")}</p>
+              <div className="row">
+                {phase === "intro" && (
+                  <button
+                    className="button small"
+                    onClick={() =>
+                      void post(`/api/sessions/${state.session.id}/phase`, {
+                        phase: "focus",
+                      }).then(refresh)
+                    }
+                  >
+                    {t("startFocus")}
+                  </button>
+                )}
+                <button
+                  className="button secondary small"
+                  onClick={() =>
+                    void post(`/api/sessions/${state.session.id}/phase`, {
+                      phase: "wrap",
+                    }).then(refresh)
+                  }
+                >
+                  {t("startWrap")}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {isHost && others.some((p) => p.goalText) && (
+            <div className="card stack-sm">
+              <strong>{t("goalsInRoom")}</strong>
+              <ul className="small" style={{ margin: 0, paddingLeft: 18 }}>
+                {others
+                  .filter((p) => p.goalText)
+                  .map((p) => (
+                    <li key={p.userId}>
+                      <strong>{p.displayName}:</strong> {p.goalText}
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          )}
+
           <div className="card stack-sm">
             <strong>{t(`tips.${phase}`)}</strong>
             <p className="small muted">{t(`tipsBody.${phase}`)}</p>
@@ -670,6 +725,10 @@ function Summary(props: {
         <strong>{t("howDidItGo")}</strong>
         <Outcomes value={props.outcome} onChange={props.onOutcome} />
       </section>
+      {props.state.session.hostId &&
+        props.state.session.hostId !== props.state.me && (
+          <RateHost sessionId={props.state.session.id} />
+        )}
       {others.length > 0 && (
         <section className="card stack">
           <h2>{t("yourPartners", { count: others.length })}</h2>
@@ -728,6 +787,38 @@ function Summary(props: {
       </div>
       {props.reportDialog}
     </main>
+  );
+}
+
+function RateHost({ sessionId }: { sessionId: string }) {
+  const t = useTranslations("room");
+  const [score, setScore] = useState(0);
+  const [sent, setSent] = useState(false);
+  return (
+    <section className="card stack-sm">
+      <strong>{t("rateHost")}</strong>
+      <div className="row" role="radiogroup" aria-label={t("rateHost")}>
+        {[1, 2, 3, 4, 5].map((n) => (
+          <button
+            key={n}
+            role="radio"
+            aria-checked={score === n}
+            aria-label={String(n)}
+            className={`button small icon ${score >= n ? "on" : "ghost"}`}
+            onClick={async () => {
+              setScore(n);
+              await post(`/api/sessions/${sessionId}/rate`, { score: n }).catch(
+                () => {},
+              );
+              setSent(true);
+            }}
+          >
+            <Star size={16} />
+          </button>
+        ))}
+      </div>
+      {sent && <span className="small muted">{t("thanks")}</span>}
+    </section>
   );
 }
 

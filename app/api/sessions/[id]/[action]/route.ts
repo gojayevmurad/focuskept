@@ -16,6 +16,7 @@ import {
 } from "@/src/lib/sessions/lifecycle";
 import { authorizeRoom } from "@/src/lib/sessions/access";
 import { trackForUser } from "@/src/lib/analytics/product";
+import { rateHost, setHostPhase } from "@/src/lib/hosts";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -86,6 +87,24 @@ export const POST = (request: Request, ctx: Ctx) =>
         await saveQuality(id, userId, parsed.data);
         void trackForUser(userId, "session_quality", parsed.data);
         return Response.json({ ok: true });
+      }
+      case "phase": {
+        const parsed = z
+          .object({ phase: z.enum(["focus", "wrap"]) })
+          .safeParse(body);
+        if (!parsed.success) return new Response(null, { status: 400 });
+        return (await setHostPhase(id, userId, parsed.data.phase))
+          ? Response.json({ ok: true })
+          : notFound();
+      }
+      case "rate": {
+        const parsed = z
+          .object({ score: z.number().int().min(1).max(5) })
+          .safeParse(body);
+        if (!parsed.success) return new Response(null, { status: 400 });
+        return (await rateHost(id, userId, parsed.data.score))
+          ? Response.json({ ok: true })
+          : notFound();
       }
       default:
         return notFound();

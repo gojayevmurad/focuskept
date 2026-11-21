@@ -150,6 +150,8 @@ export async function roomState(sessionId: string, userId: string) {
       durationMin: room.session.durationMin,
       status: room.session.status,
       isFallbackRoom: room.session.isFallbackRoom,
+      focusAt: room.session.focusAt?.toISOString() ?? null,
+      wrapAt: room.session.wrapAt?.toISOString() ?? null,
     },
     window: room.window,
     serverTime: new Date().toISOString(),

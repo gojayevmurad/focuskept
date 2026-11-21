@@ -22,6 +22,13 @@
       "when": 1795277577150,
       "tag": "0002_product",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1795279751423,
+      "tag": "0003_host_phases",
+      "breakpoints": true
     }
   ]
 }

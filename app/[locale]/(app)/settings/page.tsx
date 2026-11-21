@@ -1,31 +1,91 @@
-import { AnalyticsPreferences } from "@/src/components/analytics-preferences";
+import type { Metadata } from "next";
+import { and, eq } from "drizzle-orm";
+import { getTranslations } from "next-intl/server";
+import { Download } from "lucide-react";
 import { AppShell } from "@/src/components/app-shell";
-import { SettingsForm, DeleteAccount } from "@/src/components/settings-form";
-import { requireSession } from "@/src/lib/auth/session";
+import { requireAppUser } from "@/src/lib/app-user";
+import { getPlan } from "@/src/lib/billing/plan";
+import { getAppConfig } from "@/src/config/app";
+import { db } from "@/src/lib/db";
+import { account } from "@/src/lib/db/schema";
+import {
+  AnalyticsChoice,
+  DeleteAccount,
+  PasswordForm,
+  PreferencesForm,
+  ProfileForm,
+} from "./forms";
+
+export const metadata: Metadata = { title: "Settings" };
+
 export default async function Page() {
-  const { user } = await requireSession();
+  const { user, profile } = await requireAppUser();
+  const t = await getTranslations("settings");
+  const app = getAppConfig();
+  const plus = (await getPlan(user.id)).plan === "plus";
+  const [credential] = await db()
+    .select({ id: account.id })
+    .from(account)
+    .where(
+      and(eq(account.userId, user.id), eq(account.providerId, "credential")),
+    );
   return (
-    <AppShell title="Account">
-      <h1>A space that feels like you.</h1>
-      <p className="lead">Manage your profile and account preferences.</p>
-      <section className="panel">
-        <h2>Profile</h2>
-        <p className="muted">{user.email} · Verified email</p>
-        <SettingsForm name={user.name} />
+    <AppShell title={t("title")} narrow>
+      <div className="page-title">
+        <h1>{t("title")}</h1>
+        <p className="muted">{user.email}</p>
+      </div>
+      <section className="card stack">
+        <h2>{t("profile")}</h2>
+        <ProfileForm
+          displayName={profile.displayName}
+          username={profile.username}
+          bio={profile.bio}
+          goal={profile.goal}
+          timezone={profile.timezone}
+          avatarUrl={profile.avatarUrl ?? ""}
+          segments={profile.segments}
+          timezones={Intl.supportedValuesOf("timeZone")}
+        />
       </section>
-      <section className="panel">
-        <h2>Analytics preferences</h2>
-        <p>You control optional product analytics.</p>
-        <AnalyticsPreferences />
+      <section className="card stack">
+        <h2>{t("preferences")}</h2>
+        <PreferencesForm
+          emailReminders={profile.emailReminders}
+          pushReminders={profile.pushReminders}
+          microphoneDefault={profile.microphoneDefault}
+          matchSameSegment={profile.matchSameSegment}
+          statsPublic={profile.statsPublic}
+          plus={plus}
+          pushPublicKey={app.pushPublicKey}
+        />
       </section>
-      <section className="panel danger-panel">
-        <h2>Delete account</h2>
-        <p>
-          This permanently deletes your profile and sessions. Accounts connected
-          to billing require a support review to prevent orphaned subscriptions.
-          Google-only accounts should contact support.
-        </p>
-        <DeleteAccount />
+      {credential && (
+        <section className="card stack">
+          <h2>{t("security")}</h2>
+          <PasswordForm />
+        </section>
+      )}
+      {app.analyticsEnabled && (
+        <section className="card stack">
+          <h2>{t("analytics")}</h2>
+          <p className="muted small">{t("analyticsLead")}</p>
+          <AnalyticsChoice />
+        </section>
+      )}
+      <section className="card stack">
+        <h2>{t("data")}</h2>
+        <p className="muted small">{t("dataLead")}</p>
+        <div className="row">
+          <a className="button secondary" href="/api/account/export" download>
+            <Download size={16} /> {t("export")}
+          </a>
+        </div>
+      </section>
+      <section className="card danger stack">
+        <h2>{t("deleteTitle")}</h2>
+        <p className="muted small">{t("deleteLead")}</p>
+        <DeleteAccount hasPassword={Boolean(credential)} />
       </section>
     </AppShell>
   );

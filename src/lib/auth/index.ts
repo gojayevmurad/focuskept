@@ -52,14 +52,23 @@ function createAuth() {
       deleteUser: {
         enabled: true,
         beforeDelete: async (user) => {
-          const [customer] = await db()
+          // Cancel a running subscription first so nobody keeps paying for a deleted account.
+          const now = new Date();
+          const subs = await db()
             .select()
-            .from(schema.billingCustomer)
-            .where(eq(schema.billingCustomer.userId, user.id));
-          if (customer)
+            .from(schema.subscription)
+            .where(eq(schema.subscription.userId, user.id));
+          if (
+            subs.some(
+              (s) =>
+                s.status === "active" &&
+                s.periodEnd > now &&
+                !s.cancelAtPeriodEnd,
+            )
+          )
             throw new APIError("FORBIDDEN", {
               message:
-                "Contact support to settle billing and delete your account.",
+                "Cancel your Plus subscription in Billing first, then delete your account.",
             });
         },
       },

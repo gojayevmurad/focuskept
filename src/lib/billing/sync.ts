@@ -89,7 +89,7 @@ export async function reconcile(
             (s) => s.id === event.resourceId && s.status !== "disabled",
           )
         )
-          name = "subscription_started";
+          name = "upgrade_completed";
         if (
           event.type === "subscription.canceled" &&
           !state.active_subscriptions.some(
