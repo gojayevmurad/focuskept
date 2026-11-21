@@ -25,6 +25,8 @@ jobs:
       BETTER_AUTH_SECRET: isolated-ci-secret-not-used-outside-ci-123456
       APP_URL: http://localhost:3000
       EMAIL_MODE: preview
+      VIDEO_PROVIDER: none
+      BILLING_ENABLED: "false"
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -35,6 +37,7 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm spdx:check
       - run: pnpm typecheck
       - run: pnpm lint
       - run: pnpm test
@@ -47,3 +50,13 @@ jobs:
         with:
           name: test-results
           path: test-results/
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_ENABLE_COMMENTS: "false"

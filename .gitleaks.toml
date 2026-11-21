@@ -1,0 +1,13 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Lockfile, hosted content, and fixed test-only secrets"
+paths = [
+  '''(^|/)pnpm-lock\.yaml$''',
+  '''^content/''',
+]
+regexes = [
+  '''whsec_test-secret''',
+  '''isolated-ci-secret-not-used-outside-ci-123456''',
+]

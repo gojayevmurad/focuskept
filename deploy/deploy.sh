@@ -25,16 +25,16 @@ unset COMPOSE_PROJECT_NAME POSTGRES_DB POSTGRES_USER POSTGRES_PASSWORD APP_ENV_F
 export APP_IMAGE="$image"
 compose=(docker compose --project-name "$project" --env-file .env -f compose.production.yaml)
 "${compose[@]}" config --quiet
-"${compose[@]}" pull app
+"${compose[@]}" pull app worker
 healthy=false
-if "${compose[@]}" up -d --no-deps --wait --wait-timeout 120 app; then
+if "${compose[@]}" up -d --no-deps --wait --wait-timeout 120 app worker; then
  if "${compose[@]}" exec -T app node -e 'fetch("http://127.0.0.1:3000/api/health").then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))'; then healthy=true; fi
 fi
 if [[ "$healthy" != true ]]; then
  echo "Health verification failed" >&2
  if [[ -n "$previous" ]]; then
   export APP_IMAGE="$previous"
-  "${compose[@]}" up -d --no-deps --wait --wait-timeout 120 app
+  "${compose[@]}" up -d --no-deps --wait --wait-timeout 120 app worker
   echo "Previous validated image restored" >&2
  else
   echo "First deployment failed; no previous validated image exists" >&2

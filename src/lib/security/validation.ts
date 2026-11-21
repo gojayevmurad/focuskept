@@ -7,7 +7,7 @@ export const credentialsSchema = z.object({
   email: z.email(),
   password: passwordSchema,
 });
-export function safeRedirect(value: string | undefined) {
+export function safeRedirect(value: string | undefined | null) {
   return value?.startsWith("/") &&
     !value.startsWith("//") &&
     !/[\\\r\n]/.test(value)

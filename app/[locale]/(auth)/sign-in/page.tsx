@@ -1,29 +1,28 @@
-import { connection } from "next/server";
+import type { Metadata } from "next";
 import { Suspense } from "react";
-import { SiteHeader } from "@/src/components/site-header";
+import { connection } from "next/server";
+import { getTranslations } from "next-intl/server";
 import { AuthForm } from "@/src/components/auth-form";
+import { getAppConfig } from "@/src/config/app";
+import { getSession } from "@/src/lib/auth/session";
+import { redirect } from "next/navigation";
+
+export const metadata: Metadata = { title: "Sign in", robots: { index: false } };
+
 export default async function Page() {
   await connection();
+  if ((await getSession())?.user.emailVerified) redirect("/dashboard");
+  const t = await getTranslations("auth");
+  const app = getAppConfig();
   return (
     <>
-      <SiteHeader />
-      <main className="auth-page">
-        <div className="auth-card">
-          <span className="overline">YOUR NEXT CHAPTER</span>
-          <h1>Welcome back.</h1>
-          <p>Your next chapter is right where you left it.</p>
-          <Suspense fallback={<p>Loading form…</p>}>
-            <AuthForm
-              mode="sign-in"
-              google={Boolean(process.env.GOOGLE_CLIENT_ID)}
-            />
-          </Suspense>
-        </div>
-        <p className="auth-legal">
-          By continuing, you agree to our <a href="/terms">Terms</a> and{" "}
-          <a href="/privacy">Privacy Policy</a>.
-        </p>
-      </main>
+      <div className="stack-sm">
+        <h1>{t("signInTitle")}</h1>
+        <p className="muted">{t("signInLead")}</p>
+      </div>
+      <Suspense>
+        <AuthForm mode="sign-in" google={app.googleEnabled} appName={app.name} />
+      </Suspense>
     </>
   );
 }

@@ -3,9 +3,9 @@ import { spawnSync } from "node:child_process";
 if (existsSync(".env.local")) process.loadEnvFile(".env.local");
 const action = process.argv[2];
 const commands = {
-  up: ["up", "-d", "--build", "--wait", "app", "db"],
-  stop: ["stop", "app", "db", "test-db"],
-  logs: ["logs", "-f", "app"],
+  up: ["up", "-d", "--build", "--wait", "app", "db", "worker"],
+  stop: ["stop", "app", "worker", "db", "test-db"],
+  logs: ["logs", "-f", "app", "worker"],
   migrate: ["run", "--rm", "--no-deps", "app", "pnpm", "db:migrate"],
   "test-db": ["--profile", "test", "up", "-d", "test-db"],
 };

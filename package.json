@@ -25,7 +25,9 @@
     "local:test-db": "node scripts/local.mjs test-db",
     "build:worker": "node scripts/build-worker.mjs",
     "worker": "node scripts/build-worker.mjs && node --env-file-if-exists=.env.local --enable-source-maps .worker.cjs",
-    "worker:once": "node scripts/build-worker.mjs && node --env-file-if-exists=.env.local .worker.cjs --once"
+    "worker:once": "node scripts/build-worker.mjs && node --env-file-if-exists=.env.local .worker.cjs --once",
+    "spdx": "node scripts/spdx.mjs",
+    "spdx:check": "node scripts/spdx.mjs --check"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "1.7.8",
@@ -80,5 +82,6 @@
   "engines": {
     "node": ">=24 <25"
   },
-  "type": "module"
+  "type": "module",
+  "license": "AGPL-3.0-only"
 }

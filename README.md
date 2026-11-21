@@ -1,82 +1,76 @@
-# Launchpad
+# FocusKept
 
-A reusable, single-product Next.js SaaS foundation. Public pages work without credentials. Accounts require PostgreSQL; billing stays disabled until configured. No simulated payment is treated as successful.
+FocusKept is an open-source virtual coworking and body doubling app. Book a time, get paired with a partner, say your goal, work on camera, and report back at the end. Sessions last 25, 50, or 75 minutes. Video is never recorded. The product name comes from configuration and defaults to FocusKept.
 
-## Quick start
+## Features
 
-Use Node 24 LTS and pnpm 11.21.0. Create a repository from this GitHub template, then:
+- Scheduled partner matching and hosted group sessions.
+- Session goals, outcomes, reminders, and personal booking links.
+- Favorites, partner preferences, blocks, and reports.
+- Email/password accounts and optional Google sign-in.
+- Optional Polar billing, with billing disabled for self-hosting if desired.
+- Configurable branding, signup access, video provider, and localization.
+
+## Screenshots
+
+Screenshots coming soon.
+
+## Hosted version
+
+Use [focuskept.com](https://focuskept.com).
+
+## Self-hosting quick start
+
+Use Node 24, pnpm 11, and Docker Compose. Setup generates the environment files and project-specific credentials:
 
 ```sh
-corepack enable
-pnpm install --frozen-lockfile
-pnpm setup
-pnpm local:up
-pnpm local:migrate
+pnpm install
+pnpm setup -- --name "My Coworking" --slug my-coworking --domain coworking.example.com --repository yourname/yourrepo
+docker compose --env-file .env.local up
 ```
 
-`setup` generates branding, a unique Compose identity, slug-derived default port ranges and independent local/production credentials. The pinned pnpm 11 supports `pnpm setup`; for arguments use `pnpm setup -- --name ...` or `pnpm run setup --name ...`. See [START_NEW_SAAS.md](START_NEW_SAAS.md) for the concise Azerbaijani guide, first provisioning and daily deployment.
+In another terminal, run `pnpm local:migrate` to apply migrations. See [SELF_HOSTING.md](SELF_HOSTING.md) for deployment and video configuration.
 
-Both Next.js and PostgreSQL run in Docker by default. Open the URL printed by setup. Register, run `pnpm email:inbox`, open the verification URL, and sign in. The local inbox contains sensitive short-lived links; it has no public HTTP endpoint. Preview mode never sends real mail. `pnpm local:stop` retains database volumes. For host-side Next.js, stop the Docker app first and use `pnpm dev` with the same generated configuration.
+## Development
 
-## Commands
-
-| Command                 | Purpose                                                 |
-| ----------------------- | ------------------------------------------------------- |
-| `pnpm setup`            | Initialize branding, domains and isolated configuration |
-| `pnpm local:up`         | Start Next.js and PostgreSQL in Docker                  |
-| `pnpm local:migrate`    | Explicit local migration inside Docker                  |
-| `pnpm local:stop`       | Stop local containers, keep volumes                     |
-| `pnpm dev`              | Local application                                       |
-| `pnpm typecheck`        | Strict TypeScript                                       |
-| `pnpm lint`             | ESLint                                                  |
-| `pnpm test`             | Unit tests                                              |
-| `pnpm test:integration` | Webhook and optional isolated database tests            |
-| `pnpm test:e2e`         | Browser tests                                           |
-| `pnpm build`            | Production standalone build                             |
-| `pnpm db:generate`      | Generate SQL for review                                 |
-| `pnpm db:migrate`       | Explicit migration execution                            |
-| `pnpm email:inbox`      | Development verification/reset URLs                     |
-| `pnpm format`           | Format source                                           |
-
-Stop an existing server on port 3000 before browser tests; Playwright starts its own isolated application. For complete database tests:
+After installation and setup:
 
 ```sh
+pnpm local:up
+pnpm local:migrate
+pnpm worker
+```
+
+The worker runs in its own terminal. `local:up` starts the app and PostgreSQL in Docker. To run Next.js on the host, stop the Docker app with `docker compose --env-file .env.local stop app`, then run `pnpm dev` in another terminal.
+
+Run checks and tests with:
+
+```sh
+pnpm spdx:check
+pnpm typecheck
+pnpm lint
+pnpm test
 pnpm local:test-db
 pnpm test:integration
 pnpm exec playwright install chromium
 pnpm test:e2e
 ```
 
-Integration tests load the local test URL and apply version-controlled migrations to the `_test` database only. The E2E wrapper explicitly points the application to that same isolated test database. Never configure test URLs against production. The test database is disposable (tmpfs). Without a configured test database, database-dependent integration cases are explicitly skipped. CI supplies its own ephemeral test database without setup secrets.
+Integration and browser tests use an isolated database whose name ends in `_test`. Stop the app using port 3000 before browser tests; Playwright starts its own server.
 
-## What is included
+## Tech stack
 
-- Email/password authentication, verification, password resets, optional Google login, sessions, profile/security settings, and guarded deletion.
-- Polar sandbox checkout, customer portal/cancellation, signed webhooks, transactional event deduplication, and authoritative entitlement reconciliation.
-- Consent-gated PostHog helpers, Pino JSON logs, Sentry client/server capture.
-- Responsive landing, pricing, auth, dashboard, billing, settings, and a server-protected premium sample.
-- Drizzle SQL migrations, Docker standalone image, private PostgreSQL networking, GHCR workflows, health verification and rollback script.
+- Next.js 16, React, and TypeScript.
+- PostgreSQL and Drizzle ORM.
+- Better Auth and Polar.
+- pg-boss background worker.
+- Cloudflare Realtime or LiveKit for video.
+- next-intl for localization.
 
-## Repository map
+## Contributing
 
-```text
-app/                 App Router pages and HTTP endpoints
-src/components/      Shared interface and shadcn-style owned primitives
-src/config/          Branding and validated runtime configuration
-src/lib/auth/        Better Auth and server session helpers
-src/lib/billing/     Provider boundary, transactions and entitlement policy
-src/lib/db/          PostgreSQL connection and explicit Drizzle schema
-src/lib/email/       Resend and React Email
-src/lib/analytics/   Typed, consent-aware tracking helpers
-src/lib/security/    Validation and origin checks
-drizzle/             Reviewed SQL migrations and snapshots
-tests/               Unit, integration and Playwright tests
-deploy/              Production Compose and rollout script
-.github/workflows/   PR quality and approved production deployment
-```
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, checks, and pull requests.
 
-See [START_NEW_SAAS.md](START_NEW_SAAS.md), [ARCHITECTURE.md](ARCHITECTURE.md), [BILLING.md](BILLING.md), [ANALYTICS.md](ANALYTICS.md), [SECURITY.md](SECURITY.md), [DEPLOYMENT.md](DEPLOYMENT.md), [INIT_PROMPT.md](INIT_PROMPT.md), and [VERIFICATION.md](VERIFICATION.md).
+## License
 
-## Before launch
-
-Set product branding and support contact, replace legal placeholders and illustrative prices, configure verified email delivery, connect sandbox billing and test its complete lifecycle, configure consent and monitoring, run CI, back up PostgreSQL and rehearse restore/rollback. The repository is a foundation, not a certification of production readiness.
+[AGPL-3.0-only](LICENSE).

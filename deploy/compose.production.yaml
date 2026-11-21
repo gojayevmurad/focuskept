@@ -23,6 +23,51 @@ services:
     logging:
       driver: json-file
       options: { max-size: "10m", max-file: "3" }
+  worker:
+    image: ${APP_IMAGE:?Set immutable GHCR image digest}
+    command: ["node", "--enable-source-maps", "worker.cjs"]
+    restart: unless-stopped
+    init: true
+    env_file: ["${APP_ENV_FILE:?Set absolute runtime env file path}"]
+    # private reaches the database; egress reaches Resend, Polar and Cloudflare.
+    networks: ["private", "egress"]
+    depends_on:
+      db:
+        condition: service_healthy
+    # The image health check probes the web server, which this process does not run.
+    healthcheck:
+      disable: true
+    mem_limit: 384m
+    cpus: 1.0
+    stop_grace_period: 30s
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+  livekit:
+    image: livekit/livekit-server:v1.9.11
+    profiles: ["livekit"]
+    restart: unless-stopped
+    command: ["--config", "/etc/livekit.yaml"]
+    volumes:
+      - type: bind
+        source: ./livekit.yaml
+        target: /etc/livekit.yaml
+        read_only: true
+        bind:
+          create_host_path: false
+    networks:
+      proxy:
+        aliases: ["${APP_PROXY_ALIAS:?Set unique Caddy upstream alias}-livekit"]
+    ports:
+      - "7881:7881/tcp"
+      - "50000-50200:50000-50200/udp"
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
   db:
     image: postgres:18.6-bookworm
     restart: unless-stopped
@@ -45,6 +90,7 @@ services:
 networks:
   private:
     internal: true
+  egress: {}
   proxy:
     external: true
 volumes:

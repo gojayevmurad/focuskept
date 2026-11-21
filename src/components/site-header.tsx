@@ -1,32 +1,46 @@
-import Link from "next/link";
-import { Layers2, ArrowUpRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import { getAppConfig } from "@/src/config/app";
+import { getSession } from "@/src/lib/auth/session";
+import { Link } from "@/src/i18n/navigation";
+import { Logo } from "./logo";
 import { ThemeToggle } from "./theme-toggle";
-import { brand } from "@/src/config/brand";
-export function SiteHeader() {
+
+export async function SiteHeader() {
+  const t = await getTranslations("site");
+  const c = await getTranslations("common");
+  const app = getAppConfig();
+  const session = await getSession().catch(() => null);
   return (
     <header className="site-header">
-      <Link href="/" className="logo">
-        <span className="logo-mark">
-          <Layers2 size={21} />
-        </span>
-        {brand.name}
-        <span className="logo-label">STARTER</span>
-      </Link>
-      <nav aria-label="Main navigation">
-        <Link href="/#foundation">Foundation</Link>
-        <Link href="/pricing">Pricing</Link>
-        <Link href="/#quickstart">
-          Quick start <ArrowUpRight size={13} />
-        </Link>
-      </nav>
-      <div className="header-actions">
-        <ThemeToggle />
-        <Link href="/sign-in" className="sign-in-link">
-          Sign in
-        </Link>
-        <Link href="/sign-up" className="button small">
-          Get started <ArrowUpRight size={15} />
-        </Link>
+      <div className="site-header-inner">
+        <Logo name={app.name} logoUrl={app.logoUrl} />
+        <nav aria-label={app.name}>
+          {app.marketingEnabled && (
+            <>
+              <Link href="/how-it-works">{t("how")}</Link>
+              {app.billingEnabled && <Link href="/pricing">{t("pricing")}</Link>}
+              <Link href="/faq">{t("faq")}</Link>
+              <Link href="/blog">{t("blog")}</Link>
+            </>
+          )}
+        </nav>
+        <div className="header-actions">
+          <ThemeToggle />
+          {session ? (
+            <Link href="/dashboard" className="button small">
+              {c("dashboard")}
+            </Link>
+          ) : (
+            <>
+              <Link href="/sign-in" className="button ghost small">
+                {c("signIn")}
+              </Link>
+              <Link href="/sign-up" className="button small">
+                {c("getStarted")}
+              </Link>
+            </>
+          )}
+        </div>
       </div>
     </header>
   );

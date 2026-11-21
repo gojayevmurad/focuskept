@@ -1,4 +1,4 @@
-import { it, expect } from "vitest";
+import { it, expect, vi } from "vitest";
 import {
   mkdtempSync,
   writeFileSync,
@@ -47,13 +47,19 @@ function fixture(previous = image("a"), failure = "") {
   };
 }
 it.each(["startup", "health"])(
-  "restores previous validated app after %s failure without touching PostgreSQL or volumes",
+  "restores previous validated app and worker after %s failure without touching PostgreSQL or volumes",
   (failure) => {
     const f = fixture(image("a"), failure);
     try {
       expect(f.run(image("b")).status).toBe(1);
       expect(f.calls()).toContain(image("a") + " compose");
-      expect(f.calls()).toContain("--no-deps --wait");
+      expect(f.calls()).toContain("pull app worker");
+      expect(f.calls()).toContain(
+        `${image("b")} compose --project-name example-prod --env-file .env -f compose.production.yaml up -d --no-deps --wait --wait-timeout 120 app worker`,
+      );
+      expect(f.calls()).toContain(
+        `${image("a")} compose --project-name example-prod --env-file .env -f compose.production.yaml up -d --no-deps --wait --wait-timeout 120 app worker`,
+      );
       expect(f.calls()).not.toMatch(/down|migrate|up .* db/);
       expect(readFileSync(join(f.dir, ".validated-image"), "utf8")).toBe(
         image("a"),
@@ -133,5 +139,75 @@ it("rejects mutable image tags before touching deployment state", () => {
     expect(f.calls()).toBe("");
   } finally {
     f.cleanup();
+  }
+});
+
+const healthDb = vi.hoisted(() => ({
+  execute: vi.fn(),
+  limit: vi.fn(),
+}));
+vi.mock("@/src/config/env", () => ({ getEnv: vi.fn() }));
+vi.mock("@/src/lib/db", () => ({
+  db: () => ({
+    execute: healthDb.execute,
+    select: () => ({
+      from: () => ({ where: () => ({ limit: healthDb.limit }) }),
+    }),
+  }),
+}));
+
+it.each([
+  ["recent", new Date().toISOString(), "ok"],
+  ["old", new Date(Date.now() - 181_000).toISOString(), "stale"],
+  ["missing", undefined, "unknown"],
+  ["invalid", "invalid-timestamp", "unknown"],
+  ["non-string", 123, "unknown"],
+])(
+  "reports a %s worker heartbeat without failing web health",
+  async (_, value, worker) => {
+    vi.stubEnv("DATABASE_URL", "postgres://health-test");
+    healthDb.execute.mockResolvedValueOnce([]);
+    healthDb.limit.mockResolvedValueOnce(
+      value === undefined ? [] : [{ value }],
+    );
+    try {
+      const { GET } = await import("../../app/api/health/route");
+      const response = await GET();
+      expect(response.status).toBe(200);
+      expect(await response.json()).toEqual({
+        status: "ok",
+        database: "connected",
+        worker,
+      });
+    } finally {
+      vi.unstubAllEnvs();
+    }
+  },
+);
+
+it("keeps web health available when the heartbeat query fails", async () => {
+  vi.stubEnv("DATABASE_URL", "postgres://health-test");
+  healthDb.execute.mockResolvedValueOnce([]);
+  healthDb.limit.mockRejectedValueOnce(new Error("heartbeat unavailable"));
+  try {
+    const { GET } = await import("../../app/api/health/route");
+    const response = await GET();
+    expect(response.status).toBe(200);
+    expect((await response.json()).worker).toBe("unknown");
+  } finally {
+    vi.unstubAllEnvs();
+  }
+});
+
+it("preserves database failure health responses", async () => {
+  vi.stubEnv("DATABASE_URL", "postgres://health-test");
+  healthDb.execute.mockRejectedValueOnce(new Error("database unavailable"));
+  try {
+    const { GET } = await import("../../app/api/health/route");
+    const response = await GET();
+    expect(response.status).toBe(503);
+    expect(await response.json()).toEqual({ status: "unhealthy" });
+  } finally {
+    vi.unstubAllEnvs();
   }
 });

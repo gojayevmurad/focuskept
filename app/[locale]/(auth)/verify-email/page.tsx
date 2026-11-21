@@ -1,23 +1,20 @@
-import { SiteHeader } from "@/src/components/site-header";
-import Link from "next/link";
+import type { Metadata } from "next";
 import { MailCheck } from "lucide-react";
-export default function Page() {
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/src/i18n/navigation";
+
+export const metadata: Metadata = { title: "Check your inbox", robots: { index: false } };
+
+export default async function Page() {
+  const t = await getTranslations("auth");
   return (
     <>
-      <SiteHeader />
-      <main className="auth-page">
-        <div className="auth-card">
-          <MailCheck size={36} />
-          <h1>Check your inbox.</h1>
-          <p>
-            Open the verification link in your email, then sign in to your
-            workspace. Development emails are stored in the local inbox.
-          </p>
-          <Link href="/sign-in" className="button">
-            Continue to sign in
-          </Link>
-        </div>
-      </main>
+      <MailCheck size={34} color="var(--accent)" />
+      <h1>{t("verifyTitle")}</h1>
+      <p className="muted">{t("verifyLead")}</p>
+      <Link href="/sign-in" className="button full">
+        {t("continueSignIn")}
+      </Link>
     </>
   );
 }

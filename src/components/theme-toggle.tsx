@@ -1,20 +1,34 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
-import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { useSyncExternalStore } from "react";
+
+function subscribe(callback: () => void) {
+  const observer = new MutationObserver(callback);
+  observer.observe(document.documentElement, { attributeFilter: ["data-theme"] });
+  return () => observer.disconnect();
+}
+
 export function ThemeToggle() {
-  const [dark, setDark] = useState(false);
+  const t = useTranslations("common");
+  const dark = useSyncExternalStore(
+    subscribe,
+    () => document.documentElement.dataset.theme === "dark",
+    () => false,
+  );
   return (
     <button
-      className="icon-button"
-      aria-label="Toggle color theme"
+      className="button ghost small icon"
+      aria-label={t("theme")}
       onClick={() => {
-        const next = document.documentElement.dataset.theme !== "dark";
-        setDark(next);
-        document.documentElement.dataset.theme = next ? "dark" : "light";
-        localStorage.setItem("theme", next ? "dark" : "light");
+        const next = dark ? "light" : "dark";
+        document.documentElement.dataset.theme = next;
+        try {
+          localStorage.setItem("theme", next);
+        } catch {}
       }}
     >
-      {dark ? <Sun size={18} /> : <Moon size={18} />}
+      {dark ? <Sun size={17} /> : <Moon size={17} />}
     </button>
   );
 }
