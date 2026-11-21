@@ -1,5 +1,7 @@
+// Defaults only. Deployments override these with APP_NAME, SUPPORT_EMAIL and LOGO_URL.
 export const brand = {
-  name: "Launchpad",
-  description: "A considered foundation for your next idea.",
-  supportEmail: "support@example.com",
+  name: "FocusKept",
+  description:
+    "Book a time, get paired with a partner, and get your work done together.",
+  supportEmail: "support@focuskept.com",
 };

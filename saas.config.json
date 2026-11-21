@@ -1,0 +1,12 @@
+{
+  "name": "FocusKept",
+  "slug": "focuskept",
+  "domain": "focuskept.com",
+  "repository": "gojayevmurad/focuskept",
+  "description": "Book a time, get paired with a partner, and get your work done together.",
+  "color": "#2F6F62",
+  "port": 7515,
+  "dbPort": 24515,
+  "testDbPort": 44515,
+  "deployPath": "/srv/saas/focuskept/deploy"
+}

@@ -1,8 +1,8 @@
 :root {
-  --accent: #7461d9;
-  --accent-hover: #6250c7;
+  --accent: #2f6f62;
+  --accent-hover: color-mix(in srgb, #2f6f62, black 12%);
 }
 [data-theme="dark"] {
-  --accent: #a28bec;
-  --accent-hover: #b29bf5;
+  --accent: color-mix(in srgb, #2f6f62, white 28%);
+  --accent-hover: color-mix(in srgb, #2f6f62, white 40%);
 }

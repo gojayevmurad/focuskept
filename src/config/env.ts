@@ -4,6 +4,16 @@ const optional = z.preprocess(
   (v) => (v === "" ? undefined : v),
   z.string().optional(),
 );
+const flag = (fallback: boolean) =>
+  z.preprocess(
+    (v) => (v === "" || v === undefined ? fallback : v === "true" || v === "1"),
+    z.boolean(),
+  );
+const count = (fallback: number) =>
+  z.preprocess(
+    (v) => (v === "" || v === undefined ? fallback : Number(v)),
+    z.number().int().min(0),
+  );
 export const envSchema = z
   .object({
     NODE_ENV: z
@@ -29,6 +39,33 @@ export const envSchema = z
       .default("info"),
     SENTRY_DSN: optional,
     SENTRY_RELEASE: optional,
+    // Product and self-hosting switches
+    APP_NAME: z.string().min(1).default("FocusKept"),
+    LOGO_URL: optional,
+    SUPPORT_EMAIL: optional,
+    BILLING_ENABLED: flag(false),
+    ANALYTICS_ENABLED: flag(false),
+    MARKETING_ENABLED: flag(true),
+    SIGNUPS_MODE: z.enum(["open", "invite", "closed"]).default("open"),
+    ADMIN_EMAILS: optional,
+    FREE_WEEKLY_SESSIONS: count(3),
+    HOST_PERK_SESSIONS: count(8),
+    HOST_MIN_SESSIONS: count(10),
+    // Video
+    VIDEO_PROVIDER: z.enum(["cloudflare", "livekit", "none"]).default("none"),
+    CLOUDFLARE_REALTIME_APP_ID: optional,
+    CLOUDFLARE_REALTIME_APP_TOKEN: optional,
+    CLOUDFLARE_TURN_KEY_ID: optional,
+    CLOUDFLARE_TURN_KEY_TOKEN: optional,
+    CLOUDFLARE_ACCOUNT_ID: optional,
+    CLOUDFLARE_ANALYTICS_TOKEN: optional,
+    VIDEO_USAGE_ALERT_GB: count(800),
+    LIVEKIT_URL: optional,
+    LIVEKIT_API_KEY: optional,
+    LIVEKIT_API_SECRET: optional,
+    // Web push
+    VAPID_PUBLIC_KEY: optional,
+    VAPID_PRIVATE_KEY: optional,
   })
   .superRefine((v, ctx) => {
     const issue = (message: string) =>
@@ -47,6 +84,22 @@ export const envSchema = z
       if (v.EMAIL_MODE !== "send")
         issue("Production authentication requires EMAIL_MODE=send");
     }
+    if (v.NODE_ENV === "production" && v.VIDEO_PROVIDER === "none")
+      issue("VIDEO_PROVIDER=none is for development only");
+    if (
+      v.VIDEO_PROVIDER === "cloudflare" &&
+      (!v.CLOUDFLARE_REALTIME_APP_ID || !v.CLOUDFLARE_REALTIME_APP_TOKEN)
+    )
+      issue("Cloudflare video requires CLOUDFLARE_REALTIME_APP_ID and _TOKEN");
+    if (
+      v.VIDEO_PROVIDER === "livekit" &&
+      (!v.LIVEKIT_URL || !v.LIVEKIT_API_KEY || !v.LIVEKIT_API_SECRET)
+    )
+      issue("LiveKit video requires LIVEKIT_URL, _API_KEY and _API_SECRET");
+    if (Boolean(v.VAPID_PUBLIC_KEY) !== Boolean(v.VAPID_PRIVATE_KEY))
+      issue("Configure both VAPID keys");
+    if (v.BILLING_ENABLED && !v.POLAR_ACCESS_TOKEN)
+      issue("BILLING_ENABLED=true requires Polar credentials");
     if (v.EMAIL_MODE === "send" && !v.RESEND_API_KEY)
       issue("RESEND_API_KEY is required to send email");
     if (Boolean(v.GOOGLE_CLIENT_ID) !== Boolean(v.GOOGLE_CLIENT_SECRET))
@@ -57,6 +110,7 @@ export const envSchema = z
     )
       issue("Polar requires webhook secret and Pro benefit ID");
   });
-export function getEnv() {
+export type Env = z.infer<typeof envSchema>;
+export function getEnv(): Env {
   return envSchema.parse(process.env);
 }
