@@ -1,0 +1,35 @@
+import { matchDueSlots, offerFallbacks } from "@/src/lib/matching/run";
+import {
+  bookingsNeedingReminder,
+  completeEndedSessions,
+} from "@/src/lib/sessions/lifecycle";
+import { sessionReminder } from "@/src/lib/notifications";
+import { retryReferralRewards } from "@/src/lib/growth/referrals";
+import { REMINDER_LEAD_MIN } from "@/src/lib/scheduling/slots";
+import { updateHostPerks } from "@/src/lib/hosts/perks";
+import { checkVideoUsage } from "@/src/lib/video/usage";
+import { cleanup, heartbeat } from "./maintenance";
+import { logger } from "@/src/lib/logger";
+
+/** Everything time-based that must happen within the minute. Each step is idempotent. */
+export async function minuteTick(now = new Date()) {
+  const matched = await matchDueSlots(now);
+  const fallbacks = await offerFallbacks(now);
+  let reminders = 0;
+  for (const b of await bookingsNeedingReminder(now, REMINDER_LEAD_MIN)) {
+    await sessionReminder(b.id);
+    reminders++;
+  }
+  const completed = await completeEndedSessions(now);
+  await heartbeat(now);
+  const summary = { matched, fallbacks, reminders, ...completed };
+  if (matched || fallbacks || completed.ended) logger.info(summary, "Tick");
+  return summary;
+}
+
+export async function dailyTick(now = new Date()) {
+  await retryReferralRewards();
+  await updateHostPerks(now);
+  await checkVideoUsage(now);
+  await cleanup(now);
+}

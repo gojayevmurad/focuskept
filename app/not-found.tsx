@@ -1,12 +1,16 @@
-import Link from "next/link";
+import "./globals.css";
+
 export default function NotFound() {
   return (
-    <main className="empty-state">
-      <span className="overline">404 · A SMALL DETOUR</span>
-      <h1>This page hasn’t taken off.</h1>
-      <Link href="/" className="button">
-        Back to the beginning
-      </Link>
-    </main>
+    <html lang="en">
+      <body>
+        <main className="empty-state">
+          <h1>Page not found</h1>
+          <a className="button" href="/">
+            Go home
+          </a>
+        </main>
+      </body>
+    </html>
   );
 }

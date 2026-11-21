@@ -7,6 +7,7 @@ import { db } from "@/src/lib/db";
 import * as schema from "@/src/lib/db/schema";
 import { sendAuthEmail } from "@/src/lib/email/send";
 import { eq } from "drizzle-orm";
+import { getProfileByReferralCode, REFERRAL_COOKIE } from "@/src/lib/profiles";
 function createAuth() {
   const env = getEnv();
   return betterAuth({
@@ -31,6 +32,23 @@ function createAuth() {
         sendAuthEmail(user.email, url, "verification"),
     },
     user: {
+      // SIGNUPS_MODE: "closed" blocks new accounts, "invite" needs a valid invite cookie.
+      validateUserInfo: async ({ source }, context) => {
+        if (source.action !== "create-user") return;
+        const mode = getEnv().SIGNUPS_MODE;
+        if (mode === "open") return;
+        if (mode === "closed")
+          return {
+            error: "signups_closed",
+            errorDescription: "New accounts are not open right now.",
+          };
+        const code = context.getCookie?.(REFERRAL_COOKIE);
+        if (!code || !(await getProfileByReferralCode(code)))
+          return {
+            error: "invite_required",
+            errorDescription: "You need an invite link to create an account.",
+          };
+      },
       deleteUser: {
         enabled: true,
         beforeDelete: async (user) => {

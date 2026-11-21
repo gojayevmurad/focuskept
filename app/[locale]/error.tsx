@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 import * as Sentry from "@sentry/nextjs";
+
 export default function ErrorPage({
   error,
   reset,
@@ -8,15 +10,16 @@ export default function ErrorPage({
   error: Error;
   reset: () => void;
 }) {
+  const t = useTranslations("errors");
   useEffect(() => {
     Sentry.captureException(error);
   }, [error]);
   return (
     <main className="empty-state">
-      <h1>Something didn’t go as planned.</h1>
-      <p>Please try again in a moment.</p>
+      <h1>{t("generic")}</h1>
+      <p>{t("tryAgainLater")}</p>
       <button className="button" onClick={reset}>
-        Try again
+        {t("retry")}
       </button>
     </main>
   );

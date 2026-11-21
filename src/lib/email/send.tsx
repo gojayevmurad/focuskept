@@ -54,3 +54,41 @@ export async function sendAuthEmail(
     throw new Error("Email could not be sent");
   }
 }
+
+/** Product email. In preview mode the message is stored for `pnpm email:inbox`. */
+export async function sendEmail(input: {
+  to: string;
+  subject: string;
+  kind: string;
+  /** Main link in the message; shown in the local inbox. */
+  url: string;
+  text: string;
+  react: React.ReactElement;
+}) {
+  const env = getEnv();
+  if (env.EMAIL_MODE === "preview") {
+    await db().insert(emailPreview).values({
+      id: crypto.randomUUID(),
+      recipient: input.to,
+      url: input.url,
+      kind: input.kind,
+      subject: input.subject,
+      body: input.text,
+    });
+    return;
+  }
+  const result = await new Resend(env.RESEND_API_KEY).emails.send({
+    from: env.EMAIL_FROM,
+    to: input.to,
+    subject: input.subject,
+    react: input.react,
+    text: input.text,
+  });
+  if (result.error) {
+    logger.error(
+      { code: result.error.name, kind: input.kind },
+      "Email delivery failed",
+    );
+    throw new Error("Email could not be sent");
+  }
+}
