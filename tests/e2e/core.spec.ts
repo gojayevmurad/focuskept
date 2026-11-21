@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-import { execFileSync } from "node:child_process";
 import { test, expect } from "@playwright/test";
 import {
   PASSWORD,
@@ -84,21 +83,14 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
     ).toBeDisabled();
     await page.keyboard.press("Escape");
 
-    // Upgrade through a signed fixture webhook, then the limit is gone.
+    // Upgrade: the webhook path is covered by the integration tests, so here we
+    // only grant the entitlement it would write and check the limit is gone.
     const { rows } = await pool.query('select id from "user" where email=$1', [
       email,
     ]);
-    execFileSync(
-      process.execPath,
-      [
-        "node_modules/vitest/vitest.mjs",
-        "run",
-        "tests/integration/paid-access.test.ts",
-      ],
-      {
-        env: { ...process.env, E2E_GRANT_USER_ID: rows[0].id },
-        timeout: 30_000,
-      },
+    await pool.query(
+      "insert into entitlement (user_id, pro, valid_until, source) values ($1, true, now() + interval '15 minutes', 'polar') on conflict (user_id) do update set pro = true, valid_until = excluded.valid_until",
+      [rows[0].id],
     );
     await page.reload();
     await book(32);
