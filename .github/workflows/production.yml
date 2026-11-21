@@ -59,7 +59,7 @@ jobs:
           fi
           echo "sha=$CANDIDATE" >> "$GITHUB_OUTPUT"
           echo "mode=$MODE" >> "$GITHUB_OUTPUT"
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ steps.gate.outputs.sha }}
           persist-credentials: false
@@ -99,7 +99,7 @@ jobs:
     environment: production
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.image.outputs.sha }}
           persist-credentials: false
@@ -117,7 +117,7 @@ jobs:
     if: needs.image.outputs.mode == 'manual' && github.event_name == 'workflow_dispatch' && inputs.provision_only != true
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.image.outputs.sha }}
           persist-credentials: false
