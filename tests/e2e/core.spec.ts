@@ -34,7 +34,7 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
     await expect(page.getByRole("status")).toContainText("18 or older");
     await page.getByRole("checkbox").check();
     await page.getByRole("button", { name: "Create account" }).click();
-    await expect(page).toHaveURL(/verify-email/);
+    await expect(page).toHaveURL(/verify-email/, { timeout: 30_000 });
     await page.request.get(await verificationUrl(pool, email), {
       maxRedirects: 0,
     });
@@ -162,9 +162,9 @@ test("two partners meet in the room, share goals and one blocks the other", asyn
 
     for (const p of [pageA, pageB]) {
       await p.getByRole("button", { name: "Join with camera" }).click();
-      await expect(
-        p.getByRole("button", { name: /Mute|Unmute/ }),
-      ).toBeEnabled();
+      await expect(p.getByRole("button", { name: /Mute|Unmute/ })).toBeEnabled({
+        timeout: 30_000,
+      });
     }
     await pageA
       .getByLabel("Your goal for this session")

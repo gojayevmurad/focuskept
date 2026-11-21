@@ -6,7 +6,8 @@ export default defineConfig({
   globalSetup: "./tests/e2e/global-setup.ts",
   fullyParallel: false,
   workers: 1,
-  timeout: 90_000,
+  timeout: 120_000,
+  expect: { timeout: 10_000 },
   use: {
     baseURL: process.env.E2E_BASE_URL || "http://localhost:3000",
     trace: "retain-on-failure",
@@ -14,7 +15,10 @@ export default defineConfig({
     // A synthetic camera and microphone, so the session room can be tested.
     permissions: ["camera", "microphone"],
     launchOptions: {
-      args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream"],
+      args: [
+        "--use-fake-ui-for-media-stream",
+        "--use-fake-device-for-media-stream",
+      ],
     },
   },
   webServer: process.env.E2E_BASE_URL

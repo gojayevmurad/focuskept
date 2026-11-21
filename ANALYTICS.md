@@ -1,33 +1,21 @@
 # Analytics
 
-PostHog is disabled without a public key. Set the correct regional public ingestion host. Client initialization waits for explicit consent; autocapture, pageview/pageleave capture and session recording are disabled. Typed helpers accept a small property allowlist and identify users using internal IDs, never email addresses. Logout resets identity. Clearing site storage reopens consent; authenticated users can also change their preferences in Account settings.
+Product analytics use PostHog and are off unless `ANALYTICS_ENABLED=true` and `NEXT_PUBLIC_POSTHOG_KEY` are set. Even then nothing is captured until the person allows it: the consent banner and Settings store the choice locally and on the account. Autocapture, page views and session recording are disabled. People are identified by internal id, never by email. Withdrawing consent deletes queued billing events.
 
 ## Events
 
-| Event                 | Intended authority                                |
-| --------------------- | ------------------------------------------------- |
-| user_signed_up        | Successful registration                           |
-| user_logged_in        | Successful email login                            |
-| onboarding_completed  | Product-defined completed onboarding              |
-| checkout_started      | Server created checkout, browser leaves for Polar |
-| payment_completed     | Validated provider payment only                   |
-| subscription_started  | Validated provider transition only                |
-| subscription_canceled | Validated provider transition only                |
-| core_action_completed | Product-defined successful action                 |
+| Event                  | Sent when                                            |
+| ---------------------- | ---------------------------------------------------- |
+| `signup`               | Account created (browser)                            |
+| `onboarding_completed` | Onboarding saved (server)                            |
+| `booking_created`      | A booking is created (server)                        |
+| `session_matched`      | A person first joins a matched session room (server) |
+| `session_completed`    | The worker closes a session the person attended      |
+| `session_quality`      | The room sends WebRTC stats when someone leaves      |
+| `upgrade_started`      | Checkout created (server)                            |
+| `upgrade_completed`    | Polar confirms an active subscription (webhook)      |
+| `referral_sent`        | Invite link copied                                   |
+| `referral_converted`   | An invited person finishes their first session       |
+| `share_card_created`   | A share card is downloaded or shared                 |
 
-The starter emits successful signup, login and checkout events. Product-defined onboarding/core actions have no business behavior until you add a product. Billing hooks emit `payment_completed`, `subscription_started` and `subscription_canceled` from validated notifications after authoritative provider checks. They are never emitted on checkout return.
-
-Authenticated consent is persisted in PostgreSQL through a session- and origin-protected endpoint. Settings includes a permanent preference control. Billing writes pending analytics records in the same transaction as the completed provider event. Delivery happens after commit, with a deterministic UUID for PostHog deduplication. A delivery failure returns 503; provider retry deduplicates the payment mutation and retries pending analytics. Consent withdrawal deletes pending records. No consent or no key means no server capture. Webhook retry exhaustion requires operator redelivery; this small starter intentionally has no background queue.
-
-Enable `customer.state_changed`, `order.paid`, `subscription.active`, and `subscription.canceled` on the Polar webhook endpoint. Revenue and subscription reporting belongs in Polar. A delayed already-refunded order is not reported as a new successful payment.
-
-## Dashboards
-
-- Registrations: unique users with `user_signed_up`, all time and daily trend.
-- DAU/WAU/MAU: unique identified users with a meaningful product activity event over 1/7/30 days. Login alone is not a good activity definition.
-- Activation: signup → `onboarding_completed` funnel with a defined time window.
-- Signup-to-paid: signup → authoritative `payment_completed` funnel with consent/deduplication.
-- Retention: cohort returning to `core_action_completed` weekly.
-- Feature usage: counts and unique users by allowlisted `feature` property.
-
-Consented cohorts are incomplete by design. Do not present PostHog revenue estimates as accounting records. Use Polar for financial truth. Avoid duplicate captures across both server and client for a single event.
+These map to the metrics we track: activation (sessions in the first 24 hours), match rate (also shown in the admin panel from our own tables), W4 retention, free to Plus conversion, sessions per user per week and the referral K-factor.

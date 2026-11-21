@@ -1,28 +1,33 @@
 # Billing
 
-## Configure the sandbox
+Billing is optional. With `BILLING_ENABLED=false` everyone gets every feature and no payment UI is shown.
 
-Create a separate Polar sandbox organization and organization token. Create fixed-price monthly, yearly and one-time products. Attach the SAME custom Pro benefit to each. Set product IDs, `POLAR_PRO_BENEFIT_ID`, token and webhook signing secret. Keep `POLAR_ENVIRONMENT=sandbox` during development.
+## Plans
 
-Create a **2026-10** webhook endpoint at `/api/webhooks/polar`, with `customer.state_changed`, `order.paid`, `subscription.active` and `subscription.canceled` enabled. The official SDK verifies the raw body, signature and timestamp. Unknown, invalid or unsigned payloads are rejected. Other valid event types are acknowledged and ignored; fresh customer state is the entitlement authority for every handled event. Billing analytics uses a consent-aware transactional outbox.
+- **Free**: 3 sessions per local week (`FREE_WEEKLY_SESSIONS`), matching, streaks.
+- **Plus**: unlimited sessions, favorite partners, advanced matching filters. Monthly and yearly products in Polar, both with a 7 day trial.
 
-## Lifecycle
+Prices live only in Polar; the pricing page reads them at runtime. People can also get Plus without paying: house accounts, the monthly host perk and group licences (see `src/lib/billing/plan.ts`).
 
-1. An authenticated, verified user selects an allowlisted plan key. The server looks up the product and derives the external customer ID from the session. Client amounts and user IDs are never accepted.
-2. Polar hosts checkout. The success URL only displays a return state and never grants access.
-3. A signed customer-state notification acquires a PostgreSQL advisory lock for that user. The handler checks event deduplication, fetches fresh authoritative state from Polar, replaces the subscription snapshot, updates the entitlement lease, and records completion in the SAME transaction.
-4. A duplicate returns success. Delayed/out-of-order notifications fetch current state rather than applying old payload state. Fetch or database failures roll back everything and return 503 for provider retries. The lock is acquired before fetching, preventing concurrent stale snapshots from overwriting newer ones.
-5. Active benefit grants determine Pro access. This handles one-time purchases, refunds, payment failure, revocation and subscription expiration according to Polar's current benefit state. Cancellation at period end can retain access while the benefit remains granted. The customer portal owns cancellation, invoices and payment-method changes.
-6. Server entitlement checks accept only a current lease. An expired lease is reconciled; provider failures deny access. No benefit record means Free. Refund revocation may lag by up to 15 minutes without a webhook; select a shorter lease for higher-risk products.
+## Polar setup
 
-Configure Polar refund and benefit revocation policies deliberately. Verify full and partial refunds, failed renewals and immediate versus period-end cancellation. Never assume a partial refund revokes a benefit unless the provider configuration does so.
+Create the Plus monthly and yearly products with a 7 day trial and attach one custom benefit ("Plus") to both. Set `POLAR_ACCESS_TOKEN`, `POLAR_WEBHOOK_SECRET`, `POLAR_MONTHLY_PRODUCT_ID`, `POLAR_YEARLY_PRODUCT_ID` and `POLAR_PRO_BENEFIT_ID` (the Plus benefit id), then `BILLING_ENABLED=true`. Use a sandbox organization and `POLAR_ENVIRONMENT=sandbox` until you are ready to take payments.
 
-`hasActiveSubscription` describes the stored subscription snapshot; authorization uses `hasEntitlement`. Lifetime users can have Pro with no subscription. `getCurrentPlan` reports effective access, not an invoice status. `requireEntitlement` is available for protected server operations.
+Add a webhook (API version 2026-10) to `/api/webhooks/polar` with `customer.state_changed`, `order.paid`, `subscription.active`, `subscription.updated`, `subscription.canceled` and `subscription.revoked`.
 
-## Recovery and retention
+## How access is decided
 
-Redeliver failed customer-state events from Polar. For an emergency reconciliation, call the server `reconcile(userId)` helper from a controlled operator script. Do not expose it publicly. Duplicate-event IDs must be retained at least as long as provider redelivery remains possible. Do not delete them as part of normal user account cleanup. Never log payloads or checkout/portal URLs.
+1. Checkout is created on the server for a known plan key; the browser never sends prices or user ids. A pending referral reward is attached as a discount.
+2. Returning from checkout grants nothing. A signed webhook takes a per-user advisory lock, fetches the customer's current state from Polar and stores the subscription snapshot and a 15 minute entitlement lease in one transaction.
+3. Duplicate and out-of-order deliveries are harmless: each one reloads the current state. Failures roll back and return 503 so Polar retries.
+4. An expired lease is refreshed from Polar on the next check; if Polar is unreachable, access falls back to Free.
 
-## Required external verification
+Cancellation, invoices and payment methods are handled in the Polar customer portal (Plan page). A person with a running subscription has to cancel before deleting their account.
 
-Sandbox credentials are not included. Before accepting money, test monthly/yearly/one-time checkout, webhook signatures and retries, duplicate delivery, cancellation, refund, failed payment, renewal, and delayed delivery. Verify dashboard access through the real benefit lifecycle. Provider fixtures prove transaction behavior, not the remote provider's configured policies. See VERIFICATION.md for actual local results.
+## Referral rewards
+
+When an invited person finishes their first session, both get a single-use 100% discount for one month. It is applied to a running subscription or attached to the next checkout. Failed rewards are retried daily by the worker.
+
+## Before taking money
+
+Test in the sandbox: monthly and yearly checkout with the trial, renewal, failed payment, cancellation at period end, refund and benefit revocation, webhook retries and duplicate delivery.
