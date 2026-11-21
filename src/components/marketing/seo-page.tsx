@@ -11,12 +11,14 @@ import { FaqList } from "./faq";
 export async function SeoPage({
   page,
   template,
+  locale = "en",
 }: {
   page: Content;
   template: SeoTemplate;
+  locale?: string;
 }) {
   const t = await getTranslations("seo");
-  const related = listSeoPages(template)
+  const related = listSeoPages(template, locale)
     .filter((other) => other.slug !== page.slug)
     .slice(0, 6);
   return (
@@ -64,7 +66,13 @@ export async function SeoPage({
     </div>
   );
 }
-export async function SeoIndex({ template }: { template: SeoTemplate }) {
+export async function SeoIndex({
+  template,
+  locale = "en",
+}: {
+  template: SeoTemplate;
+  locale?: string;
+}) {
   const t = await getTranslations("seo");
   return (
     <div className="container">
@@ -74,7 +82,7 @@ export async function SeoIndex({ template }: { template: SeoTemplate }) {
       </header>
       <section className="section">
         <div className="link-grid">
-          {listSeoPages(template).map((page) => (
+          {listSeoPages(template, locale).map((page) => (
             <Link href={`/${template}/${page.slug}`} key={page.slug}>
               <h2>{page.h1}</h2>
               <p className="muted">{page.description}</p>

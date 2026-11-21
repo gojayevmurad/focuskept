@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
 import { Logo } from "./logo";
+import { LocaleSwitcher } from "./locale-switcher";
 
 export async function SiteFooter() {
   const t = await getTranslations("site");
@@ -14,6 +15,7 @@ export async function SiteFooter() {
           <Logo name={app.name} logoUrl={app.logoUrl} />
           <p className="small">{t("tagline")}</p>
           <p className="small faint">{t("openSource")}</p>
+          <LocaleSwitcher label={t("language")} />
         </div>
         {app.marketingEnabled ? (
           <>

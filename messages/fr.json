@@ -1,0 +1,999 @@
+{
+  "meta": {
+    "title": "{app} : coworking virtuel et body doubling",
+    "description": "Réservez un créneau, faites équipe avec un partenaire de concentration en vidéo, annoncez votre objectif et avancez ensemble. 25, 50 ou 75 minutes."
+  },
+  "common": {
+    "save": "Enregistrer",
+    "saved": "Enregistré",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "continue": "Continuer",
+    "loading": "Chargement…",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "copy": "Copier",
+    "copied": "Copié",
+    "share": "Partager",
+    "join": "Rejoindre",
+    "leave": "Quitter",
+    "yes": "Oui",
+    "no": "Non",
+    "minutes": "{count} min",
+    "plus": "Plus",
+    "free": "Free",
+    "you": "Vous",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "getStarted": "Commencer",
+    "dashboard": "Tableau de bord",
+    "theme": "Changer de thème",
+    "somethingWrong": "Une erreur s'est produite. Veuillez réessayer.",
+    "upgrade": "Passer à Plus"
+  },
+  "errors": {
+    "notFound": "Nous n'avons pas pu trouver cette page.",
+    "home": "Retour à l'accueil",
+    "generic": "Une erreur s'est produite.",
+    "tryAgainLater": "Veuillez réessayer dans un instant.",
+    "retry": "Réessayer"
+  },
+  "nav": {
+    "home": "Accueil",
+    "book": "Réserver",
+    "people": "Personnes",
+    "progress": "Progression",
+    "challenges": "Défis",
+    "groups": "Groupes",
+    "invite": "Inviter des amis",
+    "host": "Animation",
+    "settings": "Paramètres",
+    "billing": "Forfait",
+    "admin": "Admin",
+    "more": "Plus",
+    "community": "Communauté",
+    "you": "Vous",
+    "freeLeft": "{used} sur {limit} sessions gratuites utilisées cette semaine",
+    "plusActive": "Plus est actif",
+    "unlimited": "Sessions illimitées",
+    "language": "Langue"
+  },
+  "auth": {
+    "signInTitle": "Ravi de vous revoir",
+    "signInLead": "Connectez-vous pour réserver votre prochaine session.",
+    "signUpTitle": "Créez votre compte",
+    "signUpLead": "Commencez gratuitement. Trois sessions par semaine offertes.",
+    "name": "Votre nom",
+    "namePlaceholder": "Alex Morgan",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Au moins 12 caractères",
+    "forgot": "Mot de passe oublié ?",
+    "ageConfirm": "J'ai 18 ans ou plus et j'accepte les <terms>Conditions d'utilisation</terms> et la <privacy>Politique de confidentialité</privacy>.",
+    "ageRequired": "Vous devez avoir 18 ans ou plus pour utiliser {app}.",
+    "submitSignIn": "Se connecter",
+    "submitSignUp": "Créer un compte",
+    "google": "Continuer avec Google",
+    "or": "ou",
+    "haveAccount": "Vous avez déjà un compte ? <link>Se connecter</link>",
+    "noAccount": "Nouveau ici ? <link>Créer un compte</link>",
+    "invalid": "Saisissez une adresse e-mail valide et un mot de passe de 12 à 128 caractères.",
+    "passwordInvalid": "Utilisez un mot de passe de 12 à 128 caractères.",
+    "forgotTitle": "Réinitialisez votre mot de passe",
+    "forgotLead": "Nous vous enverrons un lien par e-mail pour en choisir un nouveau.",
+    "sendReset": "Envoyer le lien de réinitialisation",
+    "resetSent": "Si un compte est associé à cette adresse e-mail, un lien de réinitialisation vient d'être envoyé.",
+    "resetTitle": "Choisissez un nouveau mot de passe",
+    "updatePassword": "Mettre à jour le mot de passe",
+    "passwordUpdated": "Mot de passe mis à jour. Vous pouvez maintenant vous connecter.",
+    "verifyTitle": "Consultez votre boîte de réception",
+    "verifyLead": "Nous vous avons envoyé un lien pour confirmer votre adresse e-mail. Ouvrez-le, puis connectez-vous.",
+    "continueSignIn": "Continuer vers la connexion",
+    "signupsClosed": "Les nouvelles inscriptions sont actuellement fermées.",
+    "inviteOnly": "{app} est actuellement accessible uniquement sur invitation. Demandez un lien d'invitation à un membre.",
+    "suspendedTitle": "Votre compte est suspendu",
+    "suspendedLead": "Votre compte a été suspendu suite à un contrôle de sécurité. Si vous pensez qu'il s'agit d'une erreur, écrivez à {email}."
+  },
+  "onboarding": {
+    "title": "Configurons votre profil",
+    "step": "Étape {n} sur 3",
+    "aboutTitle": "À propos de vous",
+    "aboutLead": "Cela nous aide à trouver des partenaires travaillant sur des projets similaires.",
+    "displayName": "Nom affiché",
+    "displayNameHint": "Les partenaires verront ce nom.",
+    "username": "Nom d'utilisateur",
+    "usernameHint": "Votre lien de réservation personnel : {url}",
+    "usernameTaken": "Ce nom d'utilisateur est déjà pris.",
+    "usernameFormat": "3 à 24 caractères : lettres minuscules, chiffres, - et _.",
+    "usernameReserved": "Ce nom d'utilisateur est réservé.",
+    "timezone": "Fuseau horaire",
+    "timezoneHint": "Détecté à partir de votre navigateur. Les horaires sont affichés dans ce fuseau.",
+    "goalTitle": "Qu'est-ce qui vous amène ?",
+    "goal": "Qu'aimeriez-vous accomplir ?",
+    "goalPlaceholder": "Terminer le brouillon de ma thèse d'ici mars",
+    "segments": "Quel type de travail faites-vous ? Plusieurs choix possibles.",
+    "age": "Je confirme avoir 18 ans ou plus.",
+    "firstTitle": "Réservez votre première session",
+    "firstLead": "Les personnes qui commencent dans les 24 heures ont beaucoup plus de chances de continuer. Choisissez un horaire ci-dessous.",
+    "duration": "Durée",
+    "skip": "Je réserverai plus tard",
+    "finish": "Réserver et terminer",
+    "noSlots": "Choisissez plutôt un horaire sur le calendrier.",
+    "popular": "Populaire"
+  },
+  "segments": {
+    "remote-work": "Télétravail",
+    "study": "Études",
+    "adhd": "TDAH",
+    "writing": "Écriture",
+    "founder": "Fondateur",
+    "freelance": "Freelance",
+    "research": "Recherche",
+    "creative": "Création"
+  },
+  "realtime": {
+    "matched": "Vous avez un partenaire. À bientôt.",
+    "partnerChanged": "Votre partenaire a annulé. Nous vous trouvons quelqu'un d'autre.",
+    "fallback": "Aucun partenaire pour le moment. Choisissez quoi faire sur votre tableau de bord."
+  },
+  "site": {
+    "how": "Comment ça marche",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "tagline": "Réservez un créneau, trouvez un partenaire, avancez dans votre travail.",
+    "openSource": "Open source sous licence AGPL-3.0.",
+    "product": "Produit",
+    "useCases": "Cas d'usage",
+    "adhd": "Body doubling pour le TDAH",
+    "barExam": "Partenaire pour le barreau",
+    "writers": "Pour les auteurs",
+    "developers": "Pour les développeurs",
+    "company": "À propos",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "contact": "Contact",
+    "source": "Code source",
+    "language": "Langue"
+  },
+  "book": {
+    "title": "Réserver une session",
+    "lead": "Les horaires sont indiqués en {zone}. Les sessions débutent à l'heure pile et à la demi-heure.",
+    "usage": "{used} sur {limit} sessions gratuites cette semaine",
+    "length": "Durée de la session",
+    "prevDay": "Jour précédent",
+    "nextDay": "Jour suivant",
+    "prevWeek": "Semaine précédente",
+    "nextWeek": "Semaine suivante",
+    "today": "Aujourd'hui",
+    "legendPopular": "Populaire aux États-Unis",
+    "legendWaiting": "Personnes en attente",
+    "legendMine": "Votre réservation",
+    "legendGroup": "Session de groupe",
+    "newBooking": "Nouvelle réservation",
+    "waitingCount": "{count, plural, one {# personne attend un partenaire} other {# personnes attendent un partenaire}}",
+    "nobodyYet": "Personne n'a encore réservé ce créneau. Nous vous associerons avec la prochaine personne qui réserve, ou nous vous proposerons une salle ouverte.",
+    "with": "Partenaire",
+    "anyone": "N'importe qui",
+    "directHint": "Si la personne est disponible, vous serez jumelés ensemble. Si elle ne réserve pas, vous serez jumelé avec quelqu'un d'autre.",
+    "policy": "Annulation gratuite jusqu'à une heure avant. Votre partenaire vous sera attribué cinq minutes avant le début.",
+    "confirm": "Réserver {duration} min",
+    "booked": "Réservé. Nous vous enverrons une confirmation par e-mail.",
+    "cancelled": "Réservation annulée.",
+    "yourSession": "Votre session",
+    "matchedWith": "avec {name}",
+    "groupSeat": "session de groupe",
+    "waitingForMatch": "en attente d'un partenaire",
+    "freeCancel": "L'annulation est actuellement gratuite.",
+    "lateCancel": "Moins d'une heure restante : annuler maintenant compte comme une annulation tardive et votre partenaire sera réaffecté.",
+    "openRoom": "Salle ouverte",
+    "cancelBooking": "Annuler la réservation",
+    "groupSession": "Session de groupe",
+    "hostedBy": "Animée par {name}",
+    "seats": "{taken} sur {capacity} places occupées",
+    "takeSeat": "Prendre une place",
+    "groupShort": "Groupe",
+    "waitingShort": "Réservé",
+    "errors": {
+      "not_slot": "Les sessions commencent à l'heure pile ou à la demi-heure.",
+      "too_late": "Il est trop tard pour réserver ce créneau.",
+      "too_far": "Vous pouvez réserver jusqu'à deux semaines à l'avance.",
+      "duration": "Choisissez 25, 50 ou 75 minutes.",
+      "limit": "Vous avez utilisé toutes vos sessions gratuites pour cette semaine.",
+      "overlap": "Vous avez déjà une session à cet horaire.",
+      "blocked": "Vous ne pouvez pas réserver avec cette personne.",
+      "self": "Vous ne pouvez pas réserver avec vous-même.",
+      "not_found": "Élément introuvable.",
+      "not_allowed": "Cette réservation ne peut plus être modifiée.",
+      "full": "Cette session est complète.",
+      "invalid": "Un problème est survenu avec la demande. Veuillez réessayer."
+    }
+  },
+  "dashboard": {
+    "title": "Accueil",
+    "hello": "Bonjour {name}",
+    "welcome": "Bienvenue, {name}",
+    "lead": "Réservez une session, soyez au rendez-vous et concentrez-vous sur votre priorité.",
+    "goalReminder": "Objectif en cours : {goal}",
+    "liveBadge": "Salle ouverte",
+    "liveTitle": "Votre session de {time} est ouverte",
+    "joinNow": "Rejoindre",
+    "fallbackBadge": "Pas encore de partenaire",
+    "fallbackTitle": "Personne d'autre n'a réservé votre créneau",
+    "fallbackLead": "Votre session de {when} va bientôt commencer. Choisissez une option :",
+    "fallbackRoom": "Rejoindre la salle ouverte",
+    "fallbackNext": "Passer au créneau suivant",
+    "fallbackCancel": "Annuler sans pénalité",
+    "streak": "Série de jours",
+    "streakHint": "{weeks, plural, =0 {Commencez une série hebdomadaire} one {# semaine d'affilée} other {# semaines d'affilée}}",
+    "hours": "Heures de concentration",
+    "hoursHint": "{month} ce mois-ci",
+    "sessions": "Sessions",
+    "noOutcomes": "Indiquez vos résultats pour voir votre taux de réussite",
+    "doneRate": "{rate} % marqués comme terminés",
+    "upcoming": "À venir",
+    "book": "Réserver",
+    "group": "session de groupe",
+    "with": "avec {name}",
+    "pairing": "partenaire attribué 5 min avant",
+    "open": "Ouvrir",
+    "manage": "Gérer",
+    "empty": "Rien de réservé. Prochains créneaux recommandés :",
+    "waiting": "{count} en attente"
+  },
+  "people": {
+    "title": "Personnes",
+    "lead": "Partenaires avec qui vous avez travaillé, vos favoris et les personnes bloquées.",
+    "yourLink": "Votre lien de réservation",
+    "yourLinkLead": "Partagez-le pour que d'autres personnes puissent réserver une session directement avec vous.",
+    "favorites": "Favoris",
+    "favoritesPlus": "Les partenaires favoris sont inclus dans Plus. Vous êtes mis en relation en priorité avec eux.",
+    "seePlus": "Découvrir Plus",
+    "bookWith": "Réserver",
+    "noFavorites": "Aucun favori pour l'instant. Ajoutez une étoile après une bonne session.",
+    "recent": "Partenaires récents",
+    "noRecent": "Vos anciens partenaires apparaîtront ici.",
+    "favorite": "Favori",
+    "favorited": "Favori",
+    "blocked": "Bloqué",
+    "unblock": "Débloquer"
+  },
+  "room": {
+    "pairTitle": "Session en duo",
+    "groupTitle": "Session de groupe",
+    "phase": {
+      "waiting": "Début imminent",
+      "intro": "Dites bonjour et partagez votre objectif",
+      "focus": "Temps de concentration",
+      "wrap": "Conclusion",
+      "ended": "Session terminée"
+    },
+    "tips": {
+      "waiting": "Préparez-vous",
+      "intro": "Partagez ce que vous allez faire",
+      "focus": "Au travail",
+      "wrap": "Bilan",
+      "ended": "Terminé"
+    },
+    "tipsBody": {
+      "waiting": "Dégagez votre bureau, fermez les onglets inutiles et choisissez une tâche.",
+      "intro": "Dites bonjour et annoncez à votre partenaire l'unique tâche sur laquelle vous allez travailler. Restez bref et précis.",
+      "focus": "Travaillez en silence. Votre micro a été coupé automatiquement ; réactivez-le quand vous voulez.",
+      "wrap": "Réactivez votre micro et racontez comment cela s'est passé. Indiquez ensuite votre résultat.",
+      "ended": "Beau travail."
+    },
+    "lowBandwidth": "Bande passante faible : qualité vidéo réduite",
+    "aloneInRoom": "Votre partenaire n'a pas encore été attribué. Restez ici ; la salle se met à jour automatiquement.",
+    "joinToSee": "Rejoignez pour voir votre partenaire",
+    "noVideoProvider": "Le transport vidéo est désactivé dans cet environnement",
+    "connecting": "Connexion en cours…",
+    "notHereYet": "Pas encore arrivé",
+    "host": "Hôte",
+    "readyTitle": "Votre session commence bientôt",
+    "joinTitle": "Rejoindre la session",
+    "cameraRequired": "La caméra est obligatoire. Votre micro est facultatif et vous pouvez le couper à tout moment.",
+    "join": "Rejoindre avec la caméra",
+    "videoFailed": "Impossible de connecter la vidéo. Vérifiez votre connexion et réessayez.",
+    "neverRecorded": "Les sessions ne sont jamais enregistrées.",
+    "goalLabel": "Votre objectif pour cette session",
+    "goalPlaceholder": "Rédiger l'introduction de mon rapport",
+    "shareGoal": "Partager l'objectif",
+    "howDidItGo": "Comment cela s'est-il passé ?",
+    "outcome": {
+      "done": "Terminé",
+      "partial": "Partiellement",
+      "not_done": "Pas terminé"
+    },
+    "mute": "Couper le micro",
+    "unmute": "Réactiver le micro",
+    "report": "Signaler",
+    "leave": "Quitter",
+    "summaryOverline": "Session terminée",
+    "summaryTitle": "Beau travail. Une session de plus.",
+    "yourPartners": "{count, plural, one {Votre partenaire} other {Vos partenaires}}",
+    "favorite": "Favori",
+    "favorited": "Favori",
+    "profile": "Profil",
+    "bookNext": "Réserver la suivante",
+    "backHome": "Retour à l'accueil",
+    "reportTitle": "Signaler ou bloquer",
+    "reportLead": "Bloquer signifie que vous ne serez plus jamais jumelés. Le signalement bloque également la personne et transmet les détails à notre équipe.",
+    "who": "Personne",
+    "reason": "Raison",
+    "reasons": {
+      "inappropriate": "Comportement inapproprié ou explicite",
+      "harassment": "Harcèlement ou propos haineux",
+      "no_camera": "Caméra éteinte ou non fonctionnelle",
+      "spam": "Spam ou démarchage commercial",
+      "underage": "Semble avoir moins de 18 ans",
+      "other": "Autre"
+    },
+    "details": "Détails (facultatif)",
+    "blockOnly": "Bloquer uniquement",
+    "reportAndBlock": "Signaler et bloquer",
+    "reportSent": "Merci pour votre signalement",
+    "blocked": "Bloqué",
+    "reportSentBody": "Vous ne serez plus jumelé avec cette personne.",
+    "media": {
+      "denied": "L'accès à la caméra a été refusé. Autorisez-le dans les paramètres de votre navigateur, puis actualisez.",
+      "not_found": "Aucune caméra trouvée. Connectez-en une pour rejoindre la session.",
+      "in_use": "Votre caméra est utilisée par une autre application.",
+      "unknown": "Impossible de démarrer votre caméra."
+    },
+    "hostControls": "Commandes de l'hôte",
+    "hostControlsLead": "Faites avancer le groupe quand tout le monde est prêt.",
+    "startFocus": "Lancer la concentration",
+    "startWrap": "Lancer la conclusion",
+    "goalsInRoom": "Objectifs dans la salle",
+    "rateHost": "Comment était votre hôte ?",
+    "thanks": "Merci pour votre retour."
+  },
+  "settings": {
+    "title": "Paramètres",
+    "saved": "Enregistré.",
+    "save": "Enregistrer les modifications",
+    "profile": "Profil",
+    "displayName": "Nom affiché",
+    "username": "Nom d'utilisateur",
+    "bio": "Courte biographie",
+    "bioHint": "Affichée sur votre page publique de réservation.",
+    "goal": "Votre grand objectif",
+    "timezone": "Fuseau horaire",
+    "avatarUrl": "URL de la photo",
+    "segments": "Vos domaines d'activité",
+    "preferences": "Préférences",
+    "emailReminders": "M'envoyer un rappel par e-mail 10 minutes avant chaque session",
+    "pushReminders": "Envoyer des notifications de navigateur pour les rappels et changements de partenaire",
+    "pushEnable": "Activer les notifications du navigateur sur cet appareil",
+    "pushDisable": "Désactiver les notifications sur cet appareil",
+    "pushUnsupported": "Ce navigateur ne prend pas en charge les notifications push.",
+    "pushDenied": "Les notifications sont bloquées pour ce site dans les paramètres de votre navigateur.",
+    "microphoneDefault": "Démarrer les sessions avec mon micro activé",
+    "statsPublic": "Afficher mes heures de concentration et ma série sur ma page publique",
+    "matchSameSegment": "Me jumeler uniquement avec des personnes qui partagent l'un de mes types d'activité",
+    "security": "Mot de passe et sessions",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "changePassword": "Changer le mot de passe",
+    "passwordChanged": "Mot de passe modifié. Les autres appareils ont été déconnectés.",
+    "signOutOthers": "Déconnecter les autres appareils",
+    "otherSessionsOut": "Les autres appareils ont été déconnectés.",
+    "analytics": "Analyses de produit",
+    "analyticsLead": "Facultatif et désactivé par défaut. Nous ne vendons jamais vos données.",
+    "allowAnalytics": "Autoriser",
+    "denyAnalytics": "Ne pas autoriser",
+    "analyticsOn": "Analyses autorisées.",
+    "analyticsOff": "Analyses désactivées.",
+    "data": "Vos données",
+    "dataLead": "Téléchargez toutes les données que nous stockons à votre sujet sous la forme d'un fichier JSON.",
+    "export": "Télécharger mes données",
+    "deleteTitle": "Supprimer le compte",
+    "deleteLead": "Cette action supprime définitivement votre profil, vos réservations et votre historique. Veuillez d'abord résilier tout abonnement Plus actif.",
+    "typeDelete": "Tapez SUPPRIMER pour confirmer",
+    "deleteAccount": "Supprimer mon compte",
+    "deleteFailed": "Impossible de supprimer votre compte.",
+    "deleteFresh": "Par mesure de sécurité, veuillez vous reconnecter dans les 5 minutes précédant la suppression.",
+    "errors": {
+      "invalid": "Veuillez vérifier les champs et réessayer.",
+      "usernameTaken": "Ce nom d'utilisateur est déjà pris.",
+      "usernameFormat": "Les noms d'utilisateur comportent de 3 à 24 caractères : minuscules, chiffres, - et _.",
+      "usernameReserved": "Ce nom d'utilisateur est réservé."
+    }
+  },
+  "billing": {
+    "title": "Votre forfait",
+    "current": "Forfait actuel",
+    "plus": "Plus",
+    "free": "Free",
+    "returned": "Merci ! Votre paiement est en cours de confirmation. Votre forfait sera mis à jour dans une minute.",
+    "usage": "{used} sur {limit} sessions gratuites utilisées cette semaine.",
+    "upgrade": "Découvrir Plus",
+    "rewardTitle": "Vous avez un mois gratuit en attente",
+    "rewardLead": "Votre code de parrainage {code} sera appliqué automatiquement lors du paiement.",
+    "polarNote": "Les paiements sont traités par Polar, notre marchand officiel. Gérez vos factures, modes de paiement et résiliations sur le portail de facturation.",
+    "connecting": "Connexion en cours…",
+    "manage": "Gérer la facturation et l'abonnement",
+    "choose": "Choisir ce forfait",
+    "unavailable": "La facturation est indisponible pour le moment. Veuillez réessayer.",
+    "reason": {
+      "billing_disabled": "Toutes les fonctionnalités sont incluses sur ce serveur.",
+      "subscription": "Votre abonnement Plus est actif.",
+      "house": "Compte de l'établissement : sessions illimitées.",
+      "host": "Plus est gratuit ce mois-ci car vous avez animé suffisamment de sessions de groupe.",
+      "community": "Plus est inclus grâce à la licence de votre groupe.",
+      "none": "Trois sessions par semaine, jumelage et séries."
+    }
+  },
+  "progress": {
+    "title": "Progression",
+    "lead": "Les séries comptabilisent les jours avec au moins une session terminée, selon votre fuseau horaire.",
+    "dailyStreak": "Série de jours",
+    "longest": "Record : {n} jours",
+    "weeklyStreak": "Série de semaines",
+    "weeks": "semaines consécutives avec au moins une session",
+    "totalHours": "Heures de concentration",
+    "sessions": "{n} sessions terminées",
+    "activity": "12 dernières semaines",
+    "activityLabel": "Minutes de concentration par jour au cours des 12 dernières semaines",
+    "thisMonth": "Ce mois-ci : {hours} heures réparties sur {sessions} sessions.",
+    "share": "Partager votre mois",
+    "sharePrivate": "Vos statistiques sont privées, le partage de carte est donc désactivé.",
+    "openSettings": "Modifier dans les paramètres",
+    "story": "Format story",
+    "square": "Carré",
+    "shareButton": "Partager"
+  },
+  "invite": {
+    "title": "Inviter des amis",
+    "lead": "Se concentrer est plus facile avec des personnes que l'on connaît. Partagez votre lien.",
+    "leadReward": "Lorsqu'un ami s'inscrit et termine sa première session, vous recevez tous les deux un mois de Plus gratuit.",
+    "yourLink": "Votre lien d'invitation",
+    "how": "Toute personne qui s'inscrit dans les 30 jours suivant l'ouverture de votre lien compte comme votre invité.",
+    "invited": "{count, plural, =0 {Aucune invitation pour le moment} one {# personne invitée} other {# personnes invitées}}",
+    "none": "Partagez votre lien pour commencer.",
+    "status": {
+      "pending": "Inscrit",
+      "converted": "Première session terminée",
+      "rewarded": "Mois gratuit offert"
+    }
+  },
+  "publicProfile": {
+    "host": "Hôte",
+    "hours": "Heures de concentration",
+    "sessions": "Sessions",
+    "streak": "Série de jours",
+    "bookTitle": "Se concentrer avec {name}",
+    "isYou": "Ceci est votre page publique. Partagez ce lien pour que d'autres puissent réserver avec vous.",
+    "minutes": "{n} minutes",
+    "signUpToJoin": "Inscrivez-vous pour participer",
+    "noOpen": "Aucun créneau ouvert pour le moment. Choisissez un horaire et nous l'inviterons.",
+    "otherTime": "Choisir un autre horaire",
+    "joinApp": "Rejoindre {app} pour réserver",
+    "join": "Réserver ce créneau",
+    "failed": "Impossible de réserver ce créneau."
+  },
+  "challenges": {
+    "title": "Défis",
+    "lead": "Des objectifs limités dans le temps que vous relevez avec tous les autres participants.",
+    "none": "Aucun défi pour le moment. Revenez bientôt.",
+    "active": "En cours",
+    "upcoming": "À venir",
+    "past": "Terminés",
+    "members": "{count, plural, one {# membre} other {# membres}}",
+    "goal": {
+      "sessions": "Objectif : {value} sessions",
+      "minutes": "Objectif : {value} heures"
+    },
+    "join": "Participer",
+    "leave": "Quitter",
+    "leaderboard": "Classement",
+    "empty": "Personne n'a encore rejoint ce défi. Soyez le premier.",
+    "hoursValue": "{value} h",
+    "sessionsValue": "{value} sessions",
+    "reached": "Objectif atteint"
+  },
+  "groups": {
+    "title": "Groupes",
+    "lead": "Universités, bootcamps et équipes. Les membres sont jumelés entre eux en priorité.",
+    "yours": "Vos groupes",
+    "none": "Vous ne faites encore partie d'aucun groupe.",
+    "memberCount": "{count, plural, one {# membre} other {# membres}}",
+    "roles": {
+      "owner": "Propriétaire",
+      "admin": "Admin",
+      "member": "Membre"
+    },
+    "kinds": {
+      "university": "Université",
+      "bootcamp": "Bootcamp",
+      "company": "Entreprise",
+      "other": "Communauté"
+    },
+    "joinTitle": "Rejoindre un groupe",
+    "code": "Code d'invitation ou lien",
+    "codePlaceholder": "Collez un lien ou un code d'invitation",
+    "joinWithCode": "Rejoindre",
+    "codeNotFound": "Ce code d'invitation ne correspond à aucun groupe.",
+    "createTitle": "Créer un groupe",
+    "name": "Nom",
+    "namePlaceholder": "Rédacteurs nocturnes",
+    "kind": "Type",
+    "description": "Description",
+    "create": "Créer le groupe",
+    "invalid": "Veuillez vérifier le nom et réessayer.",
+    "licensed": "Plus est inclus pour les {seats} premiers membres jusqu'au {date}.",
+    "invite": "Lien d'invitation",
+    "inviteLead": "Toute personne disposant de ce lien peut rejoindre le groupe.",
+    "rotate": "Générer un nouveau lien",
+    "upcoming": "Membres à la recherche d'un partenaire",
+    "upcomingLead": "Réservez le même créneau et vous serez jumelé en priorité avec eux.",
+    "joinThem": "Les rejoindre",
+    "noUpcoming": "Aucun membre du groupe n'attend de partenaire en ce moment.",
+    "members": "Membres",
+    "leave": "Quitter le groupe",
+    "remove": "Retirer"
+  },
+  "hosting": {
+    "title": "Animation",
+    "lead": "Les hôtes animent des sessions de groupe jusqu'à 9 personnes : accueillir les participants, recueillir les objectifs, gérer le temps et faire le point à la fin. Animez {n} sessions en un mois et Plus est gratuit le mois suivant.",
+    "applyTitle": "Devenir hôte",
+    "notYet": "Vous pourrez postuler après {needed} sessions terminées. Vous en avez {done}.",
+    "pitch": "Pourquoi souhaitez-vous animer des sessions ?",
+    "pitchPlaceholder": "J'anime un groupe d'étude pour étudiants en soins infirmiers et souhaite animer des sessions le matin…",
+    "audience": "Votre audience (facultatif)",
+    "audienceHint": "Un lien YouTube, TikTok, Instagram ou newsletter, si vous en avez un.",
+    "apply": "Envoyer la candidature",
+    "done": "Terminé.",
+    "pendingTitle": "Candidature reçue",
+    "pendingLead": "Nous examinons les candidatures manuellement et vous répondrons par e-mail.",
+    "suspended": "L'animation de sessions est suspendue pour votre compte. Contactez le support pour toute question.",
+    "hosted": "Sessions animées",
+    "rating": "Note",
+    "ratings": "{n, plural, one {# évaluation} other {# évaluations}}",
+    "perk": "Avantage hôte",
+    "yourPage": "Votre page d'hôte",
+    "scheduleTitle": "Programmer une session de groupe",
+    "sessionTitle": "Titre",
+    "titlePlaceholder": "Session de travail intense du matin",
+    "day": "Jour",
+    "time": "Heure de début",
+    "length": "Durée",
+    "capacity": "Places (vous compris)",
+    "schedule": "Programmer",
+    "upcoming": "Vos sessions",
+    "seats": "{taken} sur {capacity} places occupées",
+    "open": "Ouvrir",
+    "cancel": "Annuler",
+    "cancelled": "Annulé",
+    "noneScheduled": "Rien de programmé pour le moment.",
+    "errors": {
+      "invalid": "Veuillez vérifier les champs.",
+      "not_eligible": "Vous devez d'abord terminer plus de sessions.",
+      "exists": "Vous avez déjà postulé.",
+      "not_host": "Seuls les hôtes approuvés peuvent programmer des sessions.",
+      "overlap": "Vous avez déjà un événement à cet horaire.",
+      "too_late": "Cet horaire est trop proche.",
+      "too_far": "Choisissez un horaire dans les deux semaines à venir.",
+      "not_slot": "Choisissez un horaire à l'heure pile ou à la demi-heure.",
+      "duration": "Choisissez 25, 50 ou 75 minutes."
+    }
+  },
+  "hostPage": {
+    "host": "Hôte",
+    "hosted": "{n, plural, one {# session animée} other {# sessions animées}}",
+    "upcoming": "Sessions de groupe à venir",
+    "seatsLeft": "{n, plural, =0 {complet} one {# place restante} other {# places restantes}}",
+    "takeSeat": "Prendre une place",
+    "signUp": "S'inscrire pour participer",
+    "none": "Aucune session programmée pour l'instant."
+  },
+  "home": {
+    "title": "{app} — Avancez dans votre travail aux côtés de quelqu'un",
+    "description": "Réservez une session vidéo silencieuse de concentration, partagez votre objectif et travaillez aux côtés d'un partenaire de responsabilisation.",
+    "heading": "Avancez dans votre travail aux côtés de quelqu'un",
+    "lead": "Réservez un créneau. Retrouvez un partenaire en vidéo. Annoncez ce que vous prévoyez de faire, travaillez en silence ensemble et faites le point à la fin. Une présence bienveillante pour vous accompagner dans votre travail.",
+    "start": "Commencer gratuitement",
+    "how": "Comment ça marche",
+    "skip": "Passer au contenu",
+    "visual": "Exemple de session de concentration",
+    "example": "Exemple de session",
+    "focus": "Temps de concentration silencieuse",
+    "timer": "Temps restant",
+    "alex": "Alex",
+    "sam": "Sam",
+    "alexGoal": "Rédiger les deux premiers paragraphes",
+    "samGoal": "Réviser une série d'exercices",
+    "note": "Caméra allumée. Micro facultatif. Jamais enregistré.",
+    "stepsTitle": "Un créneau, un partenaire, des progrès concrets",
+    "steps": [
+      {
+        "title": "Réservez un créneau",
+        "body": "Choisissez une session de 25, 50 ou 75 minutes adaptée à votre journée."
+      },
+      {
+        "title": "Partagez un objectif",
+        "body": "Retrouvez votre partenaire en vidéo et définissez une prochaine étape concrète et ciblée."
+      },
+      {
+        "title": "Travaillez, puis faites le point",
+        "body": "Travaillez en silence avec votre caméra activée. À la fin, partagez vos avancées."
+      }
+    ],
+    "featuresTitle": "Créez l'espace adapté à votre façon de travailler",
+    "features": [
+      {
+        "title": "En duo ou en groupe animé",
+        "body": "Travaillez en tête-à-tête ou partagez une salle silencieuse animée par un hôte."
+      },
+      {
+        "title": "25, 50 ou 75 minutes",
+        "body": "Optez pour une mise en route rapide ou une période plus longue. Prévoyez du temps pour une pause."
+      },
+      {
+        "title": "Entourez-vous des bonnes personnes",
+        "body": "Partagez votre lien de réservation personnel. Avec Plus, enregistrez vos partenaires favoris."
+      },
+      {
+        "title": "Constatez vos progrès",
+        "body": "Suivez vos séries et statistiques de concentration pour visualiser le temps consacré à votre travail."
+      },
+      {
+        "title": "Vos limites sont respectées",
+        "body": "Signalez ou bloquez un utilisateur dès que nécessaire. Ce service est réservé aux adultes de 18 ans et plus."
+      },
+      {
+        "title": "En direct, sans aucun enregistrement",
+        "body": "Nous n'enregistrons jamais les sessions. Gardez vos documents privés hors du champ de la caméra et travaillez sur votre écran."
+      }
+    ],
+    "audienceTitle": "Venez avec le travail que vous avez à faire aujourd'hui",
+    "audiences": {
+      "adhd": "TDAH",
+      "students": "Étudiants",
+      "bar": "Examen du barreau",
+      "mcat": "MCAT",
+      "writers": "Auteurs",
+      "developers": "Développeurs",
+      "freelancers": "Freelances",
+      "founders": "Fondateurs",
+      "remote": "Télétravailleurs",
+      "researchers": "Chercheurs"
+    },
+    "sourceTitle": "Open source, conçu pour s'adapter à vos besoins",
+    "sourceBody": "Ce logiciel est sous licence AGPL-3.0. Consultez le code, contribuez ou hébergez votre propre instance.",
+    "sourceLink": "Voir le code sur GitHub",
+    "faqTitle": "Quelques questions fréquentes",
+    "allFaq": "Consulter toutes les questions",
+    "ctaTitle": "Apportez une seule tâche. Nous faisons de la place.",
+    "ctaBody": "Pas besoin d'un plan parfait. Choisissez un créneau et un premier point de départ."
+  },
+  "how": {
+    "title": "Comment fonctionne une session de concentration | {app}",
+    "description": "De la réservation au bilan final : durées de session, jumelage, règles de vie et sécurité.",
+    "heading": "Un rythme simple pour un travail concentré",
+    "lead": "Une session de concentration donne à votre tâche un début et une fin, avec une autre personne travaillant à vos côtés.",
+    "stages": [
+      {
+        "title": "Avant : choisissez une tâche accessible",
+        "body": "Réservez une session de 25, 50 ou 75 minutes. Préparez ce dont vous avez besoin, testez votre caméra et fermez les onglets superflus. Choisissez un objectif résumable en une phrase."
+      },
+      {
+        "title": "Introduction : dites bonjour et annoncez votre objectif",
+        "body": "Connectez-vous à l'heure avec votre caméra activée. Saluez brièvement votre partenaire et indiquez sur quoi vous allez travailler. Vos tâches n'ont pas besoin d'être liées. Gardez vos informations personnelles privées."
+      },
+      {
+        "title": "Concentration : travaillez ensemble en silence",
+        "body": "Gardez votre caméra allumée et travaillez sur votre propre tâche. Votre micro est facultatif ; coupez-le lorsque vous ne parlez pas. Si votre attention se disperse, revenez à la prochaine petite action."
+      },
+      {
+        "title": "Conclusion : partagez vos résultats",
+        "body": "Indiquez ce que vous avez accompli et qualifiez votre résultat : terminé, partiel ou non terminé. Vous pouvez avancer sans avoir tout fini. Remerciez votre partenaire et accordez-vous une pause avant une autre session."
+      }
+    ],
+    "matchingTitle": "Comment fonctionne le jumelage",
+    "matchingBody": "Nous associons les personnes ayant la même heure de début et la même durée de session, en donnant la priorité aux partenaires préférés et favoris tout en respectant les blocages. Votre partenaire est attribué cinq minutes avant la session. Une réservation tardive est jumelée dès que possible.",
+    "fallbackBody": "Si personne n'est disponible, vous pouvez rejoindre la salle ouverte, passer au créneau suivant avec quelqu'un en attente, ou annuler sans pénalité. Une réservation ne garantit pas un partenaire individuel.",
+    "etiquetteTitle": "Un espace partagé avec des attentes simples",
+    "etiquetteBody": "Gardez votre caméra allumée. Votre micro est facultatif. Soyez bienveillant, gardez les salutations brèves et respectez le silence de travail. Ne faites aucun enregistrement, ne faites pas de promotion et ne commentez pas l'apparence des autres.",
+    "safetyTitle": "Vous pouvez fixer vos limites",
+    "safetyBody": "Ce service est réservé aux adultes de 18 ans et plus. Nous n'enregistrons jamais les sessions. Vous pouvez quitter la salle, signaler ou bloquer un utilisateur ; le blocage empêche tout jumelage futur. Gardez toute information sensible hors de vue.",
+    "faqTitle": "Avant votre première session"
+  },
+  "faqPage": {
+    "title": "Foire aux questions | {app}",
+    "description": "Réponses concernant les débuts, les sessions de concentration, la sécurité, la confidentialité et les forfaits.",
+    "heading": "Vos questions, nos réponses",
+    "lead": "Voici ce à quoi vous attendre avant de réserver une présence pour vous accompagner dans votre travail.",
+    "groups": [
+      {
+        "title": "Premiers pas",
+        "items": [
+          {
+            "q": "Qu'est-ce que le body doubling ?",
+            "a": "Le body doubling consiste à accomplir sa propre tâche en présence d'une autre personne. Lors d'une session vidéo, vous partagez un objectif, travaillez en silence et faites le point à la fin. Il s'agit d'une routine de travail pratique, et non d'un traitement médical."
+          },
+          {
+            "q": "Qui peut participer ?",
+            "a": "Les adultes de 18 ans et plus peuvent utiliser le service pour le travail, les études, l'écriture ou les tâches quotidiennes. Vous n'avez besoin d'aucun diagnostic ni d'un métier particulier."
+          },
+          {
+            "q": "De quoi ai-je besoin pour ma première session ?",
+            "a": "D'une caméra fonctionnelle, d'une connexion Internet et d'une tâche à accomplir. Choisissez un cadre privé et approprié, et testez votre caméra avant la session."
+          }
+        ]
+      },
+      {
+        "title": "Sessions",
+        "items": [
+          {
+            "q": "Combien de temps durent les sessions ?",
+            "a": "Choisissez 25, 50 ou 75 minutes. Les sessions commencent à l'heure pile ou à la demi-heure. Votre calendrier affiche les horaires dans votre fuseau horaire."
+          },
+          {
+            "q": "Comment mon partenaire est-il choisi ?",
+            "a": "Nous associons les personnes ayant la même heure de début et la même durée, en priorité avec vos partenaires préférés et favoris. Les blocages sont toujours respectés. Votre partenaire est attribué cinq minutes avant le début."
+          },
+          {
+            "q": "Que se passe-t-il si personne n'est disponible ?",
+            "a": "Vous pouvez rejoindre la salle ouverte, passer au créneau suivant avec une personne en attente, ou annuler sans pénalité. Le jumelage dépend des personnes ayant réservé."
+          },
+          {
+            "q": "Dois-je parler ou partager mon écran ?",
+            "a": "Gardez votre caméra allumée. Votre micro est facultatif et vous pouvez le laisser coupé pendant que vous travaillez. Vous n'avez pas besoin de partager votre écran ni d'expliquer des détails personnels."
+          },
+          {
+            "q": "Que faire si je n'atteins pas mon objectif ?",
+            "a": "Indiquez un résultat partiel ou non terminé et faites un bilan bref et honnête. Une session est un espace de travail, pas un examen à réussir."
+          },
+          {
+            "q": "Puis-je annuler une réservation ?",
+            "a": "Annulez au moins une heure avant le début pour éviter une annulation tardive. Si vous ne pouvez pas participer, annulez plutôt que de laisser un partenaire attendre. Les annulations sans jumelage (options de repli) ne comportent aucune pénalité."
+          }
+        ]
+      },
+      {
+        "title": "Sécurité et confidentialité",
+        "items": [
+          {
+            "q": "Les sessions sont-elles enregistrées ?",
+            "a": "Non. Nous n'enregistrons ni ne stockons jamais la vidéo ou l'audio des sessions. Votre partenaire peut toutefois voir votre environnement, gardez donc les informations sensibles hors de vue. Il est interdit d'enregistrer les autres participants."
+          },
+          {
+            "q": "Comment signaler ou bloquer quelqu'un ?",
+            "a": "Utilisez les commandes de signalement ou de blocage pendant la session. Le signalement bloque également la personne et transmet les détails à notre équipe. Vous ne serez plus jamais jumelé avec une personne bloquée."
+          },
+          {
+            "q": "Puis-je exporter ou supprimer mes données ?",
+            "a": "Utilisez l'exportation des données et la suppression de compte dans les Paramètres. Contactez le support si vous avez besoin d'aide pour exercer vos droits relatifs à la vie privée. Notre politique de confidentialité détaille la conservation des données et les exceptions légales."
+          }
+        ]
+      },
+      {
+        "title": "Forfaits",
+        "items": [
+          {
+            "q": "Que comprend le forfait Free ?",
+            "a": "Free comprend trois sessions par semaine, le jumelage et les séries. Lorsque la facturation est désactivée sur une instance, tous les membres bénéficient de l'accès Plus."
+          },
+          {
+            "q": "Que comprend le forfait Plus ?",
+            "a": "Plus comprend des sessions illimitées, les partenaires favoris et des filtres de jumelage avancés. Lorsque la facturation est activée, vous pouvez choisir une facturation mensuelle ou annuelle avec un essai gratuit de sept jours. Le forfait annuel est facturé chaque année."
+          },
+          {
+            "q": "Comment résilier un abonnement ?",
+            "a": "Ouvrez le portail client de facturation dans les Paramètres. Résiliez avant la fin de votre essai pour éviter le premier prélèvement, ou avant le renouvellement pour éviter la prochaine facturation. Le paiement et le portail affichent les dates et montants applicables."
+          }
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Forfaits Free et Plus | {app}",
+    "description": "Commencez avec trois sessions gratuites par semaine ou choisissez Plus pour des sessions illimitées, des favoris et des filtres avancés.",
+    "heading": "Faites de la place pour une habitude régulière",
+    "lead": "Commencez avec trois sessions par semaine. Choisissez Plus quand vous souhaitez plus d'espace.",
+    "free": "Free",
+    "freePrice": "Gratuit",
+    "freeFeatures": [
+      "3 sessions par semaine",
+      "Jumelage de partenaires",
+      "Séries"
+    ],
+    "plus": "Plus",
+    "plusFeatures": [
+      "Sessions illimitées",
+      "Partenaires favoris",
+      "Filtres de jumelage avancés"
+    ],
+    "trial": "Essai gratuit de 7 jours",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "perMonth": "par mois",
+    "perYear": "par an, facturé annuellement",
+    "fallback": "Voir le prix au paiement",
+    "trialBody": "Essayez Plus gratuitement pendant 7 jours. Votre abonnement se renouvelle automatiquement après l'essai, sauf annulation de votre part. Vérifiez le montant, la devise, les taxes et la date de renouvellement lors du paiement.",
+    "cancel": "Résiliez via le portail client dans les Paramètres avant la fin de votre essai ou votre prochain renouvellement."
+  },
+  "blog": {
+    "title": "Conseils pratiques sur la concentration | {app}",
+    "description": "Guides utiles sur le body doubling, les sessions d'étude, la responsabilisation et le coworking virtuel.",
+    "heading": "Un peu d'aide pour se lancer",
+    "lead": "Des notes concrètes pour les jours où se mettre au travail demande un peu de structure.",
+    "read": "Lire l'article",
+    "back": "Tous les articles",
+    "published": "Publié le",
+    "by": "Par {author}"
+  },
+  "seo": {
+    "home": "Accueil",
+    "related": "Pages associées",
+    "howTitle": "Comment se déroule une session",
+    "howBody": "Réservez 25, 50 ou 75 minutes. Retrouvez-vous en vidéo, partagez un objectif, travaillez en silence avec la caméra allumée et faites le point à la fin.",
+    "faq": "Questions fréquentes",
+    "explore": "Découvrez une nouvelle façon de travailler ensemble",
+    "templates": {
+      "body-doubling-for": "Le body doubling au quotidien",
+      "study-with-me": "Étudiez avec un peu de compagnie",
+      "virtual-coworking-for": "Coworking virtuel pour vos projets",
+      "alternatives": "Comparer les approches de coworking"
+    },
+    "descriptions": {
+      "body-doubling-for": "Trouvez une routine de responsabilisation silencieuse pour vos tâches et votre quotidien.",
+      "study-with-me": "Planifiez des plages d'étude ciblées aux côtés d'une autre personne au travail.",
+      "virtual-coworking-for": "Accordez-vous du temps pour travailler de manière autonome avec une présence silencieuse en vidéo.",
+      "alternatives": "Découvrez différentes manières de trouver de la structure et de la compagnie pendant que vous travaillez."
+    }
+  },
+  "legal": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "updated": "Dernière mise à jour : 21 novembre 2026",
+    "contact": "Nous contacter"
+  },
+  "admin": {
+    "nav": {
+      "overview": "Vue d'ensemble admin",
+      "users": "Utilisateurs",
+      "reports": "Signalements",
+      "hosts": "Hôtes",
+      "challenges": "Défis",
+      "groups": "Groupes",
+      "house": "Maison"
+    },
+    "navigation": "Navigation admin",
+    "saving": "Enregistrement…",
+    "saved": "Enregistré",
+    "save": "Enregistrer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "empty": "Aucun résultat.",
+    "unavailable": "Indisponible",
+    "operations": "Opérations",
+    "period": "Les {days} derniers jours",
+    "metrics": {
+      "signups": "Nouvelles inscriptions",
+      "bookings": "Réservations créées",
+      "completed": "Sessions terminées",
+      "matchRate": "Taux de jumelage",
+      "noShowRate": "Taux d'absence",
+      "lateCancels": "Annulations tardives",
+      "plus": "Abonnements Plus actifs",
+      "reports": "Signalements ouverts",
+      "hosts": "Candidatures d'hôtes en attente"
+    },
+    "metricNotes": "Les inscriptions et nouvelles réservations utilisent leur date de création. Les autres métriques de période utilisent l'heure de début des sessions. Le taux de jumelage compare les réservations associées à une session par rapport à ces réservations plus les échecs, en excluant les échecs jumelés en retard. Le taux d'absence correspond aux absences divisées par les réservations terminées plus les absences. Les taux vides s'affichent à 0 %. Le nombre d'abonnements et les files d'attente reflètent l'état actuel.",
+    "video": "Utilisation vidéo récente",
+    "videoValue": "{month} : {gb} Go",
+    "heartbeat": "Battement de cœur du worker",
+    "columns": {
+      "name": "Nom",
+      "email": "E-mail",
+      "username": "Nom d'utilisateur",
+      "created": "Date de création",
+      "role": "Rôle",
+      "flags": "Indicateurs",
+      "completed": "Sessions terminées",
+      "actions": "Actions",
+      "reporter": "Auteur du signalement",
+      "target": "Cible",
+      "reason": "Raison",
+      "details": "Détails",
+      "session": "ID de session",
+      "reports30": "Signalements en 30 jours",
+      "status": "Statut",
+      "pitch": "Présentation",
+      "audience": "URL de l'audience",
+      "rating": "Note",
+      "hosted": "Sessions animées",
+      "perkUntil": "Avantage jusqu'au",
+      "title": "Titre",
+      "members": "Membres",
+      "owner": "Propriétaire",
+      "plusSeats": "Places Plus",
+      "licenseUntil": "Fin de licence (UTC)",
+      "slot": "Heure du créneau",
+      "duration": "Durée",
+      "waiting": "Membre en attente"
+    },
+    "search": "Rechercher par e-mail, nom ou nom d'utilisateur",
+    "searchButton": "Rechercher",
+    "userLimit": "Jusqu'à 50 utilisateurs, les plus récents en premier.",
+    "noProfile": "Profil pas encore créé.",
+    "roles": {
+      "admin": "Admin",
+      "user": "Utilisateur"
+    },
+    "suspended": "Suspendu",
+    "houseAccount": "Compte maison",
+    "suspend": "Suspendre",
+    "unsuspend": "Lever la suspension",
+    "makeAdmin": "Nommer admin",
+    "removeAdmin": "Retirer le rôle admin",
+    "houseOn": "Activer le mode maison",
+    "houseOff": "Désactiver le mode maison",
+    "openReports": "Signalements ouverts",
+    "resolvedReports": "50 derniers signalements résolus",
+    "dismiss": "Classer sans suite",
+    "suspendTarget": "Suspendre la cible et marquer comme traité",
+    "reportStatus": {
+      "open": "Ouvert",
+      "dismissed": "Classé sans suite",
+      "actioned": "Traité"
+    },
+    "reasons": {
+      "inappropriate": "Comportement inapproprié",
+      "harassment": "Harcèlement",
+      "no_camera": "Pas de caméra",
+      "spam": "Spam",
+      "underage": "Mineur",
+      "other": "Autre"
+    },
+    "applications": "Candidatures d'hôtes",
+    "approvedHosts": "Hôtes approuvés et suspendus",
+    "approve": "Approuver",
+    "reject": "Rejeter",
+    "hostStatus": {
+      "applied": "Candidature envoyée",
+      "approved": "Approuvé",
+      "rejected": "Rejeté",
+      "suspended": "Suspendu"
+    },
+    "createChallenge": "Créer un défi",
+    "existingChallenges": "Défis existants",
+    "slug": "Slug",
+    "description": "Description",
+    "startsAt": "Débute le (UTC)",
+    "endsAt": "Se termine le (UTC, exclus)",
+    "goalType": "Type d'objectif",
+    "sessions": "Sessions",
+    "hours": "Heures",
+    "goalHours": "Objectif en heures (enregistré en minutes)",
+    "goalSessions": "Objectif en sessions",
+    "utcDates": "Les dates utilisent minuit UTC. La date de fin est exclusive.",
+    "challengeStarted": "Ce défi a commencé et ne peut pas être supprimé.",
+    "members": "{count} membres",
+    "licenseHelp": "Les licences B2B sont gérées ici après facturation. Définissez de 0 à 10 000 places Plus et une date de fin. Les dates utilisent minuit UTC ; l'accès se termine au début de cette journée. Effacez la date pour retirer la licence.",
+    "confirmDelete": "Tapez SUPPRIMER pour supprimer définitivement ce groupe et ses adhésions.",
+    "houseHelp": "Aidez un membre en attente en réservant une session en duo en votre nom. Les horaires sont affichés en {timezone}.",
+    "houseRequired": "Activez le mode maison sur votre propre ligne dans Utilisateurs pour réserver en mode maison.",
+    "waitingSlots": "Créneaux avec un membre en attente dans les prochaines 24 heures",
+    "bookHouse": "Réserver en mode maison",
+    "ownHouseBookings": "Vos réservations maison à venir",
+    "houseBookingNote": "Toutes vos réservations en duo à venir sont affichées. Les réservations ne conservent pas l'information indiquant si le mode maison était activé lors de leur création.",
+    "minutes": "{count} min",
+    "bookingStatus": {
+      "booked": "Réservé",
+      "matched": "Jumelé"
+    },
+    "openSession": "Ouvrir la session",
+    "errors": {
+      "invalid": "Vérifiez les valeurs du formulaire, les dates et le texte de confirmation.",
+      "failed": "La modification n'a pas pu être effectuée. Actualisez la page et réessayez.",
+      "selfRole": "Vous ne pouvez pas retirer votre propre rôle d'administrateur.",
+      "notFound": "Cet élément ou ce créneau en attente a été modifié. Actualisez la page et réessayez.",
+      "houseRequired": "Activez d'abord le mode maison sur votre propre ligne dans Utilisateurs."
+    }
+  }
+}

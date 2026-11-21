@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getSeoPage, listSeoPages } from "@/src/lib/content/seo";
+import { getSeoPage, listSeoPages, localesFor } from "@/src/lib/content/seo";
 import {
   pageMetadata,
   requireMarketing,
@@ -17,16 +17,22 @@ export async function generateMetadata({ params }: SlugProps) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
   requireMarketing();
-  const page = getSeoPage(template, slug);
+  const page = getSeoPage(template, slug, locale);
   if (!page) notFound();
-  return pageMetadata(page.title, page.description, `/${template}/${slug}`);
+  return pageMetadata(
+    page.title,
+    page.description,
+    `/${template}/${slug}`,
+    locale,
+    localesFor(template),
+  );
 }
 export default async function Page({ params }: SlugProps) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
   requireMarketing();
   await getTranslations("seo");
-  const page = getSeoPage(template, slug);
+  const page = getSeoPage(template, slug, locale);
   if (!page) notFound();
-  return <SeoPage page={page} template={template} />;
+  return <SeoPage page={page} template={template} locale={locale} />;
 }

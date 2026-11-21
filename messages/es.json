@@ -1,0 +1,999 @@
+{
+  "meta": {
+    "title": "{app}: coworking virtual y body doubling",
+    "description": "Reserva una hora, conéctate por video con un compañero de enfoque, di qué vas a hacer y sácalo adelante juntos. 25, 50 o 75 minutos."
+  },
+  "common": {
+    "save": "Guardar",
+    "saved": "Guardado",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "continue": "Continuar",
+    "loading": "Cargando…",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "share": "Compartir",
+    "join": "Unirse",
+    "leave": "Salir",
+    "yes": "Sí",
+    "no": "No",
+    "minutes": "{count} min",
+    "plus": "Plus",
+    "free": "Free",
+    "you": "Tú",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "getStarted": "Empezar",
+    "dashboard": "Panel",
+    "theme": "Cambiar tema de color",
+    "somethingWrong": "Algo salió mal. Por favor, inténtalo de nuevo.",
+    "upgrade": "Mejorar a Plus"
+  },
+  "errors": {
+    "notFound": "No pudimos encontrar esa página.",
+    "home": "Ir al inicio",
+    "generic": "Algo salió mal.",
+    "tryAgainLater": "Por favor, inténtalo de nuevo en un momento.",
+    "retry": "Reintentar"
+  },
+  "nav": {
+    "home": "Inicio",
+    "book": "Reservar",
+    "people": "Personas",
+    "progress": "Progreso",
+    "challenges": "Retos",
+    "groups": "Grupos",
+    "invite": "Invitar amigos",
+    "host": "Ser anfitrión",
+    "settings": "Ajustes",
+    "billing": "Plan",
+    "admin": "Admin",
+    "more": "Más",
+    "community": "Comunidad",
+    "you": "Tú",
+    "freeLeft": "{used} de {limit} sesiones gratuitas usadas esta semana",
+    "plusActive": "Plus está activo",
+    "unlimited": "Sesiones ilimitadas",
+    "language": "Idioma"
+  },
+  "auth": {
+    "signInTitle": "Te damos la bienvenida de nuevo",
+    "signInLead": "Inicia sesión para reservar tu próxima sesión.",
+    "signUpTitle": "Crea tu cuenta",
+    "signUpLead": "Comenzar es gratis. Tres sesiones a la semana por nuestra cuenta.",
+    "name": "Tu nombre",
+    "namePlaceholder": "Alex Morgan",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Al menos 12 caracteres",
+    "forgot": "¿Olvidaste tu contraseña?",
+    "ageConfirm": "Tengo 18 años o más y acepto los <terms>Términos</terms> y la <privacy>Política de privacidad</privacy>.",
+    "ageRequired": "Debes tener 18 años o más para usar {app}.",
+    "submitSignIn": "Iniciar sesión",
+    "submitSignUp": "Crear cuenta",
+    "google": "Continuar con Google",
+    "or": "o",
+    "haveAccount": "¿Ya tienes una cuenta? <link>Inicia sesión</link>",
+    "noAccount": "¿Eres nuevo por aquí? <link>Crea una cuenta</link>",
+    "invalid": "Introduce un correo electrónico válido y una contraseña de 12 a 128 caracteres.",
+    "passwordInvalid": "Usa una contraseña de 12 a 128 caracteres.",
+    "forgotTitle": "Restablece tu contraseña",
+    "forgotLead": "Te enviaremos un enlace por correo para elegir una nueva.",
+    "sendReset": "Enviar enlace de restablecimiento",
+    "resetSent": "Si existe una cuenta con ese correo, el enlace de restablecimiento va en camino.",
+    "resetTitle": "Elige una nueva contraseña",
+    "updatePassword": "Actualizar contraseña",
+    "passwordUpdated": "Contraseña actualizada. Ya puedes iniciar sesión.",
+    "verifyTitle": "Revisa tu bandeja de entrada",
+    "verifyLead": "Te enviamos un enlace para confirmar tu correo electrónico. Ábrelo y luego inicia sesión.",
+    "continueSignIn": "Continuar para iniciar sesión",
+    "signupsClosed": "El registro de nuevas cuentas está cerrado por el momento.",
+    "inviteOnly": "{app} es solo por invitación en este momento. Pídele su enlace de invitación a un miembro.",
+    "suspendedTitle": "Tu cuenta está pausada",
+    "suspendedLead": "Tu cuenta fue suspendida tras una revisión de seguridad. Si crees que se trata de un error, escribe a {email}."
+  },
+  "onboarding": {
+    "title": "Vamos a preparar tu cuenta",
+    "step": "Paso {n} de 3",
+    "aboutTitle": "Sobre ti",
+    "aboutLead": "Esto nos ayuda a encontrar compañeros que trabajen en cosas similares.",
+    "displayName": "Nombre visible",
+    "displayNameHint": "Tus compañeros verán este nombre.",
+    "username": "Nombre de usuario",
+    "usernameHint": "Tu enlace personal para reservas: {url}",
+    "usernameTaken": "Ese nombre de usuario ya está en uso.",
+    "usernameFormat": "3–24 caracteres: letras minúsculas, números, - y _.",
+    "usernameReserved": "Ese nombre de usuario está reservado.",
+    "timezone": "Zona horaria",
+    "timezoneHint": "Detectada desde tu navegador. Las horas se muestran en esta zona.",
+    "goalTitle": "¿Qué te trae por aquí?",
+    "goal": "¿Qué quieres sacar adelante?",
+    "goalPlaceholder": "Terminar el borrador de mi tesis para marzo",
+    "segments": "¿Qué tipo de trabajo haces? Elige los que quieras.",
+    "age": "Confirmo que tengo 18 años o más.",
+    "firstTitle": "Reserva tu primera sesión",
+    "firstLead": "Las personas que empiezan en su primer día tienen muchas más probabilidades de ser constantes. Elige una hora a continuación.",
+    "duration": "Duración",
+    "skip": "Reservaré más tarde",
+    "finish": "Reservar y terminar",
+    "noSlots": "O elige cualquier hora en el calendario.",
+    "popular": "Popular"
+  },
+  "segments": {
+    "remote-work": "Trabajo remoto",
+    "study": "Estudio",
+    "adhd": "TDAH",
+    "writing": "Escritura",
+    "founder": "Fundador",
+    "freelance": "Freelance",
+    "research": "Investigación",
+    "creative": "Trabajo creativo"
+  },
+  "realtime": {
+    "matched": "Tienes un compañero. Nos vemos pronto.",
+    "partnerChanged": "Tu compañero canceló. Estamos buscando a alguien nuevo.",
+    "fallback": "Aún no hay compañero. Elige qué hacer en tu panel."
+  },
+  "site": {
+    "how": "Cómo funciona",
+    "pricing": "Precios",
+    "faq": "Preguntas frecuentes",
+    "blog": "Blog",
+    "tagline": "Reserva una hora, conoce a un compañero y saca tu trabajo adelante.",
+    "openSource": "Código abierto bajo AGPL-3.0.",
+    "product": "Producto",
+    "useCases": "Casos de uso",
+    "adhd": "Body doubling para TDAH",
+    "barExam": "Compañero de estudio para el examen de abogacía",
+    "writers": "Para escritores",
+    "developers": "Para desarrolladores",
+    "company": "Sobre nosotros",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto",
+    "source": "Código fuente",
+    "language": "Idioma"
+  },
+  "book": {
+    "title": "Reservar una sesión",
+    "lead": "Las horas están en {zone}. Las sesiones comienzan en punto y a la media hora.",
+    "usage": "{used} de {limit} sesiones gratuitas esta semana",
+    "length": "Duración de la sesión",
+    "prevDay": "Día anterior",
+    "nextDay": "Día siguiente",
+    "prevWeek": "Semana anterior",
+    "nextWeek": "Semana siguiente",
+    "today": "Hoy",
+    "legendPopular": "Popular en EE. UU.",
+    "legendWaiting": "Personas esperando",
+    "legendMine": "Tu reserva",
+    "legendGroup": "Sesión grupal",
+    "newBooking": "Nueva reserva",
+    "waitingCount": "{count, plural, one {# persona está esperando un compañero} other {# personas están esperando un compañero}}",
+    "nobodyYet": "Nadie ha reservado a esta hora todavía. Te emparejaremos con quien reserve o te ofreceremos una sala abierta.",
+    "with": "Compañero",
+    "anyone": "Cualquiera",
+    "directHint": "Si está libre, se emparejarán juntos. Si no reserva, te emparejaremos con otra persona.",
+    "policy": "Cancelación gratuita hasta una hora antes. Se te asignará un compañero cinco minutos antes del inicio.",
+    "confirm": "Reservar {duration} min",
+    "booked": "Reservado. Te enviaremos una confirmación por correo electrónico.",
+    "cancelled": "Reserva cancelada.",
+    "yourSession": "Tu sesión",
+    "matchedWith": "con {name}",
+    "groupSeat": "sesión grupal",
+    "waitingForMatch": "esperando un compañero",
+    "freeCancel": "Cancelar ahora es gratis.",
+    "lateCancel": "Falta menos de una hora: cancelar ahora cuenta como cancelación tardía y tu compañero será reasignado.",
+    "openRoom": "Sala abierta",
+    "cancelBooking": "Cancelar reserva",
+    "groupSession": "Sesión grupal",
+    "hostedBy": "Organizada por {name}",
+    "seats": "{taken} de {capacity} plazas ocupadas",
+    "takeSeat": "Ocupar una plaza",
+    "groupShort": "Grupal",
+    "waitingShort": "Reservado",
+    "errors": {
+      "not_slot": "Las sesiones empiezan en punto o a la media hora.",
+      "too_late": "Es demasiado tarde para reservar a esta hora.",
+      "too_far": "Puedes reservar con hasta dos semanas de antelación.",
+      "duration": "Elige 25, 50 o 75 minutos.",
+      "limit": "Has usado tus sesiones gratuitas de esta semana.",
+      "overlap": "Ya tienes una sesión a esa hora.",
+      "blocked": "No puedes reservar con esta persona.",
+      "self": "No puedes reservar contigo mismo.",
+      "not_found": "No pudimos encontrar eso.",
+      "not_allowed": "Esa reserva ya no se puede cambiar.",
+      "full": "Esta sesión está llena.",
+      "invalid": "Hubo un error en la solicitud. Por favor, inténtalo de nuevo."
+    }
+  },
+  "dashboard": {
+    "title": "Inicio",
+    "hello": "Hola, {name}",
+    "welcome": "Te damos la bienvenida, {name}",
+    "lead": "Reserva una sesión, asiste y concéntrate en esa única tarea.",
+    "goalReminder": "Trabajando en: {goal}",
+    "liveBadge": "Sala abierta",
+    "liveTitle": "Tu sesión de las {time} está abierta",
+    "joinNow": "Entrar ahora",
+    "fallbackBadge": "Aún no hay compañero",
+    "fallbackTitle": "Nadie más reservó en tu horario",
+    "fallbackLead": "Tu sesión a las {when} está a punto de empezar. Elige una opción:",
+    "fallbackRoom": "Entrar a la sala abierta",
+    "fallbackNext": "Mover a la siguiente franja horaria",
+    "fallbackCancel": "Cancelar sin penalización",
+    "streak": "Racha de días",
+    "streakHint": "{weeks, plural, =0 {Comienza una racha semanal} one {# semana seguida} other {# semanas seguidas}}",
+    "hours": "Horas de enfoque",
+    "hoursHint": "{month} este mes",
+    "sessions": "Sesiones",
+    "noOutcomes": "Registra tus resultados para ver tu tasa de finalización",
+    "doneRate": "{rate}% marcado como completado",
+    "upcoming": "Próximas",
+    "book": "Reservar",
+    "group": "sesión grupal",
+    "with": "con {name}",
+    "pairing": "compañero asignado 5 min antes",
+    "open": "Abrir",
+    "manage": "Gestionar",
+    "empty": "Nada reservado. Próximos buenos horarios:",
+    "waiting": "{count} en espera"
+  },
+  "people": {
+    "title": "Personas",
+    "lead": "Compañeros con los que has trabajado, tus favoritos y a quienes has bloqueado.",
+    "yourLink": "Tu enlace de reserva",
+    "yourLinkLead": "Compártelo para que puedan reservar una sesión contigo directamente.",
+    "favorites": "Favoritos",
+    "favoritesPlus": "Los compañeros favoritos forman parte de Plus. Se te empareja con tus favoritos primero.",
+    "seePlus": "Ver Plus",
+    "bookWith": "Reservar",
+    "noFavorites": "Aún no tienes favoritos. Destaca a alguien con una estrella después de una buena sesión.",
+    "recent": "Compañeros recientes",
+    "noRecent": "Tus compañeros anteriores aparecerán aquí.",
+    "favorite": "Favorito",
+    "favorited": "Favorito",
+    "blocked": "Bloqueado",
+    "unblock": "Desbloquear"
+  },
+  "room": {
+    "pairTitle": "Sesión de enfoque",
+    "groupTitle": "Sesión grupal",
+    "phase": {
+      "waiting": "Empieza pronto",
+      "intro": "Saluda y comparte tu objetivo",
+      "focus": "Tiempo de enfoque",
+      "wrap": "Cierre",
+      "ended": "Sesión terminada"
+    },
+    "tips": {
+      "waiting": "Prepárate",
+      "intro": "Comparte qué harás",
+      "focus": "Manos a la obra",
+      "wrap": "Puesta en común",
+      "ended": "Listo"
+    },
+    "tipsBody": {
+      "waiting": "Despeja tu escritorio, cierra las pestañas innecesarias y elige una tarea.",
+      "intro": "Saluda y dile a tu compañero en qué única cosa vas a trabajar. Sé breve y específico.",
+      "focus": "Trabaja en silencio. Tu micrófono se ha silenciado automáticamente; actívalo cuando quieras.",
+      "wrap": "Activa tu micrófono y cuéntale a tu compañero cómo te fue. Luego marca tu resultado.",
+      "ended": "Buen trabajo."
+    },
+    "lowBandwidth": "Bajo ancho de banda: calidad de video reducida",
+    "aloneInRoom": "Tu compañero aún no ha sido asignado. Quédate aquí; la sala se actualizará sola.",
+    "joinToSee": "Únete para ver a tu compañero",
+    "noVideoProvider": "La transmisión de video está desactivada en este entorno",
+    "connecting": "Conectando…",
+    "notHereYet": "Aún no ha llegado",
+    "host": "Anfitrión",
+    "readyTitle": "Tu sesión empieza pronto",
+    "joinTitle": "Unirse a la sesión",
+    "cameraRequired": "Es obligatorio tener la cámara encendida. El micrófono es opcional y puedes silenciarlo en cualquier momento.",
+    "join": "Entrar con cámara",
+    "videoFailed": "No pudimos conectar el video. Comprueba tu conexión e inténtalo de nuevo.",
+    "neverRecorded": "Las sesiones nunca se graban.",
+    "goalLabel": "Tu objetivo para esta sesión",
+    "goalPlaceholder": "Escribir la sección de introducción de mi informe",
+    "shareGoal": "Compartir objetivo",
+    "howDidItGo": "¿Cómo te fue?",
+    "outcome": {
+      "done": "Completado",
+      "partial": "Parcialmente",
+      "not_done": "No completado"
+    },
+    "mute": "Silenciar",
+    "unmute": "Activar micrófono",
+    "report": "Reportar",
+    "leave": "Salir",
+    "summaryOverline": "Sesión completada",
+    "summaryTitle": "Buen trabajo. Una más para la cuenta.",
+    "yourPartners": "{count, plural, one {Tu compañero} other {Tus compañeros}}",
+    "favorite": "Favorito",
+    "favorited": "Favorito",
+    "profile": "Perfil",
+    "bookNext": "Reservar la siguiente",
+    "backHome": "Volver al inicio",
+    "reportTitle": "Reportar o bloquear",
+    "reportLead": "Bloquear significa que nunca más se volverán a emparejar. Reportar también bloquea y envía los detalles a nuestro equipo.",
+    "who": "Persona",
+    "reason": "Motivo",
+    "reasons": {
+      "inappropriate": "Comportamiento inapropiado o explícito",
+      "harassment": "Acoso o lenguaje de odio",
+      "no_camera": "Cámara apagada o no funciona",
+      "spam": "Spam o venta de productos/servicios",
+      "underage": "Parece menor de 18 años",
+      "other": "Otro motivo"
+    },
+    "details": "Detalles (opcional)",
+    "blockOnly": "Solo bloquear",
+    "reportAndBlock": "Reportar y bloquear",
+    "reportSent": "Gracias por avisarnos",
+    "blocked": "Bloqueado",
+    "reportSentBody": "No te volveremos a emparejar con esta persona.",
+    "media": {
+      "denied": "Se bloqueó el acceso a la cámara. Permítelo en la configuración de sitios de tu navegador y luego recarga.",
+      "not_found": "No pudimos encontrar una cámara. Conecta una para unirte.",
+      "in_use": "Otra aplicación está usando tu cámara.",
+      "unknown": "No pudimos iniciar tu cámara."
+    },
+    "hostControls": "Controles de anfitrión",
+    "hostControlsLead": "Avanza la sesión del grupo cuando todos estén listos.",
+    "startFocus": "Iniciar enfoque",
+    "startWrap": "Iniciar cierre",
+    "goalsInRoom": "Objetivos en la sala",
+    "rateHost": "¿Cómo estuvo tu anfitrión?",
+    "thanks": "Gracias por tus comentarios."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "saved": "Guardado.",
+    "save": "Guardar cambios",
+    "profile": "Perfil",
+    "displayName": "Nombre visible",
+    "username": "Nombre de usuario",
+    "bio": "Biografía breve",
+    "bioHint": "Se muestra en tu página pública de reservas.",
+    "goal": "Tu gran objetivo",
+    "timezone": "Zona horaria",
+    "avatarUrl": "URL de la foto",
+    "segments": "En qué trabajas",
+    "preferences": "Preferencias",
+    "emailReminders": "Enviarme un recordatorio por correo 10 minutos antes de cada sesión",
+    "pushReminders": "Enviar notificaciones del navegador para recordatorios y cambios de compañero",
+    "pushEnable": "Activar notificaciones del navegador en este dispositivo",
+    "pushDisable": "Desactivar notificaciones en este dispositivo",
+    "pushUnsupported": "Este navegador no admite notificaciones push.",
+    "pushDenied": "Las notificaciones están bloqueadas para este sitio en los ajustes de tu navegador.",
+    "microphoneDefault": "Iniciar sesiones con mi micrófono encendido",
+    "statsPublic": "Mostrar mis horas de enfoque y racha en mi página pública",
+    "matchSameSegment": "Solo emparejarme con personas que compartan alguno de mis tipos de trabajo",
+    "security": "Contraseña y sesiones",
+    "currentPassword": "Contraseña actual",
+    "newPassword": "Nueva contraseña",
+    "changePassword": "Cambiar contraseña",
+    "passwordChanged": "Contraseña cambiada. Se cerró sesión en los demás dispositivos.",
+    "signOutOthers": "Cerrar sesión en otros dispositivos",
+    "otherSessionsOut": "Se cerró la sesión en los demás dispositivos.",
+    "analytics": "Analítica del producto",
+    "analyticsLead": "Opcional y desactivada hasta que la actives. Nunca vendemos datos.",
+    "allowAnalytics": "Permitir",
+    "denyAnalytics": "No permitir",
+    "analyticsOn": "Analítica permitida.",
+    "analyticsOff": "Analítica desactivada.",
+    "data": "Tus datos",
+    "dataLead": "Descarga todo lo que almacenamos sobre ti en un archivo JSON.",
+    "export": "Descargar mis datos",
+    "deleteTitle": "Eliminar cuenta",
+    "deleteLead": "Esto eliminará permanentemente tu perfil, reservas e historial. Cancela primero cualquier suscripción a Plus.",
+    "typeDelete": "Escribe ELIMINAR para confirmar",
+    "deleteAccount": "Eliminar mi cuenta",
+    "deleteFailed": "No pudimos eliminar tu cuenta.",
+    "deleteFresh": "Por seguridad, vuelve a iniciar sesión en los últimos 5 minutos antes de eliminar.",
+    "errors": {
+      "invalid": "Por favor, revisa los campos e inténtalo de nuevo.",
+      "usernameTaken": "Ese nombre de usuario ya está en uso.",
+      "usernameFormat": "Los nombres de usuario tienen de 3 a 24 caracteres: letras minúsculas, números, - y _.",
+      "usernameReserved": "Ese nombre de usuario está reservado."
+    }
+  },
+  "billing": {
+    "title": "Tu plan",
+    "current": "Plan actual",
+    "plus": "Plus",
+    "free": "Free",
+    "returned": "¡Gracias! Tu pago se está confirmando. Tu plan se actualizará en un minuto.",
+    "usage": "{used} de {limit} sesiones gratuitas usadas esta semana.",
+    "upgrade": "Ver Plus",
+    "rewardTitle": "Tienes un mes gratis esperándote",
+    "rewardLead": "Tu código de referido {code} se aplica automáticamente al pagar.",
+    "polarNote": "Los pagos son procesados por Polar, nuestro comerciante registrado. Gestiona facturas, métodos de pago y cancelaciones en el portal de facturación.",
+    "connecting": "Conectando…",
+    "manage": "Gestionar facturación y cancelación",
+    "choose": "Elegir este plan",
+    "unavailable": "La facturación no está disponible en este momento. Por favor, inténtalo de nuevo.",
+    "reason": {
+      "billing_disabled": "Todas las funciones están incluidas en este servidor.",
+      "subscription": "Tu suscripción a Plus está activa.",
+      "house": "Cuenta de la casa: sesiones ilimitadas.",
+      "host": "Plus es gratis este mes porque organizaste suficientes sesiones grupales.",
+      "community": "Plus está incluido a través de la licencia de tu grupo.",
+      "none": "Tres sesiones a la semana, emparejamientos y rachas."
+    }
+  },
+  "progress": {
+    "title": "Progreso",
+    "lead": "Las rachas cuentan los días con al menos una sesión completada, en tu zona horaria.",
+    "dailyStreak": "Racha diaria",
+    "longest": "Más larga: {n} días",
+    "weeklyStreak": "Racha semanal",
+    "weeks": "semanas seguidas con una sesión",
+    "totalHours": "Horas de enfoque",
+    "sessions": "{n} sesiones completadas",
+    "activity": "Últimas 12 semanas",
+    "activityLabel": "Minutos de enfoque por día durante las últimas 12 semanas",
+    "thisMonth": "Este mes: {hours} horas en {sessions} sesiones.",
+    "share": "Comparte tu mes",
+    "sharePrivate": "Tus estadísticas son privadas, por lo que las tarjetas para compartir están desactivadas.",
+    "openSettings": "Cambiar en Ajustes",
+    "story": "Tamaño historia",
+    "square": "Cuadrado",
+    "shareButton": "Compartir"
+  },
+  "invite": {
+    "title": "Invitar amigos",
+    "lead": "Enfocarse es más fácil con gente que conoces. Comparte tu enlace.",
+    "leadReward": "Cuando un amigo se una y complete su primera sesión, ambos recibirán un mes gratis de Plus.",
+    "yourLink": "Tu enlace de invitación",
+    "how": "Cualquiera que se registre dentro de los 30 días posteriores a abrir tu enlace cuenta como tu invitado.",
+    "invited": "{count, plural, =0 {Sin invitaciones todavía} one {# persona invitada} other {# personas invitadas}}",
+    "none": "Comparte tu enlace para empezar.",
+    "status": {
+      "pending": "Registrado",
+      "converted": "Primera sesión completada",
+      "rewarded": "Mes gratis otorgado"
+    }
+  },
+  "publicProfile": {
+    "host": "Anfitrión",
+    "hours": "Horas de enfoque",
+    "sessions": "Sesiones",
+    "streak": "Racha de días",
+    "bookTitle": "Enfócate con {name}",
+    "isYou": "Esta es tu página pública. Comparte el enlace y podrán reservar contigo.",
+    "minutes": "{n} minutos",
+    "signUpToJoin": "Regístrate para unirte",
+    "noOpen": "No hay horarios disponibles en este momento. Elige una hora y le enviaremos una invitación.",
+    "otherTime": "Elegir otra hora",
+    "joinApp": "Únete a {app} para reservar",
+    "join": "Reservar esto",
+    "failed": "No se pudo reservar a esa hora."
+  },
+  "challenges": {
+    "title": "Retos",
+    "lead": "Objetivos con plazo fijo hacia los que trabajas con todos los que se unan.",
+    "none": "No hay retos todavía. Vuelve a consultar pronto.",
+    "active": "En curso",
+    "upcoming": "Próximos",
+    "past": "Finalizados",
+    "members": "{count, plural, one {# miembro} other {# miembros}}",
+    "goal": {
+      "sessions": "Objetivo: {value} sesiones",
+      "minutes": "Objetivo: {value} horas"
+    },
+    "join": "Unirse",
+    "leave": "Salir",
+    "leaderboard": "Clasificación",
+    "empty": "Nadie se ha unido todavía. Sé el primero.",
+    "hoursValue": "{value} h",
+    "sessionsValue": "{value} sesiones",
+    "reached": "Objetivo alcanzado"
+  },
+  "groups": {
+    "title": "Grupos",
+    "lead": "Universidades, bootcamps y equipos. Los miembros se emparejan entre sí primero.",
+    "yours": "Tus grupos",
+    "none": "Aún no estás en ningún grupo.",
+    "memberCount": "{count, plural, one {# miembro} other {# miembros}}",
+    "roles": {
+      "owner": "Propietario",
+      "admin": "Admin",
+      "member": "Miembro"
+    },
+    "kinds": {
+      "university": "Universidad",
+      "bootcamp": "Bootcamp",
+      "company": "Empresa",
+      "other": "Comunidad"
+    },
+    "joinTitle": "Unirse a un grupo",
+    "code": "Código o enlace de invitación",
+    "codePlaceholder": "Pega un enlace o código de invitación",
+    "joinWithCode": "Unirse",
+    "codeNotFound": "Ese código de invitación no coincide con ningún grupo.",
+    "createTitle": "Crear un grupo",
+    "name": "Nombre",
+    "namePlaceholder": "Escritores nocturnos",
+    "kind": "Tipo",
+    "description": "Descripción",
+    "create": "Crear grupo",
+    "invalid": "Por favor, revisa el nombre e inténtalo de nuevo.",
+    "licensed": "Plus está incluido para los primeros {seats} miembros hasta el {date}.",
+    "invite": "Enlace de invitación",
+    "inviteLead": "Cualquiera con este enlace puede unirse al grupo.",
+    "rotate": "Generar un nuevo enlace",
+    "upcoming": "Miembros buscando un compañero",
+    "upcomingLead": "Reserva a la misma hora y te emparejaremos con ellos primero.",
+    "joinThem": "Unirte a ellos",
+    "noUpcoming": "Nadie en el grupo está esperando un compañero en este momento.",
+    "members": "Miembros",
+    "leave": "Salir del grupo",
+    "remove": "Eliminar"
+  },
+  "hosting": {
+    "title": "Ser anfitrión",
+    "lead": "Los anfitriones guían sesiones grupales de hasta 9 personas: dan la bienvenida a todos, preguntan los objetivos, controlan el tiempo y hacen una puesta en común al final. Organiza {n} sesiones en un mes y Plus será gratis el mes siguiente.",
+    "applyTitle": "Solicita ser anfitrión",
+    "notYet": "Puedes solicitar ser anfitrión después de {needed} sesiones completadas. Tienes {done}.",
+    "pitch": "¿Por qué quieres ser anfitrión?",
+    "pitchPlaceholder": "Tengo un canal de estudio para estudiantes de enfermería y quiero organizar sesiones matutinas…",
+    "audience": "Tu audiencia (opcional)",
+    "audienceHint": "Un enlace a YouTube, TikTok, Instagram o boletín informativo, si tienes uno.",
+    "apply": "Enviar solicitud",
+    "done": "Listo.",
+    "pendingTitle": "Solicitud recibida",
+    "pendingLead": "Revisamos las solicitudes manualmente y te responderemos por correo electrónico.",
+    "suspended": "La función de anfitrión está pausada en tu cuenta. Contacta a soporte si tienes preguntas.",
+    "hosted": "Sesiones organizadas",
+    "rating": "Calificación",
+    "ratings": "{n, plural, one {# valoración} other {# valoraciones}}",
+    "perk": "Beneficio de anfitrión",
+    "yourPage": "Tu página de anfitrión",
+    "scheduleTitle": "Programar una sesión grupal",
+    "sessionTitle": "Título",
+    "titlePlaceholder": "Enfoque profundo por la mañana",
+    "day": "Día",
+    "time": "Hora de inicio",
+    "length": "Duración",
+    "capacity": "Plazas (incluyéndote a ti)",
+    "schedule": "Programar",
+    "upcoming": "Tus sesiones",
+    "seats": "{taken} de {capacity} plazas ocupadas",
+    "open": "Abrir",
+    "cancel": "Cancelar",
+    "cancelled": "Cancelada",
+    "noneScheduled": "No hay nada programado todavía.",
+    "errors": {
+      "invalid": "Por favor, comprueba los campos.",
+      "not_eligible": "Primero necesitas más sesiones completadas.",
+      "exists": "Ya has enviado una solicitud.",
+      "not_host": "Solo los anfitriones aprobados pueden programar.",
+      "overlap": "Ya tienes algo programado a esa hora.",
+      "too_late": "Esa hora está demasiado próxima.",
+      "too_far": "Elige una hora dentro de las próximas dos semanas.",
+      "not_slot": "Elige una hora en punto o a la media hora.",
+      "duration": "Elige 25, 50 o 75 minutos."
+    }
+  },
+  "hostPage": {
+    "host": "Anfitrión",
+    "hosted": "{n, plural, one {# sesión organizada} other {# sesiones organizadas}}",
+    "upcoming": "Próximas sesiones grupales",
+    "seatsLeft": "{n, plural, =0 {completo} one {queda # plaza} other {quedan # plazas}}",
+    "takeSeat": "Ocupar una plaza",
+    "signUp": "Regístrate para unirte",
+    "none": "No hay sesiones programadas en este momento."
+  },
+  "home": {
+    "title": "{app} — Saca adelante tus tareas con alguien a tu lado",
+    "description": "Reserva una sesión de enfoque en video y en silencio, comparte un objetivo y trabaja junto a un compañero de compromiso.",
+    "heading": "Saca adelante tus tareas con alguien a tu lado",
+    "lead": "Reserva una hora. Conoce a un compañero por video. Di qué planeas hacer, trabajen en silencio juntos y hagan una puesta en común al final. Un poco de compañía para el trabajo que tienes por delante.",
+    "start": "Empieza gratis",
+    "how": "Cómo funciona",
+    "skip": "Saltar al contenido",
+    "visual": "Ejemplo de una sesión de enfoque",
+    "example": "Sesión de ejemplo",
+    "focus": "Tiempo de enfoque en silencio",
+    "timer": "Tiempo restante",
+    "alex": "Alex",
+    "sam": "Sam",
+    "alexGoal": "Redactar los dos primeros párrafos",
+    "samGoal": "Revisar una serie de ejercicios prácticos",
+    "note": "Cámara encendida. Micrófono opcional. Nunca se graba.",
+    "stepsTitle": "Una hora, una persona, un poco de progreso",
+    "steps": [
+      {
+        "title": "Reserva una hora",
+        "body": "Elige una sesión de 25, 50 o 75 minutos que se ajuste a tu día."
+      },
+      {
+        "title": "Comparte un objetivo",
+        "body": "Conoce a tu compañero por video y define un siguiente paso pequeño y concreto."
+      },
+      {
+        "title": "Trabaja y luego comparte cómo te fue",
+        "body": "Trabaja en silencio con tu cámara encendida. Al final, comparte cómo te fue."
+      }
+    ],
+    "featuresTitle": "Espacio para trabajar a tu manera",
+    "features": [
+      {
+        "title": "Un compañero o un grupo con anfitrión",
+        "body": "Trabaja uno a uno o comparte una sala tranquila guiada por un anfitrión."
+      },
+      {
+        "title": "25, 50 o 75 minutos",
+        "body": "Elige un comienzo breve o un bloque más largo. Deja espacio para descansar."
+      },
+      {
+        "title": "Buena compañía",
+        "body": "Comparte tu enlace de reserva personal. Con Plus, guarda a tus compañeros favoritos."
+      },
+      {
+        "title": "Observa cómo se suma tu esfuerzo",
+        "body": "Usa las rachas y estadísticas de enfoque para ver el tiempo que le has dedicado a tu trabajo."
+      },
+      {
+        "title": "Tus límites importan",
+        "body": "Reporta o bloquea a alguien cuando lo necesites. El servicio es para mayores de 18 años."
+      },
+      {
+        "title": "Compañía en vivo, sin grabaciones",
+        "body": "Nunca grabamos las sesiones. Mantén los documentos privados fuera de cámara y trabaja en tu propia pantalla."
+      }
+    ],
+    "audienceTitle": "Trae el trabajo que tienes hoy",
+    "audiences": {
+      "adhd": "TDAH",
+      "students": "Estudiantes",
+      "bar": "Examen de abogacía",
+      "mcat": "MCAT",
+      "writers": "Escritores",
+      "developers": "Desarrolladores",
+      "freelancers": "Freelancers",
+      "founders": "Fundadores",
+      "remote": "Trabajadores remotos",
+      "researchers": "Investigadores"
+    },
+    "sourceTitle": "Código abierto, con espacio para adaptarlo a ti",
+    "sourceBody": "El software tiene licencia AGPL-3.0. Lee el código, contribuye o aloja tu propia instancia.",
+    "sourceLink": "Ver el código en GitHub",
+    "faqTitle": "Algunas cosas que podrías preguntarte",
+    "allFaq": "Ver todas las preguntas",
+    "ctaTitle": "Trae una tarea. Haremos espacio.",
+    "ctaBody": "No necesitas un plan perfecto. Elige una hora y un pequeño punto de partida."
+  },
+  "how": {
+    "title": "Cómo funciona una sesión de enfoque | {app}",
+    "description": "Desde la reserva hasta el cierre: duración de las sesiones, emparejamiento, normas de convivencia y seguridad.",
+    "heading": "Un ritmo sencillo para trabajar con enfoque",
+    "lead": "Una sesión de enfoque le da a tu tarea un principio y un final, con otra persona trabajando a tu lado.",
+    "stages": [
+      {
+        "title": "Antes: elige una tarea manejable",
+        "body": "Reserva una sesión de 25, 50 o 75 minutos. Prepara lo que necesites, prueba tu cámara y cierra pestañas no relacionadas. Elige un objetivo que puedas describir en una sola frase."
+      },
+      {
+        "title": "Introducción: saluda y comparte tu objetivo",
+        "body": "Únete a tiempo con tu cámara encendida. Dale un breve saludo a tu compañero y di en qué vas a trabajar. Sus tareas no tienen que estar relacionadas. Mantén los detalles personales en privado."
+      },
+      {
+        "title": "Enfoque: trabajen juntos en silencio",
+        "body": "Mantén tu cámara encendida y trabaja en tu propia tarea. Tu micrófono es opcional; siléncialo cuando no estés hablando. Si tu atención se desvía, retoma la siguiente pequeña acción."
+      },
+      {
+        "title": "Cierre: cuéntense cómo les fue",
+        "body": "Comparte lo que hiciste y marca tu resultado como completado, parcial o no completado. Puedes progresar sin haber terminado todo. Agradece a tu compañero y tómate un descanso antes de otra sesión."
+      }
+    ],
+    "matchingTitle": "Cómo funciona el emparejamiento",
+    "matchingBody": "Emparejamos a personas con la misma hora de inicio y duración de sesión, priorizando compañeros preferidos y favoritos, y respetando siempre los bloqueos. Tu compañero se asigna cinco minutos antes de la sesión. Una reserva tardía se empareja lo antes posible.",
+    "fallbackBody": "Si no hay nadie disponible, puedes unirte a la sala abierta, pasar a la siguiente franja con alguien en espera o cancelar sin penalización. Una reserva no garantiza un compañero individual.",
+    "etiquetteTitle": "Un espacio compartido con pautas sencillas",
+    "etiquetteBody": "Mantén tu cámara encendida. El micrófono es opcional. Sé amable, mantén los saludos breves y respeta el trabajo en silencio. No grabes, no promociones servicios ni hagas comentarios sobre la apariencia de los demás.",
+    "safetyTitle": "Puedes marcar tus límites",
+    "safetyBody": "El servicio es para mayores de 18 años. Nunca grabamos las sesiones. Puedes salir, reportar o bloquear a alguien; los bloqueos evitan emparejamientos futuros. Mantén la información confidencial fuera de la vista.",
+    "faqTitle": "Antes de tu primera sesión"
+  },
+  "faqPage": {
+    "title": "Preguntas frecuentes | {app}",
+    "description": "Respuestas sobre cómo empezar, las sesiones de enfoque, seguridad, privacidad y planes.",
+    "heading": "Preguntas y respuestas",
+    "lead": "Esto es lo que puedes esperar antes de reservar un poco de compañía para tu trabajo.",
+    "groups": [
+      {
+        "title": "Primeros pasos",
+        "items": [
+          {
+            "q": "¿Qué es el body doubling?",
+            "a": "El body doubling consiste en realizar tu propia tarea en presencia de otra persona. En una sesión por video, compartes un objetivo, trabajas en silencio y haces una puesta en común al final. Es una rutina de trabajo práctica, no un tratamiento médico."
+          },
+          {
+            "q": "¿Quién puede unirse?",
+            "a": "Los adultos mayores de 18 años pueden usar el servicio para trabajar, estudiar, escribir o realizar tareas cotidianas. No necesitas un diagnóstico ni un tipo de trabajo en particular."
+          },
+          {
+            "q": "¿Qué necesito para mi primera sesión?",
+            "a": "Una cámara que funcione, conexión a internet y una tarea. Elige un entorno privado y adecuado, y prueba tu cámara antes de la sesión."
+          }
+        ]
+      },
+      {
+        "title": "Sesiones",
+        "items": [
+          {
+            "q": "¿Cuánto duran las sesiones?",
+            "a": "Elige 25, 50 o 75 minutos. Las sesiones comienzan en punto o a la media hora. Tu calendario muestra las horas en tu zona horaria."
+          },
+          {
+            "q": "¿Cómo se elige a mi compañero?",
+            "a": "Emparejamos a personas con la misma hora de inicio y duración, priorizando compañeros preferidos y favoritos. Los bloqueos siempre se respetan. Tu compañero se asigna cinco minutos antes del inicio."
+          },
+          {
+            "q": "¿Qué pasa si no hay nadie con quien emparejarme?",
+            "a": "Puedes unirte a la sala abierta, pasar a la siguiente franja con alguien en espera o cancelar sin penalización. El emparejamiento depende de quién haya reservado."
+          },
+          {
+            "q": "¿Tengo que hablar o compartir mi pantalla?",
+            "a": "Mantén tu cámara encendida. El micrófono es opcional y puedes mantenerlo silenciado mientras trabajas. No necesitas compartir tu pantalla ni explicar detalles privados."
+          },
+          {
+            "q": "¿Qué pasa si no termino mi objetivo?",
+            "a": "Marca tu resultado como parcial o no completado y comparte una breve y honesta puesta en común. Una sesión es un espacio para trabajar, no una prueba que debas aprobar."
+          },
+          {
+            "q": "¿Puedo cancelar una reserva?",
+            "a": "Cancela al menos una hora antes del inicio para evitar una cancelación tardía. Si no puedes asistir, cancela en lugar de dejar a un compañero esperando. Las cancelaciones del plan alternativo sin emparejar no tienen penalización."
+          }
+        ]
+      },
+      {
+        "title": "Seguridad y privacidad",
+        "items": [
+          {
+            "q": "¿Se graban las sesiones?",
+            "a": "No. Nunca grabamos ni almacenamos el video o audio de las sesiones. Tu compañero puede ver tu entorno, así que mantén la información confidencial fuera de vista. Está prohibido grabar a otros participantes."
+          },
+          {
+            "q": "¿Cómo reporto o bloqueo a alguien?",
+            "a": "Usa las opciones de reportar o bloquear dentro de la sesión. Reportar también bloquea a la persona y envía los detalles a nuestro equipo. No volverás a emparejarte con una persona bloqueada."
+          },
+          {
+            "q": "¿Puedo exportar o eliminar mis datos?",
+            "a": "Usa la exportación de datos y la eliminación de cuenta en Ajustes. Contacta a soporte si necesitas ayuda para ejercer tus derechos de privacidad. Nuestra política de privacidad explica los plazos de conservación y las excepciones legales."
+          }
+        ]
+      },
+      {
+        "title": "Planes",
+        "items": [
+          {
+            "q": "¿Qué incluye el plan Free?",
+            "a": "Free incluye tres sesiones a la semana, emparejamientos y rachas. Cuando la facturación está desactivada en una instancia, todos los miembros tienen acceso a Plus."
+          },
+          {
+            "q": "¿Qué incluye Plus?",
+            "a": "Plus incluye sesiones ilimitadas, compañeros favoritos y filtros de emparejamiento avanzados. Donde la facturación esté activada, puedes elegir facturación mensual o anual con una prueba gratuita de siete días. El plan anual se factura anualmente."
+          },
+          {
+            "q": "¿Cómo cancelo una suscripción?",
+            "a": "Abre el portal de facturación para clientes en Ajustes. Cancela antes de que termine tu periodo de prueba para evitar el primer cobro, o antes de la renovación para evitar el siguiente cobro. La pantalla de pago y el portal muestran las fechas y los importes aplicables."
+          }
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Planes Free y Plus | {app}",
+    "description": "Comienza con tres sesiones gratuitas a la semana o elige Plus para sesiones ilimitadas, favoritos y filtros avanzados.",
+    "heading": "Haz espacio para un hábito constante",
+    "lead": "Comienza con tres sesiones a la semana. Elige Plus cuando quieras más espacio.",
+    "free": "Free",
+    "freePrice": "Gratis",
+    "freeFeatures": [
+      "3 sesiones a la semana",
+      "Emparejamiento con compañeros",
+      "Rachas"
+    ],
+    "plus": "Plus",
+    "plusFeatures": [
+      "Sesiones ilimitadas",
+      "Compañeros favoritos",
+      "Filtros de emparejamiento avanzados"
+    ],
+    "trial": "Prueba gratuita de 7 días",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "perMonth": "al mes",
+    "perYear": "al año, facturado anualmente",
+    "fallback": "Ver precio al pagar",
+    "trialBody": "Prueba Plus gratis durante 7 días. Tu suscripción se renovará automáticamente después de la prueba a menos que canceles. Revisa el importe, la moneda, los impuestos y la fecha de renovación al pagar.",
+    "cancel": "Cancela a través del portal de clientes en Ajustes antes de que termine tu periodo de prueba o de tu próxima renovación."
+  },
+  "blog": {
+    "title": "Notas prácticas sobre el enfoque | {app}",
+    "description": "Guías útiles sobre body doubling, sesiones de estudio, compromiso mutuo y coworking virtual.",
+    "heading": "Un poco de ayuda para empezar",
+    "lead": "Notas prácticas para los días en que ponerte a trabajar requiere un poco de estructura.",
+    "read": "Leer artículo",
+    "back": "Todos los artículos",
+    "published": "Publicado",
+    "by": "Por {author}"
+  },
+  "seo": {
+    "home": "Inicio",
+    "related": "Páginas relacionadas",
+    "howTitle": "Cómo funciona una sesión",
+    "howBody": "Reserva 25, 50 o 75 minutos. Conéctate por video, comparte un objetivo, trabaja en silencio con la cámara encendida y haz una puesta en común al final.",
+    "faq": "Preguntas frecuentes",
+    "explore": "Explora una forma de trabajar en compañía",
+    "templates": {
+      "body-doubling-for": "Body doubling para tu día a día",
+      "study-with-me": "Estudia con un poco de compañía",
+      "virtual-coworking-for": "Coworking virtual para tu trabajo",
+      "alternatives": "Compara diferentes formas de coworking"
+    },
+    "descriptions": {
+      "body-doubling-for": "Encuentra una rutina tranquila de compromiso mutuo para las tareas y días que tienes por delante.",
+      "study-with-me": "Planifica bloques de estudio enfocados con otra persona trabajando a tu lado.",
+      "virtual-coworking-for": "Haz tiempo para el trabajo independiente con compañía tranquila por video.",
+      "alternatives": "Conoce diferentes formas de encontrar estructura y compañía mientras trabajas."
+    }
+  },
+  "legal": {
+    "privacy": "Política de privacidad",
+    "terms": "Términos del servicio",
+    "updated": "Última actualización: 21 de noviembre de 2026",
+    "contact": "Contáctanos"
+  },
+  "admin": {
+    "nav": {
+      "overview": "Resumen de administración",
+      "users": "Usuarios",
+      "reports": "Reportes",
+      "hosts": "Anfitriones",
+      "challenges": "Retos",
+      "groups": "Grupos",
+      "house": "Casa"
+    },
+    "navigation": "Navegación de administración",
+    "saving": "Guardando…",
+    "saved": "Guardado",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "empty": "Sin resultados.",
+    "unavailable": "No disponible",
+    "operations": "Operaciones",
+    "period": "Últimos {days} días",
+    "metrics": {
+      "signups": "Nuevos registros",
+      "bookings": "Reservas creadas",
+      "completed": "Sesiones completadas",
+      "matchRate": "Tasa de emparejamiento",
+      "noShowRate": "Tasa de ausencias",
+      "lateCancels": "Cancelaciones tardías",
+      "plus": "Suscripciones activas a Plus",
+      "reports": "Reportes abiertos",
+      "hosts": "Solicitudes de anfitrión pendientes"
+    },
+    "metricNotes": "Los registros y las nuevas reservas utilizan sus fechas de creación. Las demás métricas del periodo utilizan las horas de inicio de las sesiones. La tasa de emparejamiento contabiliza las reservas emparejadas con una sesión frente a esas reservas más los fallos, excluyendo los fallos emparejados tarde. La tasa de ausencias es el número de ausencias dividido entre las reservas completadas más las ausencias. Las tasas vacías se muestran como 0%. Los recuentos de suscripciones y de la cola reflejan el estado actual.",
+    "video": "Uso reciente de video",
+    "videoValue": "{month}: {gb} GB",
+    "heartbeat": "Latido del worker",
+    "columns": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "username": "Nombre de usuario",
+      "created": "Creado",
+      "role": "Rol",
+      "flags": "Indicadores",
+      "completed": "Sesiones completadas",
+      "actions": "Acciones",
+      "reporter": "Reportante",
+      "target": "Usuario reportado",
+      "reason": "Motivo",
+      "details": "Detalles",
+      "session": "ID de sesión",
+      "reports30": "Reportes en 30 días",
+      "status": "Estado",
+      "pitch": "Propuesta",
+      "audience": "URL de audiencia",
+      "rating": "Calificación",
+      "hosted": "Sesiones organizadas",
+      "perkUntil": "Beneficio hasta",
+      "title": "Título",
+      "members": "Miembros",
+      "owner": "Propietario",
+      "plusSeats": "Plazas de Plus",
+      "licenseUntil": "La licencia finaliza (UTC)",
+      "slot": "Hora de la franja",
+      "duration": "Duración",
+      "waiting": "Miembro en espera"
+    },
+    "search": "Buscar por correo electrónico, nombre o nombre de usuario",
+    "searchButton": "Buscar",
+    "userLimit": "Hasta 50 usuarios, los más recientes primero.",
+    "noProfile": "Perfil no creado todavía.",
+    "roles": {
+      "admin": "Admin",
+      "user": "Usuario"
+    },
+    "suspended": "Suspendido",
+    "houseAccount": "Cuenta de la casa",
+    "suspend": "Suspender",
+    "unsuspend": "Levantar suspensión",
+    "makeAdmin": "Hacer admin",
+    "removeAdmin": "Quitar admin",
+    "houseOn": "Activar modo casa",
+    "houseOff": "Desactivar modo casa",
+    "openReports": "Reportes abiertos",
+    "resolvedReports": "Últimos 50 reportes resueltos",
+    "dismiss": "Descartar",
+    "suspendTarget": "Suspender usuario reportado y marcar como tramitado",
+    "reportStatus": {
+      "open": "Abierto",
+      "dismissed": "Descartado",
+      "actioned": "Tramitado"
+    },
+    "reasons": {
+      "inappropriate": "Comportamiento inapropiado",
+      "harassment": "Acoso",
+      "no_camera": "Sin cámara",
+      "spam": "Spam",
+      "underage": "Menor de edad",
+      "other": "Otro"
+    },
+    "applications": "Solicitudes de anfitrión",
+    "approvedHosts": "Anfitriones aprobados y suspendidos",
+    "approve": "Aprobar",
+    "reject": "Rechazar",
+    "hostStatus": {
+      "applied": "Solicitado",
+      "approved": "Aprobado",
+      "rejected": "Rechazado",
+      "suspended": "Suspendido"
+    },
+    "createChallenge": "Crear reto",
+    "existingChallenges": "Retos existentes",
+    "slug": "Slug",
+    "description": "Descripción",
+    "startsAt": "Comienza el (UTC)",
+    "endsAt": "Termina el (UTC, exclusivo)",
+    "goalType": "Tipo de objetivo",
+    "sessions": "Sesiones",
+    "hours": "Horas",
+    "goalHours": "Objetivo en horas (almacenado en minutos)",
+    "goalSessions": "Objetivo en sesiones",
+    "utcDates": "Las fechas usan la medianoche UTC. La fecha de finalización es exclusiva.",
+    "challengeStarted": "Este reto ya ha comenzado y no se puede eliminar.",
+    "members": "{count} miembros",
+    "licenseHelp": "Las licencias B2B se gestionan aquí tras la facturación. Establece entre 0 y 10.000 plazas de Plus y una fecha de finalización. Las fechas usan la medianoche UTC; el acceso termina al inicio de esa fecha. Deja la fecha en blanco para eliminar la licencia.",
+    "confirmDelete": "Escribe ELIMINAR para borrar permanentemente este grupo y sus membresías.",
+    "houseHelp": "Ayuda a un miembro en espera reservando una sesión en pareja tú mismo. Las horas se muestran en {timezone}.",
+    "houseRequired": "Activa el modo casa en tu propia fila en Usuarios para reservar como casa.",
+    "waitingSlots": "Franjas con un miembro esperando en las próximas 24 horas",
+    "bookHouse": "Reservar como casa",
+    "ownHouseBookings": "Tus próximas reservas como casa",
+    "houseBookingNote": "Se muestran todas tus próximas reservas en pareja. Las reservas no guardan si el modo casa estaba activado cuando se crearon.",
+    "minutes": "{count} min",
+    "bookingStatus": {
+      "booked": "Reservado",
+      "matched": "Emparejado"
+    },
+    "openSession": "Abrir sesión",
+    "errors": {
+      "invalid": "Comprueba los valores del formulario, las fechas y el texto de confirmación.",
+      "failed": "No se pudo completar el cambio. Actualiza la página e inténtalo de nuevo.",
+      "selfRole": "No puedes quitarte tu propio rol de admin.",
+      "notFound": "Este elemento o franja en espera cambió. Actualiza la página e inténtalo de nuevo.",
+      "houseRequired": "Primero activa el modo casa en tu propia fila en Usuarios."
+    }
+  }
+}

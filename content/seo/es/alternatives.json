@@ -1,0 +1,237 @@
+{
+  "template": "alternatives",
+  "pages": [
+    {
+      "slug": "focusmate",
+      "title": "Alternativa a Focusmate: Body Doubling Open Source | {app}",
+      "description": "¿Buscas una alternativa a Focusmate? {app} ofrece coworking virtual 1:1, código abierto, bloques de tiempo flexibles y un plan semanal gratuito.",
+      "h1": "Una alternativa de código abierto a Focusmate para coworking 1:1",
+      "intro": "Si dependes del compromiso mutuo individual para sentarte a calificar exámenes, escribir código o vaciar tu bandeja de entrada, Focusmate probablemente te mostró el valor del body doubling. {app} toma esa misma colaboración silenciosa y la reconstruye sobre una base de código abierto. Programas una sesión, te conectas con tu compañero de enfoque frente a la cámara, defines tu meta y trabajas en silencio. Ya sea que necesites tres sesiones gratuitas por semana o autoalojamiento privado para tu equipo, {app} te brinda concentración estructurada sin ataduras comerciales.",
+      "sections": [
+        {
+          "heading": "Cómo las sesiones individuales te ayudan a mantener el ritmo",
+          "body": "Comenzar una tarea intimidante suele ser la parte más difícil del trabajo remoto. En {app}, reservas un bloque de 25, 50 o 75 minutos a la hora en punto o a la media hora. Al comenzar la sesión, tú y tu compañero dedican dos minutos a activar el micrófono para compartir lo que planean lograr, como redactar una propuesta o depurar una migración de base de datos. Tras declarar tu intención, silencias el micrófono, dejas la cámara encendida y trabajas en silencio.\n\nVer a otra persona trabajando con dedicación en su propio espacio crea una suave presión social que evita cambiar de pestaña o mirar el móvil. Al final del bloque, una campana avisa del cierre. Se cuentan mutuamente si completaron la tarea, si lograron un avance parcial o si surgió un obstáculo imprevisto. El vídeo nunca se graba, protegiendo la privacidad de tu hogar, y las herramientas de seguridad te permiten reportar o bloquear a cualquiera al instante."
+        },
+        {
+          "heading": "Comparativa práctica entre {app} y Focusmate",
+          "body": "Ambas plataformas utilizan citas de vídeo individuales y estructuradas para ayudar a superar la procrastinación mediante el compromiso mutuo. Focusmate estableció el formato moderno de emparejar a dos personas en bloques de trabajo cronometrados, ofreciendo una versión gratuita limitada a pocas sesiones semanales junto a un plan de pago para usuarios frecuentes. Al momento de redactar este texto (noviembre de 2026), {app} ofrece una alternativa basada en principios abiertos, con tres sesiones semanales gratuitas y un plan Plus mejorado con reservas ilimitadas, compañeros favoritos y filtros avanzados de emparejamiento.\n\nAmbas ofrecen sesiones de 25, 50 y 75 minutos. Las mayores diferencias residen en cómo está diseñado el software y quién lo controla. {app} también incluye enlaces de reserva personales para compañeros de estudio, grupos universitarios o de trabajo, y una próxima opción para grupos guiados de hasta nueve participantes. Lo más importante: {app} se distribuye bajo la licencia AGPL-3.0, lo que permite a organizaciones y personas comprometidas con la privacidad auditar el código fuente o alojar su propia instancia independiente."
+        },
+        {
+          "heading": "Independencia del código abierto y soberanía de datos",
+          "body": "Muchos profesionales remotos e investigadores académicos manejan código propietario, expedientes confidenciales de estudiantes o notas médicas sensibles que no pueden exponerse a plataformas cerradas de terceros. Dado que {app} se publica bajo la licencia AGPL-3.0, tu equipo técnico puede auditar cada línea de código de red, verificar los estándares de cifrado y garantizar que ninguna analítica no autorizada rastree el flujo de trabajo de tu equipo.\n\nLas organizaciones pueden autoalojar su propio servidor privado de {app} en su infraestructura interna. Esto permite a departamentos corporativos, laboratorios y facultades universitarias organizar círculos cerrados de coworking donde los miembros solo se emparejan con colegas verificados del mismo dominio. Para usuarios individuales del servicio público, el código abierto garantiza transparencia a largo plazo. La comunidad define las prioridades de desarrollo y tus rutinas productivas nunca se verán interrumpidas por muros de pago imprevistos para exportar datos o migraciones forzadas."
+        },
+        {
+          "heading": "Cómo elegir la plataforma de coworking adecuada para tu rutina",
+          "body": "Focusmate sigue siendo una opción sólida para quienes buscan una comunidad consolidada con un gran volumen de miembros activos las 24 horas. Si trabajas en horarios irregulares, como a las tres de la madrugada en tu zona horaria local, el amplio catálogo de reservas de Focusmate permite encontrar un compañero inmediato con rapidez y fiabilidad.\n\n{app} se adapta mejor a profesionales y equipos que valoran la libertad del software y quieren organizar sesiones de enfoque dentro de su propia comunidad. Si buscas enlaces de reserva personales para invitar a colegas de confianza o grupos de enfoque específicos para tu empresa, {app} te proporciona esas herramientas. También es la elección natural para quienes se preocupan por la ética del software y desean inspeccionarlo o alojarlo por su cuenta. Ambos servicios comparten el mismo beneficio esencial: transformar horas de trabajo solitario en un impulso productivo compartido."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Cómo ayuda el body doubling con el TDAH y el inicio de tareas?",
+          "a": "El body doubling actúa como una técnica de apoyo práctico, no como un tratamiento médico, para adultos con TDAH que tienen dificultades para iniciar tareas en solitario. Contar con un compañero visible y tranquilo crea una estructura externa que mitiga el agobio y la disfunción ejecutiva. Declarar tus objetivos específicos en voz alta convierte intenciones ambiguas en compromisos claros y asumibles."
+        },
+        {
+          "q": "¿Se graba o almacena mi vídeo durante las sesiones?",
+          "a": "No, las transmisiones de vídeo en {app} son de punto a punto (peer-to-peer) y nunca se graban ni se guardan en ningún servidor. Debes mantener tu cámara encendida para que tu compañero sepa que estás presente, pero el micrófono permanece silenciado tras la comprobación inicial. Además, tienes control total para reportar o bloquear a un usuario incompatible con un solo clic."
+        },
+        {
+          "q": "¿Qué duración de sesiones admite {app} en comparación con Focusmate?",
+          "a": "{app} permite reservar sesiones de 25, 50 y 75 minutos a la hora en punto o a la media hora. Mientras que los bloques de 25 y 50 minutos son ideales para responder correos o tareas administrativas, la opción de 75 minutos está diseñada para trabajo profundo como programar, redactar textos académicos o sesiones largas de estudio."
+        },
+        {
+          "q": "¿Puedo usar {app} gratis?",
+          "a": "Sí. El plan gratuito de {app} incluye tres sesiones semanales, ideal para probar la plataforma o estructurar tus proyectos más exigentes de la semana. Si necesitas sesiones ilimitadas, filtros de emparejamiento personalizados y listas de compañeros favoritos, puedes actualizar al plan Plus."
+        },
+        {
+          "q": "¿Cómo funcionan los grupos de enfoque para universidades y empresas?",
+          "a": "{app} permite a instituciones y empresas remotas crear grupos de enfoque dedicados. Los miembros pueden limitar su emparejamiento a colegas, estudiantes o compañeros de laboratorio verificados. Esto mantiene las sesiones de coworking dentro de un entorno conocido sin perder el compromiso y la estructura de las sesiones públicas habituales."
+        }
+      ],
+      "cta": {
+        "heading": "Empieza tu próximo bloque de trabajo en {app}",
+        "body": "Reserva hoy tu primera sesión con tres citas gratuitas cada semana, o crea tu propia instancia privada con software de código abierto."
+      },
+      "keywords": [
+        "alternativa a focusmate",
+        "body doubling código abierto",
+        "coworking virtual gratis",
+        "body doubling tdah",
+        "coworking 1 a 1"
+      ]
+    },
+    {
+      "slug": "flow-club",
+      "title": "Alternativa a Flow Club: Coworking 1:1 Minimalista | {app}",
+      "description": "¿Buscas una alternativa a Flow Club? {app} ofrece sesiones de body doubling 1:1 sin anfitriones, con plan gratis, código abierto y cero distracciones.",
+      "h1": "Una alternativa tranquila y enfocada a Flow Club",
+      "intro": "Si las salas grupales de vídeo te resultan abrumadoras o prefieres la tranquilidad de una sesión individual frente a eventos guiados, Flow Club tal vez no encaje con tu ritmo. Flow Club utiliza grupos de pago dirigidos por anfitriones y con música de fondo para fomentar la productividad comunitaria. {app} adopta un enfoque más sereno, centrado en el compromiso mutuo uno a uno. Eliges un horario, te reúnes con un compañero asignado, compartes tu objetivo y trabajas en silencio. Con tres sesiones semanales gratuitas y código abierto, {app} te ayuda a concentrarte sin agotamiento social.",
+      "sections": [
+        {
+          "heading": "Concentración directa uno a uno frente a salas grupales guiadas",
+          "body": "Las videollamadas con muchas personas suelen exigir una gran energía social. En una sesión grupal guiada, los asistentes escuchan presentaciones del anfitrión, leen el chat común y se adaptan a la música elegida para todos. Aunque algunas personas rinden bien en ese ambiente comunitario, muchos profesionales independientes pierden impulso durante las largas rondas de presentación inicial.\n\n{app} elimina la ansiedad de exposición al emparejarte con un único compañero para una sesión de 25, 50 o 75 minutos. La introducción toma menos de dos minutos: dices tu tarea en voz alta, tu compañero comparte la suya y ambos silencian el micrófono. No hay ningún anfitrión al que atender, ni música de fondo que compita con tus pensamientos, ni conversaciones paralelas por chat. Te concentras por completo en el trabajo profundo, ya sea redactar un informe legal, organizar facturas o refactorizar código frontend."
+        },
+        {
+          "heading": "Un contraste de filosofía y estructura",
+          "body": "Flow Club estructura su servicio alrededor de salas de vídeo grupales dirigidas por facilitadores mediante suscripción de pago. Sus sesiones priorizan la cohesión social, la personalidad del anfitrión y el compañerismo grupal. Por contra, {app} se concibe como una herramienta de productividad abierta y accesible que ofrece tres sesiones semanales gratuitas, además de un plan Plus opcional para usuarios intensivos que necesitan reservas ilimitadas y filtros de emparejamiento.\n\nEn lugar de exigir suscripciones obligatorias para participar, {app} mantiene un acceso sencillo para que estudiantes, autónomos y personas en búsqueda de empleo disfruten de una rutina constante. Además, {app} es de código abierto bajo la licencia AGPL-3.0. Cualquier persona puede inspeccionar sus algoritmos de emparejamiento o implementar una instancia privada en sus propios servidores. Para quienes buscan dinámicas de grupo, {app} incorporará pronto salas reducidas de hasta nueve personas, manteniendo la productividad tranquila sin interacciones sociales forzadas."
+        },
+        {
+          "heading": "Menor sobrecarga sensorial para personas neurodivergentes",
+          "body": "Muchas personas con TDAH o autismo encuentran en el body doubling un recurso muy útil, ya que la presencia de otra persona actúa como ancla frente a las distracciones. No obstante, el body doubling es un hábito de apoyo práctico y no un tratamiento clínico, y el exceso de estímulos sensoriales puede mermar su eficacia. Las llamadas grupales con constantes cambios de orador, chats activos y listas de música pueden provocar una rápida sobrecarga cognitiva.\n\n{app} reduce la estimulación sensorial a lo estrictamente imprescindible. La cámara es obligatoria para garantizar el compromiso real, pero los micrófonos se apagan durante los bloques de trabajo para que escuches tus sonidos ambientales preferidos o trabajes en silencio absoluto. Interactúas con un solo compañero a la vez, reduciendo la ansiedad social. Si alguna vez coincides con un usuario poco afín, puedes bloquearlo o reportarlo con un solo clic, manteniendo tu espacio de trabajo seguro y predecible."
+        },
+        {
+          "heading": "Cómo determinar qué entorno de coworking te conviene más",
+          "body": "Elegir entre estas plataformas depende de si buscas dinamismo social o concentración solitaria durante tu jornada. Flow Club resulta atractivo si te motiva la energía de los grupos grandes, disfrutas con listas de música seleccionadas y aprecias las charlas comunitarias en los descansos. Si tener a un anfitrión moderando la sesión te aporta seguridad, su servicio de suscripción responde a esa necesidad.\n\n{app} está diseñado para quienes prefieren la eficiencia silenciosa y la responsabilidad directa. Si buscas conectarte, decirle tus objetivos a un único compañero y empezar a trabajar sin esperar rondas de presentación, {app} se ajusta mejor a tu agenda. También es ideal para autónomos que necesitan un plan gratuito fiable, así como para empresas y universidades que desean autoalojar grupos de enfoque privados para su propia comunidad."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Por qué {app} prioriza las sesiones 1:1 frente a los grupos grandes?",
+          "a": "Las sesiones individuales eliminan el compromiso social innecesario y los tiempos de espera. Al trabajar con un único compañero, estableces una responsabilidad mutua en menos de dos minutos sin pasar por presentaciones multitudinarias. Esto genera un ambiente sereno donde ambos se centran exclusivamente en cumplir sus objetivos."
+        },
+        {
+          "q": "¿{app} reproduce música de fondo durante las sesiones?",
+          "a": "No, {app} no emite música ni sonidos durante los intervalos de trabajo. Los micrófonos se silencian para que cada participante elija su propio entorno auditivo. Puedes poner tu música para concentrarte, ruido blanco o trabajar en silencio total sin interferir con nadie."
+        },
+        {
+          "q": "¿Puedo unirme a las sesiones sin pagar una suscripción?",
+          "a": "Sí. {app} ofrece una modalidad gratuita de tres sesiones semanales sin necesidad de introducir datos de pago. Si necesitas varias sesiones al día, puedes pasarte al plan Plus para disfrutar de reservas ilimitadas, listas de compañeros favoritos y filtros de emparejamiento avanzados."
+        },
+        {
+          "q": "¿Cómo gestiona {app} las futuras sesiones grupales?",
+          "a": "Aunque {app} se centra en parejas, pronto llegarán sesiones en grupos reducidos de hasta nueve personas. Estas mantendrán una filosofía libre de distracciones, priorizando el trabajo silencioso y breves puestas en común en vez de largas presentaciones o moderaciones activas."
+        },
+        {
+          "q": "¿Es {app} adecuada para equipos y empresas privadas?",
+          "a": "Sí. Como {app} es de código abierto bajo la licencia AGPL-3.0, las empresas pueden alojar servidores internos donde los empleados solo compartan espacio con compañeros de equipo. Asimismo, las organizaciones pueden crear grupos privados en la plataforma alojada para impulsar sesiones de trabajo entre departamentos."
+        }
+      ],
+      "cta": {
+        "heading": "Descubre el coworking sin distracciones en {app}",
+        "body": "Únete hoy a una sesión tranquila 1:1 con tres citas gratis a la semana, o conecta a tu equipo mediante una instalación propia de código abierto."
+      },
+      "keywords": [
+        "alternativa a flow club",
+        "body doubling sin anfitrión",
+        "coworking virtual silencioso",
+        "sesiones de coworking gratis",
+        "body doubling 1 a 1"
+      ]
+    },
+    {
+      "slug": "caveday",
+      "title": "Alternativa a Caveday: Coworking 1:1 Flexible | {app}",
+      "description": "¿Buscas una alternativa a Caveday? {app} ofrece sesiones de body doubling 1:1 de 25, 50 y 75 minutos, sin dinámicas forzadas y con código abierto.",
+      "h1": "Una alternativa a Caveday flexible y sin complicaciones",
+      "intro": "Caveday popularizó los bloques guiados de concentración llamados «caves», reuniendo a participantes en sesiones moderadas con calentamientos grupales y pausas de atención plena. Aunque esos retiros guiados motivan a muchos creadores, otros necesitan sesiones ágiles y flexibles que encajen en calendarios laborales apretados. {app} ofrece body doubling directo uno a uno, sin facilitadores, dinámicas rompehielos ni compromisos extensos. Te sumas a bloques de 25, 50 o 75 minutos según lo necesites, compartes tus prioridades con tu compañero y avanzas a tu propio ritmo.",
+      "sections": [
+        {
+          "heading": "Sesiones de concentración que se adaptan a una rutina ocupada",
+          "body": "Comprometerse con un taller de varias horas exige despejar una gran parte de la tarde, algo complicado para consultores, profesionales que atienden al público o estudiantes de posgrado que alternan clases y laboratorio. Perderse el inicio de un taller programado puede arruinar toda una tarde de trabajo profundo planificado.\n\n{app} está pensado para integrarse de forma natural en cualquier jornada. Las sesiones comienzan cada treinta minutos, a las horas y a las medias, durante todo el día. Puedes reservar una sesión rápida de 25 minutos entre reuniones para resolver facturas urgentes, o agendar un bloque de 50 minutos para redactar un artículo. Si tienes tareas exigentes de escritura o programación, las sesiones de 75 minutos ofrecen una inmersión prolongada. Al ser sesiones autogestionadas entre tu compañero y tú, nunca pierdes quince minutos en saludos del facilitador o ejercicios de estiramiento."
+        },
+        {
+          "heading": "Diferencias entre las «caves» guiadas y el compromiso entre pares",
+          "body": "Caveday organiza su propuesta en torno a guías capacitados que dirigen sesiones grupales de enfoque llamadas «caves». Estos encuentros integran rutinas estructuradas, ejercicios de respiración guiada y reflexiones colectivas por chat, un formato ideal para quienes disfrutan de talleres guiados. Sin embargo, acceder a estos eventos requiere comprar pases o pagar membresías.\n\n{app} aborda la productividad desde una perspectiva descentralizada y colaborativa entre pares. En lugar de depender de un guía, trabajas directamente con otro profesional. El compromiso surge de la presencia compartida y la palabra dada, no de una moderación externa. {app} cuenta con un plan gratuito de tres sesiones semanales y un nivel Plus opcional con reservas ilimitadas y filtros avanzados. Además, {app} es totalmente de código abierto bajo la licencia AGPL-3.0, lo que permite a los equipos alojar su propia infraestructura privada en vez de depender de un proveedor comercial."
+        },
+        {
+          "heading": "Apoyo práctico entre pares para la disfunción ejecutiva",
+          "body": "La procrastinación a menudo surge de la fricción emocional ante tareas complejas o poco estructuradas, como organizar documentos fiscales o esquematizar una tesis. Muchas personas con TDAH consideran el body doubling una técnica de apoyo eficaz, aunque debe entenderse como un recurso práctico de gestión y no como un tratamiento médico. La presencia visible de un compañero concentrado brinda un punto de anclaje que ayuda a fijar la atención.\n\nEn las llamadas grupales guiadas, la carga social de participar en dinámicas para romper el hielo puede generar ansiedad añadida. {app} elimina esa fricción manteniendo interacciones breves y directas. Saludas a tu compañero, resumes tu objetivo de forma clara y trabajas en silencio con la cámara encendida. Al sonar la campana final, indicas si lograste tu meta, si avanzaste en parte o si te quedaste atascado, cerrando la sesión sin juicios."
+        },
+        {
+          "heading": "Cuándo elegir Caveday y cuándo elegir {app}",
+          "body": "Caveday es una alternativa fantástica si buscas una experiencia inmersiva similar a un taller guiado. Si te agrada contar con un facilitador entusiasta que marque los tiempos, dirija ejercicios de respiración consciente y gestione el ritmo del grupo durante bloques de varias horas, Caveday brinda un acompañamiento cercano que recuerda a un aula interactiva.\n\n{app} es la opción idónea si prefieres un sistema ágil y autogestionado que encaje en los huecos de tu agenda diaria. Si valoras el trabajo silencioso uno a uno antes que las actividades grupales, {app} te permite ponerte manos a la obra de inmediato sin rituales guiados. También es la plataforma adecuada si apuestas por el software libre, deseas mantener un uso totalmente gratuito para necesidades puntuales o quieres crear círculos de concentración privados para tu empresa o departamento universitario."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿{app} incluye meditación guiada o ejercicios de calentamiento?",
+          "a": "No, {app} no incluye meditaciones guiadas, ejercicios de respiración ni presentaciones moderadas. Las sesiones son estrictamente entre pares. Tú y tu compañero comparten brevemente sus metas durante dos minutos y luego trabajan en silencio, priorizando la inmersión inmediata en sus tareas sin rituales sociales extra."
+        },
+        {
+          "q": "¿Puedo reservar sesiones consecutivas en {app}?",
+          "a": "Sí, puedes encadenar sesiones para organizar un bloque de trabajo prolongado a tu medida. Por ejemplo, puedes programar dos sesiones de 50 minutos con un descanso de diez minutos entre medias, o combinar una sesión profunda de 75 minutos con una breve de 25 minutos para tareas de gestión."
+        },
+        {
+          "q": "¿Las sesiones en {app} se limitan a ciertos horarios del día?",
+          "a": "No, {app} funciona de forma ininterrumpida en todas las zonas horarias. Las sesiones inician a las horas y a las medias, las 24 horas del día. Ya sea que trabajes a primera hora de la mañana, en horario de oficina habitual o de noche, siempre encontrarás un horario adecuado para tu rutina."
+        },
+        {
+          "q": "¿Cómo asegura {app} el compromiso de los usuarios sin moderadores?",
+          "a": "El compromiso se basa en la visibilidad mutua y los objetivos explícitos. Mantener la cámara encendida con un compañero en vivo crea una concentración natural, mientras que reportar el progreso al final como completado, parcial o no completado aporta un cierre claro. Además, puedes guardar compañeros favoritos para trabajar habitualmente con personas de confianza."
+        },
+        {
+          "q": "¿Es difícil autoalojar {app} en equipos pequeños?",
+          "a": "Implementar {app} en tus propios servidores es muy sencillo gracias a su licencia AGPL-3.0. Cualquier equipo con nociones básicas de administración de sistemas puede desplegar una instancia propia, asegurando que las comunicaciones internas, agendas y directorios de miembros queden bajo el control exclusivo de tu organización."
+        }
+      ],
+      "cta": {
+        "heading": "Construye una rutina de concentración sostenible en {app}",
+        "body": "Reserva hoy un bloque de body doubling de 25, 50 o 75 minutos con tres sesiones gratis por semana, o despliega tu propio espacio autoalojado."
+      },
+      "keywords": [
+        "alternativa a caveday",
+        "coworking virtual sin guía",
+        "body doubling flexible",
+        "bloques de concentración",
+        "plataforma coworking código abierto"
+      ]
+    },
+    {
+      "slug": "flown",
+      "title": "Alternativa a Flown: Plataforma de Coworking 1:1 | {app}",
+      "description": "¿Buscas una alternativa a Flown? {app} ofrece coworking virtual 1:1 sin distracciones, código abierto y tres sesiones semanales completamente gratuitas.",
+      "h1": "Una alternativa sencilla y de código abierto a Flown",
+      "intro": "Flown concibe la productividad como un ecosistema integral, ofreciendo sesiones grupales guiadas llamadas «flocks» junto con sonidos ambientales y recursos de bienestar. Sin embargo, muchos trabajadores del conocimiento descubren que estas plataformas tan amplias generan su propio desorden digital. {app} ofrece una alternativa limpia y especializada, centrada por completo en el compromiso mutuo a través de vídeo 1:1. Sin bibliotecas de contenido que explorar ni rituales complejos, {app} te ayuda a conectarte, declarar tu objetivo y avanzar en tu trabajo junto a un compañero.",
+      "sections": [
+        {
+          "heading": "Centrarse en la acción en lugar de consumir contenido",
+          "body": "Al enfrentarse a proyectos exigentes como el análisis de datos o la redacción de un documento complejo, resulta tentador caer en la procrastinación productiva leyendo artículos, ajustando paneles o probando pistas de audio ambiental. Las plataformas que incorporan amplias bibliotecas de recursos pueden fomentar involuntariamente la navegación pasiva en vez del trabajo real.\n\n{app} prescinde de funciones secundarias en favor de la pura ejecución. La interfaz es deliberadamente minimalista: consultas tu calendario, eliges un bloque horario y accedes a una sala de vídeo silenciosa con tu compañero de enfoque. No hay foros de debate que revisar, pistas de meditación que ajustar ni seminarios web a los que asistir. Traes tu propio trabajo y tus herramientas habituales. Al mantener un entorno completamente despejado, {app} garantiza que iniciar sesión conduzca directamente a la concentración profunda y no al consumo pasivo."
+        },
+        {
+          "heading": "Diferencias entre los «flocks» grupales y las sesiones individuales",
+          "body": "Flown articula su propuesta en torno a sesiones grupales programadas llamadas «flocks», dirigidas por facilitadores que presentan temáticas y mantienen la energía del grupo. También integran temporizadores y paisajes sonoros dentro de su membresía. Este modelo resulta útil para quienes aprecian un ambiente comunitario tipo club guiado.\n\n{app} se aleja de esa fórmula apostando por la colaboración tranquila entre dos personas en vez de la moderación grupal. En lugar de entrar a una sala con decenas de personas, te reúnes con un solo compañero durante 25, 50 o 75 minutos. {app} ofrece una modalidad gratuita de tres sesiones semanales y un plan Plus para reservas ilimitadas, listas de favoritos y filtros de emparejamiento. Al contar con licencia AGPL-3.0, {app} es software libre en su totalidad, lo que permite a usuarios y organizaciones auditar el código o alojar instancias privadas sin depender de servicios comerciales de suscripción."
+        },
+        {
+          "heading": "Body doubling sin presiones para el trabajo en solitario",
+          "body": "Trabajar en remoto puede resultar solitario, y los plazos abiertos a menudo paralizan la motivación. Muchas personas con TDAH destacan el body doubling como una técnica de apoyo efectiva que acorta la distancia entre planificar una tarea y ponerse a hacerla, funcionando como un recurso práctico de apoyo conductual y no como un tratamiento médico. El simple hecho de saber que otra persona trabaja a tu lado reduce el impulso de buscar distracciones digitales inmediatas.\n\nEn llamadas grupales masivas, los participantes pueden pasar desapercibidos con la cámara apagada, reduciendo el compromiso. En {app}, la cámara es obligatoria mientras que los micrófonos permanecen silenciados durante toda la sesión. Al trabajar cara a cara con otra persona, la presencia mutua crea una responsabilidad genuina. Hacen un breve repaso al comenzar, se mantienen enfocados y evalúan su progreso al final como completado, parcial o no completado, estableciendo una base sincera de avance diario."
+        },
+        {
+          "heading": "Cómo elegir la mejor opción para tu flujo de trabajo",
+          "body": "Flown es una alternativa destacada para profesionales que buscan una plataforma amplia de bienestar y concentración. Si disfrutas de sesiones guiadas en grupo, quieres acceso a paisajes sonoros y herramientas de atención plena bajo demanda, y prefieres el ambiente de un club virtual moderado, su suscripción ofrece un entorno muy completo.\n\n{app} está diseñado a la medida de quienes desean una herramienta de body doubling directa y especializada, sin añadidos innecesarios. Si buscas citas individuales, bloques flexibles de 25, 50 o 75 minutos y un contador de rachas que registre tus horas reales de concentración, {app} te ofrece justo lo que necesitas. Además, es la opción perfecta para defensores del código abierto, empresas que buscan espacios de coworking autoalojados y cualquiera que requiera un plan gratuito fiable para sacar adelante sus tareas semanales más complejas."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿En qué se diferencia {app} de los «flocks» grupales de Flown?",
+          "a": "Mientras que Flown se basa en grupos guiados por facilitadores con puestas en común colectivas y temas de sesión, {app} te empareja directamente con un compañero para trabajar en silencio y sin intermediarios. Declaras tu objetivo verbalmente al inicio, trabajas frente a la cámara y compartes tu progreso al final, sin interrupciones del anfitrión ni conversaciones grupales."
+        },
+        {
+          "q": "¿{app} incluye generadores de sonido ambiental integrados?",
+          "a": "No, {app} no incluye reproductores de audio ni generadores de ruido de fondo. Como los micrófonos están silenciados durante el bloque de trabajo, puedes usar tus aplicaciones de música preferidas, reproductores de ruido blanco o trabajar en silencio. Este enfoque mantiene la plataforma ligera y libre de distracciones en la interfaz."
+        },
+        {
+          "q": "¿Puedo elegir con quién trabajar en {app}?",
+          "a": "En el plan gratuito, el sistema te empareja automáticamente con miembros disponibles de la comunidad. Con el plan Plus, puedes guardar compañeros favoritos, usar filtros de emparejamiento avanzados y compartir un enlace personal de reserva para que colegas o compañeros de estudio agenden bloques de coworking directamente contigo."
+        },
+        {
+          "q": "¿Cómo se registran mis horas de concentración y rachas?",
+          "a": "{app} registra automáticamente tus sesiones completadas, calculando las horas acumuladas de concentración y tus rachas diarias. Estas métricas te permiten visualizar tu constancia a lo largo de semanas y meses, ofreciéndote una motivación tangible para avanzar en proyectos académicos o profesionales a largo plazo sin necesidad de registros manuales."
+        },
+        {
+          "q": "¿Por qué {app} se publica como software de código abierto?",
+          "a": "Publicar {app} bajo la licencia AGPL-3.0 garantiza transparencia, privacidad y sostenibilidad comunitaria a largo plazo. Cualquier persona puede revisar cómo se gestionan los datos, aportar mejoras o desplegar una instancia independiente. Así se asegura que el servicio principal siga siendo una herramienta pública y accesible en lugar de una plataforma cerrada y propietaria."
+        }
+      ],
+      "cta": {
+        "heading": "Elige una productividad enfocada con {app}",
+        "body": "Reserva hoy tu primera sesión de body doubling 1:1 con tres citas gratis a la semana, o autoaloja tu propia instancia privada."
+      },
+      "keywords": [
+        "alternativa a flown",
+        "body doubling minimalista",
+        "coworking virtual código abierto",
+        "sesiones de concentración 1 a 1",
+        "plataforma de compromiso mutuo"
+      ]
+    }
+  ]
+}

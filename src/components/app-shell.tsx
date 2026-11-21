@@ -24,6 +24,7 @@ import { AnalyticsIdentity } from "./consent";
 import { Avatar } from "./avatar";
 import { RealtimeRefresh } from "./realtime-refresh";
 import { Link } from "@/src/i18n/navigation";
+import { LocaleSwitcher } from "./locale-switcher";
 
 export async function AppShell({
   children,
@@ -107,6 +108,7 @@ export async function AppShell({
               )}
             </div>
           )}
+          <LocaleSwitcher label={t("language")} />
           <div className="row">
             <Avatar
               name={profile.displayName}

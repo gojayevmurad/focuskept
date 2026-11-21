@@ -2,7 +2,7 @@
 import { defineRouting } from "next-intl/routing";
 
 // Add a locale here and in messages/ to ship it. English stays unprefixed.
-export const locales = ["en"] as const;
+export const locales = ["en", "de", "fr", "nl", "es"] as const;
 export type Locale = (typeof locales)[number];
 
 export const routing = defineRouting({

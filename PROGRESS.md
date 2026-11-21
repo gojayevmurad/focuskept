@@ -59,5 +59,6 @@ Status as of 21 November 2026. "Not verified" means it needs real credentials or
 ## Phase 6: Europe
 
 - [x] European popular hours for people in European time zones
-- [ ] de, fr, nl, es translations
-- [ ] Localized SEO pages and hreflang
+- [x] de, fr, nl, es translations of the whole UI (checked by `pnpm i18n:check` in CI)
+- [x] Localized SEO pages (24 per language) with hreflang and a multilingual sitemap; US exam pages stay English only
+- [ ] Native-speaker review of the translations; emails, blog and legal pages are English only for now

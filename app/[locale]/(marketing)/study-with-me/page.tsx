@@ -2,6 +2,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
 import { SeoIndex } from "@/src/components/marketing/seo-page";
+import { localesFor } from "@/src/lib/content/seo";
+import { notFound } from "next/navigation";
 import {
   pageMetadata,
   requireMarketing,
@@ -17,12 +19,15 @@ export async function generateMetadata({ params }: LocaleProps) {
     `${t(`templates.${template}`)} | ${getAppConfig().name}`,
     t(`descriptions.${template}`),
     `/${template}`,
+    locale,
+    localesFor(template),
   );
 }
 export default async function Page({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   requireMarketing();
+  if (!(localesFor(template) as string[]).includes(locale)) notFound();
   await getTranslations("seo");
-  return <SeoIndex template={template} />;
+  return <SeoIndex template={template} locale={locale} />;
 }

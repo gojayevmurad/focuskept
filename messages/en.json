@@ -57,7 +57,8 @@
     "you": "You",
     "freeLeft": "{used} of {limit} free sessions used this week",
     "plusActive": "Plus is active",
-    "unlimited": "Unlimited sessions"
+    "unlimited": "Unlimited sessions",
+    "language": "Language"
   },
   "auth": {
     "signInTitle": "Welcome back",
@@ -154,7 +155,8 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "contact": "Contact",
-    "source": "Source code"
+    "source": "Source code",
+    "language": "Language"
   },
   "book": {
     "title": "Book a session",

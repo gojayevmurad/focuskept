@@ -1,0 +1,585 @@
+{
+  "template": "body-doubling-for",
+  "pages": [
+    {
+      "slug": "adhd",
+      "title": "Body Doubling para TDAH | Coworking con {app}",
+      "description": "Enfócate y supera la parálisis de tareas con el body doubling en {app}. Sesiones silenciosas de coworking virtual. Empieza con 3 sesiones gratis.",
+      "h1": "Body Doubling Empático para Mentes con TDAH",
+      "intro": "Empezar una tarea monótona o ambigua suele ser la parte más difícil de vivir con TDAH. Ya sea un informe pendiente, una pila interminable de ropa por doblar o una hoja de cálculo intimidante, {app} te conecta por vídeo con un compañero de responsabilidad durante 25, 50 o 75 minutos. Defines una prioridad realista, silencias tu micrófono y trabajas codo a codo. Es una técnica práctica de apoyo, no un tratamiento médico, diseñada para reducir la disfunción ejecutiva.",
+      "sections": [
+        {
+          "heading": "Superar la parálisis de tareas y la disfunción ejecutiva",
+          "body": "Iniciar una tarea puede sentirse como atravesar un muro de hormigón cuando a tu cerebro le cuesta generar dopamina. Al sentarte a solas, una tarea simple como ordenar facturas o responder un correo escolar se convierte con facilidad en tres horas de pestañas abiertas al azar y culpa. Tener a otra persona trabajando en silencio ante la cámara transforma el entorno sensorial de tu habitación.\n\nEn {app}, reservas una sesión que comienza puntualmente en punto o a y media. El simple hecho de presentarte ante otra persona genera un ancla externa inmediata. En lugar de angustiarte pensando por dónde empezar, reduces tu enfoque a lo que puedes completar de forma realista en un bloque de 25 o 50 minutos. Dices tu intención en voz alta, activas tu temporizador y dejas que esa compañía silenciosa te ponga en marcha sin juzgarte."
+        },
+        {
+          "heading": "Sesiones sin presión diseñadas para días con distracciones",
+          "body": "Las reuniones tradicionales exigen una energía verbal constante que agota un sistema ejecutivo ya fatigado. {app} adopta el enfoque opuesto al reducir al mínimo las exigencias sociales. Los micrófonos se mantienen silenciados tras un breve saludo inicial, lo que significa que no tienes que mantener conversaciones triviales ni aparentar ante nadie. La cámara permanece encendida, brindándote la responsabilidad visual justa para quedarte sentado en vez de levantarte a limpiar la cocina.\n\nSi sientes que tu atención se dispersa a mitad de sesión, un rápido vistazo a la pantalla te recuerda que tu compañero sigue trabajando con constancia. Esa señal visual devuelve tus pensamientos dispersos a tu libreta o documento. Dado que el vídeo nunca se graba, puedes trabajar con total comodidad y sin preocuparte por tu privacidad. Si surge una interrupción urgente, basta con avisar a tu compañero por el chat y regresar en cuanto estés listo."
+        },
+        {
+          "heading": "Celebrar el progreso real sin culpa ni perfeccionismo",
+          "body": "Muchas personas con TDAH arrastran culpa acumulada por plazos vencidos y listas de tareas abandonadas. {app} aborda el balance de cada sesión con realismo pragmático en lugar de un perfeccionismo rígido. Cuando suena el timbre final, te reúnes con tu compañero durante un minuto para compartir si tu resultado fue completado, parcial o no completado. Marcar una tarea como parcial se considera un progreso honesto y real, no un fracaso.\n\nDividir responsabilidades grandes en bloques secuenciales de 25 o 50 minutos ayuda a percibir el tiempo de manera tangible. A lo largo de las semanas, puedes consultar tus estadísticas de horas de enfoque acumuladas y consolidar rachas graduales que reflejen tu esfuerzo genuino. Si encuentras un compañero de coworking cuyo ritmo tranquilo encaje con el tuyo, puedes guardarlo como favorito para reservar sesiones periódicas juntos. También puedes compartir tu enlace personal de reserva con amigos o colegas."
+        },
+        {
+          "heading": "Una rutina reconfortante para el trabajo, el estudio y la vida diaria",
+          "body": "El body doubling en {app} es lo bastante versátil como para ayudarte con cualquier tarea que hayas estado posponiendo. La comunidad se conecta habitualmente para doblar la ropa, revisar el correo postal, organizar presupuestos mensuales, estudiar para exámenes oficiales o redactar correos difíciles para clientes. Eliges la duración de sesión que mejor se adapte a tu energía mental actual: un sprint rápido de 25 minutos para una tarea temida o un bloque de 75 minutos para lecturas profundas.\n\nComo la plataforma es de código abierto bajo la licencia AGPL-3.0, la confianza comunitaria y la transparencia forman parte de su base. Puedes empezar en el plan gratuito con 3 sesiones semanales para comprobar cómo la presencia virtual y silenciosa se integra en tu día a día. Si necesitas estructura diaria en múltiples proyectos, el plan Plus ofrece sesiones ilimitadas y filtros avanzados de emparejamiento para consolidar hábitos de trabajo sostenibles."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es el body doubling un tratamiento médico reconocido para el TDAH?",
+          "a": "No. El body doubling es una técnica de apoyo conductual y una estrategia de afrontamiento, no un tratamiento médico ni una terapia. Ofrece un ancla social externa para ayudar a las personas con TDAH a superar la dificultad para iniciar tareas y la ceguera temporal. Debes continuar acudiendo a profesionales de la salud cualificados para diagnósticos, gestión farmacológica y atención médica."
+        },
+        {
+          "q": "¿Qué pasa si me distraigo o no logro terminar mi tarea durante la sesión?",
+          "a": "Es completamente normal y muy habitual. Al final de cada sesión, puedes marcar tu tarea como parcial o no completada. El cierre está diseñado para fomentar la honestidad sin juicios. Simplemente reconoces lo ocurrido y decides si deseas reservar otro bloque para continuar."
+        },
+        {
+          "q": "¿Tengo que hablar con mi compañero mientras trabajamos?",
+          "a": "No. Solo hablas unos segundos al inicio para indicar tu tarea y unos segundos al final para compartir tu progreso. Durante el tiempo de trabajo, el micrófono permanece silenciado mientras la cámara sigue encendida para que ambos trabajen en un silencio tranquilo."
+        },
+        {
+          "q": "¿Puedo usar {app} para tareas del hogar como limpiar o cocinar?",
+          "a": "Sí. Muchas personas apoyan su teléfono o portátil en una encimera para hacer body doubling mientras doblan ropa, lavan platos, empaquetan cajas u organizan armarios. Siempre que permanezcas visible ante la cámara, puedes abordar tareas domésticas físicas con la misma facilidad que el trabajo de escritorio."
+        },
+        {
+          "q": "¿Cómo protege {app} mi privacidad y seguridad?",
+          "a": "Las transmisiones de vídeo son en directo y nunca se graban. Todos los usuarios deben tener al menos 18 años. Si alguien te hace sentir incómodo o incumple las normas comunitarias, puedes reportarlo o bloquearlo con un solo clic. Nuestro código abierto garantiza un software transparente y de confianza."
+        }
+      ],
+      "cta": {
+        "heading": "Construye una rutina más serena con body doubling para TDAH",
+        "body": "Deja atrás la parálisis de tareas y encuentra tu ritmo junto a un compañero de coworking empático. Crea tu cuenta gratis hoy mismo y comienza tus primeras 3 sesiones semanales de enfoque en {app}."
+      },
+      "keywords": [
+        "body doubling tdah",
+        "body doubling en español",
+        "coworking virtual tdah",
+        "paralisis por analisis tdah",
+        "compañero de enfoque tdah"
+      ]
+    },
+    {
+      "slug": "writers",
+      "title": "Body Doubling para Escritores | Coworking en {app}",
+      "description": "Supera el bloqueo creativo y alcanza tus metas de escritura con body doubling en {app}. Sesiones de coworking virtual enfocadas y a tu propio ritmo.",
+      "h1": "Body Doubling Silencioso para Autores y Escritores",
+      "intro": "Escribir es un oficio solitario, pero enfrentarse a la página en blanco en aislamiento suele derivar en desvíos interminables de documentación y revisiones prematuras. Ya estés redactando una novela de fantasía, corrigiendo un ensayo, puliendo una propuesta editorial o escribiendo poesía, {app} te conecta con otra persona enfocada para un sprint silencioso de 25, 50 o 75 minutos. Expresar tu meta en voz alta crea la estructura necesaria para mantener los dedos en movimiento sobre el teclado.",
+      "sections": [
+        {
+          "heading": "Silenciar al crítico interno durante los primeros borradores",
+          "body": "La fase inicial de cualquier proyecto literario es notoriamente frágil. Al trabajar en completa soledad, resulta fácil borrar el mismo párrafo seis veces, ajustar el ritmo de las frases de forma obsesiva o perderse durante una hora buscando detalles históricos secundarios en internet. Ese hábito frena el impulso creativo y convierte el borrador en una lucha agotadora.\n\nReservar una sesión en {app} transforma la psicología del escritorio de trabajo. Cuando llega la hora convenida, le dices a tu compañero qué pretendes producir, como terminar la escena dos o redactar 500 palabras en bruto sin corregir. Una vez silenciados los micrófonos, la presencia visual de un compañero actúa como una barrera protectora alrededor de tu sesión. En vez de detenerte a pulir cada frase imperfecta, te permites generar material en crudo porque el tiempo frente a la cámara está dedicado exclusivamente a avanzar."
+        },
+        {
+          "heading": "Estructurar sprints de escritura profunda a lo largo del día",
+          "body": "Encontrar bloques amplios e ininterrumpidos de tiempo libre es un desafío constante para autores, redactores freelance y periodistas. Entre compromisos familiares y empleos principales, el trabajo creativo a menudo queda relegado a primeras horas de la mañana o noches tardías, justo cuando la fuerza de voluntad decae. Contar con horarios fijos convierte las intenciones creativas difusas en citas ineludibles en tu calendario.\n\nLas sesiones en {app} comienzan puntualmente en punto y a y media, lo que te permite encajar sprints de escritura entre tus compromisos diarios. Un sprint de 25 minutos es ideal para estructurar el artículo de mañana o corregir una página de manuscrito, mientras que un bloque de 50 o 75 minutos te permite sumergirte en diálogos complejos de personajes o revisiones de capítulos. Saber que alguien te espera en vídeo evita postergar la alarma o alargar el desayuno. Simplemente te sientas, abres tu documento y avanzas de verdad."
+        },
+        {
+          "heading": "Un entorno de apoyo para superar el aislamiento creativo",
+          "body": "Aunque los talleres y grupos tradicionales de escritura pueden ser enriquecedores, a menudo dedican más tiempo a charlar, criticar y debatir influencias literarias que a plasmar palabras en la página. Ese formato social puede resultar agotador cuando lo único que necesitas es compromiso silencioso. {app} te brinda la calidez de una compañía creativa compartida sin sobrecarga social.\n\nLos micrófonos permanecen silenciados durante toda la sesión, por lo que nunca tienes que defender tus ideas, leer borradores en voz alta ni lidiar con comentarios competitivos. Compartes un espacio de trabajo silencioso y respetuoso con otra persona dedicada a sus propios objetivos. Las transmisiones de vídeo nunca se graban, manteniendo tu rincón de escritura seguro y privado. Si te topas con un bloqueo creativo, levantar la vista y ver a tu compañero escribiendo con diligencia te aporta un sutil impulso de perseverancia para rematar la escena."
+        },
+        {
+          "heading": "Registrar hitos literarios y cultivar la constancia",
+          "body": "Terminar un manuscrito, una serie de artículos o una propuesta de libro exige meses de constancia, incluso cuando la inspiración brilla por su ausencia. {app} te ayuda a afianzar hábitos estables mediante un seguimiento claro de cada sesión. Al concluir tu bloque, dedicas un minuto a compartir si cumpliste tu objetivo, si lograste un avance parcial o si encontraste obstáculos.\n\nCon el paso de las semanas y los meses, tus horas de concentración acumuladas y tus rachas de constancia reflejan el progreso continuo de tu libro o portafolio. Cuando conectes con otros escritores o editores cuya energía enfocada complemente la tuya, puedes añadirlos a tu lista de compañeros favoritos y programar sesiones habituales de escritura conjunta. Con 3 sesiones semanales gratuitas y acceso ilimitado en el plan Plus, {app} respalda tu disciplina creativa desde el primer esquema hasta la corrección final."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} tanto para editar y corregir como para escribir borradores?",
+          "a": "Sí. Puedes aprovechar tu sesión para cualquier etapa del proceso creativo, incluyendo corrección de estilo, esquematización, desarrollo de personajes, toma de notas de investigación y lectura de pruebas. Solo debes concretar tu objetivo específico al inicio del bloque para tener una referencia clara al finalizar."
+        },
+        {
+          "q": "¿Qué ocurre si alcanzo mi meta de palabras antes de que termine la sesión?",
+          "a": "Si cumples tu cuota de palabras antes de que concluya el tiempo, puedes continuar escribiendo la siguiente sección, iniciar una revisión o hacer esquemas de ideas futuras. Permaneces tranquilamente frente a la cámara hasta la señal final para no alterar la concentración de tu compañero."
+        },
+        {
+          "q": "¿Otros participantes leen o critican lo que estoy escribiendo?",
+          "a": "No. Tu trabajo es totalmente privado. Solo compartes un resumen breve de tu meta al inicio, como redactar una escena o estructurar un artículo. Tu compañero nunca lee tu borrador, no revisa tu documento ni emite valoraciones, a menos que decidas comentarlo."
+        },
+        {
+          "q": "¿Puedo organizar sprints privados de escritura con mi grupo literario?",
+          "a": "Sí. Puedes compartir tu enlace personal de reserva con compañeros de crítica, coautores o miembros de clubes de escritura para programar sprints conjuntos en {app}. Además, las próximas sesiones grupales permitirán que pequeños grupos de hasta 9 personas escriban juntos."
+        },
+        {
+          "q": "¿Se guarda o comparte la transmisión de vídeo en algún lugar?",
+          "a": "Nunca. Las señales de vídeo en {app} se transmiten en directo y jamás se graban ni se almacenan en ningún servidor. La plataforma exige que los usuarios tengan al menos 18 años, y puedes reportar o bloquear de inmediato a cualquier usuario si incumple las pautas de conducta."
+        }
+      ],
+      "cta": {
+        "heading": "Comienza tu próximo sprint de escritura en {app}",
+        "body": "Deja de mirar el cursor parpadeante y concluye tu capítulo pendiente. Únete a una comunidad de escritores enfocados y aprovecha tus 3 sesiones semanales gratuitas en {app}."
+      },
+      "keywords": [
+        "body doubling para escritores",
+        "coworking virtual escritores",
+        "sprint de escritura online",
+        "compañero de escritura virtual",
+        "disciplina para escribir novela"
+      ]
+    },
+    {
+      "slug": "developers",
+      "title": "Body Doubling para Programadores | Coworking en {app}",
+      "description": "Afronta refactorizaciones complejas, tareas pendientes y bugs con body doubling en {app}. Coworking virtual silencioso para mantener tu flujo de trabajo.",
+      "h1": "Body Doubling Silencioso para Desarrolladores de Software",
+      "intro": "Escribir código exige una inmersión cognitiva profunda; sin embargo, el día a día de un desarrollador suele estar repleto de cambios de contexto, notificaciones de Slack y tickets tediosos en el backlog. Cuando toca redactar pruebas unitarias, revisar un pull request kilométrico o depurar una fuga de memoria compleja, el aislamiento facilita la procrastinación. {app} te empareja por vídeo con otro profesional en sprints silenciosos de 25, 50 o 75 minutos, ofreciéndote el ancla necesaria para mantenerte en la terminal.",
+      "sections": [
+        {
+          "heading": "Conquistar tareas ingratas del backlog y deuda técnica",
+          "body": "Todo repositorio alberga tareas poco estimulantes: actualizar dependencias obsoletas, desenredar migraciones de bases de datos complejas, documentar APIs internas o implementar suites de tests para módulos legacy. Al carecer de una recompensa inmediata, resulta tentador abrir redes sociales, foros técnicos o salas de chat internas en lugar de resolverlas.\n\nProgramar una sesión de coworking en {app} actúa como un catalizador inmediato. Al entrar en la sala de vídeo a la hora convenida, declaras en voz alta tu meta técnica, como escribir pruebas para un endpoint de autenticación o sanear modelos de datos. Al tener a otro profesional visible en tu visión periférica, lo piensas dos veces antes de abrir páginas que distraigan. Esa presencia social sutil mantiene activa tu terminal hasta dejar listo el commit."
+        },
+        {
+          "heading": "Mantener la concentración durante sesiones de depuración complejas",
+          "body": "Investigar un fallo silencioso en producción o un error intermitente en la integración continua exige paciencia y deducción sistemática. Si te topas con callejones sin salida en soledad, la frustración se acumula con rapidez, empujándote a abandonar el problema o refugiarte en tareas secundarias como cambiar el tema de tu terminal o reordenar tus dotfiles.\n\nTrabajar junto a un body double fortalece tu resistencia mental. Los micrófonos se mantienen silenciados, por lo que tu compañero no interrumpirá tu flujo ni sugerirá soluciones innecesarias. En cambio, su presencia silenciosa funciona como un reflejo visual de tu compromiso con la tarea. Saber que compartirás tu resultado al término de 50 o 75 minutos te anima a probar hipótesis metódicamente, revisar trazas de error paso a paso y registrar hallazgos en vez de rendirte antes de tiempo."
+        },
+        {
+          "heading": "Respetar la concentración profunda que requiere la programación",
+          "body": "La programación en parejas puede ser útil, pero tener a alguien mirando por encima del hombro cada línea de código resulta agotador. La mayoría de los ingenieros no busca un diálogo constante; necesita un entorno estructurado donde construir software sin interrupciones. {app} elimina el ruido social superfluo para proteger tu atención.\n\nInteractúas treinta segundos al principio para exponer tu plan y un minuto al final para indicar si terminaste, avanzaste parcialmente o encontraste bloqueos. Durante la sesión de trabajo mantienes la cámara encendida con el micrófono en silencio, lo que te permite compilar, consultar documentación técnica y picar código en absoluta calma. Dado que {app} es completamente de código abierto bajo la licencia AGPL-3.0 y admite autoalojamiento, los equipos técnicos y desarrolladores preocupados por la privacidad pueden confiar plenamente en las herramientas que usan a diario."
+        },
+        {
+          "heading": "Registrar horas de código profundo y sprints de desarrollo",
+          "body": "Gestionar contratos con clientes, entregas de sprints y proyectos personales de código abierto requiere una autodisciplina constante. Sin límites definidos, los programadores acaban trabajando en horarios caóticos que desembocan en agotamiento. {app} te permite compartimentar tu jornada en bloques de desarrollo estructurados y sostenibles.\n\nPuedes apoyarte en las estadísticas de horas de concentración y rachas de constancia para cuidar tu ritmo de trabajo en vez de recurrir a noches maratonianas de programación. Si colaboras con asiduidad con ciertos ingenieros o mantenedores open source, puedes compartir tu enlace personal o guardarlos en favoritos. El plan gratuito incluye 3 sesiones semanales para blindar tus tareas de código más exigentes, mientras que el nivel Plus ofrece reservas ilimitadas y filtros avanzados para alcanzar cada hito de desarrollo."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} para proyectos personales y aportaciones de código abierto?",
+          "a": "Sí. Muchos desarrolladores emplean {app} para dedicar tiempo sin distracciones a proyectos paralelos, repositorios open source, tutoriales de programación y aprendizaje técnico. Agendar un bloque de 50 o 75 minutos garantiza un avance sostenido en tus proyectos personales sin dejarlos en el olvido."
+        },
+        {
+          "q": "¿Tengo que compartir mi pantalla o mostrar código confidencial?",
+          "a": "No. Jamás compartes tu pantalla ni revelas código propietario o confidencial. Solo mantienes tu cámara web encendida y tu micrófono silenciado mientras trabajas en silencio. Tu editor de código, comandos de terminal y repositorios privados permanecen completamente protegidos en tu equipo local."
+        },
+        {
+          "q": "¿Puede nuestro equipo de desarrollo autoalojar {app} internamente?",
+          "a": "Sí. Al ser software libre bajo la licencia AGPL-3.0, tu equipo técnico puede auditar el código fuente e instalar la plataforma en servidores propios si requieres control total sobre despliegues internos, auditorías de seguridad y normativas organizativas."
+        },
+        {
+          "q": "¿Qué sucede si un error de compilación o un bug me impide terminar?",
+          "a": "El desarrollo rara vez sale exactamente como se planea. Al final de la sesión, simplemente marcas tu tarea como parcial o no completada e indicas que surgió un error imprevisto. No hay penalizaciones ni juicios: se trata de una valoración sincera de tu sprint."
+        },
+        {
+          "q": "¿Es adecuado {app} para desarrolladores remotos en diferentes zonas horarias?",
+          "a": "Sí. Las sesiones se inician durante todo el día, a cada hora en punto y a y media, lo que facilita emparejarte con otros desarrolladores ya sea que trabajes en jornada habitual, de madrugada o en turnos de tarde en tu huso horario local."
+        }
+      ],
+      "cta": {
+        "heading": "Lanza tu próxima funcionalidad sin distracciones",
+        "body": "No dejes que los cambios de contexto ni las tareas tediosas del backlog frenen tu ritmo. Únete a otros desarrolladores enfocados en {app} y comienza con tus 3 sesiones semanales gratis."
+      },
+      "keywords": [
+        "body doubling programadores",
+        "coworking virtual desarrolladores",
+        "deep work programacion",
+        "enfoque para programar",
+        "sesiones de codigo productivo"
+      ]
+    },
+    {
+      "slug": "students",
+      "title": "Body Doubling para Estudiantes | Estudio en {app}",
+      "description": "Deja de procrastinar y supera tareas difíciles con body doubling en vídeo en {app}. Estudia con compañeros enfocados y crea hábitos de estudio sólidos.",
+      "h1": "Body Doubling Silencioso en Línea para Estudiantes",
+      "intro": "La vida universitaria y académica implica cargas de estudio exigentes, problemas complejos y lecturas densas, muchas veces sin una estructura fija en el día a día. Estudiar a solas en una habitación o piso compartido hace que deslizar el móvil o echarse una siesta no planificada sea demasiado fácil. {app} te empareja por vídeo con un compañero de estudio durante bloques de 25, 50 o 75 minutos, brindándote el impulso externo necesario para terminar tus deberes sin estudiar a última hora.",
+      "sections": [
+        {
+          "heading": "Vencer la procrastinación en trabajos y asignaturas difíciles",
+          "body": "Empezar una memoria de veinte páginas, un boletín de reacciones de química orgánica o varios capítulos de biología puede generar una gran resistencia inicial. Cuando una tarea parece inabarcable, los estudiantes suelen posponerla hasta la víspera de la entrega, lo que genera falta de sueño, estudio apresurado y picos de estrés.\n\nUtilizar {app} te ayuda a romper esa inercia transformando grandes desafíos académicos en bloques de estudio accesibles. En vez de proponerte estudiar física toda la tarde, reservas una sesión de 50 minutos para resolver cinco problemas concretos de cálculo. Verbalizar esa meta específica ante tu compañero genera un compromiso real. En cuanto empieza la sesión y los micrófonos se apagan, te pones a trabajar de inmediato porque tienes en pantalla a otro estudiante comprometido con la misma disciplina de silencio."
+        },
+        {
+          "heading": "Aprovechar los huecos entre clases con rutinas productivas",
+          "body": "Los tiempos muertos entre clases suelen desperdiciarse mirando el móvil o deambulando por el campus. Aunque parezcan intervalos breves, convertirlos en sesiones intencionadas de estudio puede ahorrarte horas de agobio por la tarde y dejarte los fines de semana libres para descansar.\n\nComo las sesiones en {app} arrancan en punto y a y media, resulta muy fácil encajar un sprint de estudio de 25 o 50 minutos en cualquier hueco de tu horario. Puedes colocar el portátil en una mesa de la biblioteca, entrar a la sesión y repasar los apuntes de la clase anterior mientras los conceptos siguen frescos. El compromiso silencioso evita que te disperses navegando por internet. Cuando comience tu siguiente clase, recogerás tus cosas sabiendo que ya avanzaste gran parte del trabajo del día."
+        },
+        {
+          "heading": "Una alternativa libre de distracciones a salas de estudio saturadas",
+          "body": "Las bibliotecas universitarias y salas comunes pueden ser ruidosas y propensas a la distracción social. Estudiar con amigos a menudo deriva en charlas improvisadas, descansos continuos para picar algo y vídeos en redes, con lo que apenas se avanza tras varias horas. {app} te proporciona la compañía de estudio sin las interrupciones que sabotean la concentración profunda.\n\nAmbos estudiantes mantienen los micrófonos silenciados durante todo el bloque, por lo que nunca tendrás que soportar cuchicheos, llamadas ni interrupciones imprevistas. Ver a tu compañero trabajando con constancia en pantalla actúa como un recordatorio psicológico para no apartar la vista de tus apuntes. Como las sesiones de vídeo son privadas y nunca se graban, puedes estudiar cómodamente desde tu escritorio o dormitorio con total tranquilidad."
+        },
+        {
+          "heading": "Llevar la cuenta de horas de estudio y preparar exámenes con éxito",
+          "body": "El repaso espaciado y regular es mucho más eficaz para retener conocimientos a largo plazo que pasar noches enteras en vela antes del examen. {app} te permite contabilizar tus horas de estudio y consolidar hábitos durante el periodo de exámenes parciales y finales. Al concluir cada sesión, un minuto de balance te permite indicar si tus fichas o capítulos previstos se completaron, se avanzaron parcialmente o requieren más dedicación.\n\nPuedes conectar con compañeros de clase o grupos de estudio compartiendo tu enlace personal de reserva o añadiendo compañeros habituales a tu lista de favoritos. La plataforma también apoya a colectivos estudiantiles que deseen fomentar el estudio colectivo. Comenzar con 3 sesiones semanales gratis te permite reforzar las asignaturas más complejas, mientras que el plan Plus ofrece reservas ilimitadas para épocas de alta exigencia."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} para estudiar desde la biblioteca o una residencia?",
+          "a": "Sí. Siempre que cuentes con una conexión a internet estable y cámara web, puedes estudiar desde una biblioteca, dormitorio o cafetería tranquila. Como los micrófonos están silenciados durante el trabajo, no molestarás a las personas que tengas alrededor."
+        },
+        {
+          "q": "¿Qué ocurre si termino mi lectura antes de que suene el temporizador?",
+          "a": "Si terminas antes, puedes repasar apuntes, organizar esquemas o adelantar el siguiente tema del temario. Permaneces en silencio frente a la cámara hasta el final de la sesión para preservar el clima de concentración de tu compañero."
+        },
+        {
+          "q": "¿Pueden los alumnos de secundaria utilizar {app} para estudiar?",
+          "a": "No. Todo usuario de {app} debe tener como mínimo 18 años. Los estudiantes universitarios, de posgrado y adultos que preparan oposiciones o certificaciones profesionales son bienvenidos a organizar sus horas de estudio y repasos en la plataforma."
+        },
+        {
+          "q": "¿Puedo estudiar con mis compañeros de facultad en {app}?",
+          "a": "Sí. Puedes enviarles directamente tu enlace de reserva personal para coincidir en el mismo bloque horario. Además, las próximas funciones grupales permitirán que pequeños grupos de hasta 9 compañeros estudien juntos en proyectos compartidos."
+        },
+        {
+          "q": "¿Cómo garantiza {app} un entorno seguro durante las sesiones?",
+          "a": "Las sesiones de vídeo son en directo y nunca quedan grabadas. Las normas de la comunidad exigen un comportamiento respetuoso y en silencio en todo momento. Si un compañero actúa de forma inadecuada, puedes reportarlo o bloquearlo al instante, y el equipo de moderación actuará de inmediato."
+        }
+      ],
+      "cta": {
+        "heading": "Aprueba tus próximos exámenes con sesiones de estudio en calma",
+        "body": "Cambia los atracones de última hora por bloques de estudio regulares y silenciosos. Únete a otros estudiantes en {app} y empieza hoy tus 3 sesiones semanales gratuitas."
+      },
+      "keywords": [
+        "body doubling para estudiantes",
+        "sala de estudio virtual",
+        "estudiar en linea acompañado",
+        "concentracion para estudiar oposiciones",
+        "compañero de estudio virtual"
+      ]
+    },
+    {
+      "slug": "freelancers",
+      "title": "Body Doubling para Freelancers | Coworking en {app}",
+      "description": "Gestiona facturación pendiente, tareas administrativas y entregas a tiempo con body doubling en {app}. Mantén la disciplina al trabajar por tu cuenta.",
+      "h1": "Body Doubling Silencioso para Profesionales Independientes",
+      "intro": "Trabajar por cuenta propia ofrece libertad, pero lidiar a solas con entregas de clientes, facturas pendientes y papeleo administrativo puede ser muy solitario. Sin un jefe ni compañeros esperando en la oficina, las tareas de gestión rutinarias acaban estancadas en la lista de pendientes durante semanas. {app} te conecta por vídeo con otro profesional independiente en sesiones de 25, 50 o 75 minutos, aportando a tu jornada autónoma la estructura serena que necesitas para rendir.",
+      "sections": [
+        {
+          "heading": "Superar las tareas no facturables que sueles posponer",
+          "body": "Cualquier actividad freelance implica trabajo no facturable: conciliar cuentas bancarias, ordenar recibos para impuestos, organizar carpetas y reclamar facturas vencidas. Al no generar ingresos de forma inmediata, solemos postergarlas hasta la tarde del viernes o el domingo por la noche, acumulando un estrés sordo y continuo.\n\nReservar un bloque de gestión administrativa en {app} convierte las tareas engorrosas en citas inamovibles. Al iniciarse la sesión, le indicas a tu compañero que dedicarás los próximos 50 minutos a poner al día la facturación o redactar tres presupuestos. Adquirir un compromiso claro ante otra persona aporta una motivación instantánea. Al trabajar en silencio compartido, avanzas en hojas de cálculo y correos de seguimiento pendientes, despejando la mente para tu verdadera especialidad."
+        },
+        {
+          "heading": "Recuperar la compañía de una oficina sin el ruido habitual",
+          "body": "Trabajar desde un despacho en casa o la mesa de la cocina tiene grandes ventajas, pero el silencio prolongado puede volverse pesado. Los espacios de coworking tradicionales a menudo resultan caros, concurridos y ruidosos, con llamadas continuas y charlas que cortan tu concentración. Quienes trabajan por su cuenta echan de menos la tranquilidad de compartir espacio con personas concentradas en sus propios proyectos.\n\n{app} reproduce esa sensación de camaradería profesional sin las distracciones ni los desplazamientos. Como todos los micrófonos se apagan al empezar a trabajar, disfrutas de silencio absoluto a la vez que cuentas con la presencia visual de un compañero comprometido. Ver a otra persona redactando o analizando documentos te mantiene en el asiento. Te sientes parte de una comunidad activa sin ceder un ápice de productividad profunda."
+        },
+        {
+          "heading": "Fijar límites diarios claros en horarios independientes",
+          "body": "Sin un horario de oficina estricto, la frontera entre el trabajo y la vida personal se difumina con facilidad. Los profesionales autónomos suelen retrasar el comienzo del día, alargar los descansos a media tarde y terminar trabajando hasta altas horas de la noche para compensar. Esa falta de desconexión conduce directamente al agotamiento y al bloqueo creativo.\n\nApoyarte en {app} te permite delimitar tu jornada laboral mediante sprints de enfoque intencionados. Puedes reservar una sesión de 50 minutos a las 9:00 para revisar peticiones de clientes y otra de 25 minutos a las 17:00 para vaciar la bandeja de entrada y cerrar el ordenador. Saber que las sesiones arrancan con puntualidad en punto o a y media te ayuda a ser constante. Al establecer cierres fiables, proteges tus tardes y creas una rutina profesional sostenible para tu negocio independiente."
+        },
+        {
+          "heading": "Medir horas de trabajo productivo y hacer crecer tu negocio",
+          "body": "Mantener una carrera freelance próspera requiere regularidad tanto en proyectos de clientes como en promoción y formación continua. {app} incluye herramientas de seguimiento, como el recuento de horas de concentración y rachas de constancia, que te ayudan a visualizar tu rendimiento semanal. Al término de cada bloque, un balance rápido te permite registrar si completaste tu entrega, si avanzaste parcialmente o si dependes de la respuesta de un cliente.\n\nCuando encuentres a otros profesionales autónomos con una dinámica de trabajo similar a la tuya, puedes agregarlos a tu lista de compañeros favoritos para coordinar sesiones recurrentes. También puedes compartir tu enlace de reserva con colaboradores de confianza. Con 3 sesiones semanales gratuitas y acceso ilimitado en el plan Plus, {app} fortalece la autodisciplina indispensable para gestionar un negocio unipersonal rentable."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} tanto para entregas de clientes como para gestión administrativa?",
+          "a": "Sí. Quienes trabajan por cuenta propia usan {app} tanto para tareas facturables (redacción, programación, consultoría o diseño) como para gestiones internas (facturación o captación). Tú decides qué prioridad concreta requiere tu atención exclusiva durante cada sprint reservado."
+        },
+        {
+          "q": "¿Qué ocurre si recibo una llamada urgente de un cliente en mitad de la sesión?",
+          "a": "Si surge una urgencia imprevista con un cliente, puedes dejar una breve nota en el chat de la sesión para avisar a tu compañero, apartarte del escritorio y gestionarla. Al regresar, retomas tu tarea hasta el momento del balance final."
+        },
+        {
+          "q": "¿Están protegidos mis documentos y los datos de mis clientes?",
+          "a": "Totalmente seguros. Nunca compartes tu pantalla ni expones acuerdos confidenciales. Las transmisiones de vídeo son en directo, sin grabaciones ni almacenamiento en la nube. Además, nuestro código abierto con licencia AGPL-3.0 garantiza la transparencia técnica que valoran los profesionales independientes."
+        },
+        {
+          "q": "¿Puedo coordinar sesiones de coworking con otros compañeros freelance?",
+          "a": "Sí. Puedes remitir tu enlace personal de reserva a compañeros de confianza para agendar exactamente el mismo bloque de trabajo. También puedes guardarlos como favoritos para que organizar sesiones conjuntas ante entregas apretadas sea rápido y sencillo."
+        },
+        {
+          "q": "¿Cómo funciona el plan gratuito para profesionales independientes?",
+          "a": "El plan gratuito incluye 3 sesiones semanales de coworking en vídeo, ideal para cuadrar la contabilidad o resolver entregas clave. Si tu actividad requiere apoyo diario en múltiples proyectos, el plan Plus ofrece reservas ilimitadas y filtros avanzados."
+        }
+      ],
+      "cta": {
+        "heading": "Aporta disciplina y estructura a tu trabajo independiente",
+        "body": "Deja de posponer las gestiones administrativas y ofrece tu mejor trabajo a tus clientes. Únete a otros autónomos en {app} y solicita hoy tus 3 sesiones semanales gratuitas."
+      },
+      "keywords": [
+        "body doubling para freelancers",
+        "coworking virtual para autonomos",
+        "productividad para freelancers",
+        "disciplina trabajando por cuenta propia",
+        "compañero de enfoque freelance"
+      ]
+    },
+    {
+      "slug": "remote-workers",
+      "title": "Body Doubling en Teletrabajo | Coworking con {app}",
+      "description": "Supera las distracciones del hogar y el bajón de la tarde con body doubling en {app}. Trabaja junto a profesionales enfocados y sin interrupciones.",
+      "h1": "Body Doubling Silencioso para Teletrabajadores",
+      "intro": "El teletrabajo ofrece autonomía, pero también trae consigo continuas distracciones domésticas, límites difusos entre empleo y vida personal, y una sensación constante de aislamiento. Al trabajar en soledad desde casa, la colada pendiente, las visitas a la cocina y las redes sociales pueden descarrilar tus mejores planes. {app} te conecta por vídeo con otro profesional en remoto en bloques silenciosos de 25, 50 o 75 minutos, devolviendo a tu día la estructura firme de una oficina física.",
+      "sections": [
+        {
+          "heading": "Frenar las tentaciones y distracciones domésticas",
+          "body": "Cuando tu casa es también tu lugar de trabajo, las distracciones acechan en cada rincón. Una tarea a medio hacer en el pasillo, platos en el fregadero o una entrega de paquetería pueden apartarte fácilmente de la mesa durante una hora. Sin compañeros cerca, se requiere una fuerza de voluntad tremenda para volver a sentarse y retomar presentaciones complejas o informes tediosos.\n\nAgendar una sesión en {app} establece una clara transición mental hacia el modo de trabajo. Al programar un bloque que inicia en punto o a y media, adquieres el compromiso externo de estar en tu escritorio. Saludas a tu compañero, declaras lo que vas a resolver y silencias el micrófono. Ver a otro profesional en pantalla levanta una barrera psicológica frente a las tareas caseras, manteniéndote enfocado en las prioridades de tu empresa."
+        },
+        {
+          "heading": "Superar el habitual bajón de energía de primera hora de la tarde",
+          "body": "Casi todo profesional en remoto conoce el cansancio que aparece a primera hora de la tarde. Tras varias horas contestando mensajes de chat y asistiendo a reuniones por vídeo, la motivación se desvanece. En una oficina convencional, el movimiento de los compañeros te ayuda a seguir adelante; en casa, ese bajón suele terminar en visitas a la nevera, consultas al móvil o letargo frente al correo.\n\nRecurrir a {app} proporciona una inyección de responsabilidad tranquila justo cuando flaquea la energía. Un sprint de 25 o 50 minutos te obliga a elegir una entrega concreta —como redactar un resumen ejecutivo o revisar métricas de marketing— y comprometerte a finalizarla. Comprobar que tu compañero avanza en silencio en pantalla te aporta el estímulo necesario para vencer la desgana y rematar el día con éxito."
+        },
+        {
+          "heading": "Combatir el aislamiento del teletrabajo sin fatiga de reuniones",
+          "body": "Quienes teletrabajan a menudo anhelan el contacto humano, pero programar más videollamadas suele agravar el cansancio mental. Las reuniones virtuales exigen hablar sin cesar, vigilar la propia imagen y mantener una actitud activa, dejando escasa energía para la reflexión sosegada. Lo que verdaderamente necesitan los equipos en remoto es compañía cercana sin exigencias sociales.\n\n{app} facilita una conexión silenciosa sin necesidad de conversar. Compartes treinta segundos de cortesía al inicio, una hora de trabajo conjunto en silencio y un breve balance de resultados al concluir. La plataforma nunca graba tu vídeo, preservando la intimidad de tu hogar. Disfrutas de la agradable sensación de trabajar acompañado sin reuniones interminables, charlas forzadas ni políticas de oficina."
+        },
+        {
+          "heading": "Organizar una jornada remota equilibrada y sostenible",
+          "body": "Al no existir desplazamientos de ida y vuelta, el teletrabajo suele invadir todo el día. Es habitual responder correos antes del desayuno y revisar mensajes a deshoras, propiciando el desgaste profesional crónico. {app} te brinda recursos para ordenar tu tiempo en intervalos definidos y con límites precisos de inicio y fin.\n\nPuedes hacer un seguimiento de tus horas de concentración acumuladas y consolidar rachas diarias para controlar tu constancia. Si encuentras compañeros de trabajo o colegas con horarios afines, puedes guardarlos como favoritos o compartir tu enlace de reserva para coincidir en bloques conjuntos. {app} también da soporte a empresas con equipos en remoto que buscan dinámicas de trabajo conjunto. Empezar con 3 sesiones semanales gratuitas te ayuda a encauzar tus días más exigentes, mientras que el plan Plus ofrece sesiones ilimitadas para una rutina integral."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} mientras trabajo para mi empresa desde casa?",
+          "a": "Sí. Empleados de empresas distribuidas utilizan {app} para avanzar en tareas autónomas, analizar informes, redactar documentos y desatascar trabajo pendiente. Al mantener los micrófonos silenciados y no compartir pantalla, la información interna y los archivos corporativos permanecen totalmente confidenciales."
+        },
+        {
+          "q": "¿Qué ocurre si mi familia o mis mascotas pasan por detrás durante la sesión?",
+          "a": "Es completamente natural en un hogar. Los movimientos breves de familiares o mascotas son bien recibidos siempre que no perturben a tu compañero. Como tu micrófono está silenciado durante el bloque de trabajo, ningún sonido de tu casa llegará al otro lado."
+        },
+        {
+          "q": "¿Pueden las empresas en remoto organizar grupos privados en {app}?",
+          "a": "Sí. Las organizaciones con equipos distribuidos pueden crear grupos corporativos privados para que sus empleados compartan sesiones de body doubling exclusivamente entre compañeros. Asimismo, las próximas funciones permitirán salas guiadas de coworking silencioso de hasta 9 participantes."
+        },
+        {
+          "q": "¿Está {app} disponible para profesionales en distintas zonas horarias?",
+          "a": "Sí. {app} funciona las 24 horas del día con sesiones que inician a cada hora en punto y a y media. Ya sea que trabajes en horario de oficina habitual, de noche o a primera hora de la mañana según tu país, siempre habrá compañeros enfocados con quienes compartir sesión."
+        },
+        {
+          "q": "¿Cómo gestiona {app} la seguridad de la comunidad y el respeto mutuo?",
+          "a": "Para registrarse es obligatorio tener al menos 18 años. El vídeo se emite únicamente en tiempo real y nunca se guarda en servidores. Si algún usuario incumple las normas de convivencia, puedes reportarlo o bloquearlo con un clic, garantizando un espacio seguro y profesional para todos."
+        }
+      ],
+      "cta": {
+        "heading": "Lleva foco y conexión humana a tu jornada en remoto",
+        "body": "Deja de luchar a solas contra las distracciones domésticas. Trabaja junto a profesionales enfocados y aprovecha tus 3 sesiones semanales gratuitas en {app} hoy mismo."
+      },
+      "keywords": [
+        "body doubling teletrabajo",
+        "coworking virtual trabajo remoto",
+        "concentracion trabajando desde casa",
+        "productividad teletrabajo",
+        "rutina de trabajo en remoto"
+      ]
+    },
+    {
+      "slug": "phd-students",
+      "title": "Body Doubling para Doctorandos | Tesis en {app}",
+      "description": "Avanza en tu tesis doctoral, analiza datos y redacta capítulos con body doubling en {app}. Mantén la constancia y supera el bloqueo académico diario.",
+      "h1": "Body Doubling Silencioso para Estudiantes de Doctorado",
+      "intro": "La investigación doctoral es una carrera de fondo marcada por semestres sin horarios fijos, entregas lejanas y un aislamiento considerable. A la hora de redactar el estado de la cuestión, depurar datos experimentales o revisar solicitudes de financiación, la ausencia de supervisión diaria puede desatar el síndrome del impostor y una postergación crónica. {app} te conecta por vídeo con otro investigador en sprints silenciosos de 25, 50 o 75 minutos, aportando a tu tesis la constancia que necesita.",
+      "sections": [
+        {
+          "heading": "Superar el bloqueo ante la tesis y el temor a la página en blanco",
+          "body": "Redactar una tesis doctoral no se parece a los cursos de grado. No hay cuestionarios semanales ni calificaciones inmediatas que generen satisfacción, y las correcciones de los directores de tesis pueden demorarse meses. Enfrentarse a un documento en blanco para redactar la metodología del capítulo tres puede resultar paralizante, llevando a muchos doctorandos a pulir citas sin cesar o refugiarse en tareas de laboratorio menores.\n\n{app} proporciona el apoyo externo indispensable para convertir la escritura diaria en un hábito firme. Reservas un bloque de 50 o 75 minutos que inicia en punto o a y media. Al entrar, le dices a tu compañero qué sección vas a abordar: por ejemplo, redactar dos párrafos sobre limitaciones muestrales o esquematizar el apartado cuatro. Expresar ese compromiso desmitifica el trabajo. Al escribir en silencio solidario, dejas de lado el perfeccionismo y avanzas hacia el título de doctor."
+        },
+        {
+          "heading": "Mantener la concentración en tareas tediosas de análisis",
+          "body": "Más allá de redactar, quienes cursan un doctorado deben afrontar procesos repetitivos que demandan un cuidado minucioso: depurar tablas estadísticas en R o Python, transcribir entrevistas cualitativas, ajustar referencias según la normativa académica o verificar fórmulas matemáticas. Cuando sobreviene el cansancio, la tentación de entrar en redes sociales o foros académicos resulta casi irresistible.\n\nCompartir sesión en {app} funciona como un ancla de atención durante el análisis minucioso. Los micrófonos se apagan tras el saludo inicial, resguardando la calma necesaria para el rigor científico. Si tu atención decae o un script arroja un molesto error sintáctico, observar a otra persona trabajando con seriedad en pantalla te devuelve a la terminal. Permaneces en tu asiento, solucionas el error y terminas la depuración de datos sin perder la tarde en distracciones."
+        },
+        {
+          "heading": "Afrontar la soledad académica sin agotamiento social",
+          "body": "El posgrado puede ser una etapa solitaria, en especial en humanidades, ciencias teóricas o ciencias sociales, donde no se comparten laboratorios activos. Sin embargo, acudir a seminarios departamentales o salas de descanso a menudo implica conversaciones estresantes sobre índices de impacto, plazas universitarias y recortes presupuestarios. Los investigadores necesitan una compañía cercana que prescinda de poses competitivas.\n\n{app} brinda esa presencia silenciosa sin desgaste intelectual. Compartes un espacio de trabajo sin ruido con otra persona entregada a finalizar sus tareas. No hay debates, demostraciones de ego ni opiniones no solicitadas. Las sesiones por vídeo son estrictamente privadas y jamás se graban, propiciando un espacio seguro y sin pretensiones donde avanzar desde tu despacho universitario o desde casa sin sentirte evaluado."
+        },
+        {
+          "heading": "Monitorear horas académicas y disipar el síndrome del impostor",
+          "body": "Puesto que el progreso en una tesis rara vez se percibe a corto plazo, los doctorandos suelen convivir con la constante sensación de que no rinden lo suficiente. {app} te proporciona una constancia palpable de tu dedicación mediante el registro objetivo de horas de concentración y rachas de trabajo. Al cierre de cada sesión, indicas si tu hito fue completado, parcial o no completado, valorando el avance diario.\n\nPuedes invitar a compañeros de laboratorio o a otros doctorandos a escribir juntos usando tu enlace personal de reserva o creando grupos universitarios específicos. La plataforma es de código abierto con licencia AGPL-3.0, en sintonía con los principios de transparencia y acceso abierto de la ciencia. Empieza con 3 sesiones semanales gratis para afianzar tu rutina de escritura o suscríbete al plan Plus para sesiones ilimitadas hasta el depósito de tu tesis."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} para lecturas densas de artículos científicos?",
+          "a": "Sí. Muchos doctorandos utilizan las sesiones para lectura crítica, anotación de literatura académica y organización de referencias en herramientas como Zotero. Simplemente fija tu objetivo de lectura al inicio para tener una pauta clara en el balance final."
+        },
+        {
+          "q": "¿Qué pasa si me atasco en una demostración o en un error de código?",
+          "a": "La investigación es impredecible. Si tropiezas con un escollo conceptual o un problema imprevisto en los datos, puedes marcar la sesión como parcial o no completada. El balance final es un registro sincero de tu tiempo, no un examen académico."
+        },
+        {
+          "q": "¿Podemos usar {app} en nuestro departamento o grupo de investigación?",
+          "a": "Sí. {app} permite crear grupos departamentales para que estudiantes de posgrado compartan sesiones de trabajo directamente. Además, las próximas salas grupales facilitarán sprints sincronizados de redacción de tesis para grupos de hasta 9 investigadores."
+        },
+        {
+          "q": "¿Están a salvo mis manuscritos y datos de investigación en {app}?",
+          "a": "Totalmente. En ningún momento compartes tu pantalla ni transmites descubrimientos confidenciales. Las sesiones se emiten en vivo sin grabarse ni archivarse. Asimismo, {app} cuenta con licencia AGPL-3.0 y puede autoalojarse en servidores universitarios bajo estrictos protocolos de seguridad institucional."
+        },
+        {
+          "q": "¿Cómo ayuda el body doubling a estudiantes de posgrado neurodivergentes?",
+          "a": "Muchos doctorandos neurodivergentes consideran el body doubling un recurso idóneo para combatir la disfunción ejecutiva, la ceguera temporal y el perfeccionismo. Tener a un compañero visible en pantalla levanta un límite externo que hace mucho más fácil iniciar tareas académicas complejas."
+        }
+      ],
+      "cta": {
+        "heading": "Avanza con paso firme hacia tu título de doctor",
+        "body": "Supera la soledad académica y avanza en tu tesis sprint a sprint. Únete a otros investigadores en {app} y comienza hoy tus 3 sesiones semanales gratuitas."
+      },
+      "keywords": [
+        "body doubling para doctorandos",
+        "escribir tesis doctoral ayuda",
+        "compañero para escribir tesis",
+        "coworking virtual para tesis",
+        "disciplina tesis doctoral"
+      ]
+    },
+    {
+      "slug": "founders",
+      "title": "Body Doubling para Emprendedores | Foco en {app}",
+      "description": "Supera la soledad del emprendedor, resuelve tareas operativas y prospección con body doubling en {app}. Mantén el foco y avanza en cada sprint.",
+      "h1": "Body Doubling Silencioso para Fundadores de Startups",
+      "intro": "Crear una startup desde cero obliga a asumir todas las áreas a la vez: ventas, diseño de producto, soporte a usuarios y modelos financieros. Al gozar de total autonomía sin nadie que supervise tu avance, resulta muy tentador dedicar jornadas enteras a tareas cómodas de escaso impacto y eludir responsabilidades exigentes como la prospección en frío o la revisión de la presentación para inversores. {app} te empareja por vídeo con otro profesional comprometido en sprints de 25, 50 o 75 minutos para acelerar el crecimiento de tu proyecto.",
+      "sections": [
+        {
+          "heading": "Afrontar tareas operativas y de ventas que generan resistencia",
+          "body": "Quienes fundan empresas suelen posponer actividades que implican riesgo de rechazo o esfuerzo manual monótono. Enviar veinte correos de captación en frío, redactar informes para inversores, analizar bajas de usuarios o cuadrar tablas de capitalización son tareas propensas a la evasión. En vez de asumirlas, muchas veces se opta por retocar detalles estéticos de la web o reorganizar paneles de tareas.\n\nProgramar una sesión en {app} te obliga a encarar tus prioridades más incómodas. Al arrancar la sesión en punto, declaras tu objetivo concreto a tu compañero, como redactar quince mensajes de prospección o completar el presupuesto trimestral. Silenciar el micrófono te permite concentrarte de lleno mientras la mirada de tu compañero evita que abandones la tarea. Superas la reticencia inicial y despachas el trabajo clave que impulsa tu negocio."
+        },
+        {
+          "heading": "Eliminar los costosos cambios de contexto durante el día",
+          "body": "La variedad de asuntos que reclaman la atención de un fundador hace que mantener el enfoque sea una batalla constante. Un ticket urgente de un cliente, un correo de un posible inversor o un aviso del monitor de errores pueden quebrar tu concentración, abocándote a apagar fuegos durante el resto del día. Sin una barrera firme, el trabajo estratégico nunca llega a realizarse.\n\n{app} te brinda un espacio blindado para proteger tus horas de reflexión de alto valor. Al fijar un bloque de 50 o 75 minutos de trabajo profundo, estableces un muro frente a las notificaciones entrantes. Cierras Slack, silencias el teléfono y te vuelcas exclusivamente en trazar hojas de ruta, estudiar la rentabilidad unitaria o redactar especificaciones. Saber que otro profesional trabaja a tu lado te facilita ignorar avisos y aplicar tu estrategia con determinación."
+        },
+        {
+          "heading": "Superar la soledad inherente a emprender en solitario",
+          "body": "Liderar una empresa desde una habitación o un rincón de casa puede ser una experiencia profundamente solitaria. Quienes emprenden en solitario soportan todo el peso de las decisiones sin el apoyo de un equipo directivo. Sin embargo, asistir a encuentros de networking o cafés con fundadores suele consumir horas valiosas en conversaciones vacías y apariencias innecesarias.\n\n{app} te acerca la motivación del trabajo compartido sin ningún peaje social. Apenas dedicas treinta segundos al saludo inicial, trabajas en silencio y compartes tus resultados durante un minuto al cierre. La plataforma es totalmente privada y nunca graba las transmisiones de vídeo. Sientes el estímulo de trabajar codo a codo con otra persona decidida que comprende el esfuerzo que exige crear algo de la nada."
+        },
+        {
+          "heading": "Controlar las horas de trabajo directivo y cuidar tu energía",
+          "body": "El desgaste por agotamiento es uno de los mayores peligros para la supervivencia de una startup. Trabajar doce horas al día sin pausas estructuradas suele traducirse en malas decisiones y saturación emocional. {app} te ayuda a sostener un ritmo equilibrado mediante métricas de horas de concentración, rachas de continuidad y bloques de tiempo planificados.\n\nPuedes conectar con cofundadores, asesores o emprendedores afines compartiendo tu enlace de reserva o guardándolos como favoritos para sesiones habituales. Al ser {app} de código abierto bajo licencia AGPL-3.0, cualquier equipo técnico puede revisar el código o instalarlo internamente. Comienza con el plan gratuito de 3 sesiones semanales o pasa al plan Plus para disfrutar de coworking ilimitado a medida que tu negocio escala."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} para prospección comercial y ventas?",
+          "a": "Sí. Muchos fundadores recurren a las sesiones de {app} para enviar prospección por email, contactar por LinkedIn, actualizar el embudo de ventas o redactar propuestas comerciales. Declarar tu meta al comenzar te proporciona el impulso necesario para pulsar el botón de envío."
+        },
+        {
+          "q": "¿Qué ocurre si recibo una alerta urgente de soporte técnico durante la sesión?",
+          "a": "Si surge una caída crítica del servicio o una incidencia grave con un cliente, puedes poner una breve nota en el chat, ausentarte para resolver la emergencia y regresar en cuanto esté solucionado. Luego explicas lo sucedido en el balance final."
+        },
+        {
+          "q": "¿Podemos coordinar sesiones sincrónicas entre cofundadores en {app}?",
+          "a": "Sí. Puedes remitir tu enlace de reserva a tu cofundador, asesores o integrantes del equipo para trabajar en la misma sala. Asimismo, las próximas funciones grupales permitirán organizar sprints guiados de hasta 9 participantes."
+        },
+        {
+          "q": "¿Están protegidos los datos financieros y la información estratégica de mi empresa?",
+          "a": "Completamente protegidos. Nunca compartes pantalla y los micrófonos permanecen silenciados durante todo el sprint. Las señales de vídeo son efímeras y no se almacenan en ningún servidor. Además, nuestra licencia de código abierto AGPL-3.0 permite alojar la herramienta de forma interna con total soberanía sobre los datos."
+        },
+        {
+          "q": "¿En qué se diferencia {app} de un espacio de coworking físico?",
+          "a": "Los coworkings tradicionales conllevan costosas cuotas mensuales, trayectos diarios e interrupciones constantes de otros miembros. {app} te aporta el compromiso silencioso de trabajar junto a personas decididas directamente desde tu mesa, con 3 sesiones semanales gratis y máxima flexibilidad de horarios."
+        }
+      ],
+      "cta": {
+        "heading": "Impulsa tu startup con mayor claridad y disciplina",
+        "body": "No permitas que las gestiones secundarias y la resistencia comercial frenen tu empresa. Súmate a fundadores proactivos en {app} y reclama tus 3 sesiones semanales gratis."
+      },
+      "keywords": [
+        "body doubling para emprendedores",
+        "coworking virtual para startups",
+        "productividad fundadores de empresas",
+        "enfoque trabajo profundo startup",
+        "disciplina emprendedores en solitario"
+      ]
+    },
+    {
+      "slug": "designers",
+      "title": "Body Doubling para Diseñadores | Coworking en {app}",
+      "description": "Supera el bloqueo creativo, organiza tus archivos de Figma y entrega a tiempo con body doubling en {app}. Mantén tu flujo de diseño sin distracciones.",
+      "h1": "Body Doubling Silencioso para Diseñadores de Producto y Gráficos",
+      "intro": "El diseño combina intuición artística con precisión técnica, lo que lo vuelve muy vulnerable al perfeccionismo y a la postergación. Al enfrentarse a tareas monótonas como definir tokens de sistemas de diseño, detallar especificaciones para desarrollo o limpiar capas desordenadas en Figma, resulta sencillo caer en ajustes interminables de detalles secundarios. {app} te conecta por vídeo con otro creador enfocado en sprints silenciosos de 25, 50 o 75 minutos, ayudándote a entregar diseños impecables en el plazo previsto.",
+      "sections": [
+        {
+          "heading": "Frenar el perfeccionismo y el bloqueo ante el lienzo",
+          "body": "Al ser el diseño un terreno subjetivo, resulta tentadoramente fácil dedicar horas a ajustar radios de esquinas, desplazar márgenes un píxel arriba o probar veinte combinaciones tipográficas sin tomar una decisión definitiva. Ese bucle perfeccionista suele acarrear retrasos en las entregas y agotamiento, convirtiendo un proceso gratificante en una fuente de inseguridad.\n\nCompartir sesión en {app} introduce un marco temporal que pone freno a los retoques infinitos. Al entrar en una sala, declaras a tu compañero qué elemento vas a cerrar durante el bloque, como terminar los wireframes del proceso de compra o crear cinco variantes de un icono. Comprometerte con un resultado concreto te estimula a decidir con agilidad y seguir adelante. Con tu compañero presente en pantalla, evitas rehacer pantallas ya resueltas y te enfocas en entregar trabajo terminado."
+        },
+        {
+          "heading": "Avanzar en el mantenimiento rutinario de sistemas de diseño",
+          "body": "Aunque idear nuevas identidades visuales es apasionante, la realidad cotidiana del diseño exige un mantenimiento continuo: documentar propiedades de componentes, corregir anidamientos en auto-layout, exportar activos en múltiples resoluciones y redactar notas de entrega para el equipo de desarrollo. Al ser labores áridas, a menudo se posterga la limpieza de archivos hasta que los desarrolladores reclaman elementos que faltan.\n\nReservar bloques específicos en {app} transforma el mantenimiento de archivos en compromisos ordenados y sin fricción. Los micrófonos se mantienen silenciados durante todo el sprint, aportando la calma necesaria para auditar tokens y verificar contrastes de accesibilidad. Tener a otra persona trabajando a tu lado te da la constancia indispensable para ordenar tus exportaciones y documentar cada elemento, asegurando un traspaso fluido con el equipo técnico."
+        },
+        {
+          "heading": "Un espacio creativo en calma sin opiniones continuas",
+          "body": "Quienes diseñan pasan sus jornadas rodeados de valoraciones, revisiones de clientes y críticas de distintos departamentos. Si bien el feedback constructivo es necesario, tener a personas juzgando cada paso en fases exploratorias bloquea la experimentación. Quien diseña precisa un espacio mental reservado para probar ideas sin la presión de un juicio inmediato.\n\n{app} brinda compañía cercana sin observación indiscreta. En ningún momento compartes tu lienzo de diseño y los micrófonos se apagan tras el saludo inicial. El vídeo se emite únicamente en directo y nunca se almacena, asegurando tu privacidad mientras abocetas e iteras. Disfrutas del estímulo de trabajar junto a otro profesional en silencio, sin verte obligado a justificar bocetos preliminares ni colores provisionales antes de tiempo."
+        },
+        {
+          "heading": "Medir la producción creativa y estructurar entregas a clientes",
+          "body": "Ya formes parte del equipo de producto de una empresa o atiendas a varios clientes de diseño freelance, sostener un ritmo de entrega constante es clave para la satisfacción profesional. {app} te ayuda a estructurar tu semana de diseño con métricas intuitivas de concentración, recuento de sesiones y rachas de constancia que reconocen tu labor diaria.\n\nAl terminar cada sesión, un balance de un minuto te permite indicar si tu entrega fue completada, parcial o no completada, reforzando la costumbre saludable de finalizar tareas. Puedes guardar a tus compañeros de diseño favoritos o compartir tu enlace de reserva para coordinar sprints conjuntos. Además, la plataforma es open source bajo licencia AGPL-3.0. Comenzar con 3 sesiones semanales gratuitas te permite desatascar tus archivos de Figma más pendientes, y el plan Plus te brinda coworking ilimitado."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} para lluvias de ideas y creación de paneles de inspiración?",
+          "a": "Sí. Puedes destinar tus sesiones a bocetos conceptuales, moodboards digitales, selección de tipografías, maquetación de esquemas o exportación de activos. Tan solo expón qué fase creativa vas a abordar durante el saludo para mantener tu compromiso con dicha tarea."
+        },
+        {
+          "q": "¿Tengo que mostrar mis lienzos de Figma o compartir pantalla con mi compañero?",
+          "a": "No. Jamás compartes pantalla ni muestras tus tableros de Figma. Solo tu cámara permanece activa con el micrófono apagado. Tus encargos de clientes, wireframes y conceptos inacabados se mantienen totalmente confidenciales en tu equipo en todo momento."
+        },
+        {
+          "q": "¿Pueden los equipos de diseño o agencias trabajar juntos en {app}?",
+          "a": "Sí. Los estudios de diseño pueden crear grupos privados para emparejarse en jornadas intensivas de trabajo en equipo. Asimismo, las próximas salas grupales permitirán a grupos de hasta 9 diseñadores coordinar sesiones de concentración para cumplir plazos compartidos."
+        },
+        {
+          "q": "¿Qué sucede si una tarea de diseño me lleva más tiempo del previsto?",
+          "a": "La exploración visual suele ser impredecible. Cuando suena el timbre final, marcas la tarea como parcial y señalas en qué punto quedó tu propuesta. Puedes agendar de inmediato otro bloque de 25 o 50 minutos para seguir puliendo tu diseño sin contratiempos."
+        },
+        {
+          "q": "¿De qué manera garantiza {app} un espacio seguro y profesional?",
+          "a": "Es requisito indispensable tener al menos 18 años para formar parte de la plataforma. El vídeo se transmite exclusivamente en tiempo real sin grabarse jamás. Puedes bloquear o denunciar a cualquier usuario con un clic si contraviene las normas, garantizando un ambiente respetuoso para toda la comunidad creativa."
+        }
+      ],
+      "cta": {
+        "heading": "Aporta foco y serenidad a tu próximo sprint de diseño",
+        "body": "Deja de quedarte atrapado en ajustes interminables de píxeles. Diseña con claridad y entrega a tiempo empezando hoy con tus 3 sesiones semanales gratuitas en {app}."
+      },
+      "keywords": [
+        "body doubling para diseñadores",
+        "coworking virtual diseño ui ux",
+        "concentracion diseno figma",
+        "productividad para diseñadores",
+        "compañero de enfoque creativo"
+      ]
+    },
+    {
+      "slug": "researchers",
+      "title": "Body Doubling para Investigadores | Foco en {app}",
+      "description": "Redacta solicitudes de becas, limpia datos y prepara artículos científicos con body doubling en {app}. Publica tus investigaciones a tiempo y con foco.",
+      "h1": "Body Doubling Silencioso para Investigadores Científicos y Académicos",
+      "intro": "Ya desarrolles tu labor en laboratorios biomédicos, centros de ciencia de datos o instituciones de investigación, la actividad científica exige una autodisciplina mental continua. Redactar solicitudes de financiación, preparar artículos para revistas con revisión por pares y depurar datos experimentales a menudo compite con tareas de comités y docencia. {app} te empareja por vídeo con otro investigador en sprints silenciosos de 25, 50 o 75 minutos, aportando el impulso metódico que necesitas para publicar tus estudios.",
+      "sections": [
+        {
+          "heading": "Afrontar convocatorias de financiación y proyectos de investigación decisivos",
+          "body": "Conseguir fondos para investigar exige lidiar con una burocracia administrativa extenuante. Preparar propuestas completas para organismos públicos o entidades privadas implica redactar justificaciones presupuestarias minuciosas, definir objetivos específicos, reunir cartas de apoyo institucional y comprobar normativas éticas. Al ser documentos determinantes para la carrera investigadora, suelen suscitar ansiedad y retrasos constantes.\n\n{app} te ayuda a segmentar solicitudes complejas en sprints diarios y abordables de redacción. Al reservar un bloque de 50 o 75 minutos en punto, asumes el compromiso firme de sentarte a escribir. Formular tu objetivo de sección ante tu compañero despeja las dudas iniciales. Con los micrófonos silenciados, trabajar junto a otro profesional ante la cámara te ayuda a redactar objetivos claros y persuasivos sin interrupciones de correo ni tareas secundarias."
+        },
+        {
+          "heading": "Redactar artículos científicos y responder a los revisores",
+          "body": "La publicación de trabajos en revistas indexadas demanda un esfuerzo sostenido mucho después de concluir la fase experimental. Revisar introducciones, detallar metodologías y, muy especialmente, contestar punto por punto a las objeciones de los revisores puede vivirse como un proceso árido y desgastante. Muchos investigadores postergan durante meses el reenvío de manuscritos debido al agotamiento emocional que supone atender las revisiones.\n\n{app} te proporciona un marco neutral y favorable para encarar correcciones complejas. Tu compañero no evalúa tu artículo ni juzga tus métodos; tan solo te ofrece una presencia tranquila que te mantiene en el escritorio. Abordar las observaciones de los evaluadores una a una durante un bloque de 50 minutos reduce la fricción emocional. Saber que comunicarás tu balance al final de la sesión te impulsa a corregir tus textos de manera metódica y enviar tus réplicas a tiempo."
+        },
+        {
+          "heading": "Preservar la concentración en la depuración minuciosa de datos",
+          "body": "La investigación contemporánea descansa en una labor minuciosa y con frecuencia repetitiva de tratamiento de datos. Filtrar valores atípicos en hojas de cálculo, configurar pipelines genómicos, catalogar muestras de campo y comprobar supuestos estadísticos puede requerir semanas enteras frente a la pantalla. Cuando el avance parece lento, es fácil distraerse consultando alertas bibliográficas, navegando por foros académicos o ejecutando análisis secundarios innecesarios.\n\nEl coworking en {app} aporta la constancia indispensable para las labores analíticas repetitivas. Al silenciarse el audio tras la breve bienvenida, mantienes la calma requerida para examinar código y bases de datos con atención. Si el cansancio asoma o un script arroja un fallo, mirar a tu compañero en silencio te recuerda tu compromiso de trabajo. Te mantienes en tu sitio, depuras el código y concluyes la preparación de tus datos sin dispersarte."
+        },
+        {
+          "heading": "Registrar el rendimiento científico y coordinar equipos de investigación",
+          "body": "La productividad científica es una carrera de fondo y no una sucesión de prisas de última hora. Mantener hábitos continuos de redacción y análisis evita el estrés derivado de entregas inminentes. {app} pone a tu disposición herramientas de seguimiento de horas, cómputo de sesiones y rachas que te permiten evaluar tu dedicación investigadora a lo largo de los meses y periodos académicos.\n\nInvestigadores principales y directores de laboratorio pueden fomentar el compromiso del equipo compartiendo enlaces de reserva o configurando grupos de trabajo específicos. Además, {app} es de código abierto bajo licencia AGPL-3.0 y admite autoalojamiento en servidores propios con total control sobre los datos. Puedes comenzar con 3 sesiones semanales gratis para afianzar tus rutinas de redacción o recurrir al plan Plus para disfrutar de sesiones ilimitadas en épocas de convocatorias intensivas."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Puedo usar {app} para la lectura exhaustiva de bibliografía científica?",
+          "a": "Sí. Con frecuencia se emplean las sesiones para revisar artículos de revistas especializadas, extraer notas metodológicas y sintetizar antecedentes teóricos para futuras publicaciones. Basta con concretar cuántos artículos, páginas de preprints o capítulos planeas revisar durante el saludo inicial."
+        },
+        {
+          "q": "¿Están protegidos mis datos de investigación y manuscritos no publicados?",
+          "a": "Sí. En ningún caso compartes tu monitor ni expones resultados confidenciales. Los micrófonos se apagan durante todo el bloque y las transmisiones de vídeo no se graban ni se guardan. Además, los centros de investigación pueden instalar esta plataforma de código abierto en sus propias redes locales seguras."
+        },
+        {
+          "q": "¿Pueden laboratorios o consorcios de investigación trabajar juntos en {app}?",
+          "a": "Sí. Es posible configurar grupos privados en {app} para que integrantes de un mismo laboratorio o colaboradores de distintas universidades compartan sesiones de body doubling. Asimismo, las próximas salas grupales permitirán a grupos de hasta 9 científicos trabajar de forma sincronizada en proyectos compartidos."
+        },
+        {
+          "q": "¿Qué sucede si un cálculo o modelización tarda más de lo previsto?",
+          "a": "El análisis científico raramente se ajusta a plazos cerrados. Si una modelización computacional se prolonga, simplemente marcas tu tarea como parcial en el balance de cierre y reservas otro bloque de 25 o 50 minutos para proseguir tu labor."
+        },
+        {
+          "q": "¿Cómo asegura {app} el cumplimiento de las normas de conducta?",
+          "a": "El registro en la plataforma exige ser mayor de 18 años. Si algún usuario incumple las normas de la comunidad o mantiene una actitud poco profesional, puedes reportarlo o bloquearlo al instante con un solo clic, asegurando un entorno idóneo para el trabajo científico riguroso."
+        }
+      ],
+      "cta": {
+        "heading": "Impulsa tu labor científica y tus publicaciones académicas",
+        "body": "Deja de aplazar la redacción de proyectos y la revisión de manuscritos. Únete a otros investigadores en {app} y comienza hoy tus 3 sesiones semanales de enfoque gratuitas."
+      },
+      "keywords": [
+        "body doubling para investigadores",
+        "coworking virtual investigacion cientifica",
+        "redaccion de articulos cientificos ayuda",
+        "productividad investigacion academica",
+        "concentracion escribir tesis y papers"
+      ]
+    }
+  ]
+}

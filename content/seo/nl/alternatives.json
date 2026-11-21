@@ -1,0 +1,237 @@
+{
+  "template": "alternatives",
+  "pages": [
+    {
+      "slug": "focusmate",
+      "title": "Focusmate-alternatief: Open-source body doubling | {app}",
+      "description": "Zoek je een Focusmate-alternatief? {app} biedt 1:1 virtueel coworken, open-source privacy, flexibele tijdsblokken en een gratis wekelijks abonnement.",
+      "h1": "Een open-source alternatief voor Focusmate voor 1:1-coworking",
+      "intro": "Als je vertrouwt op 1-op-1-accountability om te gaan zitten voor het nakijken van toetsen, programmeren of het wegwerken van je inbox, heeft Focusmate je waarschijnlijk de kracht van body doubling laten zien. {app} gebruikt diezelfde rustige samenwerking en bouwt deze opnieuw op met een open-source fundament. Je plant een sessie, ontmoet een accountabilitypartner voor de camera, benoemt je doel en werkt in stilte. Of je nu drie gratis sessies per week nodig hebt of een eigen instance wilt hosten voor je team: {app} biedt gestructureerde focus zonder vendor lock-in.",
+      "sections": [
+        {
+          "heading": "Hoe 1-op-1-sessies je op koers houden",
+          "body": "Het starten van een lastige taak is vaak het moeilijkste aspect van werken op afstand. Op {app} reserveer je een blok van 25, 50 of 75 minuten, beginnend op het hele of halve uur. Bij aanvang van de sessie zet je twee minuten je microfoon aan om met je partner te delen wat je wilt bereiken, zoals het schrijven van een subsidieaanvraag of het debuggen van een databasemigratie. Na het uitspreken van je doel zet je je microfoon weer uit, laat je je camera aan en werk je in stilte.\n\nIemand anders geconcentreerd zien werken in zijn eigen werkruimte zorgt voor een lichte sociale druk die voorkomt dat je doelloos gaat tab-switchen of op je telefoon scrollt. Aan het einde van het blok klinkt een signaal voor de afronding. Je vertelt elkaar of de taak af is, of je deels vooruitgang hebt geboekt of op een onverwacht obstakel stuitte. Videostreams worden nooit opgenomen, zodat je privacy gewaarborgd blijft, en met ingebouwde veiligheidsfuncties kun je iedereen direct rapporteren of blokkeren."
+        },
+        {
+          "heading": "{app} en Focusmate vergeleken in de praktijk",
+          "body": "Beide platforms maken gebruik van gestructureerde 1-op-1-videoafspraken om mensen te helpen uitstelgedrag te overwinnen via wederzijdse accountability. Focusmate zette de toon voor het koppelen van twee personen voor getimede werkblokken, met een gratis versie voor enkele sessies per week en een betaald abonnement voor frequente gebruikers. Op het moment van schrijven (november 2026) biedt {app} een alternatief gebaseerd op open principes, met drie gratis sessies per week en een uitgebreid Plus-abonnement met onbeperkte boekingen, favoriete partners en geavanceerde matchingfilters.\n\nBeide platforms bieden sessies van 25, 50 en 75 minuten. De grootste verschillen liggen in hoe de software is gebouwd en wie de touwtjes in handen heeft. {app} bevat daarnaast persoonlijke boekingslinks voor studiepartners, universiteits- of werkgroepen, en binnenkort een gehoste groepsoptie voor maximaal negen deelnemers. Bovenal is {app} uitgebracht onder de AGPL-3.0-licentie, waardoor organisaties en privacybewuste gebruikers de broncode kunnen controleren of een eigen instantie kunnen hosten."
+        },
+        {
+          "heading": "Open-source onafhankelijkheid en datasoevereiniteit",
+          "body": "Veel externe professionals en academische onderzoekers werken met bedrijfseigen broncode, vertrouwelijke studentendossiers of gevoelige patiëntgegevens die niet gedeeld mogen worden met gesloten systemen van derden. Omdat {app} is uitgebracht onder de AGPL-3.0-licentie, kan je engineeringteam elke regel netwerkcode controleren, encryptiestandaarden verifiëren en garanderen dat er geen ongeautoriseerde analytics meedraaien in de workflow van je team.\n\nOrganisaties kunnen een eigen private {app}-server self-hosten op hun interne infrastructuur. Hiermee kunnen bedrijfsafdelingen, onderzoekslabs en universitaire faculteiten besloten coworking-kringen opzetten waarin collega's uitsluitend worden gekoppeld aan geverifieerde teamleden binnen hetzelfde domein. Voor individuele gebruikers van de publieke dienst betekent open source transparantie op de lange termijn. De community bepaalt de ontwikkelprioriteiten, en je productiviteitsroutine wordt nooit verstoord door onverwachte betaalmuren voor data-export of gedwongen migraties."
+        },
+        {
+          "heading": "Het juiste coworking-platform kiezen voor jouw routine",
+          "body": "Focusmate blijft een solide keuze voor wie zoekt naar een gevestigde community met de klok rond veel actieve leden. Als je op onregelmatige tijden werkt, bijvoorbeeld om drie uur 's nachts in je lokale tijdzone, zorgt het grote gebruikersbestand van Focusmate ervoor dat je snel en betrouwbaar een partner vindt.\n\n{app} is geschikter voor individuen en teams die veel waarde hechten aan softwarevrijheid en focussessies willen organiseren binnen hun eigen community. Als je persoonlijke boekingslinks wilt om vertrouwde collega's uit te nodigen, of bedrijfsspecifieke focusgroepen wilt opzetten, biedt {app} de juiste tools. Het is ook de logische keuze voor gebruikers die geven om ethische software en de mogelijkheid willen hebben om de code zelf in te zien of te hosten. Beide diensten delen hetzelfde kernvoordeel: eenzame werkuren omzetten in gezamenlijke, productieve focus."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Hoe helpt body doubling bij ADHD en het starten van taken?",
+          "a": "Body doubling dient als praktische ondersteunende techniek – niet als medische behandeling – voor volwassenen met ADHD die moeite hebben met het zelfstandig opstarten van taken. De aanwezigheid van een rustige, zichtbare partner biedt een lichte externe structuur die weerstand en executieve functiestoornissen vermindert. Door je doelen hardop uit te spreken, verander je vage intenties in duidelijke, concrete afspraken."
+        },
+        {
+          "q": "Worden mijn camerabeelden ooit opgenomen of opgeslagen tijdens sessies?",
+          "a": "Nee, videostreams op {app} zijn peer-to-peer en worden nooit opgenomen of bewaard op een server. Je webcam moet aan blijven zodat je partner weet dat je aanwezig bent, maar na het inchecken blijft je microfoon gedempt. Je behoudt bovendien de volledige controle om met één klik een partner te rapporteren of te blokkeren."
+        },
+        {
+          "q": "Welke sessieduren ondersteunt {app} in vergelijking met Focusmate?",
+          "a": "Bij {app} kun je sessies boeken van 25, 50 en 75 minuten, startend op het hele of halve uur. Waar blokken van 25 en 50 minuten ideaal zijn voor e-mail of administratieve taken, is de optie van 75 minuten ontworpen voor deep work zoals softwareontwikkeling, academisch schrijven of langere studiesessies."
+        },
+        {
+          "q": "Kan ik {app} gratis gebruiken?",
+          "a": "Ja. Het gratis abonnement van {app} bevat drie sessies per week, wat ideaal is om het platform uit te proberen of om je moeilijkste wekelijkse projecten aan te pakken. Als je onbeperkte sessies, aangepaste partnerfilters en favorietenlijsten wilt, kun je upgraden naar het Plus-abonnement."
+        },
+        {
+          "q": "Hoe werken focusgroepen voor universiteiten en bedrijven?",
+          "a": "{app} stelt onderwijsinstellingen en externe bedrijven in staat om eigen focusgroepen aan te maken. Leden kunnen hun matchingpool beperken tot geverifieerde collega's, studenten of labgenoten. Zo blijven coworkingsessies binnen een vertrouwde community, met behoud van de structuur en accountability van publieke sessies."
+        }
+      ],
+      "cta": {
+        "heading": "Start je volgende werkblok op {app}",
+        "body": "Boek vandaag nog je eerste sessie met drie gratis afspraken per week, of draai je eigen private server met open-source software."
+      },
+      "keywords": [
+        "focusmate alternatief",
+        "open source body doubling",
+        "gratis virtueel coworken",
+        "adhd focus partner",
+        "1 op 1 coworking"
+      ]
+    },
+    {
+      "slug": "flow-club",
+      "title": "Flow Club-alternatief: Rustig 1:1 coworken | {app}",
+      "description": "Op zoek naar een Flow Club-alternatief? {app} biedt rustige 1:1 body doubling zonder host, met een gratis versie, open source en nul afleiding.",
+      "h1": "Een rustig en gefocust alternatief voor Flow Club",
+      "intro": "Als je groepsvideocalls overweldigend vindt of liever in alle rust samenwerkt in plaats van met een gespreksleider, sluit Flow Club wellicht niet aan bij jouw werkstijl. Flow Club maakt gebruik van betaalde groepen onder leiding van een host, inclusief achtergrondmuziek, om productiviteit te stimuleren. {app} kiest voor een kalmere aanpak die draait om directe 1-op-1-accountability. Je kiest een tijdstip, ontmoet één vaste partner, deelt je doel en werkt in stilte. Met wekelijks drie gratis sessies en een open-source codebase biedt {app} ongecompliceerde focus zonder sociale vermoeidheid.",
+      "sections": [
+        {
+          "heading": "Directe 1-op-1-focus versus groepsruimtes met een host",
+          "body": "Grote groepscalls vragen vaak om de nodige sociale energie. In een gefaciliteerde groepssessie luisteren deelnemers naar introducties van de host, volgen ze updates in de groepschat en luisteren ze naar gezamenlijke muziek. Hoewel sommigen floreren in zo'n groepssfeer, verliezen veel zelfstandige professionals juist hun momentum tijdens lange voorstelrondes.\n\n{app} neemt sociale prestatiedruk weg door je te koppelen aan één partner voor een sessie van 25, 50 of 75 minuten. De check-in duurt minder dan twee minuten: je spreekt je voorgenomen taak hardop uit, je partner doet hetzelfde en beide microfoons gaan op dempen. Er is geen host om rekening mee te houden, geen achtergrondmuziek die afleidt en geen zijdelingse chatdiscussie. Je focust je volledig op diepgaand werk, of je nu een juridisch advies schrijft, facturen ordent of frontend-code refactort."
+        },
+        {
+          "heading": "Een contrast in filosofie en structuur",
+          "body": "Flow Club bouwt haar dienst rond videokamers onder leiding van hosts, toegankelijk via een betaald abonnementsmodel. Hun sessies leggen de nadruk op sociale cohesie, de persoonlijkheid van de host en groepsdynamiek. {app} daarentegen is opgezet als een open, toegankelijke productiviteitstool met wekelijks drie gratis sessies en een optioneel Plus-lidmaatschap voor veelgebruikers die onbeperkte boekingen en filters wensen.\n\nIn plaats van een verplicht abonnement houdt {app} de drempel laag, zodat ook studenten, freelancers en werkzoekenden kunnen profiteren van een vaste structuur. Bovendien is {app} open source onder de AGPL-3.0-licentie. Iedereen kan zien hoe de matching-algoritmen werken of een eigen instantie opzetten op eigen hardware. Voor wie toch groepsdynamiek zoekt, introduceert {app} binnenkort besloten kamers voor maximaal negen personen, met behoud van rustige productiviteit zonder geforceerde gezelligheid."
+        },
+        {
+          "heading": "Minder prikkels voor neurodivergente professionals",
+          "body": "Veel mensen met ADHD of autisme ervaren body doubling als waardevol, omdat de aanwezigheid van iemand anders een extern anker vormt tegen afleiding. Body doubling is echter een ondersteunende methode en geen klinische behandeling, en te veel prikkels kunnen de effectiviteit verminderen. Begeleide groepscalls met wisselende sprekersweergaven, actieve chats en muzieklijsten kunnen al snel leiden tot cognitieve overprikkeling.\n\n{app} brengt zintuiglijke prikkels terug tot het absolute minimum. Video is verplicht om echte accountability te waarborgen, maar microfoons blijven tijdens het werkblok gedempt. Zo kun je naar je eigen favoriete achtergrondgeluiden luisteren of in totale stilte werken. Je werkt met één partner tegelijk, wat sociale spanning verlaagt. Mocht een match ooit niet prettig zijn, dan kun je diegene met één klik blokkeren of rapporteren, waardoor je werkomgeving voorspelbaar en veilig blijft."
+        },
+        {
+          "heading": "Bepalen welke coworking-omgeving bij jou past",
+          "body": "De keuze tussen deze platforms hangt af van de vraag of je tijdens je werkdag behoefte hebt aan sociale interactie of aan ongestoorde concentratie. Flow Club is een aantrekkelijke optie als je gedijt bij enthousiaste groepsmotivatie, samengestelde afspeellijsten waardeert en van gezelligheid houdt tijdens pauzes. Als een host je helpt om je gesteund te voelen, sluit hun abonnementsmodel daar goed bij aan.\n\n{app} is ontworpen voor wie de voorkeur geeft aan rustige efficiëntie en directe verantwoordelijkheid. Wil je inloggen, je doel delen met één accountabilitypartner en meteen aan de slag zonder te wachten op groepsintroducties, dan past {app} beter bij jouw planning. Het platform is bovendien ideaal voor prijsbewuste freelancers die een degelijke gratis optie zoeken, en voor teams en universiteiten die eigen focusgroepen willen self-hosten binnen hun eigen besloten kring."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Waarom kiest {app} voor 1-op-1-sessies in plaats van grote groepen?",
+          "a": "1-op-1-sessies nemen sociale prestatiedrang en wachttijden weg. Door met één partner te werken, leg je binnen twee minuten persoonlijke accountability vast zonder naar voorstelrondes van tientallen mensen te hoeven luisteren. Dit creëert een rustige, gefocuste omgeving waarin beide personen verantwoordelijkheid nemen voor hun doelen."
+        },
+        {
+          "q": "Speelt {app} achtergrondmuziek af tijdens sessies?",
+          "a": "Nee, {app} zendt geen muziek of audio uit tijdens de werkblokken. Microfoons zijn gedempt, zodat iedere deelnemer zijn eigen geluidsomgeving bepaalt. Je kunt luisteren naar je eigen focusmuziek, ruisonderdrukking of witte ruis gebruiken, of in stilte werken zonder rekening te hoeven houden met anderen."
+        },
+        {
+          "q": "Kan ik deelnemen aan sessies zonder betaald abonnement?",
+          "a": "Ja. {app} biedt een gratis account met drie sessies per week zonder dat je betaalgegevens hoeft in te vullen. Als je dagelijks meerdere sessies wilt doen, kun je upgraden naar het Plus-abonnement voor onbeperkte boekingen, favorietenlijsten en geavanceerde filters."
+        },
+        {
+          "q": "Hoe gaat {app} om met toekomstige groepssessies?",
+          "a": "Hoewel {app} draait om koppels, zijn kleine groepssessies voor maximaal negen personen binnenkort beschikbaar. Deze sessies behouden de focus op minimale afleiding, met de nadruk op rustige productiviteit en korte check-ins in plaats van uitgebreide presentaties of entertainment."
+        },
+        {
+          "q": "Is {app} geschikt voor besloten bedrijfsteams?",
+          "a": "Ja. Omdat {app} open source is onder de AGPL-3.0-licentie, kunnen bedrijven een interne server hosten waarop medewerkers uitsluitend aan directe collega's worden gekoppeld. Organisaties kunnen ook besloten groepen aanmaken op het gehoste platform om afdelingsoverschrijdende focus te stimuleren."
+        }
+      ],
+      "cta": {
+        "heading": "Ervaar afleidingsvrij coworken op {app}",
+        "body": "Neem vandaag nog deel aan een rustige 1:1-sessie met drie gratis afspraken per week, of verbind je team via open-source self-hosting."
+      },
+      "keywords": [
+        "flow club alternatief",
+        "body doubling zonder host",
+        "rustig virtueel coworken",
+        "gratis coworking sessies",
+        "1 op 1 body doubling"
+      ]
+    },
+    {
+      "slug": "caveday",
+      "title": "Caveday-alternatief: Flexibel 1:1 coworken | {app}",
+      "description": "Zoek je een Caveday-alternatief? {app} biedt flexibele 1:1 body doubling van 25, 50 of 75 minuten, zonder verplichte opwarming en volledig open source.",
+      "h1": "Een flexibel en laagdrempelig alternatief voor Caveday",
+      "intro": "Caveday maakte het concept van begeleide focusblokken, genaamd 'caves', populair door deelnemers samen te brengen voor sprints met gezamenlijke warming-ups en mindfulness-momenten. Waar begeleide sessies voor sommigen inspirerend werken, hebben anderen juist behoefte aan snelle, flexibele blokken die passen in een drukke agenda. {app} biedt directe 1-op-1 body doubling zonder facilitators, ijsbrekers of lange verplichtingen. Je stapt direct in sessies van 25, 50 of 75 minuten, deelt je prioriteiten met je partner en boekt gestaag vooruitgang op jouw eigen voorwaarden.",
+      "sections": [
+        {
+          "heading": "Focussessies inpassen in een drukke dagelijkse routine",
+          "body": "Deelnemen aan een geplande workshop van meerdere uren betekent dat je een groot deel van je middag moet vrijmaken. Dat is lastig voor consultants, professionals met veel klantcontact en studenten die colleges combineren met labwerk. Het missen van de start van zo'n workshop kan een hele middag aan geplande focus in de war schoppen.\n\n{app} is ontworpen om naadloos aan te sluiten op normale werkdagen. Sessies starten 24 uur per dag, elke dertig minuten op het hele en halve uur. Je kunt een korte sprint van 25 minuten plannen tussen afspraken door om dringende facturen weg te werken, of een blok van 50 minuten reserveren voor het schrijven van een onderzoeksverslag. Voor intensief schrijf- of programmeerwerk bieden sessies van 75 minuten een langere periode van ononderbroken focus. Omdat sessies zelfstandig verlopen tussen jou en je partner, verlies je nooit een kwartier aan begroetingen of gezamenlijke stretchoefeningen."
+        },
+        {
+          "heading": "Begeleide caves versus accountability met gelijken",
+          "body": "Caveday bouwt haar dienst rond getrainde gidsen die groepsfocussprints, de zogeheten 'caves', leiden. Deze sessies bevatten vaste routines, ademhalingsoefeningen en reflectiemomenten in de chat. Deze opzet spreekt mensen aan die houden van gerichte begeleiding en een workshopachtige sfeer. Deelname vereist echter de aankoop van credits of een betaald lidmaatschap.\n\n{app} benadert productiviteit vanuit een gedecentraliseerd peer-to-peer perspectief. In plaats van te vertrouwen op een trainer werk je direct samen met een andere professional. De accountability ontstaat door elkaars aanwezigheid en het uitspreken van je doelen, niet door externe begeleiding. {app} biedt een gratis abonnement met drie wekelijkse sessies, plus een optionele Plus-versie voor onbeperkte boekingen en gepersonaliseerde filters. Bovendien is {app} volledig open source onder de AGPL-3.0-licentie, zodat teams hun eigen infrastructuur kunnen beheren in plaats van afhankelijk te zijn van een commerciële partij."
+        },
+        {
+          "heading": "Praktische steun bij executieve disfunctie",
+          "body": "Uitstelgedrag ontstaat vaak door emotionele weerstand tegen complexe of ongestructureerde taken, zoals belastingaangiftes of het opzetten van een scriptiehoofdstuk. Veel mensen met ADHD ervaren body doubling als een doeltreffende ondersteuningstechniek, al moet het worden gezien als een praktisch hulpmiddel en niet als medische behandeling. De zichtbare aanwezigheid van een geconcentreerde partner vormt een anker dat de aandacht vasthoudt.\n\nBij begeleide groepscalls kan de sociale belasting van ijsbrekers of groepsactiviteiten onbedoeld prestatiedruk veroorzaken. {app} neemt die drempel weg door interacties kort en to the point te houden. Je begroet je partner, formuleert kort je doel en werkt rustig met je camera aan. Wanneer het eindsignaal klinkt, meld je of het werk af is, deels af is of dat je vastliep, waarmee je de sessie zonder oordeel afsluit."
+        },
+        {
+          "heading": "Wanneer kies je voor Caveday en wanneer voor {app}?",
+          "body": "Caveday is een uitstekende optie voor wie op zoek is naar een intensieve, begeleide workshopervaring. Als je het fijn vindt dat een enthousiaste facilitator je planning bewaakt, mindfulnessoefeningen leidt en het groepstempo stuurt tijdens meerurige sessies, biedt Caveday een persoonlijke begeleiding die aanvoelt als een interactieve workshop.\n\n{app} is geschikter als je op zoek bent naar gestroomlijnde, zelfstandige accountability die gemakkelijk tussen afspraken door past. Geef je de voorkeur aan een rustige 1-op-1-samenwerking boven groepsactiviteiten, dan laat {app} je direct aan het werk gaan zonder vaste rituelen. Het is ook het ideale platform als je waarde hecht aan open-source software, het platform gratis wilt gebruiken voor incidentele behoeften, of besloten focuskringen wilt opzetten voor je bedrijf of universiteit."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Biedt {app} geleide meditaties of gezamenlijke warming-ups?",
+          "a": "Nee, {app} bevat geen geleide meditaties, ademhalingsoefeningen of introducties door een host. Sessies zijn strikt peer-to-peer. Jij en je accountabilitypartner delen twee minuten kort je doelen en werken vervolgens in stilte. Deze opzet geeft voorrang aan een directe start met je werk zonder sociale rituelen."
+        },
+        {
+          "q": "Kan ik opeenvolgende sessies boeken op {app}?",
+          "a": "Ja, je kunt opeenvolgende sessies plannen om je eigen langere werkblok samen te stellen. Je kunt bijvoorbeeld twee sessies van 50 minuten boeken met tien minuten pauze ertussen, of een diepe sprint van 75 minuten combineren met een korter blok van 25 minuten voor administratie."
+        },
+        {
+          "q": "Zijn sessies op {app} gebonden aan vaste tijdstippen op de dag?",
+          "a": "Nee, {app} is 24 uur per dag actief in alle tijdzones. Sessies beginnen elk heel en half uur, dag en nacht. Of je nu vroeg in de ochtend werkt, tijdens kantooruren of 's avonds laat: je vindt altijd een tijdslot dat past bij jouw routine."
+        },
+        {
+          "q": "Hoe waarborgt {app} accountability zonder hosts?",
+          "a": "Accountability steunt op wederzijdse zichtbaarheid en expliciete toezeggingen. Het inschakelen van je webcam bij een echte partner zorgt voor natuurlijke focus, terwijl de afronding aan het einde (afgerond, deels af of niet gelukt) voor houvast zorgt. Je kunt ook favoriete partners opslaan om vaker samen te werken."
+        },
+        {
+          "q": "Is het self-hosten van {app} ingewikkeld voor kleine teams?",
+          "a": "Het installeren van {app} op eigen servers is eenvoudig dankzij de AGPL-3.0-licentie. Teams met basiskennis van systeembeheer kunnen zelf een instantie draaien, waardoor interne communicatie, planningen en ledengidsen volledig onder het beheer van de eigen organisatie blijven."
+        }
+      ],
+      "cta": {
+        "heading": "Bouw een duurzame focusroutine op met {app}",
+        "body": "Reserveer vandaag nog een body doubling-blok van 25, 50 of 75 minuten met drie gratis sessies per week, of zet je eigen gehoste werkomgeving op."
+      },
+      "keywords": [
+        "caveday alternatief",
+        "virtueel coworken zonder host",
+        "flexibele body doubling",
+        "focusblokken op aanvraag",
+        "open source coworking platform"
+      ]
+    },
+    {
+      "slug": "flown",
+      "title": "Flown-alternatief: Eenvoudig 1:1-coworken | {app}",
+      "description": "Op zoek naar een Flown-alternatief? {app} biedt afleidingsvrij 1:1 virtueel coworken, een open-source codebase en drie gratis sessies per week.",
+      "h1": "Een gestroomlijnd, open-source alternatief voor Flown",
+      "intro": "Flown benadert productiviteit als een alles-in-één ecosysteem met begeleide groepssessies genaamd 'flocks', achtergrondgeluiden en lifestyle-artikelen. Veel kenniswerkers merken echter dat zulke uitgebreide platforms voor extra digitale afleiding zorgen. {app} biedt een overzichtelijk, doelgericht alternatief dat volledig draait om 1-op-1-video-accountability. Zonder contentbibliotheken en ingewikkelde rituelen helpt {app} je om te verschijnen, je doelen te stellen en aan de slag te gaan samen met een ondersteunende partner.",
+      "sections": [
+        {
+          "heading": "Focus op actie in plaats van productiviteitscontent",
+          "body": "Bij uitdagende projecten zoals data-analyse of het herzien van manuscripten verval je snel in productief uitstelgedrag, zoals het lezen van artikelen, sleutelen aan dashboards of het uitproberen van soundscapes. Platforms met grote bibliotheken aan content nodigen vaak onbewust uit tot rondkijken in plaats van werken.\n\n{app} laat overbodige functies weg en richt zich puur op uitvoering. De interface is bewust minimalistisch: je bekijkt je agenda, kiest een tijdslot en betreedt een rustige videoruimte met een accountabilitypartner. Er zijn geen fora om bij te houden, geen meditaties om in te stellen en geen webinars om bij te wonen. Je neemt je eigen werk en tools mee. Door de interface volledig clean te houden, zorgt {app} ervoor dat inloggen direct leidt tot diepe concentratie in plaats van passieve consumptie."
+        },
+        {
+          "heading": "Begeleide flocks versus 1-op-1-partnerschappen",
+          "body": "Flown organiseert haar dienst rond geplande groepssessies, zogeheten 'flocks', geleid door facilitators die thema's introduceren en het groepstempo bewaken. Daarnaast bieden ze aanvullende tools zoals timers en soundscapes binnen hun lidmaatschap. Dit model past bij gebruikers die houden van een begeleide, clubhuisachtige community-sfeer.\n\n{app} wijkt hiervan af door de nadruk te leggen op een rustige samenwerking tussen gelijken in plaats van groepsbegeleiding. In plaats van een call met tientallen deelnemers ontmoet je één partner voor een sessie van 25, 50 of 75 minuten. {app} biedt een gratis account met drie wekelijkse sessies, evenals een Plus-abonnement voor onbeperkte boekingen, favorietenlijsten en matchingfilters. Omdat {app} is gelicenseerd onder de AGPL-3.0, is het volledig open source. Gebruikers en organisaties kunnen de code controleren of een private server hosten zonder afhankelijk te zijn van commerciële abonnementsdiensten."
+        },
+        {
+          "heading": "Laagdrempelige body doubling voor individueel werk",
+          "body": "Thuiswerken kan isolerend aanvoelen en open deadlines verlammen vaak de motivatie. Veel mensen met ADHD zien body doubling als een effectieve ondersteuningstechniek die de kloof overbrugt tussen plannen en daadwerkelijk uitvoeren, al dient het als praktisch hulpmiddel en niet als medische behandeling. Alleen al weten dat er iemand naast je werkt, verkleint de verleiding om afleiding te zoeken.\n\nIn grote groepscalls verdwijnen deelnemers snel naar de achtergrond met uitgeschakelde camera's, wat de accountability verzwakt. Op {app} zijn camera's verplicht, terwijl microfoons de hele sessie gedempt blijven. Doordat je 1-op-1 samenwerkt, ontstaat er een oprechte toewijding. Je checkt aan het begin kort in, blijft gefocust op je taak en evalueert je voortgang aan het eind (voltooid, deels voltooid of niet gelukt), wat zorgt voor een eerlijke basis voor dagelijkse vooruitgang."
+        },
+        {
+          "heading": "De beste match voor jouw workflow kiezen",
+          "body": "Flown is een uitstekende optie voor professionals die houden van een compleet lifestyle- en focusplatform. Als je geniet van begeleide groepssessies, on-demand soundscapes en mindfulnesstools zoekt, en de sfeer van een virtueel clubhuis prettig vindt, biedt hun pakket een complete beleving.\n\n{app} is gemaakt voor wie een ongecompliceerde, gerichte body doubling-tool zoekt zonder extra ballast. Zoek je directe 1-op-1-afspraken, flexibele sessies van 25, 50 of 75 minuten en het bijhouden van streaks om je werkelijke focusuren te meten, dan biedt {app} precies wat je nodig hebt. Het is ook ideaal voor voorstanders van open source, organisaties die een eigen coworking-omgeving willen self-hosten, en iedereen die met een betrouwbaar gratis account zijn zwaarste wekelijkse projecten wil voltooien."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Waarin verschilt {app} van de groepssessies (flocks) van Flown?",
+          "a": "Waar Flown gebruikmaakt van begeleide groepssessies met groepscheck-ins en thema's, koppelt {app} je rechtstreeks aan één partner voor rustig, onbegeleid werk. Je spreekt aan het begin je doel uit, werkt in stilte op camera en deelt aan het einde je voortgang, zonder onderbrekingen door een host of groepsdiscussies."
+        },
+        {
+          "q": "Heeft {app} ingebouwde achtergrondmuziek of ruisgeneratoren?",
+          "a": "Nee, {app} bevat geen audiospelers of achtergrondgeluiden. Doordat microfoons tijdens het werkblok gedempt zijn, kun je zelf je favoriete muziekapps of witte ruis aanzetten, of in stilte werken. Zo blijft het platform lichtgewicht en vrij van onnodige interface-afleidingen."
+        },
+        {
+          "q": "Kan ik kiezen met wie ik samenwerk op {app}?",
+          "a": "Bij het gratis abonnement word je automatisch gekoppeld aan beschikbare communityleden. Met het Plus-abonnement kun je favoriete partners opslaan, geavanceerde filters gebruiken en een persoonlijke boekingslink delen zodat collega's of studievrienden direct samen met jou kunnen reserveren."
+        },
+        {
+          "q": "Hoe worden mijn focusuren en streaks bijgehouden?",
+          "a": "{app} registreert voltooide sessies automatisch, telt je totale focusuren op en houdt je dagelijkse streaks bij. Deze statistieken geven inzicht in je consistentie over weken en maanden, en bieden tastbare motivatie voor langdurige studie- of werkprojecten zonder handmatige urenregistratie."
+        },
+        {
+          "q": "Waarom is {app} uitgebracht als open-source software?",
+          "a": "Het uitbrengen van {app} onder de AGPL-3.0-licentie waarborgt transparantie, privacy en duurzaamheid voor de community. Iedereen kan controleren hoe gebruikersdata wordt verwerkt, nieuwe functies aandragen of een eigen server draaien. Zo blijft het platform een publiek toegankelijke voorziening in plaats van een gesloten commercieel ecosysteem."
+        }
+      ],
+      "cta": {
+        "heading": "Kies voor gerichte productiviteit op {app}",
+        "body": "Boek vandaag je eerste 1:1 body doubling-sessie met drie gratis sessies per week, of host je eigen private server."
+      },
+      "keywords": [
+        "flown alternatief",
+        "minimalistische body doubling",
+        "open source virtueel coworken",
+        "gratis 1 op 1 focussessies",
+        "peer accountability platform"
+      ]
+    }
+  ]
+}

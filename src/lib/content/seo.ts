@@ -4,7 +4,20 @@ import body from "@/content/seo/body-doubling-for.json";
 import study from "@/content/seo/study-with-me.json";
 import coworking from "@/content/seo/virtual-coworking-for.json";
 import alternatives from "@/content/seo/alternatives.json";
+import deBody from "@/content/seo/de/body-doubling-for.json";
+import deCoworking from "@/content/seo/de/virtual-coworking-for.json";
+import deAlternatives from "@/content/seo/de/alternatives.json";
+import frBody from "@/content/seo/fr/body-doubling-for.json";
+import frCoworking from "@/content/seo/fr/virtual-coworking-for.json";
+import frAlternatives from "@/content/seo/fr/alternatives.json";
+import nlBody from "@/content/seo/nl/body-doubling-for.json";
+import nlCoworking from "@/content/seo/nl/virtual-coworking-for.json";
+import nlAlternatives from "@/content/seo/nl/alternatives.json";
+import esBody from "@/content/seo/es/body-doubling-for.json";
+import esCoworking from "@/content/seo/es/virtual-coworking-for.json";
+import esAlternatives from "@/content/seo/es/alternatives.json";
 import { getAppConfig } from "@/src/config/app";
+import { routing } from "@/src/i18n/routing";
 export const templates = [
   "body-doubling-for",
   "study-with-me",
@@ -24,12 +37,42 @@ export type SeoPage = {
   cta: { heading: string; body: string };
   keywords: string[];
 };
-const sources: Record<SeoTemplate, { template: string; pages: SeoPage[] }> = {
-  "body-doubling-for": body,
-  "study-with-me": study,
-  "virtual-coworking-for": coworking,
-  alternatives,
+type Source = { template: string; pages: SeoPage[] };
+// US exam pages (study-with-me) are English only.
+const sources: Record<string, Partial<Record<SeoTemplate, Source>>> = {
+  en: {
+    "body-doubling-for": body,
+    "study-with-me": study,
+    "virtual-coworking-for": coworking,
+    alternatives,
+  },
+  de: {
+    "body-doubling-for": deBody,
+    "virtual-coworking-for": deCoworking,
+    alternatives: deAlternatives,
+  },
+  fr: {
+    "body-doubling-for": frBody,
+    "virtual-coworking-for": frCoworking,
+    alternatives: frAlternatives,
+  },
+  nl: {
+    "body-doubling-for": nlBody,
+    "virtual-coworking-for": nlCoworking,
+    alternatives: nlAlternatives,
+  },
+  es: {
+    "body-doubling-for": esBody,
+    "virtual-coworking-for": esCoworking,
+    alternatives: esAlternatives,
+  },
 };
+
+/** Locales that have a given template, for hreflang and sitemaps. */
+export function localesFor(template: SeoTemplate) {
+  return routing.locales.filter((l) => sources[l]?.[template]);
+}
+
 // Walk values rather than serialized JSON so app names containing quotes stay valid.
 export function replaceApp<T>(value: T, name: string): T {
   if (typeof value === "string") return value.replaceAll("{app}", name) as T;
@@ -42,15 +85,16 @@ export function replaceApp<T>(value: T, name: string): T {
   }
   return value;
 }
-export function listSeoPages(template?: SeoTemplate) {
+export function listSeoPages(template?: SeoTemplate, locale = "en") {
   const name = getAppConfig().name;
+  const bundle = sources[locale] ?? {};
   return (template ? [template] : templates).flatMap((key) =>
-    sources[key].pages.map((page) => ({
+    (bundle[key]?.pages ?? []).map((page) => ({
       ...replaceApp(page, name),
       template: key,
     })),
   );
 }
-export function getSeoPage(template: SeoTemplate, slug: string) {
-  return listSeoPages(template).find((page) => page.slug === slug);
+export function getSeoPage(template: SeoTemplate, slug: string, locale = "en") {
+  return listSeoPages(template, locale).find((page) => page.slug === slug);
 }

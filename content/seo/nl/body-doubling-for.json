@@ -1,0 +1,585 @@
+{
+  "template": "body-doubling-for",
+  "pages": [
+    {
+      "slug": "adhd",
+      "title": "Body doubling bij ADHD | Virtueel coworken met {app}",
+      "description": "Vind focus en doorbreek taakverlamming met milde body doubling op {app}. Rustige video-coworkingsessies houden je geaard. Start met 3 gratis sessies.",
+      "h1": "Milde body doubling voor het ADHD-brein",
+      "intro": "Beginnen aan een alledaagse of vage taak is vaak het moeilijkste onderdeel van leven met ADHD. Of je nu te maken hebt met een achterstallig rapport, een uitpuilende wasmand of een intimiderende spreadsheet: {app} koppelt je via video aan een accountabilitypartner voor 25, 50 of 75 minuten. Je spreekt één realistische prioriteit uit, zet je microfoon op dempen en werkt zij aan zij. Het is een praktische ondersteunende techniek, geen medische behandeling, ontwikkeld om executieve disfunctie te verminderen.",
+      "sections": [
+        {
+          "heading": "Doorbreek taakverlamming en executieve disfunctie",
+          "body": "Taakinitiatie kan voelen als duwen door dik beton wanneer je brein moeite heeft om dopamine aan te maken. Zodra je alleen gaat zitten, verandert een simpele taak zoals het sorteren van belastingbonnetjes of het beantwoorden van een e-mail van school al snel in drie uur doelloos browsen en schuldgevoel. Het feit dat er iemand anders rustig op beeld meewerkt, verandert de zintuiglijke dynamiek in je kamer.\n\nOp {app} plan je een sessie die precies op het hele of halve uur begint. Het eenvoudige gebaar van aanwezig zijn voor een ander vormt een direct extern anker. In plaats van te piekeren over waar te beginnen, verklein je je focus tot wat je realistisch kunt afronden in een blok van 25 of 50 minuten. Je spreekt je intentie hardop uit, zet je timer aan en laat je zonder oordeel meevoeren door het rustige gezelschap."
+        },
+        {
+          "heading": "Laagdrempelige sessies voor snel afgeleide dagen",
+          "body": "Traditionele vergaderingen vragen continu om verbale energie, wat een toch al vermoeid executief systeem verder uitput. {app} kiest voor de tegenovergestelde aanpak door sociale verplichtingen minimaal te houden. Na een korte begroeting blijft de microfoon gedempt, waardoor je geen praatjes hoeft te maken of sociaal wenselijk gedrag hoeft te vertonen. De camera blijft aan, wat net genoeg visuele verantwoording biedt om te blijven zitten in plaats van tussendoor de keuken te gaan poetsen.\n\nAls je merkt dat je aandacht halverwege afdwaalt, herinnert een snelle blik op je scherm je eraan dat je partner nog steeds geconcentreerd bezig is. Die visuele prikkel brengt je dwalende gedachten direct terug naar je notitieboek of document. Omdat videobeelden nooit worden opgenomen, kun je comfortabel werken zonder zorgen over privacy. Komt er iets dringends tussendoor, dan laat je dat even weten in de chat en sluit je weer aan zodra je zover bent."
+        },
+        {
+          "heading": "Echte vooruitgang vieren zonder schaamte of perfectionisme",
+          "body": "Veel mensen met ADHD dragen een aanhoudend schuldgevoel met zich mee door gemiste deadlines en achtergelaten to-do-lijstjes. {app} benadert de evaluatiemomenten met pragmatisch realisme in plaats van rigide perfectionisme. Zodra het eindsymbool klinkt, kom je weer samen met je partner voor een korte debriefing van zestig seconden waarin je aangeeft of je taak voltooid, deels af of niet af is. Een taak als deels af markeren wordt gezien als eerlijke, echte vooruitgang en niet als falen.\n\nHet opdelen van grote verantwoordelijkheden in opeenvolgende blokken van 25 of 50 minuten maakt tijd tastbaarder. Over meerdere weken kun je je opgebouwde focusuren bijhouden en vriendelijke streaks opbouwen die oprechte toewijding weerspiegelen. Als je een coworkingpartner treft wiens kalme tempo goed bij jou past, kun je diegene opslaan als favoriet om vaker samen sessies te plannen. Je kunt ook je persoonlijke boekingslink delen met vrienden of collega's."
+        },
+        {
+          "heading": "Een rustgevende routine voor werk, studie en dagelijks leven",
+          "body": "Body doubling op {app} is veelzijdig genoeg om elke taak aan te pakken die je hebt uitgesteld. Leden loggen regelmatig in om de was op te vouwen, post weg te werken, maandelijkse budgetten door te nemen, te studeren voor examens of lastige e-mails naar klanten te schrijven. Je kiest eenvoudig de sessieduur die past bij je actuele mentale energie: een snelle sprint van 25 minuten voor een vervelend klusje of een blok van 75 minuten voor diep leeswerk.\n\nOmdat het platform open source is onder de AGPL-3.0-licentie, vormen gemeenschapsvertrouwen en transparantie het fundament. Je kunt starten met het gratis abonnement van 3 sessies per week om te ervaren hoe stille virtuele aanwezigheid in je dagelijkse routine past. Heb je dagelijkse structuur nodig voor meerdere projecten, dan biedt het Plus-abonnement onbeperkte sessies en geavanceerde matchingsfilters om duurzame werkgewoonten op te bouwen."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is body doubling een erkende medische behandeling voor ADHD?",
+          "a": "Nee. Body doubling is een gedragsmatige ondersteuningstechniek en copingstrategie, geen medische behandeling of therapie. Het biedt een extern sociaal anker om mensen met ADHD te helpen bij het starten van taken en het omgaan met tijdsblindheid. Blijf altijd samenwerken met bevoegde zorgverleners voor diagnostiek, medicatiebegeleiding en medische zorg."
+        },
+        {
+          "q": "Wat als ik afgeleid raak of mijn taak niet afkrijg tijdens de sessie?",
+          "a": "Dat is volkomen normaal en gebeurt heel vaak. Aan het einde van elke sessie kun je je taak als deels af of niet af markeren. De afrondende check-in is bedoeld om eerlijkheid zonder oordeel te stimuleren. Je erkent simpelweg wat er is gebeurd en beslist of je nog een blok boekt om verder te gaan."
+        },
+        {
+          "q": "Moet ik praten met mijn partner terwijl we aan het werk zijn?",
+          "a": "Nee. Je praat alleen een paar seconden bij de start om je doel te delen, en een paar seconden aan het einde om je voortgang te bespreken. Tijdens het werken blijft je microfoon gedempt terwijl je camera aan blijft, zodat jullie beiden in rustige stilte kunnen werken."
+        },
+        {
+          "q": "Kan ik {app} ook gebruiken voor fysieke klusjes zoals schoonmaken of koken?",
+          "a": "Ja. Veel mensen zetten hun telefoon of laptop op het aanrecht om aan body doubling te doen tijdens het was opvouwen, afwassen, inpakken van dozen of ordenen van kasten. Zolang je zichtbaar blijft op beeld, kun je fysieke huishoudelijke taken net zo eenvoudig aanpakken als bureauwerk."
+        },
+        {
+          "q": "Hoe waarborgt {app} mijn privacy en veiligheid?",
+          "a": "Videoverbindingen zijn live en worden nooit opgenomen. Alle gebruikers moeten minimaal 18 jaar oud zijn. Mocht iemand je een ongemakkelijk gevoel geven of de communityregels schenden, dan kun je diegene direct met één klik rapporteren of blokkeren. Onze opensource-codebasis staat garant voor betrouwbare en transparante software."
+        }
+      ],
+      "cta": {
+        "heading": "Bouw een rustige routine met zachte ADHD-body doubling",
+        "body": "Laat taakverlamming achter je en vind je ritme aan de zijde van een begripvolle coworkingpartner. Maak vandaag je gratis account aan en start met je eerste 3 wekelijkse focussessies op {app}."
+      },
+      "keywords": [
+        "body doubling adhd",
+        "adhd focus partner",
+        "virtueel coworken adhd",
+        "online body double adhd",
+        "hulp bij taakverlamming adhd"
+      ]
+    },
+    {
+      "slug": "writers",
+      "title": "Body doubling voor schrijvers | Virtueel coworken met {app}",
+      "description": "Overwin de angst voor het witte blad en haal je woorddoelen met stille video-body doubling op {app}. Start vandaag met gerichte schrijfsprints.",
+      "h1": "Stille body doubling voor auteurs en schrijvers",
+      "intro": "Schrijven is solitair werk, maar alleen voor een leeg veld zitten leidt maar al te vaak tot eindeloze research-doolhoven en vroegtijdig redigeren. Of je nu werkt aan een fantasyroman, een essay herziet, een synopsis verfijnt of poëzie schrijft: {app} koppelt je aan een gefocuste partner voor een stille sprint van 25, 50 of 75 minuten. Je doel hardop uitspreken biedt precies de milde structuur die nodig is om je vingers over het toetsenbord te laten bewegen.",
+      "sections": [
+        {
+          "heading": "De innerlijke criticus het zwijgen opleggen tijdens de eerste versie",
+          "body": "De beginfase van elk schrijfproject is berucht kwetsbaar. Wanneer je helemaal alleen werkt, verwijder je gemakkelijk zes keer dezelfde alinea, blijf je eindeloos schaven aan zinsritmes of verlies je jezelf een uur lang online in irrelevante historische details. Die gewoonte remt je momentum af en maakt van het schrijven een uitputtende strijd.\n\nEen sessie boeken op {app} verandert de psychologie achter je bureau. Zodra het uur begint, vertel je je partner wat je wilt opleveren, zoals het voltooien van scène twee of het schrijven van 500 ruwe woorden zonder te redigeren. Zodra de microfoons zijn gedempt, fungeert de aanwezigheid van een meewerkende partner als een beschermende cocon rond je sessie. In plaats van te stoppen bij elke onvolmaakte zin, geef je jezelf toestemming om ruw materiaal te produceren, omdat je tijd voor de camera puur bedoeld is om vooruit te komen."
+        },
+        {
+          "heading": "Diepe schrijfsprints inpassen in je dagelijkse schema",
+          "body": "Grote, ononderbroken blokken vrije tijd zijn zeldzaam voor de meeste auteurs, freelance copywriters en journalisten. Tussen gezinsverplichtingen en een baan door wordt creatief werk vaak verschoven naar de vroege ochtend of late avond, wanneer de wilskracht opraakt. Vaste tijdsloten veranderen ongrijpbare creatieve plannen in betrouwbare afspraken in je agenda.\n\nSessies op {app} beginnen stipt op het hele en halve uur, waardoor je schrijfsprints gemakkelijk kunt inpassen rond je bestaande verplichtingen. Een sprint van 25 minuten leent zich perfect voor het schetsen van een artikel of het nalezen van een manuscriptpagina, terwijl een blok van 50 of 75 minuten je de ruimte geeft om te zinken in complexe dialogen of hoofdstukherzieningen. Weten dat er iemand via video op je wacht, voorkomt snoozen of te lang natafelen. Je gaat gewoon zitten, opent je manuscript en boekt echte vooruitgang."
+        },
+        {
+          "heading": "Een ondersteunende omgeving om schrijfisolatie te doorbreken",
+          "body": "Hoewel traditionele schrijfgroepen waardevol kunnen zijn, besteden ze vaak meer tijd aan kletsen, bekritiseren en discussiëren over literaire invloeden dan aan het daadwerkelijk op papier zetten van woorden. Dat sociale format kan vermoeiend zijn wanneer je alleen maar rustige verantwoording zoekt. {app} biedt de warmte van gedeeld creatief gezelschap zonder sociale ballast.\n\nDe microfoons blijven tijdens de sessie gedempt, wat betekent dat je nooit je ideeën hoeft te verdedigen, drafts hoeft voor te lezen of competitieve gesprekken hoeft te voeren. Je deelt een stille, respectvolle werkruimte met een ander toegewijd persoon die aan diens eigen doelen werkt. Videostreams worden nooit bewaard, zodat je schrijfruimte privé en veilig blijft. Loop je tegen een creatieve muur aan, dan geeft een blik op je geconcentreerd typende partner net dat zetje doorzettingsvermogen om je scène af te maken."
+        },
+        {
+          "heading": "Mijlpalen bijhouden en schrijfconsistentie opbouwen",
+          "body": "Het voltooien van een manuscript, artikelenreeks of boekvoorstel vraagt om maandenlang opdagen, zelfs als inspiratie ontbreekt. {app} helpt je vaste gewoontes op te bouwen dankzij duidelijke sessiestatistieken. Na afloop neem je één minuut de tijd om aan te geven of je je doel hebt bereikt, deels bent opgeschoten of obstakels tegenkwam.\n\nIn de loop van weken en maanden tonen je opgebouwde focusuren en streaks de gestage totstandkoming van je boek of portfolio. Vind je schrijvers of redacteuren wiens geconcentreerde energie aansluit bij de jouwe, dan kun je hen toevoegen aan je favorieten en regelmatig samen schrijven. Met 3 gratis wekelijkse sessies en onbeperkte mogelijkheden met het Plus-abonnement ondersteunt {app} je creatieve discipline van eerste opzet tot laatste correctieronde."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} ook gebruiken voor redigeren en herschrijven?",
+          "a": "Ja. Je kunt de sessies inzetten voor elke fase van het creatieve proces, inclusief lijnredactie, plotten, karakterontwikkeling, bronnenonderzoek en proeflezen. Benoem simpelweg je specifieke redactiedoel bij de start, zodat je een duidelijke richtlijn hebt voor je afsluitende evaluatie."
+        },
+        {
+          "q": "Wat gebeurt er als ik mijn geplande woordaantal eerder haal?",
+          "a": "Haal je je doel voor het einde van de sessie, dan kun je doorgaan met de volgende scène, beginnen met redigeren of alvast nieuwe ideeën uittekenen. Je blijft rustig op beeld tot het eindsignaal klinkt, zodat je de concentratie van je partner niet verstoort."
+        },
+        {
+          "q": "Lezen of beoordelen andere deelnemers mijn teksten?",
+          "a": "Nee. Je werk blijft volledig vertrouwelijk. Je deelt bij de start uitsluitend een korte samenvatting van je doel, zoals het schetsen van een scène of een artikelopzet. Je partner leest je teksten niet, bekijkt je documenten niet en geeft geen ongevraagde feedback."
+        },
+        {
+          "q": "Kan ik besloten schrijfsprints organiseren met mijn eigen schrijfgroep?",
+          "a": "Ja. Je kunt je persoonlijke boekingslink delen met meelezers, co-auteurs of leden van je schrijfclub om gezamenlijke sprints in te plannen op {app}. Daarnaast maken aankomende groepssessies het binnenkort mogelijk om met maximaal 9 personen tegelijk te schrijven."
+        },
+        {
+          "q": "Worden de videobeelden ergens opgeslagen of gedeeld?",
+          "a": "Nooit. Videoverbindingen op {app} worden live gestreamd en worden op geen enkele server opgenomen of opgeslagen. Het platform vereist een minimale leeftijd van 18 jaar en je kunt elke partner direct blokkeren of rapporteren bij ongepast gedrag."
+        }
+      ],
+      "cta": {
+        "heading": "Start je volgende schrijfsprint op {app}",
+        "body": "Stop met staren naar die knipperende cursor en maak je huidige hoofdstuk af. Sluit je aan bij gefocuste schrijvers en claim vandaag je 3 gratis wekelijkse sessies op {app}."
+      },
+      "keywords": [
+        "body doubling voor schrijvers",
+        "schrijfpartner accountability",
+        "virtuele schrijfsprint",
+        "online schrijfpartner",
+        "focusgroep voor auteurs"
+      ]
+    },
+    {
+      "slug": "developers",
+      "title": "Body doubling voor developers | Virtueel coworken {app}",
+      "description": "Pak rommelige refactors, taaie documentatie en hardnekkige bugs aan met rustige video-body doubling op {app}. Blijf in diepe flow en lever code op.",
+      "h1": "Stille body doubling voor software developers",
+      "intro": "Code schrijven vraagt om diepe cognitieve concentratie, maar het dagelijks leven van een developer zit vol context switches, Slack-notificaties en onaantrekkelijke backlog-tickets. Wanneer je unit tests moet schrijven, een gigantische pull request moet reviewen of een cryptisch geheugenlek moet debuggen, ligt uitstelgedrag op de loer. {app} koppelt je via video aan een andere professional voor stille sprints van 25, 50 of 75 minuten, zodat je gefocust in je terminal blijft werken.",
+      "sections": [
+        {
+          "heading": "Taaie backlogtaken en technische schuld wegwerken",
+          "body": "Elke codebase bevat taken waar developers tegenop zien: verouderde dependencies updaten, broze databasemigraties ontwarren, interne API-documentatie schrijven en testsuites opzetten voor legacy-modules. Omdat deze klussen weinig directe voldoening geven, schakel je al snel over naar social media, Hacker News of interne chatkanalen in plaats van door te zetten.\n\nEen coworkingsessie opzetten op {app} creëert een directe stok achter de deur. Zodra je aan het begin van het uur inlogt, spreek je je technische doel concreet uit, zoals het schrijven van unit tests voor een authenticatie-endpoint of het opschonen van datamodellen. Omdat er een andere professional in je ooghoek zichtbaar is, bedenk je je wel twee keer voordat je afleidende websites opent. Deze subtiele sociale aanwezigheid houdt je terminal actief tot de commit klaarstaat."
+        },
+        {
+          "heading": "Gefocust blijven tijdens complexe debugsessies",
+          "body": "Het onderzoeken van een stille runtime bug of een willekeurig falende CI-pijplijn vraagt om geduld en methodisch redeneren. Als je in je eentje herhaaldelijk vastloopt, slaat de frustratie snel toe en is de verleiding groot om het op te geven of tijd te verspillen aan bijzaken, zoals het aanpassen van terminalthema's of het herstructureren van dotfiles.\n\nSamenwerken met een body double vergroot je mentale uithoudingsvermogen. De microfoons blijven gedempt, dus je partner zal je concentratie niet verstoren of ongevraagde suggesties doen. In plaats daarvan fungeert diens stille aanwezigheid als een visuele herinnering aan je voornemen. Weten dat je na 50 of 75 minuten je voortgang deelt, stimuleert je om hypotheses systematisch te testen, stack traces grondig uit te pluizen en bevindingen vast te leggen in plaats van voortijdig af te haken."
+        },
+        {
+          "heading": "Ruimte voor de diepe focus die programmeren vereist",
+          "body": "Pair programming kan waardevol zijn, maar continu iemand over je schouder laten meekijken die elke toetsaanslag beoordeelt, is mentaal vermoeiend. Veel engineers hebben geen behoefte aan voortdurende dialoog; ze willen simpelweg een gestructureerde omgeving waarin ze ongestoord software kunnen bouwen. {app} bant overbodig gepraat uit, zodat je aandacht beschermd blijft.\n\nJe communiceert dertig seconden aan het begin om je doel vast te stellen, en zestig seconden aan het einde om te melden of je taak af is, deels af is of geblokkeerd raakte. Tijdens de sessie blijft je camera aan terwijl je microfoon gedempt is, zodat je in alle rust builds kunt draaien, documentatie kunt doornemen en code kunt schrijven. Omdat {app} volledig open source is onder de AGPL-3.0-licentie en zelf gehost kan worden, kunnen technische teams en privacybewuste engineers volledig vertrouwen op de tools die ze dagelijks gebruiken."
+        },
+        {
+          "heading": "Focusuren bijhouden en ontwikkelingssprints structureren",
+          "body": "Het combineren van klantcontracten, sprintdeadlines en eigen opensourceprojecten vraagt om gezonde zelfregulering. Zonder duidelijke kaders werken engineers vaak op onregelmatige tijden, wat kan leiden tot een burn-out. Met {app} baken je je werkdag af in voorspelbare, duurzame ontwikkelblokken.\n\nDankzij statistieken over focusuren en streaks behoud je een gezond werkritme zonder nachtelijke codeermarathons. Werk je vaker samen met specifieke collega's of opensource-maintainers, dan kun je je persoonlijke boekingslink delen of hen toevoegen als favoriete partner. Het gratis abonnement biedt 3 wekelijkse sessies voor je zwaarste programmeerblokken, terwijl het Plus-abonnement onbeperkte boekingen en geavanceerde filters biedt voor wie dagelijks gericht wil coworken."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} gebruiken voor opensource-bijdragen en nevenprojecten?",
+          "a": "Ja. Veel developers gebruiken {app} om ongestoord tijd vrij te maken voor side projects, opensource-repositories, tutorials en technische verdieping. Door een vast blok van 50 of 75 minuten te plannen, maak je gestage voortgang met je eigen projecten in plaats van ze te laten verwateren."
+        },
+        {
+          "q": "Moet ik mijn scherm delen of bedrijfscode laten zien?",
+          "a": "Nee. Je deelt nooit je scherm en geeft geen vertrouwelijke code prijs. Je houdt enkel je webcam aan en je microfoon gedempt terwijl je rustig doorwerkt. Je code-editor, terminalcommando's en interne repositories blijven te allen tijde strikt lokaal op je eigen machine."
+        },
+        {
+          "q": "Kan ons engineeringteam {app} intern zelf hosten?",
+          "a": "Ja. Omdat {app} open source is onder de AGPL-3.0-licentie, kan jullie organisatie de code inspecteren en het platform hosten op een eigen infrastructuur, ideaal voor wie volledige controle wil over beveiliging, audits en compliance."
+        },
+        {
+          "q": "Wat als een compilatiefout of bug voorkomt dat ik mijn taak afrond?",
+          "a": "Programmeren verloopt zelden exact volgens plan. Aan het einde van de sessie markeer je je taak simpelweg als deels af of niet af en vermeld je kort dat je tegen een onverwachte bug aanliep. Er is geen enkel oordeel; het is gewoon een eerlijke terugblik op je sprint."
+        },
+        {
+          "q": "Is {app} geschikt voor remote developers in verschillende tijdzones?",
+          "a": "Ja. Sessies starten 24 uur per dag, stipt op het hele en halve uur. Zo kun je altijd eenvoudig aanhaken bij andere engineers, of je nu overdag codeert, vroeg in de ochtend start of 's nachts werkt in jouw lokale tijdzone."
+        }
+      ],
+      "cta": {
+        "heading": "Lever je volgende feature op zonder afleiding",
+        "body": "Laat context switches en uitgestelde backlogtaken je programmeertijd niet langer verstoren. Sluit je aan bij gefocuste developers op {app} en start met je 3 gratis wekelijkse sessies."
+      },
+      "keywords": [
+        "body doubling voor developers",
+        "virtueel coworken programmeurs",
+        "focus sessies programmeren",
+        "accountability partner softwareontwikkelaars",
+        "deep work voor developers"
+      ]
+    },
+    {
+      "slug": "students",
+      "title": "Body doubling voor studenten | Virtuele studiepartner {app}",
+      "description": "Stop met last-minute blokken en overwin lastig huiswerk met rustige body doubling op {app}. Studeer samen met focuspartners en bouw vaste studiegewoontes op.",
+      "h1": "Rustige online body doubling voor studenten",
+      "intro": "Het hbo- en universitaire leven brengt een flinke studielast met zich mee, van ingewikkelde opgaven tot zware verplichte literatuur, vaak met weinig dagelijkse structuur. Alleen studeren op een studentenkamer maakt scrollen op je telefoon of ongepland indutten wel heel verleidelijk. {app} koppelt je via video aan een accountabilitypartner voor studieblokken van 25, 50 of 75 minuten, wat je precies het zachte duwtje in de rug geeft om je studiewerk zonder uitstelgedrag af te ronden.",
+      "sections": [
+        {
+          "heading": "Uitstelgedrag bij intimiderende opdrachten overwinnen",
+          "body": "Beginnen aan een scriptie van twintig pagina's, een reeks organische chemiereacties of een lijvig biologiehoofdstuk kan enorme weerstand oproepen. Wanneer een opdracht overweldigend voelt, stellen studenten het beginnen vaak uit tot de avond voor de deadline, met slaaptekort, paniekerig stampen en veel stress tot gevolg.\n\n{app} helpt je die vicieuze cirkel te doorbreken door academische bergen op te delen in behapbare studieblokken. In plaats van te bedenken dat je de hele middag natuurkunde moet doen, boek je een sessie van 50 minuten om vijf specifieke wiskundeopgaven uit te werken. Dit concrete doel uitspreken tegen je partner zorgt voor een direct moment van toewijding. Zodra de sessie start en beide microfoons uitgaan, ga je direct aan de slag omdat er een medestudent op camera naast je zit die met dezelfde rustige toewijding aan het werk is."
+        },
+        {
+          "heading": "Productieve studieroutines opbouwen tussen colleges door",
+          "body": "Tussenuren op de campus gaan vaak verloren aan doelloos op je telefoon kijken of rondhangen in de kantine. Hoewel deze pauzes kort lijken, kan het benutten hiervan voor gerichte studiesessies je uren aan avondstress schelen en je weekenden vrijhouden om uit te rusten.\n\nOmdat sessies op {app} stipt op het hele en halve uur beginnen, pas je gemakkelijk een studiesprint van 25 of 50 minuten in tussen twee colleges. Zet je laptop op een bibliotheektafel, open je sessie en neem je aantekeningen door terwijl ze nog vers in het geheugen liggen. De stille verantwoording zorgt ervoor dat je niet afdwaalt naar social media. Wanneer je volgende college begint, pak je je tas in met de wetenschap dat je huiswerk voor vandaag al voor de helft af is."
+        },
+        {
+          "heading": "Een rustig alternatief voor overvolle studieruimtes",
+          "body": "Universiteitsbibliotheken en studielandschappen kunnen luidruchtig, overvol en vol afleiding zijn. Studeren met vrienden mondt vaak uit in gezellig kletsen, snackpauzes en samen filmpjes kijken, waardoor je na een paar uur nog amper iets hebt gedaan. {app} biedt de sociale steun van samen studeren zonder de storende gesprekken die diepe concentratie ondermijnen.\n\nBeide studenten houden hun microfoon tijdens het werkblok gedempt, zodat je je nooit zorgen hoeft te maken over achtergrondgeluiden, rinkelende telefoons of onverwachte onderbrekingen. Je ziet je partner gestaag doorwerken op beeld, wat een psychologische stimulans geeft om je aandacht bij je boeken te houden. Omdat videobeelden strikt privé blijven en nooit worden opgeslagen, kun je met een gerust hart studeren vanaf je eigen bureau of kamer."
+        },
+        {
+          "heading": "Studie-uren bijhouden en voorbereiden op tentamens",
+          "body": "Regelmatig herhalen werkt op de lange termijn veel beter voor je geheugen dan gestrest nachtwerk vlak voor een tentamen. Met {app} houd je eenvoudig je studie-uren bij en bouw je streaks op tijdens tentamenperiodes. Aan het einde van elke sessie geef je in een korte check-in van zestig seconden aan of je geplande samenvatting of flashcards af zijn, deels af zijn of meer tijd vragen.\n\nJe kunt in contact blijven met studiegenoten of studiegroepen door je persoonlijke boekingslink te delen of vaste studiepartners toe te voegen aan je favorieten. Het platform ondersteunt ook studenten- en studieverenigingen die samen focus willen bevorderen. Start met 3 gratis wekelijkse sessies om je lastigste vakken bij te benen, of kies het Plus-abonnement voor onbeperkte sessies tijdens zware tentamenweken."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} gebruiken om te studeren in een universiteitsbibliotheek of op mijn kamer?",
+          "a": "Ja. Zolang je een stabiele internetverbinding hebt en je webcam aanstaat, kun je studeren vanuit de bibliotheek, je studentenkamer of een rustig café. Omdat microfoons tijdens het studeren gedempt blijven, val je anderen in je omgeving niet lastig."
+        },
+        {
+          "q": "Wat als ik mijn leesopdracht afrond voordat de timer afloopt?",
+          "a": "Ben je eerder klaar, dan kun je je aantekeningen nog eens doornemen, je flashcards herhalen of alvast een vooruitblik werpen op de volgende collegestof. Je blijft rustig op camera tot de sessie eindigt, zodat je de rustige werkruimte voor je partner bewaart."
+        },
+        {
+          "q": "Mogen middelbare scholieren {app} gebruiken voor hun huiswerk?",
+          "a": "Nee. Iedere deelnemer op {app} moet minimaal 18 jaar oud zijn. Mbo-, hbo- en universitaire studenten en volwassenen die leren voor beroepscertificaten zijn van harte welkom om de dienst te gebruiken voor hun opdrachten, studieboeken en tentamenvoorbereiding."
+        },
+        {
+          "q": "Kan ik op {app} samen studeren met mijn eigen studiegenoten?",
+          "a": "Ja. Je kunt je persoonlijke boekingslink rechtstreeks naar studiegenoten sturen, zodat jullie in hetzelfde tijdslot terechtkomen. Daarnaast maken aankomende groepssessies het mogelijk om met kleine groepen van maximaal 9 studenten tegelijk te studeren voor groepsprojecten."
+        },
+        {
+          "q": "Hoe zorgt {app} voor een veilige omgeving tijdens studiesessies?",
+          "a": "Videosessies zijn live en worden nooit opgenomen. De gedragsregels vereisen te allen tijde rustig en respectvol gedrag. Mocht een partner zich ongepast gedragen, dan kun je diegene direct met één klik rapporteren of blokkeren; ons moderatiesysteem grijpt direct in om de veiligheid te bewaren."
+        }
+      ],
+      "cta": {
+        "heading": "Haal je volgende tentamen met rustige studiesessies",
+        "body": "Vervang stressvol nachtwerk door regelmatige, rustige studieblokken. Sluit je vandaag aan bij medestudenten op {app} en begin met je 3 gratis wekelijkse studiesessies."
+      },
+      "keywords": [
+        "body doubling voor studenten",
+        "online studiepartner",
+        "virtuele studieruimte",
+        "studeren met focus partner",
+        "tentamenvoorbereiding accountability"
+      ]
+    },
+    {
+      "slug": "freelancers",
+      "title": "Body doubling voor freelancers | Virtueel coworken {app}",
+      "description": "Werk onbetaalde administratie, facturen en offertes weg met rustige video-body doubling op {app}. Blijf gefocust en gedisciplineerd als zelfstandige.",
+      "h1": "Stille body doubling voor zelfstandige freelancers",
+      "intro": "Freelancen biedt vrijheid, maar het alleen beheren van klantdeadlines, openstaande facturen en administratieve rompslomp kan eenzaam aanvoelen. Zonder leidinggevende of collega's in de buurt blijven alledaagse bedrijfstaken vaak wekenlang op je to-do-lijst staan. {app} verbindt je via video met een andere zelfstandige professional voor sessies van 25, 50 of 75 minuten, waardoor je werkdag als solist de rustige structuur krijgt die nodig is om te groeien.",
+      "sections": [
+        {
+          "heading": "Onbetaalde taken aanpakken die je steeds vooruit schuift",
+          "body": "Elk freelancebedrijf draait deels op onbetaald werk: bankrekeningen afstemmen, btw-bonnetjes ordenen, mappen opschonen en achterstallige facturen najagen. Omdat deze operationele taken niet direct omzet opleveren, schuiven freelancers ze vaak voor zich uit tot vrijdagmiddag of zondagavond, wat zorgt voor een constante onderhuidse onrust.\n\nEen administratieve sprint inplannen op {app} verandert saaie klusjes in bindende afspraken. Bij aanvang vertel je je partner dat je de komende 50 minuten besteedt aan het wegwerken van je facturatie of het opstellen van drie offertes. Jezelf committeren aan een concreet doel tegenover een ander zorgt voor onmiddellijke motivatie. Terwijl jullie in stilte samenwerken, werk je vlot door de spreadsheets en herinneringsmails heen waar je al weken tegenop zag, waardoor er weer mentale ruimte ontstaat voor je eigenlijke vak."
+        },
+        {
+          "heading": "De collegialiteit van kantoor zonder het rumoer",
+          "body": "Werken vanuit een thuiswerkplek of aan de keukentafel heeft enorme voordelen, maar de stilte kan op den duur zwaar aanvoelen. Fysieke coworkingruimtes zijn vaak prijzig, druk en lawaaierig, met rinkelende telefoons en netwerkende mensen die je concentratie continu onderbreken. Veel solozelfstandigen missen simpelweg het geruststellende gevoel van andere mensen om zich heen die geconcentreerd bezig zijn.\n\n{app} brengt dat gevoel van collegialiteit terug zonder de afleiding of reistijd. Omdat alle microfoons gedempt zijn zodra het werk begint, geniet je van totale stilte terwijl je profiteert van de zichtbare aanwezigheid van een meewerkende professional. Je partner geconcentreerd documenten zien opstellen of rapporten zien analyseren, houdt je aan je bureau gekluisterd. Je voelt je verbonden met een bredere gemeenschap van werkenden zonder ook maar één minuut aan productiviteit in te leveren."
+        },
+        {
+          "heading": "Duidelijke dagelijkse grenzen stellen in je soloroutine",
+          "body": "Zonder vaste kantoortijden vervaagt de grens tussen werk en privéleven razendsnel. Veel freelancers beginnen laat, nemen lange pauzes in de namiddag en werken 's avonds door om dat te compenseren. Dat gebrek aan scheiding leidt rechtstreeks naar oververmoeidheid en een creatieve burn-out.\n\nMet {app} baken je je werkdag af met bewuste focussprints. Je plant bijvoorbeeld om 09:00 uur een blok van 50 minuten om briefings door te nemen, en om 17:00 uur een sprint van 25 minuten om je inbox leeg te maken en je laptop dicht te klappen. Weten dat sessies stipt op het hele of halve uur starten, houdt je punctueel. Door vaste begin- en eindpunten in te bouwen, bescherm je je avonden en creëer je een professionele routine die je zelfstandigheid duurzaam ondersteunt."
+        },
+        {
+          "heading": "Productieve uren bijhouden en je onderneming laten groeien",
+          "body": "Een succesvol freelancebedrijf vraagt om consistente output op het vlak van klantprojecten, acquisitie en zelfontwikkeling. {app} biedt ingebouwde statistieken, waaronder totale focusuren en streaks, waarmee je je wekelijkse productiviteit inzichtelijk maakt. Na afloop van elk blok registreer je met een korte check-in of je taak afgerond is, deels af is of vertraging opliep door feedback van de klant.\n\nOntdek je andere zelfstandigen met wie het qua werkritme goed klikt, dan voeg je hen toe aan je favorieten om vaste sessies in te plannen. Je kunt ook je persoonlijke link delen met vertrouwde vakgenoten. Met 3 gratis wekelijkse sessies en onbeperkte toegang met het Plus-abonnement ondersteunt {app} de zelfdiscipline die nodig is voor een winstgevend solo-ondernemerschap."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} zowel voor klantprojecten als administratie gebruiken?",
+          "a": "Ja. Freelancers gebruiken {app} voor declarabel klantwerk zoals copywriting, programmeren, adviesrapporten en grafisch ontwerp, maar ook voor onbetaalde taken zoals facturatie en marketing. Jij bepaalt welke specifieke prioriteit tijdens die geboekte sprint je volledige aandacht krijgt."
+        },
+        {
+          "q": "Wat als ik tijdens een coworkingsessie een dringend telefoontje van een klant krijg?",
+          "a": "Mocht zich een noodgeval voordoen bij een klant, dan stuur je simpelweg een kort berichtje in de sessiechat om je partner in te lichten, stap je even weg en handel je het af. Zodra je terug bent, hervat je je werk tot de afsluitende check-in."
+        },
+        {
+          "q": "Zijn mijn zakelijke documenten en klantgegevens veilig tijdens de sessies?",
+          "a": "Volledig veilig. Je deelt nooit je beeldscherm en toont geen gevoelige klantovereenkomsten. Videoverbindingen zijn live en worden nooit opgeslagen of opgenomen. Daarnaast waarborgt onze AGPL-3.0 opensource-licentie de softwaretransparantie die privacybewuste freelancers op prijs stellen."
+        },
+        {
+          "q": "Kan ik coworkingsessies plannen met andere bevriende freelancers?",
+          "a": "Ja. Je kunt je persoonlijke link sturen naar collega-freelancers zodat jullie eenvoudig hetzelfde tijdslot reserveren. Je kunt hen ook opslaan als favoriete partner om toekomstige gezamenlijke werkblokken snel en moeiteloos in te plannen wanneer grote deadlines naderen."
+        },
+        {
+          "q": "Hoe werkt het gratis abonnement voor zzp'ers en freelancers?",
+          "a": "Met het gratis abonnement krijg je elke week 3 video-coworkingsessies, ideaal om je wekelijkse boekhouding of belangrijke deadlines aan te pakken. Vraagt je schema om dagelijkse verantwoording voor meerdere projecten, dan biedt het Plus-abonnement onbeperkte sessies."
+        }
+      ],
+      "cta": {
+        "heading": "Breng structuur en focus in je bestaan als freelancer",
+        "body": "Stel je administratieve taken niet langer uit en lever je beste werk voor klanten. Sluit je aan bij zelfstandige professionals op {app} en claim je 3 gratis wekelijkse focussessies."
+      },
+      "keywords": [
+        "body doubling voor freelancers",
+        "freelance accountability partner",
+        "virtueel coworken zzp",
+        "productiviteit voor zelfstandigen",
+        "focus sessies freelancers"
+      ]
+    },
+    {
+      "slug": "remote-workers",
+      "title": "Body doubling voor thuiswerkers | Virtueel coworken {app}",
+      "description": "Overwin afleiding thuis, versla de middagdip en blijf gefocust met stille video-body doubling op {app}. Cowork samen met gedreven professionals.",
+      "h1": "Stille body doubling voor thuiswerkers en remote werkers",
+      "intro": "Thuiswerken biedt vrijheid, maar brengt ook huishoudelijke afleidingen, vervagende grenzen tussen werk en privé en gevoelens van isolatie met zich mee. Als je alleen in je werkkamer zit, kunnen rondslingerende was, klusjes in de keuken en sociale media je goede voornemens snel doorkruisen. {app} koppelt je via video aan een andere remote professional voor rustige coworkingblokken van 25, 50 of 75 minuten, wat je thuiswerkdag de houvast geeft van een echt kantoor.",
+      "sections": [
+        {
+          "heading": "Weerstand bieden aan huishoudelijke verleidingen",
+          "body": "Wanneer je huis tevens je kantoor is, ligt afleiding voortdurend op de loer. Een onafgemaakt klusje in de gang, een stapel vuile vaat of een pakketbezorger trekken je zo een uur lang weg van je bureau. Zonder fysieke aanwezigheid van collega's vraagt het enorme wilskracht om weer te gaan zitten en verder te werken aan complexe presentaties of tijdrovende rapportages.\n\nEen sessie boeken op {app} zorgt voor een duidelijke mentale omschakeling naar werkmodus. Door een sessie in te plannen die stipt op het hele of halve uur begint, ga je de verplichting aan om aan je bureau te zitten. Je begroet je partner kort, noemt je doel en zet je microfoon op stil. Het feit dat er een andere werkende professional op je scherm zichtbaar is, werpt een effectieve barrière op tegen huishoudelijke klusjes en houdt je geconcentreerd op je echte prioriteiten."
+        },
+        {
+          "heading": "De beruchte middagdip doeltreffend overwinnen",
+          "body": "Vrijwel elke thuiswerker kent de bekende energiedip rond twee uur 's middags. Na urenlang Slack-berichten beantwoorden en videovergaderingen bijwonen, stokt de motivatie ineens. Op kantoor helpt de dynamiek van pratende en bewegende collega's je door de middag heen; thuis leidt diezelfde dip vaak tot rondhangen in de keuken, doelloos op je smartphone kijken of staren naar je inbox.\n\n{app} biedt een directe dosis vriendelijke sociale controle wanneer je energie wegebt. Een sprint van 25 of 50 minuten dwingt je om één concreet doel te kiezen—zoals het schrijven van een managementsamenvatting of het analyseren van marketingdata—en dat daadwerkelijk af te ronden. Je partner rustig aan diens eigen taken zien werken, levert net die subtiele stimulans om de traagheid van je af te schudden en je werkdag sterk af te sluiten."
+        },
+        {
+          "heading": "Thuiswerkisolatie doorbreken zonder vergadermoeheid",
+          "body": "Thuiswerkers verlangen vaak naar menselijk contact, maar nog meer videocalls inplannen vergroot de vermoeidheid juist. Vergaderingen vragen continu om actieve interactie, praten en alertheid, waardoor er weinig energie overblijft voor rustig denkwerk. Wat thuiswerkers echt nodig hebben, is laagdrempelig gezelschap zonder sociale druk.\n\n{app} brengt die stille verbinding zonder verbale verplichtingen. Je wisselt dertig seconden een vriendelijke begroeting uit bij de start, werkt een uur lang zij aan zij in stilte en sluit af met een korte evaluatie. Het platform neemt je videobeelden nooit op, zodat je privédomein gewaarborgd blijft. Je ervaart het oprechte comfort van werken naast een ander mens, zonder kantoorpolitiek, koetjes en kalfjes of vermoeiende vergaderagenda's."
+        },
+        {
+          "heading": "Een evenwichtige en duurzame thuiswerkdag structureren",
+          "body": "Zonder reistijd vloeit werk thuis gemakkelijk over in de hele dag. Mensen beantwoorden al voor het ontbijt e-mails en checken 's avonds laat nog berichten, wat chronische vermoeidheid in de hand werkt. {app} reikt je handvatten aan om je dag in te delen in duidelijke, afgebakende focusblokken met een helder begin en eind.\n\nJe kunt je gewerkte focusuren bijhouden en dagelijkse streaks volgen om je concentratie te monitoren. Werk je graag samen met collega's die hetzelfde ritme hebben, dan sla je hen eenvoudig op als favoriet of deel je je boekingslink. {app} ondersteunt ook remote organisaties en teams die gezamenlijke focus willen versterken. Start met 3 gratis sessies per week voor je zwaarste werkdagen, of kies het Plus-abonnement voor een volledige dagelijkse structuur."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} gebruiken tijdens mijn werk voor mijn werkgever?",
+          "a": "Ja. Medewerkers op afstand gebruiken {app} tijdens hun werkdag om zelfstandige taken af te ronden, analyses uit te voeren, memo's te schrijven en achterstanden weg te werken. Omdat microfoons gedempt zijn en schermen nooit gedeeld worden, blijven bedrijfsinformatie, documenten en interne chats volledig privé."
+        },
+        {
+          "q": "Wat als gezinsleden of huisdieren achter mij door het beeld lopen?",
+          "a": "Het dagelijks leven thuis gaat gewoon door. Korte bewegingen van huisgenoten of huisdieren op de achtergrond zijn geen enkel probleem, zolang het je partner niet hindert. Omdat je microfoon tijdens het werkblok gedempt is, hoort je partner nooit achtergrondgeluiden."
+        },
+        {
+          "q": "Kunnen externe teams besloten focusgroepen opzetten op {app}?",
+          "a": "Ja. Organisaties kunnen besloten bedrijfsgroepen inrichten, zodat collega's uitsluitend met teamleden aan body doubling doen. Bovendien maken aankomende groepssessies het mogelijk om met maximaal 9 collega's gelijktijdig in een besloten virtuele kamer te werken."
+        },
+        {
+          "q": "Is {app} 24 uur per dag beschikbaar in verschillende tijdzones?",
+          "a": "Ja. {app} is de klok rond operationeel en sessies beginnen stipt op elk heel en half uur. Of je nu tijdens kantooruren werkt in Amsterdam, late avonddiensten draait in Londen of vroeg opstaat in New York: er zijn altijd gefocuste partners beschikbaar om aan te haken."
+        },
+        {
+          "q": "Hoe waarborgt {app} de veiligheid en gedragsnormen binnen de community?",
+          "a": "Alle deelnemers moeten minimaal 18 jaar oud zijn. Camerabeelden zijn puur realtime en worden nooit opgeslagen. Mocht iemand de regels overtreden, dan kun je diegene direct met één klik rapporteren of blokkeren, zodat een veilige en professionele omgeving gegarandeerd blijft."
+        }
+      ],
+      "cta": {
+        "heading": "Breng rust en focus in je thuiswerkdag",
+        "body": "Vecht niet langer in je eentje tegen afleidingen in huis. Cowork zij aan zij met gefocuste remote professionals en start vandaag met je 3 gratis wekelijkse sessies op {app}."
+      },
+      "keywords": [
+        "body doubling voor thuiswerkers",
+        "thuiswerken focus partner",
+        "virtueel coworken thuiswerken",
+        "remote werken accountability",
+        "productiever thuiswerken"
+      ]
+    },
+    {
+      "slug": "phd-students",
+      "title": "Body doubling voor PhD's | Virtueel coworken {app}",
+      "description": "Overwin de weerstand tegen je proefschrift, analyseer onderzoeksdata en schrijf je hoofdstukken af met stille video-body doubling op {app}.",
+      "h1": "Stille body doubling voor promovendi en PhD-studenten",
+      "intro": "Promotieonderzoek is een intellectuele marathon met ongestructureerde semesters, verre deadlines en aanzienlijke eenzaamheid. Of je nu werkt aan een literatuurstudie, experimentele data opschoont of een subsidieaanvraag herziet: het gebrek aan dagelijkse begeleiding kan imposter syndrome en hardnekkig uitstelgedrag aanwakkeren. {app} koppelt je via video aan een andere toegewijde academicus voor rustige sprints van 25, 50 of 75 minuten, wat je onderzoek de nodige regelmaat geeft.",
+      "sections": [
+        {
+          "heading": "De angst voor het proefschrift en een writers block overwinnen",
+          "body": "Het schrijven van een dissertatie verschilt fundamenteel van eerdere academische studies. Er zijn geen wekelijkse toetsen of directe cijfers die zorgen voor een dopamineboost, en feedback van promotoren laat soms maanden op zich wachten. Staren naar een leeg document om de methodologie van hoofdstuk drie te formuleren kan verlammend werken, waardoor onderzoekers verzanden in het perfectioneren van referenties of randzaken in het lab.\n\n{app} biedt de milde externe structuur om van dagelijks schrijven een gewoonte te maken. Je boekt een sessie van 50 of 75 minuten die stipt op het hele of halve uur begint. Zodra je inlogt, vertel je je partner welk deel van je proefschrift je aanpakt: bijvoorbeeld twee alinea's over methodologische beperkingen of een opzet voor sectie vier. Die intentie hardop uitspreken neemt de drempel weg. Terwijl jullie in stilte samenwerken, omzeil je perfectionisme en boek je concrete voortgang op weg naar je doctoraat."
+        },
+        {
+          "heading": "Focus behouden tijdens tijdrovende onderzoeksanalyses",
+          "body": "Naast schrijven moeten promovendi zich door repetitieve, taaie taken heen worstelen die uiterste nauwkeurigheid vereisen. Het opschonen van statistische datasets in R of Python, het transcriberen van kwalitatieve interviews, het opmaken van bibliografieën volgens universitaire richtlijnen en het controleren van wiskundige formules vergen veel geduld. Als de concentratie wegzakt, is de verleiding om academische discussiefora of sociale media te openen groot.\n\nCoworken op {app} fungeert als een focusanker tijdens monotoon datawerk. Omdat microfoons na de korte begroeting volledig gedempt blijven, ontstaat de mentale rust die nodig is voor diepgaande analyse. Wanneer je aandacht verslapt of een script een foutmelding geeft, herinnert de aanblik van een meewerkende partner op je scherm je aan je discipline. Je blijft zitten, lost de fout op en rondt je dataverwerking af zonder de middag te verliezen aan afleiding."
+        },
+        {
+          "heading": "Academische eenzaamheid tegengaan zonder uitputtende gesprekken",
+          "body": "Promoveren kan eenzaam zijn, zeker binnen de geesteswetenschappen, theoretische richtingen en sociale wetenschappen waar onderzoekers zelden een actieve labruimte delen. Toch brengt een bezoek aan faculteitsbijeenkomsten of koffiehoeken vaak stressvolle gesprekken met zich mee over publicatiedruk, baankansen en bezuinigingen. Wat promovendi nodig hebben, is ondersteunende menselijke aanwezigheid zonder academisch haantjesgedrag.\n\n{app} brengt die rustige verbinding zonder intellectuele uitputting. Je deelt een stille werkplek met een andere serieuze academicus die simpelweg werk wil verzetten. Er zijn geen discussies, geen ego's en geen ongevraagde meningen. Videosessies zijn strikt privé en worden nooit opgenomen. Zo ontstaat een veilige en nuchtere setting waarin je comfortabel kunt werken vanuit de universiteitsbibliotheek of je thuiskantoor, zonder oordeel."
+        },
+        {
+          "heading": "Onderzoeksuren monitoren en twijfels over jezelf neutraliseren",
+          "body": "Omdat vooruitgang bij een promotietraject van dag tot dag nauwelijks tastbaar lijkt, worstelen veel PhD's met het knagende gevoel nooit genoeg te doen. {app} levert tastbaar bewijs van je academische toewijding dankzij objectieve focusregistratie en streaks. Na elke sessie markeer je je taak als voltooid, deels afgerond of niet af, waarmee je ook kleine stapjes voorwaarts viert.\n\nJe kunt collega's uit je onderzoeksgroep of andere promovendi uitnodigen om samen te schrijven via je persoonlijke boekingslink of speciale universitaire groepen aanmaken. Het platform is open source onder de AGPL-3.0-licentie, passend bij academische waarden als openheid en transparantie. Begin met 3 gratis wekelijkse sessies om je schrijfdiscipline op te bouwen, of benut het Plus-abonnement voor onbeperkte ondersteuning tijdens de afronding van je proefschrift."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} ook gebruiken voor het lezen van taaie wetenschappelijke literatuur?",
+          "a": "Ja. Promovendi gebruiken sessies geregeld voor diepgaand leeswerk, het annoteren van vakliteratuur en het bijwerken van notities in referentiemanagers zoals Zotero. Geef bij de begroeting simpelweg je leesdoel door, zodat je een heldere maatstaf hebt voor je afrondende check-in."
+        },
+        {
+          "q": "Wat als ik tijdens de sprint vastloop op een lastig bewijs of een codeerfout?",
+          "a": "Onderzoek laat zich niet altijd plannen. Loop je vast op een conceptueel probleem of een hardnekkige programmeerfout, dan markeer je de sessie gewoon als deels af of niet af. De afsluitende check-in is een eerlijke registratie van je tijd, geen academisch examen."
+        },
+        {
+          "q": "Kan onze universitaire vakgroep of ons lab {app} gezamenlijk gebruiken?",
+          "a": "Ja. {app} ondersteunt universitaire en facultaire groepen, zodat promovendi binnen hetzelfde cohort direct met elkaar kunnen coworken. Binnenkort kunnen onderzoeksgroepen via speciale groepssessies bovendien met maximaal 9 onderzoekers tegelijk gezamenlijke schrijfsprints houden."
+        },
+        {
+          "q": "Zijn mijn vertrouwelijke onderzoeksgegevens en manuscripten veilig op {app}?",
+          "a": "Ja. Je deelt nooit je scherm en geeft geen vertrouwelijke data vrij. Videogesprekken vinden realtime plaats en worden nooit bewaard of opgeslagen. Daarnaast is {app} open source onder de AGPL-3.0-licentie en kan het lokaal worden gehost binnen beveiligde universitaire netwerken."
+        },
+        {
+          "q": "Hoe ondersteunt body doubling neurodivergente promovendi?",
+          "a": "Veel neurodivergente onderzoekers ervaren body doubling als een krachtig hulpmiddel tegen executieve disfunctie, tijdsblindheid en perfectionisme. Een rustige partner op beeld creëert een vriendelijk extern kader waardoor het aanzienlijk makkelijker wordt om aan complexe onderzoekstaken te beginnen."
+        }
+      ],
+      "cta": {
+        "heading": "Zet consistente stappen richting je doctoraat",
+        "body": "Doorbreek academische isolatie en schrijf je proefschrift sprint voor sprint af. Sluit je aan bij mede-onderzoekers op {app} en begin vandaag met je 3 gratis wekelijkse sessies."
+      },
+      "keywords": [
+        "body doubling voor phd",
+        "proefschrift schrijfpartner",
+        "accountability promovendi",
+        "dissertatie schrijfsprint",
+        "academisch virtueel coworken"
+      ]
+    },
+    {
+      "slug": "founders",
+      "title": "Body doubling voor founders | Virtueel coworken {app}",
+      "description": "Doorbreek ondernemersisolatie, pak koude acquisitie aan en regel saaie operations met rustige video-body doubling op {app}. Blijf elke sprint gefocust.",
+      "h1": "Stille body doubling voor startup-founders",
+      "intro": "Het bouwen van een vroege startup vereist dat je alle petten tegelijk opzet: sales, productontwerp, klantenservice en financiële planning. Met totale autonomie en niemand die je werk controleert, verlies je gemakkelijk dagen aan comfortabele taken met weinig impact, terwijl je moeilijke verantwoordelijkheden zoals koude outreach of pitchdeck-herzieningen ontwijkt. {app} koppelt je via video aan een andere gedreven ondernemer voor sprints van 25, 50 of 75 minuten om je bedrijf vooruit te helpen.",
+      "sections": [
+        {
+          "heading": "Lastige operationele taken en salesactiviteiten aanpakken",
+          "body": "Oprichters stellen taken met een risico op afwijzing of veel handmatig werk vaak uit. Twintig koude e-mails versturen, investeerdersupdates opstellen, logs van vertrokken gebruikers analyseren of cap tables bijwerken kan flink wat weerstand oproepen. In plaats van deze cruciale taken beet te pakken, vluchten founders vaak in het tweaken van websitekleuren of het herindelen van projectborden.\n\nEen coworkingsessie boeken op {app} dwingt je om die ongemakkelijke prioriteiten aan te gaan. Zodra de sessie op het hele uur begint, deel je je concrete doel met je partner, zoals het opstellen van vijftien outreach-berichten of het afronden van je kwartaalbegroting. Door je microfoon te dempen duik je direct in het werk, terwijl de aanwezigheid van je partner voorkomt dat je afhaakt. Je overwint de weerstand en levert het essentiële werk dat nodig is om te groeien."
+        },
+        {
+          "heading": "Kostbare context switches tijdens je werkdag elimineren",
+          "body": "De enorme diversiteit aan verantwoordelijkheden maakt gerichte focus voor startupleiders berucht lastig. Een binnenkomend supportticket, een reactie van een potentiële investeerder of een storingsmelding kan je concentratie direct breken, waardoor je de rest van de dag brandjes aan het blussen bent. Zonder strakke kaders komt diepgaand strategisch werk simpelweg nooit van de grond.\n\n{app} biedt een solide afbakening om je belangrijkste denktijd te beschermen. Door een blok van 50 of 75 minuten voor deep work te reserveren, sluit je je af voor notificaties. Je sluit Slack, zet je telefoon op stil en wijdt de sessie puur aan productroadmaps, financiële berekeningen of technische specificaties. Weten dat een andere toegewijde ondernemer rustig naast je meewerkt, maakt het veel eenvoudiger om afleiding te negeren en je strategie helder uit te voeren."
+        },
+        {
+          "heading": "De eenzaamheid van het solistisch ondernemen doorbreken",
+          "body": "Een bedrijf opbouwen vanuit een zolderkamer of thuiskantoor kan buitengewoon eenzaam zijn. Solofounders dragen het volledige gewicht van zakelijke beslissingen zonder de rugdekking van een managementteam. Netwerkborrels of koffieafspraken kosten daarentegen vaak kostbare uren aan oppervlakkige verhalen en uiterlijk vertoon.\n\n{app} biedt de psychologische voordelen van gedeelde professionele energie zonder transactionele netwerkballast. Je checkt dertig seconden in bij de start, werkt in harmonieuze stilte met gedempte microfoons en bespreekt zestig seconden je resultaten bij de afronding. Het platform is volledig privé en beelden worden nooit opgenomen. Je ervaart de oprechte stimulans van samenwerken met een andere gedreven bouwer die begrijpt wat er nodig is om iets vanaf nul op te bouwen."
+        },
+        {
+          "heading": "Focusuren registreren en je energie als founder bewaken",
+          "body": "Een burn-out vormt een van de grootste bedreigingen voor startups. Oprichters die dagen van twaalf uur maken zonder vaste pauzes merken al snel dat hun besluitvaardigheid en energie afnemen. {app} helpt je een duurzaam tempo aan te houden via inzichtelijke focusstatistieken, streaks en duidelijke tijdblokken.\n\nJe kunt eenvoudig aanhaken bij medeoprichters, adviseurs of bevriende ondernemers door je boekingslink te delen of hen als favoriet op te slaan voor terugkerende sprints. Omdat {app} open source is onder de AGPL-3.0-licentie, kunnen technische founders de code zelf auditen of intern hosten. Start gratis met 3 sessies per week, of stap over naar het Plus-abonnement voor onbeperkt dagelijks coworken terwijl je onderneming groeit."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} gebruiken voor business development en sales?",
+          "a": "Ja. Oprichters gebruiken sessies op {app} regelmatig voor koude acquisitie via mail, gerichte LinkedIn-berichten, het bijwerken van de salespijplijn en het schrijven van offertes. Je doel bij aanvang hardop uitspreken levert de urgentie die nodig is om die lastige berichten daadwerkelijk te versturen."
+        },
+        {
+          "q": "Wat als ik tijdens een sessie te maken krijg met een acute klantcrisis?",
+          "a": "Doet zich een productiestoring of dringend supportprobleem voor, dan plaats je snel een korte notitie in de chat, stap je even weg om het op te lossen en keer je terug zodra het kan. Tijdens de korte afronding leg je de situatie simpelweg even uit aan je partner."
+        },
+        {
+          "q": "Kunnen co-founders {app} gebruiken voor gezamenlijke werksprints?",
+          "a": "Ja. Je kunt je persoonlijke link rechtstreeks delen met je co-founder, adviseurs of kernteam om in dezelfde sessie te coworken. Binnenkort kunnen kleine startupteams via groepssessies bovendien met maximaal 9 personen tegelijk gezamenlijke focussprints houden."
+        },
+        {
+          "q": "Zijn vertrouwelijke bedrijfs- en financiële gegevens veilig op {app}?",
+          "a": "Volledig veilig. Je deelt nooit je beeldscherm en de microfoons blijven tijdens de sessie gedempt. Videostreams zijn vluchtig en worden op geen enkele server bewaard of opgeslagen. Dankzij de AGPL-3.0 opensource-licentie kunnen startups het platform bovendien zelf hosten voor optimale databescherming."
+        },
+        {
+          "q": "Hoe verhoudt {app} zich tot een lidmaatschap van een fysieke coworkingplek?",
+          "a": "Een fysieke coworkingplek brengt hoge maandlasten, reistijd en voortdurende rumoerige onderbrekingen met zich mee. {app} biedt de rustige verantwoording van werken naast toegewijde vakgenoten rechtstreeks vanaf je eigen bureau, te beginnen met 3 gratis sessies per week en volledige flexibiliteit."
+        }
+      ],
+      "cta": {
+        "heading": "Bouw je startup met meer focus en discipline",
+        "body": "Laat administratie en uitstelgedrag bij sales je groei niet langer remmen. Sluit je aan bij daadkrachtige founders op {app} en claim je 3 gratis wekelijkse focussessies."
+      },
+      "keywords": [
+        "body doubling voor founders",
+        "startup accountability partner",
+        "virtueel coworken ondernemers",
+        "focus sprints voor founders",
+        "productiviteitspartner startups"
+      ]
+    },
+    {
+      "slug": "designers",
+      "title": "Body doubling voor designers | Virtueel coworken {app}",
+      "description": "Overwin je design block, ruim Figma-bestanden op en voltooi componenten met rustige video-body doubling op {app}. Blijf dagelijks in een creatieve flow.",
+      "h1": "Stille body doubling voor product- en grafisch ontwerpers",
+      "intro": "Design combineert creatieve intuïtie met uiterste technische precisie, waardoor het gevoelig is voor perfectionisme en uitstelgedrag. Bij repetitieve taken zoals het opzetten van design tokens, het uitwerken van specificaties voor developers of het opschonen van complexe Figma-lagen raak je al snel verstrikt in eindeloze details. {app} koppelt je via video aan een andere maker voor stille sprints van 25, 50 of 75 minuten, zodat je kwalitatief designwerk op tijd oplevert.",
+      "sections": [
+        {
+          "heading": "Perfectionisme en ontwerptwijfels effectief beteugelen",
+          "body": "Omdat design subjectief is, loop je het risico uren te verliezen aan het millimeteren van afrondingshoeken, het verschuiven van marges met één pixel of het uitproberen van twintig lettertypecombinaties zonder tot een besluit te komen. Deze perfectionistische spiraal leidt geregeld tot gemiste deadlines en creatieve vermoeidheid, waardoor een leuk proces verandert in een frustrerende worsteling.\n\nCoworken op {app} biedt een duidelijk kader dat eindeloos gepriegel een halt toeroept. Zodra je een sessie binnengaat, geef je concreet aan welk onderdeel je gaat afronden, zoals het finaliseren van wireframes voor de checkout of het opleveren van vijf responsieve pictogrammen. Dit commitment stimuleert je om knopen door te hakken en meters te maken. Met je partner in beeld weersta je de aandrang om voltooide schermen opnieuw te ontwerpen en focus je op daadwerkelijke afronding."
+        },
+        {
+          "heading": "Doorzetten bij het onderhoud van design systems",
+          "body": "Hoewel het ontwikkelen van een nieuwe visuele merkidentiteit inspirerend is, bestaat het dagelijkse werk grotendeels uit onderhoud. Het documenteren van component-eigenschappen, het ordenen van auto-layoutstructuren, het exporteren van beeldmateriaal in verschillende resoluties en het schrijven van overdrachtsnotities voor front-end developers kan droog en eentonig aanvoelen. Daardoor stellen ontwerpers bestandshygiëne vaak uit tot developers klagen over ontbrekende assets.\n\nVaste sessies inplannen op {app} maakt van dit onderhoud een overzichtelijke, laagdrempelige routine. De microfoons blijven de hele sprint gedempt, wat de concentratie biedt die nodig is om design tokens te controleren en contrastscores voor toegankelijkheid te toetsen. Een ander rustig aan het werk zien, geeft je het geduld om exports en documentatie zorgvuldig af te ronden, wat de samenwerking met development soepel houdt."
+        },
+        {
+          "heading": "Een rustige creatieve haven zonder constante feedback",
+          "body": "Ontwerpers worden dagelijks overspoeld met meningen, kritiek van belanghebbenden en feedbackrondes van klanten. Hoewel opbouwende kritiek erbij hoort, blokkeert het constant over je schouder meekijken tijdens de verkennende fase elke vorm van experiment. Designers hebben een veilige mentale ruimte nodig om ideeën uit te proberen zonder direct commentaar te krijgen.\n\n{app} brengt prettige menselijke aanwezigheid zonder toezicht op je werk. Je deelt je ontwerpscherm nooit en de microfoons blijven na de check-in gedempt. Videobeelden zijn strikt realtime en worden nooit bewaard, zodat je privacy gewaarborgd is terwijl je schetst en itereert. Je geniet van de motiverende aanwezigheid van een andere professional die stil aan het werk is, zonder dat je onvoltooide schetsen hoeft uit te leggen of voorlopige kleurkeuzes hoeft te verdedigen."
+        },
+        {
+          "heading": "Creatieve output registreren en klantsprints structureren",
+          "body": "Of je nu in-house werkt binnen een productteam of balanceert tussen meerdere freelanceopdrachtgevers: consistente oplevering is essentieel voor je professionele voldoening. {app} helpt je je ontwerpweek te structureren met intuïtieve focusstatistieken, sessieoverzichten en streaks die je toewijding weerspiegelen.\n\nAan het einde van elke sessie registreer je in zestig seconden of je doel behaald, deels af of niet af is, wat een gezonde opleveringsdiscipline versterkt. Je kunt collega-ontwerpers bewaren als favoriet of je persoonlijke link delen voor gezamenlijke sprints. Bovendien is het platform open source onder de AGPL-3.0-licentie. Met 3 gratis wekelijkse sessies werk je je Figma-achterstanden weg, terwijl het Plus-abonnement onbeperkt coworken mogelijk maakt."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} ook inzetten voor brainstormen en moodboards maken?",
+          "a": "Ja. Je kunt sessies benutten voor conceptschetsen, digitale moodboards, typografisch onderzoek, wireframing of definitieve bestandsexports. Benoem simpelweg de specifieke ontwerpfase tijdens de begroeting, zodat je gefocust aan die taak blijft werken."
+        },
+        {
+          "q": "Moet ik mijn Figma-bestanden of scherm tonen aan mijn partner?",
+          "a": "Nee. Je deelt je beeldscherm nooit en toont je werkomgeving niet. Alleen je webcam is ingeschakeld terwijl je microfoon gedempt blijft. Klantprojecten, prototypes en schetsen blijven te allen tijde strikt vertrouwelijk op je eigen computer."
+        },
+        {
+          "q": "Kunnen ontwerpbureaus en designteams samenwerken op {app}?",
+          "a": "Ja. Studio's kunnen besloten bedrijfsruimtes inrichten om tijdens gezamenlijke sprintdagen samen te zitten. Daarnaast maken aankomende groepssessies het mogelijk om met maximaal 9 ontwerpers tegelijk in een stille focusruimte te werken aan naderende projectdeadlines."
+        },
+        {
+          "q": "Wat gebeurt er als een ontwerptaak meer tijd kost dan de geboekte sessie?",
+          "a": "Het ontwerpproces laat zich moeilijk vangen in strakke minuten. Klinkt het eindsignaal, dan markeer je de taak gewoon als deels af en benoem je hoever je bent gekomen. Je kunt direct nog een blok van 25 of 50 minuten boeken om ontspannen verder te gaan."
+        },
+        {
+          "q": "Hoe bewaakt {app} een veilige en professionele sfeer?",
+          "a": "Ieder lid moet minimaal 18 jaar oud zijn. Videoverbindingen zijn strikt realtime en worden nooit opgeslagen of opgenomen. Mocht iemand zich ongepast gedragen, dan rapporteer of blokkeer je diegene direct met één klik, wat zorgt voor een respectvolle en prettige sfeer voor alle makers."
+        }
+      ],
+      "cta": {
+        "heading": "Breng rustige focus in je volgende designsprint",
+        "body": "Blijf niet langer hangen in het verschuiven van pixels. Lever doordacht en verzorgd designwerk op door vandaag te starten met je 3 gratis wekelijkse focussessies op {app}."
+      },
+      "keywords": [
+        "body doubling voor designers",
+        "virtueel coworken ui ux ontwerpers",
+        "figma focus sprints",
+        "creatieve accountability partner",
+        "design sprint body double"
+      ]
+    },
+    {
+      "slug": "researchers",
+      "title": "Body doubling voor onderzoekers | Virtueel coworken {app}",
+      "description": "Schrijf je manuscripten, bereid subsidieaanvragen voor en verwerk datasets met rustige video-body doubling op {app}. Publiceer je onderzoek op tijd.",
+      "h1": "Stille body doubling voor wetenschappelijke onderzoekers",
+      "intro": "Of je nu werkt in biomedische laboratoria, data science-instituten of academische denktanks: onderzoek vraagt om langdurige cognitieve discipline. Het schrijven van subsidieaanvragen, het voorbereiden van artikelen voor peer-reviewed tijdschriften en het opschonen van complexe data concurreren voortdurend met commissiewerk en onderwijstaken. {app} koppelt je via video aan een andere toegewijde onderzoeker voor rustige sprints van 25, 50 of 75 minuten, wat je de vaste structuur biedt om regelmatig te publiceren.",
+      "sections": [
+        {
+          "heading": "Belangrijke subsidieaanvragen en deadlines het hoofd bieden",
+          "body": "Onderzoeksfinanciering binnenhalen vergt een weg door vermoeiende bureaucratie. Het opstellen van uitgebreide subsidievoorstellen voor nationale instanties of fondsen vraagt om gedetailleerde begrotingsverantwoordingen, heldere doelstellingen, institutionele steunbrieven en protocolcontroles. Omdat deze documenten zwaar wegen voor je wetenschappelijke loopbaan, roepen ze vaak spanning op, wat leidt tot uitstelgedrag.\n\n{app} helpt je omvangrijke voorstellen op te delen in behapbare dagelijkse schrijfsprints. Door een blok van 50 of 75 minuten in te plannen, maak je een concrete afspraak om daadwerkelijk tekst te produceren. Je doel hardop uitspreken tegen je partner neemt de eerste drempel weg. Zodra de microfoons uitstaan, helpt de stille aanwezigheid van een andere professional op camera je om scherpe, overtuigende hypothesen te formuleren zonder te worden afgeleid door e-mail of administratie."
+        },
+        {
+          "heading": "Artikelen schrijven en reviewercommentaar systematisch verwerken",
+          "body": "Het publiceren van wetenschappelijke artikelen vraagt om een lange adem, ook lang nadat laboratoriumexperimenten zijn afgerond. Het herzien van inleidingen, het beschrijven van procedures en vooral het punt voor punt reageren op kritische reviewers kan zwaar en demotiverend voelen. Veel academici stellen het opnieuw indienen maandenlang uit, simpelweg omdat kritische feedback emotioneel belastend is.\n\n{app} biedt een nuchtere, ondersteunende omgeving om lastige revisies aan te pakken. Je partner beoordeelt je artikel niet en becommentarieert je methoden niet; diegene biedt puur een rustige aanwezigheid die je aan je bureau gekluisterd houdt. Het stapsgewijs doornemen van reviewerkritiek tijdens een blok van 50 minuten verlaagt de drempel. Weten dat je aan het einde kort rapporteert, stimuleert je om je tekst systematisch aan te passen en je revisie tijdig in te sturen."
+        },
+        {
+          "heading": "Aandacht vasthouden tijdens langdurige datacuratie",
+          "body": "Moderne wetenschap leunt op nauwgezette en vaak eentonige databewerking. Het verwijderen van uitschieters in meetreeksen, het inrichten van genomische analysepijplijnen, het labelen van veldmonsters en het toetsen van statistische aannames vraagt om wekenlang geconcentreerd schermwerk. Wanneer de vooruitgang traag oogt, ligt de verleiding op de loer om alerts van tijdschriften te bekijken, academische social media te scannen of overbodige secundaire analyses te draaien.\n\nCoworken op {app} levert de constante focus die nodig is voor repetitieve data-analyses. Omdat het geluid na de korte check-in volledig uitgaat, behoud je de stilte die nodig is om code en datasets grondig te inspecteren. Zakt je energie weg of geeft een data-script een foutmelding, dan herinnert een blik op je rustige partner je aan jullie gedeelde toewijding. Je blijft zitten, corrigeert de syntax en rondt je dataverwerking af."
+        },
+        {
+          "heading": "Onderzoeksoutput monitoren en wetenschappelijke teams ondersteunen",
+          "body": "Wetenschappelijke productiviteit is een marathon, geen sprint. Een gestage routine van schrijven en analyseren voorkomt paniek rond naderende inleverdata. {app} biedt registratie van focusuren, sessietotalen en streaks waarmee je je onderzoekstijd over maanden en academische semesters heen inzichtelijk maakt.\n\nHoofdonderzoekers en labmanagers kunnen de onderlinge verantwoording stimuleren door persoonlijke boekingslinks te delen of speciale onderzoeksgroepen op te zetten. Daarnaast is {app} open source onder de AGPL-3.0-licentie en kan het lokaal worden gehost binnen instellingen voor maximale controle over gegevens. Start met 3 gratis wekelijkse sessies om je schrijfroutine te verankeren, of kies het Plus-abonnement voor onbeperkt coworken tijdens drukke subsidieperiodes."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan ik {app} gebruiken voor het doornemen van wetenschappelijke literatuur?",
+          "a": "Ja. Onderzoekers benutten sessies regelmatig om vakartikelen te lezen, methodologische notities te maken en achtergrondliteratuur samen te vatten voor nieuwe papers. Je geeft bij de begroeting simpelweg aan hoeveel publicaties of hoofdstukken je wilt doornemen."
+        },
+        {
+          "q": "Zijn mijn ongepubliceerde onderzoeksgegevens beschermd tijdens de sessie?",
+          "a": "Ja. Je deelt nooit je scherm en geeft geen vertrouwelijke onderzoeksresultaten prijs. De microfoons blijven tijdens het werkblok gedempt en videostreams worden nooit vastgelegd of opgeslagen. Bovendien kunnen instituten dit opensource-platform zelf hosten op een beveiligd eigen netwerk."
+        },
+        {
+          "q": "Kunnen onderzoekslaboratoria of wetenschappelijke consortia samenwerken?",
+          "a": "Ja. Je kunt besloten groepen aanmaken op {app}, zodat lableden en onderzoekspartners van andere universiteiten direct samen aan body doubling kunnen doen. Aankomende groepssessies maken het bovendien mogelijk om met maximaal 9 onderzoekers tegelijk gezamenlijke werksprints te houden."
+        },
+        {
+          "q": "Wat als een wetenschappelijke berekening langer duurt dan gepland?",
+          "a": "Complexe analyses laten zich zelden voorspellen. Vraagt een berekening of model meer tijd, dan markeer je de taak bij de afsluiting simpelweg als deels af en plan je direct een nieuw blok van 25 of 50 minuten om je onderzoek voort te zetten."
+        },
+        {
+          "q": "Hoe waarborgt {app} de omgangsvormen tussen deelnemers?",
+          "a": "Alle deelnemers moeten minimaal 18 jaar oud zijn. Mocht een partner de communityregels schenden of zich onprofessioneel gedragen, dan kun je diegene direct met één klik rapporteren of blokkeren. Zo blijft een betrouwbare en respectvolle omgeving voor serieus wetenschappelijk werk behouden."
+        }
+      ],
+      "cta": {
+        "heading": "Versnel je onderzoek en academische publicaties",
+        "body": "Stel veeleisende subsidieaanvragen en manuscriptrevisies niet langer uit. Sluit je aan bij collega-onderzoekers op {app} en begin vandaag met je 3 gratis wekelijkse focussessies."
+      },
+      "keywords": [
+        "body doubling voor onderzoekers",
+        "academisch onderzoek accountability",
+        "subsidieaanvraag schrijfpartner",
+        "wetenschappelijke publicaties focus",
+        "onderzoeksdata analyse partner"
+      ]
+    }
+  ]
+}
