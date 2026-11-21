@@ -29,6 +29,13 @@
       "when": 1795279751423,
       "tag": "0003_host_phases",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1795282319565,
+      "tag": "0004_private_stats_default",
+      "breakpoints": true
     }
   ]
 }

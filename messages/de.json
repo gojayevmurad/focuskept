@@ -121,7 +121,8 @@
     "skip": "Ich buche später",
     "finish": "Buchen und abschließen",
     "noSlots": "Wähle stattdessen eine beliebige Zeit im Kalender.",
-    "popular": "Beliebt"
+    "popular": "Beliebt",
+    "statsPublic": "Meine Fokusstunden und meine Serie auf meiner öffentlichen Seite zeigen (kannst du später ändern)."
   },
   "segments": {
     "remote-work": "Remote Work",
@@ -796,7 +797,11 @@
     "lead": "Starte mit drei Sessions pro Woche. Wähle Plus, wenn du mehr Raum brauchst.",
     "free": "Free",
     "freePrice": "Kostenlos",
-    "freeFeatures": ["3 Sessions pro Woche", "Partner-Matching", "Serien"],
+    "freeFeatures": [
+      "3 Sessions pro Woche",
+      "Partner-Matching",
+      "Serien"
+    ],
     "plus": "Plus",
     "plusFeatures": [
       "Unbegrenzte Sessions",

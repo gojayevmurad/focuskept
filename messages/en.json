@@ -121,7 +121,8 @@
     "skip": "I'll book later",
     "finish": "Book and finish",
     "noSlots": "Choose any time on the calendar instead.",
-    "popular": "Popular"
+    "popular": "Popular",
+    "statsPublic": "Show my focus hours and streak on my public page (you can change this later)."
   },
   "segments": {
     "remote-work": "Remote work",
@@ -796,7 +797,11 @@
     "lead": "Start with three sessions a week. Choose Plus when you want more room.",
     "free": "Free",
     "freePrice": "No charge",
-    "freeFeatures": ["3 sessions a week", "Partner matching", "Streaks"],
+    "freeFeatures": [
+      "3 sessions a week",
+      "Partner matching",
+      "Streaks"
+    ],
     "plus": "Plus",
     "plusFeatures": [
       "Unlimited sessions",

@@ -72,6 +72,7 @@ export async function completeOnboarding(
       timezone: parsed.data.timezone,
       goal: parsed.data.goal,
       segments: parsed.data.segments,
+      statsPublic: form.get("statsPublic") === "on",
       birthdateConfirmed: true,
       ageConfirmedAt: new Date(),
       onboardedAt: new Date(),

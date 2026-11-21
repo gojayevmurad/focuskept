@@ -121,7 +121,8 @@
     "skip": "Je réserverai plus tard",
     "finish": "Réserver et terminer",
     "noSlots": "Choisissez plutôt un horaire sur le calendrier.",
-    "popular": "Populaire"
+    "popular": "Populaire",
+    "statsPublic": "Afficher mes heures de concentration et ma série sur ma page publique (modifiable plus tard)."
   },
   "segments": {
     "remote-work": "Télétravail",

@@ -39,7 +39,6 @@ export default async function Page({ params, searchParams }: Props) {
   const person = await getProfileByUsername(username);
   if (!person || person.suspendedAt || !person.onboardedAt) notFound();
   const t = await getTranslations("publicProfile");
-  const s = await getTranslations("segments");
   const format = await getFormatter();
   const app = getAppConfig();
   const session = await getSession().catch(() => null);
@@ -108,15 +107,6 @@ export default async function Page({ params, searchParams }: Props) {
             </div>
           </div>
           {person.bio && <p className="lead">{person.bio}</p>}
-          {person.segments.length > 0 && (
-            <div className="chips">
-              {person.segments.map((seg) => (
-                <span key={seg} className="badge">
-                  {s.has(seg) ? s(seg) : seg}
-                </span>
-              ))}
-            </div>
-          )}
           {stats && (
             <div className="grid-3">
               <div className="card stat">

@@ -147,6 +147,10 @@ export function OnboardingForm(props: {
             ))}
           </div>
         </fieldset>
+        <label className="check">
+          <input type="checkbox" name="statsPublic" />
+          <span>{t("statsPublic")}</span>
+        </label>
         <div className="row">
           <button
             type="button"

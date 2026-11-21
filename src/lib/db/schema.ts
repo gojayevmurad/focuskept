@@ -183,7 +183,7 @@ export const profile = pgTable(
     pushReminders: boolean("push_reminders").notNull().default(true),
     microphoneDefault: boolean("microphone_default").notNull().default(true),
     matchSameSegment: boolean("match_same_segment").notNull().default(false),
-    statsPublic: boolean("stats_public").notNull().default(true),
+    statsPublic: boolean("stats_public").notNull().default(false),
     onboardedAt: time("onboarded_at"),
     suspendedAt: time("suspended_at"),
     createdAt: time("created_at").notNull().defaultNow(),

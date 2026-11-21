@@ -121,7 +121,8 @@
     "skip": "Reservaré más tarde",
     "finish": "Reservar y terminar",
     "noSlots": "O elige cualquier hora en el calendario.",
-    "popular": "Popular"
+    "popular": "Popular",
+    "statsPublic": "Mostrar mis horas de concentración y mi racha en mi página pública (puedes cambiarlo después)."
   },
   "segments": {
     "remote-work": "Trabajo remoto",

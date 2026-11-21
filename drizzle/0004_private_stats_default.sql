@@ -1,0 +1,1 @@
+ALTER TABLE "profile" ALTER COLUMN "stats_public" SET DEFAULT false;

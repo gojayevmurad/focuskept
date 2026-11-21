@@ -70,3 +70,7 @@ A report always blocks the reported person for the reporter as well. An account 
 ## D17. Next.js 16.4.6
 
 The boilerplate pinned 16.4.2, which has a published security issue. Upgraded to the patched 16.4.6.
+
+## D18. Private by default
+
+Focus stats on the public page and share cards are off until the person turns them on (onboarding or Settings). Work types like "ADHD" are used for matching but never shown on public pages, since they can reveal health information.

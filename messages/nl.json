@@ -121,7 +121,8 @@
     "skip": "Ik boek later",
     "finish": "Boeken en voltooien",
     "noSlots": "Kies in plaats daarvan een willekeurige tijd op de kalender.",
-    "popular": "Populair"
+    "popular": "Populair",
+    "statsPublic": "Mijn focusuren en reeks tonen op mijn openbare pagina (kun je later aanpassen)."
   },
   "segments": {
     "remote-work": "Op afstand werken",
@@ -796,7 +797,11 @@
     "lead": "Begin met drie sessies per week. Kies Plus wanneer je meer ruimte wilt.",
     "free": "Free",
     "freePrice": "Kosteloos",
-    "freeFeatures": ["3 sessies per week", "Partnerkoppeling", "Reeksen"],
+    "freeFeatures": [
+      "3 sessies per week",
+      "Partnerkoppeling",
+      "Reeksen"
+    ],
     "plus": "Plus",
     "plusFeatures": [
       "Onbeperkt aantal sessies",
