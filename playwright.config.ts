@@ -6,8 +6,9 @@ export default defineConfig({
   globalSetup: "./tests/e2e/global-setup.ts",
   fullyParallel: false,
   workers: 1,
-  timeout: 120_000,
-  expect: { timeout: 10_000 },
+  // CI runners compile dev routes slowly on first use.
+  timeout: process.env.CI ? 300_000 : 120_000,
+  expect: { timeout: process.env.CI ? 30_000 : 10_000 },
   use: {
     baseURL: process.env.E2E_BASE_URL || "http://localhost:3000",
     trace: "retain-on-failure",
