@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 // Contract between the UI and the video providers. The UI imports only this
 // file and `client/index.ts`; it never talks to a provider directly.
 

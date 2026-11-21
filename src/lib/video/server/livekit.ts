@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { AccessToken } from "livekit-server-sdk";
 import type { VideoServerProvider } from "../types";

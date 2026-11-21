@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { z } from "zod";
 import { getSession } from "@/src/lib/auth/session";
 import { getEnv } from "@/src/config/env";

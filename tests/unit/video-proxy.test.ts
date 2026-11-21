@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { describe, expect, it } from "vitest";
 import { canPull } from "@/src/lib/video/server/rules";
 import { requestSchemas } from "@/src/lib/video/protocol";

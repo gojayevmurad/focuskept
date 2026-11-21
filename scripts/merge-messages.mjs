@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 // Deep-merges a JSON patch into messages/<locale>.json: node scripts/merge-messages.mjs en patch.json
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 const [locale, patchFile] = process.argv.slice(2);

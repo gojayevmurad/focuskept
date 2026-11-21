@@ -1,5 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useState, useSyncExternalStore } from "react";
 import { useTranslations, useFormatter } from "next-intl";
 import { LoaderCircle, Users } from "lucide-react";
 import { SEGMENTS } from "@/src/lib/profiles/rules";
@@ -19,26 +20,29 @@ export function OnboardingForm(props: {
   const s = useTranslations("segments");
   const c = useTranslations("common");
   const format = useFormatter();
+  const [step, setStep] = useState(1);
   const [state, action, pending] = useActionState<OnboardingState, FormData>(
-    completeOnboarding,
+    async (prev, form) => {
+      const result = await completeOnboarding(prev, form);
+      if (result.error?.startsWith("username") || result.error === "age")
+        setStep(1);
+      return result;
+    },
     {},
   );
-  const [step, setStep] = useState(1);
   const [username, setUsername] = useState(props.username);
-  const [timezone, setTimezone] = useState(props.timezone);
+  // The browser knows the real zone; the stored value is only a default.
+  const detected = useSyncExternalStore(
+    () => () => {},
+    () => Intl.DateTimeFormat().resolvedOptions().timeZone || props.timezone,
+    () => props.timezone,
+  );
+  const [chosen, setTimezone] = useState<string | null>(null);
+  const timezone =
+    chosen ??
+    (props.timezone === "America/New_York" ? detected : props.timezone);
   const [slot, setSlot] = useState("");
   const [duration, setDuration] = useState(50);
-
-  useEffect(() => {
-    // Only replace the stored default when the browser knows better.
-    const detected = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    if (detected && props.timezone === "America/New_York")
-      setTimezone(detected);
-  }, [props.timezone]);
-  useEffect(() => {
-    if (state.error?.startsWith("username") || state.error === "age")
-      setStep(1);
-  }, [state]);
 
   const errorText =
     state.error === "username_taken"

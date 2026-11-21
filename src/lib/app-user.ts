@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { cache } from "react";
 import { getLocale } from "next-intl/server";

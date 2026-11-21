@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./src/i18n/routing";
 

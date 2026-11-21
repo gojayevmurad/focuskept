@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import type { Metadata } from "next";
 import { and, eq } from "drizzle-orm";
 import { getTranslations } from "next-intl/server";

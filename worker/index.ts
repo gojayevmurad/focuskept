@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { PgBoss } from "pg-boss";
 import { getEnv } from "@/src/config/env";
 import { logger } from "@/src/lib/logger";

@@ -1,5 +1,11 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
-import { useActionState, useEffect, useState } from "react";
+import {
+  useActionState,
+  useEffect,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import { useTranslations } from "next-intl";
 import { LoaderCircle } from "lucide-react";
 import { authClient } from "@/src/lib/auth/client";
@@ -201,17 +207,24 @@ function urlBase64ToBytes(base64: string) {
 
 function PushToggle({ publicKey }: { publicKey: string }) {
   const t = useTranslations("settings");
-  const [status, setStatus] = useState<"unsupported" | "off" | "on" | "denied">(
-    "off",
+  const support = useSyncExternalStore(
+    () => () => {},
+    () =>
+      !("serviceWorker" in navigator) || !("PushManager" in window)
+        ? "unsupported"
+        : Notification.permission === "denied"
+          ? "denied"
+          : "ok",
+    () => "ok",
   );
+  const [subscribed, setStatus] = useState<"off" | "on" | "denied">("off");
   useEffect(() => {
-    if (!("serviceWorker" in navigator) || !("PushManager" in window))
-      return setStatus("unsupported");
-    if (Notification.permission === "denied") return setStatus("denied");
+    if (support !== "ok") return;
     navigator.serviceWorker.getRegistration("/sw.js").then(async (reg) => {
       if (reg && (await reg.pushManager.getSubscription())) setStatus("on");
     });
-  }, []);
+  }, [support]);
+  const status = support === "ok" ? subscribed : support;
   async function enable() {
     const reg = await navigator.serviceWorker.register("/sw.js");
     const permission = await Notification.requestPermission();
@@ -380,7 +393,7 @@ export function DeleteAccount({ hasPassword }: { hasPassword: boolean }) {
         );
         setBusy(false);
         if (result.error) setMessage(result.error.message || t("deleteFailed"));
-        else location.assign("/");
+        else window.location.replace(window.location.origin);
       }}
     >
       {hasPassword && (

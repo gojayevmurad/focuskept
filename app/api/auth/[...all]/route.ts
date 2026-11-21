@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { withRequestLogging } from "@/src/lib/security/request";
 import { toNextJsHandler } from "better-auth/next-js";
 import { auth } from "@/src/lib/auth";

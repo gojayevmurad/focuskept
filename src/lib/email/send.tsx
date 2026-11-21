@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { Resend } from "resend";
 import { Html, Body, Container, Heading, Text, Button } from "react-email";

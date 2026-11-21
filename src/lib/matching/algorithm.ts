@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 // Pairing for one slot (same start, same duration). Pure: no I/O, deterministic.
 
 export type Candidate = {

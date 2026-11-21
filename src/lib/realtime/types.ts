@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 export type Topic = `user:${string}` | `session:${string}`;
 
 export type RealtimeEvent =

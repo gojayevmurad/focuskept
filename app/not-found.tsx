@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+import Link from "next/link";
 import "./globals.css";
 
 export default function NotFound() {
@@ -6,9 +8,9 @@ export default function NotFound() {
       <body>
         <main className="empty-state">
           <h1>Page not found</h1>
-          <a className="button" href="/">
+          <Link className="button" href="/">
             Go home
-          </a>
+          </Link>
         </main>
       </body>
     </html>

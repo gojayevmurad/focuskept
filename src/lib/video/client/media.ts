@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 export type MediaErrorCode = "denied" | "not_found" | "in_use" | "unknown";
 
 export class LocalMediaError extends Error {

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { eq, or } from "drizzle-orm";
 import { getSession } from "@/src/lib/auth/session";
 import { db } from "@/src/lib/db";

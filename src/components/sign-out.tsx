@@ -1,11 +1,14 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
 import { useTranslations } from "next-intl";
 import { LogOut } from "lucide-react";
+import { useRouter } from "@/src/i18n/navigation";
 import { authClient } from "@/src/lib/auth/client";
 import { resetAnalytics } from "@/src/lib/analytics/client";
 
 export function SignOut({ compact = false }: { compact?: boolean }) {
   const t = useTranslations("common");
+  const router = useRouter();
   return (
     <button
       className={compact ? "button ghost small icon" : "button ghost small"}
@@ -13,7 +16,8 @@ export function SignOut({ compact = false }: { compact?: boolean }) {
       onClick={async () => {
         await authClient.signOut();
         resetAnalytics();
-        location.assign("/sign-in");
+        router.push("/sign-in");
+        router.refresh();
       }}
     >
       <LogOut size={16} />

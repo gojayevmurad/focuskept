@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { eq, sql } from "drizzle-orm";
 import { db } from "@/src/lib/db";
 import { getEnv } from "@/src/config/env";

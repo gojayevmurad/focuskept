@@ -586,5 +586,408 @@
     "takeSeat": "Take a seat",
     "signUp": "Sign up to join",
     "none": "No sessions scheduled right now."
+  },
+  "home": {
+    "title": "{app} — Get it done with someone beside you",
+    "description": "Book a quiet video focus session, share a goal, and work alongside an accountability partner.",
+    "heading": "Get it done with someone beside you",
+    "lead": "Book a time. Meet a partner on video. Say what you plan to do, work quietly together, and check in at the end. A little company for the work in front of you.",
+    "start": "Get started free",
+    "how": "How it works",
+    "skip": "Skip to content",
+    "visual": "An example focus session",
+    "example": "Example session",
+    "focus": "Quiet focus time",
+    "timer": "Time remaining",
+    "alex": "Alex",
+    "sam": "Sam",
+    "alexGoal": "Draft the first two paragraphs",
+    "samGoal": "Review one practice set",
+    "note": "Camera on. Microphone optional. Never recorded.",
+    "stepsTitle": "A time, a person, a little progress",
+    "steps": [
+      {
+        "title": "Book a time",
+        "body": "Choose a 25, 50, or 75-minute session that fits your day."
+      },
+      {
+        "title": "Share one goal",
+        "body": "Meet your partner on video and name a small, concrete next step."
+      },
+      {
+        "title": "Work, then check in",
+        "body": "Work quietly with your camera on. At the end, share how it went."
+      }
+    ],
+    "featuresTitle": "Make room for the way you work",
+    "features": [
+      {
+        "title": "One partner or a hosted group",
+        "body": "Work one-on-one or share a quiet room led by a host."
+      },
+      {
+        "title": "25, 50, or 75 minutes",
+        "body": "Pick a short start or a longer stretch. Leave room for a break."
+      },
+      {
+        "title": "Keep good company",
+        "body": "Share your personal booking link. With Plus, save favorite partners."
+      },
+      {
+        "title": "See your effort add up",
+        "body": "Use streaks and focus stats to notice the time you have made for your work."
+      },
+      {
+        "title": "Your boundaries matter",
+        "body": "Report or block someone whenever you need to. The service is for adults 18 and older."
+      },
+      {
+        "title": "Live company, no recordings",
+        "body": "We never record sessions. Keep private documents off camera and work on your own screen."
+      }
+    ],
+    "audienceTitle": "Bring the work you have today",
+    "audiences": {
+      "adhd": "ADHD",
+      "students": "Students",
+      "bar": "Bar exam",
+      "mcat": "MCAT",
+      "writers": "Writers",
+      "developers": "Developers",
+      "freelancers": "Freelancers",
+      "founders": "Founders",
+      "remote": "Remote workers",
+      "researchers": "Researchers"
+    },
+    "sourceTitle": "Open source, with room to make it yours",
+    "sourceBody": "The software is licensed under AGPL-3.0. Read the code, contribute, or self-host your own instance.",
+    "sourceLink": "View the code on GitHub",
+    "faqTitle": "A few things you might be wondering",
+    "allFaq": "Read all questions",
+    "ctaTitle": "Bring one task. We’ll make room.",
+    "ctaBody": "You do not need a perfect plan. Pick a time and a small place to start."
+  },
+  "how": {
+    "title": "How a focus session works | {app}",
+    "description": "From booking to the closing check-in: session lengths, matching, etiquette, and safety.",
+    "heading": "A simple rhythm for focused work",
+    "lead": "A focus session gives your task a beginning and an end, with another person working alongside you.",
+    "stages": [
+      {
+        "title": "Before: choose a manageable task",
+        "body": "Book a session for 25, 50, or 75 minutes. Set out what you need, test your camera, and close unrelated tabs. Pick a goal you can describe in a sentence."
+      },
+      {
+        "title": "Intro: say hello and share your goal",
+        "body": "Join on time with your camera on. Give your partner a brief greeting and name what you will work on. Your tasks do not need to be related. Keep personal details private."
+      },
+      {
+        "title": "Focus: work quietly together",
+        "body": "Keep your camera on and work on your own task. Your microphone is optional; mute it when you are not speaking. If your attention drifts, return to the next small action."
+      },
+      {
+        "title": "Wrap-up: tell each other how it went",
+        "body": "Share what you did and mark your outcome as done, partial, or not done. You can make progress without finishing. Thank your partner and take a break before another session."
+      }
+    ],
+    "matchingTitle": "How matching works",
+    "matchingBody": "We match people with the same start time and session length, prioritizing preferred and favorite partners while respecting blocks. Your partner is assigned five minutes before the session. A late booking is matched as soon as possible.",
+    "fallbackBody": "If nobody is available, you can join the open room, move to the next slot with someone waiting, or cancel without penalty. A booking does not guarantee a one-on-one partner.",
+    "etiquetteTitle": "A shared space, with simple expectations",
+    "etiquetteBody": "Keep your camera on. Your microphone is optional. Be kind, keep greetings brief, and respect quiet work. Do not record, promote services, or comment on someone’s appearance.",
+    "safetyTitle": "You can set a boundary",
+    "safetyBody": "The service is for adults 18 and older. We never record sessions. You can leave, report, or block someone; blocks prevent future matching. Keep sensitive information out of view.",
+    "faqTitle": "Before your first session"
+  },
+  "faqPage": {
+    "title": "Frequently asked questions | {app}",
+    "description": "Answers about getting started, focus sessions, safety, privacy, and plans.",
+    "heading": "Questions, answered",
+    "lead": "Here is what to expect before you book a little company for your work.",
+    "groups": [
+      {
+        "title": "Getting started",
+        "items": [
+          {
+            "q": "What is body doubling?",
+            "a": "Body doubling means doing your own task with another person present. On a video session, you share a goal, work quietly, and check in at the end. It is a practical work routine, not medical treatment."
+          },
+          {
+            "q": "Who can join?",
+            "a": "Adults 18 and older can use the service for work, studying, writing, or everyday tasks. You do not need a diagnosis or a particular kind of job."
+          },
+          {
+            "q": "What do I need for my first session?",
+            "a": "A working camera, an internet connection, and one task. Choose a private, appropriate setting and test your camera before the session."
+          }
+        ]
+      },
+      {
+        "title": "Sessions",
+        "items": [
+          {
+            "q": "How long are sessions?",
+            "a": "Choose 25, 50, or 75 minutes. Sessions start on the hour or half hour. Your calendar displays times in your time zone."
+          },
+          {
+            "q": "How is my partner chosen?",
+            "a": "We match people with the same start time and length, with preferred and favorite partners first. Blocks are always respected. Your partner is assigned five minutes before the start."
+          },
+          {
+            "q": "What if there is nobody to match with?",
+            "a": "You can join the open room, move to the next slot with someone waiting, or cancel without penalty. Matching depends on who has booked."
+          },
+          {
+            "q": "Do I have to speak or share my screen?",
+            "a": "Keep your camera on. Your microphone is optional, and you can keep it muted while working. You do not need to share your screen or explain private details."
+          },
+          {
+            "q": "What if I do not finish my goal?",
+            "a": "Mark your outcome as partial or not done and share a brief, honest check-in. A session is a place to work, not a test you have to pass."
+          },
+          {
+            "q": "Can I cancel a booking?",
+            "a": "Cancel at least one hour before the start to avoid a late cancellation. If you cannot attend, cancel rather than leaving a partner waiting. Unmatched fallback cancellations have no penalty."
+          }
+        ]
+      },
+      {
+        "title": "Safety and privacy",
+        "items": [
+          {
+            "q": "Are sessions recorded?",
+            "a": "No. We never record or store session video or audio. Your partner can still see your surroundings, so keep sensitive information out of view. Recording other participants is prohibited."
+          },
+          {
+            "q": "How do I report or block someone?",
+            "a": "Use the report or block controls in the session. Reporting also blocks the person and sends details to our team. You will not be matched with a blocked person again."
+          },
+          {
+            "q": "Can I export or delete my data?",
+            "a": "Use data export and account deletion in Settings. Contact support if you need help exercising your privacy rights. Our privacy policy explains retention and legal exceptions."
+          }
+        ]
+      },
+      {
+        "title": "Plans",
+        "items": [
+          {
+            "q": "What is included in Free?",
+            "a": "Free includes three sessions a week, matching, and streaks. When billing is disabled on an instance, all members have Plus access."
+          },
+          {
+            "q": "What does Plus include?",
+            "a": "Plus includes unlimited sessions, favorite partners, and advanced matching filters. Where billing is enabled, you can choose monthly or yearly billing with a seven-day free trial. The yearly plan is billed yearly."
+          },
+          {
+            "q": "How do I cancel a subscription?",
+            "a": "Open the billing customer portal in Settings. Cancel before your trial ends to avoid its first charge, or before renewal to avoid the next charge. Checkout and the portal show the applicable dates and amounts."
+          }
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Free and Plus plans | {app}",
+    "description": "Start with three free sessions a week or choose Plus for unlimited sessions, favorites, and advanced filters.",
+    "heading": "Make space for a regular habit",
+    "lead": "Start with three sessions a week. Choose Plus when you want more room.",
+    "free": "Free",
+    "freePrice": "No charge",
+    "freeFeatures": ["3 sessions a week", "Partner matching", "Streaks"],
+    "plus": "Plus",
+    "plusFeatures": [
+      "Unlimited sessions",
+      "Favorite partners",
+      "Advanced matching filters"
+    ],
+    "trial": "7-day free trial",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "perMonth": "per month",
+    "perYear": "per year, billed yearly",
+    "fallback": "See price at checkout",
+    "trialBody": "Try Plus free for 7 days. Your subscription renews automatically after the trial unless you cancel. Review the amount, currency, taxes, and renewal date at checkout.",
+    "cancel": "Cancel through the customer portal in Settings before your trial ends or your next renewal."
+  },
+  "blog": {
+    "title": "Practical notes on focus | {app}",
+    "description": "Useful guides to body doubling, study sessions, accountability, and virtual coworking.",
+    "heading": "A little help getting started",
+    "lead": "Practical notes for the days when doing the work takes a little structure.",
+    "read": "Read article",
+    "back": "All articles",
+    "published": "Published",
+    "by": "By {author}"
+  },
+  "seo": {
+    "home": "Home",
+    "related": "Related pages",
+    "howTitle": "How a session works",
+    "howBody": "Book 25, 50, or 75 minutes. Meet on video, share one goal, work quietly with your camera on, and check in at the end.",
+    "faq": "Common questions",
+    "explore": "Explore a way to work together",
+    "templates": {
+      "body-doubling-for": "Body doubling for your day",
+      "study-with-me": "Study with a little company",
+      "virtual-coworking-for": "Virtual coworking for your work",
+      "alternatives": "Compare coworking approaches"
+    },
+    "descriptions": {
+      "body-doubling-for": "Find a quiet accountability routine for the tasks and days you have.",
+      "study-with-me": "Plan focused study blocks with another person working alongside you.",
+      "virtual-coworking-for": "Make time for independent work with quiet company on video.",
+      "alternatives": "Understand different ways to find structure and company while you work."
+    }
+  },
+  "legal": {
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "updated": "Last updated: November 21, 2026",
+    "contact": "Contact us"
+  },
+  "admin": {
+    "nav": {
+      "overview": "Admin overview",
+      "users": "Users",
+      "reports": "Reports",
+      "hosts": "Hosts",
+      "challenges": "Challenges",
+      "groups": "Groups",
+      "house": "House"
+    },
+    "navigation": "Admin navigation",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "empty": "No results.",
+    "unavailable": "Not available",
+    "operations": "Operations",
+    "period": "Last {days} days",
+    "metrics": {
+      "signups": "New signups",
+      "bookings": "Bookings created",
+      "completed": "Sessions completed",
+      "matchRate": "Match rate",
+      "noShowRate": "No-show rate",
+      "lateCancels": "Late cancellations",
+      "plus": "Active Plus subscriptions",
+      "reports": "Open reports",
+      "hosts": "Pending host applications"
+    },
+    "metricNotes": "Signups and new bookings use their creation dates. Other period metrics use session start times. Match rate counts paired bookings with a session against those bookings plus failures, excluding failures matched late. No-show rate is no-shows divided by completed bookings plus no-shows. Empty rates display as 0%. Subscription and queue counts reflect the current state.",
+    "video": "Latest video usage",
+    "videoValue": "{month}: {gb} GB",
+    "heartbeat": "Worker heartbeat",
+    "columns": {
+      "name": "Name",
+      "email": "Email",
+      "username": "Username",
+      "created": "Created",
+      "role": "Role",
+      "flags": "Flags",
+      "completed": "Completed sessions",
+      "actions": "Actions",
+      "reporter": "Reporter",
+      "target": "Target",
+      "reason": "Reason",
+      "details": "Details",
+      "session": "Session ID",
+      "reports30": "Reports in 30 days",
+      "status": "Status",
+      "pitch": "Pitch",
+      "audience": "Audience URL",
+      "rating": "Rating",
+      "hosted": "Sessions hosted",
+      "perkUntil": "Perk until",
+      "title": "Title",
+      "members": "Members",
+      "owner": "Owner",
+      "plusSeats": "Plus seats",
+      "licenseUntil": "Licence ends (UTC)",
+      "slot": "Slot time",
+      "duration": "Duration",
+      "waiting": "Waiting member"
+    },
+    "search": "Search by email, name or username",
+    "searchButton": "Search",
+    "userLimit": "Up to 50 users, newest first.",
+    "noProfile": "Profile not created yet.",
+    "roles": {
+      "admin": "Admin",
+      "user": "User"
+    },
+    "suspended": "Suspended",
+    "houseAccount": "House account",
+    "suspend": "Suspend",
+    "unsuspend": "Unsuspend",
+    "makeAdmin": "Make admin",
+    "removeAdmin": "Remove admin",
+    "houseOn": "Enable house mode",
+    "houseOff": "Disable house mode",
+    "openReports": "Open reports",
+    "resolvedReports": "Last 50 resolved reports",
+    "dismiss": "Dismiss",
+    "suspendTarget": "Suspend target and mark actioned",
+    "reportStatus": {
+      "open": "Open",
+      "dismissed": "Dismissed",
+      "actioned": "Actioned"
+    },
+    "reasons": {
+      "inappropriate": "Inappropriate behaviour",
+      "harassment": "Harassment",
+      "no_camera": "No camera",
+      "spam": "Spam",
+      "underage": "Underage",
+      "other": "Other"
+    },
+    "applications": "Host applications",
+    "approvedHosts": "Approved and suspended hosts",
+    "approve": "Approve",
+    "reject": "Reject",
+    "hostStatus": {
+      "applied": "Applied",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "suspended": "Suspended"
+    },
+    "createChallenge": "Create challenge",
+    "existingChallenges": "Existing challenges",
+    "slug": "Slug",
+    "description": "Description",
+    "startsAt": "Starts on (UTC)",
+    "endsAt": "Ends on (UTC, exclusive)",
+    "goalType": "Goal type",
+    "sessions": "Sessions",
+    "hours": "Hours",
+    "goalHours": "Goal in hours (stored as minutes)",
+    "goalSessions": "Goal in sessions",
+    "utcDates": "Dates use UTC midnight. The end date is exclusive.",
+    "challengeStarted": "This challenge has started and cannot be deleted.",
+    "members": "{count} members",
+    "licenseHelp": "B2B licences are managed here after invoicing. Set 0–10,000 Plus seats and an end date. Dates use UTC midnight; access ends at the start of that date. Clear the date to remove the licence.",
+    "confirmDelete": "Type DELETE to permanently delete this group and its memberships.",
+    "houseHelp": "Help a waiting member by booking a pair session as yourself. Times are shown in {timezone}.",
+    "houseRequired": "Enable house mode on your own row in Users to book as house.",
+    "waitingSlots": "Slots with one member waiting in the next 24 hours",
+    "bookHouse": "Book as house",
+    "ownHouseBookings": "Your upcoming house bookings",
+    "houseBookingNote": "All your upcoming pair bookings are shown. Bookings do not store whether house mode was enabled when they were made.",
+    "minutes": "{count} min",
+    "bookingStatus": {
+      "booked": "Booked",
+      "matched": "Matched"
+    },
+    "openSession": "Open session",
+    "errors": {
+      "invalid": "Check the form values, dates and confirmation text.",
+      "failed": "The change could not be completed. Refresh and try again.",
+      "selfRole": "You cannot remove your own admin role.",
+      "notFound": "This item or waiting slot changed. Refresh and try again.",
+      "houseRequired": "Enable house mode on your own row in Users first."
+    }
   }
 }

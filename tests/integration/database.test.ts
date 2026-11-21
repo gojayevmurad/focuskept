@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { createHmac } from "node:crypto";
 import { POST } from "@/app/api/webhooks/polar/route";
 import { beforeAll, afterAll, it, expect, vi } from "vitest";

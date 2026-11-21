@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { withRequestLogging } from "@/src/lib/security/request";
 import { webhooks } from "@polar-sh/sdk/2026-10";
 import { getEnv } from "@/src/config/env";

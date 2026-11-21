@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use server";
 import { z } from "zod";
 import { eq } from "drizzle-orm";

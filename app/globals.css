@@ -1511,3 +1511,33 @@ dialog.dialog::backdrop {
     animation: none !important;
   }
 }
+
+/* ---------- Marketing extras ---------- */
+.marketing-shell {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  overflow-wrap: anywhere;
+}
+.marketing-shell .prose section > * + * {
+  margin-top: 1em;
+}
+.marketing-shell .cta-band .button {
+  color: #2f6f62;
+}
+[data-theme="dark"] .marketing-shell {
+  --accent-ink: #121614;
+}
+@media (max-width: 760px) {
+  .marketing-shell .site-header-inner {
+    gap: 8px;
+  }
+  .marketing-shell .header-actions {
+    gap: 4px;
+  }
+  .marketing-shell .logo {
+    font-size: 16px;
+  }
+  .marketing-shell .header-actions .button.small {
+    padding: 0 10px;
+    font-size: 13px;
+  }
+}

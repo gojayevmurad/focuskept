@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 // Creates verified local test accounts through the real auth API (development only).
 // Usage: node --env-file=.env.local scripts/dev-users.mjs alice@example.test bob@example.test
 import pg from "pg";

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
 import { useTransition } from "react";
 import { Star } from "lucide-react";

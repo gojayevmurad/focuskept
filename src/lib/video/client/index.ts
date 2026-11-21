@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import type { JoinCredentials, VideoClient } from "../types";
 
 export async function createVideoClient(

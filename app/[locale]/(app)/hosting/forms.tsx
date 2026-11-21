@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
 import { useActionState, useMemo, useState, useTransition } from "react";
 import { useFormatter, useTranslations } from "next-intl";

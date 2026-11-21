@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { Slot } from "@radix-ui/react-slot";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";

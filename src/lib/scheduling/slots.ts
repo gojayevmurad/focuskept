@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { TZDate } from "@date-fns/tz";
 import { startOfWeek, addWeeks, startOfDay, addDays } from "date-fns";
 

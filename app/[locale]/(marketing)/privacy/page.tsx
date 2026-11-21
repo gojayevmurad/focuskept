@@ -1,23 +1,50 @@
-import { SiteHeader } from "@/src/components/site-header";
-export default function Page() {
+// SPDX-License-Identifier: AGPL-3.0-only
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getAppConfig } from "@/src/config/app";
+import { Link } from "@/src/i18n/navigation";
+import { pageMetadata, type LocaleProps } from "@/src/lib/content/marketing";
+import { sections } from "@/src/components/marketing/privacy-content";
+export async function generateMetadata({ params }: LocaleProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("legal");
+  return pageMetadata(
+    `${t("privacy")} | ${getAppConfig().name}`,
+    t("privacy"),
+    "/privacy",
+  );
+}
+export default async function Legal({ params }: LocaleProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("legal");
+  const app = getAppConfig();
+  const replace = (text: string) =>
+    text.replaceAll("{app}", app.name).replaceAll("{email}", app.supportEmail);
   return (
-    <>
-      <SiteHeader />
-      <main className="legal">
-        <span className="overline">EDITABLE TEMPLATE</span>
-        <h1>Privacy policy</h1>
-        <p className="notice">
-          This is a placeholder. Replace it with a reviewed policy for your
-          product and jurisdiction before launch.
-        </p>
-        <h2>Your product, your policies</h2>
+    <div className="container">
+      <header className="page-head">
+        <h1>{t("privacy")}</h1>
+        <p className="muted">{t("updated")}</p>
+      </header>
+      <article className="prose">
+        {sections.map((section) => (
+          <section key={section.heading}>
+            <h2>{section.heading}</h2>
+            {section.body.split("\n\n").map((paragraph, i) => (
+              <p key={i}>{replace(paragraph)}</p>
+            ))}
+          </section>
+        ))}
         <p>
-          Document your business identity, data processing, subprocessors,
-          retention, user rights, contact information, service terms, payments,
-          refunds, and applicable law.
+          <a href={`mailto:${app.supportEmail}`}>
+            {t("contact")}: {app.supportEmail}
+          </a>
         </p>
-        <p>This template does not represent legal compliance.</p>
-      </main>
-    </>
+        <p>
+          <Link href="/terms">{t("terms")}</Link>
+        </p>
+      </article>
+    </div>
   );
 }

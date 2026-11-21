@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { getSession } from "@/src/lib/auth/session";
 import { subscribe } from "@/src/lib/realtime/bus";
 import { getParticipant } from "@/src/lib/sessions/access";

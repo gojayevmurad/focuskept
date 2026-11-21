@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { build } from "esbuild";
 
 // Bundles the worker into one CommonJS file for the production image.

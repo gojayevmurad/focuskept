@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -142,9 +143,9 @@ export function AuthForm({
           </label>
         )}
         {!forgot && (
-          <label className="field">
+          <div className="field">
             <span>
-              {t("password")}
+              <label htmlFor="auth-password">{t("password")}</label>
               {mode === "sign-in" && (
                 <Link href="/forgot-password" className="link small">
                   {t("forgot")}
@@ -152,6 +153,7 @@ export function AuthForm({
               )}
             </span>
             <input
+              id="auth-password"
               name="password"
               type="password"
               autoComplete={
@@ -162,7 +164,7 @@ export function AuthForm({
               maxLength={128}
               placeholder={t("passwordPlaceholder")}
             />
-          </label>
+          </div>
         )}
         {signup && (
           <label className="check">

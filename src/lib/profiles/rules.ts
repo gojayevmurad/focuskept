@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 // Pure profile rules, shared by forms and the server.
 
 export const SEGMENTS = [

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { matchDueSlots, offerFallbacks } from "@/src/lib/matching/run";
 import {
   bookingsNeedingReminder,

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { Client } from "pg";
 import { getEnv } from "@/src/config/env";

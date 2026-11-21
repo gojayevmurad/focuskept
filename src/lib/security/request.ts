@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { logger } from "@/src/lib/logger";
 import { captureException } from "@sentry/nextjs";

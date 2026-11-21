@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { requireAppUser } from "@/src/lib/app-user";

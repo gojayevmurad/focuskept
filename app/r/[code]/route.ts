@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { NextResponse } from "next/server";
 import { getProfileByReferralCode, REFERRAL_COOKIE } from "@/src/lib/profiles";
 import { safeRedirect } from "@/src/lib/security/validation";

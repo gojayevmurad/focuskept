@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { Link } from "@/src/i18n/navigation";
 
 /** Two overlapping circles: two people, one session. */

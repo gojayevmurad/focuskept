@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { it, expect, vi } from "vitest";
 import { POST } from "@/app/api/webhooks/polar/route";
 it("rejects an unsigned webhook before database access", async () => {

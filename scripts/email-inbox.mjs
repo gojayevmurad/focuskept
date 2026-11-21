@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import pg from "pg";
 if (process.env.NODE_ENV === "production")
   throw new Error("Development inbox is disabled in production");

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 export type AnalyticsEvent =
   | "user_signed_up"
   | "user_logged_in"

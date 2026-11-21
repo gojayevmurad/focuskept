@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { ImageResponse } from "next/og";
 import { getProfileByUsername } from "@/src/lib/profiles";
 import { userStats } from "@/src/lib/growth/stats";

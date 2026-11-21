@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { getTranslations } from "next-intl/server";
 import {
   CalendarPlus,

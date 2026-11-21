@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
 import { useTranslations } from "next-intl";
 import { Download, Share2 } from "lucide-react";

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { defineRouting } from "next-intl/routing";
 
 // Add a locale here and in messages/ to ship it. English stays unprefixed.

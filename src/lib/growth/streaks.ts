@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 // Pure streak math over completed sessions. Days and weeks are in the user's zone.
 import { localDayKey, weekBounds } from "@/src/lib/scheduling/slots";
 

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { lt, sql } from "drizzle-orm";
 import { db } from "@/src/lib/db";
 import { appConfig, emailPreview, rateLimit } from "@/src/lib/db/schema";

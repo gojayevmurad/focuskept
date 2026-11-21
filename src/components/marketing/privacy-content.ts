@@ -1,0 +1,55 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+export const sections = [
+  {
+    heading: "Who is responsible",
+    body: "This policy explains how {app}, the operator of this hosted virtual coworking service, handles personal information. It covers our website, accounts, bookings, focus sessions, and support. Contact {email} with privacy questions or requests. A separately operated, self-hosted instance has its own operator and privacy responsibilities.",
+  },
+  {
+    heading: "Information we collect",
+    body: "Account information includes your email address, name, authentication details, verification status, account preferences, and optional connected sign-in account information. We store password authentication information securely rather than keeping a readable password. Your profile may include a username, display name, avatar, bio, time zone, interests or segments, and your confirmation that you are at least 18.\n\nWe store bookings, session participation and attendance, goals and outcomes you submit, favorites, blocks, group membership, host activity and ratings, referral records, and progress information such as streaks and focus time. Goals and profile text are your choice: avoid including medical, financial, client, or other sensitive information. Partners can see the identity and goal information needed for a session. A public profile or personal booking link exposes the information you choose to publish.\n\nSafety information includes reports, the reason and details supplied, relevant account and session identifiers, and moderation decisions. Support correspondence includes the information you send us. Technical information can include IP addresses, browser and device information, request timestamps, authentication and security events, error reports, and connection-quality measurements. We do not need access to the documents or applications you work on.",
+  },
+  {
+    heading: "Live video and audio",
+    body: "Video and audio pass through Cloudflare Realtime or LiveKit, depending on the video provider configured for the service. These providers handle live media and connection information to connect participants. We never record or store session video or audio. Live transport necessarily processes the media while you are connected.\n\nOther participants can see your camera feed and hear you when your microphone is enabled. Keep confidential material out of view. Our terms prohibit recording other participants, but no service can guarantee that another person will follow every rule. You may leave, block, or report someone who violates your boundaries.",
+  },
+  {
+    heading: "Why we use information and our legal bases",
+    body: "We use account, profile, booking, and participation information to perform our contract with you: provide sign-in, schedule and match sessions, connect video, display goals and outcomes, provide progress tools, administer plans and referrals, and respond to service requests. We process billing records to administer purchases and meet applicable accounting obligations.\n\nWe rely on legitimate interests to keep the service reliable, investigate reports, prevent harassment and fraud, enforce age and acceptable-use rules, diagnose failures, and protect accounts. We consider the effect on your privacy and limit access to what is necessary. We rely on legal obligations when keeping required records or responding to a valid legal demand. Optional analytics uses consent; refusing or withdrawing it does not prevent essential service use.",
+  },
+  {
+    heading: "Cookies and optional analytics",
+    body: "Only essential cookies are used by default, including the session cookies that keep you signed in and the locale preference. Related authentication security cookies may be needed during sign-in. Your color theme and consent choices may be saved in browser storage. These preferences are not advertising profiles.\n\nWhen analytics is enabled, PostHog receives optional usage events only after you opt in. These events help us understand how features are used and where the experience fails. You can withdraw analytics consent through the site’s consent controls. Withdrawal applies going forward and does not make earlier consented processing unlawful. Essential security and operational logging does not depend on analytics consent.",
+  },
+  {
+    heading: "Payments",
+    body: "Polar acts as merchant of record for paid purchases. Payment details are entered with Polar and its payment processors. We do not store your full payment-card number. We receive the customer, order, subscription, entitlement, and payment-status information needed to provide your plan and reconcile billing. Polar also processes information under its own privacy notice for payment, tax, fraud prevention, and compliance purposes.",
+  },
+  {
+    heading: "Who we share information with",
+    body: "We use a hosting provider for application hosting, database storage, and operational backups; Cloudflare for configured infrastructure and Realtime video; LiveKit when configured as the video transport; Resend for account and service email; PostHog for consented analytics when enabled; and Sentry for configured error monitoring. We limit information sent to each provider to its service purpose and use appropriate contractual protections. The hosting provider and deployment region depend on the deployment; contact us for the current provider details.\n\nPolar handles payments as merchant of record. Partners and hosts receive information needed to participate in their sessions, not unrestricted access to your account. Authorized staff may access necessary information for support, operations, or moderation. We may disclose information when required by law, to protect rights and safety, or as part of a business transfer subject to appropriate confidentiality and privacy safeguards. We do not sell personal information or share it for cross-context behavioral advertising.",
+  },
+  {
+    heading: "Retention and deletion",
+    body: "We retain account and profile information while your account is active so the service can work. Booking, participation, goal, outcome, and progress records remain associated with your account for your history and service operation. You can request account deletion in Settings. We delete or de-identify associated information unless a specific legal, billing, security, or dispute-related reason requires limited retention.\n\nSafety reports and moderation records may need to be retained beyond account closure to investigate abuse, enforce blocks or suspensions, and protect other members. Technical logs are retained only as needed for reliability, security investigations, and troubleshooting; backups expire through the hosting provider’s backup lifecycle rather than being rewritten immediately. Financial records may be retained for the applicable statutory period by us or Polar. A legal hold can extend retention. Contact us for the retention applicable to a particular record or pending request. We do not retain session recordings because we do not create them.",
+  },
+  {
+    heading: "International transfers",
+    body: "Our providers may process information in countries outside your country, including the United States. When EEA or UK data-protection law requires safeguards for a transfer, we use an applicable adequacy decision or contractual safeguards such as the European Commission’s Standard Contractual Clauses, with the UK addendum or other UK-approved mechanism where required. Contact us for information about the safeguards applicable to your data and how to obtain a copy, subject to necessary redactions.",
+  },
+  {
+    heading: "Your GDPR and UK GDPR rights",
+    body: "Depending on your circumstances, you can request access, correction, deletion, restriction, portability, and an explanation of our processing. You may object to processing based on legitimate interests and withdraw consent at any time. Use the in-app data export and account deletion controls in Settings, or contact {email} if you need help or want to exercise another right.\n\nWe may verify your identity before fulfilling a request and explain any legal exception. We respond within the period required by applicable law. You may complain to your local data-protection authority, including the UK Information Commissioner’s Office where relevant. We do not make decisions with legal or similarly significant effects solely through automated profiling; matching and automated safety flags support service operation and can be raised with support for review.",
+  },
+  {
+    heading: "California privacy notice",
+    body: "For California residents, the categories described above include identifiers, account and commercial information, internet or device activity, information you provide in profiles and messages, and session participation information. We obtain these from you, your use of the service, sign-in providers you choose, and service providers such as Polar. We use and disclose them for the purposes and retention criteria in this policy.\n\nSubject to the CCPA and CPRA, you may request to know or access your information, correct inaccurate information, delete information, and receive information about disclosures. We do not sell personal information or share it for cross-context behavioral advertising, and we do not use sensitive personal information to infer characteristics for advertising. We do not offer a financial incentive for disclosing personal information. You may use an authorized agent, subject to verification, and will not be discriminated against for exercising a right. Submit requests through Settings or {email}.",
+  },
+  {
+    heading: "Adults only",
+    body: "The service is only for people 18 and older. We do not knowingly allow children to create accounts. If we learn that someone is under 18, we remove their account and delete their personal information, subject to any limited legal or safety retention requirement. Tell us at {email} if you believe an underage person is using the service.",
+  },
+  {
+    heading: "Changes and contact",
+    body: "We may update this policy as the service or legal requirements change. The date above identifies the latest version. We will provide appropriate notice of material changes and request new consent when required. For privacy questions, provider details, or a rights request, contact {email}.",
+  },
+];

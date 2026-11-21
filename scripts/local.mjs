@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { existsSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 if (existsSync(".env.local")) process.loadEnvFile(".env.local");
@@ -16,15 +17,19 @@ if (action === "e2e") {
     !new URL(process.env.TEST_DATABASE_URL).pathname.endsWith("_test")
   )
     throw new Error("Configure an isolated TEST_DATABASE_URL ending in _test");
-  result = spawnSync("pnpm", ["exec", "playwright", "test"], {
-    stdio: "inherit",
-    env: {
-      ...process.env,
-      DATABASE_URL: process.env.TEST_DATABASE_URL,
-      APP_URL: "http://localhost:3000",
-      APP_PORT: "3000",
+  result = spawnSync(
+    "pnpm",
+    ["exec", "playwright", "test", ...process.argv.slice(3)],
+    {
+      stdio: "inherit",
+      env: {
+        ...process.env,
+        DATABASE_URL: process.env.TEST_DATABASE_URL,
+        APP_URL: "http://localhost:3000",
+        APP_PORT: "3000",
+      },
     },
-  });
+  );
 } else if (action === "dev") {
   result = spawnSync("pnpm", ["exec", "next", "dev"], {
     stdio: "inherit",

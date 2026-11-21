@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import { initials } from "@/src/lib/profiles/rules";
 
 export function Avatar({

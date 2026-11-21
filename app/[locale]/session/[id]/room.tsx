@@ -1,5 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useFormatter, useTranslations } from "next-intl";
 import {
   Mic,
@@ -121,6 +122,7 @@ export function Room(props: {
   const [joined, setJoined] = useState(false);
   const [joining, setJoining] = useState(false);
   const [mediaError, setMediaError] = useState<string | null>(null);
+  const [mediaReady, setMediaReady] = useState(false);
   const [videoError, setVideoError] = useState<string | null>(null);
   const [micOn, setMicOn] = useState(props.microphoneDefault);
   const [goal, setGoal] = useState(
@@ -191,6 +193,7 @@ export function Room(props: {
         if (cancelled) return stream.getTracks().forEach((tr) => tr.stop());
         localStream.current = stream;
         if (localVideo.current) localVideo.current.srcObject = stream;
+        setMediaReady(true);
       })
       .catch((error: unknown) =>
         setMediaError(
@@ -208,6 +211,29 @@ export function Room(props: {
     if (localVideo.current && localStream.current)
       localVideo.current.srcObject = localStream.current;
   }, [joined]);
+
+  const applyMic = useCallback(async (on: boolean) => {
+    setMicOn(on);
+    await client.current?.setMicrophone(on).catch(() => {});
+  }, []);
+
+  const finish = useCallback(async () => {
+    const stats = lastStats.current;
+    const summary = Object.fromEntries(
+      Object.entries(stats).filter(
+        ([, v]) => typeof v === "number" || typeof v === "boolean",
+      ),
+    ) as Record<string, number | boolean>;
+    summary.quality_reduced = quality === "reduced";
+    if (client.current)
+      void post(`/api/sessions/${state.session.id}/quality`, summary).catch(
+        () => {},
+      );
+    await client.current?.leave().catch(() => {});
+    client.current = null;
+    localStream.current?.getTracks().forEach((tr) => tr.stop());
+    void post(`/api/sessions/${state.session.id}/leave`).catch(() => {});
+  }, [quality, state.session.id]);
 
   // Phase changes: chimes, and the mic follows the session rhythm unless the person set it themselves.
   useEffect(() => {
@@ -227,11 +253,6 @@ export function Room(props: {
     // applyMic/finish are stable enough for this transition-only effect.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, joined]);
-
-  const applyMic = useCallback(async (on: boolean) => {
-    setMicOn(on);
-    await client.current?.setMicrophone(on).catch(() => {});
-  }, []);
 
   async function join() {
     if (!localStream.current) return;
@@ -312,24 +333,6 @@ export function Room(props: {
     return () => clearInterval(timer);
   }, [joined]);
 
-  const finish = useCallback(async () => {
-    const stats = lastStats.current;
-    const summary = Object.fromEntries(
-      Object.entries(stats).filter(
-        ([, v]) => typeof v === "number" || typeof v === "boolean",
-      ),
-    ) as Record<string, number | boolean>;
-    summary.quality_reduced = quality === "reduced";
-    if (client.current)
-      void post(`/api/sessions/${state.session.id}/quality`, summary).catch(
-        () => {},
-      );
-    await client.current?.leave().catch(() => {});
-    client.current = null;
-    localStream.current?.getTracks().forEach((tr) => tr.stop());
-    void post(`/api/sessions/${state.session.id}/leave`).catch(() => {});
-  }, [quality, state.session.id]);
-
   useEffect(() => {
     const onUnload = () =>
       navigator.sendBeacon?.(`/api/sessions/${state.session.id}/leave`);
@@ -364,17 +367,7 @@ export function Room(props: {
     else reportDialog.current?.close();
   }, [reportFor]);
 
-  const phaseLabel = useMemo(
-    () =>
-      ({
-        waiting: t("phase.waiting"),
-        intro: t("phase.intro"),
-        focus: t("phase.focus"),
-        wrap: t("phase.wrap"),
-        ended: t("phase.ended"),
-      })[phase],
-    [phase, t],
-  );
+  const phaseLabel = t(`phase.${phase}`);
 
   if (phase === "ended" || left || state.window === "over") {
     return (
@@ -491,7 +484,7 @@ export function Room(props: {
               {videoError && <p className="notice error">{videoError}</p>}
               <button
                 className="button full"
-                disabled={joining || Boolean(mediaError)}
+                disabled={joining || !mediaReady || Boolean(mediaError)}
                 onClick={join}
               >
                 {joining ? (
@@ -831,7 +824,15 @@ const REASONS = [
   "other",
 ] as const;
 
-function ReportDialog(props: {
+function ReportDialog({
+  dialogRef,
+  targetId,
+  sessionId,
+  people,
+  onChangeTarget,
+  onClose,
+  onBlocked,
+}: {
   dialogRef: React.RefObject<HTMLDialogElement | null>;
   targetId: string | null;
   sessionId: string;
@@ -848,31 +849,31 @@ function ReportDialog(props: {
   const [busy, setBusy] = useState(false);
   const [done, setDone] = useState<"report" | "block" | null>(null);
   async function send(kind: "report" | "block") {
-    if (!props.targetId) return;
+    if (!targetId) return;
     setBusy(true);
     try {
       await post(
         `/api/safety/${kind}`,
         kind === "report"
           ? {
-              targetId: props.targetId,
-              sessionId: props.sessionId,
+              targetId: targetId,
+              sessionId: sessionId,
               reason,
               details,
             }
-          : { targetId: props.targetId, sessionId: props.sessionId },
+          : { targetId: targetId, sessionId: sessionId },
       );
       setDone(kind);
-      props.onBlocked?.();
+      onBlocked?.();
     } finally {
       setBusy(false);
     }
   }
   return (
     <dialog
-      ref={props.dialogRef}
+      ref={dialogRef}
       className="dialog"
-      onClose={props.onClose}
+      onClose={onClose}
       style={{ color: "var(--text)" }}
     >
       <div className="dialog-body">
@@ -881,7 +882,7 @@ function ReportDialog(props: {
             <h2>{done === "report" ? t("reportSent") : t("blocked")}</h2>
             <p className="muted">{t("reportSentBody")}</p>
             <div className="dialog-actions">
-              <button className="button" onClick={props.onClose}>
+              <button className="button" onClick={onClose}>
                 {c("close")}
               </button>
             </div>
@@ -890,14 +891,14 @@ function ReportDialog(props: {
           <>
             <h2>{t("reportTitle")}</h2>
             <p className="muted small">{t("reportLead")}</p>
-            {props.people && props.people.length > 1 && (
+            {people && people.length > 1 && (
               <label className="field">
                 {t("who")}
                 <select
-                  value={props.targetId ?? ""}
-                  onChange={(e) => props.onChangeTarget?.(e.target.value)}
+                  value={targetId ?? ""}
+                  onChange={(e) => onChangeTarget?.(e.target.value)}
                 >
-                  {props.people.map((p) => (
+                  {people.map((p) => (
                     <option key={p.id} value={p.id}>
                       {p.name}
                     </option>
@@ -930,7 +931,7 @@ function ReportDialog(props: {
               />
             </label>
             <div className="dialog-actions">
-              <button className="button ghost" onClick={props.onClose}>
+              <button className="button ghost" onClick={onClose}>
                 {c("cancel")}
               </button>
               <button

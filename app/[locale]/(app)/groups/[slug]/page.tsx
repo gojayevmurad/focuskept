@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { and, gt, inArray } from "drizzle-orm";
@@ -14,6 +15,11 @@ import { Link } from "@/src/i18n/navigation";
 import { MemberActions } from "../forms";
 
 export const metadata: Metadata = { title: "Group" };
+
+/** Bookings closer than this can't be joined anymore. */
+function soon() {
+  return new Date(Date.now() + 3 * 60_000);
+}
 
 export default async function Page({
   params,
@@ -44,7 +50,7 @@ export default async function Page({
           list.map((m) => m.userId),
         ),
         inArray(booking.status, ["booked"]),
-        gt(booking.startAt, new Date(Date.now() + 3 * 60_000)),
+        gt(booking.startAt, soon()),
       ),
     )
     .orderBy(booking.startAt)

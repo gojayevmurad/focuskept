@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 "use client";
 import posthog from "posthog-js";
 import type { AnalyticsEvent, EventProperties } from "./events";

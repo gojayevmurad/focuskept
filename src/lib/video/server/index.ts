@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { and, eq, isNull } from "drizzle-orm";
 import { db } from "@/src/lib/db";
