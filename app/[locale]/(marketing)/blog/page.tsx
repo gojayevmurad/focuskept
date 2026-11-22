@@ -7,40 +7,63 @@ import {
   translatedMetadata,
   type LocaleProps,
 } from "@/src/lib/content/marketing";
+import { ArrowUpRight } from "lucide-react";
+import styles from "./blog.module.css";
+
 export async function generateMetadata({ params }: LocaleProps) {
   return translatedMetadata(params, "blog", "/blog");
 }
+
 export default async function Blog({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   requireMarketing();
   const t = await getTranslations("blog");
+  const posts = listBlogPosts();
+
   return (
-    <div className="container">
-      <header className="page-head">
+    <div className={`container ${styles.page}`}>
+      <header className={styles.pageHead}>
         <h1>{t("heading")}</h1>
-        <p className="lead">{t("lead")}</p>
+        <p>{t("lead")}</p>
       </header>
-      <div className="section features">
-        {listBlogPosts().map((post) => (
-          <article className="card stack" key={post.slug}>
-            <time className="small muted" dateTime={post.date}>
-              {post.date}
-            </time>
-            <h2>
-              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-            </h2>
-            <p className="muted">{post.description}</p>
-            <Link
-              className="link"
-              href={`/blog/${post.slug}`}
-              aria-label={`${t("read")}: ${post.title}`}
+      <ul className={styles.postList}>
+        {posts.map((post, index) => {
+          const isFirst = index === 0;
+          return (
+            <li
+              key={post.slug}
+              className={
+                isFirst
+                  ? `${styles.postRow} ${styles.featured}`
+                  : styles.postRow
+              }
             >
-              {t("read")}
-            </Link>
-          </article>
-        ))}
-      </div>
+              <div className={styles.postMeta}>
+                <time className={styles.postDate} dateTime={post.date}>
+                  {post.date}
+                </time>
+              </div>
+              <div className={styles.postBody}>
+                <h2 className={styles.postTitle}>
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                </h2>
+                <p className={styles.postDescription}>{post.description}</p>
+                <div className={styles.postAction}>
+                  <Link
+                    className={styles.readLink}
+                    href={`/blog/${post.slug}`}
+                    aria-label={`${t("read")}: ${post.title}`}
+                  >
+                    <span>{t("read")}</span>
+                    <ArrowUpRight size={17} aria-hidden="true" />
+                  </Link>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
