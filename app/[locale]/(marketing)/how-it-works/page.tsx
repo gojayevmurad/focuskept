@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { FaqList } from "@/src/components/marketing/faq";
-import { Cta } from "@/src/components/marketing/cta";
+import { Cta, SessionTimeline } from "@/src/components/marketing/cta";
 import {
   requireMarketing,
   translatedMetadata,
   type LocaleProps,
 } from "@/src/lib/content/marketing";
+import styles from "@/src/components/marketing/marketing.module.css";
 import type { Faq } from "@/src/lib/content/seo";
 export async function generateMetadata({ params }: LocaleProps) {
   return translatedMetadata(params, "how", "/how-it-works");
@@ -19,12 +20,13 @@ export default async function How({ params }: LocaleProps) {
   const f = await getTranslations("faqPage");
   const groups = f.raw("groups") as { title: string; items: Faq[] }[];
   return (
-    <div className="container">
-      <header className="page-head">
+    <div className={`container ${styles.page}`}>
+      <header className={styles.pageHead}>
         <h1>{t("heading")}</h1>
-        <p className="lead">{t("lead")}</p>
+        <p>{t("lead")}</p>
       </header>
-      <div className="prose">
+      <SessionTimeline />
+      <div className={styles.reading}>
         {(t.raw("stages") as { title: string; body: string }[]).map((stage) => (
           <section key={stage.title}>
             <h2>{stage.title}</h2>
@@ -45,7 +47,7 @@ export default async function How({ params }: LocaleProps) {
           <p>{t("safetyBody")}</p>
         </section>
       </div>
-      <section className="section stack">
+      <section className={styles.section}>
         <h2>{t("faqTitle")}</h2>
         <FaqList items={groups[1].items.slice(0, 4)} structured />
       </section>

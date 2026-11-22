@@ -668,7 +668,23 @@
     "faqTitle": "A few things you might be wondering",
     "allFaq": "Read all questions",
     "ctaTitle": "Bring one task. We’ll make room.",
-    "ctaBody": "You do not need a perfect plan. Pick a time and a small place to start."
+    "ctaBody": "You do not need a perfect plan. Pick a time and a small place to start.",
+    "lanes": {
+      "heading": "Your lane. Someone in the next one.",
+      "lead": "Book 25, 50, or 75 minutes, meet a partner on video, and work on your own task together: cameras on, mics off during focus.",
+      "book": "Book a lane",
+      "bookNext": "Book a lane · next at {time}",
+      "sessionTitle": "One session. A shared pace.",
+      "intro": "Intro",
+      "focus": "Focus",
+      "wrap": "Wrap-up",
+      "minuteMark": "{from}–{to} min",
+      "minutesLeft": "{count, plural, one {# minute left} other {# minutes left}}",
+      "preview": "50 minutes in 12 seconds",
+      "pause": "Pause example session",
+      "resume": "Resume example session",
+      "freePlan": "{count, plural, one {# free session every week. Your lane is waiting.} other {# free sessions every week. Your lane is waiting.}}"
+    }
   },
   "how": {
     "title": "How a focus session works | {app}",
@@ -797,11 +813,7 @@
     "lead": "Start with three sessions a week. Choose Plus when you want more room.",
     "free": "Free",
     "freePrice": "No charge",
-    "freeFeatures": [
-      "3 sessions a week",
-      "Partner matching",
-      "Streaks"
-    ],
+    "freeFeatures": ["3 sessions a week", "Partner matching", "Streaks"],
     "plus": "Plus",
     "plusFeatures": [
       "Unlimited sessions",
