@@ -8,6 +8,7 @@ import {
   translatedMetadata,
   type LocaleProps,
 } from "@/src/lib/content/marketing";
+import styles from "@/src/components/marketing/marketing.module.css";
 import type { Faq } from "@/src/lib/content/seo";
 export async function generateMetadata({ params }: LocaleProps) {
   return translatedMetadata(params, "faqPage", "/faq");
@@ -19,13 +20,13 @@ export default async function FaqPage({ params }: LocaleProps) {
   const t = await getTranslations("faqPage");
   const groups = t.raw("groups") as { title: string; items: Faq[] }[];
   return (
-    <div className="container">
-      <header className="page-head">
+    <div className={`container ${styles.page}`}>
+      <header className={styles.pageHead}>
         <h1>{t("heading")}</h1>
-        <p className="lead">{t("lead")}</p>
+        <p>{t("lead")}</p>
       </header>
       {groups.map((group) => (
-        <section className="section stack" key={group.title}>
+        <section className={styles.section} key={group.title}>
           <h2>{group.title}</h2>
           <FaqList items={group.items} />
         </section>

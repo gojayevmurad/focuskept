@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
+import { Plus } from "lucide-react";
+import styles from "./marketing.module.css";
 import type { Faq } from "@/src/lib/content/seo";
 import { JsonLd } from "./json-ld";
 export function FaqList({
@@ -10,10 +12,13 @@ export function FaqList({
 }) {
   return (
     <>
-      <div className="faq">
+      <div className={styles.faq}>
         {items.map((item) => (
           <details key={item.q}>
-            <summary>{item.q}</summary>
+            <summary>
+              <span>{item.q}</span>
+              <Plus size={20} aria-hidden="true" />
+            </summary>
             <p>{item.a}</p>
           </details>
         ))}

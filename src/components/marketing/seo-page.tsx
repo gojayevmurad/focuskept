@@ -8,6 +8,7 @@ import {
 } from "@/src/lib/content/seo";
 import { Cta } from "./cta";
 import { FaqList } from "./faq";
+import styles from "./marketing.module.css";
 export async function SeoPage({
   page,
   template,
@@ -22,9 +23,9 @@ export async function SeoPage({
     .filter((other) => other.slug !== page.slug)
     .slice(0, 6);
   return (
-    <div className="container">
-      <header className="page-head">
-        <nav className="breadcrumbs" aria-label={t("home")}>
+    <div className={`container ${styles.page}`}>
+      <header className={styles.pageHead}>
+        <nav className={styles.breadcrumbs} aria-label={t("home")}>
           <Link href="/">{t("home")}</Link>
           <span aria-hidden="true">/</span>
           <Link href={`/${template}`}>{t(`templates.${template}`)}</Link>
@@ -32,9 +33,9 @@ export async function SeoPage({
           <span aria-current="page">{page.h1}</span>
         </nav>
         <h1>{page.h1}</h1>
-        <p className="lead">{page.intro}</p>
+        <p>{page.intro}</p>
       </header>
-      <div className="prose">
+      <div className={styles.reading}>
         {page.sections.map((section) => (
           <section key={section.heading}>
             <h2>{section.heading}</h2>
@@ -43,19 +44,19 @@ export async function SeoPage({
             ))}
           </section>
         ))}
-        <section className="card">
+        <section>
           <h2>{t("howTitle")}</h2>
           <p>{t("howBody")}</p>
         </section>
       </div>
-      <section className="section stack">
+      <section className={styles.section}>
         <h2>{t("faq")}</h2>
         <FaqList items={page.faq} structured />
       </section>
       <Cta heading={page.cta.heading} body={page.cta.body} />
-      <section className="section stack">
+      <section className={styles.section}>
         <h2>{t("related")}</h2>
-        <div className="link-grid">
+        <div className={styles.related}>
           {related.map((other) => (
             <Link href={`/${template}/${other.slug}`} key={other.slug}>
               {other.h1}
@@ -75,13 +76,13 @@ export async function SeoIndex({
 }) {
   const t = await getTranslations("seo");
   return (
-    <div className="container">
-      <header className="page-head">
+    <div className={`container ${styles.page}`}>
+      <header className={styles.pageHead}>
         <h1>{t(`templates.${template}`)}</h1>
-        <p className="lead">{t(`descriptions.${template}`)}</p>
+        <p>{t(`descriptions.${template}`)}</p>
       </header>
-      <section className="section">
-        <div className="link-grid">
+      <section className={styles.section}>
+        <div className={styles.related}>
           {listSeoPages(template, locale).map((page) => (
             <Link href={`/${template}/${page.slug}`} key={page.slug}>
               <h2>{page.h1}</h2>

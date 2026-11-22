@@ -4,7 +4,16 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
 import { FaqList } from "@/src/components/marketing/faq";
-import { Cta } from "@/src/components/marketing/cta";
+import {
+  Cta,
+  SessionTimeline,
+  getLanesTranslations,
+} from "@/src/components/marketing/cta";
+import { BookingLink, PoolDemo } from "@/src/components/marketing/pool-demo";
+import { ArrowUpRight } from "lucide-react";
+import { BOOKING_CUTOFF_MIN, SLOT_MINUTES } from "@/src/lib/scheduling/slots";
+import styles from "./landing.module.css";
+import marketing from "@/src/components/marketing/marketing.module.css";
 import { JsonLd } from "@/src/components/marketing/json-ld";
 import {
   absoluteUrl,
@@ -20,8 +29,11 @@ export default async function Home({ params }: LocaleProps) {
   setRequestLocale(locale);
   const app = getAppConfig();
   if (!app.marketingEnabled) redirect("/sign-in");
-  const t = await getTranslations("home");
-  const f = await getTranslations("faqPage");
+  const [t, f, lanes] = await Promise.all([
+    getTranslations("home"),
+    getTranslations("faqPage"),
+    getLanesTranslations(),
+  ]);
   const groups = f.raw("groups") as { title: string; items: Faq[] }[];
   const faqs = [
     groups[0].items[0],
@@ -44,110 +56,108 @@ export default async function Home({ params }: LocaleProps) {
   ];
   return (
     <>
-      <div className="container">
-        <section className="hero">
-          <div>
-            <h1>{t("heading")}</h1>
-            <p className="lead">{t("lead")}</p>
-            <div className="row">
-              <Link className="button" href="/sign-up">
-                {t("start")}
-              </Link>
-              <Link className="button secondary" href="/how-it-works">
-                {t("how")}
-              </Link>
-            </div>
-          </div>
-          <div className="hero-visual" role="img" aria-label={t("visual")}>
-            <div className="row-between">
-              <span className="badge accent">{t("example")}</span>
-              <span className="mono tabular" aria-label={t("timer")}>
-                42:18
-              </span>
-            </div>
-            <div className="mock-tiles">
-              {["alex", "sam"].map((person) => (
-                <div className="mock-tile stack-sm" key={person}>
-                  <span className="avatar lg" aria-hidden="true">
-                    {person === "alex" ? "A" : "S"}
-                  </span>
-                  <strong>{t(person)}</strong>
-                  <div className="mock-goal">{t(`${person}Goal`)}</div>
+      <div className={styles.landing}>
+        <div className={styles.tileGround}>
+          <div className="container">
+            <section className={styles.hero}>
+              <div className={styles.heroCopy}>
+                <h1>{lanes("lanes.heading")}</h1>
+                <p>{lanes("lanes.lead")}</p>
+                <div className={styles.heroActions}>
+                  <BookingLink
+                    label={lanes("lanes.book")}
+                    nextLabel={lanes.raw("lanes.bookNext") as string}
+                    locale={locale}
+                    cutoffMinutes={BOOKING_CUTOFF_MIN}
+                    slotMinutes={SLOT_MINUTES}
+                  />
+                  <Link className={styles.quietLink} href="/how-it-works">
+                    {t("how")}
+                  </Link>
                 </div>
-              ))}
-            </div>
-            <div className="stack-sm">
-              <strong>{t("focus")}</strong>
-              <p className="small muted">{t("note")}</p>
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="section-head">
-            <h2>{t("stepsTitle")}</h2>
-          </div>
-          <div className="steps">
-            {(t.raw("steps") as { title: string; body: string }[]).map(
-              (step) => (
-                <article className="card" key={step.title}>
-                  <h3>{step.title}</h3>
-                  <p>{step.body}</p>
-                </article>
-              ),
-            )}
-          </div>
-        </section>
-        <section className="section">
-          <div className="section-head">
-            <h2>{t("featuresTitle")}</h2>
-          </div>
-          <div className="features">
-            {(t.raw("features") as { title: string; body: string }[]).map(
-              (feature) => (
-                <article className="feature card" key={feature.title}>
-                  <h3>{feature.title}</h3>
-                  <p>{feature.body}</p>
-                </article>
-              ),
-            )}
-          </div>
-        </section>
-        <section className="section">
-          <div className="section-head">
-            <h2>{t("audienceTitle")}</h2>
-          </div>
-          <div className="audiences">
-            {audiences.map(([key, href]) => (
-              <Link className="chip" href={href} key={key}>
-                {t(`audiences.${key}`)}
-              </Link>
-            ))}
-          </div>
-        </section>
-      </div>
-      <section className="band section">
-        <div className="container stack">
-          <h2>{t("sourceTitle")}</h2>
-          <p className="lead">{t("sourceBody")}</p>
-          <div>
-            <a
-              className="button secondary"
-              href="https://github.com/gojayevmurad/focuskept"
-            >
-              {t("sourceLink")}
-            </a>
+              </div>
+              <PoolDemo
+                locale={locale}
+                copy={{
+                  label: t("visual"),
+                  example: t("example"),
+                  note: t("note"),
+                  timer: t("timer"),
+                  minutesLeft: lanes.raw("lanes.minutesLeft") as string,
+                  preview: lanes("lanes.preview"),
+                  pause: lanes("lanes.pause"),
+                  resume: lanes("lanes.resume"),
+                  intro: lanes("lanes.intro"),
+                  focus: lanes("lanes.focus"),
+                  wrap: lanes("lanes.wrap"),
+                  people: [
+                    { name: t("alex"), goal: t("alexGoal") },
+                    { name: t("sam"), goal: t("samGoal") },
+                  ],
+                }}
+              />
+            </section>
           </div>
         </div>
-      </section>
-      <div className="container">
-        <section className="section stack">
-          <h2>{t("faqTitle")}</h2>
-          <FaqList items={faqs} />
-          <Link className="link" href="/faq">
-            {t("allFaq")}
-          </Link>
-        </section>
-        <Cta />
+        <div className="container">
+          <SessionTimeline />
+          <section className={styles.audienceSection}>
+            <h2>{t("audienceTitle")}</h2>
+            <ul className={styles.schedule}>
+              {audiences.map(([key, href], index) => (
+                <li key={key}>
+                  <Link href={href}>
+                    <span className={styles.scheduleNumber} aria-hidden="true">
+                      {new Intl.NumberFormat(locale, {
+                        minimumIntegerDigits: 2,
+                      }).format(index + 1)}
+                    </span>
+                    <span>{t(`audiences.${key}`)}</span>
+                    <ArrowUpRight size={19} aria-hidden="true" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section className={styles.featuresSection}>
+            <h2>{t("featuresTitle")}</h2>
+            <dl className={styles.features}>
+              {(t.raw("features") as { title: string; body: string }[]).map(
+                (feature) => (
+                  <div key={feature.title}>
+                    <dt>{feature.title}</dt>
+                    <dd>{feature.body}</dd>
+                  </div>
+                ),
+              )}
+            </dl>
+          </section>
+          <div className={styles.freePlan}>
+            <p>{lanes("lanes.freePlan", { count: app.freeWeeklySessions })}</p>
+            <Link href="/sign-up">
+              {t("start")}
+              <ArrowUpRight size={20} aria-hidden="true" />
+            </Link>
+          </div>
+          <section className={styles.sourceSection}>
+            <h2>{t("sourceTitle")}</h2>
+            <div>
+              <p>{t("sourceBody")}</p>
+              <a href="https://github.com/gojayevmurad/focuskept">
+                {t("sourceLink")}
+                <ArrowUpRight size={17} aria-hidden="true" />
+              </a>
+            </div>
+          </section>
+          <section className={marketing.section}>
+            <h2>{t("faqTitle")}</h2>
+            <FaqList items={faqs} />
+            <Link className={styles.quietLink} href="/faq">
+              {t("allFaq")}
+            </Link>
+          </section>
+          <Cta />
+        </div>
       </div>
       <JsonLd
         data={{
