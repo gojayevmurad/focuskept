@@ -468,7 +468,11 @@ export function Room(props: {
             className={styles.clock}
           />
           <div className={styles.phaseCopy}>
-            <span className={styles.phase} data-phase={phase} role="status">
+            <span
+              className={styles.phase}
+              data-phase={phase}
+              aria-live="polite"
+            >
               {phaseLabel}
             </span>
             <span className={styles.timer} aria-live="off">
@@ -495,11 +499,7 @@ export function Room(props: {
                 muted
                 className={styles.mirror}
               />
-              {mediaError && (
-                <div className={styles.empty} role="status">
-                  {mediaError}
-                </div>
-              )}
+              {mediaError && <div className={styles.empty}>{mediaError}</div>}
             </div>
             <div className={styles.tileLabel}>
               <span className={styles.tileName}>
@@ -517,9 +517,7 @@ export function Room(props: {
               <LaneRope vertical className={styles.ropeDesktop} />
               <LaneRope className={styles.ropeMobile} />
               <div className={styles.media}>
-                <div className={styles.empty} role="status">
-                  {t("aloneInRoom")}
-                </div>
+                <div className={styles.empty}>{t("aloneInRoom")}</div>
               </div>
             </div>
           )}
@@ -717,7 +715,7 @@ function RemoteTile(props: {
         {props.stream ? (
           <video ref={ref} autoPlay playsInline />
         ) : (
-          <div className={styles.empty} role="status">
+          <div className={styles.empty}>
             <Avatar name={props.name} src={props.avatarUrl} size="lg" />
             <span>{props.hint}</span>
           </div>

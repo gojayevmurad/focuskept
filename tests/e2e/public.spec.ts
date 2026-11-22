@@ -7,7 +7,7 @@ test("landing and registration navigation", async ({ page }) => {
   await hydrated(page);
   await expect(
     page.getByRole("heading", {
-      name: "Get it done with someone beside you",
+      name: "Your lane. Someone in the next one.",
       exact: true,
     }),
   ).toBeVisible();
