@@ -1,0 +1,101 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+
+.shareBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.copyRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.copiedFeedback {
+  color: var(--ok);
+  font-size: 13px;
+  font-weight: 550;
+  margin: 0;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.shareButtons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.brandIcon {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.rewardCard {
+  background: var(--lane);
+  border: 1px solid var(--lane-strong);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.rewardHeadline {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 750;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.rewardBody {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.statItem {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statNumber {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 750;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 550;
+  color: var(--text-2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

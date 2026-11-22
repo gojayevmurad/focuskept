@@ -11,6 +11,7 @@ import { updateHostPerks } from "@/src/lib/hosts/perks";
 import { checkVideoUsage } from "@/src/lib/video/usage";
 import { cleanup, heartbeat } from "./maintenance";
 import { logger } from "@/src/lib/logger";
+import { processLifecycleEmails } from "@/src/lib/lifecycle/scheduler";
 
 /** Everything time-based that must happen within the minute. Each step is idempotent. */
 export async function minuteTick(now = new Date()) {
@@ -22,9 +23,10 @@ export async function minuteTick(now = new Date()) {
     reminders++;
   }
   const completed = await completeEndedSessions(now);
+  const lifecycle = await processLifecycleEmails(now);
   await heartbeat(now);
-  const summary = { matched, fallbacks, reminders, ...completed };
-  if (matched || fallbacks || completed.ended) logger.info(summary, "Tick");
+  const summary = { matched, fallbacks, reminders, lifecycle, ...completed };
+  if (matched || fallbacks || completed.ended || lifecycle > 0) logger.info(summary, "Tick");
   return summary;
 }
 

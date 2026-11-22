@@ -133,6 +133,7 @@ export function ProfileForm(props: {
 export function PreferencesForm(props: {
   emailReminders: boolean;
   pushReminders: boolean;
+  emailTips: boolean;
   microphoneDefault: boolean;
   matchSameSegment: boolean;
   statsPublic: boolean;
@@ -150,6 +151,14 @@ export function PreferencesForm(props: {
           defaultChecked={props.emailReminders}
         />
         <span>{t("emailReminders")}</span>
+      </label>
+      <label className="check">
+        <input
+          type="checkbox"
+          name="emailTips"
+          defaultChecked={props.emailTips}
+        />
+        <span>{t("emailTips")}</span>
       </label>
       <label className="check">
         <input

@@ -268,3 +268,13 @@ export async function notifyAdmins(
       cta: { label: "Open admin", url: `${app.url}${path}` },
     }));
 }
+
+export {
+  sendWelcomeEmail,
+  sendNudgeFirstBooking,
+  sendFirstSessionTips,
+  sendAfterFirstSession,
+  sendWinBack,
+  sendWeeklySummary,
+  processLifecycleEmails,
+} from "@/src/lib/lifecycle/scheduler";
