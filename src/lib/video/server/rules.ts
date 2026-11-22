@@ -23,3 +23,23 @@ export function canPull(
     (target.tracks?.audio === trackName || target.tracks?.video === trackName),
   );
 }
+
+export function canAnnounce(userId: string, tracks: TrackNames): boolean {
+  const hasAny = Boolean(tracks.audio || tracks.video);
+  if (!hasAny) return false;
+  if (
+    tracks.audio &&
+    (!tracks.audio.startsWith(`${userId}-audio-`) ||
+      tracks.audio.length <= `${userId}-audio-`.length)
+  ) {
+    return false;
+  }
+  if (
+    tracks.video &&
+    (!tracks.video.startsWith(`${userId}-video-`) ||
+      tracks.video.length <= `${userId}-video-`.length)
+  ) {
+    return false;
+  }
+  return true;
+}

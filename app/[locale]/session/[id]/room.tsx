@@ -170,6 +170,8 @@ export function Room(props: {
   const lastPhase = useRef<Phase | null>(null);
   const manualMic = useRef(false);
   const reportDialog = useRef<HTMLDialogElement>(null);
+  const rejoins = useRef(0);
+  const joinedRef = useRef(false);
 
   const startMs = new Date(state.session.startAt).getTime();
   const serverNow = now + offset;
@@ -248,6 +250,7 @@ export function Room(props: {
   }, []);
 
   const finish = useCallback(async () => {
+    joinedRef.current = false;
     const stats = lastStats.current;
     const summary = Object.fromEntries(
       Object.entries(stats).filter(
@@ -302,6 +305,21 @@ export function Room(props: {
         }),
       );
       video.on("quality", setQuality);
+      video.on("connection", async (connState) => {
+        if (connState !== "failed" || !joinedRef.current) return;
+        joinedRef.current = false;
+        setJoined(false);
+        subscribed.current.clear();
+        setRemote({});
+        await video.leave().catch(() => {});
+        if (client.current === video) client.current = null;
+        if (rejoins.current < 2) {
+          rejoins.current += 1;
+          await join();
+        } else {
+          setVideoError(t("videoFailed"));
+        }
+      });
       await video.publishTracks(localStream.current, {
         audio: true,
         video: true,
@@ -310,9 +328,12 @@ export function Room(props: {
       const startOn = phase === "focus" ? false : props.microphoneDefault;
       await applyMic(startOn);
       lastPhase.current = phase;
+      joinedRef.current = true;
       setJoined(true);
       await refresh();
     } catch {
+      joinedRef.current = false;
+      setJoined(false);
       setVideoError(t("videoFailed"));
     } finally {
       setJoining(false);
@@ -388,6 +409,7 @@ export function Room(props: {
     }).catch(() => {});
   }
   async function leave() {
+    joinedRef.current = false;
     await finish();
     setLeft(true);
   }

@@ -28,6 +28,16 @@ export const requestSchemas = {
         ),
     })
     .strict(),
+  announce: z
+    .object({
+      tracks: z
+        .object({
+          audio: name.optional(),
+          video: name.optional(),
+        })
+        .strict(),
+    })
+    .strict(),
   pull: z
     .object({
       targetUserId: name,
@@ -64,6 +74,8 @@ export const cloudflareResponseSchema = z.object({
         mid: mid.optional(),
         trackName: name.optional(),
         sessionId: z.string().optional(),
+        errorCode: z.string().optional(),
+        errorDescription: z.string().optional(),
       }),
     )
     .optional(),

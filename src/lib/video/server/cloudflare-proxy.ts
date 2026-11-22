@@ -11,7 +11,7 @@ import type { TrackNames } from "../types";
 import { cloudflareRequest } from "./cloudflare";
 import { VideoError } from "./errors";
 import { videoEnv } from "./config";
-import { canPull } from "./rules";
+import { canPull, canAnnounce } from "./rules";
 
 export async function cloudflareProxy(
   focusSessionId: string,
@@ -69,6 +69,13 @@ export async function cloudflareProxy(
         });
         if (result.sessionDescription?.type !== "answer")
           throw new VideoError("Invalid Cloudflare push answer", 502);
+        return { answer: result.sessionDescription, tracks };
+      }
+      case "announce": {
+        const input = requestSchemas.announce.parse(body);
+        if (!canAnnounce(userId, input.tracks))
+          throw new VideoError("Invalid track name", 400);
+        const tracks: TrackNames = { ...caller.tracks, ...input.tracks };
         await tx.update(sessionParticipant).set({ tracks }).where(where);
         await publish(
           `session:${focusSessionId}`,
@@ -76,7 +83,7 @@ export async function cloudflareProxy(
           { userId, tracks },
           tx,
         );
-        return { answer: result.sessionDescription, tracks };
+        return { tracks };
       }
       case "pull": {
         const input = requestSchemas.pull.parse(body);
@@ -95,16 +102,29 @@ export async function cloudflareProxy(
           )
         )
           throw new VideoError("Participant tracks not found", 404);
-        return cloudflareRequest(`${path}/tracks/new`, "POST", {
-          tracks: input.trackNames.map((trackName) => ({
-            location: "remote",
-            sessionId: target.videoSessionId,
-            trackName,
-            ...(input.lowQuality && trackName === target.tracks?.video
-              ? { simulcast: { preferredRid: "l" } }
-              : {}),
+        const result = await cloudflareRequest(
+          `${path}/tracks/new`,
+          "POST",
+          {
+            tracks: input.trackNames.map((trackName) => ({
+              location: "remote",
+              sessionId: target.videoSessionId,
+              trackName,
+              ...(input.lowQuality && trackName === target.tracks?.video
+                ? { simulcast: { preferredRid: "l" } }
+                : {}),
+            })),
+          },
+          { allowTrackErrors: true },
+        );
+        return {
+          ...result,
+          // Error codes are enough for the browser to retry; descriptions stay here.
+          tracks: result.tracks?.map((track) => ({
+            ...track,
+            errorDescription: undefined,
           })),
-        });
+        };
       }
       case "renegotiate":
         return cloudflareRequest(

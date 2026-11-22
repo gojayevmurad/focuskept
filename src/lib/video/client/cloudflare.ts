@@ -47,6 +47,10 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
   private badChecks = 0;
   private goodChecks = 0;
   private reduced = false;
+  private retries = new Map<
+    string,
+    { timer: ReturnType<typeof setTimeout>; attempt: number }
+  >();
 
   private enqueue<T>(operation: () => Promise<T>): Promise<T> {
     const result = this.queue.then(operation);
@@ -181,6 +185,80 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
     return { type: description.type, sdp: description.sdp };
   }
 
+  private async waitForConnected(pc: RTCPeerConnection): Promise<void> {
+    if (pc.connectionState === "connected") return;
+    if (pc.connectionState === "failed" || pc.connectionState === "closed")
+      throw new Error(`Video connection is ${pc.connectionState}`);
+    await new Promise<void>((resolve, reject) => {
+      const finish = () => {
+        clearTimeout(timeout);
+        pc.removeEventListener("connectionstatechange", check);
+      };
+      const check = () => {
+        if (pc.connectionState === "connected") {
+          finish();
+          resolve();
+        } else if (
+          pc.connectionState === "failed" ||
+          pc.connectionState === "closed"
+        ) {
+          finish();
+          reject(new Error(`Video connection is ${pc.connectionState}`));
+        }
+      };
+      const timeout = setTimeout(() => {
+        finish();
+        reject(new Error("Video connection timed out"));
+      }, 20_000);
+      pc.addEventListener("connectionstatechange", check);
+      check();
+    });
+  }
+
+  private clearRetry(userId: string) {
+    const retry = this.retries.get(userId);
+    if (retry) {
+      clearTimeout(retry.timer);
+      this.retries.delete(userId);
+    }
+  }
+
+  private clearAllRetries() {
+    for (const retry of this.retries.values()) {
+      clearTimeout(retry.timer);
+    }
+    this.retries.clear();
+  }
+
+  private scheduleRetry(userId: string) {
+    if (this.leaving || !this.pc || this.pc.signalingState === "closed") return;
+    const current = this.retries.get(userId);
+    const attempt = current ? current.attempt + 1 : 0;
+    const delays = [1000, 2000, 4000, 8000, 10000, 10000, 10000, 10000, 10000];
+    if (attempt >= delays.length) {
+      this.clearRetry(userId);
+      return;
+    }
+    const delay = delays[attempt];
+    if (current) {
+      clearTimeout(current.timer);
+    }
+    const timer = setTimeout(() => {
+      void this.enqueue(async () => {
+        if (this.leaving || !this.pc || this.pc.signalingState === "closed")
+          return;
+        const subscription = this.subscriptions.get(userId);
+        if (!subscription) return;
+        try {
+          await this.pull(subscription);
+        } catch {
+          this.scheduleRetry(userId);
+        }
+      }).catch(() => {});
+    }, delay);
+    this.retries.set(userId, { timer, attempt });
+  }
+
   async publishTracks(
     stream: MediaStream,
     options: PublishOptions,
@@ -234,6 +312,8 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
         await this.request("push", { sessionDescription, tracks }),
       );
       await pc.setRemoteDescription(result.answer);
+      await this.waitForConnected(pc);
+      await this.request("announce", { tracks: result.tracks });
       return result.tracks;
     });
   }
@@ -259,7 +339,10 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
           (track) => track.name === name,
         ),
     );
-    if (!names.length) return;
+    if (!names.length) {
+      this.clearRetry(subscription.participant.userId);
+      return;
+    }
     const result = cloudflareResponseSchema.parse(
       await this.request("pull", {
         targetUserId: subscription.participant.userId,
@@ -269,15 +352,30 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
     );
     for (const [kind, name] of names) {
       const track = result.tracks?.find((item) => item.trackName === name);
-      if (!track?.mid || (kind !== "audio" && kind !== "video"))
-        throw new Error("Missing pulled video mid");
-      subscription.mids.set(track.mid, { name, kind });
+      if (
+        track?.mid &&
+        !track.errorCode &&
+        (kind === "audio" || kind === "video")
+      ) {
+        subscription.mids.set(track.mid, { name, kind });
+      }
     }
     await this.completeNegotiation(result);
     // A track event can precede the response that supplies its mid.
     for (const transceiver of this.connection().getTransceivers()) {
       if (transceiver.mid && subscription.mids.has(transceiver.mid))
         this.attachTrack(transceiver.receiver.track, transceiver.mid);
+    }
+    const hasPending = names.some(
+      ([, name]) =>
+        !Array.from(subscription.mids.values()).some(
+          (track) => track.name === name,
+        ),
+    );
+    if (hasPending) {
+      this.scheduleRetry(subscription.participant.userId);
+    } else {
+      this.clearRetry(subscription.participant.userId);
     }
   }
 
@@ -319,7 +417,10 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
     options?: { lowQuality?: boolean },
   ): Promise<void> {
     return this.enqueue(async () => {
-      this.connection();
+      const pc = this.connection();
+      // A receive-only connection is first negotiated by the pull itself.
+      if (pc.remoteDescription) await this.waitForConnected(pc);
+      this.clearRetry(participant.userId);
       let subscription = this.subscriptions.get(participant.userId);
       if (!subscription) {
         subscription = {
@@ -348,6 +449,7 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
 
   async unsubscribe(userId: string): Promise<void> {
     return this.enqueue(async () => {
+      this.clearRetry(userId);
       const subscription = this.subscriptions.get(userId);
       if (!subscription) return;
       await this.closeMids(Array.from(subscription.mids.keys()));
@@ -455,6 +557,7 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
   async leave(): Promise<void> {
     this.leaving = true;
     if (this.timer) clearInterval(this.timer);
+    this.clearAllRetries();
     return this.enqueue(async () => {
       try {
         if (this.pc && this.pc.signalingState !== "closed") {
@@ -481,6 +584,7 @@ export class CloudflareVideoClient extends VideoEvents implements VideoClient {
         this.qualityPrevious = undefined;
         this.goodChecks = this.badChecks = 0;
         this.reduced = false;
+        this.clearAllRetries();
         this.emit("connection", "closed");
       }
     });

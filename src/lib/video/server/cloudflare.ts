@@ -76,12 +76,19 @@ function hasError(value: unknown): boolean {
   );
 }
 
+function hasTopLevelError(data: unknown): boolean {
+  if (!data || typeof data !== "object") return false;
+  const record = data as Record<string, unknown>;
+  return Boolean(record.errorCode || record.errorDescription);
+}
+
 async function request(
   route: string,
   url: string,
   token: string,
   method: string,
   body?: unknown,
+  options?: { allowTrackErrors?: boolean },
 ): Promise<unknown> {
   let response: Response;
   try {
@@ -108,7 +115,12 @@ async function request(
     isJson = false;
   }
 
-  if (response.ok && isJson && !hasError(data)) {
+  const ok =
+    response.ok &&
+    isJson &&
+    (options?.allowTrackErrors ? !hasTopLevelError(data) : !hasError(data));
+
+  if (ok) {
     return data;
   }
 
@@ -136,6 +148,7 @@ export async function cloudflareRequest(
   path: string,
   method: "POST" | "PUT",
   body?: unknown,
+  options?: { allowTrackErrors?: boolean },
 ) {
   const env = videoEnv();
   if (
@@ -151,6 +164,7 @@ export async function cloudflareRequest(
     env.CLOUDFLARE_REALTIME_APP_TOKEN,
     method,
     body,
+    options,
   );
   const parsed = cloudflareResponseSchema.safeParse(data);
   if (!parsed.success)

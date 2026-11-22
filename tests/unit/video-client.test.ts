@@ -85,9 +85,33 @@ class PeerConnection {
     null;
   transceivers: Transceiver[] = [];
   stats: VideoStatsEntry[] = [];
+  private listeners = new Map<string, Set<() => void>>();
+
   constructor(readonly config: RTCConfiguration) {
     PeerConnection.current = this;
   }
+
+  addEventListener(type: string, listener: () => void) {
+    let set = this.listeners.get(type);
+    if (!set) {
+      set = new Set();
+      this.listeners.set(type, set);
+    }
+    set.add(listener);
+  }
+
+  removeEventListener(type: string, listener: () => void) {
+    this.listeners.get(type)?.delete(listener);
+  }
+
+  remoteDescription: RTCSessionDescriptionInit | null = null;
+
+  setConnectionState(state: string) {
+    this.connectionState = state;
+    this.onconnectionstatechange?.();
+    this.listeners.get("connectionstatechange")?.forEach((l) => l());
+  }
+
   addTransceiver(track: MediaTrack, init: RTCRtpTransceiverInit) {
     const transceiver = new Transceiver(
       String(this.transceivers.length),
@@ -110,6 +134,7 @@ class PeerConnection {
       description.type === "offer" ? "have-local-offer" : "stable";
   }
   async setRemoteDescription(description: RTCSessionDescriptionInit) {
+    this.remoteDescription = description;
     if (description.type === "answer") {
       if (this.signalingState !== "have-local-offer")
         throw new Error("Unexpected answer");
@@ -143,11 +168,19 @@ type RequestCall = {
 };
 let calls: RequestCall[];
 let renegotiate: (() => Promise<void>) | undefined;
+let pullResponseOverride:
+  | undefined
+  | ((body: unknown) => {
+      sessionDescription?: { type: string; sdp: string };
+      requiresImmediateRenegotiation?: boolean;
+      tracks?: unknown[];
+    });
 
 beforeEach(() => {
   vi.useFakeTimers();
   calls = [];
   renegotiate = undefined;
+  pullResponseOverride = undefined;
   vi.stubGlobal("RTCPeerConnection", PeerConnection);
   vi.stubGlobal("MediaStream", Stream);
   vi.stubGlobal(
@@ -166,7 +199,15 @@ beforeEach(() => {
             answer: { type: "answer", sdp: "answer" },
             tracks: { audio: "own-audio", video: "own-video" },
           });
+        case "announce":
+          return Response.json({
+            tracks: (body as { tracks: unknown }).tracks,
+          });
         case "pull": {
+          if (pullResponseOverride) {
+            const override = pullResponseOverride(body);
+            return Response.json(override);
+          }
           const input = requestSchemas.pull.parse(body);
           const tracks = input.trackNames.map((trackName) => {
             const mid = String(PeerConnection.current.transceivers.length);
@@ -254,6 +295,160 @@ describe("Cloudflare browser adapter", () => {
     await client.leave();
     expect(audio.stop).toHaveBeenCalledOnce();
     expect(video.stop).toHaveBeenCalledOnce();
+  });
+
+  it("waits for connected before calling announce during publish", async () => {
+    const client = await joined();
+    PeerConnection.current.connectionState = "connecting";
+    const audio = new MediaTrack("audio", "mic");
+    let published = false;
+    const promise = client
+      .publishTracks(new Stream([audio]) as unknown as MediaStream, {
+        audio: true,
+        video: false,
+      })
+      .then((names) => {
+        published = true;
+        return names;
+      });
+    await vi.advanceTimersByTimeAsync(10);
+    expect(calls.some((c) => c.action === "push")).toBe(true);
+    expect(calls.some((c) => c.action === "announce")).toBe(false);
+    expect(published).toBe(false);
+
+    PeerConnection.current.setConnectionState("connected");
+    const names = await promise;
+    expect(published).toBe(true);
+    expect(calls.some((c) => c.action === "announce")).toBe(true);
+    expect(names).toEqual({ audio: "own-audio", video: "own-video" });
+    await client.leave();
+  });
+
+  it("waits for connected before pull during subscribe and throws if failed", async () => {
+    const client = await joined();
+    // A connection that already negotiated (published) must be up before pulling.
+    PeerConnection.current.remoteDescription = {
+      type: "answer",
+      sdp: "answer",
+    };
+    PeerConnection.current.connectionState = "connecting";
+    let subscribed = false;
+    const promise = client.subscribe(participant).then(() => {
+      subscribed = true;
+    });
+    await vi.advanceTimersByTimeAsync(10);
+    expect(calls.some((c) => c.action === "pull")).toBe(false);
+    expect(subscribed).toBe(false);
+
+    PeerConnection.current.setConnectionState("connected");
+    await promise;
+    expect(subscribed).toBe(true);
+    expect(calls.some((c) => c.action === "pull")).toBe(true);
+
+    PeerConnection.current.connectionState = "failed";
+    await expect(client.subscribe(participant)).rejects.toThrow(
+      "Video connection is failed",
+    );
+    await client.leave();
+  });
+
+  it("pulls right away on a receive-only connection", async () => {
+    const client = await joined();
+    PeerConnection.current.connectionState = "new";
+    await client.subscribe(participant);
+    expect(calls.some((c) => c.action === "pull")).toBe(true);
+    await client.leave();
+  });
+
+  it("completes negotiation on partial results and retries failed names with backoff", async () => {
+    const client = await joined();
+    let stream: MediaStream | null = null;
+    client.on("remote", (_userId, value) => {
+      stream = value;
+    });
+    let pullCount = 0;
+    pullResponseOverride = () => {
+      pullCount += 1;
+      if (pullCount === 1) {
+        // Audio succeeds, video fails with empty_track_error
+        const mid = String(PeerConnection.current.transceivers.length);
+        PeerConnection.current.transceivers.push(
+          new Transceiver(mid, new MediaTrack("audio", "target-0")),
+        );
+        return {
+          sessionDescription: { type: "offer", sdp: "offer" },
+          requiresImmediateRenegotiation: true,
+          tracks: [
+            { mid, trackName: "target-audio", sessionId: "remote-session" },
+            {
+              trackName: "target-video",
+              sessionId: "remote-session",
+              errorCode: "empty_track_error",
+            },
+          ],
+        };
+      }
+      // Retry: video succeeds
+      const mid = String(PeerConnection.current.transceivers.length);
+      PeerConnection.current.transceivers.push(
+        new Transceiver(mid, new MediaTrack("video", "target-1")),
+      );
+      return {
+        sessionDescription: { type: "offer", sdp: "offer" },
+        requiresImmediateRenegotiation: true,
+        tracks: [
+          { mid, trackName: "target-video", sessionId: "remote-session" },
+        ],
+      };
+    };
+
+    await client.subscribe(participant);
+    // Negotiation was completed even though video failed
+    expect(calls.filter((c) => c.action === "renegotiate")).toHaveLength(1);
+    expect(
+      (stream as unknown as Stream | null)?.getTracks().map((t) => t.kind),
+    ).toEqual(["audio"]);
+
+    // First retry delay is 1 s (1000 ms)
+    await vi.advanceTimersByTimeAsync(1000);
+    expect(pullCount).toBe(2);
+    const lastPull = calls.filter((c) => c.action === "pull").at(-1);
+    expect(requestSchemas.pull.parse(lastPull?.body).trackNames).toEqual([
+      "target-video",
+    ]);
+    // Negotiation completed again on retry
+    expect(calls.filter((c) => c.action === "renegotiate")).toHaveLength(2);
+    expect(
+      (stream as unknown as Stream | null)
+        ?.getTracks()
+        .map((t) => t.kind)
+        .sort(),
+    ).toEqual(["audio", "video"]);
+
+    await client.leave();
+  });
+
+  it("cancels pending retries on unsubscribe and leave", async () => {
+    const client = await joined();
+    let pullCount = 0;
+    pullResponseOverride = () => {
+      pullCount += 1;
+      return {
+        sessionDescription: { type: "offer", sdp: "offer" },
+        requiresImmediateRenegotiation: true,
+        tracks: [{ trackName: "target-audio", errorCode: "empty_track_error" }],
+      };
+    };
+
+    await client.subscribe(participant);
+    expect(pullCount).toBe(1);
+
+    // Unsubscribe cancels the scheduled retry
+    await client.unsubscribe("target");
+    await vi.advanceTimersByTimeAsync(10_000);
+    expect(pullCount).toBe(1);
+
+    await client.leave();
   });
 
   it("closes only remote video and re-pulls its stored name while preserving audio", async () => {
