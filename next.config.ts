@@ -4,6 +4,7 @@ import { withSentryConfig } from "@sentry/nextjs/config";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+const dev = process.env.NODE_ENV === "development";
 const nextConfig: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
@@ -42,17 +43,18 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline'",
+              // React needs eval only for development tooling.
+              `script-src 'self' 'unsafe-inline' https://us-assets.i.posthog.com https://eu-assets.i.posthog.com${dev ? " 'unsafe-eval'" : ""}`,
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https:",
               "font-src 'self' data:",
               "media-src 'self' blob:",
-              "connect-src 'self' https://rtc.live.cloudflare.com wss:",
+              "connect-src 'self' https://rtc.live.cloudflare.com https://*.sentry.io wss:",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self' https://accounts.google.com https://*.polar.sh https://polar.sh",
               "object-src 'none'",
-              "upgrade-insecure-requests",
+              ...(dev ? [] : ["upgrade-insecure-requests"]),
             ].join("; "),
           },
         ],

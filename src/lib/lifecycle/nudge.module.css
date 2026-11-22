@@ -87,6 +87,12 @@
     align-items: flex-start;
     gap: 12px;
   }
+  .left {
+    width: 100%;
+  }
+  .text {
+    white-space: normal;
+  }
   .actions {
     width: 100%;
     justify-content: space-between;

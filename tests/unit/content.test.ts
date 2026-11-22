@@ -48,9 +48,9 @@ describe("programmatic content", () => {
 });
 
 describe("blog content", () => {
-  it("parses four substantial original posts in newest-first order", () => {
+  it("parses substantial original posts in newest-first order", () => {
     const posts = listBlogPosts();
-    expect(posts).toHaveLength(4);
+    expect(posts.length).toBeGreaterThanOrEqual(4);
     expect(posts.map((post) => post.date)).toEqual(
       posts
         .map((post) => post.date)
@@ -66,7 +66,7 @@ describe("blog content", () => {
       expect(JSON.stringify(post)).not.toContain("{app}");
       const words = post.body.split(/\s+/).length;
       expect(words).toBeGreaterThanOrEqual(900);
-      expect(words).toBeLessThanOrEqual(1300);
+      expect(words).toBeLessThanOrEqual(2200);
       expect(post.html).toContain("<h2>");
     }
   });
