@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { TokenVerifier } from "livekit-server-sdk";
+import { logger } from "@/src/lib/logger";
 import {
   cloudflareProvider,
   cloudflareRequest,
@@ -26,6 +27,7 @@ beforeEach(() => {
 afterEach(() => {
   vi.unstubAllEnvs();
   vi.unstubAllGlobals();
+  vi.restoreAllMocks();
 });
 
 describe("video server providers", () => {
@@ -194,6 +196,113 @@ describe("Cloudflare API boundary", () => {
       status: 502,
       message: "Cloudflare video request failed",
     });
+  });
+
+  it("logs a warning with the error code and excludes the SDP", async () => {
+    const warn = vi.spyOn(logger, "warn").mockImplementation(() => logger);
+    const secretSdp = "v=0\r\no=- 123456 2 IN IP4 127.0.0.1\r\ns=-\r\n";
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () =>
+        Response.json({
+          errorCode: "INVALID_SDP",
+          errorDescription: "Failed to parse SDP offer",
+          sessionDescription: { type: "offer", sdp: secretSdp },
+        }),
+      ),
+    );
+
+    await expect(
+      cloudflareRequest("/sessions/cf-session/tracks/new", "POST"),
+    ).rejects.toMatchObject({
+      status: 502,
+      message: "Cloudflare video request failed",
+    });
+
+    expect(warn).toHaveBeenCalledOnce();
+    const [payload] = warn.mock.calls[0];
+    expect(payload).toMatchObject({
+      path: "/sessions/:id/tracks/new",
+      status: 200,
+      errors: [
+        {
+          errorCode: "INVALID_SDP",
+          errorDescription: "Failed to parse SDP offer",
+        },
+      ],
+    });
+    expect(JSON.stringify(payload)).toContain("INVALID_SDP");
+    expect(JSON.stringify(payload)).not.toContain(secretSdp);
+    expect(JSON.stringify(payload)).not.toContain("cf-session");
+  });
+
+  it("logs a warning with track error codes and excludes track metadata and SDP", async () => {
+    const warn = vi.spyOn(logger, "warn").mockImplementation(() => logger);
+    const secretSdp = "v=0\r\no=- 78910 2 IN IP4 127.0.0.1\r\ns=-\r\n";
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () =>
+        Response.json({
+          tracks: [
+            {
+              errorCode: "TRACK_FAILED",
+              errorDescription: "Failed to negotiate track",
+              trackName: "private-track-name",
+            },
+          ],
+          sessionDescription: { type: "answer", sdp: secretSdp },
+        }),
+      ),
+    );
+
+    await expect(
+      cloudflareRequest("/sessions/cf-session/tracks/new", "POST"),
+    ).rejects.toMatchObject({
+      status: 502,
+      message: "Cloudflare video request failed",
+    });
+
+    expect(warn).toHaveBeenCalledOnce();
+    const [payload] = warn.mock.calls[0];
+    expect(payload).toMatchObject({
+      path: "/sessions/:id/tracks/new",
+      status: 200,
+      errors: [
+        {
+          errorCode: "TRACK_FAILED",
+          errorDescription: "Failed to negotiate track",
+        },
+      ],
+    });
+    expect(JSON.stringify(payload)).toContain("TRACK_FAILED");
+    expect(JSON.stringify(payload)).not.toContain(secretSdp);
+    expect(JSON.stringify(payload)).not.toContain("private-track-name");
+    expect(JSON.stringify(payload)).not.toContain("cf-session");
+  });
+
+  it("logs only status and path when upstream failure body is not JSON", async () => {
+    const warn = vi.spyOn(logger, "warn").mockImplementation(() => logger);
+    const secretSdp = "v=0\r\no=- 55555 2 IN IP4 127.0.0.1\r\ns=-\r\n";
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => new Response(secretSdp, { status: 500 })),
+    );
+
+    await expect(
+      cloudflareRequest("/sessions/cf-session/renegotiate", "PUT"),
+    ).rejects.toMatchObject({
+      status: 502,
+      message: "Cloudflare video request failed",
+    });
+
+    expect(warn).toHaveBeenCalledOnce();
+    const [payload] = warn.mock.calls[0];
+    expect(payload).toEqual({
+      path: "/sessions/:id/renegotiate",
+      status: 500,
+    });
+    expect(JSON.stringify(payload)).not.toContain(secretSdp);
+    expect(JSON.stringify(payload)).not.toContain("cf-session");
   });
 
   it.each(["single", "array"])(

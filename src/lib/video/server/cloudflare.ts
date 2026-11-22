@@ -1,10 +1,70 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { z } from "zod";
+import { logger } from "@/src/lib/logger";
 import { cloudflareResponseSchema } from "../protocol";
 import type { VideoServerProvider } from "../types";
 import { videoEnv } from "./config";
 import { VideoError } from "./errors";
+
+type CloudflareErrorInfo = {
+  errorCode?: unknown;
+  errorDescription?: string;
+};
+
+function truncateDescription(value: unknown): string | undefined {
+  if (typeof value === "string") return value.slice(0, 200);
+  if (value !== undefined && value !== null) return String(value).slice(0, 200);
+  return undefined;
+}
+
+function collectErrors(data: unknown): CloudflareErrorInfo[] {
+  if (!data || typeof data !== "object") return [];
+  const errors: CloudflareErrorInfo[] = [];
+  const record = data as Record<string, unknown>;
+
+  if (record.errorCode !== undefined || record.errorDescription !== undefined) {
+    const error: CloudflareErrorInfo = {};
+    if (record.errorCode !== undefined) {
+      error.errorCode = record.errorCode;
+    }
+    const desc = truncateDescription(record.errorDescription);
+    if (desc !== undefined) {
+      error.errorDescription = desc;
+    }
+    errors.push(error);
+  }
+
+  if (Array.isArray(record.tracks)) {
+    for (const track of record.tracks) {
+      if (track && typeof track === "object") {
+        const trackRecord = track as Record<string, unknown>;
+        if (
+          trackRecord.errorCode !== undefined ||
+          trackRecord.errorDescription !== undefined
+        ) {
+          const error: CloudflareErrorInfo = {};
+          if (trackRecord.errorCode !== undefined) {
+            error.errorCode = trackRecord.errorCode;
+          }
+          const desc = truncateDescription(trackRecord.errorDescription);
+          if (desc !== undefined) {
+            error.errorDescription = desc;
+          }
+          errors.push(error);
+        }
+      }
+    }
+  }
+
+  return errors;
+}
+
+function safeRoute(path: string): string {
+  return path
+    .replace(/^\/sessions\/(?!new(?:\/|$))[^/]+/, "/sessions/:id")
+    .replace(/^\/turn\/keys\/[^/]+/, "/turn/keys/:id");
+}
 
 function hasError(value: unknown): boolean {
   if (!value || typeof value !== "object") return false;
@@ -17,13 +77,15 @@ function hasError(value: unknown): boolean {
 }
 
 async function request(
+  route: string,
   url: string,
   token: string,
   method: string,
   body?: unknown,
 ): Promise<unknown> {
+  let response: Response;
   try {
-    const response = await fetch(url, {
+    response = await fetch(url, {
       method,
       headers: {
         Authorization: `Bearer ${token}`,
@@ -33,14 +95,41 @@ async function request(
       signal: AbortSignal.timeout(10_000),
       cache: "no-store",
     });
-    if (!response.ok) throw new Error("upstream");
-    const data: unknown = await response.json();
-    if (hasError(data)) throw new Error("upstream");
-    return data;
   } catch {
-    // Upstream messages can contain SDP or credentials.
     throw new VideoError("Cloudflare video request failed", 502);
   }
+
+  let data: unknown;
+  let isJson = false;
+  try {
+    data = await response.json();
+    isJson = true;
+  } catch {
+    isJson = false;
+  }
+
+  if (response.ok && isJson && !hasError(data)) {
+    return data;
+  }
+
+  const logPayload: {
+    path: string;
+    status: number;
+    errors?: CloudflareErrorInfo[];
+  } = {
+    path: route,
+    status: response.status,
+  };
+
+  if (isJson) {
+    const errors = collectErrors(data);
+    if (errors.length > 0) {
+      logPayload.errors = errors;
+    }
+  }
+
+  logger.warn(logPayload, "Cloudflare video request failed");
+  throw new VideoError("Cloudflare video request failed", 502);
 }
 
 export async function cloudflareRequest(
@@ -55,7 +144,9 @@ export async function cloudflareRequest(
     !env.CLOUDFLARE_REALTIME_APP_TOKEN
   )
     throw new VideoError("Cloudflare video provider is not configured", 503);
+  const route = safeRoute(path);
   const data = await request(
+    route,
     `https://rtc.live.cloudflare.com/v1/apps/${encodeURIComponent(env.CLOUDFLARE_REALTIME_APP_ID)}${path}`,
     env.CLOUDFLARE_REALTIME_APP_TOKEN,
     method,
@@ -85,6 +176,7 @@ export const cloudflareProvider: VideoServerProvider = {
     ];
     if (env.CLOUDFLARE_TURN_KEY_ID && env.CLOUDFLARE_TURN_KEY_TOKEN) {
       const data = await request(
+        "/turn/keys/:id/credentials/generate-ice-servers",
         `https://rtc.live.cloudflare.com/v1/turn/keys/${encodeURIComponent(env.CLOUDFLARE_TURN_KEY_ID)}/credentials/generate-ice-servers`,
         env.CLOUDFLARE_TURN_KEY_TOKEN,
         "POST",
