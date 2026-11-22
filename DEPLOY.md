@@ -147,3 +147,23 @@ docker compose --env-file .env -f compose.production.yaml exec -T db pg_restore 
 For a production restore, stop app and worker first and restart them only after checking the restored database. Restoration replaces data; image rollback does not undo it.
 
 Set an external uptime monitor on `https://<domain>/api/health`. Database/configuration failures return 503. The additional `worker` field is `ok`, `stale` after three minutes, or `unknown` without a usable heartbeat; it does not change HTTP 200. Monitor that field separately and check worker logs. Sentry is recommended alongside uptime checks.
+
+## Deploying without a registry
+
+On a single ARM64 server you can skip GHCR: build on a machine with the same architecture, copy the image over SSH and deploy it by commit.
+
+```sh
+sha=$(git rev-parse HEAD)
+docker build --platform linux/arm64 -t local/<slug>:$sha .
+docker save local/<slug>:$sha | gzip -1 | ssh <server> 'gunzip | docker load'
+```
+
+Set `IMAGE_REPOSITORY=local/<slug>` in the deployment `.env`, then on the server:
+
+```sh
+bash configure-runtime.sh https://<domain> local/<slug>:$sha [old-runtime.env]   # once, fills third-party keys
+bash deploy.sh local/<slug>:$sha                                                   # health-checked, with rollback
+bash point-domain.sh <domain> <slug>-app                                           # route the domain via the shared Caddy
+```
+
+`deploy.sh` only accepts `local/` images tagged with a commit hash, never mutable tags like `latest`.
