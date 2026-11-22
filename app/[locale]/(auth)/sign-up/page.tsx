@@ -12,7 +12,10 @@ import { REFERRAL_COOKIE, getProfileByReferralCode } from "@/src/lib/profiles";
 import { Link } from "@/src/i18n/navigation";
 import styles from "../auth.module.css";
 
-export const metadata: Metadata = { title: "Create your account" };
+export const metadata: Metadata = {
+  title: "Create your account",
+  robots: { index: false },
+};
 
 export default async function Page() {
   await connection();

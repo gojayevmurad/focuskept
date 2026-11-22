@@ -5,6 +5,7 @@ import { z } from "zod";
 import { getSession } from "@/src/lib/auth/session";
 import { getEnv } from "@/src/config/env";
 import { sameOrigin } from "@/src/lib/security/validation";
+import { rateLimit } from "@/src/lib/security/rate-limit";
 import { polar, products } from "@/src/lib/billing/provider";
 import { pendingDiscountCode } from "@/src/lib/growth/referrals";
 import { trackForUser } from "@/src/lib/analytics/product";
@@ -23,6 +24,12 @@ export async function POST(
       { error: "Billing is not configured. No payment has been taken." },
       { status: 503 },
     );
+  if (!(await rateLimit(`billing:${session.user.id}`, 10, 60))) {
+    return Response.json(
+      { error: "Too many billing requests. Please wait a minute." },
+      { status: 429 },
+    );
+  }
   try {
     const { action } = await ctx.params;
     if (action === "portal") {

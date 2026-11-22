@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { getFormatter, getTranslations } from "next-intl/server";
+import { Link } from "@/src/i18n/navigation";
 import { requireAdmin } from "@/src/lib/app-user";
 import { currentMetrics, periodMetrics } from "@/src/lib/admin/metrics";
 import { AdminFrame } from "./frame";
@@ -68,6 +69,10 @@ export default async function Page() {
             <strong>{format.number(current[key])}</strong>
           </div>
         ))}
+        <Link href="/admin/support" className="card stat">
+          <span>{t("metrics.supportTickets")}</span>
+          <strong>{format.number(current.supportTickets)}</strong>
+        </Link>
       </section>
       <section className="card stack">
         <h2>{t("operations")}</h2>

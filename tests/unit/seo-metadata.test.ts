@@ -52,7 +52,9 @@ describe("SEO Metadata and URL Formatting", () => {
     expect(meta.alternates?.canonical).toContain("/body-doubling-for/adhd");
     expect(meta.alternates?.languages?.["x-default"]).toBeDefined();
 
-    expect((meta.openGraph as { type?: string } | undefined)?.type).toBe("website");
+    expect((meta.openGraph as { type?: string } | undefined)?.type).toBe(
+      "website",
+    );
     expect(meta.openGraph?.title).toBe("Body Doubling for ADHD | FocusKept");
     expect(meta.openGraph?.images).toEqual([
       expect.objectContaining({
@@ -62,7 +64,9 @@ describe("SEO Metadata and URL Formatting", () => {
       }),
     ]);
 
-    expect((meta.twitter as { card?: string } | undefined)?.card).toBe("summary_large_image");
+    expect((meta.twitter as { card?: string } | undefined)?.card).toBe(
+      "summary_large_image",
+    );
     expect(meta.twitter?.images).toEqual([
       expect.stringContaining("/opengraph-image"),
     ]);
@@ -70,7 +74,9 @@ describe("SEO Metadata and URL Formatting", () => {
     const robots = meta.robots as Record<string, unknown>;
     expect(robots?.index).toBe(true);
     expect(robots?.follow).toBe(true);
-    expect(robots?.maxImagePreview).toBe("large");
+    expect(
+      (robots as Record<string, unknown> | undefined)?.["max-image-preview"],
+    ).toBe("large");
   });
 
   it("generates private page metadata with noindex and nofollow", () => {

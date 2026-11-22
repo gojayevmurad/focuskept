@@ -15,6 +15,8 @@ import { userStats } from "@/src/lib/growth/stats";
 import { addMinutes } from "@/src/lib/scheduling/slots";
 import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
+import { JsonLd } from "@/src/components/marketing/json-ld";
+import { buildProfilePageSchema } from "@/src/lib/seo/schema";
 import { JoinSlot } from "./join-slot";
 import styles from "./profile.module.css";
 
@@ -87,6 +89,19 @@ export default async function Page({ params, searchParams }: Props) {
   return (
     <>
       <SiteHeader />
+      {person.statsPublic && (
+        <JsonLd
+          data={buildProfilePageSchema(
+            {
+              username: person.username,
+              displayName: person.displayName,
+              bio: person.bio ?? undefined,
+              statsPublic: person.statsPublic,
+            },
+            { name: app.name, url: app.url },
+          )}
+        />
+      )}
       <main className={styles.page}>
         <div className={styles.profileHero}>
           <Avatar name={person.displayName} src={person.avatarUrl} size="lg" />

@@ -7,6 +7,7 @@ import { profile } from "@/src/lib/db/schema";
 import { joinCredentials } from "@/src/lib/video/server";
 import { VideoError } from "@/src/lib/video/server/errors";
 import { videoRequest } from "@/src/lib/video/server/request";
+import { rateLimit } from "@/src/lib/security/rate-limit";
 
 export const runtime = "nodejs";
 
@@ -15,6 +16,9 @@ export async function POST(
   context: { params: Promise<{ sessionId: string }> },
 ) {
   return videoRequest(request, "/api/video/join/[sessionId]", async (user) => {
+    if (!(await rateLimit(`video:join:${user.id}`, 30, 60))) {
+      throw new VideoError("Too many video join requests", 429);
+    }
     const text = await request.text();
     const body: unknown = text ? JSON.parse(text) : {};
     if (!z.object({}).strict().safeParse(body).success)

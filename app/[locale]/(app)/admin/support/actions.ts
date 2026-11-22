@@ -49,3 +49,15 @@ export async function updateTicketNoteAction(formData: FormData) {
   revalidatePath("/[locale]/admin/support", "layout");
   return { ok: true };
 }
+
+export async function updateTicketStatusFormAction(
+  formData: FormData,
+): Promise<void> {
+  await updateTicketStatusAction(formData);
+}
+
+export async function updateTicketNoteFormAction(
+  formData: FormData,
+): Promise<void> {
+  await updateTicketNoteAction(formData);
+}

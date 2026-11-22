@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 "use client";
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { Sparkles, X } from "lucide-react";
 import { Link } from "@/src/i18n/navigation";
 import styles from "./nudge.module.css";
@@ -16,6 +16,11 @@ type Props = {
   dismissLabel: string;
 };
 
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  return () => window.removeEventListener("storage", callback);
+}
+
 export function NudgeBannerClient({
   slotIso,
   formattedTime,
@@ -26,21 +31,24 @@ export function NudgeBannerClient({
   bookLabel,
   dismissLabel,
 }: Props) {
-  const [dismissed, setDismissed] = useState(true);
+  const [manuallyDismissed, setManuallyDismissed] = useState(false);
 
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(`focuskept:nudge_dismissed:${slotIso}`);
-      if (!stored) {
-        setDismissed(false);
+  const isStoredDismissed = useSyncExternalStore(
+    subscribe,
+    () => {
+      try {
+        return !!localStorage.getItem(`focuskept:nudge_dismissed:${slotIso}`);
+      } catch {
+        return false;
       }
-    } catch {
-      setDismissed(false);
-    }
-  }, [slotIso]);
+    },
+    () => true,
+  );
+
+  const dismissed = manuallyDismissed || isStoredDismissed;
 
   const handleDismiss = () => {
-    setDismissed(true);
+    setManuallyDismissed(true);
     try {
       localStorage.setItem(`focuskept:nudge_dismissed:${slotIso}`, "true");
     } catch {}

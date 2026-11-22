@@ -6,7 +6,19 @@ import { EmailLayout } from "@/src/lib/notifications/email-layout";
 import { getAppConfig } from "@/src/config/app";
 import { signUnsubscribeToken } from "./tokens";
 
-type Messages = Record<string, any>;
+type Messages = Record<string, unknown>;
+
+type LifecycleSection = Record<string, string>;
+type BaseLifecycle = {
+  footer?: LifecycleSection;
+  welcome?: LifecycleSection;
+  nudgeFirstBooking?: LifecycleSection;
+  firstSessionTips?: LifecycleSection;
+  afterFirstSession?: LifecycleSection;
+  winBack?: LifecycleSection;
+  weeklySummary?: LifecycleSection;
+  [key: string]: unknown;
+};
 
 /**
  * Loads translations for a locale, merging with the patch strings so
@@ -22,38 +34,44 @@ export async function getLifecycleTranslator(locale = "en") {
     } catch {}
   }
 
+  const baseLifecycle =
+    typeof baseMessages.lifecycle === "object" &&
+    baseMessages.lifecycle !== null
+      ? (baseMessages.lifecycle as BaseLifecycle)
+      : {};
+
   // Merge patch strings so our lifecycle namespace is present
   const merged = {
     ...baseMessages,
     lifecycle: {
-      ...(baseMessages.lifecycle || {}),
+      ...baseLifecycle,
       ...patchD.lifecycle,
       footer: {
-        ...(baseMessages.lifecycle?.footer || {}),
+        ...(baseLifecycle.footer || {}),
         ...patchD.lifecycle.footer,
       },
       welcome: {
-        ...(baseMessages.lifecycle?.welcome || {}),
+        ...(baseLifecycle.welcome || {}),
         ...patchD.lifecycle.welcome,
       },
       nudgeFirstBooking: {
-        ...(baseMessages.lifecycle?.nudgeFirstBooking || {}),
+        ...(baseLifecycle.nudgeFirstBooking || {}),
         ...patchD.lifecycle.nudgeFirstBooking,
       },
       firstSessionTips: {
-        ...(baseMessages.lifecycle?.firstSessionTips || {}),
+        ...(baseLifecycle.firstSessionTips || {}),
         ...patchD.lifecycle.firstSessionTips,
       },
       afterFirstSession: {
-        ...(baseMessages.lifecycle?.afterFirstSession || {}),
+        ...(baseLifecycle.afterFirstSession || {}),
         ...patchD.lifecycle.afterFirstSession,
       },
       winBack: {
-        ...(baseMessages.lifecycle?.winBack || {}),
+        ...(baseLifecycle.winBack || {}),
         ...patchD.lifecycle.winBack,
       },
       weeklySummary: {
-        ...(baseMessages.lifecycle?.weeklySummary || {}),
+        ...(baseLifecycle.weeklySummary || {}),
         ...patchD.lifecycle.weeklySummary,
       },
     },
@@ -159,7 +177,9 @@ export async function renderLifecycleEmail(
       const hours = extra?.sessionStats?.hours ?? 0;
       const statsLine = t("weeklySummary.statsLine", { sessions, hours });
       const nextLine = extra?.nextBookingFormatted
-        ? t("weeklySummary.nextBookingLine", { when: extra.nextBookingFormatted })
+        ? t("weeklySummary.nextBookingLine", {
+            when: extra.nextBookingFormatted,
+          })
         : t("weeklySummary.noUpcomingLine");
       lines = [statsLine, nextLine];
       if (extra?.suggestedSlotFormatted) {

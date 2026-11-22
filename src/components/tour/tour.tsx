@@ -3,15 +3,30 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { X, ChevronRight, ChevronLeft, Check, Compass } from "lucide-react";
+import type { AnalyticsEvent } from "@/src/lib/analytics/events";
 import styles from "./tour.module.css";
 
 const STORAGE_KEY = "focuskept:tour_seen:v1";
 
+type TourTitleKey =
+  | "stepBookTitle"
+  | "stepUpcomingTitle"
+  | "stepSuggestionsTitle"
+  | "stepPeopleTitle"
+  | "stepProgressTitle";
+
+type TourDescKey =
+  | "stepBookDesc"
+  | "stepUpcomingDesc"
+  | "stepSuggestionsDesc"
+  | "stepPeopleDesc"
+  | "stepProgressDesc";
+
 interface TourStep {
   id: string;
   target: string;
-  titleKey: string;
-  descKey: string;
+  titleKey: TourTitleKey;
+  descKey: TourDescKey;
 }
 
 const STEPS: TourStep[] = [
@@ -23,7 +38,8 @@ const STEPS: TourStep[] = [
   },
   {
     id: "upcoming",
-    target: '[data-tour="upcoming"], [data-tour="first-run"], section[class*="upcoming"]',
+    target:
+      '[data-tour="upcoming"], [data-tour="first-run"], section[class*="upcoming"]',
     titleKey: "stepUpcomingTitle",
     descKey: "stepUpcomingDesc",
   },
@@ -41,7 +57,8 @@ const STEPS: TourStep[] = [
   },
   {
     id: "progress",
-    target: 'a[href="/progress"], a[href$="/progress"], [data-tour="stats"], dl[class*="stats"]',
+    target:
+      'a[href="/progress"], a[href$="/progress"], [data-tour="stats"], dl[class*="stats"]',
     titleKey: "stepProgressTitle",
     descKey: "stepProgressDesc",
   },
@@ -50,7 +67,7 @@ const STEPS: TourStep[] = [
 async function trackTourEvent(name: "tour_started" | "tour_completed") {
   try {
     const { track } = await import("@/src/lib/analytics/client");
-    track(name as any);
+    track(name as unknown as AnalyticsEvent);
   } catch {
     // Optional analytics guard
   }
@@ -67,7 +84,10 @@ export function Tour({
   const [active, setActive] = useState(false);
   const [stepIndex, setStepIndex] = useState(0);
   const [rect, setRect] = useState<DOMRect | null>(null);
-  const [popoverPos, setPopoverPos] = useState<{ top: number; left: number } | null>(null);
+  const [popoverPos, setPopoverPos] = useState<{
+    top: number;
+    left: number;
+  } | null>(null);
   const popoverRef = useRef<HTMLDivElement>(null);
 
   const startTour = useCallback(() => {
@@ -95,7 +115,8 @@ export function Tour({
   useEffect(() => {
     const handleTrigger = () => startTour();
     window.addEventListener("focuskept:start-tour", handleTrigger);
-    return () => window.removeEventListener("focuskept:start-tour", handleTrigger);
+    return () =>
+      window.removeEventListener("focuskept:start-tour", handleTrigger);
   }, [startTour]);
 
   // Automatic trigger on first-run if not yet seen
@@ -137,7 +158,10 @@ export function Tour({
     const popoverWidth = 380;
     const padding = 16;
     let left = r.left + r.width / 2 - popoverWidth / 2;
-    left = Math.max(padding, Math.min(window.innerWidth - popoverWidth - padding, left));
+    left = Math.max(
+      padding,
+      Math.min(window.innerWidth - popoverWidth - padding, left),
+    );
 
     let top = r.bottom + 12;
     if (top + 240 > window.innerHeight) {
@@ -150,7 +174,9 @@ export function Tour({
 
   useEffect(() => {
     if (!active) return;
-    updatePosition();
+    const timer = setTimeout(() => {
+      updatePosition();
+    }, 0);
 
     const handleResize = () => updatePosition();
     const handleScroll = () => updatePosition();
@@ -159,6 +185,7 @@ export function Tour({
     window.addEventListener("scroll", handleScroll, true);
 
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll, true);
     };
@@ -227,7 +254,7 @@ export function Tour({
         }
         role="dialog"
         aria-modal="true"
-        aria-label={t(currentStep.titleKey as any)}
+        aria-label={t(currentStep.titleKey)}
       >
         <header className={styles.header}>
           <span className={styles.badge}>
@@ -244,8 +271,8 @@ export function Tour({
         </header>
 
         <div className={styles.content}>
-          <h2 className={styles.title}>{t(currentStep.titleKey as any)}</h2>
-          <p className={styles.description}>{t(currentStep.descKey as any)}</p>
+          <h2 className={styles.title}>{t(currentStep.titleKey)}</h2>
+          <p className={styles.description}>{t(currentStep.descKey)}</p>
         </div>
 
         <footer className={styles.footer}>
@@ -301,7 +328,9 @@ export function TourTrigger({ className }: { className?: string }) {
     <button
       type="button"
       className={className ?? "button secondary small"}
-      onClick={() => window.dispatchEvent(new CustomEvent("focuskept:start-tour"))}
+      onClick={() =>
+        window.dispatchEvent(new CustomEvent("focuskept:start-tour"))
+      }
       title={t("takeTour")}
     >
       <Compass size={15} />

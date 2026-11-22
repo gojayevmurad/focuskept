@@ -29,13 +29,12 @@ import {
   SUPPORT_CATEGORIES,
   supportTicketSchema,
 } from "@/src/lib/support/validation";
-import {
-  checkSupportRateLimit,
-  hashIp,
-} from "@/src/lib/support/rate-limit";
+import { checkSupportRateLimit, hashIp } from "@/src/lib/support/rate-limit";
 import {
   updateTicketNoteAction,
+  updateTicketNoteFormAction,
   updateTicketStatusAction,
+  updateTicketStatusFormAction,
 } from "@/app/[locale]/(app)/admin/support/actions";
 import { GET as exportGet } from "@/app/api/account/export/route";
 
@@ -139,10 +138,7 @@ describe("support rate limiting", () => {
   it("allows requests when rate limits are not exceeded", async () => {
     mocks.rateLimit.mockResolvedValue(true);
 
-    const allowed = await checkSupportRateLimit(
-      "198.51.100.42",
-      "user-123",
-    );
+    const allowed = await checkSupportRateLimit("198.51.100.42", "user-123");
     expect(allowed).toBe(true);
     expect(mocks.rateLimit).toHaveBeenCalledTimes(2);
     // Verifies the rate limit key uses the hashed IP, not the raw IP
@@ -161,10 +157,7 @@ describe("support rate limiting", () => {
   it("blocks requests when the IP rate limit is exceeded", async () => {
     mocks.rateLimit.mockResolvedValueOnce(false);
 
-    const allowed = await checkSupportRateLimit(
-      "198.51.100.42",
-      "user-123",
-    );
+    const allowed = await checkSupportRateLimit("198.51.100.42", "user-123");
     expect(allowed).toBe(false);
     expect(mocks.rateLimit).toHaveBeenCalledTimes(1);
   });
@@ -172,10 +165,7 @@ describe("support rate limiting", () => {
   it("blocks requests when the user rate limit is exceeded", async () => {
     mocks.rateLimit.mockResolvedValueOnce(true).mockResolvedValueOnce(false);
 
-    const allowed = await checkSupportRateLimit(
-      "198.51.100.42",
-      "user-123",
-    );
+    const allowed = await checkSupportRateLimit("198.51.100.42", "user-123");
     expect(allowed).toBe(false);
     expect(mocks.rateLimit).toHaveBeenCalledTimes(2);
   });
@@ -261,6 +251,31 @@ describe("admin support authorization and actions", () => {
         adminNote: "Followed up with user via email.",
       }),
     );
+  });
+
+  it("handles form action wrappers correctly", async () => {
+    mocks.requireAdmin.mockResolvedValue({
+      user: { id: "admin-1" },
+      profile: { role: "admin" },
+    });
+
+    const where = vi.fn().mockResolvedValue(undefined);
+    const set = vi.fn().mockReturnValue({ where });
+    mocks.db.mockReturnValue({ update: () => ({ set }) });
+
+    const statusFormData = new FormData();
+    statusFormData.set("id", "8bba2632-e4b5-49c3-8716-2d6bacad601b");
+    statusFormData.set("status", "closed");
+
+    const statusResult = await updateTicketStatusFormAction(statusFormData);
+    expect(statusResult).toBeUndefined();
+
+    const noteFormData = new FormData();
+    noteFormData.set("id", "8bba2632-e4b5-49c3-8716-2d6bacad601b");
+    noteFormData.set("adminNote", "Resolved issue");
+
+    const noteResult = await updateTicketNoteFormAction(noteFormData);
+    expect(noteResult).toBeUndefined();
   });
 });
 

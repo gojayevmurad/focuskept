@@ -21,6 +21,22 @@ import styles from "./first-run.module.css";
 const TOTAL_STEPS = 5;
 const STEP_DURATION_MS = 4500;
 
+const STEP_TITLES = [
+  "step1Title",
+  "step2Title",
+  "step3Title",
+  "step4Title",
+  "step5Title",
+] as const;
+
+const STEP_DESCS = [
+  "step1Desc",
+  "step2Desc",
+  "step3Desc",
+  "step4Desc",
+  "step5Desc",
+] as const;
+
 export function WalkthroughModal({
   open,
   onClose,
@@ -51,7 +67,10 @@ export function WalkthroughModal({
     try {
       const media = window.matchMedia("(prefers-reduced-motion: reduce)");
       if (media.matches) {
-        setPlaying(false);
+        const timer = setTimeout(() => {
+          setPlaying(false);
+        }, 0);
+        return () => clearTimeout(timer);
       }
     } catch {}
   }, []);
@@ -140,10 +159,10 @@ export function WalkthroughModal({
         {/* Captions area */}
         <div className={styles.captionArea} aria-live="polite">
           <h3 className={styles.captionTitle}>
-            {t(`step${currentStep + 1}Title` as any)}
+            {t(STEP_TITLES[currentStep] ?? "step1Title")}
           </h3>
           <p className={styles.captionText}>
-            {t(`step${currentStep + 1}Desc` as any)}
+            {t(STEP_DESCS[currentStep] ?? "step1Desc")}
           </p>
         </div>
 
@@ -213,7 +232,9 @@ export function WalkthroughModal({
 /** Scene 1: Booking a lane */
 function SceneBooking() {
   return (
-    <div style={{ display: "grid", gap: 12, placeItems: "center", width: "100%" }}>
+    <div
+      style={{ display: "grid", gap: 12, placeItems: "center", width: "100%" }}
+    >
       <div
         style={{
           display: "flex",
@@ -303,7 +324,9 @@ function SceneMatching() {
 /** Scene 3: Intro (2 minutes) */
 function SceneIntro() {
   return (
-    <div style={{ display: "grid", placeItems: "center", gap: 12, width: "100%" }}>
+    <div
+      style={{ display: "grid", placeItems: "center", gap: 12, width: "100%" }}
+    >
       <PaceClock
         phase="intro"
         progress={0.03}
@@ -316,14 +339,14 @@ function SceneIntro() {
           <div className={styles.cameraIndicator}>
             <Camera size={12} /> Camera on
           </div>
-          <span className={styles.laneGoal}>"Draft section 1"</span>
+          <span className={styles.laneGoal}>&ldquo;Draft section 1&rdquo;</span>
         </div>
         <LaneRope vertical />
         <div className={styles.laneBox}>
           <div className={styles.cameraIndicator}>
             <Camera size={12} /> Camera on
           </div>
-          <span className={styles.laneGoal}>"Review 3 PRs"</span>
+          <span className={styles.laneGoal}>&ldquo;Review 3 PRs&rdquo;</span>
         </div>
       </div>
     </div>
@@ -333,7 +356,9 @@ function SceneIntro() {
 /** Scene 4: Quiet Focus */
 function SceneFocus() {
   return (
-    <div style={{ display: "grid", placeItems: "center", gap: 12, width: "100%" }}>
+    <div
+      style={{ display: "grid", placeItems: "center", gap: 12, width: "100%" }}
+    >
       <PaceClock
         phase="focus"
         progress={0.5}
@@ -363,7 +388,9 @@ function SceneFocus() {
 /** Scene 5: Wrap-up & celebration */
 function SceneWrapUp() {
   return (
-    <div style={{ display: "grid", placeItems: "center", gap: 12, width: "100%" }}>
+    <div
+      style={{ display: "grid", placeItems: "center", gap: 12, width: "100%" }}
+    >
       <PaceClock
         phase="wrap"
         progress={0.98}

@@ -3,6 +3,7 @@ import "server-only";
 import { sql, inArray } from "drizzle-orm";
 import { db } from "@/src/lib/db";
 import { appConfig } from "@/src/lib/db/schema";
+import { getSupportTicketCounts } from "@/src/lib/support/admin";
 
 export function matchRate(matched: number, failed: number): number {
   return matched + failed === 0 ? 0 : matched / (matched + failed);
@@ -37,7 +38,7 @@ export async function periodMetrics(days: 7 | 30, now = new Date()) {
 }
 
 export async function currentMetrics() {
-  const [counts, config] = await Promise.all([
+  const [counts, config, ticketCounts] = await Promise.all([
     db().execute<{ plus: number; reports: number; hosts: number }>(sql`select
       (select count(*)::int from subscription where status = 'active') as plus,
       (select count(*)::int from report where status = 'open') as reports,
@@ -46,11 +47,13 @@ export async function currentMetrics() {
       .select()
       .from(appConfig)
       .where(inArray(appConfig.key, ["video_usage", "worker_heartbeat"])),
+    getSupportTicketCounts(),
   ]);
   const usage = config.find((c) => c.key === "video_usage")?.value;
   const heartbeat = config.find((c) => c.key === "worker_heartbeat")?.value;
   return {
     ...counts.rows[0],
+    supportTickets: ticketCounts.open,
     usage:
       typeof usage === "object" &&
       usage !== null &&

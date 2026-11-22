@@ -5,7 +5,12 @@ import { requireAdmin } from "@/src/lib/app-user";
 import { Link } from "@/src/i18n/navigation";
 import { getSupportTicket } from "@/src/lib/support/admin";
 import { AdminFrame } from "../../frame";
-import { updateTicketNoteAction, updateTicketStatusAction } from "../actions";
+import {
+  updateTicketNoteAction,
+  updateTicketNoteFormAction,
+  updateTicketStatusAction,
+  updateTicketStatusFormAction,
+} from "../actions";
 import styles from "../support.module.css";
 
 export default async function TicketDetailPage({
@@ -129,7 +134,7 @@ export default async function TicketDetailPage({
             ✉ {t("replyByEmail")}
           </a>
 
-          <form action={updateTicketStatusAction} className="row">
+          <form action={updateTicketStatusFormAction} className="row">
             <input type="hidden" name="id" value={ticket.id} />
             <select
               name="status"
@@ -151,7 +156,7 @@ export default async function TicketDetailPage({
 
       <section className={styles.noteSection}>
         <h3>{t("adminNotesLabel")}</h3>
-        <form action={updateTicketNoteAction} className="stack-sm">
+        <form action={updateTicketNoteFormAction} className="stack-sm">
           <input type="hidden" name="id" value={ticket.id} />
           <textarea
             name="adminNote"

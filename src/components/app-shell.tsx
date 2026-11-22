@@ -26,6 +26,7 @@ import { RealtimeRefresh } from "./realtime-refresh";
 import { Link } from "@/src/i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
 import { TourTrigger } from "./tour";
+import { ActivationNudge } from "@/src/lib/lifecycle/activation-nudge";
 
 export async function AppShell({
   children,
@@ -130,6 +131,7 @@ export async function AppShell({
         <main className={`content ${narrow ? "content-narrow" : ""}`}>
           {app.analyticsEnabled && <AnalyticsIdentity id={user.id} />}
           <RealtimeRefresh userId={user.id} />
+          <ActivationNudge />
           {children}
         </main>
       </div>
