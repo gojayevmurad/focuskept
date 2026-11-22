@@ -229,6 +229,32 @@ it("deploys a local image tagged with a commit without pulling", () => {
   }
 });
 
+it("deploys a new local image when a previous local image is validated", () => {
+  const previous = "local/app:" + "a".repeat(40);
+  const target = "local/app:" + "b".repeat(40);
+  const f = fixture(previous);
+  try {
+    writeFileSync(
+      join(f.dir, ".env"),
+      "IMAGE_REPOSITORY=local/app\nCOMPOSE_PROJECT_NAME=example-prod\n",
+    );
+    expect(f.run(target).status).toBe(0);
+    expect(f.calls()).toContain(`${target} image inspect ${target}`);
+    expect(f.calls()).toContain(
+      `${target} compose --project-name example-prod --env-file .env -f compose.production.yaml up -d --no-deps --wait --wait-timeout 120 app worker`,
+    );
+    expect(f.calls()).not.toContain("pull app worker");
+    expect(readFileSync(join(f.dir, ".validated-image"), "utf8").trim()).toBe(
+      target,
+    );
+    expect(readFileSync(join(f.dir, ".previous-image"), "utf8").trim()).toBe(
+      previous,
+    );
+  } finally {
+    f.cleanup();
+  }
+});
+
 it("rejects mutable local tags", () => {
   const f = fixture("");
   try {
