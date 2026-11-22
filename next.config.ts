@@ -9,7 +9,14 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   serverExternalPackages: ["pino", "pino-pretty", "pg"],
   turbopack: {
-    rules: { "*.css": { loaders: ["@tailwindcss/turbopack"], as: "*.css" } },
+    // CSS modules skip Tailwind so they keep their scoped class names.
+    rules: {
+      "*.css": {
+        condition: { not: { path: /\.module\.css$/ } },
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
   },
   async headers() {
     return [

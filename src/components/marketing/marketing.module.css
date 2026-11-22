@@ -582,7 +582,7 @@
   margin-top: 4px;
 }
 
-.billingOption :global(.button) {
+.billingOption [class~="button"] {
   white-space: normal;
   min-height: 44px;
   height: auto;

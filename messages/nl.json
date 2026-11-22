@@ -668,7 +668,23 @@
     "faqTitle": "Een paar dingen die je je misschien afvraagt",
     "allFaq": "Lees alle vragen",
     "ctaTitle": "Breng één taak mee. Wij maken ruimte.",
-    "ctaBody": "Je hebt geen perfect plan nodig. Kies een tijd en een klein punt om te beginnen."
+    "ctaBody": "Je hebt geen perfect plan nodig. Kies een tijd en een klein punt om te beginnen.",
+    "lanes": {
+      "heading": "Jouw baan. Iemand in de baan ernaast.",
+      "lead": "Boek 25, 50 of 75 minuten, ontmoet een partner via video en werk samen aan je eigen taak: camera's aan, microfoons uit tijdens de focus.",
+      "book": "Boek een baan",
+      "bookNext": "Boek een baan · volgende om {time}",
+      "sessionTitle": "Eén sessie. Een gedeeld tempo.",
+      "intro": "Intro",
+      "focus": "Focus",
+      "wrap": "Afronding",
+      "minuteMark": "{from}–{to} min",
+      "minutesLeft": "{count, plural, one {# minuut over} other {# minuten over}}",
+      "preview": "50 minuten in 12 seconden",
+      "pause": "Voorbeeldsessie pauzeren",
+      "resume": "Voorbeeldsessie hervatten",
+      "freePlan": "{count, plural, one {# gratis sessie elke week. Je baan wacht op je.} other {# gratis sessies elke week. Je baan wacht op je.}}"
+    }
   },
   "how": {
     "title": "Hoe een focussessie werkt | {app}",
@@ -797,11 +813,7 @@
     "lead": "Begin met drie sessies per week. Kies Plus wanneer je meer ruimte wilt.",
     "free": "Free",
     "freePrice": "Kosteloos",
-    "freeFeatures": [
-      "3 sessies per week",
-      "Partnerkoppeling",
-      "Reeksen"
-    ],
+    "freeFeatures": ["3 sessies per week", "Partnerkoppeling", "Reeksen"],
     "plus": "Plus",
     "plusFeatures": [
       "Onbeperkt aantal sessies",

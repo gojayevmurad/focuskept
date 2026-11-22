@@ -668,7 +668,23 @@
     "faqTitle": "Ein paar Fragen, die du dir vielleicht stellst",
     "allFaq": "Alle Fragen lesen",
     "ctaTitle": "Bringe eine Aufgabe mit. Wir schaffen den Raum.",
-    "ctaBody": "Du brauchst keinen perfekten Plan. Wähle einfach eine Zeit und einen kleinen Ausgangspunkt."
+    "ctaBody": "Du brauchst keinen perfekten Plan. Wähle einfach eine Zeit und einen kleinen Ausgangspunkt.",
+    "lanes": {
+      "heading": "Deine Bahn. Jemand auf der Nachbarbahn.",
+      "lead": "Buche 25, 50 oder 75 Minuten, triff einen Partner per Video und arbeite an deiner eigenen Aufgabe: Kameras an, Mikros aus während des Fokus.",
+      "book": "Bahn buchen",
+      "bookNext": "Bahn buchen · nächste um {time}",
+      "sessionTitle": "Eine Session. Ein gemeinsames Tempo.",
+      "intro": "Intro",
+      "focus": "Fokus",
+      "wrap": "Abschluss",
+      "minuteMark": "{from}–{to} Min.",
+      "minutesLeft": "{count, plural, one {# Minute übrig} other {# Minuten übrig}}",
+      "preview": "50 Minuten in 12 Sekunden",
+      "pause": "Beispiel-Session pausieren",
+      "resume": "Beispiel-Session fortsetzen",
+      "freePlan": "{count, plural, one {# kostenlose Session jede Woche. Deine Bahn wartet.} other {# kostenlose Sessions jede Woche. Deine Bahn wartet.}}"
+    }
   },
   "how": {
     "title": "So funktioniert eine Fokussession | {app}",
@@ -797,11 +813,7 @@
     "lead": "Starte mit drei Sessions pro Woche. Wähle Plus, wenn du mehr Raum brauchst.",
     "free": "Free",
     "freePrice": "Kostenlos",
-    "freeFeatures": [
-      "3 Sessions pro Woche",
-      "Partner-Matching",
-      "Serien"
-    ],
+    "freeFeatures": ["3 Sessions pro Woche", "Partner-Matching", "Serien"],
     "plus": "Plus",
     "plusFeatures": [
       "Unbegrenzte Sessions",

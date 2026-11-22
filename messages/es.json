@@ -668,7 +668,23 @@
     "faqTitle": "Algunas cosas que podrías preguntarte",
     "allFaq": "Ver todas las preguntas",
     "ctaTitle": "Trae una tarea. Haremos espacio.",
-    "ctaBody": "No necesitas un plan perfecto. Elige una hora y un pequeño punto de partida."
+    "ctaBody": "No necesitas un plan perfecto. Elige una hora y un pequeño punto de partida.",
+    "lanes": {
+      "heading": "Tu carril. Alguien en el de al lado.",
+      "lead": "Reserva 25, 50 o 75 minutos, conéctate por vídeo con un compañero y trabajad juntos, cada uno en su tarea: cámaras encendidas, micrófonos apagados durante la concentración.",
+      "book": "Reserva un carril",
+      "bookNext": "Reserva un carril · siguiente a las {time}",
+      "sessionTitle": "Una sesión. Un ritmo compartido.",
+      "intro": "Intro",
+      "focus": "Concentración",
+      "wrap": "Cierre",
+      "minuteMark": "{from}–{to} min",
+      "minutesLeft": "{count, plural, one {Queda # minuto} other {Quedan # minutos}}",
+      "preview": "50 minutos en 12 segundos",
+      "pause": "Pausar sesión de ejemplo",
+      "resume": "Reanudar sesión de ejemplo",
+      "freePlan": "{count, plural, one {# sesión gratis cada semana. Tu carril te espera.} other {# sesiones gratis cada semana. Tu carril te espera.}}"
+    }
   },
   "how": {
     "title": "Cómo funciona una sesión de enfoque | {app}",

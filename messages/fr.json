@@ -668,7 +668,23 @@
     "faqTitle": "Quelques questions fréquentes",
     "allFaq": "Consulter toutes les questions",
     "ctaTitle": "Apportez une seule tâche. Nous faisons de la place.",
-    "ctaBody": "Pas besoin d'un plan parfait. Choisissez un créneau et un premier point de départ."
+    "ctaBody": "Pas besoin d'un plan parfait. Choisissez un créneau et un premier point de départ.",
+    "lanes": {
+      "heading": "Votre couloir. Quelqu'un dans celui d'à côté.",
+      "lead": "Réservez 25, 50 ou 75 minutes, retrouvez un partenaire en vidéo et travaillez ensemble sur votre propre tâche : caméras allumées, micros coupés pendant la concentration.",
+      "book": "Réserver un couloir",
+      "bookNext": "Réserver un couloir · prochain à {time}",
+      "sessionTitle": "Une session. Un rythme partagé.",
+      "intro": "Intro",
+      "focus": "Concentration",
+      "wrap": "Bilan",
+      "minuteMark": "{from}–{to} min",
+      "minutesLeft": "{count, plural, one {# minute restante} other {# minutes restantes}}",
+      "preview": "50 minutes en 12 secondes",
+      "pause": "Mettre en pause la session d'exemple",
+      "resume": "Reprendre la session d'exemple",
+      "freePlan": "{count, plural, one {# session gratuite chaque semaine. Votre couloir vous attend.} other {# sessions gratuites chaque semaine. Votre couloir vous attend.}}"
+    }
   },
   "how": {
     "title": "Comment fonctionne une session de concentration | {app}",
