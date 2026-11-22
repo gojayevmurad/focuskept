@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import * as Sentry from "@sentry/nextjs";
+import { LaneRope } from "@/src/components/lanes";
+import styles from "./not-found.module.css";
 
 export default function ErrorPage({
   error,
@@ -16,12 +18,15 @@ export default function ErrorPage({
     Sentry.captureException(error);
   }, [error]);
   return (
-    <main className="empty-state">
-      <h1>{t("generic")}</h1>
-      <p>{t("tryAgainLater")}</p>
-      <button className="button" onClick={reset}>
-        {t("retry")}
-      </button>
+    <main className={`empty-state ${styles.emptyState}`}>
+      <div className={styles.laneCard}>
+        <LaneRope className={styles.rope} />
+        <h1>{t("generic")}</h1>
+        <p className="muted">{t("tryAgainLater")}</p>
+        <button className="button" onClick={reset}>
+          {t("retry")}
+        </button>
+      </div>
     </main>
   );
 }

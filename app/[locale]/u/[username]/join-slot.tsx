@@ -2,6 +2,7 @@
 "use client";
 import { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
+import { LoaderCircle } from "lucide-react";
 import { useRouter } from "@/src/i18n/navigation";
 import { bookSlot } from "../../(app)/book/actions";
 
@@ -41,6 +42,7 @@ export function JoinSlot({
           })
         }
       >
+        {pending && <LoaderCircle size={14} className="spin" />}
         {t("join")}
       </button>
       {error && (

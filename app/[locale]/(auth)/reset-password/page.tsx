@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import { AuthForm } from "@/src/components/auth-form";
+import styles from "../auth.module.css";
 
 export const metadata: Metadata = {
   title: "Choose a new password",
@@ -13,7 +14,9 @@ export default async function Page() {
   const t = await getTranslations("auth");
   return (
     <>
-      <h1>{t("resetTitle")}</h1>
+      <div className={`stack-sm ${styles.header}`}>
+        <h1>{t("resetTitle")}</h1>
+      </div>
       <Suspense>
         <AuthForm mode="reset-password" />
       </Suspense>

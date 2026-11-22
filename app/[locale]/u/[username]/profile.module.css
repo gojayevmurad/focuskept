@@ -1,0 +1,173 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+.page {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 56px) 24px 80px;
+  display: grid;
+  gap: 32px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.profileHero {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 20px 24px;
+  align-items: center;
+}
+
+.identity {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.nameRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.displayName {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 6vw, 56px);
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.handle {
+  font-size: 15px;
+  color: var(--text-2);
+}
+
+.bio {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 65ch;
+  margin: 0;
+}
+
+.rope {
+  width: 100%;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.statCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  display: grid;
+  gap: 4px;
+}
+
+.statLabel {
+  font-size: 13px;
+  font-weight: 550;
+  color: var(--text-2);
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.sectionHead {
+  display: grid;
+  gap: 4px;
+}
+
+.sectionHead h2 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.scheduleList {
+  display: grid;
+  gap: 12px;
+}
+
+.slotCard {
+  background: var(--lane);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.slotDetails {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.slotTimeRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.slotTime {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.slotDate {
+  font-size: 14px;
+  font-weight: 550;
+  color: var(--text-2);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .profileHero {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+  }
+  .statsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .slotCard {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}

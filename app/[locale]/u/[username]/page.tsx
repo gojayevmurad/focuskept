@@ -6,6 +6,7 @@ import { getFormatter, getTranslations } from "next-intl/server";
 import { SiteHeader } from "@/src/components/site-header";
 import { SiteFooter } from "@/src/components/site-footer";
 import { Avatar } from "@/src/components/avatar";
+import { LaneRope } from "@/src/components/lanes";
 import { getProfileByUsername, getProfile } from "@/src/lib/profiles";
 import { getSession } from "@/src/lib/auth/session";
 import { db } from "@/src/lib/db";
@@ -15,6 +16,7 @@ import { addMinutes } from "@/src/lib/scheduling/slots";
 import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
 import { JoinSlot } from "./join-slot";
+import styles from "./profile.module.css";
 
 type Props = {
   params: Promise<{ username: string }>;
@@ -85,20 +87,13 @@ export default async function Page({ params, searchParams }: Props) {
   return (
     <>
       <SiteHeader />
-      <main
-        className="container content-narrow"
-        style={{ maxWidth: 760, padding: "48px 24px" }}
-      >
-        <div className="stack-lg">
-          <div className="row" style={{ gap: 18 }}>
-            <Avatar
-              name={person.displayName}
-              src={person.avatarUrl}
-              size="lg"
-            />
-            <div className="stack-sm">
-              <h1>{person.displayName}</h1>
-              <span className="muted">@{person.username}</span>
+      <main className={styles.page}>
+        <div className={styles.profileHero}>
+          <Avatar name={person.displayName} src={person.avatarUrl} size="lg" />
+          <div className={styles.identity}>
+            <div className={styles.nameRow}>
+              <h1 className={styles.displayName}>{person.displayName}</h1>
+              <span className={styles.handle}>@{person.username}</span>
               {hostRow[0] && (
                 <Link className="badge warm" href={`/host/${person.username}`}>
                   {t("host")}
@@ -106,48 +101,68 @@ export default async function Page({ params, searchParams }: Props) {
               )}
             </div>
           </div>
-          {person.bio && <p className="lead">{person.bio}</p>}
-          {stats && (
-            <div className="grid-3">
-              <div className="card stat">
-                <span className="small muted">{t("hours")}</span>
-                <strong>{stats.hours}</strong>
-              </div>
-              <div className="card stat">
-                <span className="small muted">{t("sessions")}</span>
-                <strong>{stats.sessions}</strong>
-              </div>
-              <div className="card stat">
-                <span className="small muted">{t("streak")}</span>
-                <strong>{stats.dailyStreak}</strong>
-              </div>
+        </div>
+
+        {person.bio && <p className={styles.bio}>{person.bio}</p>}
+
+        <LaneRope className={styles.rope} />
+
+        {stats && (
+          <div className={styles.statsGrid}>
+            <div className={styles.statCard}>
+              <span className={styles.statLabel}>{t("hours")}</span>
+              <strong className={styles.statValue}>{stats.hours}</strong>
             </div>
-          )}
-          <section className="card stack">
+            <div className={styles.statCard}>
+              <span className={styles.statLabel}>{t("sessions")}</span>
+              <strong className={styles.statValue}>{stats.sessions}</strong>
+            </div>
+            <div className={styles.statCard}>
+              <span className={styles.statLabel}>{t("streak")}</span>
+              <strong className={styles.statValue}>{stats.dailyStreak}</strong>
+            </div>
+          </div>
+        )}
+
+        <section className={styles.section}>
+          <div className={styles.sectionHead}>
             <h2>
               {t("bookTitle", { name: person.displayName.split(" ")[0] })}
             </h2>
-            {isSelf ? (
-              <p className="muted">{t("isYou")}</p>
-            ) : slots.length ? (
-              <div className="list">
-                {slots.map((slot) => (
-                  <div className="list-item" key={slot.startAt.toISOString()}>
-                    <div className="grow">
-                      <strong>
+          </div>
+
+          {isSelf ? (
+            <p className="notice">{t("isYou")}</p>
+          ) : slots.length ? (
+            <div className={styles.scheduleList}>
+              {slots.map((slot) => (
+                <div
+                  className={styles.slotCard}
+                  key={slot.startAt.toISOString()}
+                >
+                  <div className={styles.slotDetails}>
+                    <div className={styles.slotTimeRow}>
+                      <span className={styles.slotTime}>
+                        {format.dateTime(slot.startAt, {
+                          timeZone: tz,
+                          hour: "numeric",
+                          minute: "2-digit",
+                        })}
+                      </span>
+                      <span className={styles.slotDate}>
                         {format.dateTime(slot.startAt, {
                           timeZone: tz,
                           weekday: "short",
                           month: "short",
                           day: "numeric",
-                          hour: "numeric",
-                          minute: "2-digit",
                         })}
-                      </strong>
-                      <div className="small muted">
+                      </span>
+                      <span className="badge">
                         {t("minutes", { n: slot.durationMin })}
-                      </div>
+                      </span>
                     </div>
+                  </div>
+                  <div className={styles.actions}>
                     {viewer?.onboardedAt ? (
                       <JoinSlot
                         startAt={slot.startAt.toISOString()}
@@ -160,26 +175,27 @@ export default async function Page({ params, searchParams }: Props) {
                       </a>
                     )}
                   </div>
-                ))}
-              </div>
-            ) : (
-              <p className="muted">{t("noOpen")}</p>
-            )}
-            {!isSelf &&
-              (viewer?.onboardedAt ? (
-                <Link
-                  className="button secondary"
-                  href={`/book?with=${person.username}`}
-                >
-                  {t("otherTime")}
-                </Link>
-              ) : (
-                <a className="button secondary" href={signUpHref}>
-                  {t("joinApp", { app: app.name })}
-                </a>
+                </div>
               ))}
-          </section>
-        </div>
+            </div>
+          ) : (
+            <p className="muted">{t("noOpen")}</p>
+          )}
+
+          {!isSelf &&
+            (viewer?.onboardedAt ? (
+              <Link
+                className="button secondary"
+                href={`/book?with=${person.username}`}
+              >
+                {t("otherTime")}
+              </Link>
+            ) : (
+              <a className="button secondary" href={signUpHref}>
+                {t("joinApp", { app: app.name })}
+              </a>
+            ))}
+        </section>
       </main>
       <SiteFooter />
     </>

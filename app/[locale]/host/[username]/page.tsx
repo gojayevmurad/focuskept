@@ -7,12 +7,14 @@ import { Star } from "lucide-react";
 import { SiteHeader } from "@/src/components/site-header";
 import { SiteFooter } from "@/src/components/site-footer";
 import { Avatar } from "@/src/components/avatar";
+import { LaneRope } from "@/src/components/lanes";
 import { getProfile, getProfileByUsername } from "@/src/lib/profiles";
 import { getHost } from "@/src/lib/hosts";
 import { getSession } from "@/src/lib/auth/session";
 import { db } from "@/src/lib/db";
 import { focusSession, sessionParticipant } from "@/src/lib/db/schema";
 import { Link } from "@/src/i18n/navigation";
+import styles from "./host.module.css";
 
 type Props = { params: Promise<{ username: string }> };
 
@@ -57,80 +59,75 @@ export default async function Page({ params }: Props) {
   return (
     <>
       <SiteHeader />
-      <main
-        className="container"
-        style={{ maxWidth: 760, padding: "48px 24px" }}
-      >
-        <div className="stack-lg">
-          <div className="row" style={{ gap: 18 }}>
-            <Avatar
-              name={person.displayName}
-              src={person.avatarUrl}
-              size="lg"
-            />
-            <div className="stack-sm">
-              <span className="badge warm">{t("host")}</span>
-              <h1>{person.displayName}</h1>
-              <span className="muted row">
-                {h.rating ? (
-                  <>
-                    <Star size={14} /> {h.rating.toFixed(1)} ({h.ratingsCount})
-                    ·{" "}
-                  </>
-                ) : null}
-                {t("hosted", { n: h.sessionsHosted })}
-              </span>
+      <main className={styles.page}>
+        <div className={styles.hostHero}>
+          <Avatar name={person.displayName} src={person.avatarUrl} size="lg" />
+          <div className={styles.identity}>
+            <span className="badge warm">{t("host")}</span>
+            <h1 className={styles.displayName}>{person.displayName}</h1>
+            <div className={styles.metaRow}>
+              {h.rating ? (
+                <>
+                  <Star size={14} /> {h.rating.toFixed(1)} ({h.ratingsCount})
+                  ·{" "}
+                </>
+              ) : null}
+              {t("hosted", { n: h.sessionsHosted })}
             </div>
           </div>
-          {(person.bio || h.pitch) && (
-            <p className="lead">{person.bio || h.pitch}</p>
-          )}
-          <section className="card stack">
-            <h2>{t("upcoming")}</h2>
-            {upcoming.length ? (
-              <div className="list">
-                {upcoming.map((s) => (
-                  <div key={s.id} className="list-item">
-                    <div className="grow">
-                      <strong>{s.title}</strong>
-                      <div className="small muted">
-                        {format.dateTime(s.startAt, {
-                          timeZone: tz,
-                          weekday: "short",
-                          month: "short",
-                          day: "numeric",
-                          hour: "numeric",
-                          minute: "2-digit",
-                        })}{" "}
-                        · {s.durationMin} min ·{" "}
-                        {t("seatsLeft", {
-                          n: Math.max(0, s.capacity - s.taken),
-                        })}
-                      </div>
-                    </div>
-                    {viewer?.onboardedAt ? (
-                      <Link
-                        className="button small"
-                        href={`/book?start=${encodeURIComponent(s.startAt.toISOString())}`}
-                      >
-                        {t("takeSeat")}
-                      </Link>
-                    ) : (
-                      <a
-                        className="button small"
-                        href={`/r/${person.referralCode}?next=${encodeURIComponent(`/sign-up?next=/host/${person.username}`)}`}
-                      >
-                        {t("signUp")}
-                      </a>
-                    )}
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="muted">{t("none")}</p>
-            )}
-          </section>
         </div>
+
+        {(person.bio || h.pitch) && (
+          <p className={styles.bio}>{person.bio || h.pitch}</p>
+        )}
+
+        <LaneRope className={styles.rope} />
+
+        <section className={styles.section}>
+          <h2>{t("upcoming")}</h2>
+          {upcoming.length ? (
+            <div className={styles.sessionList}>
+              {upcoming.map((s) => (
+                <div key={s.id} className={styles.sessionCard}>
+                  <div className={styles.sessionDetails}>
+                    <strong className={styles.sessionTitle}>{s.title}</strong>
+                    <div className={styles.sessionMeta}>
+                      {format.dateTime(s.startAt, {
+                        timeZone: tz,
+                        weekday: "short",
+                        month: "short",
+                        day: "numeric",
+                        hour: "numeric",
+                        minute: "2-digit",
+                      })}{" "}
+                      · {s.durationMin} min ·{" "}
+                      {t("seatsLeft", {
+                        n: Math.max(0, s.capacity - s.taken),
+                      })}
+                    </div>
+                  </div>
+                  {viewer?.onboardedAt ? (
+                    <Link
+                      className="button small"
+                      href={`/book?start=${encodeURIComponent(s.startAt.toISOString())}`}
+                    >
+                      {t("takeSeat")}
+                    </Link>
+                  ) : (
+                    <a
+                      className="button small"
+                      href={`/r/${person.referralCode}?next=${encodeURIComponent(`/sign-up?next=/host/${person.username}`)}`}
+                    >
+                      {t("signUp")}
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="muted">{t("none")}</p>
+          )}
+        </section>
       </main>
       <SiteFooter />
     </>
