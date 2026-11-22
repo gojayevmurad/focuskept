@@ -212,3 +212,33 @@ it("preserves database failure health responses", async () => {
     vi.unstubAllEnvs();
   }
 });
+
+it("deploys a local image tagged with a commit without pulling", () => {
+  const f = fixture("");
+  try {
+    writeFileSync(
+      join(f.dir, ".env"),
+      "IMAGE_REPOSITORY=local/app\nCOMPOSE_PROJECT_NAME=example-prod\n",
+    );
+    const result = f.run("local/app:0123456789abcdef0123456789abcdef01234567");
+    expect(result.status).toBe(0);
+    expect(f.calls()).toContain("image inspect local/app:0123456789abcdef");
+    expect(f.calls()).not.toContain("pull app worker");
+  } finally {
+    f.cleanup();
+  }
+});
+
+it("rejects mutable local tags", () => {
+  const f = fixture("");
+  try {
+    writeFileSync(
+      join(f.dir, ".env"),
+      "IMAGE_REPOSITORY=local/app\nCOMPOSE_PROJECT_NAME=example-prod\n",
+    );
+    expect(f.run("local/app:latest").status).toBe(1);
+    expect(f.calls()).toBe("");
+  } finally {
+    f.cleanup();
+  }
+});
