@@ -1,29 +1,35 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 "use client";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   enableAnalytics,
   disableAnalytics,
   identify,
-} from "@/src/lib/analytics/client";
+  useAnalyticsConfig,
+} from "@/src/lib/analytics";
+
 export function ConsentBanner() {
   const [show, setShow] = useState(false);
+  const t = useTranslations("analytics.consentBanner");
+  const config = useAnalyticsConfig();
+
   useEffect(() => {
-    if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) return;
+    if (!config.enabled && !config.key) return;
     const consent = localStorage.getItem("analytics-consent");
-    if (consent === "yes") enableAnalytics();
-    else if (!consent) {
+    if (consent === "yes") {
+      enableAnalytics();
+    } else if (!consent) {
       const timer = setTimeout(() => setShow(true), 0);
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, [config]);
+
   if (!show) return null;
+
   return (
     <aside className="consent" aria-label="Analytics preferences">
-      <p>
-        Help us understand how the product is used? Optional analytics stay off
-        until you choose.
-      </p>
+      <p>{t("text")}</p>
       <div>
         <button
           className="button small"
@@ -34,7 +40,7 @@ export function ConsentBanner() {
             window.dispatchEvent(new Event("analytics-consent"));
           }}
         >
-          Allow analytics
+          {t("allow")}
         </button>
         <button
           className="button secondary small"
@@ -45,12 +51,13 @@ export function ConsentBanner() {
             window.dispatchEvent(new Event("analytics-consent"));
           }}
         >
-          No thanks
+          {t("reject")}
         </button>
       </div>
     </aside>
   );
 }
+
 export function AnalyticsIdentity({ id }: { id: string }) {
   useEffect(() => {
     const apply = () => {

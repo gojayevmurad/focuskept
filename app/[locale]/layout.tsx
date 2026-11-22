@@ -8,6 +8,7 @@ import "../globals.css";
 import { routing } from "@/src/i18n/routing";
 import { getAppConfig } from "@/src/config/app";
 import { ConsentBanner } from "@/src/components/consent";
+import { AnalyticsProvider } from "@/src/lib/analytics/provider";
 
 const display = Big_Shoulders({
   variable: "--font-big-shoulders",
@@ -77,8 +78,10 @@ export default async function LocaleLayout({
           }}
         />
         <NextIntlClientProvider>
-          {children}
-          {app.analyticsEnabled && <ConsentBanner />}
+          <AnalyticsProvider config={app.analytics}>
+            {children}
+            {app.analytics.enabled && <ConsentBanner />}
+          </AnalyticsProvider>
         </NextIntlClientProvider>
       </body>
     </html>

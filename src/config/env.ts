@@ -58,6 +58,28 @@ export const envSchema = z
     SECURITY_CONTACT: optional,
     BILLING_ENABLED: flag(false),
     ANALYTICS_ENABLED: flag(false),
+    POSTHOG_KEY: z.preprocess(
+      (v) =>
+        typeof v === "string" && v.length > 0
+          ? v
+          : process.env.NEXT_PUBLIC_POSTHOG_KEY || undefined,
+      optional,
+    ),
+    POSTHOG_HOST: z.preprocess(
+      (v) =>
+        typeof v === "string" && v.length > 0
+          ? v
+          : process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com",
+      z.string().default("https://us.i.posthog.com"),
+    ),
+    POSTHOG_ASSETS_HOST: z.preprocess(
+      (v) =>
+        typeof v === "string" && v.length > 0
+          ? v
+          : process.env.NEXT_PUBLIC_POSTHOG_ASSETS_HOST ||
+            "https://us-assets.i.posthog.com",
+      z.string().default("https://us-assets.i.posthog.com"),
+    ),
     MARKETING_ENABLED: flag(true),
     SIGNUPS_MODE: z.enum(["open", "invite", "closed"]).default("open"),
     ADMIN_EMAILS: optional,
