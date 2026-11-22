@@ -3,6 +3,7 @@
 import { useActionState, useState, useSyncExternalStore } from "react";
 import { useTranslations, useFormatter } from "next-intl";
 import { LoaderCircle, Users } from "lucide-react";
+import styles from "../lanes.module.css";
 import { SEGMENTS } from "@/src/lib/profiles/rules";
 import { completeOnboarding, type OnboardingState } from "./actions";
 
@@ -60,7 +61,16 @@ export function OnboardingForm(props: {
 
   return (
     <form action={action} className="stack-lg">
-      <p className="overline">{t("step", { n: step })}</p>
+      <div className={styles.steps}>
+        <p className="small muted" aria-live="polite">
+          {t("step", { n: step })}
+        </p>
+        <div className={styles.stepTrack} aria-hidden="true">
+          {[1, 2, 3].map((n) => (
+            <span key={n} data-current={n === step} data-complete={n < step} />
+          ))}
+        </div>
+      </div>
       {errorText && <p className="notice error">{errorText}</p>}
 
       <section className="card stack" hidden={step !== 1}>

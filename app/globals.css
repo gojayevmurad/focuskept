@@ -1844,11 +1844,21 @@ dialog.dialog::backdrop {
     padding: 28px 22px;
   }
   .cal {
-    --cal-gutter: 58px;
+    --cal-gutter: 76px;
     grid-template-columns: var(--cal-gutter) repeat(
         var(--days, 7),
         minmax(0, 1fr)
       );
+  }
+  .cal-time {
+    padding-inline: 4px 6px;
+    font-size: 15px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.15;
+  }
+  .cal-time.half {
+    font-size: 14px;
   }
   .cal-scroll {
     grid-template-columns: var(--cal-gutter) repeat(
