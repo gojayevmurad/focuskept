@@ -1382,7 +1382,7 @@
     "limVideo": "Live-Video der Teilnehmenden: Da Videos per Peer-to-Peer direkt von den Webcams der Teilnehmenden gestreamt werden, hängen Lichtverhältnisse und Hintergrundkontraste von den einzelnen Nutzenden ab.",
     "limWebRTC": "Browser-WebRTC-Kompatibilität: Einige assistive Technologien verhalten sich in aktiven WebRTC-Videoelementen je nach Browser-Engine unterschiedlich.",
     "feedbackTitle": "Feedback & Kontakt",
-    "feedbackText": "Falls du auf Barrieren stößt oder Verbesserungsvorschläge hast, kontaktiere uns bitte über unser {contactLink} oder per E-Mail an {email}. Wir freuen uns über dein Feedback und bemühen uns, innerhalb von 2 Werktagen zu antworten."
+    "feedbackText": "Falls du auf Barrieren stößt oder Verbesserungsvorschläge hast, kontaktiere uns bitte über unser <contactLink>Kontaktformular</contactLink> oder per E-Mail an {email}. Wir freuen uns über dein Feedback und bemühen uns, innerhalb von 2 Werktagen zu antworten."
   },
   "communityGuidelinesPage": {
     "title": "Community-Richtlinien | {app}",

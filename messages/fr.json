@@ -1386,7 +1386,7 @@
     "limVideo": "Vidéo des participants en direct : la vidéo étant diffusée en pair-à-pair depuis les webcams des participants, les conditions d'éclairage et le contraste de l'arrière-plan dépendent de chaque utilisateur.",
     "limWebRTC": "Compatibilité WebRTC du navigateur : certaines technologies d'assistance peuvent présenter un comportement variable au sein des éléments vidéo WebRTC actifs selon le moteur de navigation.",
     "feedbackTitle": "Retours et contact",
-    "feedbackText": "Si vous rencontrez des obstacles d'accessibilité ou si vous avez des suggestions d'amélioration, veuillez nous contacter via notre {contactLink} ou par e-mail à {email}. Vos retours sont les bienvenus et nous nous efforçons de répondre sous 2 jours ouvrés."
+    "feedbackText": "Si vous rencontrez des obstacles d'accessibilité ou si vous avez des suggestions d'amélioration, veuillez nous contacter via notre <contactLink>formulaire de contact</contactLink> ou par e-mail à {email}. Vos retours sont les bienvenus et nous nous efforçons de répondre sous 2 jours ouvrés."
   },
   "communityGuidelinesPage": {
     "title": "Règles de la communauté | {app}",

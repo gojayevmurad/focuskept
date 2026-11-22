@@ -27,6 +27,7 @@ export default async function AccessibilityPage({ params }: LocaleProps) {
   setRequestLocale(locale);
   requireMarketing();
   const t = await getTranslations("accessibilityPage");
+  const site = await getTranslations("site");
   const app = getAppConfig();
 
   return (
@@ -77,9 +78,9 @@ export default async function AccessibilityPage({ params }: LocaleProps) {
         </div>
 
         <div className={styles.legalLinks}>
-          <Link href="/privacy">Privacy policy</Link>
-          <Link href="/terms">Terms of service</Link>
-          <Link href="/contact">Contact support</Link>
+          <Link href="/privacy">{site("privacy")}</Link>
+          <Link href="/terms">{site("terms")}</Link>
+          <Link href="/contact">{site("contact")}</Link>
         </div>
       </article>
     </div>

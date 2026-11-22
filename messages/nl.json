@@ -1382,7 +1382,7 @@
     "limVideo": "Live video van deelnemers: Omdat video peer-to-peer wordt gestreamd vanaf de webcams van deelnemers, zijn de lichtomstandigheden en het achtergrondcontrast afhankelijk van elke individuele gebruiker.",
     "limWebRTC": "Browsercompatibiliteit met WebRTC: Sommige ondersteunende technologieën kunnen wisselend gedrag vertonen binnen actieve WebRTC-video-elementen, afhankelijk van de browser-engine.",
     "feedbackTitle": "Feedback & contact",
-    "feedbackText": "Ervaar je drempels voor toegankelijkheid of heb je suggesties voor verbetering? Neem dan contact met ons op via {contactLink} of stuur een e-mail naar {email}. We waarderen je feedback en streven ernaar binnen 2 werkdagen te reageren."
+    "feedbackText": "Ervaar je drempels voor toegankelijkheid of heb je suggesties voor verbetering? Neem dan contact met ons op via <contactLink>contactformulier</contactLink> of stuur een e-mail naar {email}. We waarderen je feedback en streven ernaar binnen 2 werkdagen te reageren."
   },
   "communityGuidelinesPage": {
     "title": "Communityrichtlijnen | {app}",

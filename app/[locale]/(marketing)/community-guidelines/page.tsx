@@ -25,13 +25,12 @@ export async function generateMetadata({ params }: LocaleProps) {
   );
 }
 
-export default async function CommunityGuidelinesPage({
-  params,
-}: LocaleProps) {
+export default async function CommunityGuidelinesPage({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   requireMarketing();
   const t = await getTranslations("communityGuidelinesPage");
+  const site = await getTranslations("site");
   const app = getAppConfig();
 
   return (
@@ -97,9 +96,9 @@ export default async function CommunityGuidelinesPage({
         </div>
 
         <div className={styles.legalLinks}>
-          <Link href="/terms">Terms of service</Link>
-          <Link href="/privacy">Privacy policy</Link>
-          <Link href="/contact">Contact support</Link>
+          <Link href="/terms">{site("terms")}</Link>
+          <Link href="/privacy">{site("privacy")}</Link>
+          <Link href="/contact">{site("contact")}</Link>
         </div>
       </article>
     </div>

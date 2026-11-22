@@ -1386,7 +1386,7 @@
     "limVideo": "Vídeo en directo de los participantes: como el vídeo se transmite punto a punto desde las cámaras web de los participantes, la iluminación y el contraste del fondo dependen de cada usuario.",
     "limWebRTC": "Compatibilidad de WebRTC en el navegador: algunas tecnologías de asistencia pueden experimentar un comportamiento variable dentro de los elementos de vídeo WebRTC activos según el motor del navegador.",
     "feedbackTitle": "Comentarios y contacto",
-    "feedbackText": "Si encuentras alguna barrera de accesibilidad o tienes sugerencias de mejora, contáctanos a través de nuestro {contactLink} o escríbenos a {email}. Agradecemos tus comentarios e intentamos responder en un plazo de 2 días laborables."
+    "feedbackText": "Si encuentras alguna barrera de accesibilidad o tienes sugerencias de mejora, contáctanos a través de nuestro <contactLink>formulario de contacto</contactLink> o escríbenos a {email}. Agradecemos tus comentarios e intentamos responder en un plazo de 2 días laborables."
   },
   "communityGuidelinesPage": {
     "title": "Normas de la comunidad | {app}",

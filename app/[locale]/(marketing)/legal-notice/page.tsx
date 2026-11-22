@@ -28,6 +28,7 @@ export default async function LegalNoticePage({ params }: LocaleProps) {
   setRequestLocale(locale);
   requireMarketing();
   const t = await getTranslations("legalNoticePage");
+  const site = await getTranslations("site");
   const env = getEnv();
   const app = getAppConfig();
 
@@ -102,10 +103,10 @@ export default async function LegalNoticePage({ params }: LocaleProps) {
         </div>
 
         <div className={styles.legalLinks}>
-          <Link href="/privacy">Privacy policy</Link>
-          <Link href="/terms">Terms of service</Link>
+          <Link href="/privacy">{site("privacy")}</Link>
+          <Link href="/terms">{site("terms")}</Link>
           <Link href="/cookies">Cookies & storage</Link>
-          <Link href="/contact">Contact support</Link>
+          <Link href="/contact">{site("contact")}</Link>
         </div>
       </article>
     </div>

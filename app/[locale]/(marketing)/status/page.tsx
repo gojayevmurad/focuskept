@@ -1,5 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-import { getFormatter, getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getFormatter,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { eq, sql } from "drizzle-orm";
 import { db } from "@/src/lib/db";
 import { appConfig } from "@/src/lib/db/schema";
@@ -32,6 +36,7 @@ export default async function StatusPage({ params }: LocaleProps) {
   setRequestLocale(locale);
   requireMarketing();
   const t = await getTranslations("statusPage");
+  const site = await getTranslations("site");
   const format = await getFormatter();
 
   let dbStatus: "connected" | "unconfigured" | "error" = "unconfigured";
@@ -49,7 +54,9 @@ export default async function StatusPage({ params }: LocaleProps) {
         .limit(1);
 
       const timestamp =
-        typeof heartbeat?.value === "string" ? Date.parse(heartbeat.value) : NaN;
+        typeof heartbeat?.value === "string"
+          ? Date.parse(heartbeat.value)
+          : NaN;
       if (Number.isFinite(timestamp)) {
         workerStatus = Date.now() - timestamp > 3 * 60_000 ? "stale" : "ok";
       }
@@ -113,7 +120,9 @@ export default async function StatusPage({ params }: LocaleProps) {
             ) : dbStatus === "unconfigured" ? (
               <span className={styles.badgeWarn}>{t("statusUnknown")}</span>
             ) : (
-              <span className={styles.badgeError}>{t("statusDisconnected")}</span>
+              <span className={styles.badgeError}>
+                {t("statusDisconnected")}
+              </span>
             )}
           </div>
 
@@ -139,10 +148,10 @@ export default async function StatusPage({ params }: LocaleProps) {
         </section>
 
         <div className={styles.legalLinks}>
-          <Link href="/help">Help center</Link>
-          <Link href="/contact">Contact support</Link>
-          <Link href="/terms">Terms of service</Link>
-          <Link href="/privacy">Privacy policy</Link>
+          <Link href="/help">{site("help")}</Link>
+          <Link href="/contact">{site("contact")}</Link>
+          <Link href="/terms">{site("terms")}</Link>
+          <Link href="/privacy">{site("privacy")}</Link>
         </div>
       </article>
     </div>
