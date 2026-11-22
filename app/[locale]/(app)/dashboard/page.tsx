@@ -2,14 +2,7 @@
 import type { Metadata } from "next";
 import { and, eq, inArray } from "drizzle-orm";
 import { getFormatter, getTranslations } from "next-intl/server";
-import {
-  CalendarPlus,
-  Flame,
-  Clock,
-  CheckCircle2,
-  ArrowRight,
-  Video,
-} from "lucide-react";
+import { CalendarPlus, ArrowRight, Video } from "lucide-react";
 import { AppShell } from "@/src/components/app-shell";
 import { requireAppUser } from "@/src/lib/app-user";
 import { upcomingBookings } from "@/src/lib/bookings/service";
@@ -21,6 +14,8 @@ import { roomWindow } from "@/src/lib/sessions/access";
 import { firstName } from "@/src/lib/profiles/rules";
 import { Link } from "@/src/i18n/navigation";
 import { FallbackCard } from "./fallback-card";
+import { PaceClock } from "@/src/components/lanes";
+import styles from "./dashboard.module.css";
 
 export const metadata: Metadata = { title: "Home" };
 
@@ -76,148 +71,166 @@ export default async function Page({
     (b) => b.status === "booked" && b.fallbackOfferedAt,
   );
 
+  const laneBookings = live
+    ? [live, ...upcoming.filter((b) => b.id !== live.id)]
+    : upcoming;
+
   return (
     <AppShell title={t("title")}>
-      <div className="page-title">
-        <h1>
-          {welcome
-            ? t("welcome", { name: firstName(me.displayName) })
-            : t("hello", { name: firstName(me.displayName) })}
-        </h1>
-        <p className="muted">
-          {me.goal ? t("goalReminder", { goal: me.goal }) : t("lead")}
-        </p>
-      </div>
+      <div className={styles.dashboard}>
+        <header className={styles.title}>
+          <h1>
+            {welcome
+              ? t("welcome", { name: firstName(me.displayName) })
+              : t("hello", { name: firstName(me.displayName) })}
+          </h1>
+          <p>{me.goal ? t("goalReminder", { goal: me.goal }) : t("lead")}</p>
+        </header>
 
-      {live && (
-        <section
-          className="card row-between"
-          style={{ borderColor: "var(--accent)" }}
-        >
-          <div className="stack-sm">
-            <span className="badge accent">
-              <Video size={12} /> {t("liveBadge")}
-            </span>
-            <h2>
-              {t("liveTitle", {
-                time: format.dateTime(live.startAt, {
+        {fallback && (
+          <FallbackCard bookingId={fallback.id} when={when(fallback.startAt)} />
+        )}
+
+        <section className={styles.upcoming}>
+          <div className={styles.sectionHeading}>
+            <h2>{t("upcoming")}</h2>
+            <Link href="/book" className={styles.buttonSecondary}>
+              <CalendarPlus size={16} /> {t("book")}
+            </Link>
+          </div>
+          {laneBookings.length > 0 ? (
+            <div className={styles.bookingList}>
+              {laneBookings.map((b, index) => {
+                const partners = others.filter(
+                  (p) => p.sessionId === b.sessionId && p.userId !== user.id,
+                );
+                const time = format.dateTime(b.startAt, {
                   timeZone: tz,
                   hour: "numeric",
                   minute: "2-digit",
-                }),
+                });
+                const phaseMinutes = b.durationMin <= 25 ? 2 : 3;
+                return (
+                  <article
+                    key={b.id}
+                    className={
+                      index === 0 ? styles.laneCard : styles.bookingRow
+                    }
+                  >
+                    {index === 0 && (
+                      <PaceClock
+                        phase="waiting"
+                        progress={0}
+                        focusFrom={phaseMinutes / b.durationMin}
+                        wrapFrom={1 - phaseMinutes / b.durationMin}
+                        size={80}
+                      />
+                    )}
+                    <div className={styles.bookingInfo}>
+                      <h3
+                        className={
+                          index === 0 ? styles.startTime : styles.rowTime
+                        }
+                      >
+                        <time dateTime={b.startAt.toISOString()}>{time}</time>
+                      </h3>
+                      <p className={styles.meta}>
+                        {format.dateTime(b.startAt, {
+                          timeZone: tz,
+                          weekday: "long",
+                          month: "short",
+                          day: "numeric",
+                        })}{" "}
+                        · {c("minutes", { count: b.durationMin })}
+                      </p>
+                      <p className={styles.partner}>
+                        {b.status === "matched"
+                          ? b.kind === "group"
+                            ? t("group")
+                            : t("with", { name: partners[0]?.name ?? "" })
+                          : t("pairing")}
+                      </p>
+                      {b.id === live?.id && (
+                        <div className={styles.live}>
+                          <span className={styles.liveBadge}>
+                            <Video size={14} /> {t("liveBadge")}
+                          </span>
+                          <p>{t("liveTitle", { time })}</p>
+                        </div>
+                      )}
+                    </div>
+                    <div className={styles.actions}>
+                      {b.sessionId && (
+                        <Link
+                          href={`/session/${b.sessionId}`}
+                          className={styles.button}
+                        >
+                          {b.id === live?.id ? t("joinNow") : t("open")}{" "}
+                          <ArrowRight size={16} />
+                        </Link>
+                      )}
+                      <Link
+                        href={`/book?start=${encodeURIComponent(b.startAt.toISOString())}`}
+                        className={styles.buttonSecondary}
+                      >
+                        {t("manage")}
+                      </Link>
+                    </div>
+                  </article>
+                );
               })}
-            </h2>
-          </div>
-          <Link href={`/session/${live.sessionId}`} className="button">
-            {t("joinNow")} <ArrowRight size={16} />
-          </Link>
-        </section>
-      )}
-      {fallback && (
-        <FallbackCard bookingId={fallback.id} when={when(fallback.startAt)} />
-      )}
-
-      <div className="grid-3">
-        <div className="card stat">
-          <span className="muted small row">
-            <Flame size={15} /> {t("streak")}
-          </span>
-          <strong>{stats.dailyStreak}</strong>
-          <span className="small faint">
-            {t("streakHint", { weeks: stats.weeklyStreak })}
-          </span>
-        </div>
-        <div className="card stat">
-          <span className="muted small row">
-            <Clock size={15} /> {t("hours")}
-          </span>
-          <strong>{stats.hours}</strong>
-          <span className="small faint">
-            {t("hoursHint", { month: stats.monthHours })}
-          </span>
-        </div>
-        <div className="card stat">
-          <span className="muted small row">
-            <CheckCircle2 size={15} /> {t("sessions")}
-          </span>
-          <strong>{stats.sessions}</strong>
-          <span className="small faint">
-            {stats.completionRate === null
-              ? t("noOutcomes")
-              : t("doneRate", { rate: stats.completionRate })}
-          </span>
-        </div>
-      </div>
-
-      <section className="card stack">
-        <div className="row-between">
-          <h2>{t("upcoming")}</h2>
-          <Link href="/book" className="button small">
-            <CalendarPlus size={15} /> {t("book")}
-          </Link>
-        </div>
-        {upcoming.length ? (
-          <div className="list">
-            {upcoming.map((b) => {
-              const partner = others.find(
-                (o) => o.sessionId === b.sessionId && o.userId !== user.id,
-              );
-              return (
-                <div key={b.id} className="list-item">
-                  <div className="grow stack-sm" style={{ gap: 2 }}>
-                    <strong>{when(b.startAt)}</strong>
-                    <span className="small muted">
-                      {c("minutes", { count: b.durationMin })} ·{" "}
-                      {b.status === "matched"
-                        ? b.kind === "group"
-                          ? t("group")
-                          : t("with", { name: partner?.name ?? "" })
-                        : t("pairing")}
-                    </span>
-                  </div>
-                  {b.sessionId ? (
-                    <Link
-                      href={`/session/${b.sessionId}`}
-                      className="button secondary small"
-                    >
-                      {t("open")}
-                    </Link>
-                  ) : (
-                    <Link
-                      href={`/book?start=${encodeURIComponent(b.startAt.toISOString())}`}
-                      className="button ghost small"
-                    >
-                      {t("manage")}
-                    </Link>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="stack-sm">
-            <p className="muted">{t("empty")}</p>
-            {suggestions.length > 0 && (
-              <div className="chips">
+            </div>
+          ) : (
+            <div className={styles.empty}>
+              <p>{t("empty")}</p>
+              <div className={styles.suggestions}>
                 {suggestions.map((s) => (
                   <Link
                     key={s.startAt.toISOString()}
-                    className="chip"
+                    className={styles.suggestion}
                     href={`/book?start=${encodeURIComponent(s.startAt.toISOString())}`}
                   >
                     {when(s.startAt)}
                     {s.waiting > 0 && (
-                      <span className="badge accent">
+                      <span className={styles.waiting}>
                         {t("waiting", { count: s.waiting })}
                       </span>
                     )}
                   </Link>
                 ))}
               </div>
-            )}
+            </div>
+          )}
+        </section>
+
+        <dl className={styles.stats}>
+          <div className={styles.stat}>
+            <dt>{t("streak")}</dt>
+            <dd>
+              <strong>{format.number(stats.dailyStreak)}</strong>
+              <span>{t("streakHint", { weeks: stats.weeklyStreak })}</span>
+            </dd>
           </div>
-        )}
-      </section>
+          <div className={styles.stat}>
+            <dt>{t("hours")}</dt>
+            <dd>
+              <strong>{format.number(stats.hours)}</strong>
+              <span>{t("hoursHint", { month: stats.monthHours })}</span>
+            </dd>
+          </div>
+          <div className={styles.stat}>
+            <dt>{t("sessions")}</dt>
+            <dd>
+              <strong>{format.number(stats.sessions)}</strong>
+              <span>
+                {stats.completionRate === null
+                  ? t("noOutcomes")
+                  : t("doneRate", { rate: stats.completionRate })}
+              </span>
+            </dd>
+          </div>
+        </dl>
+      </div>
     </AppShell>
   );
 }

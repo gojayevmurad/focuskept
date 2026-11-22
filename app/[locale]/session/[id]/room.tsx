@@ -26,6 +26,8 @@ import { createVideoClient } from "@/src/lib/video/client";
 import { getLocalMedia, LocalMediaError } from "@/src/lib/video/client/media";
 import { Avatar } from "@/src/components/avatar";
 import { LogoMark } from "@/src/components/logo";
+import { PaceClock, LaneRope } from "@/src/components/lanes";
+import styles from "./room.module.css";
 import { toggleFavorite } from "../../(app)/people/actions";
 
 type Phase = "waiting" | "intro" | "focus" | "wrap" | "ended";
@@ -40,7 +42,13 @@ function computePhase(
   duration: number,
   now: number,
   overrides: { focusAt?: string | null; wrapAt?: string | null } = {},
-): { phase: Phase; remainingMs: number; progress: number } {
+): {
+  phase: Phase;
+  remainingMs: number;
+  progress: number;
+  focusFrom: number;
+  wrapFrom: number;
+} {
   const end = startMs + duration * 60_000;
   const { intro, wrap } = phaseLengths(duration);
   // A host can start focus or wrap-up early.
@@ -50,15 +58,28 @@ function computePhase(
   const wrapFrom = overrides.wrapAt
     ? new Date(overrides.wrapAt).getTime()
     : end - wrap * 60_000;
+  const shares = {
+    focusFrom: Math.max(
+      0,
+      Math.min(1, (focusFrom - startMs) / (end - startMs)),
+    ),
+    wrapFrom: Math.max(0, Math.min(1, (wrapFrom - startMs) / (end - startMs))),
+  };
   if (now < startMs)
-    return { phase: "waiting", remainingMs: startMs - now, progress: 0 };
-  if (now >= end) return { phase: "ended", remainingMs: 0, progress: 1 };
+    return {
+      ...shares,
+      phase: "waiting",
+      remainingMs: startMs - now,
+      progress: 0,
+    };
+  if (now >= end)
+    return { ...shares, phase: "ended", remainingMs: 0, progress: 1 };
   const progress = (now - startMs) / (duration * 60_000);
   if (now >= wrapFrom)
-    return { phase: "wrap", remainingMs: end - now, progress };
+    return { ...shares, phase: "wrap", remainingMs: end - now, progress };
   if (now < focusFrom)
-    return { phase: "intro", remainingMs: end - now, progress };
-  return { phase: "focus", remainingMs: end - now, progress };
+    return { ...shares, phase: "intro", remainingMs: end - now, progress };
+  return { ...shares, phase: "focus", remainingMs: end - now, progress };
 }
 
 function clock(ms: number) {
@@ -152,7 +173,7 @@ export function Room(props: {
 
   const startMs = new Date(state.session.startAt).getTime();
   const serverNow = now + offset;
-  const { phase, remainingMs, progress } = computePhase(
+  const { phase, remainingMs, progress, focusFrom, wrapFrom } = computePhase(
     startMs,
     state.session.durationMin,
     serverNow,
@@ -381,6 +402,8 @@ export function Room(props: {
   if (phase === "ended" || left || state.window === "over") {
     return (
       <Summary
+        focusFrom={focusFrom}
+        wrapFrom={wrapFrom}
         blocked={blockedNotice}
         state={state}
         outcome={outcome}
@@ -410,57 +433,94 @@ export function Room(props: {
   }
 
   return (
-    <div className="room">
-      <header className="room-top">
-        <LogoMark size={22} />
-        <div className="grow stack-sm" style={{ gap: 0 }}>
-          <strong>
-            {state.session.title ?? (group ? t("groupTitle") : t("pairTitle"))}
-          </strong>
-          <span className="room-phase">
-            {phaseLabel} ·{" "}
-            {format.dateTime(new Date(state.session.startAt), {
-              timeZone: props.timeZone,
-              hour: "numeric",
-              minute: "2-digit",
-            })}{" "}
-            · {c("minutes", { count: state.session.durationMin })}
-          </span>
+    <div className={styles.room}>
+      <header className={styles.top}>
+        <div className={styles.sessionTitle}>
+          <LogoMark size={22} />
+          <div className={styles.stackSmall}>
+            <strong>
+              {state.session.title ??
+                (group ? t("groupTitle") : t("pairTitle"))}
+            </strong>
+            <span className={styles.meta}>
+              {format.dateTime(new Date(state.session.startAt), {
+                timeZone: props.timeZone,
+                hour: "numeric",
+                minute: "2-digit",
+              })}{" "}
+              · {c("minutes", { count: state.session.durationMin })}
+            </span>
+          </div>
+          {quality === "reduced" && (
+            <span className={styles.badge} role="status">
+              {t("lowBandwidth")}
+            </span>
+          )}
         </div>
-        {quality === "reduced" && (
-          <span className="badge warm">{t("lowBandwidth")}</span>
-        )}
-        <span className="timer" aria-live="off">
-          {phase === "waiting" ? clock(remainingMs) : clock(remainingMs)}
-        </span>
+        <div className={styles.pace}>
+          <PaceClock
+            progress={progress}
+            focusFrom={focusFrom}
+            wrapFrom={wrapFrom}
+            phase={phase}
+            size={100}
+            label={`${phaseLabel}, ${clock(remainingMs)}`}
+            className={styles.clock}
+          />
+          <div className={styles.phaseCopy}>
+            <span className={styles.phase} data-phase={phase} role="status">
+              {phaseLabel}
+            </span>
+            <span className={styles.timer} aria-live="off">
+              {clock(remainingMs)}
+            </span>
+          </div>
+          <div className={styles.guidance}>
+            <strong>{t(`tips.${phase}`)}</strong>
+            <p>{t(`tipsBody.${phase}`)}</p>
+          </div>
+        </div>
       </header>
-      <div style={{ padding: "0 20px 12px" }}>
-        <div className="progress">
-          <span style={{ width: `${Math.round(progress * 100)}%` }} />
-        </div>
-      </div>
 
-      <div className="room-stage">
-        <div className={`tiles ${group ? "group" : ""}`}>
-          <div className="tile">
-            <video
-              ref={localVideo}
-              autoPlay
-              playsInline
-              muted
-              className="mirror"
-            />
-            <div className="tile-label">
-              <span className="tile-name">
+      <main className={styles.stage}>
+        <div className={`${styles.tiles} ${group ? styles.group : ""}`}>
+          <div className={styles.lane}>
+            <LaneRope vertical className={styles.ropeDesktop} />
+            <LaneRope className={styles.ropeMobile} />
+            <div className={styles.media}>
+              <video
+                ref={localVideo}
+                autoPlay
+                playsInline
+                muted
+                className={styles.mirror}
+              />
+              {mediaError && (
+                <div className={styles.empty} role="status">
+                  {mediaError}
+                </div>
+              )}
+            </div>
+            <div className={styles.tileLabel}>
+              <span className={styles.tileName}>
                 {c("you")} {!micOn && <MicOff size={12} />}
               </span>
-              {me?.goalText && <span className="tile-goal">{me.goalText}</span>}
+              {me?.goalText && (
+                <span className={`tile-goal ${styles.goal}`}>
+                  {me.goalText}
+                </span>
+              )}
             </div>
-            {mediaError && <div className="tile-empty">{mediaError}</div>}
           </div>
           {others.length === 0 && (
-            <div className="tile">
-              <div className="tile-empty">{t("aloneInRoom")}</div>
+            <div className={styles.lane}>
+              <LaneRope vertical className={styles.ropeDesktop} />
+              <LaneRope className={styles.ropeMobile} />
+              <div className={styles.media}>
+                <div className={styles.empty} role="status">
+                  {t("aloneInRoom")}
+                </div>
+              </div>
             </div>
           )}
           {others.map((p) => (
@@ -485,32 +545,34 @@ export function Room(props: {
             />
           ))}
         </div>
+      </main>
 
-        <aside className="room-side">
+      <aside className={styles.controls}>
+        <div className={styles.controlDetails}>
           {!joined ? (
-            <div className="card stack">
+            <div className={styles.section}>
               <h2>{phase === "waiting" ? t("readyTitle") : t("joinTitle")}</h2>
-              <p className="muted small">{t("cameraRequired")}</p>
-              {videoError && <p className="notice error">{videoError}</p>}
+              <p className={styles.meta}>{t("cameraRequired")}</p>
+              {videoError && (
+                <p className={`${styles.notice} ${styles.error}`} role="status">
+                  {videoError}
+                </p>
+              )}
               <button
-                className="button full"
+                className={styles.button}
                 disabled={joining || !mediaReady || Boolean(mediaError)}
                 onClick={join}
               >
-                {joining ? (
-                  <LoaderCircle size={16} className="spin" />
-                ) : (
-                  <VideoIcon size={16} />
-                )}
+                {joining ? <LoaderCircle size={16} /> : <VideoIcon size={16} />}
                 {t("join")}
               </button>
-              <p className="small faint">{t("neverRecorded")}</p>
+              <p className={styles.meta}>{t("neverRecorded")}</p>
             </div>
           ) : null}
 
           {(phase === "waiting" || phase === "intro" || !goalSaved) && (
-            <div className="card stack-sm">
-              <label className="field">
+            <div className={styles.section}>
+              <label className={styles.field}>
                 {t("goalLabel")}
                 <textarea
                   value={goal}
@@ -524,7 +586,7 @@ export function Room(props: {
                 />
               </label>
               <button
-                className="button secondary small"
+                className={styles.buttonSecondary}
                 onClick={saveGoal}
                 disabled={!goal.trim() || goalSaved}
               >
@@ -534,13 +596,13 @@ export function Room(props: {
           )}
 
           {isHost && joined && (phase === "intro" || phase === "focus") && (
-            <div className="card stack-sm">
+            <div className={styles.section}>
               <strong>{t("hostControls")}</strong>
-              <p className="small muted">{t("hostControlsLead")}</p>
-              <div className="row">
+              <p className={styles.meta}>{t("hostControlsLead")}</p>
+              <div className={styles.row}>
                 {phase === "intro" && (
                   <button
-                    className="button small"
+                    className={styles.button}
                     onClick={() =>
                       void post(`/api/sessions/${state.session.id}/phase`, {
                         phase: "focus",
@@ -551,7 +613,7 @@ export function Room(props: {
                   </button>
                 )}
                 <button
-                  className="button secondary small"
+                  className={styles.buttonSecondary}
                   onClick={() =>
                     void post(`/api/sessions/${state.session.id}/phase`, {
                       phase: "wrap",
@@ -565,9 +627,9 @@ export function Room(props: {
           )}
 
           {isHost && others.some((p) => p.goalText) && (
-            <div className="card stack-sm">
+            <div className={styles.section}>
               <strong>{t("goalsInRoom")}</strong>
-              <ul className="small" style={{ margin: 0, paddingLeft: 18 }}>
+              <ul className={styles.goalList}>
                 {others
                   .filter((p) => p.goalText)
                   .map((p) => (
@@ -579,23 +641,17 @@ export function Room(props: {
             </div>
           )}
 
-          <div className="card stack-sm">
-            <strong>{t(`tips.${phase}`)}</strong>
-            <p className="small muted">{t(`tipsBody.${phase}`)}</p>
-          </div>
-
           {(phase === "wrap" || phase === "focus") && joined && (
-            <div className="card stack-sm">
+            <div className={styles.section}>
               <strong>{t("howDidItGo")}</strong>
               <Outcomes value={outcome} onChange={chooseOutcome} />
             </div>
           )}
-        </aside>
-      </div>
-
-      <footer className="room-bar">
+        </div>
+      </aside>
+      <footer className={styles.bar}>
         <button
-          className={`button ${micOn ? "secondary" : "danger"}`}
+          className={styles.buttonSecondary}
           disabled={!joined}
           onClick={() => {
             manualMic.current = true;
@@ -608,7 +664,7 @@ export function Room(props: {
         </button>
         {others.length > 0 && (
           <button
-            className="button secondary"
+            className={styles.buttonSecondary}
             onClick={() =>
               setReportFor(
                 others.length === 1 ? others[0].userId : others[0].userId,
@@ -618,7 +674,7 @@ export function Room(props: {
             <Flag size={16} /> {t("report")}
           </button>
         )}
-        <button className="button danger secondary" onClick={leave}>
+        <button className={styles.buttonDanger} onClick={leave}>
           <PhoneOff size={16} /> {t("leave")}
         </button>
       </footer>
@@ -654,23 +710,29 @@ function RemoteTile(props: {
     if (ref.current) ref.current.srcObject = props.stream ?? null;
   }, [props.stream]);
   return (
-    <div className="tile">
-      {props.stream ? (
-        <video ref={ref} autoPlay playsInline />
-      ) : (
-        <div className="tile-empty stack-sm" style={{ justifyItems: "center" }}>
-          <Avatar name={props.name} src={props.avatarUrl} size="lg" />
-          <span>{props.hint}</span>
-        </div>
-      )}
-      <div className="tile-label">
-        <span className="tile-name">
+    <div className={styles.lane}>
+      <LaneRope vertical className={styles.ropeDesktop} />
+      <LaneRope className={styles.ropeMobile} />
+      <div className={styles.media}>
+        {props.stream ? (
+          <video ref={ref} autoPlay playsInline />
+        ) : (
+          <div className={styles.empty} role="status">
+            <Avatar name={props.name} src={props.avatarUrl} size="lg" />
+            <span>{props.hint}</span>
+          </div>
+        )}
+      </div>
+      <div className={styles.tileLabel}>
+        <span className={styles.tileName}>
           {props.name}{" "}
           {props.isHost && (
-            <span className="badge warm">{props.hostLabel}</span>
+            <span className={styles.badge}>{props.hostLabel}</span>
           )}
         </span>
-        {props.goal && <span className="tile-goal">{props.goal}</span>}
+        {props.goal && (
+          <span className={`tile-goal ${styles.goal}`}>{props.goal}</span>
+        )}
       </div>
     </div>
   );
@@ -690,7 +752,7 @@ function Outcomes({
     { v: "not_done", icon: <XCircle size={20} /> },
   ];
   return (
-    <div className="outcomes" role="group">
+    <div className={styles.outcomes} role="group">
       {options.map((o) => (
         <button
           key={o.v}
@@ -706,6 +768,8 @@ function Outcomes({
 }
 
 function Summary(props: {
+  focusFrom: number;
+  wrapFrom: number;
   blocked: boolean;
   state: RoomState;
   outcome: Outcome | null;
@@ -717,21 +781,39 @@ function Summary(props: {
   reportDialog: React.ReactNode;
 }) {
   const t = useTranslations("room");
+  const me = props.state.participants.find((p) => p.userId === props.state.me);
   const others = props.state.participants.filter(
     (p) => p.userId !== props.state.me,
   );
   return (
-    <main className="content content-narrow" style={{ paddingTop: 48 }}>
-      <div className="page-title">
-        <span className="overline">{t("summaryOverline")}</span>
-        <h1>{t("summaryTitle")}</h1>
-      </div>
+    <main className={styles.summary}>
+      <header className={styles.summaryTitle}>
+        <PaceClock
+          progress={1}
+          focusFrom={props.focusFrom}
+          wrapFrom={props.wrapFrom}
+          phase="ended"
+          size={112}
+          label={t("summaryOverline")}
+          className={styles.clock}
+        />
+        <div className={styles.stackSmall}>
+          <h1>{t("summaryTitle")}</h1>
+          <p className={styles.muted}>{t("summaryOverline")}</p>
+        </div>
+      </header>
+      {me?.goalText && (
+        <section className={styles.section}>
+          <strong>{t("goalLabel")}</strong>
+          <p className={`tile-goal ${styles.goal}`}>{me.goalText}</p>
+        </section>
+      )}
       {props.blocked && (
-        <p className="notice ok" role="status">
+        <p className={styles.notice} role="status">
           {t("reportSentBody")}
         </p>
       )}
-      <section className="card stack">
+      <section className={styles.section}>
         <strong>{t("howDidItGo")}</strong>
         <Outcomes value={props.outcome} onChange={props.onOutcome} />
       </section>
@@ -740,26 +822,32 @@ function Summary(props: {
           <RateHost sessionId={props.state.session.id} />
         )}
       {others.length > 0 && (
-        <section className="card stack">
+        <section className={styles.section}>
           <h2>{t("yourPartners", { count: others.length })}</h2>
-          <div className="list">
+          <div className={styles.list}>
             {others.map((p) => (
-              <div key={p.userId} className="list-item">
+              <div key={p.userId} className={styles.listItem}>
                 <Avatar name={p.displayName} src={p.avatarUrl} />
-                <div className="grow stack-sm" style={{ gap: 2 }}>
+                <div className={styles.partnerCopy}>
                   <strong>{p.displayName}</strong>
                   {p.goalText && (
-                    <span className="small muted">{p.goalText}</span>
+                    <span className={`tile-goal ${styles.goal}`}>
+                      {p.goalText}
+                    </span>
                   )}
                   {p.outcome && (
-                    <span className="small faint">
+                    <span className={styles.meta}>
                       {t(`outcome.${p.outcome}`)}
                     </span>
                   )}
                 </div>
                 {props.canFavorite ? (
                   <button
-                    className={`button small ${props.favorites.includes(p.userId) ? "on" : "secondary"}`}
+                    className={
+                      props.favorites.includes(p.userId)
+                        ? styles.buttonSelected
+                        : styles.buttonSecondary
+                    }
                     onClick={() => props.onFavorite(p.userId)}
                   >
                     <Star size={14} />{" "}
@@ -770,13 +858,13 @@ function Summary(props: {
                 ) : (
                   <Link
                     href={`/u/${p.username}`}
-                    className="button ghost small"
+                    className={styles.buttonGhost}
                   >
                     {t("profile")}
                   </Link>
                 )}
                 <button
-                  className="button ghost small icon"
+                  className={styles.iconButton}
                   aria-label={t("report")}
                   onClick={() => props.onReport(p.userId)}
                 >
@@ -787,11 +875,11 @@ function Summary(props: {
           </div>
         </section>
       )}
-      <div className="row">
-        <Link href="/book" className="button">
+      <div className={styles.row}>
+        <Link href="/book" className={styles.button}>
           {t("bookNext")}
         </Link>
-        <Link href="/dashboard" className="button secondary">
+        <Link href="/dashboard" className={styles.buttonSecondary}>
           {t("backHome")}
         </Link>
       </div>
@@ -805,16 +893,16 @@ function RateHost({ sessionId }: { sessionId: string }) {
   const [score, setScore] = useState(0);
   const [sent, setSent] = useState(false);
   return (
-    <section className="card stack-sm">
+    <section className={styles.section}>
       <strong>{t("rateHost")}</strong>
-      <div className="row" role="radiogroup" aria-label={t("rateHost")}>
+      <div className={styles.row} role="radiogroup" aria-label={t("rateHost")}>
         {[1, 2, 3, 4, 5].map((n) => (
           <button
             key={n}
             role="radio"
             aria-checked={score === n}
             aria-label={String(n)}
-            className={`button small icon ${score >= n ? "on" : "ghost"}`}
+            className={score >= n ? styles.ratingSelected : styles.rating}
             onClick={async () => {
               setScore(n);
               await post(`/api/sessions/${sessionId}/rate`, { score: n }).catch(
@@ -827,7 +915,11 @@ function RateHost({ sessionId }: { sessionId: string }) {
           </button>
         ))}
       </div>
-      {sent && <span className="small muted">{t("thanks")}</span>}
+      {sent && (
+        <span className={styles.meta} role="status">
+          {t("thanks")}
+        </span>
+      )}
     </section>
   );
 }
@@ -887,19 +979,14 @@ function ReportDialog({
     }
   }
   return (
-    <dialog
-      ref={dialogRef}
-      className="dialog"
-      onClose={onClose}
-      style={{ color: "var(--text)" }}
-    >
-      <div className="dialog-body">
+    <dialog ref={dialogRef} className={styles.dialog} onClose={onClose}>
+      <div className={styles.dialogBody}>
         {done ? (
           <>
             <h2>{done === "report" ? t("reportSent") : t("blocked")}</h2>
-            <p className="muted">{t("reportSentBody")}</p>
-            <div className="dialog-actions">
-              <button className="button" onClick={onClose}>
+            <p className={styles.muted}>{t("reportSentBody")}</p>
+            <div className={styles.dialogActions}>
+              <button className={styles.button} onClick={onClose}>
                 {c("close")}
               </button>
             </div>
@@ -907,9 +994,9 @@ function ReportDialog({
         ) : (
           <>
             <h2>{t("reportTitle")}</h2>
-            <p className="muted small">{t("reportLead")}</p>
+            <p className={styles.meta}>{t("reportLead")}</p>
             {people && people.length > 1 && (
-              <label className="field">
+              <label className={styles.field}>
                 {t("who")}
                 <select
                   value={targetId ?? ""}
@@ -923,7 +1010,7 @@ function ReportDialog({
                 </select>
               </label>
             )}
-            <label className="field">
+            <label className={styles.field}>
               {t("reason")}
               <select
                 value={reason}
@@ -938,7 +1025,7 @@ function ReportDialog({
                 ))}
               </select>
             </label>
-            <label className="field">
+            <label className={styles.field}>
               {t("details")}
               <textarea
                 value={details}
@@ -947,19 +1034,19 @@ function ReportDialog({
                 rows={3}
               />
             </label>
-            <div className="dialog-actions">
-              <button className="button ghost" onClick={onClose}>
+            <div className={styles.dialogActions}>
+              <button className={styles.buttonGhost} onClick={onClose}>
                 {c("cancel")}
               </button>
               <button
-                className="button secondary"
+                className={styles.buttonSecondary}
                 disabled={busy}
                 onClick={() => send("block")}
               >
                 {t("blockOnly")}
               </button>
               <button
-                className="button danger"
+                className={styles.buttonDanger}
                 disabled={busy}
                 onClick={() => send("report")}
               >

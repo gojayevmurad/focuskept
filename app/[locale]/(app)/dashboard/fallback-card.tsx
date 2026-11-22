@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/src/i18n/navigation";
 import { chooseFallback } from "../book/actions";
+import styles from "./dashboard.module.css";
 
 export function FallbackCard({
   bookingId,
@@ -25,30 +26,34 @@ export function FallbackCard({
       else router.refresh();
     });
   return (
-    <section className="card stack" style={{ borderColor: "var(--warm)" }}>
-      <div className="stack-sm">
-        <span className="badge warm">{t("fallbackBadge")}</span>
+    <section className={styles.fallback}>
+      <div className={styles.fallbackCopy}>
         <h2>{t("fallbackTitle")}</h2>
-        <p className="muted">{t("fallbackLead", { when })}</p>
+        <span className={styles.partner}>{t("fallbackBadge")}</span>
+        <p className={styles.meta}>{t("fallbackLead", { when })}</p>
       </div>
-      {error && <p className="notice error">{c("somethingWrong")}</p>}
-      <div className="row">
+      {error && (
+        <p className={styles.error} role="status">
+          {c("somethingWrong")}
+        </p>
+      )}
+      <div className={styles.actions}>
         <button
-          className="button"
+          className={styles.button}
           disabled={pending}
           onClick={() => choose("room")}
         >
           {t("fallbackRoom")}
         </button>
         <button
-          className="button secondary"
+          className={styles.buttonSecondary}
           disabled={pending}
           onClick={() => choose("next")}
         >
           {t("fallbackNext")}
         </button>
         <button
-          className="button ghost"
+          className={styles.buttonGhost}
           disabled={pending}
           onClick={() => choose("cancel")}
         >
