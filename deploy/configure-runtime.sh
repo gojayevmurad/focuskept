@@ -89,7 +89,8 @@ fi
 echo "== Admins and web push"
 set_var ADMIN_EMAILS "$(ask "Admin email addresses (comma separated):")"
 if [[ -z "$(sed -n 's/^VAPID_PUBLIC_KEY=//p' "$file")" ]]; then
-  keys="$(docker run --rm --entrypoint node "$image" -e 'const k=require("web-push").generateVAPIDKeys();console.log(k.publicKey+" "+k.privateKey)')"
+  # P-256 key pair in the web push (VAPID) encoding, made with Node's built-in crypto.
+  keys="$(docker run --rm --entrypoint node "$image" -e 'const c=require("node:crypto");const {privateKey}=c.generateKeyPairSync("ec",{namedCurve:"prime256v1"});const j=privateKey.export({format:"jwk"});const pub=Buffer.concat([Buffer.from([4]),Buffer.from(j.x,"base64url"),Buffer.from(j.y,"base64url")]).toString("base64url");console.log(pub+" "+j.d)')"
   set_var VAPID_PUBLIC_KEY "${keys% *}"
   set_var VAPID_PRIVATE_KEY "${keys#* }"
   echo "  generated new VAPID keys"
