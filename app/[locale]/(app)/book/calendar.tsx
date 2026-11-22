@@ -51,6 +51,7 @@ export type CalendarData = {
   plan: "free" | "plus";
   billingEnabled: boolean;
   usage: { used: number; limit: number } | null;
+  usedByDay: Record<string, number>;
   prefill: {
     start: string | null;
     partner: string | null;
@@ -197,8 +198,14 @@ export function Calendar({ data }: { data: CalendarData }) {
     data.days.flatMap((d) => d.slots).find((s) => s.at === at)?.demand[
       duration
     ] ?? 0;
+  const weekFull = Boolean(data.usage && data.usage.used >= data.usage.limit);
+  const slotDay = selectedSlot
+    ? new Intl.DateTimeFormat("en-CA", { timeZone: data.timeZone }).format(
+        new Date(selectedSlot),
+      )
+    : null;
   const limitReached = Boolean(
-    data.usage && data.usage.used >= data.usage.limit,
+    data.usage && slotDay && (data.usedByDay[slotDay] ?? 0) >= data.usage.limit,
   );
 
   return (
@@ -211,7 +218,7 @@ export function Calendar({ data }: { data: CalendarData }) {
           </p>
         </div>
         {data.usage && data.billingEnabled && (
-          <span className={`badge ${limitReached ? "warm" : ""}`}>
+          <span className={`badge ${weekFull ? "warm" : ""}`}>
             {t("usage", {
               used: Math.min(data.usage.used, data.usage.limit),
               limit: data.usage.limit,

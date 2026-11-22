@@ -91,6 +91,12 @@ export default async function Page({
         .where(inArray(sessionParticipant.sessionId, sessionIds))
     : [];
   const usage = plan.plan === "free" ? await weeklyUsage(user.id, tz) : null;
+  // The shown days can span two weeks; the free limit applies per week.
+  const usedByDay: Record<string, number> = {};
+  if (usage) {
+    for (const d of grid)
+      usedByDay[d.key] = (await weeklyUsage(user.id, tz, d.start)).used;
+  }
   const app = getAppConfig();
 
   const data: CalendarData = {
@@ -134,6 +140,7 @@ export default async function Page({
     plan: plan.plan,
     billingEnabled: app.billingEnabled,
     usage: usage ? { used: usage.used, limit: usage.limit } : null,
+    usedByDay,
     prefill: {
       start: params.start ?? null,
       partner: params.with ?? null,

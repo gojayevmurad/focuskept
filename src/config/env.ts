@@ -73,6 +73,9 @@ export const envSchema = z
       ctx.addIssue({ code: "custom", message });
     // `next build` runs with NODE_ENV=production but without runtime secrets.
     const building = process.env.NEXT_PHASE === "phase-production-build";
+    const local = ["localhost", "127.0.0.1", "[::1]"].includes(
+      new URL(v.APP_URL).hostname,
+    );
     if (v.NODE_ENV === "production" && !building) {
       if (!v.DATABASE_URL) issue("DATABASE_URL is required in production");
       if (
@@ -82,13 +85,17 @@ export const envSchema = z
         v.BETTER_AUTH_SECRET.includes("development-only")
       )
         issue("Set a random BETTER_AUTH_SECRET of at least 32 characters");
-      if (!v.APP_URL.startsWith("https://"))
-        issue("Production APP_URL must use HTTPS");
-      if (v.EMAIL_MODE !== "send")
-        issue("Production authentication requires EMAIL_MODE=send");
+      // A production build served on localhost (browser tests) is never public,
+      // so it may use http, preview email and no video transport.
+      if (!local) {
+        if (!v.APP_URL.startsWith("https://"))
+          issue("Production APP_URL must use HTTPS");
+        if (v.EMAIL_MODE !== "send")
+          issue("Production authentication requires EMAIL_MODE=send");
+        if (v.VIDEO_PROVIDER === "none")
+          issue("VIDEO_PROVIDER=none is for development only");
+      }
     }
-    if (v.NODE_ENV === "production" && !building && v.VIDEO_PROVIDER === "none")
-      issue("VIDEO_PROVIDER=none is for development only");
     if (
       v.VIDEO_PROVIDER === "cloudflare" &&
       (!v.CLOUDFLARE_REALTIME_APP_ID || !v.CLOUDFLARE_REALTIME_APP_TOKEN)

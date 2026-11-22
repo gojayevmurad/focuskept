@@ -74,6 +74,8 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
     await book(20);
     await book(24);
     await book(28);
+    // Wait for the refreshed calendar before trying a fourth booking.
+    await expect(page.locator(".slot .mine")).toHaveCount(3);
     await slots.nth(32).click();
     await expect(page.locator("dialog .notice.warn")).toContainText(
       "free sessions",

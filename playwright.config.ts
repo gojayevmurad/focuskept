@@ -25,7 +25,10 @@ export default defineConfig({
   webServer: process.env.E2E_BASE_URL
     ? undefined
     : {
-        command: "pnpm exec next dev --port 3000",
+        // CI tests the production build (`pnpm build` runs first); locally the dev server.
+        command: process.env.CI
+          ? "pnpm exec next start --port 3000"
+          : "pnpm exec next dev --port 3000",
         env: {
           APP_URL: "http://localhost:3000",
           VIDEO_PROVIDER: "none",
