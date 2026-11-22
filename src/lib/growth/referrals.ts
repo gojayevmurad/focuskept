@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { randomBytes } from "node:crypto";
-import { and, count, eq } from "drizzle-orm";
+import { and, count, desc, eq } from "drizzle-orm";
 import { db } from "@/src/lib/db";
-import { booking, referral, subscription } from "@/src/lib/db/schema";
+import { booking, profile, referral, subscription } from "@/src/lib/db/schema";
 import { getEnv } from "@/src/config/env";
 import { polar, products } from "@/src/lib/billing/provider";
 import { trackForUser } from "@/src/lib/analytics/product";
@@ -137,4 +137,58 @@ export async function pendingDiscountCode(userId: string) {
       return r.refereeDiscountCode;
   }
   return null;
+}
+
+export type ReferralStatRow = {
+  name: string;
+  status: string;
+  createdAt: Date;
+};
+
+export type ReferralStats = {
+  totalInvited: number;
+  totalConverted: number;
+  totalRewarded: number;
+  referrals: ReferralStatRow[];
+};
+
+export async function getReferralStats(userId: string): Promise<ReferralStats> {
+  const rows = await db()
+    .select({
+      name: profile.displayName,
+      status: referral.status,
+      createdAt: referral.createdAt,
+    })
+    .from(referral)
+    .innerJoin(profile, eq(profile.userId, referral.refereeId))
+    .where(eq(referral.referrerId, userId))
+    .orderBy(desc(referral.createdAt));
+
+  const totalInvited = rows.length;
+  const totalConverted = rows.filter(
+    (r) => r.status === "converted" || r.status === "rewarded",
+  ).length;
+  const totalRewarded = rows.filter((r) => r.status === "rewarded").length;
+
+  return {
+    totalInvited,
+    totalConverted,
+    totalRewarded,
+    referrals: rows,
+  };
+}
+
+/**
+ * Builds a referral link with standard UTM parameters.
+ */
+export function buildReferralLink(
+  baseUrl: string,
+  referralCode: string,
+  source = "referral",
+): string {
+  const url = new URL(`/r/${referralCode}`, baseUrl);
+  url.searchParams.set("utm_source", source);
+  url.searchParams.set("utm_medium", "referral");
+  url.searchParams.set("utm_campaign", "invite");
+  return url.toString();
 }

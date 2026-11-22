@@ -17,6 +17,8 @@ export function EmailLayout(props: {
   lines: string[];
   cta?: { label: string; url: string };
   footer: string;
+  unsubscribeUrl?: string;
+  unsubscribeLabel?: string;
 }) {
   return (
     <Html>
@@ -70,6 +72,17 @@ export function EmailLayout(props: {
           )}
           <Text style={{ fontSize: 12, color: "#8a918d", marginTop: 24 }}>
             {props.footer}
+            {props.unsubscribeUrl && (
+              <>
+                {" · "}
+                <a
+                  href={props.unsubscribeUrl}
+                  style={{ color: "#8a918d", textDecoration: "underline" }}
+                >
+                  {props.unsubscribeLabel ?? "Unsubscribe"}
+                </a>
+              </>
+            )}
           </Text>
         </Container>
       </Body>

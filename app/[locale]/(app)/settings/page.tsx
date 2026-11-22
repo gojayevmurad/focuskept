@@ -56,6 +56,7 @@ export default async function Page() {
           <PreferencesForm
             emailReminders={profile.emailReminders}
             pushReminders={profile.pushReminders}
+            emailTips={profile.emailTips}
             microphoneDefault={profile.microphoneDefault}
             matchSameSegment={profile.matchSameSegment}
             statsPublic={profile.statsPublic}

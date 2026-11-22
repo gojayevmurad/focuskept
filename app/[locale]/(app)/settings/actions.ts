@@ -77,6 +77,7 @@ export async function savePreferences(
     .set({
       emailReminders: form.get("emailReminders") === "on",
       pushReminders: form.get("pushReminders") === "on",
+      emailTips: form.get("emailTips") === "on",
       microphoneDefault: form.get("microphoneDefault") === "on",
       // Advanced matching filters are a Plus feature.
       matchSameSegment: plus && form.get("matchSameSegment") === "on",
