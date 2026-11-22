@@ -1,0 +1,80 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* Shared Lanes pieces. Colours come from the tokens in app/globals.css. */
+
+.clock {
+  display: block;
+  flex: none;
+  overflow: visible;
+}
+.face {
+  fill: var(--surface);
+  stroke: none;
+}
+.track {
+  fill: none;
+  stroke: var(--grout);
+  stroke-width: 9;
+  stroke-linecap: butt;
+}
+.track[data-active] {
+  stroke: color-mix(in srgb, var(--accent), var(--surface) 70%);
+}
+.fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 9;
+  stroke-linecap: butt;
+}
+.fill[data-part="intro"],
+.fill[data-part="wrap"] {
+  stroke: var(--rope-yellow-deep);
+}
+.tick {
+  stroke: var(--text-3);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.hand {
+  transform-origin: 50px 50px;
+  transition: transform 1s linear;
+}
+.hand line {
+  stroke: var(--rope-red);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.hand circle {
+  fill: var(--rope-red);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hand {
+    transition: none;
+  }
+}
+
+/* Float line: red, white and yellow floats on a thin cord. */
+.rope {
+  --float: 14px;
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--rope-red) 0 var(--float),
+    var(--rope-white) var(--float) calc(var(--float) + 5px),
+    var(--rope-yellow) calc(var(--float) + 5px) calc(var(--float) * 2 + 5px),
+    var(--rope-white) calc(var(--float) * 2 + 5px) calc(var(--float) * 2 + 10px)
+  );
+}
+.vertical {
+  width: 8px;
+  height: auto;
+  align-self: stretch;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--rope-red) 0 var(--float),
+    var(--rope-white) var(--float) calc(var(--float) + 5px),
+    var(--rope-yellow) calc(var(--float) + 5px) calc(var(--float) * 2 + 5px),
+    var(--rope-white) calc(var(--float) * 2 + 5px) calc(var(--float) * 2 + 10px)
+  );
+}
