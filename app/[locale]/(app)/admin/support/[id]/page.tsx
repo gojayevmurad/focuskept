@@ -4,9 +4,9 @@ import { getFormatter, getTranslations } from "next-intl/server";
 import { requireAdmin } from "@/src/lib/app-user";
 import { Link } from "@/src/i18n/navigation";
 import { getSupportTicket } from "@/src/lib/support/admin";
-import { AdminFrame } from "../frame";
-import { updateTicketNoteAction, updateTicketStatusAction } from "./actions";
-import styles from "./support.module.css";
+import { AdminFrame } from "../../frame";
+import { updateTicketNoteAction, updateTicketStatusAction } from "../actions";
+import styles from "../support.module.css";
 
 export default async function TicketDetailPage({
   params,

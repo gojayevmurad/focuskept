@@ -54,7 +54,7 @@ export async function notifyAdminsOfTicket(ticket: {
         await new Resend(env.RESEND_API_KEY).emails.send({
           from: env.EMAIL_FROM,
           to: adminEmail,
-          reply_to: ticket.email,
+          replyTo: ticket.email,
           subject: title,
           text: lines.join("\n\n"),
           react: EmailLayout({

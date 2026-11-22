@@ -52,7 +52,7 @@ describe("SEO Metadata and URL Formatting", () => {
     expect(meta.alternates?.canonical).toContain("/body-doubling-for/adhd");
     expect(meta.alternates?.languages?.["x-default"]).toBeDefined();
 
-    expect(meta.openGraph?.type).toBe("website");
+    expect((meta.openGraph as { type?: string } | undefined)?.type).toBe("website");
     expect(meta.openGraph?.title).toBe("Body Doubling for ADHD | FocusKept");
     expect(meta.openGraph?.images).toEqual([
       expect.objectContaining({
@@ -62,7 +62,7 @@ describe("SEO Metadata and URL Formatting", () => {
       }),
     ]);
 
-    expect(meta.twitter?.card).toBe("summary_large_image");
+    expect((meta.twitter as { card?: string } | undefined)?.card).toBe("summary_large_image");
     expect(meta.twitter?.images).toEqual([
       expect.stringContaining("/opengraph-image"),
     ]);
