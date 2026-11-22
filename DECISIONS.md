@@ -74,3 +74,7 @@ The boilerplate pinned 16.4.2, which has a published security issue. Upgraded to
 ## D18. Private by default
 
 Focus stats on the public page and share cards are off until the person turns them on (onboarding or Settings). Work types like "ADHD" are used for matching but never shown on public pages, since they can reveal health information.
+
+## D19. The Lanes look
+
+The interface follows one visual world: lap swimming lanes. Each person works in their own lane, next to someone, on one pace clock, which is what body doubling is. The pace clock shows the session phases, a lane rope separates partners, the booking grid reads like a pool's lane schedule, and type is Big Shoulders for display and Figtree for text. The full system is in `docs/DESIGN.md`. It replaced the generic cream-and-green starter look.
