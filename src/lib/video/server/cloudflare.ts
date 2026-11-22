@@ -20,16 +20,16 @@ async function request(
   url: string,
   token: string,
   method: string,
-  body: unknown,
+  body?: unknown,
 ): Promise<unknown> {
   try {
     const response = await fetch(url, {
       method,
       headers: {
         Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
+        ...(body === undefined ? {} : { "Content-Type": "application/json" }),
       },
-      body: JSON.stringify(body),
+      ...(body === undefined ? {} : { body: JSON.stringify(body) }),
       signal: AbortSignal.timeout(10_000),
       cache: "no-store",
     });
@@ -46,7 +46,7 @@ async function request(
 export async function cloudflareRequest(
   path: string,
   method: "POST" | "PUT",
-  body: unknown,
+  body?: unknown,
 ) {
   const env = videoEnv();
   if (

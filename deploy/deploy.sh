@@ -23,7 +23,7 @@ project="$(sed -n 's/^COMPOSE_PROJECT_NAME=//p' .env)"
 previous=""
 if [[ -f .validated-image ]]; then
  previous="$(cat .validated-image)"
- valid_image "$previous" && [[ "${previous%@sha256:*}" == "$repository" ]] || { echo "Invalid saved image" >&2; exit 1; }
+ valid_image "$previous" && [[ "$(repository_of "$previous")" == "$repository" ]] || { echo "Invalid saved image" >&2; exit 1; }
 fi
 # Compose identity and credentials come from this project's file, not shared shell exports.
 unset COMPOSE_PROJECT_NAME POSTGRES_DB POSTGRES_USER POSTGRES_PASSWORD APP_ENV_FILE APP_PROXY_ALIAS IMAGE_REPOSITORY

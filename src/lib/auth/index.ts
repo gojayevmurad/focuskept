@@ -87,6 +87,9 @@ function createAuth() {
       },
     },
     advanced: {
+      ipAddress: {
+        ipAddressHeaders: ["cf-connecting-ip", "x-forwarded-for"],
+      },
       useSecureCookies: env.APP_URL.startsWith("https://"),
       defaultCookieAttributes: { httpOnly: true, sameSite: "lax" },
     },

@@ -6,6 +6,8 @@ FocusKept is an AGPL-3.0 Next.js application with a PostgreSQL database and a ba
 
 Use a Linux server with Docker Engine and the Compose plugin, a domain, and an HTTPS reverse proxy. The supplied production Compose file expects a central Caddy on an external network named `proxy`. Production authentication requires a Resend account and verified sender: `EMAIL_MODE=send` uses Resend, not a generic SMTP server. For local development, email preview needs no provider.
 
+Better Auth resolves client IPs for rate limiting from `cf-connecting-ip` first, then `x-forwarded-for`. Preserve Cloudflare's `cf-connecting-ip` header through Caddy when using Cloudflare; deployments without Cloudflare use Caddy's `x-forwarded-for` header.
+
 1. Install Node 24 and pnpm 11 locally. Run `pnpm install --frozen-lockfile` and `pnpm setup`.
 2. For local development run `pnpm local:up`, then `pnpm local:migrate`. This starts web, database and worker. Use `pnpm local:logs` for both process logs and `pnpm local:stop` to stop them. `VIDEO_PROVIDER=none` works only locally.
 3. For production follow [DEPLOY.md](DEPLOY.md) to copy the generated bundle, configure runtime secrets, publish/pull an ARM64 image, provision PostgreSQL, run migrations and deploy. Builds for other server architectures must target that architecture explicitly.
