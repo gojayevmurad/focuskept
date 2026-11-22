@@ -1,6 +1,16 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
-import { and, avg, count, desc, eq, gt, inArray, sql } from "drizzle-orm";
+import {
+  and,
+  avg,
+  count,
+  desc,
+  eq,
+  gt,
+  inArray,
+  isNull,
+  sql,
+} from "drizzle-orm";
 import { db } from "@/src/lib/db";
 import {
   booking,
@@ -177,6 +187,8 @@ export async function setHostPhase(
         eq(focusSession.id, sessionId),
         eq(focusSession.hostId, hostId),
         inArray(focusSession.status, ["scheduled", "live"]),
+        // Each phase moves once, so repeated clicks cannot restart the timers.
+        isNull(phase === "focus" ? focusSession.focusAt : focusSession.wrapAt),
       ),
     )
     .returning({ id: focusSession.id });

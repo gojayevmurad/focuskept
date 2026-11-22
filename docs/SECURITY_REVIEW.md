@@ -276,13 +276,13 @@ A dedicated route handler serves `/.well-known/security.txt` per RFC 9116 specif
 
 | ID | Finding | Severity | File : Line | STRIDE | D | R | E | A | D | Avg | Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| **SEC-01** | SSRF risk in Web Push subscription endpoint | Medium | `app/api/push/route.ts:13` | Tampering / Info Disclosure | 7 | 8 | 6 | 4 | 7 | **6.4** | Needs Owner |
-| **SEC-02** | Missing rate limits on billing checkout and portal | Medium | `app/api/billing/[action]/route.ts:11` | Denial of Service | 6 | 9 | 8 | 5 | 7 | **7.0** | Needs Owner |
-| **SEC-03** | Missing rate limits on video join & Cloudflare proxy | Medium | `app/api/video/join/[sessionId]/route.ts:13` | Denial of Service | 6 | 9 | 7 | 5 | 7 | **6.8** | Needs Owner |
-| **SEC-04** | Missing rate limits on push subscription registration | Low | `app/api/push/route.ts:23` | Denial of Service | 4 | 9 | 8 | 3 | 6 | **6.0** | Needs Owner |
+| **SEC-01** | SSRF risk in Web Push subscription endpoint | Medium | `app/api/push/route.ts:13` | Tampering / Info Disclosure | 7 | 8 | 6 | 4 | 7 | **6.4** | **FIXED** |
+| **SEC-02** | Missing rate limits on billing checkout and portal | Medium | `app/api/billing/[action]/route.ts:11` | Denial of Service | 6 | 9 | 8 | 5 | 7 | **7.0** | **FIXED** |
+| **SEC-03** | Missing rate limits on video join & Cloudflare proxy | Medium | `app/api/video/join/[sessionId]/route.ts:13` | Denial of Service | 6 | 9 | 7 | 5 | 7 | **6.8** | **FIXED** |
+| **SEC-04** | Missing rate limits on push subscription registration | Low | `app/api/push/route.ts:23` | Denial of Service | 4 | 9 | 8 | 3 | 6 | **6.0** | **FIXED** |
 | **SEC-05** | Redirect sanitizer omitted tabs and null bytes | Low | `src/lib/security/validation.ts:11` | Spoofing | 5 | 6 | 5 | 4 | 5 | **5.0** | **FIXED** |
 | **SEC-06** | `sameOrigin` threw unhandled TypeError on invalid URL | Low | `src/lib/security/validation.ts:18` | Denial of Service | 4 | 7 | 6 | 3 | 4 | **4.8** | **FIXED** |
-| **SEC-07** | Repeated host phase overrides broadcast duplicate timers | Low | `src/lib/hosts/index.ts:166` | Tampering | 3 | 8 | 7 | 3 | 5 | **5.2** | Needs Owner |
+| **SEC-07** | Repeated host phase overrides broadcast duplicate timers | Low | `src/lib/hosts/index.ts:166` | Tampering | 3 | 8 | 7 | 3 | 5 | **5.2** | **FIXED** |
 | **SEC-08** | Missing RFC 9116 `security.txt` and contact discovery | Info | `app/.well-known/security.txt/route.ts` | Info Disclosure | 2 | 9 | 9 | 2 | 8 | **6.0** | **FIXED** |
 | **SEC-09** | Missing comprehensive Content Security Policy & HSTS | Medium | `next.config.ts:21` | Tampering / Info Disclosure | 7 | 8 | 6 | 8 | 7 | **7.2** | **FIXED** |
 | **SEC-10** | Verify IDOR resistance in session and booking routes | Safe | `src/lib/bookings/service.ts:183` | Info Disclosure | - | - | - | - | - | - | **VERIFIED** |
