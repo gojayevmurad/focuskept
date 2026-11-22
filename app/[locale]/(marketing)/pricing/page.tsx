@@ -7,13 +7,23 @@ import { BillingButton } from "@/src/components/billing-button";
 import styles from "@/src/components/marketing/marketing.module.css";
 import { getPrices } from "@/src/lib/content/prices";
 import {
+  absoluteUrl,
+  localizedPath,
   requireMarketing,
   translatedMetadata,
   type LocaleProps,
 } from "@/src/lib/content/marketing";
+import { JsonLd } from "@/src/components/marketing/json-ld";
+import {
+  buildBreadcrumbSchema,
+  buildGraph,
+  buildWebApplicationSchema,
+} from "@/src/lib/seo/schema";
+
 export async function generateMetadata({ params }: LocaleProps) {
   return translatedMetadata(params, "pricing", "/pricing");
 }
+
 export default async function Pricing({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -24,6 +34,7 @@ export default async function Pricing({ params }: LocaleProps) {
     getTranslations("home"),
     getPrices(),
   ]);
+
   return (
     <div className={`container ${styles.page}`}>
       <header className={styles.pageHead}>
@@ -72,6 +83,18 @@ export default async function Pricing({ params }: LocaleProps) {
           <p className={styles.planNote}>{t("cancel")}</p>
         </article>
       </section>
+      <JsonLd
+        data={buildGraph([
+          buildBreadcrumbSchema([
+            { name: "Home", url: absoluteUrl(localizedPath("/", locale)) },
+            {
+              name: t("heading"),
+              url: absoluteUrl(localizedPath("/pricing", locale)),
+            },
+          ]),
+          buildWebApplicationSchema(getAppConfig(), prices),
+        ])}
+      />
     </div>
   );
 }

@@ -2,7 +2,14 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
-import { pageMetadata, type LocaleProps } from "@/src/lib/content/marketing";
+import {
+  absoluteUrl,
+  localizedPath,
+  pageMetadata,
+  type LocaleProps,
+} from "@/src/lib/content/marketing";
+import { JsonLd } from "@/src/components/marketing/json-ld";
+import { buildBreadcrumbSchema, buildGraph } from "@/src/lib/seo/schema";
 import { sections } from "@/src/components/marketing/privacy-content";
 import styles from "./privacy.module.css";
 
@@ -51,6 +58,17 @@ export default async function Legal({ params }: LocaleProps) {
           <Link href="/terms">{t("terms")}</Link>
         </div>
       </article>
+      <JsonLd
+        data={buildGraph([
+          buildBreadcrumbSchema([
+            { name: "Home", url: absoluteUrl(localizedPath("/", locale)) },
+            {
+              name: t("privacy"),
+              url: absoluteUrl(localizedPath("/privacy", locale)),
+            },
+          ]),
+        ])}
+      />
     </div>
   );
 }

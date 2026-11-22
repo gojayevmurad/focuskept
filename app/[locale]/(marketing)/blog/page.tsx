@@ -3,10 +3,14 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/src/i18n/navigation";
 import { listBlogPosts } from "@/src/lib/content/blog";
 import {
+  absoluteUrl,
+  localizedPath,
   requireMarketing,
   translatedMetadata,
   type LocaleProps,
 } from "@/src/lib/content/marketing";
+import { JsonLd } from "@/src/components/marketing/json-ld";
+import { buildBreadcrumbSchema, buildGraph } from "@/src/lib/seo/schema";
 import { ArrowUpRight } from "lucide-react";
 import styles from "./blog.module.css";
 
@@ -64,6 +68,17 @@ export default async function Blog({ params }: LocaleProps) {
           );
         })}
       </ul>
+      <JsonLd
+        data={buildGraph([
+          buildBreadcrumbSchema([
+            { name: "Home", url: absoluteUrl(localizedPath("/", locale)) },
+            {
+              name: t("heading"),
+              url: absoluteUrl(localizedPath("/blog", locale)),
+            },
+          ]),
+        ])}
+      />
     </div>
   );
 }

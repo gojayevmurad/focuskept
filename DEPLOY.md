@@ -167,3 +167,22 @@ bash point-domain.sh <domain> <slug>-app                                        
 ```
 
 `deploy.sh` only accepts `local/` images tagged with a commit hash, never mutable tags like `latest`.
+
+## Search engines
+
+FocusKept supports search discovery, AI answer engines (GEO), and instant crawling updates:
+
+- **Google Search Console & Bing Webmaster Tools**:
+  Set `GOOGLE_SITE_VERIFICATION` and `BING_SITE_VERIFICATION` in `runtime.env`. Meta verification tags are automatically rendered on public pages.
+- **Sitemaps**:
+  The XML sitemap is served at `https://<domain>/sitemap.xml` with hreflang alternates and lastmod timestamps for all public pages. Submit this URL in Google Search Console and Bing Webmaster Tools.
+- **IndexNow (Bing, Yandex, Seznam)**:
+  To instantly notify search engines of updated or published pages, generate an IndexNow key (e.g. an 8–128 character hex string) and set `INDEXNOW_KEY=<key>` in `runtime.env`.
+  The verification key file is served at `https://<domain>/indexnow-key.txt`.
+  After deploying updates, ping search engines with:
+  ```sh
+  node scripts/indexnow.mjs
+  ```
+- **AI Context (`llms.txt`)**:
+  AI engines and assistants can read `https://<domain>/llms.txt` and `https://<domain>/llms-full.txt` for product facts, feature lists, pricing, and documentation.
+

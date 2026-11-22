@@ -6,11 +6,17 @@ import { getAppConfig } from "@/src/config/app";
 import { listBlogPosts, getBlogPost } from "@/src/lib/content/blog";
 import {
   absoluteUrl,
+  localizedPath,
   pageMetadata,
   requireMarketing,
   type SlugProps,
 } from "@/src/lib/content/marketing";
 import { JsonLd } from "@/src/components/marketing/json-ld";
+import {
+  buildBlogPostingSchema,
+  buildBreadcrumbSchema,
+  buildGraph,
+} from "@/src/lib/seo/schema";
 import { ArrowLeft } from "lucide-react";
 import styles from "./article.module.css";
 
@@ -89,16 +95,17 @@ export default async function Article({ params }: SlugProps) {
         </footer>
       </article>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: post.title,
-          description: post.description,
-          datePublished: post.date,
-          author: { "@type": "Organization", name: post.author },
-          publisher: { "@type": "Organization", name: getAppConfig().name },
-          mainEntityOfPage: absoluteUrl(`/blog/${slug}`),
-        }}
+        data={buildGraph([
+          buildBreadcrumbSchema([
+            { name: "Home", url: absoluteUrl(localizedPath("/", locale)) },
+            {
+              name: t("back"),
+              url: absoluteUrl(localizedPath("/blog", locale)),
+            },
+            { name: post.title, url: absoluteUrl(`/blog/${slug}`) },
+          ]),
+          buildBlogPostingSchema(post, getAppConfig()),
+        ])}
       />
     </div>
   );

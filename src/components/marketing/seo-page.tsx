@@ -6,9 +6,17 @@ import {
   type SeoPage as Content,
   type SeoTemplate,
 } from "@/src/lib/content/seo";
+import { absoluteUrl, localizedPath } from "@/src/lib/content/marketing";
+import {
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+  buildGraph,
+} from "@/src/lib/seo/schema";
+import { JsonLd } from "./json-ld";
 import { Cta } from "./cta";
 import { FaqList } from "./faq";
 import styles from "./marketing.module.css";
+
 export async function SeoPage({
   page,
   template,
@@ -22,6 +30,7 @@ export async function SeoPage({
   const related = listSeoPages(template, locale)
     .filter((other) => other.slug !== page.slug)
     .slice(0, 6);
+
   return (
     <div className={`container ${styles.page}`}>
       <header className={styles.pageHead}>
@@ -51,7 +60,7 @@ export async function SeoPage({
       </div>
       <section className={styles.section}>
         <h2>{t("faq")}</h2>
-        <FaqList items={page.faq} structured />
+        <FaqList items={page.faq} structured={false} />
       </section>
       <Cta heading={page.cta.heading} body={page.cta.body} />
       <section className={styles.section}>
@@ -64,9 +73,28 @@ export async function SeoPage({
           ))}
         </div>
       </section>
+      <JsonLd
+        data={buildGraph([
+          buildBreadcrumbSchema([
+            { name: t("home"), url: absoluteUrl(localizedPath("/", locale)) },
+            {
+              name: t(`templates.${template}`),
+              url: absoluteUrl(localizedPath(`/${template}`, locale)),
+            },
+            {
+              name: page.h1,
+              url: absoluteUrl(
+                localizedPath(`/${template}/${page.slug}`, locale),
+              ),
+            },
+          ]),
+          buildFaqSchema(page.faq),
+        ])}
+      />
     </div>
   );
 }
+
 export async function SeoIndex({
   template,
   locale = "en",
@@ -92,6 +120,17 @@ export async function SeoIndex({
         </div>
       </section>
       <Cta />
+      <JsonLd
+        data={buildGraph([
+          buildBreadcrumbSchema([
+            { name: t("home"), url: absoluteUrl(localizedPath("/", locale)) },
+            {
+              name: t(`templates.${template}`),
+              url: absoluteUrl(localizedPath(`/${template}`, locale)),
+            },
+          ]),
+        ])}
+      />
     </div>
   );
 }

@@ -18,14 +18,17 @@ import esCoworking from "@/content/seo/es/virtual-coworking-for.json";
 import esAlternatives from "@/content/seo/es/alternatives.json";
 import { getAppConfig } from "@/src/config/app";
 import { routing } from "@/src/i18n/routing";
+
 export const templates = [
   "body-doubling-for",
   "study-with-me",
   "virtual-coworking-for",
   "alternatives",
 ] as const;
+
 export type SeoTemplate = (typeof templates)[number];
 export type Faq = { q: string; a: string };
+
 export type SeoPage = {
   slug: string;
   title: string;
@@ -37,7 +40,9 @@ export type SeoPage = {
   cta: { heading: string; body: string };
   keywords: string[];
 };
+
 type Source = { template: string; pages: SeoPage[] };
+
 // US exam pages (study-with-me) are English only.
 const sources: Record<string, Partial<Record<SeoTemplate, Source>>> = {
   en: {
@@ -85,6 +90,7 @@ export function replaceApp<T>(value: T, name: string): T {
   }
   return value;
 }
+
 export function listSeoPages(template?: SeoTemplate, locale = "en") {
   const name = getAppConfig().name;
   const bundle = sources[locale] ?? {};
@@ -95,6 +101,23 @@ export function listSeoPages(template?: SeoTemplate, locale = "en") {
     })),
   );
 }
+
 export function getSeoPage(template: SeoTemplate, slug: string, locale = "en") {
   return listSeoPages(template, locale).find((page) => page.slug === slug);
+}
+
+/** Returns all canonical marketing paths for indexing and sitemaps. */
+export function allPublicMarketingPaths(): string[] {
+  const paths: string[] = ["/", "/how-it-works", "/faq"];
+  if (getAppConfig().billingEnabled) {
+    paths.push("/pricing");
+  }
+  for (const template of templates) {
+    paths.push(`/${template}`);
+    for (const page of listSeoPages(template, "en")) {
+      paths.push(`/${template}/${page.slug}`);
+    }
+  }
+  paths.push("/blog");
+  return paths;
 }
