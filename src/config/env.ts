@@ -44,6 +44,18 @@ export const envSchema = z
     APP_NAME: z.string().min(1).default("FocusKept"),
     LOGO_URL: optional,
     SUPPORT_EMAIL: optional,
+    // Search engines and AI search
+    GOOGLE_SITE_VERIFICATION: optional,
+    BING_SITE_VERIFICATION: optional,
+    INDEXNOW_KEY: optional,
+    // Public profiles used for structured data (comma separated URLs)
+    SOCIAL_PROFILES: optional,
+    // Operator details shown on the legal notice page
+    LEGAL_ENTITY_NAME: optional,
+    LEGAL_ADDRESS: optional,
+    LEGAL_EMAIL: optional,
+    LEGAL_REGISTRATION: optional,
+    SECURITY_CONTACT: optional,
     BILLING_ENABLED: flag(false),
     ANALYTICS_ENABLED: flag(false),
     MARKETING_ENABLED: flag(true),
