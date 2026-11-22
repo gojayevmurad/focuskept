@@ -315,7 +315,7 @@ export function Calendar({ data }: { data: CalendarData }) {
         className="cal"
         style={{
           ["--days" as string]: days.length,
-          gridTemplateColumns: `64px repeat(${days.length}, minmax(0, 1fr))`,
+          gridTemplateColumns: `var(--cal-gutter) repeat(${days.length}, minmax(0, 1fr))`,
         }}
       >
         <div className="cal-head" />
@@ -340,7 +340,7 @@ export function Calendar({ data }: { data: CalendarData }) {
           className="cal-scroll"
           ref={scroller}
           style={{
-            gridTemplateColumns: `64px repeat(${days.length}, minmax(0, 1fr))`,
+            gridTemplateColumns: `var(--cal-gutter) repeat(${days.length}, minmax(0, 1fr))`,
           }}
         >
           {Array.from({ length: rows }).map((_, row) => (
@@ -365,8 +365,7 @@ export function Calendar({ data }: { data: CalendarData }) {
         <span>
           <i
             style={{
-              background:
-                "color-mix(in srgb, var(--warm-soft), transparent 45%)",
+              background: "var(--lane)",
               border: "1px solid var(--line)",
             }}
           />
@@ -380,7 +379,7 @@ export function Calendar({ data }: { data: CalendarData }) {
           {t("legendMine")}
         </span>
         <span>
-          <i style={{ background: "var(--warm)" }} />
+          <i style={{ background: "var(--lane-strong)" }} />
           {t("legendGroup")}
         </span>
       </div>
@@ -390,13 +389,13 @@ export function Calendar({ data }: { data: CalendarData }) {
           {selectedSlot && (
             <>
               <div className="stack-sm">
-                <span className="overline">{t("newBooking")}</span>
                 <h2>{longWhen(selectedSlot)}</h2>
                 <p className="muted">
                   {waitingAt(selectedSlot) > 0
                     ? t("waitingCount", { count: waitingAt(selectedSlot) })
                     : t("nobodyYet")}
                 </p>
+                <p className="small muted">{t("newBooking")}</p>
               </div>
               <div className="segmented" role="group" aria-label={t("length")}>
                 {DURATIONS.map((d) => (
@@ -474,7 +473,6 @@ export function Calendar({ data }: { data: CalendarData }) {
           {selectedMine && (
             <>
               <div className="stack-sm">
-                <span className="overline">{t("yourSession")}</span>
                 <h2>{longWhen(selectedMine.startAt)}</h2>
                 <p className="muted">
                   {c("minutes", { count: selectedMine.durationMin })} ·{" "}
@@ -484,6 +482,7 @@ export function Calendar({ data }: { data: CalendarData }) {
                       : t("matchedWith", { name: selectedMine.partner ?? "" })
                     : t("waitingForMatch")}
                 </p>
+                <p className="small muted">{t("yourSession")}</p>
               </div>
               <p className="small faint">
                 {new Date(selectedMine.startAt).getTime() - now >= 3600_000
@@ -517,12 +516,12 @@ export function Calendar({ data }: { data: CalendarData }) {
           {selectedGroup && (
             <>
               <div className="stack-sm">
-                <span className="overline">{t("groupSession")}</span>
                 <h2>{selectedGroup.title ?? t("groupSession")}</h2>
                 <p className="muted">
                   {longWhen(selectedGroup.startAt)} ·{" "}
                   {c("minutes", { count: selectedGroup.durationMin })}
                 </p>
+                <p className="small muted">{t("groupSession")}</p>
                 {selectedGroup.hostName && (
                   <p className="small">
                     {t("hostedBy", { name: selectedGroup.hostName })}
@@ -612,7 +611,7 @@ function Row(props: {
         return (
           <button
             key={d.key}
-            className={`slot ${half ? "half" : ""} ${slot.popular ? "popular" : ""}`}
+            className={`slot ${half ? "half" : ""} ${slot.popular ? "popular" : ""} ${mine ? "is-mine" : ""}`}
             disabled={past && !mine}
             aria-label={label}
             onClick={() =>
@@ -625,26 +624,32 @@ function Row(props: {
                     : props.onSelect({ type: "slot", at: slot.at })
             }
           >
+            {at <= props.now && props.now < at + 30 * 60_000 && (
+              <span
+                className="cal-now"
+                aria-hidden="true"
+                style={{ top: `${((props.now - at) / (30 * 60_000)) * 100}%` }}
+              />
+            )}
             {mine ? (
               <span className={`mine ${mine.kind === "group" ? "group" : ""}`}>
-                {mine.status === "matched"
-                  ? (mine.partner ?? props.t("groupShort"))
-                  : props.t("waitingShort")}{" "}
-                · {mine.durationMin}m
+                <span>
+                  {mine.status === "matched"
+                    ? (mine.partner ?? props.t("groupShort"))
+                    : props.t("waitingShort")}{" "}
+                  · {mine.durationMin}m
+                </span>
               </span>
             ) : groups[0] ? (
               <span className="mine group">
                 <UsersRound size={11} />{" "}
-                {groups[0].title ?? props.t("groupShort")} {groups[0].taken}/
-                {groups[0].capacity}
+                <span>
+                  {groups[0].title ?? props.t("groupShort")} {groups[0].taken}/
+                  {groups[0].capacity}
+                </span>
               </span>
             ) : (
-              !past &&
-              waiting > 0 && (
-                <span className="count">
-                  <Users size={11} /> {waiting}
-                </span>
-              )
+              !past && waiting > 0 && <span className="count">{waiting}</span>
             )}
           </button>
         );

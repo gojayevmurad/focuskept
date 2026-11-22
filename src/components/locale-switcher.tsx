@@ -20,8 +20,7 @@ export function LocaleSwitcher({ label }: { label: string }) {
   const params = useParams();
   return (
     <select
-      className="input"
-      style={{ width: "auto", minHeight: 34, padding: "4px 10px" }}
+      className="input locale-switcher"
       aria-label={label}
       value={locale}
       onChange={(e) =>

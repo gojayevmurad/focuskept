@@ -1,8 +1,15 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
 :root {
-  --accent: #2f6f62;
-  --accent-hover: color-mix(in srgb, #2f6f62, black 12%);
+  --accent: #08646b;
+  --accent-hover: color-mix(in srgb, var(--accent), black 12%);
 }
 [data-theme="dark"] {
-  --accent: color-mix(in srgb, #2f6f62, white 28%);
-  --accent-hover: color-mix(in srgb, #2f6f62, white 40%);
+  --accent: #7bcdd2;
+  --accent-hover: color-mix(in srgb, var(--accent), white 12%);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --accent: #7bcdd2;
+    --accent-hover: color-mix(in srgb, var(--accent), white 12%);
+  }
 }
