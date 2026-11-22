@@ -25,6 +25,7 @@ import { Avatar } from "./avatar";
 import { RealtimeRefresh } from "./realtime-refresh";
 import { Link } from "@/src/i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
+import { TourTrigger } from "./tour";
 
 export async function AppShell({
   children,
@@ -123,6 +124,7 @@ export async function AppShell({
       <div className="main">
         <header className="topbar">
           <span className="topbar-title">{title}</span>
+          <TourTrigger className="button ghost small" />
           <ThemeToggle />
         </header>
         <main className={`content ${narrow ? "content-narrow" : ""}`}>

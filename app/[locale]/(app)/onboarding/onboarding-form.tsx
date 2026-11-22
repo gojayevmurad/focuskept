@@ -73,10 +73,10 @@ export function OnboardingForm(props: {
       </div>
       {errorText && <p className="notice error">{errorText}</p>}
 
-      <section className="card stack" hidden={step !== 1}>
+      <section className="card stack" hidden={step !== 1} style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}>
         <div className="stack-sm">
-          <h2>{t("aboutTitle")}</h2>
-          <p className="muted">{t("aboutLead")}</p>
+          <h2>{t.has("step1Title") ? t("step1Title") : t("aboutTitle")}</h2>
+          <p className="muted">{t.has("step1Lead") ? t("step1Lead") : t("aboutLead")}</p>
         </div>
         <label className="field">
           {t("displayName")}
@@ -126,13 +126,16 @@ export function OnboardingForm(props: {
         </label>
         <div className="row">
           <button type="button" className="button" onClick={() => setStep(2)}>
-            {c("next")}
+            {t.has("btnToGoal") ? t("btnToGoal") : c("next")}
           </button>
         </div>
       </section>
 
-      <section className="card stack" hidden={step !== 2}>
-        <h2>{t("goalTitle")}</h2>
+      <section className="card stack" hidden={step !== 2} style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}>
+        <div className="stack-sm">
+          <h2>{t.has("step2Title") ? t("step2Title") : t("goalTitle")}</h2>
+          <p className="muted">{t.has("step2Lead") ? t("step2Lead") : t("aboutLead")}</p>
+        </div>
         <label className="field">
           {t("goal")}
           <input
@@ -170,15 +173,15 @@ export function OnboardingForm(props: {
             {c("back")}
           </button>
           <button type="button" className="button" onClick={() => setStep(3)}>
-            {c("next")}
+            {t.has("btnToBooking") ? t("btnToBooking") : c("next")}
           </button>
         </div>
       </section>
 
-      <section className="card stack" hidden={step !== 3}>
+      <section className="card stack" hidden={step !== 3} style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}>
         <div className="stack-sm">
-          <h2>{t("firstTitle")}</h2>
-          <p className="muted">{t("firstLead")}</p>
+          <h2>{t.has("step3Title") ? t("step3Title") : t("firstTitle")}</h2>
+          <p className="muted">{t.has("step3Lead") ? t("step3Lead") : t("firstLead")}</p>
         </div>
         <div className="row">
           <span className="small muted">{t("duration")}</span>
@@ -237,7 +240,13 @@ export function OnboardingForm(props: {
           </button>
           <button className="button" disabled={pending}>
             {pending && <LoaderCircle size={16} className="spin" />}
-            {slot ? t("finish") : t("skip")}
+            {slot
+              ? t.has("btnFinishBooking")
+                ? t("btnFinishBooking")
+                : t("finish")
+              : t.has("btnSkipToDashboard")
+                ? t("btnSkipToDashboard")
+                : t("skip")}
           </button>
         </div>
       </section>

@@ -384,7 +384,14 @@ export function Calendar({ data }: { data: CalendarData }) {
         </span>
       </div>
 
-      <dialog ref={dialog} className="dialog" onClose={() => setSelected(null)}>
+      <dialog
+        ref={dialog}
+        className="dialog"
+        onClose={() => setSelected(null)}
+        onClick={(e) => {
+          if (e.target === dialog.current) setSelected(null);
+        }}
+      >
         <div className="dialog-body">
           {selectedSlot && (
             <>
