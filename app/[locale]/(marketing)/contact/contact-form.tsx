@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/src/i18n/navigation";
-import { track } from "@/src/lib/analytics/client";
+import { trackSupportTicketCreated } from "@/src/lib/analytics/client";
 import {
   SUPPORT_CATEGORIES,
   type SupportCategory,
@@ -73,7 +73,7 @@ export function ContactForm({
 
       // Track analytics event (category only, privacy by default)
       try {
-        track("support_ticket_created" as unknown as never, { category });
+        trackSupportTicketCreated(category);
       } catch {
         // Analytics tracking is optional.
       }

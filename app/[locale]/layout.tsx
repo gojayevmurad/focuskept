@@ -9,6 +9,7 @@ import { routing } from "@/src/i18n/routing";
 import { getAppConfig } from "@/src/config/app";
 import { ConsentBanner } from "@/src/components/consent";
 import { AnalyticsProvider } from "@/src/lib/analytics/provider";
+import { Verification } from "@/src/components/seo/verification";
 
 const display = Big_Shoulders({
   variable: "--font-big-shoulders",
@@ -71,6 +72,9 @@ export default async function LocaleLayout({
       className={`${sans.variable} ${display.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <Verification />
+      </head>
       <body>
         <script
           dangerouslySetInnerHTML={{

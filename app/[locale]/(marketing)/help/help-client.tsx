@@ -4,7 +4,7 @@
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/src/i18n/navigation";
-import { track } from "@/src/lib/analytics/client";
+import { trackHelpViewed } from "@/src/lib/analytics/client";
 import type { Article, ArticleTopic } from "@/src/lib/support/articles";
 import styles from "./help.module.css";
 
@@ -48,7 +48,8 @@ export function HelpClient({
   const handleFeedback = (slug: string, helpful: "yes" | "no") => {
     setFeedback((prev) => ({ ...prev, [slug]: helpful }));
     try {
-      track("help_viewed" as unknown as never, {
+      const article = articles.find((a) => a.slug === slug);
+      trackHelpViewed(article?.topic, {
         article: slug,
         helpful: helpful === "yes",
       });

@@ -10,6 +10,7 @@ import { getAppConfig } from "@/src/config/app";
 import { getSession } from "@/src/lib/auth/session";
 import { REFERRAL_COOKIE, getProfileByReferralCode } from "@/src/lib/profiles";
 import { Link } from "@/src/i18n/navigation";
+import { SignupTracker } from "./signup-tracker";
 import styles from "../auth.module.css";
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default async function Page() {
   }
   return (
     <>
+      <SignupTracker />
       <div className={`stack-sm ${styles.header}`}>
         <h1>{t("signUpTitle")}</h1>
         {app.billingEnabled && (

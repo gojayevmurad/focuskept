@@ -2,10 +2,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { eq } from "drizzle-orm";
 import { db } from "@/src/lib/db";
-import { profile } from "@/src/lib/db/schema";
+import { profile, user } from "@/src/lib/db/schema";
 import { getAppConfig } from "@/src/config/app";
 import { verifyUnsubscribeToken } from "@/src/lib/lifecycle/tokens";
 import { logger } from "@/src/lib/logger";
+import { trackServer } from "@/src/lib/analytics/server";
 
 /**
  * Handles RFC 8058 one-click unsubscribe POST requests from email clients.
@@ -24,10 +25,35 @@ export async function POST(req: NextRequest) {
       .set({ emailTips: false, updatedAt: new Date() })
       .where(eq(profile.userId, verified.userId));
 
-    logger.info({ userId: verified.userId }, "User unsubscribed via RFC 8058 POST");
+    logger.info(
+      { userId: verified.userId },
+      "User unsubscribed via RFC 8058 POST",
+    );
+
+    try {
+      const [u] = await db()
+        .select({ consent: user.analyticsConsent })
+        .from(user)
+        .where(eq(user.id, verified.userId));
+      await trackServer(
+        verified.userId,
+        "email_tips_unsubscribed",
+        {},
+        u?.consent ?? false,
+      );
+    } catch (trackErr) {
+      logger.warn(
+        { err: trackErr, userId: verified.userId },
+        "Failed to track unsubscribe event",
+      );
+    }
+
     return NextResponse.json({ ok: true });
   } catch (err) {
-    logger.error({ err, userId: verified.userId }, "Failed to update emailTips");
+    logger.error(
+      { err, userId: verified.userId },
+      "Failed to update emailTips",
+    );
     return NextResponse.json({ error: "Database error" }, { status: 500 });
   }
 }
@@ -41,7 +67,10 @@ export async function GET(req: NextRequest) {
   const app = getAppConfig();
 
   if (!verified) {
-    return NextResponse.redirect(new URL("/unsubscribe?status=invalid", app.url), 303);
+    return NextResponse.redirect(
+      new URL("/unsubscribe?status=invalid", app.url),
+      303,
+    );
   }
 
   try {
@@ -51,7 +80,28 @@ export async function GET(req: NextRequest) {
       .where(eq(profile.userId, verified.userId))
       .returning({ locale: profile.locale });
 
-    logger.info({ userId: verified.userId }, "User unsubscribed via browser GET");
+    logger.info(
+      { userId: verified.userId },
+      "User unsubscribed via browser GET",
+    );
+
+    try {
+      const [u] = await db()
+        .select({ consent: user.analyticsConsent })
+        .from(user)
+        .where(eq(user.id, verified.userId));
+      await trackServer(
+        verified.userId,
+        "email_tips_unsubscribed",
+        {},
+        u?.consent ?? false,
+      );
+    } catch (trackErr) {
+      logger.warn(
+        { err: trackErr, userId: verified.userId },
+        "Failed to track unsubscribe event",
+      );
+    }
 
     const locale = p?.locale && p.locale !== "en" ? `/${p.locale}` : "";
     return NextResponse.redirect(
@@ -59,7 +109,13 @@ export async function GET(req: NextRequest) {
       303,
     );
   } catch (err) {
-    logger.error({ err, userId: verified.userId }, "Failed to process unsubscribe");
-    return NextResponse.redirect(new URL("/unsubscribe?status=invalid", app.url), 303);
+    logger.error(
+      { err, userId: verified.userId },
+      "Failed to process unsubscribe",
+    );
+    return NextResponse.redirect(
+      new URL("/unsubscribe?status=invalid", app.url),
+      303,
+    );
   }
 }

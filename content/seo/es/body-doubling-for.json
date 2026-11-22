@@ -120,7 +120,7 @@
     {
       "slug": "developers",
       "title": "Body Doubling para Programadores | Coworking en {app}",
-      "description": "Afronta refactorizaciones complejas, tareas pendientes y bugs con body doubling en {app}. Coworking virtual silencioso para mantener tu flujo de trabajo.",
+      "description": "Afronta refactorizaciones, tareas del backlog y bugs con body doubling en {app}. Coworking virtual silencioso para mantener tu flujo de trabajo.",
       "h1": "Body Doubling Silencioso para Desarrolladores de Software",
       "intro": "Escribir código exige una inmersión cognitiva profunda; sin embargo, el día a día de un desarrollador suele estar repleto de cambios de contexto, notificaciones de Slack y tickets tediosos en el backlog. Cuando toca redactar pruebas unitarias, revisar un pull request kilométrico o depurar una fuga de memoria compleja, el aislamiento facilita la procrastinación. {app} te empareja por vídeo con otro profesional en sprints silenciosos de 25, 50 o 75 minutos, ofreciéndote el ancla necesaria para mantenerte en la terminal.",
       "sections": [

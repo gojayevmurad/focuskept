@@ -119,7 +119,7 @@
     },
     {
       "slug": "developers",
-      "title": "Body Doubling for Developers | Virtual Coworking with {app}",
+      "title": "Body Doubling for Developers | Virtual Coworking {app}",
       "description": "Tackle messy refactors, dry documentation, and stubborn bugs with quiet video body doubling on {app}. Stay in deep flow and ship code consistently.",
       "h1": "Silent Body Doubling for Software Developers",
       "intro": "Writing code demands deep cognitive immersion, yet modern developer life is filled with context switches, Slack pings, and unappealing backlog tickets. When you have to write unit tests, review a sprawling pull request, or debug a cryptic memory leak, isolation makes procrastination tempting. {app} pairs you on video with another professional for 25, 50, or 75 minute quiet sprints, providing the steady anchor you need to stay in the terminal.",
@@ -236,7 +236,7 @@
     {
       "slug": "freelancers",
       "title": "Body Doubling for Freelancers | Virtual Coworking {app}",
-      "description": "Tackle unpaid client admin, overdue invoicing, and proposal deadlines with quiet video body doubling on {app}. Stay accountable while working for yourself.",
+      "description": "Tackle unpaid client admin, invoicing, and proposal deadlines with quiet video body doubling on {app}. Stay accountable while working for yourself.",
       "h1": "Silent Body Doubling for Solo Freelancers",
       "intro": "Freelancing offers independence, but managing client deadlines, sending unpaid invoices, and handling administrative paperwork alone can be isolating. When there is no boss or team waiting at a desk, mundane operational tasks often linger on your to-do list for weeks. {app} connects you with another independent professional for 25, 50, or 75 minute video sessions, giving your solo workday the gentle structure needed to thrive.",
       "sections": [
@@ -293,7 +293,7 @@
     },
     {
       "slug": "remote-workers",
-      "title": "Body Doubling for Remote Workers | Virtual Coworking {app}",
+      "title": "Body Doubling for Remote Workers | Coworking {app}",
       "description": "Overcome home distractions, beat the afternoon slump, and stay focused with quiet video body doubling on {app}. Cowork alongside focused professionals.",
       "h1": "Quiet Body Doubling for Remote Workers",
       "intro": "Working from home offers freedom, but it also brings constant domestic distractions, blurred work-life boundaries, and lingering feelings of isolation. When you sit alone in your home office, laundry piles, kitchen errands, and endless social media feeds can derail your best intentions. {app} pairs you on video with another remote professional for 25, 50, or 75 minute quiet coworking blocks, giving your remote workday the grounding structure of a physical office.",
@@ -409,7 +409,7 @@
     },
     {
       "slug": "founders",
-      "title": "Body Doubling for Founders | Virtual Coworking with {app}",
+      "title": "Body Doubling for Founders | Virtual Coworking {app}",
       "description": "Overcome founder isolation, knock out cold outreach, and handle tedious ops with quiet video body doubling on {app}. Stay focused every sprint.",
       "h1": "Quiet Body Doubling for Startup Founders",
       "intro": "Building an early-stage startup requires wearing every hat at once: sales, product design, customer support, and financial modeling. With complete autonomy and no manager checking your work, it is easy to spend days on comfortable low-impact tasks while avoiding hard, high-friction responsibilities like cold prospecting or pitch deck revisions. {app} pairs you on video with another dedicated operator for 25, 50, or 75 minute sprints to keep your startup moving forward.",
@@ -467,7 +467,7 @@
     },
     {
       "slug": "designers",
-      "title": "Body Doubling for Designers | Virtual Coworking with {app}",
+      "title": "Body Doubling for Designers | Virtual Coworking {app}",
       "description": "Overcome design block, clean up Figma files, and finish component libraries with quiet video body doubling on {app}. Stay in creative flow daily.",
       "h1": "Silent Body Doubling for Product and Graphic Designers",
       "intro": "Design work blends creative intuition with exacting technical precision, making it uniquely vulnerable to perfectionism and procrastination. When faced with tedious tasks like building design system tokens, redlining engineering specs, or organizing tangled Figma layers, it is easy to get stuck endlessly tweaking minor details. {app} pairs you on video with another dedicated creator for 25, 50, or 75 minute quiet sprints, helping you ship polished design work on schedule.",

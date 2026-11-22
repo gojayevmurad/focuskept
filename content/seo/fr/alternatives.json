@@ -3,8 +3,8 @@
   "pages": [
     {
       "slug": "focusmate",
-      "title": "Alternative à Focusmate : Body Doubling Open Source | {app}",
-      "description": "En quête d'une alternative à Focusmate ? {app} propose du coworking virtuel 1:1, le respect de la vie privée en open source et une formule hebdo gratuite.",
+      "title": "Alternative à Focusmate : Body Doubling Libre | {app}",
+      "description": "En quête d'une alternative à Focusmate ? {app} propose du coworking 1:1, le respect de la vie privée en open source et une formule hebdo gratuite.",
       "h1": "Une alternative open source à Focusmate pour le coworking 1:1",
       "intro": "Si vous comptez sur le soutien mutuel pour vous poser et enfin corriger des copies, écrire du code ou vider votre boîte de réception, Focusmate vous a sans doute fait découvrir l'intérêt du body doubling. {app} reprend ce partenariat silencieux en le reconstruisant sur des bases open source. Vous planifiez une session, retrouvez un partenaire en vidéo, annoncez votre objectif et travaillez en silence. Que vous ayez besoin de trois sessions gratuites par semaine ou d'un hébergement privé pour votre équipe, {app} offre un cadre de concentration structuré sans vous enfermer dans un écosystème propriétaire.",
       "sections": [
@@ -61,8 +61,8 @@
     },
     {
       "slug": "flow-club",
-      "title": "Alternative à Flow Club : Coworking 1:1 Minimaliste | {app}",
-      "description": "En quête d'une alternative à Flow Club ? {app} propose du body doubling 1:1 sans animateur, un code open source et trois sessions gratuites par semaine.",
+      "title": "Alternative à Flow Club : Coworking 1:1 Épuré | {app}",
+      "description": "En quête d'une alternative à Flow Club ? {app} propose du body doubling 1:1 sans animateur, open source et 3 séances gratuites par semaine.",
       "h1": "Une alternative calme et épurée à Flow Club",
       "intro": "Si les salles de groupe en visio vous semblent étouffantes ou que vous préférez le travail en binôme aux sessions animées, Flow Club ne correspond peut-être pas à votre façon de travailler. Flow Club s'appuie sur des groupes payants animés par un hôte avec musique d'ambiance pour stimuler la productivité collective. {app} adopte une approche plus apaisée, centrée sur la responsabilité directe en tête-à-tête. Vous choisissez une heure, rencontrez un partenaire dédié, annoncez votre objectif et travaillez en silence. Avec trois sessions gratuites par semaine et une base de code open source, {app} offre une concentration sans détour et sans fatigue sociale.",
       "sections": [
@@ -178,7 +178,7 @@
     {
       "slug": "flown",
       "title": "Alternative à Flown : Plateforme Coworking 1:1 | {app}",
-      "description": "Vous cherchez une alternative à Flown ? {app} offre du coworking virtuel 1:1 sans distraction, un code open source et 3 séances gratuites chaque semaine.",
+      "description": "Vous cherchez une alternative à Flown ? {app} offre du coworking 1:1 sans distraction, open source et avec 3 séances gratuites chaque semaine.",
       "h1": "Une alternative épurée et open source à Flown",
       "intro": "Flown aborde la productivité comme un écosystème global, combinant des sessions de concentration collectives guidées appelées « flocks », des fonds sonores d'ambiance et des contenus bien-être. Néanmoins, de nombreux travailleurs du savoir constatent que ces boîtes à outils pléthoriques créent leur propre encombrement numérique. {app} propose une alternative claire et ciblée, entièrement axée sur la responsabilisation en tête-à-tête par vidéo. Sans catalogue de contenus à parcourir ni rituels superflus, {app} vous aide à vous connecter, à poser vos engagements et à avancer dans votre travail aux côtés d'un pair bienveillant.",
       "sections": [

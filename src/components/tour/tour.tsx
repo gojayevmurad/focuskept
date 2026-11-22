@@ -3,7 +3,10 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { X, ChevronRight, ChevronLeft, Check, Compass } from "lucide-react";
-import type { AnalyticsEvent } from "@/src/lib/analytics/events";
+import {
+  trackTourStarted,
+  trackTourCompleted,
+} from "@/src/lib/analytics/client";
 import styles from "./tour.module.css";
 
 const STORAGE_KEY = "focuskept:tour_seen:v1";
@@ -64,15 +67,6 @@ const STEPS: TourStep[] = [
   },
 ];
 
-async function trackTourEvent(name: "tour_started" | "tour_completed") {
-  try {
-    const { track } = await import("@/src/lib/analytics/client");
-    track(name as unknown as AnalyticsEvent);
-  } catch {
-    // Optional analytics guard
-  }
-}
-
 export function Tour({
   autoStart = false,
   isFirstRun = false,
@@ -93,7 +87,7 @@ export function Tour({
   const startTour = useCallback(() => {
     setStepIndex(0);
     setActive(true);
-    void trackTourEvent("tour_started");
+    trackTourStarted();
   }, []);
 
   const completeTour = useCallback(() => {
@@ -101,7 +95,7 @@ export function Tour({
     try {
       localStorage.setItem(STORAGE_KEY, "true");
     } catch {}
-    void trackTourEvent("tour_completed");
+    trackTourCompleted();
   }, []);
 
   const skipTour = useCallback(() => {

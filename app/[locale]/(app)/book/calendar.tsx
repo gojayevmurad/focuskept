@@ -17,6 +17,7 @@ import {
   UsersRound,
 } from "lucide-react";
 import { Link, useRouter } from "@/src/i18n/navigation";
+import { trackBookingViewed } from "@/src/lib/analytics/client";
 import { bookSlot, cancel, joinGroup, type ActionResult } from "./actions";
 
 type Demand = Record<number, number>;
@@ -103,6 +104,10 @@ export function Calendar({ data }: { data: CalendarData }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const scroller = useRef<HTMLDivElement>(null);
   const now = new Date(data.now).getTime();
+
+  useEffect(() => {
+    trackBookingViewed();
+  }, []);
 
   useEffect(() => {
     if (selected) dialog.current?.showModal();

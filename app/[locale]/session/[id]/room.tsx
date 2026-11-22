@@ -23,6 +23,10 @@ import type {
   VideoProviderName,
 } from "@/src/lib/video/types";
 import { createVideoClient } from "@/src/lib/video/client";
+import {
+  trackSessionJoined,
+  trackVideoFailed,
+} from "@/src/lib/analytics/client";
 import { getLocalMedia, LocalMediaError } from "@/src/lib/video/client/media";
 import { Avatar } from "@/src/components/avatar";
 import { LogoMark } from "@/src/components/logo";
@@ -317,6 +321,7 @@ export function Room(props: {
           rejoins.current += 1;
           await join();
         } else {
+          trackVideoFailed("connection_failed");
           setVideoError(t("videoFailed"));
         }
       });
@@ -330,10 +335,12 @@ export function Room(props: {
       lastPhase.current = phase;
       joinedRef.current = true;
       setJoined(true);
+      trackSessionJoined({ provider: props.provider });
       await refresh();
     } catch {
       joinedRef.current = false;
       setJoined(false);
+      trackVideoFailed("join_failed");
       setVideoError(t("videoFailed"));
     } finally {
       setJoining(false);
