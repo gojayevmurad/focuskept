@@ -58,11 +58,23 @@ export async function SiteFooter() {
               </ul>
             </div>
           </>
-        ) : (
-          <div />
-        )}
+        ) : null}
         <div>
-          <h4>{t("company")}</h4>
+          <h4>{t("support")}</h4>
+          <ul>
+            <li>
+              <Link href="/help">{t("help")}</Link>
+            </li>
+            <li>
+              <Link href="/contact">{t("contact")}</Link>
+            </li>
+            <li>
+              <Link href="/status">{t("status")}</Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4>{t("legal")}</h4>
           <ul>
             <li>
               <Link href="/privacy">{t("privacy")}</Link>
@@ -71,7 +83,18 @@ export async function SiteFooter() {
               <Link href="/terms">{t("terms")}</Link>
             </li>
             <li>
-              <a href={`mailto:${app.supportEmail}`}>{t("contact")}</a>
+              <Link href="/cookies">{t("cookies")}</Link>
+            </li>
+            <li>
+              <Link href="/legal-notice">{t("legalNotice")}</Link>
+            </li>
+            <li>
+              <Link href="/accessibility">{t("accessibility")}</Link>
+            </li>
+            <li>
+              <Link href="/community-guidelines">
+                {t("communityGuidelines")}
+              </Link>
             </li>
             <li>
               <a href="https://github.com/gojayevmurad/focuskept">
