@@ -78,19 +78,86 @@ describe("video server providers", () => {
 });
 
 describe("Cloudflare API boundary", () => {
-  it("uses the configured app with authorization, JSON and a timeout", async () => {
+  it.each(["omitted", "undefined"])(
+    "creates a session without a body or Content-Type when the body is %s",
+    async (bodyMode) => {
+      const fetcher = vi.fn<typeof fetch>(async () =>
+        Response.json({ sessionId: "cf-session" }, { status: 201 }),
+      );
+      vi.stubGlobal("fetch", fetcher);
+      const result =
+        bodyMode === "omitted"
+          ? await cloudflareRequest("/sessions/new", "POST")
+          : await cloudflareRequest("/sessions/new", "POST", undefined);
+      expect(result).toEqual({ sessionId: "cf-session" });
+      expect(fetcher).toHaveBeenCalledExactlyOnceWith(
+        "https://rtc.live.cloudflare.com/v1/apps/test-app/sessions/new",
+        expect.objectContaining({
+          method: "POST",
+          signal: expect.any(AbortSignal),
+          cache: "no-store",
+          headers: { Authorization: "Bearer test-app-token" },
+        }),
+      );
+      const init = fetcher.mock.calls[0][1];
+      expect(init).not.toHaveProperty("body");
+      expect(new Headers(init?.headers).has("Content-Type")).toBe(false);
+    },
+  );
+
+  it.each([
+    {
+      operation: "push",
+      path: "/sessions/cf-session/tracks/new",
+      method: "POST" as const,
+      body: {
+        sessionDescription: { type: "offer", sdp: "local-offer" },
+        tracks: [{ location: "local", mid: "0", trackName: "caller-video" }],
+      },
+    },
+    {
+      operation: "pull",
+      path: "/sessions/cf-session/tracks/new",
+      method: "POST" as const,
+      body: {
+        tracks: [
+          {
+            location: "remote",
+            sessionId: "cf-target",
+            trackName: "target-video",
+          },
+        ],
+      },
+    },
+    {
+      operation: "renegotiate",
+      path: "/sessions/cf-session/renegotiate",
+      method: "PUT" as const,
+      body: { sessionDescription: { type: "answer", sdp: "local-answer" } },
+    },
+    {
+      operation: "close",
+      path: "/sessions/cf-session/tracks/close",
+      method: "PUT" as const,
+      body: {
+        tracks: [{ mid: "0" }],
+        sessionDescription: { type: "offer", sdp: "close-offer" },
+        force: false,
+      },
+    },
+  ])("sends authorized JSON for $operation", async ({ path, method, body }) => {
     const fetcher = vi.fn(async () =>
       Response.json({ sessionId: "cf-session" }),
     );
     vi.stubGlobal("fetch", fetcher);
-    expect(await cloudflareRequest("/sessions/new", "POST", {})).toEqual({
+    expect(await cloudflareRequest(path, method, body)).toEqual({
       sessionId: "cf-session",
     });
-    expect(fetcher).toHaveBeenCalledWith(
-      "https://rtc.live.cloudflare.com/v1/apps/test-app/sessions/new",
+    expect(fetcher).toHaveBeenCalledExactlyOnceWith(
+      `https://rtc.live.cloudflare.com/v1/apps/test-app${path}`,
       expect.objectContaining({
-        method: "POST",
-        body: "{}",
+        method,
+        body: JSON.stringify(body),
         signal: expect.any(AbortSignal),
         headers: {
           Authorization: "Bearer test-app-token",
@@ -109,7 +176,7 @@ describe("Cloudflare API boundary", () => {
       vi.fn(async () => Response.json(body)),
     );
     await expect(
-      cloudflareRequest("/sessions/new", "POST", {}),
+      cloudflareRequest("/sessions/new", "POST"),
     ).rejects.toMatchObject({
       status: 502,
       message: "Cloudflare video request failed",
@@ -122,7 +189,7 @@ describe("Cloudflare API boundary", () => {
       vi.fn(async () => new Response("private SDP", { status: 500 })),
     );
     await expect(
-      cloudflareRequest("/sessions/new", "POST", {}),
+      cloudflareRequest("/sessions/new", "POST"),
     ).rejects.toMatchObject({
       status: 502,
       message: "Cloudflare video request failed",

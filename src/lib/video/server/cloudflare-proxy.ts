@@ -42,7 +42,7 @@ export async function cloudflareProxy(
     if (!caller) throw new VideoError("Session not found", 404);
     let sid = caller.videoSessionId;
     if (!sid) {
-      const created = await cloudflareRequest("/sessions/new", "POST", {});
+      const created = await cloudflareRequest("/sessions/new", "POST");
       if (!created.sessionId)
         throw new VideoError("Invalid Cloudflare session response", 502);
       sid = created.sessionId;
