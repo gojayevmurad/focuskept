@@ -2,6 +2,7 @@
 import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs/config";
 import createNextIntlPlugin from "next-intl/plugin";
+import { getLegacyRedirects } from "./src/config/legacy-redirects";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const dev = process.env.NODE_ENV === "development";
@@ -18,6 +19,9 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+  async redirects() {
+    return getLegacyRedirects();
   },
   async headers() {
     return [
