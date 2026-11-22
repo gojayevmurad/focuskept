@@ -14,6 +14,7 @@ import {
   report,
   sessionParticipant,
   subscription,
+  supportTicket,
   user,
 } from "@/src/lib/db/schema";
 import { rateLimit } from "@/src/lib/security/rate-limit";
@@ -84,6 +85,22 @@ export async function GET() {
       .select()
       .from(subscription)
       .where(eq(subscription.userId, id)),
+    supportTickets: await db()
+      .select({
+        id: supportTicket.id,
+        category: supportTicket.category,
+        subject: supportTicket.subject,
+        message: supportTicket.message,
+        status: supportTicket.status,
+        createdAt: supportTicket.createdAt,
+        answeredAt: supportTicket.answeredAt,
+      })
+      .from(supportTicket)
+      .where(
+        account?.email
+          ? or(eq(supportTicket.userId, id), eq(supportTicket.email, account.email))
+          : eq(supportTicket.userId, id),
+      ),
   };
   return new Response(JSON.stringify(data, null, 2), {
     headers: {

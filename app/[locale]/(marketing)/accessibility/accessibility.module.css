@@ -1,0 +1,122 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+
+.page {
+  font-family: var(--font-sans);
+  padding-bottom: clamp(56px, 8vw, 112px);
+}
+
+.article {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pageHead {
+  padding-top: clamp(48px, 7vw, 88px);
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line-strong);
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.pageHead h1 {
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin-bottom: 16px;
+}
+
+.lead {
+  color: var(--text-2);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.updated {
+  font-size: 14px;
+  color: var(--text-3);
+  margin-top: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.reading {
+  display: grid;
+  gap: 40px;
+}
+
+.section {
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.2vw, 34px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.section p {
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.section p + p {
+  margin-top: 16px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: grid;
+  gap: 12px;
+}
+
+.featureList li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--text-2);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.featureList li::before {
+  content: "•";
+  position: absolute;
+  left: 10px;
+  color: var(--accent);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.legalLinks {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line-strong);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  align-items: center;
+}
+
+.legalLinks a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
