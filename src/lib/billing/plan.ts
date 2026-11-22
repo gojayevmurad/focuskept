@@ -59,7 +59,7 @@ export async function getPlan(
       and(
         eq(communityMember.userId, userId),
         gt(community.licenseUntil, now),
-        sql`(select count(*) from ${communityMember} m where m.community_id = ${community.id} and m.joined_at <= ${communityMember.joinedAt}) <= ${community.plusSeats}`,
+        sql`(select count(*) from ${communityMember} m where m.community_id = ${community.id} and (m.joined_at < ${communityMember.joinedAt} or (m.joined_at = ${communityMember.joinedAt} and m.user_id <= ${communityMember.userId}))) <= ${community.plusSeats}`,
       ),
     )
     .limit(1);

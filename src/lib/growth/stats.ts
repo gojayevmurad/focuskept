@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
+import { TZDate } from "@date-fns/tz";
+import { startOfMonth } from "date-fns";
 import { and, eq, gte, lt } from "drizzle-orm";
 import { db } from "@/src/lib/db";
 import { booking, sessionParticipant } from "@/src/lib/db/schema";
@@ -47,8 +49,9 @@ export async function userStats(
   const rows = await completedSessions(userId);
   const starts = rows.map((r) => r.startAt);
   const minutes = rows.reduce((sum, r) => sum + r.durationMin, 0);
+  // Calendar month in the person's own time zone.
   const monthStart = new Date(
-    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1),
+    startOfMonth(new TZDate(now.getTime(), timeZone)).getTime(),
   );
   const thisMonth = rows.filter((r) => r.startAt >= monthStart);
   const done = rows.filter((r) => r.outcome === "done").length;

@@ -16,6 +16,22 @@ type BusState = {
 const state = globalThis as unknown as { __realtime?: BusState };
 const bus: BusState = (state.__realtime ??= { listeners: new Map() });
 
+let retryDelay = 1000;
+/** Keeps retrying with backoff while anyone is still subscribed. */
+function scheduleReconnect() {
+  setTimeout(() => {
+    if (![...bus.listeners.values()].some((s) => s.size)) return;
+    connect()
+      .then(() => {
+        retryDelay = 1000;
+      })
+      .catch(() => {
+        retryDelay = Math.min(retryDelay * 2, 30_000);
+        scheduleReconnect();
+      });
+  }, retryDelay);
+}
+
 async function connect() {
   if (bus.client) return;
   if (bus.connecting) return bus.connecting;
@@ -43,8 +59,7 @@ async function connect() {
       client.removeAllListeners();
       client.end().catch(() => {});
       // Reconnect while anyone is still listening.
-      if ([...bus.listeners.values()].some((s) => s.size))
-        setTimeout(() => connect().catch(() => {}), 2000);
+      if ([...bus.listeners.values()].some((s) => s.size)) scheduleReconnect();
     };
     client.on("error", (error) => {
       logger.warn({ err: error }, "Realtime connection lost");

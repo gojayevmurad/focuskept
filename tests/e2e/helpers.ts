@@ -58,11 +58,11 @@ export async function createMember(page: Page, pool: Pool, name: string) {
 }
 
 /** Waits until React has attached handlers, so clicks don't fall through to native forms. */
-export async function hydrated(page: Page) {
-  await page.waitForFunction(() => {
-    const el = document.querySelector("form, button");
+export async function hydrated(page: Page, selector = "form, button") {
+  await page.waitForFunction((sel) => {
+    const el = document.querySelector(sel);
     return Boolean(el && Object.keys(el).some((k) => k.startsWith("__react")));
-  });
+  }, selector);
 }
 
 export async function signIn(page: Page, email: string) {

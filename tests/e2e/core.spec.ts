@@ -61,7 +61,7 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
 
     // Book three sessions on the same day (same week), then hit the free limit.
     await page.goto("/book");
-    await hydrated(page);
+    await hydrated(page, ".cal-scroll button.slot");
     const tomorrow = 2; // grid columns: time, today, tomorrow
     const slots = page.locator(
       `.cal-scroll > button.slot:nth-child(8n+${tomorrow + 1}):not([disabled])`,
@@ -93,6 +93,7 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
       [rows[0].id],
     );
     await page.reload();
+    await hydrated(page, ".cal-scroll button.slot");
     await book(32);
 
     // Cancel one booking from its calendar tile.
