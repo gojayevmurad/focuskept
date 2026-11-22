@@ -10,28 +10,36 @@ export const dynamic = "force-dynamic";
 
 type Entry = MetadataRoute.Sitemap[number];
 
+const CONTENT_LAST_MODIFIED = new Date("2026-11-21T00:00:00.000Z");
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const app = getAppConfig();
   const url = (path: string) => new URL(path, app.url).toString();
-  // One entry per language version, each listing all of its alternates.
+
+  // One entry per language version, each listing all reciprocal alternates and x-default.
   const localized = (
     path: string,
     locales: readonly string[] = routing.locales,
+    lastModified: Date = CONTENT_LAST_MODIFIED,
   ): Entry[] => {
-    const languages = Object.fromEntries(
+    const languages: Record<string, string> = Object.fromEntries(
       locales.map((l) => [l, url(localizedPath(path, l))]),
     );
+    languages["x-default"] = url(path);
+
     return locales.map((l) => ({
       url: url(localizedPath(path, l)),
+      lastModified,
       alternates: { languages },
     }));
   };
 
   const entries: Entry[] = [
-    // Legal pages and the blog are English only.
-    { url: url("/privacy") },
-    { url: url("/terms") },
+    // Legal pages are English only
+    { url: url("/privacy"), lastModified: CONTENT_LAST_MODIFIED },
+    { url: url("/terms"), lastModified: CONTENT_LAST_MODIFIED },
   ];
+
   if (!app.marketingEnabled) return entries;
 
   for (const path of [
@@ -39,16 +47,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/how-it-works",
     "/faq",
     ...(app.billingEnabled ? ["/pricing"] : []),
-  ])
+  ]) {
     entries.push(...localized(path));
+  }
+
   for (const template of templates) {
     const locales = localesFor(template);
     entries.push(...localized(`/${template}`, locales));
-    for (const page of listSeoPages(template))
+    for (const page of listSeoPages(template)) {
       entries.push(...localized(`/${template}/${page.slug}`, locales));
+    }
   }
-  entries.push({ url: url("/blog") });
-  for (const post of listBlogPosts())
-    entries.push({ url: url(`/blog/${post.slug}`), lastModified: post.date });
+
+  const posts = listBlogPosts();
+  const latestPostDate = posts[0]?.date
+    ? new Date(posts[0].date + "T00:00:00.000Z")
+    : CONTENT_LAST_MODIFIED;
+
+  entries.push({ url: url("/blog"), lastModified: latestPostDate });
+
+  for (const post of posts) {
+    entries.push({
+      url: url(`/blog/${post.slug}`),
+      lastModified: new Date(post.date + "T00:00:00.000Z"),
+    });
+  }
+
   return entries;
 }

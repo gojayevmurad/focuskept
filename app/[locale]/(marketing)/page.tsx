@@ -2,6 +2,7 @@
 import { redirect } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
+import { getEnv } from "@/src/config/env";
 import { Link } from "@/src/i18n/navigation";
 import { FaqList } from "@/src/components/marketing/faq";
 import {
@@ -16,14 +17,22 @@ import styles from "./landing.module.css";
 import marketing from "@/src/components/marketing/marketing.module.css";
 import { JsonLd } from "@/src/components/marketing/json-ld";
 import {
-  absoluteUrl,
   translatedMetadata,
   type LocaleProps,
 } from "@/src/lib/content/marketing";
 import type { Faq } from "@/src/lib/content/seo";
+import {
+  buildGraph,
+  buildOrganizationSchema,
+  buildWebSiteSchema,
+  buildWebApplicationSchema,
+  buildFaqSchema,
+} from "@/src/lib/seo/schema";
+
 export async function generateMetadata({ params }: LocaleProps) {
   return translatedMetadata(params, "home", "/");
 }
+
 export default async function Home({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -54,6 +63,13 @@ export default async function Home({ params }: LocaleProps) {
     ["remote", "/body-doubling-for/remote-workers"],
     ["researchers", "/body-doubling-for/researchers"],
   ];
+
+  const env = getEnv();
+  const socialProfiles = (env.SOCIAL_PROFILES || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+
   return (
     <>
       <div className={styles.landing}>
@@ -160,26 +176,12 @@ export default async function Home({ params }: LocaleProps) {
         </div>
       </div>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Organization",
-              "@id": absoluteUrl("/#organization"),
-              name: app.name,
-              url: app.url,
-              logo: absoluteUrl("/icon.svg"),
-              email: app.supportEmail,
-              sameAs: ["https://github.com/gojayevmurad/focuskept"],
-            },
-            {
-              "@type": "WebSite",
-              name: app.name,
-              url: app.url,
-              publisher: { "@id": absoluteUrl("/#organization") },
-            },
-          ],
-        }}
+        data={buildGraph([
+          buildOrganizationSchema(app, socialProfiles),
+          buildWebSiteSchema(app),
+          buildWebApplicationSchema(app),
+          buildFaqSchema(faqs),
+        ])}
       />
     </>
   );
