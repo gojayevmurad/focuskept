@@ -44,14 +44,10 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
     await page
       .getByRole("checkbox", { name: "I confirm I am 18 or older." })
       .check();
-    await page
-      .getByRole("button", { name: "Next", exact: true })
-      .first()
-      .click();
+    await page.getByRole("button", { name: "Continue to goal" }).click();
     await page.getByText("Studying").click();
     await page
-      .getByRole("button", { name: "Next", exact: true })
-      .last()
+      .getByRole("button", { name: "Continue to first session" })
       .click();
     await page.getByRole("button", { name: "I'll book later" }).click();
     await expect(page).toHaveURL(/dashboard/);

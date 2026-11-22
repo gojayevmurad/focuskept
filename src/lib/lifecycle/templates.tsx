@@ -1,83 +1,21 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
-import patchD from "@/messages/patches/D.en.json";
 import { createTranslator } from "next-intl";
+import { routing } from "@/src/i18n/routing";
 import { EmailLayout } from "@/src/lib/notifications/email-layout";
 import { getAppConfig } from "@/src/config/app";
 import { signUnsubscribeToken } from "./tokens";
 
-type Messages = Record<string, unknown>;
+type Messages = typeof import("@/messages/en.json");
 
-type LifecycleSection = Record<string, string>;
-type BaseLifecycle = {
-  footer?: LifecycleSection;
-  welcome?: LifecycleSection;
-  nudgeFirstBooking?: LifecycleSection;
-  firstSessionTips?: LifecycleSection;
-  afterFirstSession?: LifecycleSection;
-  winBack?: LifecycleSection;
-  weeklySummary?: LifecycleSection;
-  [key: string]: unknown;
-};
-
-/**
- * Loads translations for a locale, merging with the patch strings so
- * newly added keys are always available across all 5 locales.
- */
+/** Loads the lifecycle email strings for a locale, falling back to English. */
 export async function getLifecycleTranslator(locale = "en") {
-  let baseMessages: Messages = {};
-  try {
-    baseMessages = (await import(`@/messages/${locale}.json`)).default;
-  } catch {
-    try {
-      baseMessages = (await import(`@/messages/en.json`)).default;
-    } catch {}
-  }
-
-  const baseLifecycle =
-    typeof baseMessages.lifecycle === "object" &&
-    baseMessages.lifecycle !== null
-      ? (baseMessages.lifecycle as BaseLifecycle)
-      : {};
-
-  // Merge patch strings so our lifecycle namespace is present
-  const merged = {
-    ...baseMessages,
-    lifecycle: {
-      ...baseLifecycle,
-      ...patchD.lifecycle,
-      footer: {
-        ...(baseLifecycle.footer || {}),
-        ...patchD.lifecycle.footer,
-      },
-      welcome: {
-        ...(baseLifecycle.welcome || {}),
-        ...patchD.lifecycle.welcome,
-      },
-      nudgeFirstBooking: {
-        ...(baseLifecycle.nudgeFirstBooking || {}),
-        ...patchD.lifecycle.nudgeFirstBooking,
-      },
-      firstSessionTips: {
-        ...(baseLifecycle.firstSessionTips || {}),
-        ...patchD.lifecycle.firstSessionTips,
-      },
-      afterFirstSession: {
-        ...(baseLifecycle.afterFirstSession || {}),
-        ...patchD.lifecycle.afterFirstSession,
-      },
-      winBack: {
-        ...(baseLifecycle.winBack || {}),
-        ...patchD.lifecycle.winBack,
-      },
-      weeklySummary: {
-        ...(baseLifecycle.weeklySummary || {}),
-        ...patchD.lifecycle.weeklySummary,
-      },
-    },
-  };
-
-  return createTranslator({ locale, messages: merged, namespace: "lifecycle" });
+  const supported = (routing.locales as readonly string[]).includes(locale);
+  const lang = supported ? locale : routing.defaultLocale;
+  const messages = (
+    (await import(`@/messages/${lang}.json`)) as { default: Messages }
+  ).default;
+  return createTranslator({ locale: lang, messages, namespace: "lifecycle" });
 }
 
 export function buildUnsubscribeUrl(userId: string): string {
