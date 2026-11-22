@@ -12,8 +12,12 @@ export async function rateLimit(
   max: number,
   windowSeconds: number,
 ) {
+  if (!key || typeof key !== "string" || max <= 0 || windowSeconds <= 0) {
+    return false;
+  }
+  const cleanKey = key.trim().slice(0, 200);
   const now = Date.now();
-  const id = `app:${key}`;
+  const id = `app:${cleanKey}`;
   const result = await db().execute<{ count: number }>(sql`
     insert into rate_limit (id, key, count, last_request)
     values (${id}, ${id}, 1, ${now})
