@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 "use server";
 import { z } from "zod";
+import { cookies } from "next/headers";
 import { eq } from "drizzle-orm";
 import { getLocale } from "next-intl/server";
 import { db } from "@/src/lib/db";
@@ -11,6 +12,12 @@ import { isSegment, validateUsername } from "@/src/lib/profiles/rules";
 import { isValidTimeZone } from "@/src/lib/scheduling/slots";
 import { BookingFailure, createBooking } from "@/src/lib/bookings/service";
 import { trackForUser } from "@/src/lib/analytics/product";
+import {
+  ATTRIBUTION_COOKIE,
+  parseAttributionCookie,
+  sanitizeAttribution,
+  channelFor,
+} from "@/src/lib/attribution";
 import { redirect } from "@/src/i18n/navigation";
 
 const schema = z.object({
@@ -64,6 +71,11 @@ export async function completeOnboarding(
   if (await isUsernameTaken(name.username, user.id))
     return { error: "username_taken" };
 
+  const jar = await cookies();
+  const attrRaw = jar.get(ATTRIBUTION_COOKIE)?.value;
+  const parsedAttr = parseAttributionCookie(attrRaw);
+  const attribution = sanitizeAttribution(parsedAttr ?? {});
+
   await db()
     .update(profile)
     .set({
@@ -76,11 +88,25 @@ export async function completeOnboarding(
       birthdateConfirmed: true,
       ageConfirmedAt: new Date(),
       onboardedAt: new Date(),
+      attribution,
       updatedAt: new Date(),
     })
     .where(eq(profile.userId, user.id));
+
+  jar.delete(ATTRIBUTION_COOKIE);
+
+  const channel = channelFor(attribution);
   void trackForUser(user.id, "onboarding_completed", {
     segments: parsed.data.segments.length,
+    channel,
+    $set_once: {
+      initial_channel: channel,
+      initial_source: attribution.source,
+      initial_medium: attribution.medium,
+      initial_campaign: attribution.campaign,
+      initial_referrer: attribution.referrer,
+      initial_landing_path: attribution.landingPath,
+    },
   });
 
   if (parsed.data.startAt) {
