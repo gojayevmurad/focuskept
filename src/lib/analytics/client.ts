@@ -34,7 +34,7 @@ export function initAnalytics(config?: AnalyticsConfig) {
   if (!initialized) {
     posthog.init(cfg.key, {
       api_host: cfg.apiHost || "/ingest",
-      ui_host: cfg.uiHost || "https://us.i.posthog.com",
+      ui_host: cfg.uiHost || "https://us.posthog.com",
       asset_host: cfg.assetsHost || "https://us-assets.i.posthog.com",
       autocapture: false,
       capture_pageview: "history_change",
@@ -60,7 +60,8 @@ export function initAnalytics(config?: AnalyticsConfig) {
           const label =
             target.getAttribute("data-cta") || target.textContent?.trim() || "";
           const location =
-            target.getAttribute("data-cta-location") || window.location.pathname;
+            target.getAttribute("data-cta-location") ||
+            window.location.pathname;
           track("cta_clicked", { location, label });
         },
         { capture: true },

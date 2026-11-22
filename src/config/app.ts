@@ -24,7 +24,11 @@ export function getAppConfig() {
       host: env.POSTHOG_HOST,
       assetsHost: env.POSTHOG_ASSETS_HOST,
       apiHost: "/ingest",
-      uiHost: env.POSTHOG_HOST,
+      // The PostHog app lives next to its ingestion host (us.i.posthog.com -> us.posthog.com).
+      uiHost: env.POSTHOG_HOST.replace("://us.i.", "://us.").replace(
+        "://eu.i.",
+        "://eu.",
+      ),
     },
     marketingEnabled: env.MARKETING_ENABLED,
     signupsMode: env.SIGNUPS_MODE,

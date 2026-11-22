@@ -155,6 +155,16 @@ export const envSchema = z
       issue("Polar requires webhook secret and Pro benefit ID");
   });
 export type Env = z.infer<typeof envSchema>;
+// Older deployments name the PostHog settings NEXT_PUBLIC_*. Next inlines
+// `process.env.NEXT_PUBLIC_*` at build time, so read them from a copy here.
+const legacyNames = {
+  POSTHOG_KEY: "NEXT_PUBLIC_POSTHOG_KEY",
+  POSTHOG_HOST: "NEXT_PUBLIC_POSTHOG_HOST",
+  POSTHOG_ASSETS_HOST: "NEXT_PUBLIC_POSTHOG_ASSETS_HOST",
+} as const;
 export function getEnv(): Env {
-  return envSchema.parse(process.env);
+  const source: Record<string, string | undefined> = { ...process.env };
+  for (const [name, legacy] of Object.entries(legacyNames))
+    if (!source[name]) source[name] = source[legacy];
+  return envSchema.parse(source);
 }

@@ -64,59 +64,59 @@ Set `APP_NAME`, `LOGO_URL` and `SUPPORT_EMAIL` for branding. `ADMIN_EMAILS` is a
 
 This table covers every entry in `.env.example`. Defaults below are schema/template defaults, not production secrets. Blank optional values are omitted. `pnpm setup` replaces database and authentication placeholders with private generated values. Change the template's `NODE_ENV=development` to `production` in the production runtime file. Public `NEXT_PUBLIC_*` values are baked into the image; changing only runtime.env cannot change them.
 
-| Name                          | Required?               | Default                           | Description                                                                           |
-| ----------------------------- | ----------------------- | --------------------------------- | ------------------------------------------------------------------------------------- |
-| APP_URL                       | Production              | `http://localhost:3000`           | Public origin; HTTPS in production.                                                   |
-| DATABASE_URL                  | Production and worker   | Local template URL                | PostgreSQL connection string; use `db:5432` in production.                            |
-| BETTER_AUTH_SECRET            | Production              | Replaceable placeholder           | Random authentication secret, at least 32 characters; setup generates it.             |
-| GOOGLE_CLIENT_ID              | With Google login       | Empty                             | OAuth client ID.                                                                      |
-| GOOGLE_CLIENT_SECRET          | With Google login       | Empty                             | OAuth secret; configure both Google values together.                                  |
-| POLAR_ENVIRONMENT             | With billing            | `sandbox`                         | Use `production` for real payments.                                                   |
-| POLAR_ACCESS_TOKEN            | With billing            | Empty                             | Private Polar API token.                                                              |
-| POLAR_WEBHOOK_SECRET          | With Polar token        | Empty                             | Webhook signature secret.                                                             |
-| POLAR_MONTHLY_PRODUCT_ID      | For monthly checkout    | Empty                             | Plus monthly product.                                                                 |
-| POLAR_YEARLY_PRODUCT_ID       | For yearly checkout     | Empty                             | Plus yearly product.                                                                  |
-| POLAR_LIFETIME_PRODUCT_ID     | Optional                | Empty                             | Optional lifetime product.                                                            |
-| POLAR_PRO_BENEFIT_ID          | With Polar token        | Empty                             | Custom Plus benefit ID; variable retains the boilerplate name.                        |
-| EMAIL_MODE                    | Production              | `preview`                         | `preview` stores mail in PostgreSQL; production requires `send`.                      |
-| EMAIL_FROM                    | When sending            | `Starter <onboarding@resend.dev>` | Use your verified Resend sender in production.                                        |
-| RESEND_API_KEY                | With `EMAIL_MODE=send`  | Empty                             | Resend API key; no SMTP transport is implemented.                                     |
-| LOG_LEVEL                     | No                      | `info`                            | `debug`, `info`, `warn`, `error`, or `silent`.                                        |
-| SENTRY_DSN                    | Optional                | Empty                             | Server error reporting DSN.                                                           |
-| SENTRY_RELEASE                | Optional                | Empty                             | Server release identifier.                                                            |
-| NEXT_PUBLIC_POSTHOG_KEY       | With analytics          | Empty                             | Public PostHog project key; build time.                                               |
-| NEXT_PUBLIC_POSTHOG_HOST      | With analytics          | `https://us.i.posthog.com`        | PostHog endpoint; build time.                                                         |
-| NEXT_PUBLIC_SENTRY_DSN        | Optional                | Empty                             | Browser error reporting DSN; build time.                                              |
-| NEXT_PUBLIC_SENTRY_RELEASE    | Optional                | Empty                             | Browser release identifier; build time.                                               |
-| SENTRY_AUTH_TOKEN             | For source-map uploads  | Empty                             | Build-only secret; never pass as Docker ARG. Current workflow does not upload maps.   |
-| SENTRY_ORG                    | For source-map uploads  | Empty                             | Sentry organization slug.                                                             |
-| SENTRY_PROJECT                | For source-map uploads  | Empty                             | Sentry project slug.                                                                  |
-| TEST_DATABASE_URL             | Tests only              | Local `_test` URL                 | Isolated test database; name must end in `_test`. Leave empty in production.          |
-| NODE_ENV                      | Production              | `development`                     | Docker sets production unless overridden; production env files must use `production`. |
-| APP_NAME                      | No                      | `FocusKept`                       | Display name.                                                                         |
-| LOGO_URL                      | Optional                | Empty                             | Branding logo URL.                                                                    |
-| SUPPORT_EMAIL                 | Optional                | Empty                             | Support contact.                                                                      |
-| BILLING_ENABLED               | No                      | `false`                           | Enable Polar plans; false gives everyone unlimited sessions.                          |
-| ANALYTICS_ENABLED             | No                      | `false`                           | Enable configured analytics; consent still applies.                                   |
-| MARKETING_ENABLED             | No                      | `true`                            | Enable landing and SEO pages.                                                         |
-| SIGNUPS_MODE                  | No                      | `open`                            | `open`, `invite`, or `closed`.                                                        |
-| ADMIN_EMAILS                  | Optional                | Empty                             | Comma-separated administrator emails.                                                 |
-| FREE_WEEKLY_SESSIONS          | No                      | `3`                               | Free plan weekly session allowance.                                                   |
-| HOST_PERK_SESSIONS            | No                      | `8`                               | Host perk session threshold.                                                          |
-| HOST_MIN_SESSIONS             | No                      | `10`                              | Host programme minimum sessions.                                                      |
-| VIDEO_PROVIDER                | Production              | `none`                            | `cloudflare`, `livekit`, or local-only `none`.                                        |
-| CLOUDFLARE_REALTIME_APP_ID    | Cloudflare video        | Empty                             | Realtime SFU app ID.                                                                  |
-| CLOUDFLARE_REALTIME_APP_TOKEN | Cloudflare video        | Empty                             | Realtime app API token; private.                                                      |
-| CLOUDFLARE_TURN_KEY_ID        | Cloudflare TURN         | Empty                             | TURN key ID.                                                                          |
-| CLOUDFLARE_TURN_KEY_TOKEN     | Cloudflare TURN         | Empty                             | TURN key API token; private.                                                          |
-| CLOUDFLARE_ACCOUNT_ID         | Cloudflare usage checks | Empty                             | Account to monitor.                                                                   |
-| CLOUDFLARE_ANALYTICS_TOKEN    | Cloudflare usage checks | Empty                             | Account Analytics read API token.                                                     |
-| VIDEO_USAGE_ALERT_GB          | No                      | `800`                             | Monthly video usage alert threshold in GB.                                            |
-| LIVEKIT_URL                   | LiveKit video           | Empty                             | Public LiveKit URL, `wss://livekit.<domain>` in production.                           |
-| LIVEKIT_API_KEY               | LiveKit video           | Empty                             | API key matching the server configuration.                                            |
-| LIVEKIT_API_SECRET            | LiveKit video           | Empty                             | Signing secret matching the server configuration.                                     |
-| VAPID_PUBLIC_KEY              | Web push                | Empty                             | Public push key; generate using `npx web-push generate-vapid-keys`.                   |
-| VAPID_PRIVATE_KEY             | Web push                | Empty                             | Private push key; configure both VAPID values together.                               |
+| Name                          | Required?               | Default                           | Description                                                                               |
+| ----------------------------- | ----------------------- | --------------------------------- | ----------------------------------------------------------------------------------------- |
+| APP_URL                       | Production              | `http://localhost:3000`           | Public origin; HTTPS in production.                                                       |
+| DATABASE_URL                  | Production and worker   | Local template URL                | PostgreSQL connection string; use `db:5432` in production.                                |
+| BETTER_AUTH_SECRET            | Production              | Replaceable placeholder           | Random authentication secret, at least 32 characters; setup generates it.                 |
+| GOOGLE_CLIENT_ID              | With Google login       | Empty                             | OAuth client ID.                                                                          |
+| GOOGLE_CLIENT_SECRET          | With Google login       | Empty                             | OAuth secret; configure both Google values together.                                      |
+| POLAR_ENVIRONMENT             | With billing            | `sandbox`                         | Use `production` for real payments.                                                       |
+| POLAR_ACCESS_TOKEN            | With billing            | Empty                             | Private Polar API token.                                                                  |
+| POLAR_WEBHOOK_SECRET          | With Polar token        | Empty                             | Webhook signature secret.                                                                 |
+| POLAR_MONTHLY_PRODUCT_ID      | For monthly checkout    | Empty                             | Plus monthly product.                                                                     |
+| POLAR_YEARLY_PRODUCT_ID       | For yearly checkout     | Empty                             | Plus yearly product.                                                                      |
+| POLAR_LIFETIME_PRODUCT_ID     | Optional                | Empty                             | Optional lifetime product.                                                                |
+| POLAR_PRO_BENEFIT_ID          | With Polar token        | Empty                             | Custom Plus benefit ID; variable retains the boilerplate name.                            |
+| EMAIL_MODE                    | Production              | `preview`                         | `preview` stores mail in PostgreSQL; production requires `send`.                          |
+| EMAIL_FROM                    | When sending            | `Starter <onboarding@resend.dev>` | Use your verified Resend sender in production.                                            |
+| RESEND_API_KEY                | With `EMAIL_MODE=send`  | Empty                             | Resend API key; no SMTP transport is implemented.                                         |
+| LOG_LEVEL                     | No                      | `info`                            | `debug`, `info`, `warn`, `error`, or `silent`.                                            |
+| SENTRY_DSN                    | Optional                | Empty                             | Server error reporting DSN.                                                               |
+| SENTRY_RELEASE                | Optional                | Empty                             | Server release identifier.                                                                |
+| POSTHOG_KEY                   | With analytics          | Empty                             | PostHog project key, read at runtime (the old `NEXT_PUBLIC_POSTHOG_KEY` name also works). |
+| POSTHOG_HOST                  | With analytics          | `https://us.i.posthog.com`        | PostHog ingestion host, read at runtime; events go through `/ingest` on your domain.      |
+| NEXT_PUBLIC_SENTRY_DSN        | Optional                | Empty                             | Browser error reporting DSN; build time.                                                  |
+| NEXT_PUBLIC_SENTRY_RELEASE    | Optional                | Empty                             | Browser release identifier; build time.                                                   |
+| SENTRY_AUTH_TOKEN             | For source-map uploads  | Empty                             | Build-only secret; never pass as Docker ARG. Current workflow does not upload maps.       |
+| SENTRY_ORG                    | For source-map uploads  | Empty                             | Sentry organization slug.                                                                 |
+| SENTRY_PROJECT                | For source-map uploads  | Empty                             | Sentry project slug.                                                                      |
+| TEST_DATABASE_URL             | Tests only              | Local `_test` URL                 | Isolated test database; name must end in `_test`. Leave empty in production.              |
+| NODE_ENV                      | Production              | `development`                     | Docker sets production unless overridden; production env files must use `production`.     |
+| APP_NAME                      | No                      | `FocusKept`                       | Display name.                                                                             |
+| LOGO_URL                      | Optional                | Empty                             | Branding logo URL.                                                                        |
+| SUPPORT_EMAIL                 | Optional                | Empty                             | Support contact.                                                                          |
+| BILLING_ENABLED               | No                      | `false`                           | Enable Polar plans; false gives everyone unlimited sessions.                              |
+| ANALYTICS_ENABLED             | No                      | `false`                           | Enable configured analytics; consent still applies.                                       |
+| MARKETING_ENABLED             | No                      | `true`                            | Enable landing and SEO pages.                                                             |
+| SIGNUPS_MODE                  | No                      | `open`                            | `open`, `invite`, or `closed`.                                                            |
+| ADMIN_EMAILS                  | Optional                | Empty                             | Comma-separated administrator emails.                                                     |
+| FREE_WEEKLY_SESSIONS          | No                      | `3`                               | Free plan weekly session allowance.                                                       |
+| HOST_PERK_SESSIONS            | No                      | `8`                               | Host perk session threshold.                                                              |
+| HOST_MIN_SESSIONS             | No                      | `10`                              | Host programme minimum sessions.                                                          |
+| VIDEO_PROVIDER                | Production              | `none`                            | `cloudflare`, `livekit`, or local-only `none`.                                            |
+| CLOUDFLARE_REALTIME_APP_ID    | Cloudflare video        | Empty                             | Realtime SFU app ID.                                                                      |
+| CLOUDFLARE_REALTIME_APP_TOKEN | Cloudflare video        | Empty                             | Realtime app API token; private.                                                          |
+| CLOUDFLARE_TURN_KEY_ID        | Cloudflare TURN         | Empty                             | TURN key ID.                                                                              |
+| CLOUDFLARE_TURN_KEY_TOKEN     | Cloudflare TURN         | Empty                             | TURN key API token; private.                                                              |
+| CLOUDFLARE_ACCOUNT_ID         | Cloudflare usage checks | Empty                             | Account to monitor.                                                                       |
+| CLOUDFLARE_ANALYTICS_TOKEN    | Cloudflare usage checks | Empty                             | Account Analytics read API token.                                                         |
+| VIDEO_USAGE_ALERT_GB          | No                      | `800`                             | Monthly video usage alert threshold in GB.                                                |
+| LIVEKIT_URL                   | LiveKit video           | Empty                             | Public LiveKit URL, `wss://livekit.<domain>` in production.                               |
+| LIVEKIT_API_KEY               | LiveKit video           | Empty                             | API key matching the server configuration.                                                |
+| LIVEKIT_API_SECRET            | LiveKit video           | Empty                             | Signing secret matching the server configuration.                                         |
+| VAPID_PUBLIC_KEY              | Web push                | Empty                             | Public push key; generate using `npx web-push generate-vapid-keys`.                       |
+| VAPID_PRIVATE_KEY             | Web push                | Empty                             | Private push key; configure both VAPID values together.                                   |
 
 Setup also generates Compose identity variables outside this template: `COMPOSE_PROJECT_NAME`, `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD`, local `APP_PORT`/`DB_PORT`/`TEST_DB_PORT`, and production `APP_PROXY_ALIAS`, `APP_ENV_FILE`, `IMAGE_REPOSITORY`. Production commands require `APP_IMAGE` as an immutable digest. `BACKUP_DIR` optionally overrides the backup location.
 

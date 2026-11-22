@@ -28,6 +28,7 @@ while keeping [guardrail metrics] stable.
 ```
 
 ### Example
+
 - **Observation**: 45% of new signups do not book a session within 24 hours of onboarding.
 - **Hypothesis**: Because new users struggle with choice overload when viewing the full calendar, showing a single pre-selected popular slot in the app shell will increase first-booking creation within 24h by 15% for new users, without increasing cancellations.
 - **Primary Metric**: `booking_created` rate within 24h of signup.
@@ -88,7 +89,8 @@ const showNewFeature = await isFeatureEnabled(user.id, "exp-new-nudge", false);
 ```
 
 ### Fallback Guarantee
-If `NEXT_PUBLIC_POSTHOG_KEY` is not configured, or if the network request exceeds 1.5s, the helper returns the fallback (`control` or `false`). The user experience is never degraded or delayed.
+
+If `POSTHOG_KEY` is not configured, or if the network request exceeds 1.5s, the helper returns the fallback (`control` or `false`). The user experience is never degraded or delayed.
 
 ---
 
@@ -97,6 +99,7 @@ If `NEXT_PUBLIC_POSTHOG_KEY` is not configured, or if the network request exceed
 Track conversion events with the standard server or client analytics helpers:
 
 ### Server Events
+
 ```ts
 import { trackForUser } from "@/src/lib/analytics/product";
 
@@ -106,6 +109,7 @@ await trackForUser(user.id, "booking_created", {
 ```
 
 ### Client Events
+
 ```ts
 import { track } from "@/src/lib/analytics/client";
 
@@ -116,14 +120,15 @@ track("referral_sent");
 
 ## 6. Statistical Analysis & Decision Rules
 
-| Metric | Target / Standard |
-| :--- | :--- |
-| **Significance Level (α)** | 0.05 (95% confidence) |
-| **Statistical Power (1 - β)** | 0.80 (80% power) |
-| **Stopping Rule** | Pre-determined sample size reached; do not stop early on temporary spikes |
-| **Decision Threshold** | Statistically significant lift with confidence interval entirely above zero and intact guardrails |
+| Metric                        | Target / Standard                                                                                 |
+| :---------------------------- | :------------------------------------------------------------------------------------------------ |
+| **Significance Level (α)**    | 0.05 (95% confidence)                                                                             |
+| **Statistical Power (1 - β)** | 0.80 (80% power)                                                                                  |
+| **Stopping Rule**             | Pre-determined sample size reached; do not stop early on temporary spikes                         |
+| **Decision Threshold**        | Statistically significant lift with confidence interval entirely above zero and intact guardrails |
 
 ### Outcome Actions
+
 1. **Clear Winner**: Roll out variant to 100% in PostHog, remove branching code, document winning pattern in the experiment playbook.
 2. **Clear Loser**: Deactivate experiment, revert to control, document learnings on user friction or objections.
 3. **Inconclusive**: If confidence intervals span zero after reaching target sample size, keep the simpler/cheaper version and archive the test.
@@ -136,6 +141,7 @@ When concluding a test, record results:
 
 ```markdown
 ### [Experiment Name]
+
 - **Date**: YYYY-MM-DD
 - **Flag Key**: `exp-...`
 - **Hypothesis**: ...

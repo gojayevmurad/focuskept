@@ -965,7 +965,8 @@
       "lateCancels": "Late cancellations",
       "plus": "Active Plus subscriptions",
       "reports": "Open reports",
-      "hosts": "Pending host applications"
+      "hosts": "Pending host applications",
+      "supportTickets": "Open support tickets"
     },
     "metricNotes": "Signups and new bookings use their creation dates. Other period metrics use session start times. Match rate counts paired bookings with a session against those bookings plus failures, excluding failures matched late. No-show rate is no-shows divided by completed bookings plus no-shows. Empty rates display as 0%. Subscription and queue counts reflect the current state.",
     "video": "Latest video usage",
@@ -1435,5 +1436,19 @@
     "workerDesc": "Processes session matching algorithms, email reminders, and background cleanup jobs.",
     "incidentHistory": "Recent incident history",
     "noIncidents": "No operational incidents reported in the last 90 days."
+  },
+  "analytics": {
+    "consentBanner": {
+      "text": "Help us understand how the product is used? Optional analytics stay off until you choose.",
+      "allow": "Allow analytics",
+      "reject": "No thanks"
+    },
+    "preferences": {
+      "allow": "Allow analytics",
+      "disable": "Disable analytics",
+      "enabledMessage": "Optional analytics enabled.",
+      "disabledMessage": "Optional analytics disabled.",
+      "errorMessage": "Unable to update preferences."
+    }
   }
 }
