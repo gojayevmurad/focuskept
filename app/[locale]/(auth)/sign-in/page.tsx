@@ -7,6 +7,7 @@ import { AuthForm } from "@/src/components/auth-form";
 import { getAppConfig } from "@/src/config/app";
 import { getSession } from "@/src/lib/auth/session";
 import { redirect } from "next/navigation";
+import styles from "../auth.module.css";
 
 export const metadata: Metadata = {
   title: "Sign in",
@@ -20,9 +21,9 @@ export default async function Page() {
   const app = getAppConfig();
   return (
     <>
-      <div className="stack-sm">
+      <div className={`stack-sm ${styles.header}`}>
         <h1>{t("signInTitle")}</h1>
-        <p className="muted">{t("signInLead")}</p>
+        <p className={`muted ${styles.lead}`}>{t("signInLead")}</p>
       </div>
       <Suspense>
         <AuthForm

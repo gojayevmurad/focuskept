@@ -10,6 +10,7 @@ import { getAppConfig } from "@/src/config/app";
 import { getSession } from "@/src/lib/auth/session";
 import { REFERRAL_COOKIE, getProfileByReferralCode } from "@/src/lib/profiles";
 import { Link } from "@/src/i18n/navigation";
+import styles from "../auth.module.css";
 
 export const metadata: Metadata = { title: "Create your account" };
 
@@ -28,9 +29,11 @@ export default async function Page() {
   }
   return (
     <>
-      <div className="stack-sm">
+      <div className={`stack-sm ${styles.header}`}>
         <h1>{t("signUpTitle")}</h1>
-        <p className="muted">{app.billingEnabled ? t("signUpLead") : ""}</p>
+        {app.billingEnabled && (
+          <p className={`muted ${styles.lead}`}>{t("signUpLead")}</p>
+        )}
       </div>
       {blocked ? (
         <>

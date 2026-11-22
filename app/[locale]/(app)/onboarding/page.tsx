@@ -7,6 +7,7 @@ import { getAppConfig } from "@/src/config/app";
 import { suggestedSlots } from "@/src/lib/bookings/availability";
 import { redirect } from "@/src/i18n/navigation";
 import { Logo } from "@/src/components/logo";
+import styles from "../lanes.module.css";
 import { OnboardingForm } from "./onboarding-form";
 
 export const metadata: Metadata = {
@@ -28,7 +29,10 @@ export default async function Page() {
     profile.timezone,
   );
   return (
-    <main className="content content-narrow" style={{ paddingTop: 40 }}>
+    <main
+      className={`content content-narrow ${styles.page} ${styles.onboarding}`}
+      style={{ paddingTop: 40 }}
+    >
       <Logo name={app.name} logoUrl={app.logoUrl} href="/onboarding" />
       <h1>{t("title")}</h1>
       <OnboardingForm

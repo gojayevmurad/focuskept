@@ -1,0 +1,43 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+.emptyState {
+  min-height: calc(100svh - 76px);
+  display: grid;
+  place-items: center;
+  padding: 48px 16px;
+}
+
+.laneCard {
+  width: min(520px, 100%);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 20px;
+  background: var(--lane);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: clamp(36px, 6vw, 56px) clamp(20px, 5vw, 40px);
+}
+
+.digit {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 14vw, 112px);
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.rope {
+  width: 100%;
+  max-width: 240px;
+}
+
+.laneCard h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}

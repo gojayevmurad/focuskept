@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
 import { SignOut } from "@/src/components/sign-out";
+import styles from "../auth.module.css";
 
 export const metadata: Metadata = {
   title: "Account paused",
@@ -14,8 +15,12 @@ export default async function Page() {
   const app = getAppConfig();
   return (
     <>
-      <h1>{t("suspendedTitle")}</h1>
-      <p className="muted">{t("suspendedLead", { email: app.supportEmail })}</p>
+      <div className={`stack-sm ${styles.header}`}>
+        <h1>{t("suspendedTitle")}</h1>
+        <p className={`muted ${styles.lead}`}>
+          {t("suspendedLead", { email: app.supportEmail })}
+        </p>
+      </div>
       <SignOut />
     </>
   );

@@ -2,6 +2,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { Download, Share2 } from "lucide-react";
+import styles from "./progress.module.css";
 import { track } from "@/src/lib/analytics/client";
 
 export function ShareCards({ username }: { username: string }) {
@@ -24,16 +25,18 @@ export function ShareCards({ username }: { username: string }) {
     window.open(url, "_blank", "noopener");
   }
   return (
-    <div className="share-preview">
+    <div className={`share-preview ${styles.shareCards}`}>
       {cards.map((c) => (
-        <figure key={c.format} className="stack-sm" style={{ margin: 0 }}>
+        <figure key={c.format} className={styles.shareCard}>
           {/* Generated on the server per request; next/image adds nothing here. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`/api/share/${username}/${c.format}`}
-            alt={c.label}
-            loading="lazy"
-          />
+          <div className={styles.shareImage}>
+            <img
+              src={`/api/share/${username}/${c.format}`}
+              alt={c.label}
+              loading="lazy"
+            />
+          </div>
           <figcaption className="row">
             <button className="button small" onClick={() => share(c.format)}>
               <Share2 size={14} /> {t("shareButton")}

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import type { Metadata } from "next";
+import styles from "@/app/[locale]/(app)/lanes.module.css";
 import { notFound } from "next/navigation";
 import { and, gt, inArray } from "drizzle-orm";
 import { getFormatter, getTranslations } from "next-intl/server";
@@ -63,101 +64,105 @@ export default async function Page({
     group.plusSeats > 0;
   return (
     <AppShell title={group.name}>
-      <div className="row-between">
-        <div className="page-title">
-          <h1>{group.name}</h1>
-          <p className="muted">
-            {t(`kinds.${group.kind}`)} ·{" "}
-            {t("memberCount", { count: list.length })}
+      <div className={styles.page}>
+        <div className="row-between">
+          <div className="page-title">
+            <h1>{group.name}</h1>
+            <p className="muted">
+              {t(`kinds.${group.kind}`)} ·{" "}
+              {t("memberCount", { count: list.length })}
+            </p>
+          </div>
+          {me.role !== "owner" && (
+            <MemberActions communityId={group.id} kind="leave" />
+          )}
+        </div>
+        {group.description && <p className="lead">{group.description}</p>}
+        {licensed && (
+          <p className="notice ok">
+            {t("licensed", {
+              seats: group.plusSeats,
+              date: format.dateTime(group.licenseUntil!, {
+                dateStyle: "medium",
+              }),
+            })}
           </p>
-        </div>
-        {me.role !== "owner" && (
-          <MemberActions communityId={group.id} kind="leave" />
         )}
-      </div>
-      {group.description && <p className="lead">{group.description}</p>}
-      {licensed && (
-        <p className="notice ok">
-          {t("licensed", {
-            seats: group.plusSeats,
-            date: format.dateTime(group.licenseUntil!, { dateStyle: "medium" }),
-          })}
-        </p>
-      )}
-      <section className="card stack">
-        <h2>{t("invite")}</h2>
-        <p className="muted small">{t("inviteLead")}</p>
-        <CopyLink value={`${app.url}/groups/join/${group.joinCode}`} />
-        {manager && (
-          <div>
-            <MemberActions communityId={group.id} kind="rotate" />
-          </div>
-        )}
-      </section>
-      <section className="card stack">
-        <h2>{t("upcoming")}</h2>
-        <p className="muted small">{t("upcomingLead")}</p>
-        {upcoming.filter((u) => u.userId !== user.id).length ? (
-          <div className="list">
-            {upcoming
-              .filter((u) => u.userId !== user.id)
-              .map((u) => {
-                const m = nameOf.get(u.userId)!;
-                return (
-                  <div
-                    key={`${u.userId}-${u.startAt.toISOString()}`}
-                    className="list-item"
-                  >
-                    <Avatar name={m.name} src={m.avatarUrl} size="sm" />
-                    <span className="grow">
-                      <strong>{m.name}</strong>
-                      <span className="small muted">
-                        {" "}
-                        ·{" "}
-                        {format.dateTime(u.startAt, {
-                          timeZone: profile.timezone,
-                          weekday: "short",
-                          hour: "numeric",
-                          minute: "2-digit",
-                        })}{" "}
-                        · {u.durationMin} min
-                      </span>
-                    </span>
-                    <Link
-                      className="button small"
-                      href={`/book?start=${encodeURIComponent(u.startAt.toISOString())}&duration=${u.durationMin}&with=${m.username}`}
-                    >
-                      {t("joinThem")}
-                    </Link>
-                  </div>
-                );
-              })}
-          </div>
-        ) : (
-          <p className="small faint">{t("noUpcoming")}</p>
-        )}
-      </section>
-      <section className="card stack">
-        <h2>{t("members")}</h2>
-        <div className="list">
-          {list.map((m) => (
-            <div key={m.userId} className="list-item">
-              <Avatar name={m.name} src={m.avatarUrl} size="sm" />
-              <span className="grow">{m.name}</span>
-              {m.role !== "member" && (
-                <span className="badge">{t(`roles.${m.role}`)}</span>
-              )}
-              {manager && m.role === "member" && (
-                <MemberActions
-                  communityId={group.id}
-                  userId={m.userId}
-                  kind="remove"
-                />
-              )}
+        <section className="card stack">
+          <h2>{t("invite")}</h2>
+          <p className="muted small">{t("inviteLead")}</p>
+          <CopyLink value={`${app.url}/groups/join/${group.joinCode}`} />
+          {manager && (
+            <div>
+              <MemberActions communityId={group.id} kind="rotate" />
             </div>
-          ))}
-        </div>
-      </section>
+          )}
+        </section>
+        <section className="card stack">
+          <h2>{t("upcoming")}</h2>
+          <p className="muted small">{t("upcomingLead")}</p>
+          {upcoming.filter((u) => u.userId !== user.id).length ? (
+            <div className="list">
+              {upcoming
+                .filter((u) => u.userId !== user.id)
+                .map((u) => {
+                  const m = nameOf.get(u.userId)!;
+                  return (
+                    <div
+                      key={`${u.userId}-${u.startAt.toISOString()}`}
+                      className="list-item"
+                    >
+                      <Avatar name={m.name} src={m.avatarUrl} size="sm" />
+                      <span className="grow">
+                        <strong>{m.name}</strong>
+                        <span className="small muted">
+                          {" "}
+                          ·{" "}
+                          {format.dateTime(u.startAt, {
+                            timeZone: profile.timezone,
+                            weekday: "short",
+                            hour: "numeric",
+                            minute: "2-digit",
+                          })}{" "}
+                          · {u.durationMin} min
+                        </span>
+                      </span>
+                      <Link
+                        className="button small"
+                        href={`/book?start=${encodeURIComponent(u.startAt.toISOString())}&duration=${u.durationMin}&with=${m.username}`}
+                      >
+                        {t("joinThem")}
+                      </Link>
+                    </div>
+                  );
+                })}
+            </div>
+          ) : (
+            <p className="small faint">{t("noUpcoming")}</p>
+          )}
+        </section>
+        <section className="card stack">
+          <h2>{t("members")}</h2>
+          <div className="list">
+            {list.map((m) => (
+              <div key={m.userId} className="list-item">
+                <Avatar name={m.name} src={m.avatarUrl} size="sm" />
+                <span className="grow">{m.name}</span>
+                {m.role !== "member" && (
+                  <span className="badge">{t(`roles.${m.role}`)}</span>
+                )}
+                {manager && m.role === "member" && (
+                  <MemberActions
+                    communityId={group.id}
+                    userId={m.userId}
+                    kind="remove"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </AppShell>
   );
 }

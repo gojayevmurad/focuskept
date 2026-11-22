@@ -3,6 +3,7 @@ import { getFormatter, getTranslations } from "next-intl/server";
 import { requireAdmin } from "@/src/lib/app-user";
 import { currentMetrics, periodMetrics } from "@/src/lib/admin/metrics";
 import { AdminFrame } from "./frame";
+import styles from "../lanes.module.css";
 
 export default async function Page() {
   const { profile } = await requireAdmin();
@@ -42,7 +43,7 @@ export default async function Page() {
       ].map(({ days, data }) => (
         <section className="stack" key={days}>
           <h2>{t("period", { days })}</h2>
-          <div className="grid-3">
+          <div className={`grid-3 ${styles.stats}`}>
             {metrics.map((key) => (
               <div className="card stat" key={key}>
                 <span>{t(`metrics.${key}`)}</span>
@@ -60,7 +61,7 @@ export default async function Page() {
         </section>
       ))}
       <p className="small muted">{t("metricNotes")}</p>
-      <section className="grid-3">
+      <section className={`grid-3 ${styles.stats}`}>
         {(["plus", "reports", "hosts"] as const).map((key) => (
           <div className="card stat" key={key}>
             <span>{t(`metrics.${key}`)}</span>

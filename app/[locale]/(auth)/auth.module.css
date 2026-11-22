@@ -1,0 +1,56 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+.authPage {
+  min-height: calc(100svh - 76px);
+  display: grid;
+  place-items: center;
+  padding: clamp(32px, 6vw, 64px) 16px;
+}
+
+.authCard {
+  width: min(440px, 100%);
+  display: grid;
+  gap: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: clamp(24px, 5vw, 36px);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.rope {
+  width: 100%;
+}
+
+.header {
+  display: grid;
+  gap: 8px;
+}
+
+.header h1,
+.authCard h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 42px);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+.lead {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.iconBadge {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--lane);
+  border: 1px solid var(--lane-strong);
+  color: var(--accent);
+}

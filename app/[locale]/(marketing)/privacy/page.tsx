@@ -4,6 +4,8 @@ import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
 import { pageMetadata, type LocaleProps } from "@/src/lib/content/marketing";
 import { sections } from "@/src/components/marketing/privacy-content";
+import styles from "./privacy.module.css";
+
 export async function generateMetadata({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -16,6 +18,7 @@ export async function generateMetadata({ params }: LocaleProps) {
     ["en"],
   );
 }
+
 export default async function Legal({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -23,29 +26,30 @@ export default async function Legal({ params }: LocaleProps) {
   const app = getAppConfig();
   const replace = (text: string) =>
     text.replaceAll("{app}", app.name).replaceAll("{email}", app.supportEmail);
+
   return (
-    <div className="container">
-      <header className="page-head">
-        <h1>{t("privacy")}</h1>
-        <p className="muted">{t("updated")}</p>
-      </header>
-      <article className="prose">
-        {sections.map((section) => (
-          <section key={section.heading}>
-            <h2>{section.heading}</h2>
-            {section.body.split("\n\n").map((paragraph, i) => (
-              <p key={i}>{replace(paragraph)}</p>
-            ))}
-          </section>
-        ))}
-        <p>
+    <div className={`container ${styles.page}`}>
+      <article className={styles.article}>
+        <header className={styles.pageHead}>
+          <h1>{t("privacy")}</h1>
+          <p className={styles.updated}>{t("updated")}</p>
+        </header>
+        <div className={styles.reading}>
+          {sections.map((section) => (
+            <section key={section.heading} className={styles.section}>
+              <h2>{section.heading}</h2>
+              {section.body.split("\n\n").map((paragraph, i) => (
+                <p key={i}>{replace(paragraph)}</p>
+              ))}
+            </section>
+          ))}
+        </div>
+        <div className={styles.legalLinks}>
           <a href={`mailto:${app.supportEmail}`}>
             {t("contact")}: {app.supportEmail}
           </a>
-        </p>
-        <p>
           <Link href="/terms">{t("terms")}</Link>
-        </p>
+        </div>
       </article>
     </div>
   );

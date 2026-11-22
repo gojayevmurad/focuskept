@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import type { Metadata } from "next";
+import styles from "@/app/[locale]/(app)/lanes.module.css";
 import { eq } from "drizzle-orm";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { AppShell } from "@/src/components/app-shell";
@@ -41,58 +42,63 @@ export default async function Page() {
   ] as const;
   return (
     <AppShell title={t("title")}>
-      <div className="page-title">
-        <h1>{t("title")}</h1>
-        <p className="muted">{t("lead")}</p>
+      <div className={styles.page}>
+        <div className="page-title">
+          <h1>{t("title")}</h1>
+          <p className="muted">{t("lead")}</p>
+        </div>
+        {all.length === 0 && <p className="muted">{t("none")}</p>}
+        {groups.map(
+          (g) =>
+            g.items.length > 0 && (
+              <section key={g.key} className="stack">
+                <h2>{t(g.key)}</h2>
+                <div className={`grid-2 ${styles.laneList}`}>
+                  {g.items.map((c) => (
+                    <article
+                      key={c.id}
+                      className={`card stack-sm ${styles.challenge}`}
+                    >
+                      <div className="row-between">
+                        <span className="badge">
+                          {range(c.startsAt, c.endsAt)}
+                        </span>
+                        <span className="small faint">
+                          {t("members", { count: c.members })}
+                        </span>
+                      </div>
+                      <h3>
+                        <Link href={`/challenges/${c.slug}`}>{c.title}</Link>
+                      </h3>
+                      <p className="small muted">{c.description}</p>
+                      <p className="small">
+                        {t(`goal.${c.goalType}`, {
+                          value:
+                            c.goalType === "minutes"
+                              ? Math.round(c.goalValue / 60)
+                              : c.goalValue,
+                        })}
+                      </p>
+                      <div className="row">
+                        <JoinChallenge
+                          id={c.id}
+                          joined={joined.has(c.id)}
+                          ended={c.endsAt <= now}
+                        />
+                        <Link
+                          href={`/challenges/${c.slug}`}
+                          className="button ghost small"
+                        >
+                          {t("leaderboard")}
+                        </Link>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ),
+        )}
       </div>
-      {all.length === 0 && <p className="muted">{t("none")}</p>}
-      {groups.map(
-        (g) =>
-          g.items.length > 0 && (
-            <section key={g.key} className="stack">
-              <h2>{t(g.key)}</h2>
-              <div className="grid-2">
-                {g.items.map((c) => (
-                  <article key={c.id} className="card stack-sm">
-                    <div className="row-between">
-                      <span className="badge">
-                        {range(c.startsAt, c.endsAt)}
-                      </span>
-                      <span className="small faint">
-                        {t("members", { count: c.members })}
-                      </span>
-                    </div>
-                    <h3>
-                      <Link href={`/challenges/${c.slug}`}>{c.title}</Link>
-                    </h3>
-                    <p className="small muted">{c.description}</p>
-                    <p className="small">
-                      {t(`goal.${c.goalType}`, {
-                        value:
-                          c.goalType === "minutes"
-                            ? Math.round(c.goalValue / 60)
-                            : c.goalValue,
-                      })}
-                    </p>
-                    <div className="row">
-                      <JoinChallenge
-                        id={c.id}
-                        joined={joined.has(c.id)}
-                        ended={c.endsAt <= now}
-                      />
-                      <Link
-                        href={`/challenges/${c.slug}`}
-                        className="button ghost small"
-                      >
-                        {t("leaderboard")}
-                      </Link>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-          ),
-      )}
     </AppShell>
   );
 }
