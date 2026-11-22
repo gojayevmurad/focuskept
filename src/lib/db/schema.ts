@@ -154,6 +154,18 @@ const userRef = (name: string) =>
     .notNull()
     .references(() => user.id, { onDelete: "cascade" });
 
+export type Attribution = {
+  source?: string;
+  medium?: string;
+  campaign?: string;
+  content?: string;
+  term?: string;
+  referrer?: string;
+  landingPath?: string;
+  ref?: string;
+  firstSeenAt?: string;
+};
+
 export const profile = pgTable(
   "profile",
   {
@@ -184,6 +196,13 @@ export const profile = pgTable(
     microphoneDefault: boolean("microphone_default").notNull().default(true),
     matchSameSegment: boolean("match_same_segment").notNull().default(false),
     statsPublic: boolean("stats_public").notNull().default(false),
+    // Onboarding tips and win-back emails; every message carries an unsubscribe link.
+    emailTips: boolean("email_tips").notNull().default(true),
+    // First-touch acquisition data captured before signup (UTM tags, referrer, landing page).
+    attribution: jsonb("attribution")
+      .$type<Attribution>()
+      .notNull()
+      .default(sql`'{}'::jsonb`),
     onboardedAt: time("onboarded_at"),
     suspendedAt: time("suspended_at"),
     createdAt: time("created_at").notNull().defaultNow(),
@@ -375,6 +394,38 @@ export const notificationLog = pgTable(
   },
   (t) => [
     uniqueIndex("notification_once").on(t.userId, t.kind, t.refId, t.channel),
+  ],
+);
+
+export const supportTicket = pgTable(
+  "support_ticket",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id").references(() => user.id, { onDelete: "set null" }),
+    email: text("email").notNull(),
+    name: text("name").notNull().default(""),
+    category: text("category").notNull(),
+    subject: text("subject").notNull(),
+    message: text("message").notNull(),
+    locale: text("locale").notNull().default("en"),
+    pageUrl: text("page_url").notNull().default(""),
+    status: text("status").notNull().default("open"),
+    adminNote: text("admin_note").notNull().default(""),
+    answeredAt: time("answered_at"),
+    createdAt: time("created_at").notNull().defaultNow(),
+    updatedAt: time("updated_at").notNull().defaultNow(),
+  },
+  (t) => [
+    index("support_ticket_status_idx").on(t.status, t.createdAt),
+    index("support_ticket_user_idx").on(t.userId),
+    check(
+      "support_ticket_category_check",
+      sql`${t.category} in ('question','bug','billing','account','safety','privacy','legal','feedback')`,
+    ),
+    check(
+      "support_ticket_status_check",
+      sql`${t.status} in ('open','answered','closed','spam')`,
+    ),
   ],
 );
 
