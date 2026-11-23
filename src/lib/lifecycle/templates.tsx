@@ -8,13 +8,22 @@ import { signUnsubscribeToken } from "./tokens";
 
 type Messages = typeof import("@/messages/en.json");
 
+// Static paths so the worker bundle (esbuild) includes every locale file too.
+const loaders: Record<string, () => Promise<{ default: unknown }>> = {
+  en: () => import("@/messages/en.json"),
+  de: () => import("@/messages/de.json"),
+  fr: () => import("@/messages/fr.json"),
+  nl: () => import("@/messages/nl.json"),
+  es: () => import("@/messages/es.json"),
+};
+
 /** Loads the lifecycle email strings for a locale, falling back to English. */
 export async function getLifecycleTranslator(locale = "en") {
-  const supported = (routing.locales as readonly string[]).includes(locale);
+  const supported =
+    (routing.locales as readonly string[]).includes(locale) &&
+    locale in loaders;
   const lang = supported ? locale : routing.defaultLocale;
-  const messages = (
-    (await import(`@/messages/${lang}.json`)) as { default: Messages }
-  ).default;
+  const messages = (await loaders[lang]()).default as Messages;
   return createTranslator({ locale: lang, messages, namespace: "lifecycle" });
 }
 
