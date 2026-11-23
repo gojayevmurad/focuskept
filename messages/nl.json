@@ -487,7 +487,8 @@
       "house": "House-account: onbeperkt aantal sessies.",
       "host": "Plus is deze maand gratis omdat je genoeg groepssessies hebt gehost.",
       "community": "Plus is inbegrepen via de licentie van je groep.",
-      "none": "Drie sessies per week, matching en reeksen."
+      "none": "Drie sessies per week, matching en reeksen.",
+      "founding": "Je krijgt gratis Plus omdat je je tijdens de vroege toegang hebt aangemeld."
     }
   },
   "progress": {
@@ -882,7 +883,11 @@
           }
         ]
       }
-    ]
+    ],
+    "earlyAccess": {
+      "q": "Is FocusKept gratis tijdens de vroege toegang?",
+      "a": "Vroege toegang: FocusKept is gratis terwijl we groeien. Later bevat het gratis abonnement 3 sessies per week. Iedereen die zich tijdens de vroege toegang aanmeldt, krijgt 3 maanden Plus gratis."
+    }
   },
   "pricing": {
     "title": "Free- en Plus-abonnementen | {app}",

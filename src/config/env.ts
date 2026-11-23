@@ -5,6 +5,10 @@ const optional = z.preprocess(
   (v) => (v === "" ? undefined : v),
   z.string().optional(),
 );
+const optionalDate = z.preprocess(
+  (v) => (v === "" ? undefined : v),
+  z.union([z.iso.date(), z.iso.datetime({ offset: true })]).optional(),
+);
 const flag = (fallback: boolean) =>
   z.preprocess(
     (v) => (v === "" || v === undefined ? fallback : v === "true" || v === "1"),
@@ -57,6 +61,8 @@ export const envSchema = z
     LEGAL_REGISTRATION: optional,
     SECURITY_CONTACT: optional,
     BILLING_ENABLED: flag(false),
+    FOUNDING_SIGNUP_BEFORE: optionalDate,
+    FOUNDING_PLUS_UNTIL: optionalDate,
     ANALYTICS_ENABLED: flag(false),
     POSTHOG_KEY: z.preprocess(
       (v) =>

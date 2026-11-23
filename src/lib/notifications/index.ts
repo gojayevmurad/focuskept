@@ -174,6 +174,36 @@ export async function sessionReminder(bookingId: string) {
   });
 }
 
+/** Operational alert for an anchor booking; email reminder opt-out does not apply. */
+export async function houseMatched(bookingId: string) {
+  const b = await bookingRow(bookingId);
+  if (!b || b.status !== "matched" || !b.sessionId) return;
+  const app = getAppConfig();
+  const url = `${app.url}/session/${b.sessionId}`;
+  const results = await Promise.allSettled([
+    email(b.userId, "house_matched", b.id, (r) => ({
+      subject: `Someone is joining your ${formatWhen(b.startAt, r.timezone, r.locale)} session`,
+      heading: "Your focus partner is ready to join",
+      lines: [
+        `Someone has been matched with your ${b.durationMin} minute session at ${formatWhen(b.startAt, r.timezone, r.locale)}.`,
+        "Please open the session and be there to welcome them.",
+      ],
+      cta: { label: "Open the session", url },
+    })),
+    push(b.userId, "house_matched", b.id, {
+      title: "Someone is joining your session",
+      body: "You've been matched with a focus partner. Open the session to join them.",
+      url,
+    }),
+  ]);
+  for (const result of results)
+    if (result.status === "rejected")
+      logger.warn(
+        { err: result.reason, bookingId },
+        "House match notification failed",
+      );
+}
+
 export async function partnerChanged(bookingId: string) {
   const b = await bookingRow(bookingId);
   if (!b) return;

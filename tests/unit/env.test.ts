@@ -8,6 +8,35 @@ const base = {
   BETTER_AUTH_SECRET: "a".repeat(40),
 };
 
+describe("founding-member dates", () => {
+  it("allows unset and empty dates", () => {
+    expect(envSchema.parse({}).FOUNDING_SIGNUP_BEFORE).toBeUndefined();
+    expect(
+      envSchema.parse({ FOUNDING_PLUS_UNTIL: "" }).FOUNDING_PLUS_UNTIL,
+    ).toBeUndefined();
+  });
+
+  it.each(["2027-02-01", "2027-02-01T00:00:00Z", "2027-02-01T04:00:00+04:00"])(
+    "accepts ISO date %s",
+    (date) => {
+      expect(
+        envSchema.safeParse({
+          FOUNDING_SIGNUP_BEFORE: date,
+          FOUNDING_PLUS_UNTIL: date,
+        }).success,
+      ).toBe(true);
+    },
+  );
+
+  it.each(["not-a-date", "2027-02-30", "02/01/2027", "2027-02-01T00:00:00"])(
+    "rejects invalid or ambiguous date %s for either setting",
+    (date) => {
+      for (const key of ["FOUNDING_SIGNUP_BEFORE", "FOUNDING_PLUS_UNTIL"])
+        expect(envSchema.safeParse({ [key]: date }).success).toBe(false);
+    },
+  );
+});
+
 describe("production env", () => {
   it("requires https, real email and a video transport on public hosts", () => {
     const r = envSchema.safeParse({

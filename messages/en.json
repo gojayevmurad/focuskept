@@ -487,7 +487,8 @@
       "house": "House account: unlimited sessions.",
       "host": "Plus is free this month because you hosted enough group sessions.",
       "community": "Plus is included through your group's licence.",
-      "none": "Three sessions a week, matching and streaks."
+      "none": "Three sessions a week, matching and streaks.",
+      "founding": "You have free Plus as an early-access member."
     }
   },
   "progress": {
@@ -882,7 +883,11 @@
           }
         ]
       }
-    ]
+    ],
+    "earlyAccess": {
+      "q": "Is FocusKept free during early access?",
+      "a": "Early access: FocusKept is free while we grow. Later the free plan will include 3 sessions a week, and everyone who joins during early access gets 3 months of Plus free."
+    }
   },
   "pricing": {
     "title": "Free and Plus plans | {app}",

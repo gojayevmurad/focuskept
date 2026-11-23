@@ -67,6 +67,7 @@ export async function POST(
     });
     const checkout = await polar().checkouts.create({
       products: [product],
+      allow_discount_codes: true,
       ...(discountId ? { discount_id: discountId } : {}),
       external_customer_id: session.user.id,
       customer_email: session.user.email,

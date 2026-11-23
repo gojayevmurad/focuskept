@@ -487,7 +487,8 @@
       "house": "House-Konto: unbegrenzte Sessions.",
       "host": "Plus ist diesen Monat kostenlos, weil du genügend Gruppensessions geleitet hast.",
       "community": "Plus ist über die Lizenz deiner Gruppe enthalten.",
-      "none": "Drei Sessions pro Woche, Matching und Serien."
+      "none": "Drei Sessions pro Woche, Matching und Serien.",
+      "founding": "Als Mitglied aus der Early-Access-Phase erhältst du Plus kostenlos."
     }
   },
   "progress": {
@@ -882,7 +883,11 @@
           }
         ]
       }
-    ]
+    ],
+    "earlyAccess": {
+      "q": "Ist FocusKept während des Early Access kostenlos?",
+      "a": "Early Access: FocusKept ist kostenlos, während wir wachsen. Später umfasst der kostenlose Tarif 3 Sitzungen pro Woche. Alle, die während des Early Access beitreten, erhalten 3 Monate Plus kostenlos."
+    }
   },
   "pricing": {
     "title": "Tarife Free und Plus | {app}",

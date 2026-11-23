@@ -1,6 +1,15 @@
 # Billing
 
-Billing is optional. With `BILLING_ENABLED=false` everyone gets every feature and no payment UI is shown.
+Billing is optional. During early access, keep `BILLING_ENABLED=false`: everyone gets Plus and no payment UI is shown. The public landing page and FAQ explain the later free limit and the three free months of Plus for early members.
+
+## Ending early access
+
+When billing starts, set `BILLING_ENABLED=true` and keep `FREE_WEEKLY_SESSIONS=3`. Set both optional founding-member dates:
+
+- `FOUNDING_SIGNUP_BEFORE`: the end of early access; only accounts whose `user.createdAt` is strictly before this cutoff qualify.
+- `FOUNDING_PLUS_UNTIL`: the end of their three free months of Plus, three calendar months after billing starts. Access ends at this instant.
+
+Both accept ISO dates (`YYYY-MM-DD`, interpreted as midnight UTC) or ISO timestamps with `Z` or an explicit offset. For example, if billing starts on `2027-02-01T00:00:00Z`, use that as `FOUNDING_SIGNUP_BEFORE` and `2027-05-01T00:00:00Z` as `FOUNDING_PLUS_UNTIL`. These are shared operator-configured dates, not a rolling trial per user. Leaving either unset disables the founding perk. After expiry, the usual subscription, house, host and community access rules apply; otherwise the user gets Free.
 
 ## Plans
 
@@ -17,7 +26,7 @@ Add a webhook (API version 2026-10) to `/api/webhooks/polar` with `customer.stat
 
 ## How access is decided
 
-1. Checkout is created on the server for a known plan key; the browser never sends prices or user ids. A pending referral reward is attached as a discount.
+1. Checkout is created on the server for a known plan key; the browser never sends prices or user ids. Customers can enter discount codes, and a pending referral reward is attached automatically as a discount.
 2. Returning from checkout grants nothing. A signed webhook takes a per-user advisory lock, fetches the customer's current state from Polar and stores the subscription snapshot and a 15 minute entitlement lease in one transaction.
 3. Duplicate and out-of-order deliveries are harmless: each one reloads the current state. Failures roll back and return 503 so Polar retries.
 4. An expired lease is refreshed from Polar on the next check; if Polar is unreachable, access falls back to Free.

@@ -8,6 +8,7 @@ import {
   communityMember,
   host,
   profile,
+  user,
 } from "@/src/lib/db/schema";
 import { getEnv } from "@/src/config/env";
 import { hasEntitlement } from "./entitlements";
@@ -15,7 +16,13 @@ import { weekBounds } from "@/src/lib/scheduling/slots";
 
 export type PlanName = "free" | "plus";
 export type PlanReason =
-  "billing_disabled" | "subscription" | "house" | "host" | "community" | "none";
+  | "billing_disabled"
+  | "founding"
+  | "subscription"
+  | "house"
+  | "host"
+  | "community"
+  | "none";
 
 /** Statuses that use up one of the free weekly sessions. */
 export const COUNTED_STATUSES = [
@@ -32,13 +39,26 @@ export async function getPlan(
   const env = getEnv();
   if (!env.BILLING_ENABLED) return { plan: "plus", reason: "billing_disabled" };
 
+  const now = new Date();
+  if (
+    env.FOUNDING_SIGNUP_BEFORE &&
+    env.FOUNDING_PLUS_UNTIL &&
+    now < new Date(env.FOUNDING_PLUS_UNTIL)
+  ) {
+    const [member] = await db()
+      .select({ createdAt: user.createdAt })
+      .from(user)
+      .where(eq(user.id, userId));
+    if (member && member.createdAt < new Date(env.FOUNDING_SIGNUP_BEFORE))
+      return { plan: "plus", reason: "founding" };
+  }
+
   const [prof] = await db()
     .select({ isHouse: profile.isHouse })
     .from(profile)
     .where(eq(profile.userId, userId));
   if (prof?.isHouse) return { plan: "plus", reason: "house" };
 
-  const now = new Date();
   const [perk] = await db()
     .select({ until: host.perkUntil })
     .from(host)

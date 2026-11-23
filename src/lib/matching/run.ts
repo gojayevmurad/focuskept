@@ -27,7 +27,12 @@ type Tx = Parameters<Parameters<ReturnType<typeof db>["transaction"]>[0]>[0];
 
 async function loadCandidates(tx: Tx, rows: (typeof booking.$inferSelect)[]) {
   const userIds = rows.map((r) => r.userId);
-  if (!userIds.length) return { candidates: [], blocked: new Set<string>() };
+  if (!userIds.length)
+    return {
+      candidates: [],
+      blocked: new Set<string>(),
+      houseUsers: new Set<string>(),
+    };
   // One transaction means one connection, so these run one after another.
   const profiles = await tx
     .select()
@@ -82,7 +87,10 @@ async function loadCandidates(tx: Tx, rows: (typeof booking.$inferSelect)[]) {
       };
     });
   const blocked = new Set(blocks.map((b) => pairKey(b.blockerId, b.blockedId)));
-  return { candidates, blocked };
+  const houseUsers = new Set(
+    profiles.filter((p) => p.isHouse).map((p) => p.userId),
+  );
+  return { candidates, blocked, houseUsers };
 }
 
 /**
@@ -90,7 +98,7 @@ async function loadCandidates(tx: Tx, rows: (typeof booking.$inferSelect)[]) {
  * concurrently: a transaction-scoped advisory lock serializes runs per slot.
  */
 export async function runSlotMatching(startAt: Date, durationMin: number) {
-  const created = await db().transaction(async (tx) => {
+  const { created, houseBookingIds } = await db().transaction(async (tx) => {
     await tx.execute(
       sql`select pg_advisory_xact_lock(hashtextextended(${`match:${startAt.toISOString()}:${durationMin}`}, 0))`,
     );
@@ -106,10 +114,11 @@ export async function runSlotMatching(startAt: Date, durationMin: number) {
         ),
       )
       .for("update");
-    if (rows.length < 2) return [];
-    const { candidates, blocked } = await loadCandidates(tx, rows);
+    if (rows.length < 2) return { created: [], houseBookingIds: [] };
+    const { candidates, blocked, houseUsers } = await loadCandidates(tx, rows);
     const { pairs } = matchSlot(candidates, blocked);
     const made: { sessionId: string; users: [string, string] }[] = [];
+    const houseBookingIds: string[] = [];
     for (const pair of pairs) {
       const sessionId = crypto.randomUUID();
       await tx.insert(focusSession).values({
@@ -141,9 +150,17 @@ export async function runSlotMatching(startAt: Date, durationMin: number) {
           ),
         );
       made.push({ sessionId, users: [pair.a.userId, pair.b.userId] });
+      if (houseUsers.has(pair.a.userId) && !houseUsers.has(pair.b.userId))
+        houseBookingIds.push(pair.a.bookingId);
+      if (houseUsers.has(pair.b.userId) && !houseUsers.has(pair.a.userId))
+        houseBookingIds.push(pair.b.bookingId);
     }
-    return made;
+    return { created: made, houseBookingIds };
   });
+  for (const bookingId of houseBookingIds)
+    await notify.houseMatched(bookingId).catch((error) => {
+      logger.warn({ err: error, bookingId }, "House match notification failed");
+    });
   for (const m of created)
     for (const userId of m.users)
       await publish(`user:${userId}`, "booking.matched", {
