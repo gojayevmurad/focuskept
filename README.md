@@ -2,6 +2,8 @@
 
 FocusKept is an open-source virtual coworking and body doubling app. Book a time, get paired with a partner, say your goal, work on camera, and report back at the end. Sessions last 25, 50, or 75 minutes. Video is never recorded. The product name comes from configuration and defaults to FocusKept.
 
+Use the hosted version at [focuskept.com](https://focuskept.com) or run your own copy with Docker Compose.
+
 ## Features
 
 - Scheduled partner matching and hosted group sessions.
@@ -21,7 +23,7 @@ The room screenshot uses the browser's test camera.
 
 ## Hosted version
 
-Use [focuskept.com](https://focuskept.com).
+[focuskept.com](https://focuskept.com) runs the latest `main`. It is free during early access.
 
 ## Self-hosting quick start
 
@@ -34,6 +36,23 @@ docker compose --env-file .env.local up
 ```
 
 In another terminal, run `pnpm local:migrate` to apply migrations. See [SELF_HOSTING.md](SELF_HOSTING.md) for deployment and video configuration.
+
+## Running in production with Docker Compose
+
+The app and the background worker run from one image next to PostgreSQL. `deploy/compose.production.yaml` defines all three services and expects an HTTPS reverse proxy (the examples use Caddy) on an external Docker network named `proxy`.
+
+```sh
+# On your machine: generate the deployment bundle and build an image for the server's architecture
+pnpm setup -- --name "My Coworking" --slug my-coworking --domain coworking.example.com --repository yourname/yourrepo
+docker build --platform linux/arm64 -t local/my-coworking:$(git rev-parse HEAD) .
+
+# On the server, inside the copied deploy directory
+bash configure-runtime.sh https://coworking.example.com local/my-coworking:<commit>   # fills runtime.env once
+docker compose --env-file .env -f compose.production.yaml run --rm --no-deps app node scripts/migrate.cjs
+bash deploy.sh local/my-coworking:<commit>                                           # health-checked, rolls back on failure
+```
+
+You need a domain, a [Resend](https://resend.com) account with a verified sender for sign-in emails, and a video provider (Cloudflare Realtime or self-hosted LiveKit). Billing is optional: with `BILLING_ENABLED=false` everyone gets unlimited sessions. [SELF_HOSTING.md](SELF_HOSTING.md) and [DEPLOY.md](DEPLOY.md) cover every setting, backups and video setup.
 
 ## Development
 
@@ -75,6 +94,10 @@ Integration and browser tests use an isolated database whose name ends in `_test
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, checks, and pull requests.
 
+## Security
+
+Please report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
+
 ## License
 
-[AGPL-3.0-only](LICENSE).
+FocusKept is licensed under [AGPL-3.0-only](LICENSE). You may use, change and host it. If you run a modified version as a service for other people, you must offer them the source code of your version under the same license.
