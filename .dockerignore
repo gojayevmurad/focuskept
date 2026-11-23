@@ -11,6 +11,7 @@ test-results
 .agents
 
 .migration-runner.cjs
+.house-anchors.cjs*
 
 deploy/generated
 deploy/runtime.env

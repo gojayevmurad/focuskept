@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/local.mjs dev",
-    "build": "next build && pnpm build:migrations && pnpm build:worker",
+    "build": "next build && pnpm build:migrations && pnpm build:worker && pnpm build:house-anchors",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
@@ -24,6 +24,7 @@
     "local:migrate": "node scripts/local.mjs migrate",
     "local:test-db": "node scripts/local.mjs test-db",
     "build:worker": "node scripts/build-worker.mjs",
+    "build:house-anchors": "node scripts/build-house-anchors.mjs",
     "worker": "node scripts/build-worker.mjs && node --env-file-if-exists=.env.local --enable-source-maps .worker.cjs",
     "worker:once": "node scripts/build-worker.mjs && node --env-file-if-exists=.env.local .worker.cjs --once",
     "spdx": "node scripts/spdx.mjs",
