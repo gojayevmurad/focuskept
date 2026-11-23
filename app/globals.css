@@ -1504,6 +1504,10 @@ dialog.dialog[open]::backdrop {
 }
 
 /* ---------- Banners ---------- */
+/* Keep page content scrollable above the consent banner while it is shown. */
+body:has(.consent) {
+  padding-bottom: 220px;
+}
 .consent {
   position: fixed;
   z-index: 50;
@@ -1520,6 +1524,15 @@ dialog.dialog[open]::backdrop {
   display: grid;
   gap: 12px;
   font-size: 14px;
+}
+@media (min-width: 900px) {
+  /* Higher specificity: the CSS optimiser may hoist this block above the base rule. */
+  aside.consent {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+    max-width: 400px;
+  }
 }
 .toast {
   position: fixed;
