@@ -7,6 +7,7 @@ import { getAppConfig } from "@/src/config/app";
 import { suggestedSlots } from "@/src/lib/bookings/availability";
 import { redirect } from "@/src/i18n/navigation";
 import { Logo } from "@/src/components/logo";
+import { AnalyticsIdentity } from "@/src/components/consent";
 import styles from "../lanes.module.css";
 import { OnboardingForm } from "./onboarding-form";
 
@@ -34,6 +35,8 @@ export default async function Page() {
       style={{ paddingTop: 40 }}
     >
       <Logo name={app.name} logoUrl={app.logoUrl} href="/onboarding" />
+      {/* Sync the analytics choice now so onboarding_completed is not dropped. */}
+      {app.analyticsEnabled && <AnalyticsIdentity id={user.id} />}
       <h1>{t("title")}</h1>
       <OnboardingForm
         displayName={profile.displayName}
