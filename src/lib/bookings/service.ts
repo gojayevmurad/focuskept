@@ -67,6 +67,8 @@ export async function createBooking(input: {
   durationMin: number;
   preferredPartnerId?: string | null;
   now?: Date;
+  /** Wait for notifications and analytics before a short-lived caller disconnects. */
+  awaitSideEffects?: boolean;
 }) {
   const now = input.now ?? new Date();
   const check = checkBookable(input.startAt, input.durationMin, now);
@@ -120,17 +122,20 @@ export async function createBooking(input: {
   await publish(`user:${input.userId}`, "booking.updated", {
     bookingId: id,
   }).catch(() => {});
-  void trackForUser(input.userId, "booking_created", {
+  const tracking = trackForUser(input.userId, "booking_created", {
     duration: input.durationMin,
     direct: Boolean(input.preferredPartnerId),
   });
+  const effects: Promise<unknown>[] = [tracking];
   if (minutesUntil(input.startAt, now) <= MATCH_LEAD_MIN)
     await runSlotMatching(input.startAt, input.durationMin).catch((error) =>
       logger.error({ err: error }, "Instant matching failed"),
     );
-  else void notify.bookingConfirmed(id).catch(() => {});
+  else effects.push(notify.bookingConfirmed(id).catch(() => {}));
 
-  if (input.preferredPartnerId) void inviteIfNeeded(id).catch(() => {});
+  if (input.preferredPartnerId)
+    effects.push(inviteIfNeeded(id).catch(() => {}));
+  if (input.awaitSideEffects) await Promise.allSettled(effects);
   return id;
 }
 

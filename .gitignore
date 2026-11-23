@@ -54,3 +54,4 @@ test-results/
 /deploy/runtime.env
 .worker.cjs
 .worker.cjs.map
+.house-anchors.cjs*

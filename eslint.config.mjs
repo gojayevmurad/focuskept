@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     ".migration-runner.cjs",
     ".worker.cjs",
+    ".house-anchors.cjs*",
   ]),
 ]);
 
