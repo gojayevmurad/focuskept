@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
-import { Link } from "@/src/i18n/navigation";
+import { Link, redirect } from "@/src/i18n/navigation";
 import { BillingButton } from "@/src/components/billing-button";
 import styles from "@/src/components/marketing/marketing.module.css";
 import { getPrices } from "@/src/lib/content/prices";
@@ -28,7 +27,8 @@ export default async function Pricing({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   requireMarketing();
-  if (!getAppConfig().billingEnabled) notFound();
+  // While billing is off everything is free: send old pricing links home (temporary).
+  if (!getAppConfig().billingEnabled) redirect({ href: "/", locale });
   const [t, home, prices] = await Promise.all([
     getTranslations("pricing"),
     getTranslations("home"),
