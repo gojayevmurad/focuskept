@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
+import type { HeardFrom } from "@/src/lib/attribution/types";
+
 export type AnalyticsEvent =
   | "user_signed_up"
   | "user_logged_in"
@@ -42,6 +44,7 @@ export type EventProperties = {
   category?: string;
   channel?: string;
   segments?: number;
+  heard_from?: HeardFrom;
   $set_once?: Record<string, string | number | boolean | undefined>;
   [key: string]:
     | string

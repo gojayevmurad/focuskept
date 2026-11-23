@@ -19,17 +19,20 @@ import {
   channelFor,
 } from "@/src/lib/attribution";
 import { redirect } from "@/src/i18n/navigation";
+import { heardFromInput } from "@/src/lib/attribution/heard-from";
 
-const schema = z.object({
-  displayName: z.string().trim().min(1).max(60),
-  username: z.string().trim().max(24),
-  timezone: z.string().refine(isValidTimeZone),
-  goal: z.string().trim().max(200),
-  segments: z.array(z.string().refine(isSegment)).max(8),
-  age: z.literal("on"),
-  startAt: z.string().datetime().optional().or(z.literal("")),
-  duration: z.coerce.number().optional(),
-});
+const schema = z
+  .object({
+    displayName: z.string().trim().min(1).max(60),
+    username: z.string().trim().max(24),
+    timezone: z.string().refine(isValidTimeZone),
+    goal: z.string().trim().max(200),
+    segments: z.array(z.string().refine(isSegment)).max(8),
+    age: z.literal("on"),
+    startAt: z.string().datetime().optional().or(z.literal("")),
+    duration: z.coerce.number().optional(),
+  })
+  .and(heardFromInput);
 
 export type OnboardingState = {
   error?:
@@ -55,6 +58,8 @@ export async function completeOnboarding(
     age: form.get("age"),
     startAt: form.get("startAt") ?? "",
     duration: form.get("duration") ?? undefined,
+    heardFrom: form.get("heardFrom") ?? undefined,
+    heardFromOther: form.get("heardFromOther") ?? undefined,
   });
   if (!parsed.success)
     return {
@@ -74,7 +79,10 @@ export async function completeOnboarding(
   const jar = await cookies();
   const attrRaw = jar.get(ATTRIBUTION_COOKIE)?.value;
   const parsedAttr = parseAttributionCookie(attrRaw);
-  const attribution = sanitizeAttribution(parsedAttr ?? {});
+  const attribution = {
+    ...sanitizeAttribution(parsedAttr ?? {}),
+    ...heardFromInput.parse(parsed.data),
+  };
 
   await db()
     .update(profile)
@@ -99,6 +107,7 @@ export async function completeOnboarding(
   void trackForUser(user.id, "onboarding_completed", {
     segments: parsed.data.segments.length,
     channel,
+    heard_from: attribution.heardFrom,
     $set_once: {
       initial_channel: channel,
       initial_source: attribution.source,
@@ -106,6 +115,7 @@ export async function completeOnboarding(
       initial_campaign: attribution.campaign,
       initial_referrer: attribution.referrer,
       initial_landing_path: attribution.landingPath,
+      heard_from: attribution.heardFrom,
     },
   });
 

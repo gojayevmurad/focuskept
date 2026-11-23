@@ -5,6 +5,10 @@ import { useTranslations, useFormatter } from "next-intl";
 import { LoaderCircle, Users } from "lucide-react";
 import styles from "../lanes.module.css";
 import { SEGMENTS } from "@/src/lib/profiles/rules";
+import {
+  HEARD_FROM_OPTIONS,
+  type HeardFrom,
+} from "@/src/lib/attribution/types";
 import { completeOnboarding, type OnboardingState } from "./actions";
 
 type Slot = { startAt: string; waiting: number; popular: boolean };
@@ -44,6 +48,7 @@ export function OnboardingForm(props: {
     (props.timezone === "America/New_York" ? detected : props.timezone);
   const [slot, setSlot] = useState("");
   const [duration, setDuration] = useState(50);
+  const [heardFrom, setHeardFrom] = useState<HeardFrom | null>(null);
 
   const errorText =
     state.error === "username_taken"
@@ -73,10 +78,16 @@ export function OnboardingForm(props: {
       </div>
       {errorText && <p className="notice error">{errorText}</p>}
 
-      <section className="card stack" hidden={step !== 1} style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}>
+      <section
+        className="card stack"
+        hidden={step !== 1}
+        style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}
+      >
         <div className="stack-sm">
           <h2>{t.has("step1Title") ? t("step1Title") : t("aboutTitle")}</h2>
-          <p className="muted">{t.has("step1Lead") ? t("step1Lead") : t("aboutLead")}</p>
+          <p className="muted">
+            {t.has("step1Lead") ? t("step1Lead") : t("aboutLead")}
+          </p>
         </div>
         <label className="field">
           {t("displayName")}
@@ -131,10 +142,16 @@ export function OnboardingForm(props: {
         </div>
       </section>
 
-      <section className="card stack" hidden={step !== 2} style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}>
+      <section
+        className="card stack"
+        hidden={step !== 2}
+        style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}
+      >
         <div className="stack-sm">
           <h2>{t.has("step2Title") ? t("step2Title") : t("goalTitle")}</h2>
-          <p className="muted">{t.has("step2Lead") ? t("step2Lead") : t("aboutLead")}</p>
+          <p className="muted">
+            {t.has("step2Lead") ? t("step2Lead") : t("aboutLead")}
+          </p>
         </div>
         <label className="field">
           {t("goal")}
@@ -160,6 +177,49 @@ export function OnboardingForm(props: {
             ))}
           </div>
         </fieldset>
+        <fieldset
+          className="stack-sm"
+          style={{ border: 0, padding: 0, margin: 0 }}
+          aria-describedby="heard-from-hint"
+        >
+          <legend className="field" style={{ marginBottom: 8 }}>
+            {t("heardFrom")}
+          </legend>
+          <p id="heard-from-hint" className="small muted">
+            {t("heardFromHint")}
+          </p>
+          <div className="chips">
+            {HEARD_FROM_OPTIONS.map((source) => (
+              <label key={source} className="chip">
+                <input
+                  type="radio"
+                  name="heardFrom"
+                  value={source}
+                  checked={heardFrom === source}
+                  onChange={() => setHeardFrom(source)}
+                />
+                {t(`heardFromOptions.${source}`)}
+              </label>
+            ))}
+          </div>
+          {heardFrom === "other" && (
+            <label className="field">
+              {t("heardFromOther")}
+              <input name="heardFromOther" maxLength={60} />
+            </label>
+          )}
+          {heardFrom && (
+            <div className="row">
+              <button
+                type="button"
+                className="button secondary"
+                onClick={() => setHeardFrom(null)}
+              >
+                {t("heardFromClear")}
+              </button>
+            </div>
+          )}
+        </fieldset>
         <label className="check">
           <input type="checkbox" name="statsPublic" />
           <span>{t("statsPublic")}</span>
@@ -178,10 +238,16 @@ export function OnboardingForm(props: {
         </div>
       </section>
 
-      <section className="card stack" hidden={step !== 3} style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}>
+      <section
+        className="card stack"
+        hidden={step !== 3}
+        style={{ animation: "pageEnter var(--duration-base) var(--ease-out)" }}
+      >
         <div className="stack-sm">
           <h2>{t.has("step3Title") ? t("step3Title") : t("firstTitle")}</h2>
-          <p className="muted">{t.has("step3Lead") ? t("step3Lead") : t("firstLead")}</p>
+          <p className="muted">
+            {t.has("step3Lead") ? t("step3Lead") : t("firstLead")}
+          </p>
         </div>
         <div className="row">
           <span className="small muted">{t("duration")}</span>

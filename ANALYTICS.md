@@ -26,6 +26,7 @@ FocusKept product analytics use PostHog and are controlled by the runtime master
 ## Reverse Ingestion Proxy (`/ingest`)
 
 To prevent browser ad-blockers and privacy extensions from silently dropping analytics events, a reverse proxy route is provided at `app/ingest/[...path]/route.ts`:
+
 - Requests to `/ingest/static/*` are transparently proxied to the PostHog assets host (`POSTHOG_ASSETS_HOST`, default `https://us-assets.i.posthog.com`).
 - All other requests to `/ingest/*` are proxied to the PostHog ingestion host (`POSTHOG_HOST`, default `https://us.i.posthog.com`).
 - The proxy streams request and response bodies, strips sensitive domain cookies and authorization headers, and enforces a short timeout (10 seconds).
@@ -36,6 +37,7 @@ To prevent browser ad-blockers and privacy extensions from silently dropping ana
 ## First-Touch Attribution (`fk_attr`)
 
 First-touch attribution captures how a visitor discovered FocusKept before signing up:
+
 - On the first page visit without an existing `fk_attr` cookie, `proxy.ts` issues a first-party cookie:
   - **Name**: `fk_attr`
   - **Attributes**: `SameSite=Lax`, `Path=/`, `Max-Age=7776000` (90 days), `Secure` (in HTTPS).
@@ -50,6 +52,7 @@ First-touch attribution captures how a visitor discovered FocusKept before signi
 - When an account finishes onboarding (`app/[locale]/(app)/onboarding/actions.ts`), the `fk_attr` cookie data is validated, each field is truncated to at most 200 characters, stored into `profile.attribution`, and the cookie is deleted.
 - The server event `onboarding_completed` sends `$set_once` person properties:
   - `initial_channel`, `initial_source`, `initial_medium`, `initial_campaign`, `initial_referrer`, `initial_landing_path`.
+  - Optional `heard_from`: `tiktok`, `instagram`, `youtube`, `reddit`, `google`, `friend`, `podcast`, or `other`, from the skippable onboarding question. Also included as an event property. The optional Other free text is stored only in `profile.attribution` and is never sent to analytics.
 - The browser `signup` event includes the computed `channel`.
 
 ---
@@ -58,32 +61,34 @@ First-touch attribution captures how a visitor discovered FocusKept before signi
 
 All events follow `snake_case` object_action naming:
 
-| Event | Origin | Trigger | Properties |
-| --- | --- | --- | --- |
-| `cta_clicked` | Client | User clicked a marketing CTA | `location`, `label` |
-| `signup_started` | Client | Sign-up page viewed | *(optional metadata)* |
-| `signup` | Client | Account created via credentials or OAuth | `channel` |
-| `onboarding_completed` | Server | Profile onboarding saved | `segments`, `channel`, `$set_once: { initial_* }` |
-| `booking_viewed` | Client | Booking calendar opened | *(optional metadata)* |
-| `booking_created` | Server | Session booking scheduled | *(booking metadata)* |
-| `session_matched` | Server | User matched and room created | *(session metadata)* |
-| `session_joined` | Client | Video room join confirmed | `sessionId`, `duration` |
-| `video_failed` | Client | WebRTC / video provider connection failed | `reason` (code only, no PII) |
-| `session_completed` | Server | Worker closes completed session | *(session metadata)* |
-| `session_quality` | Client | WebRTC stats emitted on room exit | WebRTC audio/video quality metrics |
-| `tour_started` | Client | Guided product tour started | `tourName` |
-| `tour_completed` | Client | Guided product tour finished | `tourName` |
-| `help_viewed` | Client | Help center or FAQ viewed | `topic` |
-| `support_ticket_created` | Client/Server | Support ticket submitted | `category` |
-| `email_tips_unsubscribed` | Client/Server | User unsubscribed from tip emails | *(optional metadata)* |
-| `upgrade_started` | Server | Checkout session created | `plan` (`monthly`, `yearly`, `lifetime`) |
-| `upgrade_completed` | Server | Polar webhook confirms active subscription | `plan` |
-| `referral_sent` | Client | Invite or profile link copied/shared | *(optional metadata)* |
-| `referral_converted` | Server | Referred person finishes first session | *(referral metadata)* |
-| `share_card_created` | Client | Share card generated/downloaded | *(card metadata)* |
+| Event                     | Origin        | Trigger                                    | Properties                                                                                                                     |
+| ------------------------- | ------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `cta_clicked`             | Client        | User clicked a marketing CTA               | `location`, `label`                                                                                                            |
+| `signup_started`          | Client        | Sign-up page viewed                        | _(optional metadata)_                                                                                                          |
+| `signup`                  | Client        | Account created via credentials or OAuth   | `channel`                                                                                                                      |
+| `onboarding_completed`    | Server        | Profile onboarding saved                   | `segments`, `channel`, optional `heard_from` (enum only), `$set_once: { initial_*, heard_from }` (when answered; no free text) |
+| `booking_viewed`          | Client        | Booking calendar opened                    | _(optional metadata)_                                                                                                          |
+| `booking_created`         | Server        | Session booking scheduled                  | _(booking metadata)_                                                                                                           |
+| `session_matched`         | Server        | User matched and room created              | _(session metadata)_                                                                                                           |
+| `session_joined`          | Client        | Video room join confirmed                  | `sessionId`, `duration`                                                                                                        |
+| `video_failed`            | Client        | WebRTC / video provider connection failed  | `reason` (code only, no PII)                                                                                                   |
+| `session_completed`       | Server        | Worker closes completed session            | _(session metadata)_                                                                                                           |
+| `session_quality`         | Client        | WebRTC stats emitted on room exit          | WebRTC audio/video quality metrics                                                                                             |
+| `tour_started`            | Client        | Guided product tour started                | `tourName`                                                                                                                     |
+| `tour_completed`          | Client        | Guided product tour finished               | `tourName`                                                                                                                     |
+| `help_viewed`             | Client        | Help center or FAQ viewed                  | `topic`                                                                                                                        |
+| `support_ticket_created`  | Client/Server | Support ticket submitted                   | `category`                                                                                                                     |
+| `email_tips_unsubscribed` | Client/Server | User unsubscribed from tip emails          | _(optional metadata)_                                                                                                          |
+| `upgrade_started`         | Server        | Checkout session created                   | `plan` (`monthly`, `yearly`, `lifetime`)                                                                                       |
+| `upgrade_completed`       | Server        | Polar webhook confirms active subscription | `plan`                                                                                                                         |
+| `referral_sent`           | Client        | Invite or profile link copied/shared       | _(optional metadata)_                                                                                                          |
+| `referral_converted`      | Server        | Referred person finishes first session     | _(referral metadata)_                                                                                                          |
+| `share_card_created`      | Client        | Share card generated/downloaded            | _(card metadata)_                                                                                                              |
 
 ### CTA Tracking Convention
+
 Instead of manually adding tracking logic across marketing pages, any interactive element can declare CTA tracking declaratively:
+
 - `data-cta="<label>"` (e.g. `data-cta="hero_start_free"`)
 - `data-cta-location="<location>"` (defaults to `window.location.pathname` if omitted)
 
@@ -94,6 +99,7 @@ Alternatively, use the exported helper `trackCta(location, label)`.
 ## Legal & Privacy Reference (GDPR / ePrivacy)
 
 For the legal compliance review:
+
 1. **Consent Prior to Persistent Tracking**:
    - FocusKept does not set persistent tracking cookies or store distinct identifiers in `localStorage` prior to explicit user consent.
    - Cookieless mode operates strictly statelessly without device fingerprinting.

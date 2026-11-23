@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { sql } from "drizzle-orm";
+import type { HeardFrom } from "@/src/lib/attribution/types";
 import {
   pgTable,
   text,
@@ -164,6 +165,8 @@ export type Attribution = {
   landingPath?: string;
   ref?: string;
   firstSeenAt?: string;
+  heardFrom?: HeardFrom;
+  heardFromOther?: string;
 };
 
 export const profile = pgTable(
@@ -198,7 +201,7 @@ export const profile = pgTable(
     statsPublic: boolean("stats_public").notNull().default(false),
     // Onboarding tips and win-back emails; every message carries an unsubscribe link.
     emailTips: boolean("email_tips").notNull().default(true),
-    // First-touch acquisition data captured before signup (UTM tags, referrer, landing page).
+    // First-touch acquisition data and optional self-reported discovery source.
     attribution: jsonb("attribution")
       .$type<Attribution>()
       .notNull()
