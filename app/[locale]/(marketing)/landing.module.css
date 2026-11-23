@@ -54,6 +54,18 @@
   margin-top: 32px;
 }
 
+.heroCopy > .earlyAccess {
+  max-width: 52ch;
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .quietLink {
   display: inline-flex;
   align-items: center;

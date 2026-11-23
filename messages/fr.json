@@ -487,7 +487,8 @@
       "house": "Compte de l'établissement : sessions illimitées.",
       "host": "Plus est gratuit ce mois-ci car vous avez animé suffisamment de sessions de groupe.",
       "community": "Plus est inclus grâce à la licence de votre groupe.",
-      "none": "Trois sessions par semaine, jumelage et séries."
+      "none": "Trois sessions par semaine, jumelage et séries.",
+      "founding": "Vous bénéficiez de Plus gratuitement grâce à votre inscription pendant l’accès anticipé."
     }
   },
   "progress": {
@@ -882,7 +883,11 @@
           }
         ]
       }
-    ]
+    ],
+    "earlyAccess": {
+      "q": "FocusKept est-il gratuit pendant l’accès anticipé ?",
+      "a": "Accès anticipé : FocusKept est gratuit pendant que notre communauté grandit. Plus tard, l’offre gratuite comprendra 3 séances par semaine, et toutes les personnes inscrites pendant l’accès anticipé bénéficieront de 3 mois de Plus gratuits."
+    }
   },
   "pricing": {
     "title": "Forfaits Free et Plus | {app}",

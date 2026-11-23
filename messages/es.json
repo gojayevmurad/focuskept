@@ -487,7 +487,8 @@
       "house": "Cuenta de la casa: sesiones ilimitadas.",
       "host": "Plus es gratis este mes porque organizaste suficientes sesiones grupales.",
       "community": "Plus está incluido a través de la licencia de tu grupo.",
-      "none": "Tres sesiones a la semana, emparejamientos y rachas."
+      "none": "Tres sesiones a la semana, emparejamientos y rachas.",
+      "founding": "Tienes Plus gratis por haberte unido durante el acceso anticipado."
     }
   },
   "progress": {
@@ -882,7 +883,11 @@
           }
         ]
       }
-    ]
+    ],
+    "earlyAccess": {
+      "q": "¿FocusKept es gratis durante el acceso anticipado?",
+      "a": "Acceso anticipado: FocusKept es gratis mientras crecemos. Más adelante, el plan gratuito incluirá 3 sesiones por semana, y todas las personas que se unan durante el acceso anticipado recibirán 3 meses de Plus gratis."
+    }
   },
   "pricing": {
     "title": "Planes Free y Plus | {app}",

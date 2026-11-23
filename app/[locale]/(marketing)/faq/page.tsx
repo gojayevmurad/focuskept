@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getAppConfig } from "@/src/config/app";
 import { FaqList } from "@/src/components/marketing/faq";
 import { JsonLd } from "@/src/components/marketing/json-ld";
 import { Cta } from "@/src/components/marketing/cta";
@@ -27,7 +28,12 @@ export default async function FaqPage({ params }: LocaleProps) {
   setRequestLocale(locale);
   requireMarketing();
   const t = await getTranslations("faqPage");
-  const groups = t.raw("groups") as { title: string; items: Faq[] }[];
+  const groups = (t.raw("groups") as { title: string; items: Faq[] }[]).map(
+    (group, index) =>
+      index === 0 && !getAppConfig().billingEnabled
+        ? { ...group, items: [t.raw("earlyAccess") as Faq, ...group.items] }
+        : group,
+  );
   const allFaqs = groups.flatMap((group) => group.items);
 
   return (

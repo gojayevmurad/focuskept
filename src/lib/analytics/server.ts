@@ -22,7 +22,7 @@ export async function trackServer(
   await client.captureImmediate({
     distinctId: userId,
     event,
-    properties,
+    properties: { $host: new URL(env.APP_URL).host, ...properties },
     uuid,
   });
   await client.shutdown();
