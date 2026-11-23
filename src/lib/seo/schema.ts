@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
+import { brandFiles } from "@/src/config/brand-assets";
 
 export type SchemaOrgThing = Record<string, unknown>;
 
@@ -8,9 +9,9 @@ export function buildOrganizationSchema(
   socialProfiles: string[] = [],
 ): SchemaOrgThing {
   const orgUrl = new URL("/", app.url).toString();
-  const logoUrl = app.logoUrl
-    ? new URL(app.logoUrl, app.url).toString()
-    : new URL("/icon.svg", app.url).toString();
+  // LOGO_URL wins; otherwise the kit's opaque 512px PNG tile (search engines
+  // handle raster logos more consistently than SVG).
+  const logoUrl = new URL(app.logoUrl || brandFiles.pwa.any512, app.url).toString();
 
   const sameAs = Array.from(
     new Set(

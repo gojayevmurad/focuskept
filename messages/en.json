@@ -508,7 +508,14 @@
     "openSettings": "Change in Settings",
     "story": "Story size",
     "square": "Square",
-    "shareButton": "Share"
+    "shareButton": "Share",
+    "card": {
+      "month": "{name} in {month}",
+      "hours": "{count, plural, one {hour} other {hours}}",
+      "line": "of focused work, with a partner beside me.",
+      "sessions": "{count, plural, one {# session} other {# sessions}}",
+      "streak": "{count, plural, one {#-day streak} other {#-day streak}}"
+    }
   },
   "invite": {
     "title": "Invite friends",

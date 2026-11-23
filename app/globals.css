@@ -35,6 +35,8 @@
   --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
   --font-display:
     var(--font-big-shoulders), ui-sans-serif, system-ui, sans-serif;
+  /* Countdowns: Figtree has equal-width tabular digits; Big Shoulders does not. */
+  --font-timer: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --duration-fast: 120ms;
   --duration-base: 200ms;

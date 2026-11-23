@@ -1,37 +1,46 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { Link } from "@/src/i18n/navigation";
+import { brandGeometry, fullSymbolMinPx } from "@/src/config/brand-assets";
 
-/** Two pool lanes sharing a float rope and a pace-clock marker. */
-export function LogoMark({ size = 26 }: { size?: number }) {
+/**
+ * The Side by Side symbol, drawn from the kit geometry. Decorative: whatever
+ * sits next to it carries the accessible name. Colors come from brand.css so
+ * the mark follows the theme; the micro cut is used below 32px as the kit says.
+ */
+export function LogoMark({
+  size = 28,
+  className,
+}: {
+  size?: number;
+  className?: string;
+}) {
+  const d =
+    size < fullSymbolMinPx ? brandGeometry.microLeft : brandGeometry.left;
   return (
-    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
-      <path
-        d="M4 8a3 3 0 0 1 3-3h5v22H7a3 3 0 0 1-3-3V8Zm16-3h5a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3h-5V5Z"
-        fill="var(--accent)"
-      />
-      <path
-        d="M16 7v18"
-        stroke="var(--accent)"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M16 11v3m0 8v3"
-        stroke="var(--rope-red)"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M16 17v2"
-        stroke="var(--rope-yellow)"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <circle cx="26" cy="5" r="3" fill="var(--rope-red)" />
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      viewBox={brandGeometry.viewBox}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <g transform={brandGeometry.offset}>
+        <path d={d} fill="var(--logo-mark)" />
+        <path
+          d={d}
+          transform={brandGeometry.rightTransform}
+          fill="var(--logo-mark-companion)"
+        />
+      </g>
     </svg>
   );
 }
 
+/**
+ * Deployment logo: LOGO_URL replaces the built-in symbol; the name is always
+ * live text so custom deployments never show the FocusKept wordmark.
+ */
 export function Logo({
   name,
   logoUrl,

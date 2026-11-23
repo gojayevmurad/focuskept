@@ -3,6 +3,7 @@ import "server-only";
 import { createTranslator } from "next-intl";
 import { routing } from "@/src/i18n/routing";
 import { EmailLayout } from "@/src/lib/notifications/email-layout";
+import { emailBrand } from "@/src/lib/email/brand";
 import { getAppConfig } from "@/src/config/app";
 import { signUnsubscribeToken } from "./tokens";
 
@@ -151,7 +152,10 @@ export async function renderLifecycleEmail(
   ].join("\n\n");
 
   const react = EmailLayout({
-    appName: app.name,
+    brand: emailBrand(app),
+    lang: (routing.locales as readonly string[]).includes(recipient.locale)
+      ? recipient.locale
+      : routing.defaultLocale,
     preview: lines[0] ?? heading,
     heading,
     lines,

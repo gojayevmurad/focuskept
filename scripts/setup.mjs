@@ -33,6 +33,111 @@ export function validate(options) {
     throw new Error("Choose three distinct ports between 1024 and 65535.");
   return { ...options, port: ports[0], dbPort: ports[1], testDbPort: ports[2] };
 }
+// Identity defaults shipped with the repository (brand/tokens.json).
+export const KIT_COLOR = "#08646b";
+const KIT_DARK = {
+  "--accent": "#7bcdd2",
+  "--logo-mark": "#7bcdd2",
+  "--logo-mark-companion": "#b1e3e6",
+};
+const KIT_LIGHT_COMPANION = "#3d9fa8";
+const SPDX_JS = "// SPDX-License-Identifier: AGPL-3.0-only";
+const SPDX_CSS = "/* SPDX-License-Identifier: AGPL-3.0-only */";
+
+function readOptional(root, path) {
+  const file = resolve(root, path);
+  return existsSync(file) ? readFileSync(file, "utf8") : null;
+}
+
+/** Updates the three default values in brand.ts and keeps everything else. */
+export function brandModule(source, values) {
+  const fresh = `${SPDX_JS}\n// Defaults only. Deployments override these with APP_NAME, SUPPORT_EMAIL and LOGO_URL.\nexport const brand = {\n  name: "",\n  description: "",\n  supportEmail: "",\n};\n`;
+  let text = source ?? fresh;
+  for (const [key, value] of Object.entries(values)) {
+    const pattern = new RegExp(
+      `^([ \\t]*${key}:)\\s*"(?:[^"\\\\]|\\\\.)*"`,
+      "m",
+    );
+    if (!pattern.test(text))
+      throw new Error(
+        `src/config/brand.ts no longer has a string "${key}" default; update it by hand.`,
+      );
+    text = text.replace(
+      pattern,
+      (_, lead) => `${lead} ${JSON.stringify(value)}`,
+    );
+  }
+  return text.startsWith(SPDX_JS) ? text : `${SPDX_JS}\n${text}`;
+}
+
+/**
+ * Sets the accent and built-in logo colors in brand.css and keeps every other
+ * declaration. The kit color restores the kit's tuned dark values; another
+ * color derives them, as the template always did.
+ */
+export function brandStyles(source, color) {
+  const kit = color.toLowerCase() === KIT_COLOR;
+  const light = {
+    "--accent": color,
+    "--logo-mark": color,
+    "--logo-mark-companion": kit
+      ? KIT_LIGHT_COMPANION
+      : `color-mix(in srgb, ${color}, white 30%)`,
+  };
+  const dark = kit
+    ? KIT_DARK
+    : {
+        "--accent": `color-mix(in srgb, ${color}, white 28%)`,
+        "--logo-mark": `color-mix(in srgb, ${color}, white 28%)`,
+        "--logo-mark-companion": `color-mix(in srgb, ${color}, white 52%)`,
+      };
+  const block = (selector, values, indent = "") =>
+    `${indent}${selector} {\n${Object.entries(values)
+      .map(([k, v]) => `${indent}  ${k}: ${v};`)
+      .join("\n")}\n${indent}}`;
+  if (!source)
+    return [
+      SPDX_CSS,
+      block(":root", {
+        ...light,
+        "--accent-hover": "color-mix(in srgb, var(--accent), black 12%)",
+      }),
+      block('[data-theme="dark"]', {
+        ...dark,
+        "--accent-hover": "color-mix(in srgb, var(--accent), white 12%)",
+      }),
+      `@media (prefers-color-scheme: dark) {\n${block(":root:not([data-theme])", { ...dark, "--accent-hover": "color-mix(in srgb, var(--accent), white 12%)" }, "  ")}\n}`,
+      "",
+    ].join("\n");
+  // Rule bodies are flat in this file: replace inside each top-level rule.
+  let text = source.replace(
+    /([^{}]*?)\{([^{}]*)\}/g,
+    (rule, selector, body) => {
+      const name = selector.replace(/\/\*[\s\S]*?\*\//g, "").trim();
+      const values =
+        name === ":root"
+          ? light
+          : name === '[data-theme="dark"]' || name === ":root:not([data-theme])"
+            ? dark
+            : null;
+      if (!values) return rule;
+      let next = body;
+      for (const [k, v] of Object.entries(values)) {
+        const decl = new RegExp(`(^|;|\\n)(\\s*)${k}\\s*:[^;]*;`);
+        next = decl.test(next)
+          ? next.replace(
+              decl,
+              (_, before, space) => `${before}${space}${k}: ${v};`,
+            )
+          : next.replace(/\s*$/, `\n  ${k}: ${v};\n`);
+      }
+      return `${selector}{${next}}`;
+    },
+  );
+  if (!text.startsWith(SPDX_CSS)) text = `${SPDX_CSS}\n${text}`;
+  return text;
+}
+
 export function initialize(root, input) {
   const options = validate(input);
   const configPath = resolve(root, "saas.config.json");
@@ -73,11 +178,15 @@ export function initialize(root, input) {
   );
   write(
     "src/config/brand.ts",
-    `export const brand = {\n  name: ${JSON.stringify(options.name)},\n  description: ${JSON.stringify(options.description)},\n  supportEmail: ${JSON.stringify(`support@${options.domain}`)},\n};\n`,
+    brandModule(readOptional(root, "src/config/brand.ts"), {
+      name: options.name,
+      description: options.description,
+      supportEmail: `support@${options.domain}`,
+    }),
   );
   write(
     "src/config/brand.css",
-    `:root {\n  --accent: ${options.color};\n  --accent-hover: color-mix(in srgb, ${options.color}, black 12%);\n}\n[data-theme="dark"] {\n  --accent: color-mix(in srgb, ${options.color}, white 28%);\n  --accent-hover: color-mix(in srgb, ${options.color}, white 40%);\n}\n`,
+    brandStyles(readOptional(root, "src/config/brand.css"), options.color),
   );
   const pkgPath = resolve(root, "package.json");
   const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
@@ -192,7 +301,7 @@ async function main() {
         "Description",
         previous.description || "A foundation for your next idea.",
       ),
-      color: await ask("color", "Brand color", previous.color || "#7461d9"),
+      color: await ask("color", "Brand color", previous.color || KIT_COLOR),
       port: Number(flags.port || previous.port || 3000 + offset),
       dbPort: Number(flags["db-port"] || previous.dbPort || 20000 + offset),
       testDbPort: Number(

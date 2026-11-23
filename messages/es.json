@@ -508,7 +508,14 @@
     "openSettings": "Cambiar en Ajustes",
     "story": "Tamaño historia",
     "square": "Cuadrado",
-    "shareButton": "Compartir"
+    "shareButton": "Compartir",
+    "card": {
+      "month": "{name} en {month}",
+      "hours": "{count, plural, one {hora} other {horas}}",
+      "line": "de trabajo concentrado, con alguien a mi lado.",
+      "sessions": "{count, plural, one {# sesión} other {# sesiones}}",
+      "streak": "{count, plural, one {# día seguido} other {# días seguidos}}"
+    }
   },
   "invite": {
     "title": "Invitar amigos",

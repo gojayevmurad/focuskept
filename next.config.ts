@@ -10,6 +10,11 @@ const nextConfig: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
   serverExternalPackages: ["pino", "pino-pretty", "pg"],
+  // next/og cards read the kit's static TTFs from disk (src/lib/brand/og.tsx).
+  outputFileTracingIncludes: {
+    "/\\[locale\\]/opengraph-image": ["./brand/exports/fonts/*.ttf"],
+    "/api/share/\\[username\\]/\\[format\\]": ["./brand/exports/fonts/*.ttf"],
+  },
   turbopack: {
     // CSS modules skip Tailwind so they keep their scoped class names.
     rules: {

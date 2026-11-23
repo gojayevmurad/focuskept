@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
 import { Resend } from "resend";
-import { Html, Body, Container, Heading, Text, Button } from "react-email";
 import { getEnv } from "@/src/config/env";
+import { getAppConfig } from "@/src/config/app";
+import { emailBrand } from "@/src/lib/email/brand";
+import { EmailLayout } from "@/src/lib/notifications/email-layout";
 import { db } from "@/src/lib/db";
 import { emailPreview } from "@/src/lib/db/schema";
 import { logger } from "@/src/lib/logger";
@@ -21,34 +23,20 @@ export async function sendAuthEmail(
   }
   const title =
     kind === "verification" ? "Verify your email" : "Reset your password";
+  const line =
+    "Use the secure link below to continue. If you did not request this, ignore this email.";
   const result = await new Resend(env.RESEND_API_KEY).emails.send({
     from: env.EMAIL_FROM,
     to,
     subject: title,
-    react: (
-      <Html>
-        <Body style={{ backgroundColor: "#f5f6f8", fontFamily: "Arial" }}>
-          <Container style={{ padding: 32, backgroundColor: "white" }}>
-            <Heading>{title}</Heading>
-            <Text>
-              Use the secure link below to continue. If you did not request
-              this, ignore this email.
-            </Text>
-            <Button
-              href={url}
-              style={{
-                backgroundColor: "#635bff",
-                color: "white",
-                padding: 16,
-                borderRadius: 8,
-              }}
-            >
-              {title}
-            </Button>
-          </Container>
-        </Body>
-      </Html>
-    ),
+    text: [title, line, `${title}: ${url}`].join("\n\n"),
+    react: EmailLayout({
+      brand: emailBrand(getAppConfig()),
+      preview: line,
+      heading: title,
+      lines: [line],
+      cta: { label: title, url },
+    }),
   });
   if (result.error) {
     logger.error({ code: result.error.name }, "Email delivery failed");

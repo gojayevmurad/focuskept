@@ -79,6 +79,22 @@ describe("SEO Metadata and URL Formatting", () => {
     ).toBe("large");
   });
 
+  it("points each locale at its own OG image route", () => {
+    const image = (locale: string) =>
+      (
+        pageMetadata("T", "D", "/faq", locale).openGraph?.images as {
+          url: string;
+        }[]
+      )[0].url;
+    expect(new URL(image("en")).pathname).toBe("/opengraph-image");
+    expect(new URL(image("de")).pathname).toBe("/de/opengraph-image");
+    const meta = pageMetadata("T", "D", "/faq", "fr");
+    expect(meta.twitter?.images).toEqual([
+      expect.stringMatching(/^https?:\/\/[^/]+\/fr\/opengraph-image$/),
+    ]);
+    expect(meta.alternates?.canonical).toMatch(/\/fr\/faq$/);
+  });
+
   it("generates private page metadata with noindex and nofollow", () => {
     const meta = privatePageMetadata("Sign in");
     expect(meta.title).toBe("Sign in");

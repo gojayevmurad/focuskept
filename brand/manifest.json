@@ -1,0 +1,2151 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "status": "approved",
+  "direction": "A / Side by Side",
+  "selection": {
+    "status": "selected",
+    "ownerMessage": "a",
+    "context": "Owner selected A from the three identity exploration board.",
+    "date": "2026-11-23",
+    "scope": "direction",
+    "finalArtworkApproval": {
+      "date": "2026-11-24",
+      "ownerMessage": "budur prompt",
+      "context": "The owner pasted the brand integration handoff (docs/brand/integration-prompt.md) into a Claude Code session and asked for it to be carried out. Per that handoff, this explicit request authorizes local integration of the delivered kit 1.0.0 artwork.",
+      "scope": "Local integration of kit 1.0.0 into the application repository. No publishing, deployment, push, or external account/settings changes."
+    }
+  },
+  "integrationStatus": "integrated",
+  "sources": [
+    {
+      "path": "brand/source/geometry.json",
+      "sha256": "9524caebf7910cce9b56502c598f0104ed29f7e85ce1e54499c959a1679e2385"
+    },
+    {
+      "path": "brand/tokens.json",
+      "sha256": "cb9a109870fa563f71db81d904e043a26a9779fcb068005db91aea8d5e870986"
+    },
+    {
+      "path": "brand/fonts/Figtree-variable.ttf",
+      "sha256": "26ad3db9b31ff7dde67a91ff515d022d2f495cd506590699cf264f0bfe6fb714"
+    },
+    {
+      "path": "brand/fonts/BigShoulders-variable.ttf",
+      "sha256": "4b4b24aa6f799aa73cdcd5b6fa840cbcbbb38b81fa9fa82c25126a4530c1ba44"
+    },
+    {
+      "path": "brand/fonts/Figtree-OFL.txt",
+      "sha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268"
+    },
+    {
+      "path": "brand/fonts/BigShoulders-OFL.txt",
+      "sha256": "fbc746aabf0eb1847dfd92e2efc4596d79fa897d60b8e64062a22f585508fb3f"
+    },
+    {
+      "path": "scripts/brand/generate.mjs",
+      "sha256": "3873f925cdc8822d21bcc692ba6ce68a6444f2e8bad8301eccab98c7e5545980"
+    },
+    {
+      "path": "scripts/brand/check.mjs",
+      "sha256": "425c5c5684b021cd72ff2d858a7ed2269c8be15ae92e6fd4b04702e960be3a87"
+    },
+    {
+      "path": "scripts/brand/svg-to-pdf.py",
+      "sha256": "3c7d6233d716430f84987e21bdfba1bd20a4805a42fa9496a5223a91a0e3a030"
+    }
+  ],
+  "license": {
+    "originalArtwork": "AGPL-3.0-only",
+    "fonts": "OFL-1.1",
+    "trademarkPolicy": "No additional policy imposed; no clearance claim."
+  },
+  "tooling": {
+    "node": "24.13.0",
+    "sharp": "0.35.5",
+    "libvips": "8.18.7",
+    "harfbuzz": "hb-vector (HarfBuzz) 13.2.1",
+    "generator": "pnpm brand:generate",
+    "networkRequired": false
+  },
+  "fonts": [
+    {
+      "family": "Figtree",
+      "upstreamBlob": "579e2ab5f30beb21cd0b618dd0796b0fce0eff8e",
+      "source": "https://github.com/google/fonts/blob/main/ofl/figtree/Figtree%5Bwght%5D.ttf",
+      "notice": "brand/fonts/Figtree-OFL.txt"
+    },
+    {
+      "family": "Big Shoulders",
+      "upstreamBlob": "e26f6dd3335e84ed94227519d08256d526c01124",
+      "source": "https://github.com/google/fonts/blob/main/ofl/bigshoulders/BigShoulders%5Bopsz%2Cwght%5D.ttf",
+      "notice": "brand/fonts/BigShoulders-OFL.txt"
+    }
+  ],
+  "exports": [
+    {
+      "path": "brand/exports/code/logo-geometry.json",
+      "role": "geometry",
+      "variant": "json",
+      "bytes": 631,
+      "sha256": "35fb90450d5d2553f904ec5cddde13fcde48c9cdd86bc8b11b71cdfdd05d8f26",
+      "format": "json"
+    },
+    {
+      "path": "brand/exports/code/tokens.css",
+      "role": "tokens",
+      "variant": "css",
+      "bytes": 1150,
+      "sha256": "7047c7402405d2469fff0953d6e218bec4e8a47625be48ad55e33a8ca677ab54",
+      "format": "css"
+    },
+    {
+      "path": "brand/exports/code/tokens.json",
+      "role": "tokens",
+      "variant": "json",
+      "bytes": 2402,
+      "sha256": "c947efa18b790d422450f48012bf910f4931af5b9040a724c309bf8312c2133d",
+      "format": "json"
+    },
+    {
+      "path": "brand/exports/FocusKept-guidelines.pdf",
+      "role": "guidelines",
+      "variant": "pdf",
+      "bytes": 534881,
+      "sha256": "b294fe04a81973f3abe8a888abf6cea9fe2312bc1ee4fa3b059793614723b70a",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/fonts/BigShoulders-Bold.ttf",
+      "role": "static-font",
+      "variant": "wght=700,opsz=28",
+      "bytes": 57716,
+      "sha256": "6435bba345f4a456e77e688985f11656715f4d180cb92280c4e06e7840ea0b9d",
+      "format": "ttf"
+    },
+    {
+      "path": "brand/exports/fonts/BigShoulders-OFL.txt",
+      "role": "font-license",
+      "variant": "default",
+      "bytes": 4397,
+      "sha256": "fbc746aabf0eb1847dfd92e2efc4596d79fa897d60b8e64062a22f585508fb3f",
+      "format": "txt"
+    },
+    {
+      "path": "brand/exports/fonts/Figtree-Medium.ttf",
+      "role": "static-font",
+      "variant": "wght=500",
+      "bytes": 32848,
+      "sha256": "0f4387b149010f81e62fafe439c35176d8c5e02f34567e0ee90cd7fc1a24ddec",
+      "format": "ttf"
+    },
+    {
+      "path": "brand/exports/fonts/Figtree-OFL.txt",
+      "role": "font-license",
+      "variant": "default",
+      "bytes": 4388,
+      "sha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
+      "format": "txt"
+    },
+    {
+      "path": "brand/exports/fonts/Figtree-Regular.ttf",
+      "role": "static-font",
+      "variant": "wght=400",
+      "bytes": 32852,
+      "sha256": "998fdedbebfb6367bd41f011f851b5a00f66b79477617a9f83c216a5ab48a1b3",
+      "format": "ttf"
+    },
+    {
+      "path": "brand/exports/fonts/Figtree-Semibold.ttf",
+      "role": "static-font",
+      "variant": "wght=600",
+      "bytes": 33032,
+      "sha256": "ed6cb1936e692b48bfc3e202d428f04e4eecc90352bc11036ef917d369f2119d",
+      "format": "ttf"
+    },
+    {
+      "path": "brand/exports/icons/avatar-1024.png",
+      "role": "avatar",
+      "variant": "dark",
+      "bytes": 23360,
+      "sha256": "8dfad03077b354557c5e55f5e633c2f7fbae9aea5d256658c02974593c21b37d",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/horizontal-dark-1280.png",
+      "role": "horizontal",
+      "variant": "dark",
+      "bytes": 23332,
+      "sha256": "5e6ee1be1c1deac124e9f7a83716dbb334db0dd918a2f546c744bf220638d9fb",
+      "format": "png",
+      "width": 1280,
+      "height": 287
+    },
+    {
+      "path": "brand/exports/logo/horizontal-dark-320.png",
+      "role": "horizontal",
+      "variant": "dark",
+      "bytes": 4903,
+      "sha256": "fda6efe168c8910140a21e4e258e79b12a0e0d9d67fcf56b575c406b207bad19",
+      "format": "png",
+      "width": 320,
+      "height": 72
+    },
+    {
+      "path": "brand/exports/logo/horizontal-dark-640.png",
+      "role": "horizontal",
+      "variant": "dark",
+      "bytes": 10423,
+      "sha256": "68d99866107b71c941a6c3baa018423bddf060026a2ab44f4f87f5f87e82d7b5",
+      "format": "png",
+      "width": 640,
+      "height": 143
+    },
+    {
+      "path": "brand/exports/logo/horizontal-ink-1280.png",
+      "role": "horizontal",
+      "variant": "ink",
+      "bytes": 22542,
+      "sha256": "1361d86f69115e09df66749be62cc7b21fab2750776bff17fe036d76238a4137",
+      "format": "png",
+      "width": 1280,
+      "height": 287
+    },
+    {
+      "path": "brand/exports/logo/horizontal-ink-320.png",
+      "role": "horizontal",
+      "variant": "ink",
+      "bytes": 4660,
+      "sha256": "216e71367d9890e892f32d2bc839158bf54a5ba4ff40aea068335686afad324d",
+      "format": "png",
+      "width": 320,
+      "height": 72
+    },
+    {
+      "path": "brand/exports/logo/horizontal-ink-640.png",
+      "role": "horizontal",
+      "variant": "ink",
+      "bytes": 10031,
+      "sha256": "b5329cb37538ed765534ffd31610ebf15ab84383f5b9385b27841fb9c06dd08f",
+      "format": "png",
+      "width": 640,
+      "height": 143
+    },
+    {
+      "path": "brand/exports/logo/horizontal-ink.pdf",
+      "role": "horizontal",
+      "variant": "ink",
+      "bytes": 4300,
+      "sha256": "e7682e05e14d60dc7f699fc742a2c852511d4b0fca139286145aebacdf874764",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/horizontal-primary-1280.png",
+      "role": "horizontal",
+      "variant": "primary",
+      "bytes": 24003,
+      "sha256": "08a9edf1af5b8c446887e4531d04e02e232d504a14ce2d32346852c22e0b1573",
+      "format": "png",
+      "width": 1280,
+      "height": 287
+    },
+    {
+      "path": "brand/exports/logo/horizontal-primary-320.png",
+      "role": "horizontal",
+      "variant": "primary",
+      "bytes": 5134,
+      "sha256": "fa5d013acb468ee82e6741d8485cf95a100b59380cf8b33ca7bf383370da0807",
+      "format": "png",
+      "width": 320,
+      "height": 72
+    },
+    {
+      "path": "brand/exports/logo/horizontal-primary-640.png",
+      "role": "horizontal",
+      "variant": "primary",
+      "bytes": 10845,
+      "sha256": "1f436ebd15ff72f0d1f5ef021ed0b672d373ad89f04f9b1c90b938d938b6af9a",
+      "format": "png",
+      "width": 640,
+      "height": 143
+    },
+    {
+      "path": "brand/exports/logo/horizontal-primary.pdf",
+      "role": "horizontal",
+      "variant": "primary",
+      "bytes": 4335,
+      "sha256": "f1f7060cadbba4ca5da5e9db22fa912af0236cea89fd04d4c761a6445634f770",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/horizontal-teal-1280.png",
+      "role": "horizontal",
+      "variant": "teal",
+      "bytes": 22412,
+      "sha256": "554dc1d5619ab650b34cd774ce6696dbe42a9bccc1aa3fea992d4d4a79fdab8e",
+      "format": "png",
+      "width": 1280,
+      "height": 287
+    },
+    {
+      "path": "brand/exports/logo/horizontal-teal-320.png",
+      "role": "horizontal",
+      "variant": "teal",
+      "bytes": 4644,
+      "sha256": "e797da5b094fe9bb2780f621d1ce84e7aa5b5b9c443517d32c60fa9e97937a6d",
+      "format": "png",
+      "width": 320,
+      "height": 72
+    },
+    {
+      "path": "brand/exports/logo/horizontal-teal-640.png",
+      "role": "horizontal",
+      "variant": "teal",
+      "bytes": 9947,
+      "sha256": "55a5cbfaa3478d1736fbc3a7f89b94bc7250d7238fb2daa457d4d092333f33a7",
+      "format": "png",
+      "width": 640,
+      "height": 143
+    },
+    {
+      "path": "brand/exports/logo/horizontal-white-1280.png",
+      "role": "horizontal",
+      "variant": "white",
+      "bytes": 18401,
+      "sha256": "59e7c78e9409b2f5f084c259d91e09805104ddc9da450d353ead98e30926ff0f",
+      "format": "png",
+      "width": 1280,
+      "height": 287
+    },
+    {
+      "path": "brand/exports/logo/horizontal-white-320.png",
+      "role": "horizontal",
+      "variant": "white",
+      "bytes": 3853,
+      "sha256": "32a386a71bb9645ff889996b38fd381311a8391f15a46e38aaa317a73bbacb71",
+      "format": "png",
+      "width": 320,
+      "height": 72
+    },
+    {
+      "path": "brand/exports/logo/horizontal-white-640.png",
+      "role": "horizontal",
+      "variant": "white",
+      "bytes": 8300,
+      "sha256": "61a572c756976dd46dea85d536a8edb61fc3475a0947a5aa4f7e04a9dd0991c3",
+      "format": "png",
+      "width": 640,
+      "height": 143
+    },
+    {
+      "path": "brand/exports/logo/horizontal-white.pdf",
+      "role": "horizontal",
+      "variant": "white",
+      "bytes": 4288,
+      "sha256": "8551ab530cf5ec806cc57043ae4dd368acf7c6fd41a48fc4a7e22cad285f8a72",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/stacked-dark-1280.png",
+      "role": "stacked",
+      "variant": "dark",
+      "bytes": 36667,
+      "sha256": "b8def5a859d47fda743a24e09bebc59a0d44ee50cfd9357148ace8a2e3a5f05d",
+      "format": "png",
+      "width": 1280,
+      "height": 768
+    },
+    {
+      "path": "brand/exports/logo/stacked-dark-320.png",
+      "role": "stacked",
+      "variant": "dark",
+      "bytes": 7593,
+      "sha256": "e2af99a8292a7febd6ab0dc5f7e6499237a08ae7d77b22d4d6e64813b921099e",
+      "format": "png",
+      "width": 320,
+      "height": 192
+    },
+    {
+      "path": "brand/exports/logo/stacked-dark-640.png",
+      "role": "stacked",
+      "variant": "dark",
+      "bytes": 16432,
+      "sha256": "9b25948535da25d7e13a7563f9c707ed68489399802176e09d290f0f1aa08d72",
+      "format": "png",
+      "width": 640,
+      "height": 384
+    },
+    {
+      "path": "brand/exports/logo/stacked-ink-1280.png",
+      "role": "stacked",
+      "variant": "ink",
+      "bytes": 36045,
+      "sha256": "0c2e508f2d301fecc9a3e2f2b44762ce717672b308813b260799719f212ead62",
+      "format": "png",
+      "width": 1280,
+      "height": 768
+    },
+    {
+      "path": "brand/exports/logo/stacked-ink-320.png",
+      "role": "stacked",
+      "variant": "ink",
+      "bytes": 7297,
+      "sha256": "10e9d626ba1b15efab9f630a2a446a1535b2771b65d36910e05eebe5c61ddff5",
+      "format": "png",
+      "width": 320,
+      "height": 192
+    },
+    {
+      "path": "brand/exports/logo/stacked-ink-640.png",
+      "role": "stacked",
+      "variant": "ink",
+      "bytes": 16033,
+      "sha256": "7d7f2b5748e9428296ece773d4b67ef6f17de6301829e3d8fc3c1833a6225f97",
+      "format": "png",
+      "width": 640,
+      "height": 384
+    },
+    {
+      "path": "brand/exports/logo/stacked-ink.pdf",
+      "role": "stacked",
+      "variant": "ink",
+      "bytes": 4450,
+      "sha256": "e5c9d437a20be90c39d0bc5a0958fdbbd44946a973eb08844cf0f2d8985b5ee4",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/stacked-primary-1280.png",
+      "role": "stacked",
+      "variant": "primary",
+      "bytes": 36705,
+      "sha256": "91415227265ff3460302ab3fed74f2793f6d4a01822c2c5db3b119274abe3912",
+      "format": "png",
+      "width": 1280,
+      "height": 768
+    },
+    {
+      "path": "brand/exports/logo/stacked-primary-320.png",
+      "role": "stacked",
+      "variant": "primary",
+      "bytes": 7620,
+      "sha256": "553c2f0ffcecd41158893a04b2030bc7c4313e9f3cefe5579eae9f6398ca1c59",
+      "format": "png",
+      "width": 320,
+      "height": 192
+    },
+    {
+      "path": "brand/exports/logo/stacked-primary-640.png",
+      "role": "stacked",
+      "variant": "primary",
+      "bytes": 16584,
+      "sha256": "bf6b7be64cff01f4a4d65c325ed61690148ca70501fc6364b6514aced5676bff",
+      "format": "png",
+      "width": 640,
+      "height": 384
+    },
+    {
+      "path": "brand/exports/logo/stacked-primary.pdf",
+      "role": "stacked",
+      "variant": "primary",
+      "bytes": 4484,
+      "sha256": "2392ba0da464fb489386f2804fbb40be741b15557aa9e7556f048c07e04949b4",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/stacked-teal-1280.png",
+      "role": "stacked",
+      "variant": "teal",
+      "bytes": 35780,
+      "sha256": "ceea9046a5ccd69911424c32c05de86039b34ae5d417ed0102925f74a9316964",
+      "format": "png",
+      "width": 1280,
+      "height": 768
+    },
+    {
+      "path": "brand/exports/logo/stacked-teal-320.png",
+      "role": "stacked",
+      "variant": "teal",
+      "bytes": 7275,
+      "sha256": "120ccad1c1e125fcc6ff05cfbda6202f385d1cdd8c228a898c397e1637bf4ba0",
+      "format": "png",
+      "width": 320,
+      "height": 192
+    },
+    {
+      "path": "brand/exports/logo/stacked-teal-640.png",
+      "role": "stacked",
+      "variant": "teal",
+      "bytes": 15874,
+      "sha256": "38a8c329c489ecee2d9da9a9eaf4dca6972f19d617a593af47e506c059932f41",
+      "format": "png",
+      "width": 640,
+      "height": 384
+    },
+    {
+      "path": "brand/exports/logo/stacked-white-1280.png",
+      "role": "stacked",
+      "variant": "white",
+      "bytes": 28935,
+      "sha256": "d60b78839ea62cd47b5f86b6c3dc64e6cf20fdc07a750ba9369f2c80ec4439cd",
+      "format": "png",
+      "width": 1280,
+      "height": 768
+    },
+    {
+      "path": "brand/exports/logo/stacked-white-320.png",
+      "role": "stacked",
+      "variant": "white",
+      "bytes": 5952,
+      "sha256": "d79dabf1477f9058b482a07a83bf21bcc91b61e37e020677e80a54ddb2ba1374",
+      "format": "png",
+      "width": 320,
+      "height": 192
+    },
+    {
+      "path": "brand/exports/logo/stacked-white-640.png",
+      "role": "stacked",
+      "variant": "white",
+      "bytes": 12988,
+      "sha256": "b3adfd45b2958a4c60f0ae67d91af85fc6bf632e4e7e095deda0fbfda9550995",
+      "format": "png",
+      "width": 640,
+      "height": 384
+    },
+    {
+      "path": "brand/exports/logo/stacked-white.pdf",
+      "role": "stacked",
+      "variant": "white",
+      "bytes": 4437,
+      "sha256": "f11f633cac55d316f91cfe54977efb184aa2df3a35ca37d42e2fd447a3c6e7ba",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/symbol-dark-1024.png",
+      "role": "symbol",
+      "variant": "dark",
+      "bytes": 31383,
+      "sha256": "4dbd4056a5844af2a2ed329dda23381c6fe19bc0e8ff02b3ccc45bb477cce199",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-dark-128.png",
+      "role": "symbol",
+      "variant": "dark",
+      "bytes": 2686,
+      "sha256": "efe67b7fe6bbf8fbea5e35890d7deaa6d126e1863e3909f9cc5e7b466bb9c4b9",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-dark-256.png",
+      "role": "symbol",
+      "variant": "dark",
+      "bytes": 5568,
+      "sha256": "0fda65191c292bec2ac8b240a67f4681691aaa6ddd3fb2f7800d57adebe25e3f",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-dark-512.png",
+      "role": "symbol",
+      "variant": "dark",
+      "bytes": 13648,
+      "sha256": "2e494b883fb7034d8d526ee389f5b43a65141e6a631716121590e60b23785e92",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-dark-64.png",
+      "role": "symbol",
+      "variant": "dark",
+      "bytes": 1441,
+      "sha256": "440ed219d348e6e869e879743fd03a763cbc746f58af1d08678d963781a4db78",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-ink-1024.png",
+      "role": "symbol",
+      "variant": "ink",
+      "bytes": 29801,
+      "sha256": "7514d96cc93c3c32ebc2a35c7c812db7213c1042e2bc836cfe07b0506b80f11d",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-ink-128.png",
+      "role": "symbol",
+      "variant": "ink",
+      "bytes": 2428,
+      "sha256": "9d053257d1fa4bf12a44c6efbf76f92446af0581272e6f08262d0399a0177a46",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-ink-256.png",
+      "role": "symbol",
+      "variant": "ink",
+      "bytes": 5173,
+      "sha256": "68b3f460bf2fec486d5f030a78510e39940a8dfcd67469c8fc87956d8a2e87d9",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-ink-512.png",
+      "role": "symbol",
+      "variant": "ink",
+      "bytes": 12832,
+      "sha256": "9ecc3933fa31dd754968bdee5a0846f4dc1b3fd41a7cdf5e7021fa4be266fe5f",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-ink-64.png",
+      "role": "symbol",
+      "variant": "ink",
+      "bytes": 1289,
+      "sha256": "170a843a37b40269365607c03bc744c075451e192ff1d732efa32dd89bd6fa2d",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-ink.pdf",
+      "role": "symbol",
+      "variant": "ink",
+      "bytes": 1240,
+      "sha256": "ba32c71465b01aab45157532d137a3c0d90b4a594f0340bdb8a4951c120d3b88",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-dark-1024.png",
+      "role": "symbol-micro",
+      "variant": "dark",
+      "bytes": 31190,
+      "sha256": "8fddaaa5c3d0a3545ca60b397e6778834dccd5ff65415d67d4dfe5506abae759",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-dark-128.png",
+      "role": "symbol-micro",
+      "variant": "dark",
+      "bytes": 2589,
+      "sha256": "56ee687945c923d013afde827d2a657c3fb9c331d9eb91dac2e4d3c8c0054037",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-dark-256.png",
+      "role": "symbol-micro",
+      "variant": "dark",
+      "bytes": 5318,
+      "sha256": "00ff674c26f4160e6ac7e59c594c6b2085fb1a4323e55430fcf77e40f4839cd3",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-dark-512.png",
+      "role": "symbol-micro",
+      "variant": "dark",
+      "bytes": 12558,
+      "sha256": "10a10d60eee060e105da44804835e145034ceae2f0920a6269d2a7bec171ae0b",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-dark-64.png",
+      "role": "symbol-micro",
+      "variant": "dark",
+      "bytes": 1407,
+      "sha256": "98518ab397d71ba90b0cc66c1eb7ac3629f784f1a68e4a9f50f29584cfb0efe8",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-ink-1024.png",
+      "role": "symbol-micro",
+      "variant": "ink",
+      "bytes": 30091,
+      "sha256": "9334fc57bc7c78ebc935da8ace1bdc69804e745837fb42973b1fc857aaa87a90",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-ink-128.png",
+      "role": "symbol-micro",
+      "variant": "ink",
+      "bytes": 2387,
+      "sha256": "5bcf9a3e6ed4543fed7d33a3570e83e011e47fef1307601f0f767c9666f210a5",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-ink-256.png",
+      "role": "symbol-micro",
+      "variant": "ink",
+      "bytes": 5007,
+      "sha256": "53829f0e9bff745019c9dfee928afe038f9b093d38d053cd86581896cc8f3394",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-ink-512.png",
+      "role": "symbol-micro",
+      "variant": "ink",
+      "bytes": 11855,
+      "sha256": "e7d35c6ac20142d806e6ac217dda21e07bd508dbde360e1d29f925ef9ed7a623",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-ink-64.png",
+      "role": "symbol-micro",
+      "variant": "ink",
+      "bytes": 1287,
+      "sha256": "0e793fae4b037244bbabcf6483c193bf6efdc61e56c3a83cd74949b263a22cd2",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-primary-1024.png",
+      "role": "symbol-micro",
+      "variant": "primary",
+      "bytes": 31406,
+      "sha256": "6c22d36ef12b0137cde35f4fbd816145e85ec996f4d6e4e17f02b1f3abe3e79e",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-primary-128.png",
+      "role": "symbol-micro",
+      "variant": "primary",
+      "bytes": 2602,
+      "sha256": "1ab9d0903dc70e88f0660fecaef0d379748792ed7deb5f80514b7d806ab36313",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-primary-256.png",
+      "role": "symbol-micro",
+      "variant": "primary",
+      "bytes": 5335,
+      "sha256": "082053c5ce0c09dff1a81424ba48437475f45f46b18e414e557ffaafe730f2c3",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-primary-512.png",
+      "role": "symbol-micro",
+      "variant": "primary",
+      "bytes": 12526,
+      "sha256": "92933bc06b621d613a2463e1d1997c4ebc839895309218e6ea8ff937cc477cee",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-primary-64.png",
+      "role": "symbol-micro",
+      "variant": "primary",
+      "bytes": 1398,
+      "sha256": "bbe244ef0e747ce2108b53138c81a9c1c56299e0d2720c5ca48f1f009c3614e9",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-teal-1024.png",
+      "role": "symbol-micro",
+      "variant": "teal",
+      "bytes": 29686,
+      "sha256": "4e8d4f7f2129e732f872b772c88d0569ff717efc7e8854497b011d63708dd65c",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-teal-128.png",
+      "role": "symbol-micro",
+      "variant": "teal",
+      "bytes": 2369,
+      "sha256": "21e01dc43c1448c3ef2d00a490d30c80d143f83f881324a6597fe5c273a3174a",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-teal-256.png",
+      "role": "symbol-micro",
+      "variant": "teal",
+      "bytes": 4975,
+      "sha256": "229908b8729228f4da0da5f38bfc419e546be7facfe49614d7f14286211065b2",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-teal-512.png",
+      "role": "symbol-micro",
+      "variant": "teal",
+      "bytes": 11776,
+      "sha256": "c38b3b54d5dce74ce93999838385ef2fb8519141f334a95693ca96d3fb389c18",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-teal-64.png",
+      "role": "symbol-micro",
+      "variant": "teal",
+      "bytes": 1272,
+      "sha256": "dea67097a28db4587717781f95c29bf911e252f627c3fde524cc4abe46d7e216",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-white-1024.png",
+      "role": "symbol-micro",
+      "variant": "white",
+      "bytes": 21926,
+      "sha256": "f7d618af969cf58f1fbb03df04923b002a1359907ebfc19a310823f7c9a3681e",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-white-128.png",
+      "role": "symbol-micro",
+      "variant": "white",
+      "bytes": 1909,
+      "sha256": "4027a5c3755ac03725de949e8697fe50166625e80bcac63673d0ee36fb635541",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-white-256.png",
+      "role": "symbol-micro",
+      "variant": "white",
+      "bytes": 3985,
+      "sha256": "a28b621ea5d4242213b5a2460d2c88a4bee9c01d1ea2a23e37664e91e2ca7f3e",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-white-512.png",
+      "role": "symbol-micro",
+      "variant": "white",
+      "bytes": 9107,
+      "sha256": "6ff0e869c364845420502ddd7ada6609be09ca652612d47960cfc7f85416798a",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-micro-white-64.png",
+      "role": "symbol-micro",
+      "variant": "white",
+      "bytes": 1006,
+      "sha256": "52711eeaf0d8ca785c9813f4f2592abfdcfa060ff8f8567c9b05faf0d678c258",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-primary-1024.png",
+      "role": "symbol",
+      "variant": "primary",
+      "bytes": 31370,
+      "sha256": "f6ad44b861d1152fcb4032e19e967c632762fd5e67ad2e0f2ba6ea779e608a28",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-primary-128.png",
+      "role": "symbol",
+      "variant": "primary",
+      "bytes": 2689,
+      "sha256": "45ec7b7090b593366fa209b647b5e94c8c24b2eb5e0f915ca702c8d777878b1b",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-primary-256.png",
+      "role": "symbol",
+      "variant": "primary",
+      "bytes": 5553,
+      "sha256": "451defe01f1f8c0988fdb2ce09a08bdf882f573f143df75b55d96d24c2140e9e",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-primary-512.png",
+      "role": "symbol",
+      "variant": "primary",
+      "bytes": 13670,
+      "sha256": "9b48b77288a511f4e7308494e33cdc6a7c9307200849b8fda2636269d27b8158",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-primary-64.png",
+      "role": "symbol",
+      "variant": "primary",
+      "bytes": 1437,
+      "sha256": "d3195966d61feb4afdf585f57f0673531e78ee0fc14d5530af31f06fe29b701a",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-primary.pdf",
+      "role": "symbol",
+      "variant": "primary",
+      "bytes": 1258,
+      "sha256": "42e5816cfa307cd2089cc750dbcf4985d0e78a49bdd77c17916c3d62904809d5",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/symbol-teal-1024.png",
+      "role": "symbol",
+      "variant": "teal",
+      "bytes": 29644,
+      "sha256": "0b0b72b456ab47a1c6c3aa61cc73bf8b71ffd9abf33ebff64430992af7651699",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-teal-128.png",
+      "role": "symbol",
+      "variant": "teal",
+      "bytes": 2421,
+      "sha256": "1a0a787034f9b59152ebb10adfe7a4195b0a10e9c9516ea99ea368107ea0c43f",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-teal-256.png",
+      "role": "symbol",
+      "variant": "teal",
+      "bytes": 5121,
+      "sha256": "088f6eb87ab982111640a8679a9f4e7a027fe050acfa96288ce6d45a4220d0cc",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-teal-512.png",
+      "role": "symbol",
+      "variant": "teal",
+      "bytes": 12736,
+      "sha256": "8b11ac9912cb36acb4f855a5935415be6cfd6db392f0017e8b480839c19b188d",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-teal-64.png",
+      "role": "symbol",
+      "variant": "teal",
+      "bytes": 1284,
+      "sha256": "0e9c7224c5c9eb458c0fe222aca1edafeac757f5190f28941b4c343305b64e57",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-white-1024.png",
+      "role": "symbol",
+      "variant": "white",
+      "bytes": 21979,
+      "sha256": "1c424befec8998c00cb32d8b5de93e01ca65f5ca7547447383a06e643d12427d",
+      "format": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "brand/exports/logo/symbol-white-128.png",
+      "role": "symbol",
+      "variant": "white",
+      "bytes": 1969,
+      "sha256": "325b52f795e1aa56621a50517a8762cb107667a4a788930b0c16971ae3f57662",
+      "format": "png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/symbol-white-256.png",
+      "role": "symbol",
+      "variant": "white",
+      "bytes": 4093,
+      "sha256": "35108b6f3f151fabacd430d23b0246df743172691f312b21ba1cb1524be47f3c",
+      "format": "png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/symbol-white-512.png",
+      "role": "symbol",
+      "variant": "white",
+      "bytes": 9606,
+      "sha256": "941a07e26bdbe0ab978b7e2f75ccd7b606a30fbd5b2c3a940ed87a62e6e00cc7",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "brand/exports/logo/symbol-white-64.png",
+      "role": "symbol",
+      "variant": "white",
+      "bytes": 1021,
+      "sha256": "d730a8bfcfc73fcdae54d767fd8c212dfd3b3e61c2250e041125c5db9912ed9c",
+      "format": "png",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/symbol-white.pdf",
+      "role": "symbol",
+      "variant": "white",
+      "bytes": 1228,
+      "sha256": "0cdbcb8d1ea27348724b9a6489838eb76ceb20075ce052cf5577f4a36f3c89ab",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/wordmark-dark-1280.png",
+      "role": "wordmark",
+      "variant": "dark",
+      "bytes": 21983,
+      "sha256": "807b1212bfc1e70f4471754af11a143fed50f67145bf969f81266a0c3ae443f1",
+      "format": "png",
+      "width": 1280,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/wordmark-dark-320.png",
+      "role": "wordmark",
+      "variant": "dark",
+      "bytes": 4508,
+      "sha256": "cf5fc4d5d01a45738f3e6d21cde6da30c81a72f3c0d41fc9301ce81786a13d16",
+      "format": "png",
+      "width": 320,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/wordmark-dark-640.png",
+      "role": "wordmark",
+      "variant": "dark",
+      "bytes": 9719,
+      "sha256": "a183bbbffa8b497d5c50e0d9f6beb56ec03fc191efde41b3fef6430513b2055c",
+      "format": "png",
+      "width": 640,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/wordmark-ink-1280.png",
+      "role": "wordmark",
+      "variant": "ink",
+      "bytes": 22093,
+      "sha256": "eefd51d9835fceabcd8d908358e10323570f22b87a78c6b347f4e2fca4775700",
+      "format": "png",
+      "width": 1280,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/wordmark-ink-320.png",
+      "role": "wordmark",
+      "variant": "ink",
+      "bytes": 4545,
+      "sha256": "d52750dd73abc4fc8b7155aada852e856d2ca491149d714fcffc6772393f3cfc",
+      "format": "png",
+      "width": 320,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/wordmark-ink-640.png",
+      "role": "wordmark",
+      "variant": "ink",
+      "bytes": 9756,
+      "sha256": "c72a20b28301dc2f726225a4a8208cfb5a88d41894606a4d79c81ff18736d9ff",
+      "format": "png",
+      "width": 640,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/wordmark-ink.pdf",
+      "role": "wordmark",
+      "variant": "ink",
+      "bytes": 4122,
+      "sha256": "1b76185731141f18801ea414acd5e49635d03f6eb4369d4cdf2e3527d47983d7",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/wordmark-primary-1280.png",
+      "role": "wordmark",
+      "variant": "primary",
+      "bytes": 22093,
+      "sha256": "eefd51d9835fceabcd8d908358e10323570f22b87a78c6b347f4e2fca4775700",
+      "format": "png",
+      "width": 1280,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/wordmark-primary-320.png",
+      "role": "wordmark",
+      "variant": "primary",
+      "bytes": 4545,
+      "sha256": "d52750dd73abc4fc8b7155aada852e856d2ca491149d714fcffc6772393f3cfc",
+      "format": "png",
+      "width": 320,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/wordmark-primary-640.png",
+      "role": "wordmark",
+      "variant": "primary",
+      "bytes": 9756,
+      "sha256": "c72a20b28301dc2f726225a4a8208cfb5a88d41894606a4d79c81ff18736d9ff",
+      "format": "png",
+      "width": 640,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/wordmark-primary.pdf",
+      "role": "wordmark",
+      "variant": "primary",
+      "bytes": 4122,
+      "sha256": "1b76185731141f18801ea414acd5e49635d03f6eb4369d4cdf2e3527d47983d7",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/logo/wordmark-teal-1280.png",
+      "role": "wordmark",
+      "variant": "teal",
+      "bytes": 22010,
+      "sha256": "8711a62f74d791b389c28fd335287904a6b11c126477c7c85867f9ec7471f2a5",
+      "format": "png",
+      "width": 1280,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/wordmark-teal-320.png",
+      "role": "wordmark",
+      "variant": "teal",
+      "bytes": 4541,
+      "sha256": "fef1500f1e7b53b87864b9d77b1b89f682efc31f30b4fba6acdde5b9c26d8e06",
+      "format": "png",
+      "width": 320,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/wordmark-teal-640.png",
+      "role": "wordmark",
+      "variant": "teal",
+      "bytes": 9693,
+      "sha256": "29586ef427fb73f4c39d80b124743eafc0e3a5698e61808ec72d877405706604",
+      "format": "png",
+      "width": 640,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/wordmark-white-1280.png",
+      "role": "wordmark",
+      "variant": "white",
+      "bytes": 18163,
+      "sha256": "87cac05646e94f9efb9065bce0bc6195fada215eae0e92a85f3aeafedc90d527",
+      "format": "png",
+      "width": 1280,
+      "height": 256
+    },
+    {
+      "path": "brand/exports/logo/wordmark-white-320.png",
+      "role": "wordmark",
+      "variant": "white",
+      "bytes": 3823,
+      "sha256": "3668a5919ca166603cfaf04bd574cfbb9d6211a748de004fdc1a73afb3c77398",
+      "format": "png",
+      "width": 320,
+      "height": 64
+    },
+    {
+      "path": "brand/exports/logo/wordmark-white-640.png",
+      "role": "wordmark",
+      "variant": "white",
+      "bytes": 8164,
+      "sha256": "d0f89119a31aaa75df667c6281c0b7f054966bb2e2b14171da89451bb63efec0",
+      "format": "png",
+      "width": 640,
+      "height": 128
+    },
+    {
+      "path": "brand/exports/logo/wordmark-white.pdf",
+      "role": "wordmark",
+      "variant": "white",
+      "bytes": 4110,
+      "sha256": "4e6ee232f909019996f7167fd26d737560eee86e7016490cfbc6713a34f925be",
+      "format": "pdf"
+    },
+    {
+      "path": "brand/exports/preview.png",
+      "role": "preview",
+      "variant": "default",
+      "bytes": 173007,
+      "sha256": "a0817e0ec8e9b66054870cdf5997edfa2c29c70a12bc8c0f3231b3b0094ca166",
+      "format": "png",
+      "width": 1800,
+      "height": 1380
+    },
+    {
+      "path": "brand/exports/preview.svg",
+      "role": "preview",
+      "variant": "default",
+      "bytes": 316311,
+      "sha256": "93caa8c8ac6e057202ebea956b1cc392ad3daa58e8c589b5cd9c3138f63535ca",
+      "format": "svg"
+    },
+    {
+      "path": "brand/exports/repository/readme-banner-dark.png",
+      "role": "readme-banner",
+      "variant": "dark",
+      "bytes": 32700,
+      "sha256": "a467121e479c3010d8390b92e3691e479688c8e9b900c5925ca2cee7d3da9590",
+      "format": "png",
+      "width": 1600,
+      "height": 480
+    },
+    {
+      "path": "brand/exports/repository/readme-banner-light.png",
+      "role": "readme-banner",
+      "variant": "light",
+      "bytes": 32822,
+      "sha256": "955528841e44f5e3cae5875bcca620024617afc76daf8a9bdee326b5af3e86c7",
+      "format": "png",
+      "width": 1600,
+      "height": 480
+    },
+    {
+      "path": "brand/exports/social/cover-linkedin-dark.png",
+      "role": "cover-linkedin",
+      "variant": "dark",
+      "bytes": 28550,
+      "sha256": "9afbc32f8a5fbf1c4a8402fe57f188f9794880a96c81f2ba10844d02aa4555e1",
+      "format": "png",
+      "width": 1584,
+      "height": 396
+    },
+    {
+      "path": "brand/exports/social/cover-linkedin-light.png",
+      "role": "cover-linkedin",
+      "variant": "light",
+      "bytes": 28658,
+      "sha256": "e786aafef4a8cc484d892cfc0147dbd03331b8a68453280db7ed0b2002318991",
+      "format": "png",
+      "width": 1584,
+      "height": 396
+    },
+    {
+      "path": "brand/exports/social/cover-x-dark.png",
+      "role": "cover-x",
+      "variant": "dark",
+      "bytes": 33370,
+      "sha256": "b05bfb266bfae2e7d6dc91380e8c245010f5eb657495f1441d3903ec4be8262a",
+      "format": "png",
+      "width": 1500,
+      "height": 500
+    },
+    {
+      "path": "brand/exports/social/cover-x-light.png",
+      "role": "cover-x",
+      "variant": "light",
+      "bytes": 33458,
+      "sha256": "7b9fc3f9a39c8c97ff3f2817213e9f3d90d44c429ffb32fd98cac01a21402911",
+      "format": "png",
+      "width": 1500,
+      "height": 500
+    },
+    {
+      "path": "brand/exports/social/github-preview-dark.png",
+      "role": "github-preview",
+      "variant": "dark",
+      "bytes": 53023,
+      "sha256": "039a087d3966c0e579f1851847dafee3717ac831ef0c189f20b8736b72c9abec",
+      "format": "png",
+      "width": 1280,
+      "height": 640
+    },
+    {
+      "path": "brand/exports/social/github-preview-light.png",
+      "role": "github-preview",
+      "variant": "light",
+      "bytes": 52915,
+      "sha256": "1fdea281cc93955cc77979c5d06d8e730cb6cf7fb4bd086872c0cda71851aabe",
+      "format": "png",
+      "width": 1280,
+      "height": 640
+    },
+    {
+      "path": "brand/exports/social/landscape-dark.png",
+      "role": "landscape",
+      "variant": "dark",
+      "bytes": 52231,
+      "sha256": "1b07c0046268f487c52b8ca34586fe8cfbb7c74a2929934531ae478a4ded6e7f",
+      "format": "png",
+      "width": 1200,
+      "height": 675
+    },
+    {
+      "path": "brand/exports/social/landscape-light.png",
+      "role": "landscape",
+      "variant": "light",
+      "bytes": 52237,
+      "sha256": "6cb53423d342a4ac7d4a880ba7d00081dd3253810370b293599a8c7707e1550a",
+      "format": "png",
+      "width": 1200,
+      "height": 675
+    },
+    {
+      "path": "brand/exports/social/og-dark.png",
+      "role": "og",
+      "variant": "dark",
+      "bytes": 50268,
+      "sha256": "ec6c8c0431c102877936b4074f61b94a11ecf4309e87b2c3d1dbc7c02229db09",
+      "format": "png",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "path": "brand/exports/social/og-light.png",
+      "role": "og",
+      "variant": "light",
+      "bytes": 50182,
+      "sha256": "86cbfe0581af7a572a602dde0b239b984dd11025c7d2f4fb42b2b8b3545b5fe9",
+      "format": "png",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "path": "brand/exports/social/portrait-dark.png",
+      "role": "portrait",
+      "variant": "dark",
+      "bytes": 58773,
+      "sha256": "a27ff7f46bdeac0500a640255b10e9e1b26496e94bf4358b14b592b55fa2cb8c",
+      "format": "png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "path": "brand/exports/social/portrait-light.png",
+      "role": "portrait",
+      "variant": "light",
+      "bytes": 58735,
+      "sha256": "8947d2561791eccc92201d6a3d04baae5bfa2281bf71238aa821076338fcb448",
+      "format": "png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "path": "brand/exports/social/square-dark.png",
+      "role": "square",
+      "variant": "dark",
+      "bytes": 54794,
+      "sha256": "546d0d5242f1fa69b5d987fb9d449a7e891f6c5f5f863147e63f83ba8356d97b",
+      "format": "png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "path": "brand/exports/social/square-light.png",
+      "role": "square",
+      "variant": "light",
+      "bytes": 54769,
+      "sha256": "0609895c763a74d61d34717ea6273ba7bea7aca2efaf51cc05d50bd3c57d2158",
+      "format": "png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "path": "brand/exports/social/story-dark.png",
+      "role": "story",
+      "variant": "dark",
+      "bytes": 79812,
+      "sha256": "c988c3c92df9b53e520ae3c85e6eb610763226e9e4d11be42303e7327f3684f6",
+      "format": "png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "brand/exports/social/story-light.png",
+      "role": "story",
+      "variant": "light",
+      "bytes": 79653,
+      "sha256": "56b14ae009eb170d671f0be8b9b4b3dad23d047217eddc7551fa8c785d755e85",
+      "format": "png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "brand/source/app-icon-any.svg",
+      "role": "app-icon-master",
+      "variant": "any",
+      "bytes": 540,
+      "sha256": "952dc8254b2fca533f836c76dfd619c4a513321e9346f274bae6cf0d0e2ae0da",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/app-icon-maskable.svg",
+      "role": "app-icon-master",
+      "variant": "maskable",
+      "bytes": 543,
+      "sha256": "cdc2d569444d91dab1f4d2b1f784d1c337f2089e74278b2816b2c4d9064a8671",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/horizontal-dark.svg",
+      "role": "horizontal",
+      "variant": "dark",
+      "bytes": 5962,
+      "sha256": "904c609fcc38fc3a73ba8b84e54a6648cd46f22d7cf8a5f29bf2ecd44602e7da",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/horizontal-ink.svg",
+      "role": "horizontal",
+      "variant": "ink",
+      "bytes": 5962,
+      "sha256": "ff70f332246a4ecb3c1a726a19dd0409bdade39c6311d0208aeaffb53aeb8715",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/horizontal-primary.svg",
+      "role": "horizontal",
+      "variant": "primary",
+      "bytes": 5962,
+      "sha256": "10f750f05b79daf74c283b531628db1a4fa8be3a65ee218ad389ca2e06242fa3",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/horizontal-teal.svg",
+      "role": "horizontal",
+      "variant": "teal",
+      "bytes": 5962,
+      "sha256": "ed8c57893b71aced87bd17249ce5fc6474f81cdbfc71e8b41145012a6c0bac24",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/horizontal-white.svg",
+      "role": "horizontal",
+      "variant": "white",
+      "bytes": 5962,
+      "sha256": "8eb05920bfd0370155ed74873ce7c63816b5d695a87575ad0b20ef66a4677306",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/lane-pattern.svg",
+      "role": "pattern",
+      "variant": "default",
+      "bytes": 774,
+      "sha256": "4aa25d7ea2f23428e275573cf77fb2d9492105a9d685c61dc8567e40e6811e0f",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/stacked-dark.svg",
+      "role": "stacked",
+      "variant": "dark",
+      "bytes": 5941,
+      "sha256": "23837457fac0e9abaebdb176ca40607550ae897611bdba210b14977db6e1843f",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/stacked-ink.svg",
+      "role": "stacked",
+      "variant": "ink",
+      "bytes": 5941,
+      "sha256": "cdb0a0240e4b2d5aec6ddd3e1f0977eec92c0a2bbc8d7efc50665e564a0d3f32",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/stacked-primary.svg",
+      "role": "stacked",
+      "variant": "primary",
+      "bytes": 5941,
+      "sha256": "eae072d86264a8fc258ae2d6d3855b715638ceac5766bb5ae879c3ac9f900af5",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/stacked-teal.svg",
+      "role": "stacked",
+      "variant": "teal",
+      "bytes": 5941,
+      "sha256": "4b715744ac5931f6be0729a946c1f24d2846027565ab8703551e3ef91df18051",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/stacked-white.svg",
+      "role": "stacked",
+      "variant": "white",
+      "bytes": 5941,
+      "sha256": "2b10ac9213983983a9871718218a38b1b072c986eb221166678b4cceda9d1b15",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-dark.svg",
+      "role": "symbol",
+      "variant": "dark",
+      "bytes": 526,
+      "sha256": "49346ffd95f64d414c2369f09a7a775689545afac955133a9f66ef38b2aa21eb",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-ink.svg",
+      "role": "symbol",
+      "variant": "ink",
+      "bytes": 526,
+      "sha256": "32fe4869b3b56c7aefde64245393f3f80fe597cd945fe6518f040414cedb13b7",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-micro-dark.svg",
+      "role": "symbol-micro",
+      "variant": "dark",
+      "bytes": 456,
+      "sha256": "3a57cdeb0babee3ba0b6e9118a876d3d669b98c1b131b290d184a8d6099b101b",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-micro-ink.svg",
+      "role": "symbol-micro",
+      "variant": "ink",
+      "bytes": 456,
+      "sha256": "03f157523538cc9df1daf6cd34468669f4aaf22294362fa6e8f32325ee5c5bc5",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-micro-primary.svg",
+      "role": "symbol-micro",
+      "variant": "primary",
+      "bytes": 456,
+      "sha256": "f112f0b56a38bfd6b4c69f703152649717431ba5f45aaa32918a6e504a129c46",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-micro-teal.svg",
+      "role": "symbol-micro",
+      "variant": "teal",
+      "bytes": 456,
+      "sha256": "7ebc2c3f1df09c2af2b0cbffee1d3dd1aa3fececbef75416422da691b4327d60",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-micro-white.svg",
+      "role": "symbol-micro",
+      "variant": "white",
+      "bytes": 456,
+      "sha256": "806f0e962d638bcacb2e2c51f58755782c12a83b897d6419cd9ce456721c9bb4",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-primary.svg",
+      "role": "symbol",
+      "variant": "primary",
+      "bytes": 526,
+      "sha256": "2e324831f2d7e823db57403692b7d5b1cf83942a0086ce12a92670f3550d1f90",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-teal.svg",
+      "role": "symbol",
+      "variant": "teal",
+      "bytes": 526,
+      "sha256": "e5681e4f93dbabaab18ce4061ff1460fbbd0eaf9dc6addf586dd5082563d1e8c",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/symbol-white.svg",
+      "role": "symbol",
+      "variant": "white",
+      "bytes": 526,
+      "sha256": "d8ec29a1557f0307fa5a7145eed24dcbabe522bba3bce3d3877ddbd38a188e04",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/wordmark-dark.svg",
+      "role": "wordmark",
+      "variant": "dark",
+      "bytes": 5513,
+      "sha256": "03f32261ef3c8a808a71087f3ce86a078f2dd5a457493e83e3f0dc862d213635",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/wordmark-ink.svg",
+      "role": "wordmark",
+      "variant": "ink",
+      "bytes": 5513,
+      "sha256": "1f84ff3cf41639342957ae9ba58258c87463a253e2699cadd0172d9189b574b8",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/wordmark-primary.svg",
+      "role": "wordmark",
+      "variant": "primary",
+      "bytes": 5513,
+      "sha256": "1f84ff3cf41639342957ae9ba58258c87463a253e2699cadd0172d9189b574b8",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/wordmark-teal.svg",
+      "role": "wordmark",
+      "variant": "teal",
+      "bytes": 5513,
+      "sha256": "2a890ab78daafae85978777bde9a3f32aa0f007ce0bdc65a54e55087e771e39e",
+      "format": "svg"
+    },
+    {
+      "path": "brand/source/wordmark-white.svg",
+      "role": "wordmark",
+      "variant": "white",
+      "bytes": 5513,
+      "sha256": "4dd32831693b5b1142c59a5b094dc8fbe9128bf35c41a6fcd908479cb66c85fe",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/cover-linkedin-dark.svg",
+      "role": "social-template",
+      "variant": "cover-linkedin-dark",
+      "bytes": 26788,
+      "sha256": "feb77c52f51754fe8ff8f9f96faff350a31b7304225bcd1ebf3823d3b402c4ae",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/cover-linkedin-light.svg",
+      "role": "social-template",
+      "variant": "cover-linkedin-light",
+      "bytes": 26789,
+      "sha256": "548421f43ff547231050541eeb01ffb581dabee287fb0c365726752469d182aa",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/cover-x-dark.svg",
+      "role": "social-template",
+      "variant": "cover-x-dark",
+      "bytes": 26571,
+      "sha256": "b41a173b109a7b0be907a8f7a03070a65196ea7859f266b0a3721dec861f4c0f",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/cover-x-light.svg",
+      "role": "social-template",
+      "variant": "cover-x-light",
+      "bytes": 26572,
+      "sha256": "4ff368227bf0270b1fff0fe52a621793762c8e8709cd7a4bdcb0a69d63d9e7a1",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/email-header-dark.svg",
+      "role": "email-header-template",
+      "variant": "dark",
+      "bytes": 26047,
+      "sha256": "deaee7aac60aca429283882d561eec93e5136d85180fc941470b3cd0906f767a",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/email-header-light.svg",
+      "role": "email-header-template",
+      "variant": "light",
+      "bytes": 26048,
+      "sha256": "daafcc5c4908f4fd60d98c11a8f71cf5e5c7ffddbc8c8a0f72f77c1c450d2359",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/github-preview-dark.svg",
+      "role": "social-template",
+      "variant": "github-preview-dark",
+      "bytes": 49656,
+      "sha256": "793f874b335ff4851768719665044def94cfa8cacc429850fafc06092631c532",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/github-preview-light.svg",
+      "role": "social-template",
+      "variant": "github-preview-light",
+      "bytes": 49657,
+      "sha256": "62c2e36ed0112d261c229c863976000e7aa6af41683d1761522128fc10ceaa11",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/guidelines-1.svg",
+      "role": "guideline-page",
+      "variant": "default",
+      "bytes": 95188,
+      "sha256": "73261b239894248c46fdd9c87b3bd8b55412b9a4c829f3ce6d95ffcf0290ad05",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/guidelines-2.svg",
+      "role": "guideline-page",
+      "variant": "default",
+      "bytes": 186369,
+      "sha256": "d4eab8a68ce5dd1b0d42a487a3c375340c22041bd94278c7e2db44f0aca1e72b",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/guidelines-3.svg",
+      "role": "guideline-page",
+      "variant": "default",
+      "bytes": 139214,
+      "sha256": "8f291165a7558d68e9a18b52c0f385cea71ddd6b3583231e8789ef37f8e8c00b",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/guidelines-4.svg",
+      "role": "guideline-page",
+      "variant": "default",
+      "bytes": 155756,
+      "sha256": "46ce8e9b3a2b4c6cc89fa552943e757d288c343899ea65b56b811df21cdf96f2",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/guidelines-5.svg",
+      "role": "guideline-page",
+      "variant": "default",
+      "bytes": 197958,
+      "sha256": "2a17651fe29adb3b5de9d0f475bf8aaa48e9d15bf6e7cef6c68debfacb8f42c7",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/guidelines-6.svg",
+      "role": "guideline-page",
+      "variant": "default",
+      "bytes": 291043,
+      "sha256": "0296aeef5b7b84bc55594ad64d5f57e5d37e655286f3535915f440a2d5e80ddb",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/landscape-dark.svg",
+      "role": "social-template",
+      "variant": "landscape-dark",
+      "bytes": 46045,
+      "sha256": "cf63b197ca00950e5a814a65388f0325f8e5cc35c803286edafd84ae59e3cb29",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/landscape-light.svg",
+      "role": "social-template",
+      "variant": "landscape-light",
+      "bytes": 46046,
+      "sha256": "1f36c110d527b98b82966fc17a426befe49736a9dbca7cf4b515dd46764d33e0",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/og-dark.svg",
+      "role": "social-template",
+      "variant": "og-dark",
+      "bytes": 46085,
+      "sha256": "55e67143d3c0a07cb3858bf29d585b441ffe47f090404f66307a1f037f66e6dd",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/og-light.svg",
+      "role": "social-template",
+      "variant": "og-light",
+      "bytes": 46086,
+      "sha256": "d93677155ca92a1ecda604fc17952a3e296aaa476503357d428b15612a06ca98",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/portrait-dark.svg",
+      "role": "social-template",
+      "variant": "portrait-dark",
+      "bytes": 45677,
+      "sha256": "a93e1d7f89000bdcca95556eb73e3b2e2b8191b3901765fd3e674973874e43c5",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/portrait-light.svg",
+      "role": "social-template",
+      "variant": "portrait-light",
+      "bytes": 45678,
+      "sha256": "034af77399eaac5a8fb5da9e84501928566f36e8404cf9d3d0f0b3e474782fd1",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/readme-banner-dark.svg",
+      "role": "social-template",
+      "variant": "readme-banner-dark",
+      "bytes": 26797,
+      "sha256": "926522638adb118d2dce210726d949848dd0fec890c55ac974da5a60568ee65d",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/readme-banner-light.svg",
+      "role": "social-template",
+      "variant": "readme-banner-light",
+      "bytes": 26798,
+      "sha256": "a82015193a329986cbea6361fb94548b328c6978e70816f83381f542c64e54e1",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/square-dark.svg",
+      "role": "social-template",
+      "variant": "square-dark",
+      "bytes": 45673,
+      "sha256": "6a3b569dc0950115e59b14b5cda1ab9fd667f20291e7a246bc63965d80ad5e72",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/square-light.svg",
+      "role": "social-template",
+      "variant": "square-light",
+      "bytes": 45674,
+      "sha256": "f99016e110d4949e200d45fe8887eb40e54abadb9dd40106efe80146bc0febb8",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/story-dark.svg",
+      "role": "social-template",
+      "variant": "story-dark",
+      "bytes": 61093,
+      "sha256": "04eafeb040fd33fa0f2653957fa99dd79140c400ddadc4f8c2ee542f7c6ff745",
+      "format": "svg"
+    },
+    {
+      "path": "brand/templates/story-light.svg",
+      "role": "social-template",
+      "variant": "story-light",
+      "bytes": 61094,
+      "sha256": "16a941557325b6c1d388620e078740cdbcfea0ccd7fc009e274e1bd89a3f04d1",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/email/header-dark.png",
+      "role": "email-header",
+      "variant": "dark",
+      "bytes": 23333,
+      "sha256": "f4e9df62df6d656d95cd76c371add23c9ffc518d5eac687cba4e8b3a500c1afc",
+      "format": "png",
+      "width": 1200,
+      "height": 320
+    },
+    {
+      "path": "public/brand/email/header-light.png",
+      "role": "email-header",
+      "variant": "light",
+      "bytes": 23487,
+      "sha256": "7041c31050798bf203eba9e95f6730c1487f96d225b3cc8d2a0a966cc67644aa",
+      "format": "png",
+      "width": 1200,
+      "height": 320
+    },
+    {
+      "path": "public/brand/email/logo-badge-480.png",
+      "role": "email-logo",
+      "variant": "badge",
+      "bytes": 6545,
+      "sha256": "626ee30ece91ee52195bf7de6cd4f8f6b2c366560f0438d862ec66d02223f089",
+      "format": "png",
+      "width": 480,
+      "height": 144
+    },
+    {
+      "path": "public/brand/email/logo-ink-320.png",
+      "role": "email-logo",
+      "variant": "ink",
+      "bytes": 4660,
+      "sha256": "216e71367d9890e892f32d2bc839158bf54a5ba4ff40aea068335686afad324d",
+      "format": "png",
+      "width": 320,
+      "height": 72
+    },
+    {
+      "path": "public/brand/email/logo-ink-480.png",
+      "role": "email-logo",
+      "variant": "ink",
+      "bytes": 7155,
+      "sha256": "ed8eca5b0012a83403651d70cc8717954d4bcac280d992e37d7b3450ede8c159",
+      "format": "png",
+      "width": 480,
+      "height": 108
+    },
+    {
+      "path": "public/brand/email/logo-primary-320.png",
+      "role": "email-logo",
+      "variant": "primary",
+      "bytes": 5134,
+      "sha256": "fa5d013acb468ee82e6741d8485cf95a100b59380cf8b33ca7bf383370da0807",
+      "format": "png",
+      "width": 320,
+      "height": 72
+    },
+    {
+      "path": "public/brand/email/logo-primary-480.png",
+      "role": "email-logo",
+      "variant": "primary",
+      "bytes": 7766,
+      "sha256": "a8d04af38041e08bb6fb6077e39617cfc8eb831a85172787c4c5aec8abbe085e",
+      "format": "png",
+      "width": 480,
+      "height": 108
+    },
+    {
+      "path": "public/brand/email/logo-white-320.png",
+      "role": "email-logo",
+      "variant": "white",
+      "bytes": 3853,
+      "sha256": "32a386a71bb9645ff889996b38fd381311a8391f15a46e38aaa317a73bbacb71",
+      "format": "png",
+      "width": 320,
+      "height": 72
+    },
+    {
+      "path": "public/brand/email/logo-white-480.png",
+      "role": "email-logo",
+      "variant": "white",
+      "bytes": 5967,
+      "sha256": "514e4c9c41c60ad708a4de471cdb694015f646c7519f1ceff354c547a0688f21",
+      "format": "png",
+      "width": 480,
+      "height": 108
+    },
+    {
+      "path": "public/brand/icons/apple-touch-icon.png",
+      "role": "apple-icon",
+      "variant": "dark",
+      "bytes": 2868,
+      "sha256": "704d4c2a8aadb7b33f2777847f29d1dbbfde48bd0416edd2b9c6d8fcb7390881",
+      "targetPath": "public/apple-touch-icon.png",
+      "format": "png",
+      "width": 180,
+      "height": 180
+    },
+    {
+      "path": "public/brand/icons/favicon.ico",
+      "role": "favicon",
+      "variant": "ico",
+      "bytes": 2195,
+      "sha256": "0f965b45f8f15484e9004115ee83c4361cdfd80efd71a4a0f94cc260107f108d",
+      "sizes": [
+        16,
+        32,
+        48
+      ],
+      "targetPath": "public/favicon.ico",
+      "format": "ico"
+    },
+    {
+      "path": "public/brand/icons/favicon.svg",
+      "role": "favicon",
+      "variant": "adaptive",
+      "bytes": 514,
+      "sha256": "4e7c1e2459a222aaa1363cbae22ddbe01a500f0696b72dc41bffe928b48b2324",
+      "targetPath": "public/icon.svg",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/icons/icon-any-192.png",
+      "role": "pwa-icon",
+      "variant": "any",
+      "bytes": 3094,
+      "sha256": "304843bded31ecd48b1fa66b1920aaaeb1516a16cb68314e35a9e1799c372329",
+      "purpose": "any",
+      "format": "png",
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "public/brand/icons/icon-any-512.png",
+      "role": "pwa-icon",
+      "variant": "any",
+      "bytes": 9523,
+      "sha256": "61e9ce2339417623df0655b63464d83f7fe389ebda3d092a5c0c180cae825700",
+      "purpose": "any",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "public/brand/icons/icon-maskable-192.png",
+      "role": "pwa-icon",
+      "variant": "maskable",
+      "bytes": 2753,
+      "sha256": "85652789fab1010ba6b1ab3622a92a9c6ddf787431785cf91f7a7c7ff9bcf06e",
+      "purpose": "maskable",
+      "format": "png",
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "public/brand/icons/icon-maskable-512.png",
+      "role": "pwa-icon",
+      "variant": "maskable",
+      "bytes": 8398,
+      "sha256": "f77dd3b8c2eea6a0739cb6c65d4a6a14796b994d20ee596bc9390cb51b9eafff",
+      "purpose": "maskable",
+      "format": "png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "public/brand/icons/notification-192.png",
+      "role": "notification-icon",
+      "variant": "dark",
+      "bytes": 3094,
+      "sha256": "304843bded31ecd48b1fa66b1920aaaeb1516a16cb68314e35a9e1799c372329",
+      "format": "png",
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "public/brand/logo/horizontal-dark.svg",
+      "role": "horizontal",
+      "variant": "dark",
+      "bytes": 5962,
+      "sha256": "904c609fcc38fc3a73ba8b84e54a6648cd46f22d7cf8a5f29bf2ecd44602e7da",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/horizontal-ink.svg",
+      "role": "horizontal",
+      "variant": "ink",
+      "bytes": 5962,
+      "sha256": "ff70f332246a4ecb3c1a726a19dd0409bdade39c6311d0208aeaffb53aeb8715",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/horizontal-primary.svg",
+      "role": "horizontal",
+      "variant": "primary",
+      "bytes": 5962,
+      "sha256": "10f750f05b79daf74c283b531628db1a4fa8be3a65ee218ad389ca2e06242fa3",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/horizontal-teal.svg",
+      "role": "horizontal",
+      "variant": "teal",
+      "bytes": 5962,
+      "sha256": "ed8c57893b71aced87bd17249ce5fc6474f81cdbfc71e8b41145012a6c0bac24",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/horizontal-white.svg",
+      "role": "horizontal",
+      "variant": "white",
+      "bytes": 5962,
+      "sha256": "8eb05920bfd0370155ed74873ce7c63816b5d695a87575ad0b20ef66a4677306",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-dark.svg",
+      "role": "symbol",
+      "variant": "dark",
+      "bytes": 526,
+      "sha256": "49346ffd95f64d414c2369f09a7a775689545afac955133a9f66ef38b2aa21eb",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-ink.svg",
+      "role": "symbol",
+      "variant": "ink",
+      "bytes": 526,
+      "sha256": "32fe4869b3b56c7aefde64245393f3f80fe597cd945fe6518f040414cedb13b7",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-micro-dark.svg",
+      "role": "symbol-micro",
+      "variant": "dark",
+      "bytes": 456,
+      "sha256": "3a57cdeb0babee3ba0b6e9118a876d3d669b98c1b131b290d184a8d6099b101b",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-micro-ink.svg",
+      "role": "symbol-micro",
+      "variant": "ink",
+      "bytes": 456,
+      "sha256": "03f157523538cc9df1daf6cd34468669f4aaf22294362fa6e8f32325ee5c5bc5",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-micro-primary.svg",
+      "role": "symbol-micro",
+      "variant": "primary",
+      "bytes": 456,
+      "sha256": "f112f0b56a38bfd6b4c69f703152649717431ba5f45aaa32918a6e504a129c46",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-micro-teal.svg",
+      "role": "symbol-micro",
+      "variant": "teal",
+      "bytes": 456,
+      "sha256": "7ebc2c3f1df09c2af2b0cbffee1d3dd1aa3fececbef75416422da691b4327d60",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-micro-white.svg",
+      "role": "symbol-micro",
+      "variant": "white",
+      "bytes": 456,
+      "sha256": "806f0e962d638bcacb2e2c51f58755782c12a83b897d6419cd9ce456721c9bb4",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-primary.svg",
+      "role": "symbol",
+      "variant": "primary",
+      "bytes": 526,
+      "sha256": "2e324831f2d7e823db57403692b7d5b1cf83942a0086ce12a92670f3550d1f90",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-teal.svg",
+      "role": "symbol",
+      "variant": "teal",
+      "bytes": 526,
+      "sha256": "e5681e4f93dbabaab18ce4061ff1460fbbd0eaf9dc6addf586dd5082563d1e8c",
+      "format": "svg"
+    },
+    {
+      "path": "public/brand/logo/symbol-white.svg",
+      "role": "symbol",
+      "variant": "white",
+      "bytes": 526,
+      "sha256": "d8ec29a1557f0307fa5a7145eed24dcbabe522bba3bce3d3877ddbd38a188e04",
+      "format": "svg"
+    }
+  ]
+}

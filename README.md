@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="brand/exports/repository/readme-banner-dark.png">
+  <img alt="FocusKept: quiet company, focus kept" src="brand/exports/repository/readme-banner-light.png" width="800">
+</picture>
+
 # FocusKept
 
 FocusKept is an open-source virtual coworking and body doubling app. Book a time, get paired with a partner, say your goal, work on camera, and report back at the end. Sessions last 25, 50, or 75 minutes. Video is never recorded. The product name comes from configuration and defaults to FocusKept.
@@ -15,8 +20,8 @@ Use the hosted version at [focuskept.com](https://focuskept.com) or run your own
 
 ## Screenshots
 
-| Landing page | Booking calendar | Session room |
-| --- | --- | --- |
+| Landing page                               | Booking calendar                                          | Session room                                          |
+| ------------------------------------------ | --------------------------------------------------------- | ----------------------------------------------------- |
 | ![Landing page](docs/screenshots/home.png) | ![Weekly booking calendar](docs/screenshots/calendar.png) | ![Session room with goals](docs/screenshots/room.png) |
 
 The room screenshot uses the browser's test camera.
@@ -89,6 +94,12 @@ Integration and browser tests use an isolated database whose name ends in `_test
 - pg-boss background worker.
 - Cloudflare Realtime or LiveKit for video.
 - next-intl for localization.
+
+## Branding
+
+Self-hosted deployments set their own name and logo at runtime with `APP_NAME`, `LOGO_URL`, and `SUPPORT_EMAIL`, and their colors in `src/config/brand.css`; see [SELF_HOSTING.md](SELF_HOSTING.md#branding). The same image works for any identity: with a custom name, emails and share images show that name as text instead of the FocusKept wordmark.
+
+The FocusKept identity (**Side by Side**) lives in [`brand/`](brand/README.md): logo and icon downloads (SVG, PNG, PDF), social and repository images, tokens, and the [usage guide](docs/brand/usage.md). `pnpm brand:generate` rebuilds every asset from one geometry and token source, and `pnpm brand:check` verifies them. The artwork is covered by this repository's license; Figtree and Big Shoulders are separate font software under the SIL Open Font License 1.1 ([notices](brand/fonts/README.md)).
 
 ## Contributing
 

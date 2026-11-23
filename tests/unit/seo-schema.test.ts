@@ -27,12 +27,26 @@ describe("SEO Structured Data (Schema.org)", () => {
     expect(org["@type"]).toBe("Organization");
     expect(org.name).toBe("FocusKept");
     expect(org.url).toBe("https://focuskept.com/");
-    expect(org.logo).toBe("https://focuskept.com/icon.svg");
+    expect(org.logo).toBe(
+      "https://focuskept.com/brand/icons/icon-any-512.png",
+    );
     expect(org.email).toBe("support@focuskept.com");
     expect(org.sameAs).toEqual([
       "https://twitter.com/focuskept",
       "https://github.com/gojayevmurad/focuskept",
     ]);
+  });
+
+  it("keeps a deployment LOGO_URL as the organization logo", () => {
+    expect(
+      buildOrganizationSchema({ ...app, logoUrl: "/custom/logo.png" }).logo,
+    ).toBe("https://focuskept.com/custom/logo.png");
+    expect(
+      buildOrganizationSchema({
+        ...app,
+        logoUrl: "https://cdn.example.com/logo.png",
+      }).logo,
+    ).toBe("https://cdn.example.com/logo.png");
   });
 
   it("builds valid WebSite schema with inLanguage and publisher", () => {

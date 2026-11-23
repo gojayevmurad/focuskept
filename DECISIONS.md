@@ -78,3 +78,7 @@ Focus stats on the public page and share cards are off until the person turns th
 ## D19. The Lanes look
 
 The interface follows one visual world: lap swimming lanes. Each person works in their own lane, next to someone, on one pace clock, which is what body doubling is. The pace clock shows the session phases, a lane rope separates partners, the booking grid reads like a pool's lane schedule, and type is Big Shoulders for display and Figtree for text. The full system is in `docs/DESIGN.md`. It replaced the generic cream-and-green starter look.
+
+## D20. Side by Side identity
+
+The logo is two paths side by side with a channel between them, inside the Lanes world. The kit in `brand/` is the single source: one geometry and token file generate the SVG/PNG/PDF exports, and the React logo, next/og cards and emails read the same values. Countdowns use Figtree 600 because Big Shoulders has no equal-width digits. Deployment identity stays runtime config: a custom `APP_NAME` or `LOGO_URL` never shows the FocusKept wordmark, and the server never fetches `LOGO_URL`. Usage rules are in `docs/brand/usage.md`.

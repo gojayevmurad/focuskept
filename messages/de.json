@@ -508,7 +508,14 @@
     "openSettings": "In den Einstellungen ändern",
     "story": "Story-Format",
     "square": "Quadratisch",
-    "shareButton": "Teilen"
+    "shareButton": "Teilen",
+    "card": {
+      "month": "{name} im {month}",
+      "hours": "{count, plural, one {Stunde} other {Stunden}}",
+      "line": "konzentrierte Arbeit, mit jemandem an meiner Seite.",
+      "sessions": "{count, plural, one {# Session} other {# Sessions}}",
+      "streak": "{count, plural, one {# Tag in Folge} other {# Tage in Folge}}"
+    }
   },
   "invite": {
     "title": "Freunde einladen",

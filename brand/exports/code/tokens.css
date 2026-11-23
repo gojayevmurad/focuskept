@@ -1,0 +1,40 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+/* Generated from brand/tokens.json. Review integration mapping before use. */
+:root {
+  --brand-background: #f4f8fa;
+  --brand-surface: #ffffff;
+  --brand-surface-raised: #eaf1f4;
+  --brand-text: #102f43;
+  --brand-muted: #465e6b;
+  --brand-subtle: #4e6572;
+  --brand-accent: #08646b;
+  --brand-accent-ink: #ffffff;
+  --brand-accent-hover: #07585e;
+  --brand-lane: #e9f4f6;
+  --brand-border: #d3e0e6;
+  --brand-border-strong: #748b98;
+  --brand-danger: #a82c40;
+  --brand-success: #22634d;
+  --brand-warning: #725922;
+  --brand-timing: #d23b4e;
+  --brand-timing-secondary: #96731a;
+}
+[data-theme="dark"] {
+  --brand-background: #081c2a;
+  --brand-surface: #102b3c;
+  --brand-surface-raised: #193747;
+  --brand-text: #edf6fa;
+  --brand-muted: #c0d2dc;
+  --brand-subtle: #a8bfcc;
+  --brand-accent: #7bcdd2;
+  --brand-accent-ink: #082735;
+  --brand-accent-hover: #8bd3d7;
+  --brand-lane: #123543;
+  --brand-border: #2d4b5c;
+  --brand-border-strong: #668595;
+  --brand-danger: #ffa6b1;
+  --brand-success: #9bd9be;
+  --brand-warning: #dac58e;
+  --brand-timing: #ff7182;
+  --brand-timing-secondary: #dfbd45;
+}

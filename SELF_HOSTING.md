@@ -58,7 +58,18 @@ Only enable this profile when using self-hosted LiveKit. Our hosted deployment u
 
 `MARKETING_ENABLED=false` turns off landing and SEO pages; `/` goes to sign-in. `SIGNUPS_MODE=open` allows registration, `invite` requires an invitation, and `closed` disables new signups. Existing users can still sign in.
 
-Set `APP_NAME`, `LOGO_URL` and `SUPPORT_EMAIL` for branding. `ADMIN_EMAILS` is a comma-separated list of administrator email addresses.
+`ADMIN_EMAILS` is a comma-separated list of administrator email addresses.
+
+## Branding
+
+`APP_NAME`, `LOGO_URL` and `SUPPORT_EMAIL` are read at runtime, so one image can serve any identity:
+
+- `APP_NAME` is shown as text everywhere: headers, page titles, the install manifest, emails, and link and share images.
+- `LOGO_URL` (any image URL or a path under `public/`) replaces the built-in symbol in the site header, app sidebar, onboarding and session room, and becomes the Organization logo in structured data. It is shown with a plain `<img>`, so SVG works there. It is never fetched by the server: emails and generated link/share images show the name as text when `LOGO_URL` is set, because mail clients and the image renderer cannot rely on an arbitrary SVG or remote host.
+- The FocusKept lockup appears in emails only when the name is `FocusKept` and `LOGO_URL` is empty.
+- Colors live in `src/config/brand.css` (`--accent` and the built-in symbol's `--logo-mark` colors). `pnpm setup --color #RRGGBB` rewrites only those declarations and keeps the rest of the file.
+
+Browser icons (`/favicon.ico`, `/icon.svg`, `/apple-touch-icon.png`), install icons under `/brand/icons/`, and the push notification icon are static files. To use your own, replace those files in `public/` and rebuild the image.
 
 ## Environment variables
 

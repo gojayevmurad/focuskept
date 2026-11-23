@@ -36,6 +36,7 @@ export default async function Page({
     <Room
       initial={state}
       appName={app.name}
+      logoUrl={app.logoUrl}
       provider={app.videoProvider}
       microphoneDefault={profile.microphoneDefault}
       timeZone={profile.timezone}
