@@ -6,6 +6,7 @@ import { adminEmails, getAppConfig } from "@/src/config/app";
 import { db } from "@/src/lib/db";
 import { emailPreview } from "@/src/lib/db/schema";
 import { logger } from "@/src/lib/logger";
+import { emailBrand } from "@/src/lib/email/brand";
 import { EmailLayout } from "@/src/lib/notifications/email-layout";
 
 export async function notifyAdminsOfTicket(ticket: {
@@ -58,7 +59,7 @@ export async function notifyAdminsOfTicket(ticket: {
           subject: title,
           text: lines.join("\n\n"),
           react: EmailLayout({
-            appName: app.name,
+            brand: emailBrand(app),
             preview: `Support: ${ticket.subject}`,
             heading: `Support Ticket: ${ticket.category}`,
             lines,

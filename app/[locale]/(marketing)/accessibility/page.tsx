@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: LocaleProps) {
   const app = getAppConfig();
   return pageMetadata(
     t("title", { app: app.name }),
-    t("lead"),
+    t("lead", { app: app.name }),
     "/accessibility",
     locale,
   );
@@ -35,7 +35,7 @@ export default async function AccessibilityPage({ params }: LocaleProps) {
       <article className={styles.article}>
         <header className={styles.pageHead}>
           <h1>{t("heading")}</h1>
-          <p className={styles.lead}>{t("lead")}</p>
+          <p className={styles.lead}>{t("lead", { app: app.name })}</p>
           <p className={styles.updated}>{t("updated")}</p>
         </header>
 

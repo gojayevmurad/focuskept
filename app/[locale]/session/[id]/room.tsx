@@ -129,6 +129,7 @@ async function post(path: string, body?: unknown) {
 export function Room(props: {
   initial: RoomState;
   appName: string;
+  logoUrl?: string;
   provider: VideoProviderName;
   microphoneDefault: boolean;
   timeZone: string;
@@ -465,7 +466,13 @@ export function Room(props: {
     <div className={styles.room}>
       <header className={styles.top}>
         <div className={styles.sessionTitle}>
-          <LogoMark size={22} />
+          {props.logoUrl ? (
+            // Deployment logo (LOGO_URL); the session title next to it is the label.
+            // eslint-disable-next-line @next/next/no-img-element
+            <img className={styles.roomLogo} src={props.logoUrl} alt="" />
+          ) : (
+            <LogoMark size={24} />
+          )}
           <div className={styles.stackSmall}>
             <strong>
               {state.session.title ??

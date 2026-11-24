@@ -29,7 +29,10 @@
     "worker:once": "node scripts/build-worker.mjs && node --env-file-if-exists=.env.local .worker.cjs --once",
     "spdx": "node scripts/spdx.mjs",
     "spdx:check": "node scripts/spdx.mjs --check",
-    "i18n:check": "node scripts/i18n-check.mjs"
+    "i18n:check": "node scripts/i18n-check.mjs",
+    "brand:generate": "node scripts/brand/generate.mjs",
+    "brand:export": "node scripts/brand/generate.mjs --export",
+    "brand:check": "node scripts/brand/check.mjs"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "1.7.8",

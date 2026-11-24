@@ -28,10 +28,20 @@ export default async function FaqPage({ params }: LocaleProps) {
   setRequestLocale(locale);
   requireMarketing();
   const t = await getTranslations("faqPage");
+  const app = getAppConfig();
   const groups = (t.raw("groups") as { title: string; items: Faq[] }[]).map(
     (group, index) =>
-      index === 0 && !getAppConfig().billingEnabled
-        ? { ...group, items: [t.raw("earlyAccess") as Faq, ...group.items] }
+      index === 0 && !app.billingEnabled
+        ? {
+            ...group,
+            items: [
+              {
+                q: t("earlyAccess.q", { app: app.name }),
+                a: t("earlyAccess.a", { app: app.name }),
+              },
+              ...group.items,
+            ],
+          }
         : group,
   );
   const allFaqs = groups.flatMap((group) => group.items);

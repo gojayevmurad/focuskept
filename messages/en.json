@@ -116,7 +116,7 @@
     "goal": "What do you want to get done?",
     "goalPlaceholder": "Finish my thesis draft by March",
     "segments": "What kind of work do you do? Pick any.",
-    "heardFrom": "Where did you hear about FocusKept?",
+    "heardFrom": "Where did you hear about {app}?",
     "heardFromHint": "Optional — you can skip this question.",
     "heardFromOther": "Other source (optional)",
     "heardFromClear": "Clear answer",
@@ -277,7 +277,7 @@
     "manage": "Manage",
     "empty": "Nothing booked. Good times coming up:",
     "waiting": "{count} waiting",
-    "firstRunTitle": "How FocusKept works",
+    "firstRunTitle": "How {app} works",
     "firstRunLead": "Body doubling in quiet swimming lanes: a partner beside you, zero conversation overhead.",
     "firstRunStep1Title": "1. Book a lane",
     "firstRunStep1Desc": "Pick 25, 50, or 75 minutes. Sessions start on the hour and half-hour.",
@@ -508,7 +508,14 @@
     "openSettings": "Change in Settings",
     "story": "Story size",
     "square": "Square",
-    "shareButton": "Share"
+    "shareButton": "Share",
+    "card": {
+      "month": "{name} in {month}",
+      "hours": "{count, plural, one {hour} other {hours}}",
+      "line": "of focused work, with a partner beside me.",
+      "sessions": "{count, plural, one {# session} other {# sessions}}",
+      "streak": "{count, plural, one {#-day streak} other {#-day streak}}"
+    }
   },
   "invite": {
     "title": "Invite friends",
@@ -535,9 +542,9 @@
     "shareWhatsApp": "Share on WhatsApp",
     "shareEmail": "Share via Email",
     "copiedFeedback": "Invite link copied to clipboard",
-    "shareMessage": "I've been using FocusKept for virtual coworking and body doubling — quiet 25, 50, or 75-minute video focus sessions with a partner. Try it with my link:",
-    "emailSubject": "Focus with me on FocusKept",
-    "emailBody": "Hey,\n\nI've been using FocusKept for virtual coworking and body doubling. It pairs you with a partner on video so you both say your goal and focus quietly.\n\nSign up with my link and you'll get a free month of Plus when you finish your first session:"
+    "shareMessage": "I've been using {app} for virtual coworking and body doubling — quiet 25, 50, or 75-minute video focus sessions with a partner. Try it with my link:",
+    "emailSubject": "Focus with me on {app}",
+    "emailBody": "Hey,\n\nI've been using {app} for virtual coworking and body doubling. It pairs you with a partner on video so you both say your goal and focus quietly.\n\nSign up with my link and you'll get a free month of Plus when you finish your first session:"
   },
   "publicProfile": {
     "host": "Host",
@@ -885,8 +892,8 @@
       }
     ],
     "earlyAccess": {
-      "q": "Is FocusKept free during early access?",
-      "a": "Early access: FocusKept is free while we grow. Later the free plan will include 3 sessions a week, and everyone who joins during early access gets 3 months of Plus free."
+      "q": "Is {app} free during early access?",
+      "a": "Early access: {app} is free while we grow. Later the free plan will include 3 sessions a week, and everyone who joins during early access gets 3 months of Plus free."
     }
   },
   "pricing": {
@@ -1148,7 +1155,7 @@
   },
   "walkthrough": {
     "title": "How a session works",
-    "subtitle": "A 60-second visual walkthrough of body doubling in FocusKept.",
+    "subtitle": "A 60-second visual walkthrough of body doubling in {app}.",
     "close": "Close walkthrough",
     "play": "Play walkthrough",
     "pause": "Pause walkthrough",
@@ -1192,9 +1199,9 @@
       "settings": "Manage email preferences in Settings"
     },
     "welcome": {
-      "subject": "Welcome to FocusKept — what to expect",
-      "heading": "Welcome to FocusKept",
-      "line1": "FocusKept pairs you 1:1 on video to get your most important work done in quiet focus lanes.",
+      "subject": "Welcome to {appName} — what to expect",
+      "heading": "Welcome to {appName}",
+      "line1": "{appName} pairs you 1:1 on video to get your most important work done in quiet focus lanes.",
       "line2": "Sessions start on the hour and half-hour. Cameras stay on, you share your goal in the first minute, mute your mic, and focus heads-down.",
       "line3": "You get three free sessions every week. Pick a 25, 50, or 75-minute slot to try your first session.",
       "cta": "Book your first session"
@@ -1202,7 +1209,7 @@
     "nudgeFirstBooking": {
       "subject": "Ready for your first focus session?",
       "heading": "Get your first session on the calendar",
-      "line1": "It takes less than a minute to book your first session on FocusKept.",
+      "line1": "It takes less than a minute to book your first session on {appName}.",
       "line2": "Whether you are writing, studying, tackling admin work, or coding, having a quiet partner waiting makes starting effortless.",
       "line3": "Free cancellation is available up to an hour before the session starts.",
       "cta": "Find a time"
@@ -1227,7 +1234,7 @@
     "winBack": {
       "subject": "Jump back into a focus session",
       "heading": "We saved your focus lane",
-      "line1": "It has been two weeks since your last focus session on FocusKept.",
+      "line1": "It has been two weeks since your last focus session on {appName}.",
       "line2": "If you have a project you have been putting off or need an hour of dedicated, quiet momentum, jump back in.",
       "line3": "Your three free sessions reset every week.",
       "cta": "Book a slot"
@@ -1288,7 +1295,7 @@
   },
   "contact": {
     "title": "Contact support | {app}",
-    "description": "Get in touch with the FocusKept team for help with your account, sessions, or bug reports.",
+    "description": "Get in touch with the {app} team for help with your account, sessions, or bug reports.",
     "heading": "Contact support",
     "lead": "Have a question, feedback, or need help? Send us a message and we'll get back to you.",
     "name": "Your name",
@@ -1327,7 +1334,7 @@
   "cookiesPage": {
     "title": "Cookies and browser storage | {app}",
     "heading": "Cookies & browser storage",
-    "lead": "FocusKept is built with privacy by default. We do not use third-party advertising cookies or cross-site tracking profiles.",
+    "lead": "{app} is built with privacy by default. We do not use third-party advertising cookies or cross-site tracking profiles.",
     "updated": "Last updated: November 22, 2026",
     "overview": "Overview",
     "overviewText": "We use only essential cookies by default to keep you securely signed in and remember your language preference. Functional browser storage is used strictly to store your interface settings such as color theme. If analytics is enabled, PostHog operates in a cookieless mode before consent, and optional usage metrics are sent only after you explicitly opt in.",
@@ -1361,10 +1368,10 @@
     "rowAnalyticsPurpose": "When consent is granted, captures feature usage events to help us improve the app. Runs cookieless before consent.",
     "rowAnalyticsDuration": "Session / Up to 1 year",
     "rowAnalyticsType": "Optional analytics",
-    "firstParty": "FocusKept (First-party)",
+    "firstParty": "{app} (First-party)",
     "posthog": "PostHog (Self-hosted or EU/US cloud)",
     "manageTitle": "Managing cookies in your browser",
-    "manageText": "You can block or delete cookies at any time through your browser settings. Blocking essential cookies will prevent you from signing in to your FocusKept account."
+    "manageText": "You can block or delete cookies at any time through your browser settings. Blocking essential cookies will prevent you from signing in to your {app} account."
   },
   "legalNoticePage": {
     "title": "Legal notice | {app}",
@@ -1380,12 +1387,12 @@
     "hostingTitle": "Hosting and infrastructure",
     "hostingText": "FocusKept is an open-source body-doubling and virtual coworking web application licensed under AGPL-3.0. Individual deployments may be hosted on independent server infrastructure chosen by the respective operator.",
     "disclaimerTitle": "Disclaimers and copyright",
-    "disclaimerText": "Content on this site is provided for virtual coworking and accountability purposes. FocusKept is not a healthcare provider and does not provide medical or psychological treatment. For medical concerns, please consult a qualified healthcare professional."
+    "disclaimerText": "Content on this site is provided for virtual coworking and accountability purposes. {app} is not a healthcare provider and does not provide medical or psychological treatment. For medical concerns, please consult a qualified healthcare professional."
   },
   "accessibilityPage": {
     "title": "Accessibility statement | {app}",
     "heading": "Accessibility statement",
-    "lead": "FocusKept is designed to provide an inclusive, quiet, and structured focus environment for everyone, including neurodivergent individuals and people with disabilities.",
+    "lead": "{app} is designed to provide an inclusive, quiet, and structured focus environment for everyone, including neurodivergent individuals and people with disabilities.",
     "updated": "Last updated: November 22, 2026",
     "standardTitle": "Our commitment & standard",
     "standardText": "We are committed to digital accessibility and aim to conform with the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA standard.",
@@ -1406,7 +1413,7 @@
   "communityGuidelinesPage": {
     "title": "Community guidelines | {app}",
     "heading": "Community guidelines",
-    "lead": "FocusKept is a quiet, supportive space for focused work. These guidelines ensure every session is safe, respectful, and distraction-free.",
+    "lead": "{app} is a quiet, supportive space for focused work. These guidelines ensure every session is safe, respectful, and distraction-free.",
     "updated": "Last updated: November 22, 2026",
     "principlesTitle": "Core principles",
     "principleRespect": "Mutual respect: Treat every focus partner with courtesy and kindness. People join from diverse backgrounds, neurotypes, and professions.",
@@ -1436,7 +1443,7 @@
   "statusPage": {
     "title": "System status | {app}",
     "heading": "System status",
-    "lead": "Live status of FocusKept services, databases, and background task workers.",
+    "lead": "Live status of {app} services, databases, and background task workers.",
     "operational": "All systems operational",
     "degraded": "System performance degraded",
     "webApp": "Web application",

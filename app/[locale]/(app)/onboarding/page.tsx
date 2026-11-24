@@ -43,6 +43,7 @@ export default async function Page() {
         username={profile.username}
         timezone={profile.timezone}
         appUrl={app.url}
+        appName={app.name}
         timezones={Intl.supportedValuesOf("timeZone")}
         slots={slots.map((s) => ({
           startAt: s.startAt.toISOString(),

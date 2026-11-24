@@ -9,7 +9,8 @@ self.addEventListener("push", (event) => {
     self.registration.showNotification(data.title, {
       body: data.body,
       tag: data.tag,
-      icon: "/icon.svg",
+      // PNG: not every platform renders SVG notification icons.
+      icon: "/brand/icons/notification-192.png",
       data: { url: data.url },
     }),
   );

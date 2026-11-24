@@ -1,8 +1,18 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { ImageResponse } from "next/og";
+import { hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { getProfileByUsername } from "@/src/lib/profiles";
 import { userStats } from "@/src/lib/growth/stats";
 import { getAppConfig } from "@/src/config/app";
+import { routing } from "@/src/i18n/routing";
+import {
+  OgIdentity,
+  OgRope,
+  ogFonts,
+  ogLaneGround,
+  ogThemes,
+} from "@/src/lib/brand/og";
 
 export const runtime = "nodejs";
 
@@ -22,12 +32,25 @@ export async function GET(
   const app = getAppConfig();
   const [width, height] = SIZES[format as keyof typeof SIZES];
   const story = format === "story";
-  const month = new Intl.DateTimeFormat("en-US", {
+  // The card speaks the owner's language, not the viewer's, so one cached
+  // image is right for everyone who opens the link.
+  const locale = hasLocale(routing.locales, person.locale)
+    ? person.locale
+    : routing.defaultLocale;
+  const [t, fonts] = await Promise.all([
+    getTranslations({ locale, namespace: "progress.card" }),
+    ogFonts(),
+  ]);
+  const month = new Intl.DateTimeFormat(locale, {
     month: "long",
     timeZone: person.timezone,
   }).format(new Date());
   const hours =
     stats.monthHours >= 10 ? Math.round(stats.monthHours) : stats.monthHours;
+  const theme = ogThemes.dark;
+  const pad = story ? 100 : 84;
+  const site = app.url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+
   return new ImageResponse(
     <div
       style={{
@@ -36,98 +59,114 @@ export async function GET(
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        padding: story ? 110 : 90,
-        background:
-          "linear-gradient(160deg, #173a33 0%, #121614 60%, #3a2e1c 100%)",
-        color: "#ecefe9",
-        fontFamily: "sans-serif",
+        padding: `${pad}px ${pad}px ${story ? 72 : 60}px`,
+        ...ogLaneGround(theme),
+        color: theme.text,
+        fontFamily: "Figtree",
       }}
     >
+      <OgIdentity
+        name={app.name}
+        showMark={!app.logoUrl}
+        theme={theme}
+        size={story ? 80 : 68}
+      />
       <div
         style={{
           display: "flex",
-          alignItems: "center",
-          gap: 24,
-          fontSize: 44,
-          fontWeight: 700,
+          flexDirection: "column",
+          gap: story ? 36 : 20,
         }}
       >
         <div
           style={{
             display: "flex",
-            position: "relative",
-            width: 72,
-            height: 56,
+            fontSize: story ? 52 : 44,
+            color: theme.muted,
+            maxWidth: width - pad * 2,
           }}
         >
-          <div
-            style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              width: 56,
-              height: 56,
-              borderRadius: 999,
-              background: "#2F6F62",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              left: 22,
-              top: 0,
-              width: 56,
-              height: 56,
-              borderRadius: 999,
-              border: "8px solid #D9902F",
-            }}
-          />
+          {t("month", { name: person.displayName, month })}
         </div>
-        {app.name}
+        <div style={{ display: "flex", alignItems: "baseline", gap: 24 }}>
+          <div
+            style={{
+              display: "flex",
+              fontFamily: "Big Shoulders",
+              fontWeight: 700,
+              fontSize: story ? 300 : 230,
+              lineHeight: 0.9,
+            }}
+          >
+            {new Intl.NumberFormat(locale).format(hours)}
+          </div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: story ? 72 : 60,
+              fontWeight: 600,
+            }}
+          >
+            {t("hours", { count: hours })}
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            fontSize: story ? 56 : 46,
+            lineHeight: 1.2,
+            maxWidth: width - pad * 2,
+          }}
+        >
+          {t("line")}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: story ? 20 : 16,
+            marginTop: story ? 24 : 8,
+          }}
+        >
+          {[
+            t("sessions", { count: stats.monthSessions }),
+            t("streak", { count: stats.dailyStreak }),
+          ].map((label) => (
+            <div
+              key={label}
+              style={{
+                display: "flex",
+                padding: story ? "18px 30px" : "14px 26px",
+                borderRadius: 999,
+                backgroundColor: theme.panel,
+                color: theme.accent,
+                fontSize: story ? 44 : 36,
+                fontWeight: 600,
+              }}
+            >
+              {label}
+            </div>
+          ))}
+        </div>
       </div>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: story ? 40 : 24,
+          gap: story ? 28 : 22,
         }}
       >
-        <div
-          style={{ fontSize: story ? 64 : 52, color: "#a9b1ab" }}
-        >{`${person.displayName} in ${month}`}</div>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 24 }}>
-          <div
-            style={{
-              fontSize: story ? 260 : 210,
-              fontWeight: 800,
-              lineHeight: 1,
-            }}
-          >
-            {String(hours)}
-          </div>
-          <div style={{ fontSize: story ? 72 : 60, fontWeight: 600 }}>
-            {hours === 1 ? "hour" : "hours"}
-          </div>
+        <div style={{ display: "flex", fontSize: 36, color: theme.muted }}>
+          {`${site}/u/${person.username}`}
         </div>
-        <div style={{ fontSize: story ? 64 : 52 }}>
-          of focused work, with a partner beside me.
-        </div>
-        <div
-          style={{
-            display: "flex",
-            gap: 48,
-            fontSize: story ? 48 : 40,
-            color: "#e6a74f",
-          }}
-        >
-          <div>{`${stats.monthSessions} sessions`}</div>
-          <div>{`${stats.dailyStreak}-day streak`}</div>
-        </div>
+        <OgRope width={width - pad * 2} theme={theme} />
       </div>
-      <div
-        style={{ fontSize: 40, color: "#a9b1ab" }}
-      >{`${app.url.replace(/^https?:\/\//, "")}/u/${person.username}`}</div>
     </div>,
-    { width, height, headers: { "Cache-Control": "public, max-age=600" } },
+    {
+      width,
+      height,
+      fonts,
+      headers: { "Cache-Control": "public, max-age=600" },
+    },
   );
 }

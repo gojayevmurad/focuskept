@@ -30,6 +30,7 @@ export interface FirstRunGuideProps {
     popular: boolean;
   }>;
   tz: string;
+  appName: string;
 }
 
 export function FirstRunGuide({
@@ -38,6 +39,7 @@ export function FirstRunGuide({
   formattedTime,
   suggestions,
   tz,
+  appName,
 }: FirstRunGuideProps) {
   const t = useTranslations("dashboard");
   const c = useTranslations("common");
@@ -51,7 +53,7 @@ export function FirstRunGuide({
           <h2>
             {hasUpcoming
               ? t("firstRunBookedTitle")
-              : t("firstRunTitle")}
+              : t("firstRunTitle", { app: appName })}
           </h2>
           <button
             type="button"
@@ -217,6 +219,7 @@ export function FirstRunGuide({
       <WalkthroughModal
         open={walkthroughOpen}
         onClose={() => setWalkthroughOpen(false)}
+        appName={appName}
       />
     </section>
   );

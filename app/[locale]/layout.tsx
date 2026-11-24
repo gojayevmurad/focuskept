@@ -10,6 +10,7 @@ import { getAppConfig } from "@/src/config/app";
 import { ConsentBanner } from "@/src/components/consent";
 import { AnalyticsProvider } from "@/src/lib/analytics/provider";
 import { Verification } from "@/src/components/seo/verification";
+import { brandFiles, brandThemes } from "@/src/config/brand-assets";
 
 const display = Big_Shoulders({
   variable: "--font-big-shoulders",
@@ -43,6 +44,17 @@ export async function generateMetadata({
     description: t("description"),
     applicationName: app.name,
     manifest: "/manifest.webmanifest",
+    // Icons are declared here (not app/ file conventions) so each URL has one
+    // source in public/: /favicon.ico, /icon.svg and /apple-touch-icon.png.
+    icons: {
+      icon: [
+        { url: brandFiles.favicon, sizes: "32x32" },
+        { url: brandFiles.iconSvg, type: "image/svg+xml" },
+      ],
+      apple: [
+        { url: brandFiles.appleTouchIcon, sizes: "180x180", type: "image/png" },
+      ],
+    },
     openGraph: { siteName: app.name, type: "website" },
     twitter: { card: "summary_large_image" },
   };
@@ -50,8 +62,14 @@ export async function generateMetadata({
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f4f8fa" },
-    { media: "(prefers-color-scheme: dark)", color: "#081c2a" },
+    {
+      media: "(prefers-color-scheme: light)",
+      color: brandThemes.light.background,
+    },
+    {
+      media: "(prefers-color-scheme: dark)",
+      color: brandThemes.dark.background,
+    },
   ],
 };
 

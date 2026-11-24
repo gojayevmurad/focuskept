@@ -1,15 +1,23 @@
 /* SPDX-License-Identifier: AGPL-3.0-only */
+/* Deployment identity colors. Values match brand/tokens.json (Side by Side kit).
+   `pnpm setup --color` rewrites only the --accent and --logo-* declarations. */
 :root {
   --accent: #08646b;
   --accent-hover: color-mix(in srgb, var(--accent), black 12%);
+  --logo-mark: #08646b;
+  --logo-mark-companion: #3d9fa8;
 }
 [data-theme="dark"] {
   --accent: #7bcdd2;
   --accent-hover: color-mix(in srgb, var(--accent), white 12%);
+  --logo-mark: #7bcdd2;
+  --logo-mark-companion: #b1e3e6;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --accent: #7bcdd2;
     --accent-hover: color-mix(in srgb, var(--accent), white 12%);
+    --logo-mark: #7bcdd2;
+    --logo-mark-companion: #b1e3e6;
   }
 }

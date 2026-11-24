@@ -28,6 +28,9 @@ app/[locale]/u/[username]   Personal booking link
 app/api/                    Route handlers (bookings, sessions, realtime, video, account, webhooks)
 src/i18n/                   next-intl routing and request config
 src/config/                 env (validated), app config (brand, feature flags), brand tokens
+src/config/brand-assets.ts  Browser-safe logo geometry, kit colors and asset URLs (no env)
+src/lib/brand/              next/og helpers: local fonts, mark, card layout pieces
+src/lib/email/              Sending, preview inbox, email identity (brand.ts)
 src/lib/scheduling/         Slot math (UTC :00/:30), week windows, popular times. Pure.
 src/lib/matching/           Pairing algorithm (pure) and the DB runner used by the worker
 src/lib/bookings/           Create, cancel, limits, direct bookings
@@ -42,6 +45,7 @@ src/lib/billing/plan.ts     Plan resolution on top of the boilerplate entitlemen
 worker/                     pg-boss worker process (matching, fallbacks, reminders, completion)
 content/                    SEO data and blog posts (hosted site only)
 messages/                   next-intl message catalogs
+brand/                      Identity kit: sources, tokens, fonts, exports (pnpm brand:generate)
 ```
 
 ### Processes

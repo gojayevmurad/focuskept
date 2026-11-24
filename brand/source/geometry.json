@@ -1,0 +1,14 @@
+{
+  "name": "Side by Side",
+  "viewBox": [0, 0, 100, 108],
+  "left": "M29 8H63C67 8 69 10 68 15L65 31C62 43 54 46 43 46H39C30 46 28 51 26 60L21 83C20 88 17 91 12 91H8C3 91 1 88 2 83L11 31C14 15 18 8 29 8Z",
+  "rightTransform": "translate(100 108) rotate(180)",
+  "microLeft": "M28 8H64Q69 8 68 14L64 33Q61 45 44 45H39Q30 45 27 58L21 84Q20 91 12 91H8Q1 91 3 83L12 30Q16 8 28 8Z",
+  "clearspace": 20,
+  "wordmark": {
+    "text": "FocusKept",
+    "font": "Figtree",
+    "weight": 750,
+    "glyphOffsets": [0, -8, -16, -22, -30, -40, -48, -56, -68]
+  }
+}

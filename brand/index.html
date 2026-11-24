@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FocusKept / Side by Side</title>
+    <style>
+      @font-face {
+        font-family: Figtree;
+        src: url("fonts/Figtree-variable.ttf");
+        font-weight: 300 900;
+        font-display: swap;
+      }
+      :root {
+        color-scheme: light;
+        font-family: Figtree, sans-serif;
+        color: #102f43;
+        background: #f4f8fa;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 48px 24px;
+      }
+      header {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 56px);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        margin: 0 0 14px;
+      }
+      h2 {
+        font-size: 24px;
+        letter-spacing: -0.02em;
+      }
+      p {
+        line-height: 1.6;
+      }
+      .muted {
+        color: #465e6b;
+      }
+      a {
+        color: #08646b;
+        text-underline-offset: 4px;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: #08646b;
+        color: white;
+        text-decoration: none;
+        min-height: 44px;
+      }
+      .button.secondary {
+        color: #102f43;
+        background: white;
+        border: 1px solid #748b98;
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 26px 0;
+      }
+      label {
+        display: grid;
+        gap: 8px;
+        font-weight: 600;
+      }
+      select {
+        font: inherit;
+        color: #102f43;
+        background: white;
+        min-height: 44px;
+        border: 1px solid #748b98;
+        border-radius: 10px;
+        padding: 8px 14px;
+      }
+      .stage {
+        height: 340px;
+        padding: 48px;
+        background: white;
+        border-radius: 18px;
+        border: 1px solid #d3e0e6;
+        display: grid;
+        place-items: center;
+        transition: background 120ms;
+      }
+      .stage.dark {
+        background: #102f43;
+      }
+      .stage img {
+        max-width: 100%;
+        max-height: 240px;
+        width: 640px;
+        height: auto;
+      }
+      .small {
+        margin: 28px 0 48px;
+        display: flex;
+        align-items: baseline;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+      .small figure {
+        margin: 0;
+        min-width: 42px;
+      }
+      .small figcaption {
+        font-size: 14px;
+        color: #465e6b;
+        padding-top: 14px;
+      }
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+        margin-bottom: 48px;
+      }
+      .swatch span {
+        display: block;
+        height: 90px;
+        border-radius: 12px;
+        border: 1px solid #d3e0e6;
+        margin-bottom: 10px;
+      }
+      .swatch strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+      .swatch code {
+        color: #465e6b;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+      .grid img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #d3e0e6;
+        border-radius: 14px;
+      }
+      .grid figure {
+        margin: 0;
+      }
+      .grid figcaption {
+        margin: 12px 0;
+      }
+      footer {
+        border-top: 1px solid #d3e0e6;
+        margin-top: 48px;
+        padding-top: 24px;
+      }
+      :focus-visible {
+        outline: 3px solid #08646b;
+        outline-offset: 4px;
+      }
+      @media (max-width: 640px) {
+        header {
+          display: block;
+        }
+        .stage {
+          height: 230px;
+          padding: 24px;
+        }
+        .swatches {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="muted">Direction A / Side by Side</p>
+          <h1>Quiet company.<br />Focus kept.</h1>
+          <p class="muted">Vector identity kit 1.0.0, integrated into the app.</p>
+        </div>
+        <div class="actions">
+          <a class="button" href="exports/FocusKept-guidelines.pdf"
+            >Brand guidelines</a
+          ><a
+            class="button secondary"
+            href="../docs/brand/integration-prompt.md"
+            >Agent handoff</a
+          >
+        </div>
+      </header>
+      <section aria-labelledby="logo-title">
+        <h2 id="logo-title">Explore the logo</h2>
+        <div class="controls">
+          <label
+            >Layout<select id="layout">
+              <option value="horizontal">Horizontal</option>
+              <option value="symbol">Symbol</option>
+              <option value="symbol-micro">Micro symbol</option>
+              <option value="wordmark">Wordmark</option>
+              <option value="stacked">Stacked</option>
+            </select></label
+          >
+          <label
+            >Color<select id="variant">
+              <option value="primary">Primary</option>
+              <option value="dark">Dark theme</option>
+              <option value="ink">Single ink</option>
+              <option value="white">White</option>
+              <option value="teal">Single teal</option>
+            </select></label
+          >
+          <label
+            >PNG width<select id="size">
+              <option>320</option>
+              <option selected>640</option>
+              <option>1280</option>
+            </select></label
+          >
+        </div>
+        <div class="stage" id="stage">
+          <img
+            id="logo"
+            src="source/horizontal-primary.svg"
+            alt="FocusKept logo"
+          />
+        </div>
+        <div class="actions" style="margin-top: 20px">
+          <a
+            class="button"
+            id="svg-download"
+            href="source/horizontal-primary.svg"
+            download
+            >Download SVG</a
+          ><a
+            class="button secondary"
+            id="png-download"
+            href="exports/logo/horizontal-primary-640.png"
+            download
+            >Download PNG</a
+          >
+        </div>
+        <p class="muted">
+          SVG scales to any size. White and dark-theme artwork is displayed on a
+          dark ground.
+        </p>
+      </section>
+      <h2>Small-size cuts</h2>
+      <div class="small">
+        <figure>
+          <img
+            src="source/symbol-micro-teal.svg"
+            width="16"
+            height="16"
+            alt="16 pixel symbol"
+          />
+          <figcaption>16 px</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="source/symbol-micro-teal.svg"
+            width="20"
+            height="20"
+            alt="20 pixel symbol"
+          />
+          <figcaption>20 px</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="source/symbol-micro-teal.svg"
+            width="24"
+            height="24"
+            alt="24 pixel symbol"
+          />
+          <figcaption>24 px</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="source/symbol-teal.svg"
+            width="32"
+            height="32"
+            alt="32 pixel symbol"
+          />
+          <figcaption>32 px</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="source/symbol-teal.svg"
+            width="48"
+            height="48"
+            alt="48 pixel symbol"
+          />
+          <figcaption>48 px</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="source/symbol-teal.svg"
+            width="64"
+            height="64"
+            alt="64 pixel symbol"
+          />
+          <figcaption>64 px</figcaption>
+        </figure>
+      </div>
+      <h2>Color</h2>
+      <div class="swatches">
+        <div class="swatch">
+          <span style="background: #08646b"></span><strong>Pool teal</strong
+          ><code>#08646B</code>
+        </div>
+        <div class="swatch">
+          <span style="background: #3d9fa8"></span><strong>Companion</strong
+          ><code>#3D9FA8</code>
+        </div>
+        <div class="swatch">
+          <span style="background: #102f43"></span><strong>Deep ink</strong
+          ><code>#102F43</code>
+        </div>
+        <div class="swatch">
+          <span style="background: #7bcdd2"></span><strong>Pale teal</strong
+          ><code>#7BCDD2</code>
+        </div>
+        <div class="swatch">
+          <span style="background: #f4f8fa"></span><strong>Mist</strong
+          ><code>#F4F8FA</code>
+        </div>
+      </div>
+      <h2>Ready-made applications</h2>
+      <div class="grid">
+        <figure>
+          <a href="exports/social/og-light.png"
+            ><img
+              src="exports/social/og-light.png"
+              alt="Light Open Graph card"
+              loading="lazy"
+          /></a>
+          <figcaption>Light OG / 1200 × 630</figcaption>
+        </figure>
+        <figure>
+          <a href="exports/social/og-dark.png"
+            ><img
+              src="exports/social/og-dark.png"
+              alt="Dark Open Graph card"
+              loading="lazy"
+          /></a>
+          <figcaption>Dark OG / 1200 × 630</figcaption>
+        </figure>
+        <figure>
+          <a href="exports/repository/readme-banner-light.png"
+            ><img
+              src="exports/repository/readme-banner-light.png"
+              alt="Light repository banner"
+              loading="lazy"
+          /></a>
+          <figcaption>Repository banner / 1600 × 480</figcaption>
+        </figure>
+        <figure>
+          <a href="exports/social/github-preview-dark.png"
+            ><img
+              src="exports/social/github-preview-dark.png"
+              alt="Dark repository social preview"
+              loading="lazy"
+          /></a>
+          <figcaption>GitHub social preview / 1280 × 640</figcaption>
+        </figure>
+      </div>
+      <footer>
+        <p>
+          Also included: square, portrait, story, landscape, profile covers, app
+          icons, email headers, vector PDFs, and font notices.
+        </p>
+        <p>
+          <a href="manifest.json">Full inventory</a> ·
+          <a href="../docs/brand/usage.md">Usage rules</a> ·
+          <a href="exports/preview.png">Identity overview</a>
+        </p>
+        <p class="muted">
+          Direction selected. Final artwork is ready for review. The application
+          has not yet been switched to these assets.
+        </p>
+      </footer>
+    </main>
+    <script>
+      const layout = document.getElementById("layout");
+      const variant = document.getElementById("variant");
+      const size = document.getElementById("size");
+      function refresh(resetSizes) {
+        if (resetSizes) {
+          const widths = layout.value.startsWith("symbol")
+            ? [64, 128, 256, 512, 1024]
+            : [320, 640, 1280];
+          size.replaceChildren(
+            ...widths.map((width) => {
+              const option = document.createElement("option");
+              option.value = String(width);
+              option.textContent = String(width);
+              return option;
+            }),
+          );
+          size.value = String(widths[1]);
+        }
+        const base = `${layout.value}-${variant.value}`;
+        document.getElementById("logo").src = `source/${base}.svg`;
+        document.getElementById("logo").style.width = layout.value.startsWith(
+          "symbol",
+        )
+          ? "180px"
+          : layout.value === "stacked"
+            ? "350px"
+            : "640px";
+        document
+          .getElementById("stage")
+          .classList.toggle("dark", ["white", "dark"].includes(variant.value));
+        document.getElementById("svg-download").href = `source/${base}.svg`;
+        document.getElementById("png-download").href =
+          `exports/logo/${base}-${size.value}.png`;
+      }
+      layout.addEventListener("change", () => refresh(true));
+      variant.addEventListener("change", () => refresh(false));
+      size.addEventListener("change", () => refresh(false));
+    </script>
+  </body>
+</html>

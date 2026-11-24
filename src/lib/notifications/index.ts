@@ -6,6 +6,7 @@ import { booking, notificationLog, profile, user } from "@/src/lib/db/schema";
 import { getAppConfig } from "@/src/config/app";
 import { sendEmail } from "@/src/lib/email/send";
 import { logger } from "@/src/lib/logger";
+import { emailBrand } from "@/src/lib/email/brand";
 import { EmailLayout } from "./email-layout";
 import { sendPush } from "./push";
 
@@ -97,7 +98,7 @@ async function email(
         `${content.cta.label}: ${content.cta.url}`,
       ].join("\n\n"),
       react: EmailLayout({
-        appName: app.name,
+        brand: emailBrand(app),
         preview: content.lines[0] ?? content.heading,
         heading: content.heading,
         lines: content.lines,

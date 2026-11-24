@@ -54,7 +54,8 @@ export function pageMetadata(
   const clean = normalizePath(path);
   const url = absoluteUrl(localizedPath(clean, locale));
   const app = getAppConfig();
-  const ogImageUrl = absoluteUrl("/opengraph-image");
+  // The marketing OG route is per locale: /opengraph-image, /de/opengraph-image, …
+  const ogImageUrl = absoluteUrl(localizedPath("/opengraph-image", locale));
 
   return {
     title: { absolute: title },

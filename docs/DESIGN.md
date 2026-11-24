@@ -50,6 +50,10 @@ typography:
     fontFamily: "var(--font-figtree), ui-sans-serif, system-ui, sans-serif"
     fontSize: "13px"
     fontWeight: 550
+  timer:
+    fontFamily: "var(--font-figtree), ui-sans-serif, system-ui, sans-serif"
+    fontWeight: 600
+    fontVariantNumeric: "tabular-nums"
 rounded:
   sm: "10px"
   md: "14px"
@@ -99,42 +103,45 @@ The primary aesthetic is light and aquatic: cool daylight falling across clean p
 
 The design system uses CSS custom properties declared in `app/globals.css` and `src/config/brand.css`. Theme values toggle automatically via `:root` (light) and `[data-theme="dark"]` (dark), with fallback to system preferences via `@media (prefers-color-scheme: dark)`.
 
-| Token                | Light Value                                             | Dark Value                                              | Purpose / Job                                                                   |
-| :------------------- | :------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------------------------------ |
-| `--bg`               | `#f4f8fa`                                               | `#081c2a`                                               | Root application ground; cool daylight pool deck or midnight water canvas.      |
-| `--surface`          | `#ffffff`                                               | `#102b3c`                                               | Elevated surfaces: cards, modals, dropdown menus, table bodies, active inputs.  |
-| `--surface-2`        | `#eaf1f4`                                               | `#193747`                                               | Secondary surface: calendar headers, segmented control tracks, disabled inputs. |
-| `--text`             | `#102f43`                                               | `#edf6fa`                                               | Primary high-contrast ink for body text, headings, and active values.           |
-| `--text-2`           | `#465e6b`                                               | `#c0d2dc`                                               | Secondary ink for descriptions, subtitles, table headers, and metadata.         |
-| `--text-3`           | `#4e6572`                                               | `#a8bfcc`                                               | Muted ink for placeholder text, clock tick marks, and half-hour dashed lines.   |
-| `--line`             | `#d3e0e6`                                               | `#2d4b5c`                                               | Subtle structural rules, card outlines, table borders, and divider lines.       |
-| `--line-strong`      | `#748b98`                                               | `#668595`                                               | Prominent boundary rules, calendar grid edges, input borders, scrollbar thumbs. |
-| `--accent`           | `#08646b`                                               | `#7bcdd2`                                               | Primary brand accent: buttons, active tab indicators, links, focus rings.       |
-| `--accent-hover`     | `color-mix(in srgb, var(--accent), black 12%)`          | `color-mix(in srgb, var(--accent), white 12%)`          | Computed interactive hover tone for accent buttons and interactive elements.    |
-| `--accent-soft`      | `color-mix(in srgb, var(--accent), var(--surface) 90%)` | `color-mix(in srgb, var(--accent), var(--surface) 86%)` | Soft tinted wash for active chips, selected booking slots, and avatars.         |
-| `--accent-ink`       | `#ffffff`                                               | `#082735`                                               | High-contrast readable foreground ink for text placed on `--accent` fills.      |
-| `--lane`             | `#e9f4f6`                                               | `#123543`                                               | Tinted water lane background: partner tiles, sidebar, table row hovers.         |
-| `--lane-strong`      | `#c8e2e7`                                               | `#245060`                                               | Deeper water wash: video container backgrounds, group slot markers.             |
-| `--grout`            | `#dce8ed`                                               | `#1e3b4c`                                               | Pool tile grid lines on marketing hero and the inactive PaceClock ring track.   |
-| `--rope-red`         | `#d23b4e`                                               | `#ff7182`                                               | Red float on lane ropes, PaceClock hand, live session dot, calendar now-line.   |
-| `--rope-yellow`      | `#f3cc45`                                               | `#f5d65d`                                               | Yellow float on lane ropes.                                                     |
-| `--rope-yellow-deep` | `#96731a`                                               | `#dfbd45`                                               | Accessible high-contrast yellow for PaceClock intro and wrap-up arcs.           |
-| `--rope-white`       | `#ffffff`                                               | `#e6f1f6`                                               | White spacer float between red and yellow lane rope segments.                   |
-| `--warm`             | `#725922`                                               | `#dac58e`                                               | Warning status ink for cautionary notices and alerts.                           |
-| `--warm-soft`        | `#f3efdf`                                               | `#302f27`                                               | Soft tinted background for warning banners and warning badges.                  |
-| `--danger`           | `#a82c40`                                               | `#ffa6b1`                                               | Destructive action buttons, validation errors, invalid field borders.           |
-| `--danger-soft`      | `#fbeaf0`                                               | `#402b3a`                                               | Soft tinted wash for destructive button hovers and error notices.               |
-| `--ok`               | `#22634d`                                               | `#9bd9be`                                               | Success status ink for confirmation badges and completed states.                |
-| `--ok-soft`          | `#e5f3ec`                                               | `#163c37`                                               | Soft tinted wash for success notices and positive state badges.                 |
-| `--shadow`           | `0 3px 10px rgb(16 47 67 / 0.06)`                       | `0 3px 12px rgb(0 9 18 / 0.2)`                          | Resting ambient elevation for cards and containers.                             |
-| `--shadow-lg`        | `0 12px 36px rgb(16 47 67 / 0.16)`                      | `0 14px 40px rgb(0 9 18 / 0.4)`                         | High elevation for modal dialogs, cookie consent, and floating toasts.          |
-| `--radius`           | `14px`                                                  | `14px`                                                  | Standard container corner radius for cards, dialogs, and calendar frames.       |
-| `--radius-sm`        | `10px`                                                  | `10px`                                                  | Compact radius for inputs, textareas, selects, notices, and avatar chips.       |
-| `--radius-pill`      | `999px`                                                 | `999px`                                                 | Fully rounded pill radius for buttons, chips, badges, and segmented toggles.    |
-| `--font-sans`        | `var(--font-figtree), ...`                              | `var(--font-figtree), ...`                              | Primary body typography, form controls, navigation, and metadata copy.          |
-| `--font-display`     | `var(--font-big-shoulders), ...`                        | `var(--font-big-shoulders), ...`                        | Athletic condensed display type: headings, clock timers, metrics, prices.       |
-| `--font-mono`        | `ui-monospace, Menlo, ...`                              | `ui-monospace, Menlo, ...`                              | Monospaced technical data, tokens, and code blocks.                             |
-| `--ease-out`         | `cubic-bezier(0.16, 1, 0.3, 1)`                         | `cubic-bezier(0.16, 1, 0.3, 1)`                         | Standard exponential ease-out timing curve for all transitions.                 |
+| Token                   | Light Value                                             | Dark Value                                              | Purpose / Job                                                                   |
+| :---------------------- | :------------------------------------------------------ | :------------------------------------------------------ | :------------------------------------------------------------------------------ |
+| `--bg`                  | `#f4f8fa`                                               | `#081c2a`                                               | Root application ground; cool daylight pool deck or midnight water canvas.      |
+| `--surface`             | `#ffffff`                                               | `#102b3c`                                               | Elevated surfaces: cards, modals, dropdown menus, table bodies, active inputs.  |
+| `--surface-2`           | `#eaf1f4`                                               | `#193747`                                               | Secondary surface: calendar headers, segmented control tracks, disabled inputs. |
+| `--text`                | `#102f43`                                               | `#edf6fa`                                               | Primary high-contrast ink for body text, headings, and active values.           |
+| `--text-2`              | `#465e6b`                                               | `#c0d2dc`                                               | Secondary ink for descriptions, subtitles, table headers, and metadata.         |
+| `--text-3`              | `#4e6572`                                               | `#a8bfcc`                                               | Muted ink for placeholder text, clock tick marks, and half-hour dashed lines.   |
+| `--line`                | `#d3e0e6`                                               | `#2d4b5c`                                               | Subtle structural rules, card outlines, table borders, and divider lines.       |
+| `--line-strong`         | `#748b98`                                               | `#668595`                                               | Prominent boundary rules, calendar grid edges, input borders, scrollbar thumbs. |
+| `--accent`              | `#08646b`                                               | `#7bcdd2`                                               | Primary brand accent: buttons, active tab indicators, links, focus rings.       |
+| `--accent-hover`        | `color-mix(in srgb, var(--accent), black 12%)`          | `color-mix(in srgb, var(--accent), white 12%)`          | Computed interactive hover tone for accent buttons and interactive elements.    |
+| `--accent-soft`         | `color-mix(in srgb, var(--accent), var(--surface) 90%)` | `color-mix(in srgb, var(--accent), var(--surface) 86%)` | Soft tinted wash for active chips, selected booking slots, and avatars.         |
+| `--accent-ink`          | `#ffffff`                                               | `#082735`                                               | High-contrast readable foreground ink for text placed on `--accent` fills.      |
+| `--lane`                | `#e9f4f6`                                               | `#123543`                                               | Tinted water lane background: partner tiles, sidebar, table row hovers.         |
+| `--lane-strong`         | `#c8e2e7`                                               | `#245060`                                               | Deeper water wash: video container backgrounds, group slot markers.             |
+| `--grout`               | `#dce8ed`                                               | `#1e3b4c`                                               | Pool tile grid lines on marketing hero and the inactive PaceClock ring track.   |
+| `--rope-red`            | `#d23b4e`                                               | `#ff7182`                                               | Red float on lane ropes, PaceClock hand, live session dot, calendar now-line.   |
+| `--rope-yellow`         | `#f3cc45`                                               | `#f5d65d`                                               | Yellow float on lane ropes.                                                     |
+| `--rope-yellow-deep`    | `#96731a`                                               | `#dfbd45`                                               | Accessible high-contrast yellow for PaceClock intro and wrap-up arcs.           |
+| `--rope-white`          | `#ffffff`                                               | `#e6f1f6`                                               | White spacer float between red and yellow lane rope segments.                   |
+| `--warm`                | `#725922`                                               | `#dac58e`                                               | Warning status ink for cautionary notices and alerts.                           |
+| `--warm-soft`           | `#f3efdf`                                               | `#302f27`                                               | Soft tinted background for warning banners and warning badges.                  |
+| `--danger`              | `#a82c40`                                               | `#ffa6b1`                                               | Destructive action buttons, validation errors, invalid field borders.           |
+| `--danger-soft`         | `#fbeaf0`                                               | `#402b3a`                                               | Soft tinted wash for destructive button hovers and error notices.               |
+| `--ok`                  | `#22634d`                                               | `#9bd9be`                                               | Success status ink for confirmation badges and completed states.                |
+| `--ok-soft`             | `#e5f3ec`                                               | `#163c37`                                               | Soft tinted wash for success notices and positive state badges.                 |
+| `--shadow`              | `0 3px 10px rgb(16 47 67 / 0.06)`                       | `0 3px 12px rgb(0 9 18 / 0.2)`                          | Resting ambient elevation for cards and containers.                             |
+| `--shadow-lg`           | `0 12px 36px rgb(16 47 67 / 0.16)`                      | `0 14px 40px rgb(0 9 18 / 0.4)`                         | High elevation for modal dialogs, cookie consent, and floating toasts.          |
+| `--radius`              | `14px`                                                  | `14px`                                                  | Standard container corner radius for cards, dialogs, and calendar frames.       |
+| `--radius-sm`           | `10px`                                                  | `10px`                                                  | Compact radius for inputs, textareas, selects, notices, and avatar chips.       |
+| `--radius-pill`         | `999px`                                                 | `999px`                                                 | Fully rounded pill radius for buttons, chips, badges, and segmented toggles.    |
+| `--font-sans`           | `var(--font-figtree), ...`                              | `var(--font-figtree), ...`                              | Primary body typography, form controls, navigation, and metadata copy.          |
+| `--font-display`        | `var(--font-big-shoulders), ...`                        | `var(--font-big-shoulders), ...`                        | Athletic condensed display type: headings, metrics, prices.                     |
+| `--font-timer`          | `var(--font-figtree), ...`                              | `var(--font-figtree), ...`                              | Countdown clocks (room timer, pool demo): Figtree 600 with tabular digits.      |
+| `--logo-mark`           | `#08646b`                                               | `#7bcdd2`                                               | Built-in symbol, left path (`src/config/brand.css`).                            |
+| `--logo-mark-companion` | `#3d9fa8`                                               | `#b1e3e6`                                               | Built-in symbol, right (companion) path.                                        |
+| `--font-mono`           | `ui-monospace, Menlo, ...`                              | `ui-monospace, Menlo, ...`                              | Monospaced technical data, tokens, and code blocks.                             |
+| `--ease-out`            | `cubic-bezier(0.16, 1, 0.3, 1)`                         | `cubic-bezier(0.16, 1, 0.3, 1)`                         | Standard exponential ease-out timing curve for all transitions.                 |
 
 ### Brand Accent Customization
 
@@ -144,20 +151,19 @@ The brand accent is decoupled from application internals and defined in `src/con
 :root {
   --accent: #08646b;
   --accent-hover: color-mix(in srgb, var(--accent), black 12%);
+  --logo-mark: #08646b;
+  --logo-mark-companion: #3d9fa8;
 }
 [data-theme="dark"] {
   --accent: #7bcdd2;
   --accent-hover: color-mix(in srgb, var(--accent), white 12%);
+  --logo-mark: #7bcdd2;
+  --logo-mark-companion: #b1e3e6;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --accent: #7bcdd2;
-    --accent-hover: color-mix(in srgb, var(--accent), white 12%);
-  }
-}
+/* plus the same dark values under prefers-color-scheme for :root:not([data-theme]) */
 ```
 
-Self-hosters change the visual identity by editing `--accent` in `src/config/brand.css`. The system automatically derives hover states via `color-mix()` and updates button fills, focus rings, link highlights, and calendar indicators throughout the application.
+Self-hosters change the visual identity by editing `--accent` (and the symbol's `--logo-mark` colors) in `src/config/brand.css`, or with `pnpm setup --color`, which rewrites only those declarations. The system automatically derives hover states via `color-mix()` and updates button fills, focus rings, link highlights, and calendar indicators throughout the application. All values match `brand/tokens.json`; renderers that cannot use CSS variables (next/og cards, email) read the same literals from `src/config/brand-assets.ts`.
 
 ---
 
@@ -195,7 +201,8 @@ The palette establishes an aquatic hierarchy: deep pool tile teals for authority
 
 Typography pairs an athletic condensed display face with a clean, modern geometric sans-serif:
 
-- **Display Font:** `Big Shoulders` (`--font-display`), loaded via `next/font/google` in `app/[locale]/layout.tsx`.
+- **Display Font:** `Big Shoulders` (`--font-display`), loaded via `next/font/google` in `app/[locale]/layout.tsx`. Headings, metrics and prices only.
+- **Timer Font:** `Figtree` 600 (`--font-timer`). Countdown clocks use Figtree because the supplied Big Shoulders has no working tabular digits: `tabular-nums` cannot add a feature the font lacks, and its digits have unequal advances.
 - **Body Font:** `Figtree` (`--font-sans`), loaded via `next/font/google` in `app/[locale]/layout.tsx`.
 - **Monospace Font:** System font stack (`--font-mono`: `ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`).
 
@@ -204,7 +211,7 @@ Typography pairs an athletic condensed display face with a clean, modern geometr
 | Role                    | Weight  | Size / Clamp                | Line Height | Tracking   | Purpose / Usage                                    |
 | :---------------------- | :------ | :-------------------------- | :---------- | :--------- | :------------------------------------------------- |
 | **Hero Display**        | 750     | `clamp(64px, 7.6vw, 108px)` | `0.93`      | `-0.025em` | Marketing hero titles; uppercase, balanced.        |
-| **Pace Timer**          | 650–700 | `clamp(56px, 6vw, 88px)`    | `1.0`       | `-0.025em` | Session room and demo countdown clocks; tabular.   |
+| **Pace Timer**          | 600     | `clamp(48px, 5.2vw, 76px)`  | `1.0`       | `-0.02em`  | Figtree; room and demo countdowns; tabular.        |
 | **Page Title (h1)**     | 650–750 | `clamp(40px, 5vw, 64px)`    | `1.05`      | `-0.025em` | Primary view headings, dashboard titles.           |
 | **Section Head (h2)**   | 700     | `clamp(36px, 4.5vw, 56px)`  | `1.05`      | `-0.015em` | Major section breaks and marketing headers.        |
 | **Card / Subhead (h2)** | 650–700 | `32px`                      | `1.15`      | `-0.015em` | Content section headings and modal titles.         |
@@ -234,9 +241,17 @@ time,
 
 ### Named Rules
 
-**The Tabular Clock Rule.** Any element presenting elapsed time, remaining minutes, or numeric counts must specify `font-variant-numeric: tabular-nums`. Digits must never cause jitter or horizontal movement during countdowns.
+**The Tabular Clock Rule.** Any element presenting elapsed time, remaining minutes, or numeric counts must specify `font-variant-numeric: tabular-nums`. Digits must never cause jitter or horizontal movement during countdowns, so anything that ticks uses `--font-timer` (Figtree), whose digits share one advance width.
 
 **The No-Eyebrow Rule.** Uppercase tracking overline labels above headings are forbidden globally (`.overline { display: none; }`). Overlines are permitted only in specific form headers or empty state contexts.
+
+---
+
+## Logo
+
+The **Side by Side** symbol is two independent paths separated by a channel: two people working side by side. `LogoMark` in `src/components/logo.tsx` draws it from the kit geometry (`brand/exports/code/logo-geometry.json`, through `src/config/brand-assets.ts`), the same source as every SVG/PNG export, so there is no second hand-drawn copy. Below 32px it switches to the kit's micro cut. It is decorative (`aria-hidden`); the deployment name next to it is live text and carries the accessible name. `LOGO_URL` replaces the symbol. The outlined FocusKept wordmark is only used in static kit artwork (emails for the FocusKept identity, social images, README), never next to a custom `APP_NAME`.
+
+Full usage rules, clearspace and minimum sizes: [`docs/brand/usage.md`](brand/usage.md).
 
 ---
 
@@ -398,7 +413,7 @@ Every button is pill-shaped with a minimum 44px touch target:
 ### Do:
 
 - **Do** format all time displays, session countdowns, stats, prices, and metrics with `font-variant-numeric: tabular-nums`.
-- **Do** use `Big Shoulders` for display headings, numbers, timers, schedule indices, and calendar day figures.
+- **Do** use `Big Shoulders` for display headings, static numbers, schedule indices, and calendar day figures; use `--font-timer` (Figtree) for anything that counts down.
 - **Do** style all buttons, chips, badges, and segmented toggles as pills (`border-radius: var(--radius-pill)`).
 - **Do** ensure all interactive controls satisfy the minimum 44px by 44px touch target requirement (`min-height: 44px`, `min-width: 44px`).
 - **Do** limit `--rope-red` to temporal pacing elements: the PaceClock hand, LaneRope floats, live indicators, and calendar now-line.

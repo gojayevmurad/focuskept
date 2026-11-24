@@ -15,9 +15,10 @@ import styles from "./invite.module.css";
 type Props = {
   baseUrl: string;
   referralCode: string;
+  appName: string;
 };
 
-export function InviteShare({ baseUrl, referralCode }: Props) {
+export function InviteShare({ baseUrl, referralCode, appName }: Props) {
   const t = useTranslations("invite");
   const common = useTranslations("common");
   const [copied, setCopied] = useState(false);
@@ -31,8 +32,8 @@ export function InviteShare({ baseUrl, referralCode }: Props) {
   };
 
   const copyUrl = buildUrl("copy_link");
-  const shareText = t("shareMessage");
-  const shareTitle = "FocusKept";
+  const shareText = t("shareMessage", { app: appName });
+  const shareTitle = appName;
 
   const handleCopy = async () => {
     try {
@@ -72,8 +73,8 @@ export function InviteShare({ baseUrl, referralCode }: Props) {
     `${shareText} ${buildUrl("whatsapp")}`,
   )}`;
 
-  const emailSubject = t("emailSubject");
-  const emailBody = `${t("emailBody")} ${buildUrl("email")}`;
+  const emailSubject = t("emailSubject", { app: appName });
+  const emailBody = `${t("emailBody", { app: appName })} ${buildUrl("email")}`;
   const emailMailto = `mailto:?subject=${encodeURIComponent(
     emailSubject,
   )}&body=${encodeURIComponent(emailBody)}`;

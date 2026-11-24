@@ -12,7 +12,13 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 // Native setup has no framework or database dependency.
-import { initialize, validate } from "../../scripts/setup.mjs";
+import {
+  brandModule,
+  brandStyles,
+  initialize,
+  KIT_COLOR,
+  validate,
+} from "../../scripts/setup.mjs";
 const options = {
   name: "My Product",
   slug: "my-product",
@@ -116,4 +122,58 @@ it.each([
   { dbPort: 80 },
 ])("rejects unsafe configuration before writing %j", (change) => {
   expect(() => validate({ ...options, ...change })).toThrow();
+});
+it("updates brand defaults without dropping the rest of the brand contract", () => {
+  const root = fixture();
+  try {
+    mkdirSync(join(root, "src/config"), { recursive: true });
+    // Start from the repository's real files, plus extra lines a fork may add.
+    writeFileSync(
+      join(root, "src/config/brand.ts"),
+      readFileSync("src/config/brand.ts", "utf8") +
+        'export const tagline = "kept";\n',
+    );
+    writeFileSync(
+      join(root, "src/config/brand.css"),
+      readFileSync("src/config/brand.css", "utf8") +
+        ".extra {\n  --custom: 1px;\n}\n",
+    );
+    initialize(root, options);
+    const ts = readFileSync(join(root, "src/config/brand.ts"), "utf8");
+    expect(ts.startsWith("// SPDX-License-Identifier: AGPL-3.0-only\n")).toBe(
+      true,
+    );
+    expect(ts).toContain('name: "My Product"');
+    expect(ts).toContain('supportEmail: "support@app.example.com"');
+    expect(ts).toContain('export const tagline = "kept";');
+    const css = readFileSync(join(root, "src/config/brand.css"), "utf8");
+    expect(css).toContain("--accent: #123456;");
+    expect(css).toContain("--logo-mark: #123456;");
+    expect(css).toContain(
+      "--accent-hover: color-mix(in srgb, var(--accent), black 12%);",
+    );
+    expect(css).toContain("--custom: 1px;");
+    expect(css).not.toContain("#08646b");
+    // Every theme block that sets an accent also sets the logo colors.
+    expect(css.match(/--accent:/g)).toHaveLength(3);
+    expect(css.match(/--logo-mark-companion:/g)).toHaveLength(3);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+it("leaves the shipped brand files unchanged for the kit color", () => {
+  const css = readFileSync("src/config/brand.css", "utf8");
+  expect(brandStyles(css, KIT_COLOR)).toBe(css);
+  const ts = readFileSync("src/config/brand.ts", "utf8");
+  expect(
+    brandModule(ts, {
+      name: "FocusKept",
+      description:
+        "Book a time, get paired with a partner, and get your work done together.",
+      supportEmail: "support@focuskept.com",
+    }),
+  ).toBe(ts.replace(/description:\s*\n\s*"/, 'description: "'));
+  expect(JSON.parse(readFileSync("saas.config.json", "utf8")).color).toBe(
+    KIT_COLOR,
+  );
 });

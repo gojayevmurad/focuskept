@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: LocaleProps) {
   const app = getAppConfig();
   return pageMetadata(
     t("title", { app: app.name }),
-    t("lead"),
+    t("lead", { app: app.name }),
     "/status",
     locale,
   );
@@ -35,6 +35,7 @@ export default async function StatusPage({ params }: LocaleProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   requireMarketing();
+  const app = getAppConfig();
   const t = await getTranslations("statusPage");
   const site = await getTranslations("site");
   const format = await getFormatter();
@@ -81,7 +82,7 @@ export default async function StatusPage({ params }: LocaleProps) {
       <article className={styles.article}>
         <header className={styles.pageHead}>
           <h1>{t("heading")}</h1>
-          <p className={styles.lead}>{t("lead")}</p>
+          <p className={styles.lead}>{t("lead", { app: app.name })}</p>
         </header>
 
         <div
