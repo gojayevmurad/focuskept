@@ -432,7 +432,26 @@
     "rejoin": "Volver a unirme",
     "partnerLeft": "{name} ha salido de la sesión",
     "partnerBack": "{name} ha vuelto",
-    "partnerLeftTile": "Ha salido de la sesión"
+    "partnerLeftTile": "Ha salido de la sesión",
+    "leftRunning": "Has salido. La sesión sigue en curso; quedan {time}.",
+    "backDashboard": "Volver al panel",
+    "cameraPreview": "Vista previa de tu cámara",
+    "checkingDevices": "Comprobando tu cámara y micrófono…",
+    "devicesReady": "Cámara y micrófono listos",
+    "partnerReady": "Tu compañero de concentración para esta sesión.",
+    "goalExamples": "Ideas para tu objetivo",
+    "examples": {
+      "draft": "Redactar la introducción",
+      "inbox": "Vaciar mi bandeja de entrada",
+      "study": "Estudiar el capítulo 4"
+    },
+    "timeline": {
+      "hello": "Saludo y objetivo",
+      "focus": "Concentración en silencio",
+      "checkIn": "Puesta en común"
+    },
+    "waitingFor": "Esperando a {name}…",
+    "sessionDuration": "Duración de la sesión: {minutes} minutos"
   },
   "settings": {
     "title": "Ajustes",
@@ -1050,7 +1069,8 @@
       "challenges": "Retos",
       "groups": "Grupos",
       "house": "Casa",
-      "support": "Soporte"
+      "support": "Soporte",
+      "notifications": "Notificaciones"
     },
     "navigation": "Navegación de administración",
     "saving": "Guardando…",
@@ -1230,6 +1250,42 @@
         "privacy": "Privacidad",
         "legal": "Legal",
         "feedback": "Comentarios"
+      }
+    },
+    "notifications": {
+      "lead": "Elige tus correos de administración y consulta quién busca compañero ahora.",
+      "emailTitle": "Tus alertas por correo",
+      "defaultEnabled": "Las alertas están activadas por defecto. Estas preferencias solo afectan a tu cuenta.",
+      "save": "Guardar preferencias",
+      "test": "Enviar correo de prueba",
+      "sending": "Enviando…",
+      "testSent": "Correo de prueba enviado. En modo de vista previa, consulta la bandeja local.",
+      "testFailed": "No se pudo enviar el correo. Revisa la configuración e inténtalo de nuevo.",
+      "waitingTitle": "Buscando compañero ahora",
+      "waitingDuration": "Sesión de {duration} minutos",
+      "join": "Unirse",
+      "noWaiting": "No hay nadie esperando ahora. Las solicitudes nuevas aparecen aquí hasta 10 minutos.",
+      "events": {
+        "user_signed_up": {
+          "title": "Nuevos miembros",
+          "description": "Cuentas nuevas creadas por correo o acceso social."
+        },
+        "report_created": {
+          "title": "Denuncias de miembros",
+          "description": "Un miembro denuncia un problema de seguridad o conducta."
+        },
+        "support_ticket_created": {
+          "title": "Solicitudes de soporte",
+          "description": "Una nueva solicitud necesita respuesta."
+        },
+        "match_now_waiting": {
+          "title": "Solicitudes inmediatas",
+          "description": "Alguien quiere concentrarse ahora. Únete desde el correo."
+        },
+        "booking_unmatched": {
+          "title": "Reservas sin compañero",
+          "description": "Se ofreció una sala abierta o un cambio de horario como alternativa."
+        }
       }
     }
   },
@@ -1567,5 +1623,62 @@
     "partnerMatched": "Tu compañero es {name}: tu sesión de las {time} empieza en 5 minutos",
     "openSession": "Abrir la sesión",
     "matchedTitle": "Tu compañero está listo"
+  },
+  "matchNow": {
+    "button": "Buscar compañero ahora",
+    "title": "¿Listo para concentrarte?",
+    "lead": "Elige la duración. Buscaremos a alguien listo para empezar contigo.",
+    "duration": "Duración de la sesión",
+    "start": "Buscar un compañero",
+    "looking": "Buscando un compañero…",
+    "waitingBody": "Normalmente tarda pocos minutos. Mantén esta página abierta; te llevaremos a la sesión cuando alguien se una.",
+    "elapsed": "Tiempo de espera transcurrido",
+    "expiredTitle": "Esta vez no hubo compañero",
+    "expiredBody": "La búsqueda terminó tras 10 minutos. Reserva una hora o vuelve a buscar cuando quieras.",
+    "bookNext": "Reservar el próximo horario",
+    "tryAgain": "Intentar de nuevo",
+    "joining": "Conectando con tu compañero",
+    "joiningBody": "Comprobando si sigue esperando…",
+    "unavailableTitle": "Esta solicitud ya no está disponible",
+    "unavailableBody": "Puede que haya encontrado un compañero o dejado de esperar. Consulta las solicitudes actuales en el centro de notificaciones.",
+    "backNotifications": "Volver a notificaciones",
+    "errors": {
+      "limit": "Has alcanzado tu límite semanal. Elige Plus o vuelve la próxima semana.",
+      "overlap": "Ya tienes una sesión a esta hora. Únete a ella o elige otro momento.",
+      "suspended": "Esta cuenta no puede iniciar sesiones. Revisa su estado o contacta con soporte.",
+      "rate_limited": "Espera un momento antes de iniciar otra búsqueda.",
+      "unauthorized": "Inicia sesión de nuevo para buscar compañero.",
+      "duration": "Elige una sesión de 25 o 50 minutos.",
+      "unavailable": "Esta solicitud ha terminado. Inicia otra búsqueda.",
+      "self": "No puedes unirte a tu propia solicitud. Espera a un compañero.",
+      "unknown": "No pudimos actualizar tu búsqueda. Revisa tu conexión e inténtalo de nuevo."
+    }
+  },
+  "adminAlerts": {
+    "user_signed_up": {
+      "subject": "Un nuevo miembro se unió a {app}",
+      "body": "{name} ha creado una cuenta. Puedes verla en el panel de administración."
+    },
+    "report_created": {
+      "subject": "Una denuncia necesita revisión",
+      "body": "Se ha creado una denuncia de seguridad. Esta cuenta tiene {name} denuncia(s) en los últimos 30 días. Revísala en el panel de administración."
+    },
+    "support_ticket_created": {
+      "subject": "Nueva solicitud de soporte de {name}",
+      "body": "{name} envió una solicitud: {detail}. Ábrela para leerla y responder."
+    },
+    "match_now_waiting": {
+      "subject": "{name} quiere concentrarse ahora ({duration} min) — únete",
+      "body": "{name} busca compañero para una sesión de {duration} minutos. Únete mientras espera; las solicitudes caducan a los 10 minutos."
+    },
+    "booking_unmatched": {
+      "subject": "Una reserva sigue esperando compañero",
+      "body": "Una reserva de {duration} minutos no tenía compañero y recibió una alternativa de sala abierta u otro horario. Consulta las próximas sesiones en administración."
+    },
+    "open": "Abrir notificaciones de administración",
+    "join": "Unirse a esta sesión",
+    "footer": "Recibes este correo porque administras {app}. Configúralos en Administración → Notificaciones.",
+    "testSubject": "Prueba de correo de administración de {app}",
+    "testBody": "Tus alertas de administración funcionan. Esta prueba solo se te ha enviado a ti."
   }
 }

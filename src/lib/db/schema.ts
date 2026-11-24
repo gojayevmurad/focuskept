@@ -400,6 +400,49 @@ export const notificationLog = pgTable(
   ],
 );
 
+export const ADMIN_ALERT_EVENTS = [
+  "user_signed_up",
+  "report_created",
+  "support_ticket_created",
+  "match_now_waiting",
+  "booking_unmatched",
+] as const;
+export type AdminAlertEvent = (typeof ADMIN_ALERT_EVENTS)[number];
+
+export const adminAlertPref = pgTable(
+  "admin_alert_pref",
+  {
+    userId: userRef("user_id"),
+    event: text("event").$type<AdminAlertEvent>().notNull(),
+    enabled: boolean("enabled").notNull().default(true),
+  },
+  (t) => [
+    primaryKey({ columns: [t.userId, t.event] }),
+    check("admin_alert_event_check", sql`${t.event} in ('user_signed_up','report_created','support_ticket_created','match_now_waiting','booking_unmatched')`),
+  ],
+);
+
+export type MatchRequestStatus = "waiting" | "matched" | "cancelled" | "expired";
+export const matchRequest = pgTable(
+  "match_request",
+  {
+    id: text("id").primaryKey(),
+    userId: userRef("user_id"),
+    durationMin: integer("duration_min").notNull(),
+    status: text("status").$type<MatchRequestStatus>().notNull().default("waiting"),
+    sessionId: text("session_id").references(() => focusSession.id, { onDelete: "set null" }),
+    createdAt: time("created_at").notNull().defaultNow(),
+    matchedAt: time("matched_at"),
+  },
+  (t) => [
+    uniqueIndex("match_request_waiting_user_unique").on(t.userId).where(sql`${t.status} = 'waiting'`),
+    index("match_request_queue_idx").on(t.status, t.durationMin, t.createdAt),
+    index("match_request_user_idx").on(t.userId, t.createdAt),
+    check("match_request_duration_check", sql`${t.durationMin} in (25,50)`),
+    check("match_request_status_check", sql`${t.status} in ('waiting','matched','cancelled','expired')`),
+  ],
+);
+
 export const supportTicket = pgTable(
   "support_ticket",
   {

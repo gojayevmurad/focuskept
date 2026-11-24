@@ -11,6 +11,7 @@ export type RoomParticipant = {
   displayName: string;
   username: string;
   avatarUrl: string | null;
+  bio: string;
   goalText: string | null;
   outcome: string | null;
   joinedAt: Date | null;
@@ -36,6 +37,7 @@ export async function listParticipants(
       displayName: profile.displayName,
       username: profile.username,
       avatarUrl: profile.avatarUrl,
+      bio: profile.bio,
       goalText: sessionParticipant.goalText,
       outcome: sessionParticipant.outcome,
       joinedAt: sessionParticipant.joinedAt,

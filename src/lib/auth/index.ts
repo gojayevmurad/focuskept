@@ -9,6 +9,7 @@ import * as schema from "@/src/lib/db/schema";
 import { sendAuthEmail } from "@/src/lib/email/send";
 import { eq } from "drizzle-orm";
 import { getProfileByReferralCode, REFERRAL_COOKIE } from "@/src/lib/profiles";
+import { sendAdminAlert } from "@/src/lib/admin/alerts";
 function createAuth() {
   const env = getEnv();
   return betterAuth({
@@ -18,6 +19,19 @@ function createAuth() {
       "development-only-secret-change-before-deploying-12345",
     database: drizzleAdapter(db(), { provider: "pg", schema }),
     trustedOrigins: [env.APP_URL],
+    databaseHooks: {
+      user: {
+        create: {
+          // Better Auth queues create.after hooks until its transaction commits.
+          after: async (user) => {
+            await sendAdminAlert("user_signed_up", user.id, {
+              name: user.name,
+              path: "/admin/users",
+            });
+          },
+        },
+      },
+    },
     emailAndPassword: {
       enabled: true,
       requireEmailVerification: true,

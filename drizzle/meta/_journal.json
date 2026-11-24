@@ -43,6 +43,13 @@
       "when": 1795353964134,
       "tag": "0005_growth_support",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1795524891688,
+      "tag": "0006_instant_match_alerts",
+      "breakpoints": true
     }
   ]
 }

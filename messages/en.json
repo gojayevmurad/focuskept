@@ -432,7 +432,26 @@
     "rejoin": "Rejoin",
     "partnerLeft": "{name} left the session",
     "partnerBack": "{name} is back",
-    "partnerLeftTile": "Left the session"
+    "partnerLeftTile": "Left the session",
+    "leftRunning": "You left — the session is still running, {time} left.",
+    "backDashboard": "Back to dashboard",
+    "cameraPreview": "Your camera preview",
+    "checkingDevices": "Checking your camera and microphone…",
+    "devicesReady": "Camera and microphone ready",
+    "partnerReady": "Your focus partner for this session.",
+    "goalExamples": "Goal ideas",
+    "examples": {
+      "draft": "Draft the intro",
+      "inbox": "Clear my inbox",
+      "study": "Study chapter 4"
+    },
+    "timeline": {
+      "hello": "Hello + goal",
+      "focus": "Quiet focus",
+      "checkIn": "Check-in"
+    },
+    "waitingFor": "Waiting for {name}…",
+    "sessionDuration": "Session length: {minutes} minutes"
   },
   "settings": {
     "title": "Settings",
@@ -979,7 +998,11 @@
     "lead": "Start with three sessions a week. Choose Plus when you want more room.",
     "free": "Free",
     "freePrice": "No charge",
-    "freeFeatures": ["3 sessions a week", "Partner matching", "Streaks"],
+    "freeFeatures": [
+      "3 sessions a week",
+      "Partner matching",
+      "Streaks"
+    ],
     "plus": "Plus",
     "plusFeatures": [
       "Unlimited sessions",
@@ -1046,7 +1069,8 @@
       "challenges": "Challenges",
       "groups": "Groups",
       "house": "House",
-      "support": "Support"
+      "support": "Support",
+      "notifications": "Notifications"
     },
     "navigation": "Admin navigation",
     "saving": "Saving…",
@@ -1226,6 +1250,42 @@
         "privacy": "Privacy",
         "legal": "Legal",
         "feedback": "Feedback"
+      }
+    },
+    "notifications": {
+      "lead": "Choose the emails you receive as an administrator and see who needs a focus partner now.",
+      "emailTitle": "Your email alerts",
+      "defaultEnabled": "Alerts are on by default. These preferences apply only to your account.",
+      "save": "Save preferences",
+      "test": "Send test email",
+      "sending": "Sending…",
+      "testSent": "Test email sent. In preview mode, check the local email inbox.",
+      "testFailed": "The email could not be sent. Check email settings and try again.",
+      "waitingTitle": "Looking for a partner now",
+      "waitingDuration": "{duration} minute session",
+      "join": "Join them",
+      "noWaiting": "No one is waiting right now. New requests appear here for up to 10 minutes.",
+      "events": {
+        "user_signed_up": {
+          "title": "New members",
+          "description": "New accounts created by email or social sign-in."
+        },
+        "report_created": {
+          "title": "Member reports",
+          "description": "A member reports a safety or conduct issue."
+        },
+        "support_ticket_created": {
+          "title": "Support tickets",
+          "description": "A new support request needs a response."
+        },
+        "match_now_waiting": {
+          "title": "Match now requests",
+          "description": "Someone wants to focus now. Join them directly from the email."
+        },
+        "booking_unmatched": {
+          "title": "Unmatched bookings",
+          "description": "A booking was offered an open-room or rescheduling fallback."
+        }
       }
     }
   },
@@ -1563,5 +1623,62 @@
     "partnerMatched": "You're matched with {name}: your {time} session starts in 5 minutes",
     "openSession": "Open the session",
     "matchedTitle": "Your focus partner is ready"
+  },
+  "matchNow": {
+    "button": "Match now",
+    "title": "Ready to focus now?",
+    "lead": "Choose your session length. We’ll find someone ready to start with you.",
+    "duration": "Session length",
+    "start": "Find a partner",
+    "looking": "Looking for a partner…",
+    "waitingBody": "Usually under a few minutes. Keep this page open; we’ll take you to your session when someone joins.",
+    "elapsed": "Time spent waiting",
+    "expiredTitle": "No partner this time",
+    "expiredBody": "Your search ended after 10 minutes. Book a slot or try another search when you’re ready.",
+    "bookNext": "Book the next slot",
+    "tryAgain": "Try again",
+    "joining": "Joining your focus partner",
+    "joiningBody": "Checking that they’re still waiting…",
+    "unavailableTitle": "This request is no longer available",
+    "unavailableBody": "The person may have found a partner or stopped waiting. Check the notification centre for current requests.",
+    "backNotifications": "Back to notifications",
+    "errors": {
+      "limit": "You’ve reached your weekly session limit. Choose Plus or try again next week.",
+      "overlap": "You already have a session during this time. Join it or choose another time.",
+      "suspended": "This account cannot start a session. Check your account status or contact support.",
+      "rate_limited": "Please wait a moment before starting another search.",
+      "unauthorized": "Sign in again to find a partner.",
+      "duration": "Choose a 25 or 50 minute session.",
+      "unavailable": "This request has ended. Try another search.",
+      "self": "You cannot join your own request. Wait for a partner instead.",
+      "unknown": "We couldn’t update your search. Check your connection and try again."
+    }
+  },
+  "adminAlerts": {
+    "user_signed_up": {
+      "subject": "A new member joined {app}",
+      "body": "{name} created an account. You can see their account in the admin panel."
+    },
+    "report_created": {
+      "subject": "A member report needs review",
+      "body": "A new safety report was created. This account has {name} report(s) in the last 30 days. Please review it in the admin panel."
+    },
+    "support_ticket_created": {
+      "subject": "New support request from {name}",
+      "body": "{name} sent a support request: {detail}. Open the ticket to read and respond."
+    },
+    "match_now_waiting": {
+      "subject": "{name} wants to focus now ({duration} min) — join them",
+      "body": "{name} is looking for a partner for a {duration} minute session. Join while they’re still waiting; requests expire after 10 minutes."
+    },
+    "booking_unmatched": {
+      "subject": "A booking is still waiting for a partner",
+      "body": "A {duration} minute booking had no partner and was offered an open room or another slot. Check the upcoming sessions in admin."
+    },
+    "open": "Open admin notifications",
+    "join": "Join this focus session",
+    "footer": "You receive this because you are an administrator of {app}. Manage these emails in Admin → Notifications.",
+    "testSubject": "{app} admin email test",
+    "testBody": "Your admin email alerts are working. This test was sent only to you."
   }
 }

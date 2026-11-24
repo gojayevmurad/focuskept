@@ -204,9 +204,9 @@ export function Room(props: {
       ? "ended"
       : clockPhase;
   const isHost = state.session.hostId === state.me;
-  const me = state.participants.find((p) => p.userId === state.me);
   const others = state.participants.filter((p) => p.userId !== state.me);
-  const group = state.session.type === "group";
+  const group = isGroupLayout(state);
+  const title = sessionLabel(state.session, others.map((p) => ({ name: p.displayName, joined: p.joined })), labels);
 
   const refresh = useCallback(async () => {
     const response = await fetch(`/api/sessions/${state.session.id}/state`, {
@@ -242,6 +242,8 @@ export function Room(props: {
   }, []);
 
   // Preview only while preparing to join; cancel pending media requests on exit.
+  const previewMic = useRef(micOn);
+  useEffect(() => { previewMic.current = micOn; }, [micOn]);
   const mediaMessages = useRef({
     denied: t("media.denied"),
     not_found: t("media.not_found"),
@@ -255,6 +257,7 @@ export function Room(props: {
       .then((stream) => {
         if (cancelled) return stream.getTracks().forEach((tr) => tr.stop());
         localStream.current = stream;
+        stream.getAudioTracks().forEach((track) => { track.enabled = previewMic.current; });
         if (localVideo.current) localVideo.current.srcObject = stream;
         setMediaReady(true);
       })
@@ -279,6 +282,7 @@ export function Room(props: {
 
   const applyMic = useCallback(async (on: boolean) => {
     setMicOn(on);
+    localStream.current?.getAudioTracks().forEach((track) => { track.enabled = on; });
     await client.current?.setMicrophone(on).catch(() => {});
   }, []);
 
@@ -335,6 +339,7 @@ export function Room(props: {
         localStream.current = await getLocalMedia({ audio: true });
         setMediaReady(true);
       }
+      if (goal.trim() && !goalSaved) await saveGoal();
       await post(`/api/sessions/${state.session.id}/join`);
       const credentials = await post(`/api/video/join/${state.session.id}`);
       const video = await createVideoClient(credentials);
@@ -369,7 +374,7 @@ export function Room(props: {
         video: true,
         simulcast: group,
       });
-      const startOn = phase === "focus" ? false : props.microphoneDefault;
+      const startOn = manualMic.current ? micOn : phase === "focus" ? false : props.microphoneDefault;
       await applyMic(startOn);
       lastPhase.current = phase;
       joinedRef.current = true;
@@ -510,7 +515,10 @@ export function Room(props: {
   if (left) {
     return (
       <main className={styles.summary}>
+        <PaceClock progress={progress} focusFrom={focusFrom} wrapFrom={wrapFrom} phase={phase} size={88} label={phaseLabel} className={styles.clock} />
         <h1>{t("leftTitle")}</h1>
+        <p className={styles.muted}>{t("leftRunning", { time: clock(remainingMs) })}</p>
+        {goal && <div className={styles.goalReminder}><strong>{t("goalLabel")}</strong><p>{goal}</p></div>}
         {blockedNotice && (
           <p className={styles.notice} role="status">
             {t("reportSentBody")}
@@ -530,11 +538,37 @@ export function Room(props: {
             {joining && <LoaderCircle size={16} />} {t("rejoin")}
           </button>
           <Link href="/dashboard" className={styles.buttonSecondary}>
-            {t("backHome")}
+            {t("backDashboard")}
           </Link>
         </div>
       </main>
     );
+  }
+
+  if (!joined) {
+    const partner = others.find((p) => p.present) ?? others[0];
+    return <main className={styles.lobby}>
+      <header className={styles.lobbyHeader}>
+        <h1>{title}</h1>
+        <p className={styles.meta}>{format.dateTime(new Date(state.session.startAt), { timeZone: props.timeZone, hour: "numeric", minute: "2-digit" })} · {c("minutes", { count: state.session.durationMin })}</p>
+      </header>
+      <div className={styles.preview}>
+        <video ref={localVideo} autoPlay playsInline muted className={styles.mirror} aria-label={t("cameraPreview")} />
+        {!mediaReady && <div className={styles.empty}>{mediaError ?? t("checkingDevices")}</div>}
+        <button className={styles.previewMic} onClick={() => { manualMic.current = true; void applyMic(!micOn); }} aria-pressed={micOn}>
+          {micOn ? <Mic size={17} /> : <MicOff size={17} />}{t(micOn ? "mute" : "unmute")}
+        </button>
+      </div>
+      <p className={styles.deviceState} role="status">{mediaReady ? <CheckCircle2 size={16} aria-hidden="true" /> : <VideoIcon size={16} aria-hidden="true" />}{t(mediaReady ? "devicesReady" : "cameraRequired")}</p>
+      {partner && <div className={styles.partnerIntro}><Avatar name={partner.displayName} src={partner.avatarUrl} size="lg" /><div><strong>{partner.displayName}</strong><p className={styles.meta}>{partner.bio || t("partnerReady")}</p></div></div>}
+      <label className={styles.field}>{t("goalLabel")}<textarea value={goal} maxLength={280} rows={2} placeholder={t("goalPlaceholder")} onChange={(e) => { setGoal(e.target.value); setGoalSaved(false); }} /></label>
+      <div className={styles.chips} aria-label={t("goalExamples")}>{(["draft", "inbox", "study"] as const).map((key) => <button key={key} className={styles.buttonGhost} onClick={() => { setGoal(t(`examples.${key}`)); setGoalSaved(false); }}>{t(`examples.${key}`)}</button>)}</div>
+      <ol className={styles.timeline}><li>{t("timeline.hello")}</li><li>{t("timeline.focus")}</li><li>{t("timeline.checkIn")}</li></ol>
+      {videoError && <p className={`${styles.notice} ${styles.error}`} role="alert">{videoError}</p>}
+      <button className={styles.button} disabled={joining || !mediaReady || Boolean(mediaError) || state.window !== "open"} onClick={join}>{joining ? <LoaderCircle size={18} /> : <VideoIcon size={18} />}{t("join")}</button>
+      <p className={styles.recording}>{t("neverRecorded")}</p>
+      <Link href="/dashboard" className={styles.buttonGhost}>{t("backDashboard")}</Link>
+    </main>;
   }
 
   return (
@@ -550,11 +584,7 @@ export function Room(props: {
           )}
           <div className={styles.stackSmall}>
             <strong>
-              {sessionLabel(
-                state.session,
-                others.map((p) => ({ name: p.displayName, joined: p.joined })),
-                labels,
-              )}
+              {title}
             </strong>
             <span className={styles.meta}>
               {format.dateTime(new Date(state.session.startAt), {
@@ -577,7 +607,7 @@ export function Room(props: {
             focusFrom={focusFrom}
             wrapFrom={wrapFrom}
             phase={phase}
-            size={100}
+            size={56}
             label={`${phaseLabel}, ${clock(remainingMs)}`}
             className={styles.clock}
           />
@@ -593,102 +623,20 @@ export function Room(props: {
               {clock(remainingMs)}
             </span>
           </div>
-          <div className={styles.guidance}>
-            <strong>{t(`tips.${phase}`)}</strong>
-            <p>{t(`tipsBody.${phase}`)}</p>
-          </div>
+
         </div>
       </header>
 
+      <p className={styles.guidance}>{t(`tipsBody.${phase}`)}</p>
       {presenceNotice && (
         <p className={styles.notice} role="status">
           {presenceNotice}
         </p>
       )}
-      <main className={styles.stage}>
-        <div className={`${styles.tiles} ${group ? styles.group : ""}`}>
-          <div className={styles.lane}>
-            <LaneRope vertical className={styles.ropeDesktop} />
-            <LaneRope className={styles.ropeMobile} />
-            <div className={styles.media}>
-              <video
-                ref={localVideo}
-                autoPlay
-                playsInline
-                muted
-                className={styles.mirror}
-              />
-              {mediaError && <div className={styles.empty}>{mediaError}</div>}
-            </div>
-            <div className={styles.tileLabel}>
-              <span className={styles.tileName}>
-                {c("you")} {!micOn && <MicOff size={12} />}
-              </span>
-              {me?.goalText && (
-                <span className={`tile-goal ${styles.goal}`}>
-                  {me.goalText}
-                </span>
-              )}
-            </div>
-          </div>
-          {others.length === 0 && (
-            <div className={styles.lane}>
-              <LaneRope vertical className={styles.ropeDesktop} />
-              <LaneRope className={styles.ropeMobile} />
-              <div className={styles.media}>
-                <div className={styles.empty}>{t("aloneInRoom")}</div>
-              </div>
-            </div>
-          )}
-          {others.map((p) => (
-            <RemoteTile
-              key={p.userId}
-              name={p.displayName}
-              avatarUrl={p.avatarUrl}
-              goal={p.goalText}
-              present={p.present}
-              stream={p.present ? remote[p.userId] : undefined}
-              hint={
-                p.joined && !p.present
-                  ? t("partnerLeftTile")
-                  : !joined
-                    ? t("joinToSee")
-                    : props.provider === "none"
-                      ? t("noVideoProvider")
-                      : p.present
-                        ? t("connecting")
-                        : t("notHereYet")
-              }
-              isHost={p.userId === state.session.hostId}
-              hostLabel={t("host")}
-            />
-          ))}
-        </div>
-      </main>
+      <RoomStage state={state} remote={remote} localVideo={localVideo} micOn={micOn} provider={props.provider} />
 
       <aside className={styles.controls}>
         <div className={styles.controlDetails}>
-          {!joined ? (
-            <div className={styles.section}>
-              <h2>{phase === "waiting" ? t("readyTitle") : t("joinTitle")}</h2>
-              <p className={styles.meta}>{t("cameraRequired")}</p>
-              {videoError && (
-                <p className={`${styles.notice} ${styles.error}`} role="status">
-                  {videoError}
-                </p>
-              )}
-              <button
-                className={styles.button}
-                disabled={joining || !mediaReady || Boolean(mediaError)}
-                onClick={join}
-              >
-                {joining ? <LoaderCircle size={16} /> : <VideoIcon size={16} />}
-                {t("join")}
-              </button>
-              <p className={styles.meta}>{t("neverRecorded")}</p>
-            </div>
-          ) : null}
-
           {(phase === "waiting" || phase === "intro" || !goalSaved) && (
             <div className={styles.section}>
               <label className={styles.field}>
@@ -846,47 +794,54 @@ export function Room(props: {
   );
 }
 
+export function isGroupLayout(state: RoomState) {
+  return state.session.type === "group" && (!state.session.isFallbackRoom || state.participants.filter((p) => p.userId !== state.me && p.present).length >= 2);
+}
+
+export function RoomStage({ state, remote, localVideo, micOn, provider }: {
+  state: RoomState;
+  remote: Record<string, MediaStream>;
+  localVideo: React.RefObject<HTMLVideoElement | null>;
+  micOn: boolean;
+  provider: VideoProviderName;
+}) {
+  const t = useTranslations("room");
+  const c = useTranslations("common");
+  const group = isGroupLayout(state);
+  const me = state.participants.find((p) => p.userId === state.me);
+  const others = state.participants.filter((p) => p.userId !== state.me);
+  const visible = group ? others : [others.find((p) => p.present) ?? others.find((p) => p.joined) ?? others[0]].filter(Boolean);
+  return <main className={styles.stage}>
+    <div className={group ? styles.group : styles.pair} data-layout={group ? "group" : "pair"}>
+      {visible.length ? visible.map((p) => <RemoteTile key={p.userId} name={p.displayName} avatarUrl={p.avatarUrl} goal={p.goalText}
+        stream={p.present ? remote[p.userId] : undefined}
+        hint={p.joined && !p.present ? t("partnerLeftTile") : !p.present ? t("waitingFor", { name: p.displayName }) : provider === "none" ? t("noVideoProvider") : t("connecting")}
+        isHost={p.userId === state.session.hostId} hostLabel={t("host")} />)
+        : <div className={styles.lane} data-role="partner"><div className={styles.media}><div className={styles.empty}>{t("aloneInRoom")}</div></div></div>}
+      <div className={`${styles.lane} ${group ? styles.selfGroup : styles.pip}`} data-role="self" data-host={state.me === state.session.hostId}>
+        <div className={styles.media}><video ref={localVideo} autoPlay playsInline muted className={styles.mirror} aria-label={t("cameraPreview")} /></div>
+        <div className={styles.tileLabel}><span className={styles.tileName}>{c("you")}{!micOn && <MicOff size={12} />}{state.me === state.session.hostId && <span className={styles.badge}>{t("host")}</span>}</span>{group && me?.goalText && <span className={`tile-goal ${styles.goal}`}>{me.goalText}</span>}</div>
+      </div>
+    </div>
+    <LaneRope className={styles.stageRope} />
+  </main>;
+}
+
 function RemoteTile(props: {
   name: string;
   avatarUrl: string | null;
   goal: string | null;
-  present: boolean;
   stream?: MediaStream;
   hint: string;
   isHost: boolean;
   hostLabel: string;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
-  useEffect(() => {
-    if (ref.current) ref.current.srcObject = props.stream ?? null;
-  }, [props.stream]);
-  return (
-    <div className={styles.lane}>
-      <LaneRope vertical className={styles.ropeDesktop} />
-      <LaneRope className={styles.ropeMobile} />
-      <div className={styles.media}>
-        {props.stream ? (
-          <video ref={ref} autoPlay playsInline />
-        ) : (
-          <div className={styles.empty}>
-            <Avatar name={props.name} src={props.avatarUrl} size="lg" />
-            <span>{props.hint}</span>
-          </div>
-        )}
-      </div>
-      <div className={styles.tileLabel}>
-        <span className={styles.tileName}>
-          {props.name}{" "}
-          {props.isHost && (
-            <span className={styles.badge}>{props.hostLabel}</span>
-          )}
-        </span>
-        {props.goal && (
-          <span className={`tile-goal ${styles.goal}`}>{props.goal}</span>
-        )}
-      </div>
-    </div>
-  );
+  useEffect(() => { if (ref.current) ref.current.srcObject = props.stream ?? null; }, [props.stream]);
+  return <div className={styles.lane} data-role="partner" data-host={props.isHost}>
+    <div className={styles.media}>{props.stream ? <video ref={ref} autoPlay playsInline /> : <div className={styles.empty}><Avatar name={props.name} src={props.avatarUrl} size="lg" /><span>{props.hint}</span></div>}</div>
+    <div className={styles.tileLabel}><span className={styles.tileName}>{props.name}{props.isHost && <span className={styles.badge}>{props.hostLabel}</span>}</span>{props.goal && <span className={`tile-goal ${styles.goal}`}>{props.goal}</span>}</div>
+  </div>;
 }
 
 function Outcomes({
@@ -953,6 +908,7 @@ function Summary(props: {
           <p className={styles.muted}>{t("summaryOverline")}</p>
         </div>
       </header>
+      <p className={styles.durationStat}>{t("sessionDuration", { minutes: props.state.session.durationMin })}</p>
       {me?.goalText && (
         <section className={styles.section}>
           <strong>{t("goalLabel")}</strong>
@@ -997,8 +953,9 @@ function Summary(props: {
                     className={
                       props.favorites.includes(p.userId)
                         ? styles.buttonSelected
-                        : styles.buttonSecondary
+                        : styles.buttonGhost
                     }
+                    aria-pressed={props.favorites.includes(p.userId)}
                     onClick={() => props.onFavorite(p.userId)}
                   >
                     <Star size={14} />{" "}
@@ -1019,7 +976,7 @@ function Summary(props: {
                   aria-label={t("report")}
                   onClick={() => props.onReport(p.userId)}
                 >
-                  <Flag size={14} />
+                  <Flag size={14} /> {t("report")}
                 </button>
               </div>
             ))}

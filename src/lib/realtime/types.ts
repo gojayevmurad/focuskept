@@ -7,6 +7,7 @@ export type RealtimeEvent =
   | "booking.partner_changed"
   | "booking.fallback"
   | "booking.updated"
+  | "match.found"
   // session topics
   | "session.presence"
   | "session.tracks"

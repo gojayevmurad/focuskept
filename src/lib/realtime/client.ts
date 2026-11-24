@@ -8,6 +8,7 @@ const EVENTS: RealtimeEvent[] = [
   "booking.partner_changed",
   "booking.fallback",
   "booking.updated",
+  "match.found",
   "session.presence",
   "session.tracks",
   "session.goal",

@@ -16,7 +16,10 @@ export function sessionLabel(
       ? t("withPartner", { name: joined[0].name })
       : t("openRoom");
   }
-  return session.title ?? t(session.type === "group" ? "group" : "pair");
+  if (session.title) return session.title;
+  if (session.type === "pair" && others.length === 1)
+    return t("withPartner", { name: others[0].name });
+  return t(session.type === "group" ? "group" : "pair");
 }
 
 export function partnerPresenceMessage(

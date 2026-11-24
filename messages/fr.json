@@ -432,7 +432,26 @@
     "rejoin": "Revenir",
     "partnerLeft": "{name} a quitté la session",
     "partnerBack": "{name} est de retour",
-    "partnerLeftTile": "A quitté la session"
+    "partnerLeftTile": "A quitté la session",
+    "leftRunning": "Vous avez quitté la séance. Il reste {time}.",
+    "backDashboard": "Retour au tableau de bord",
+    "cameraPreview": "Aperçu de votre caméra",
+    "checkingDevices": "Vérification de votre caméra et de votre micro…",
+    "devicesReady": "Caméra et micro prêts",
+    "partnerReady": "Votre partenaire de concentration pour cette séance.",
+    "goalExamples": "Idées d’objectifs",
+    "examples": {
+      "draft": "Rédiger l’introduction",
+      "inbox": "Vider ma boîte de réception",
+      "study": "Étudier le chapitre 4"
+    },
+    "timeline": {
+      "hello": "Bonjour et objectif",
+      "focus": "Concentration en silence",
+      "checkIn": "Faire le point"
+    },
+    "waitingFor": "En attendant {name}…",
+    "sessionDuration": "Durée de la séance : {minutes} minutes"
   },
   "settings": {
     "title": "Paramètres",
@@ -1050,7 +1069,8 @@
       "challenges": "Défis",
       "groups": "Groupes",
       "house": "Maison",
-      "support": "Assistance"
+      "support": "Assistance",
+      "notifications": "Notifications"
     },
     "navigation": "Navigation admin",
     "saving": "Enregistrement…",
@@ -1230,6 +1250,42 @@
         "privacy": "Confidentialité",
         "legal": "Juridique",
         "feedback": "Retours"
+      }
+    },
+    "notifications": {
+      "lead": "Choisissez vos e-mails d’administration et découvrez qui cherche un partenaire maintenant.",
+      "emailTitle": "Vos alertes par e-mail",
+      "defaultEnabled": "Les alertes sont activées par défaut. Ces préférences concernent uniquement votre compte.",
+      "save": "Enregistrer les préférences",
+      "test": "Envoyer un e-mail de test",
+      "sending": "Envoi…",
+      "testSent": "E-mail de test envoyé. En mode aperçu, consultez la boîte de réception locale.",
+      "testFailed": "L’e-mail n’a pas pu être envoyé. Vérifiez les paramètres d’envoi et réessayez.",
+      "waitingTitle": "En recherche d’un partenaire",
+      "waitingDuration": "Séance de {duration} minutes",
+      "join": "Rejoindre",
+      "noWaiting": "Personne n’attend pour le moment. Les nouvelles demandes restent ici jusqu’à 10 minutes.",
+      "events": {
+        "user_signed_up": {
+          "title": "Nouveaux membres",
+          "description": "Nouveaux comptes créés par e-mail ou connexion sociale."
+        },
+        "report_created": {
+          "title": "Signalements",
+          "description": "Un membre signale un problème de sécurité ou de comportement."
+        },
+        "support_ticket_created": {
+          "title": "Demandes d’assistance",
+          "description": "Une nouvelle demande attend une réponse."
+        },
+        "match_now_waiting": {
+          "title": "Demandes immédiates",
+          "description": "Quelqu’un souhaite se concentrer maintenant. Rejoignez-le depuis l’e-mail."
+        },
+        "booking_unmatched": {
+          "title": "Réservations sans partenaire",
+          "description": "Une réservation a reçu une proposition de salle ouverte ou de report."
+        }
       }
     }
   },
@@ -1567,5 +1623,62 @@
     "partnerMatched": "Ton partenaire est {name} : ta session de {time} commence dans 5 minutes",
     "openSession": "Ouvrir la session",
     "matchedTitle": "Ton partenaire est prêt"
+  },
+  "matchNow": {
+    "button": "Trouver un partenaire",
+    "title": "Prêt à vous concentrer ?",
+    "lead": "Choisissez la durée. Nous chercherons quelqu’un prêt à commencer avec vous.",
+    "duration": "Durée de la séance",
+    "start": "Chercher un partenaire",
+    "looking": "Recherche d’un partenaire…",
+    "waitingBody": "Cela prend généralement quelques minutes. Gardez cette page ouverte : votre séance s’ouvrira dès que quelqu’un vous rejoint.",
+    "elapsed": "Temps d’attente écoulé",
+    "expiredTitle": "Pas de partenaire cette fois",
+    "expiredBody": "Votre recherche s’est terminée après 10 minutes. Réservez un créneau ou relancez une recherche quand vous le souhaitez.",
+    "bookNext": "Réserver le prochain créneau",
+    "tryAgain": "Réessayer",
+    "joining": "Connexion à votre partenaire",
+    "joiningBody": "Nous vérifions que cette personne attend toujours…",
+    "unavailableTitle": "Cette demande n’est plus disponible",
+    "unavailableBody": "La personne a peut-être trouvé un partenaire ou arrêté sa recherche. Consultez les demandes actuelles dans le centre de notifications.",
+    "backNotifications": "Retour aux notifications",
+    "errors": {
+      "limit": "Vous avez atteint votre limite hebdomadaire. Passez à Plus ou réessayez la semaine prochaine.",
+      "overlap": "Vous avez déjà une séance à cette heure. Rejoignez-la ou choisissez un autre moment.",
+      "suspended": "Ce compte ne peut pas démarrer de séance. Vérifiez son statut ou contactez l’assistance.",
+      "rate_limited": "Veuillez patienter un instant avant de relancer une recherche.",
+      "unauthorized": "Reconnectez-vous pour trouver un partenaire.",
+      "duration": "Choisissez une séance de 25 ou 50 minutes.",
+      "unavailable": "Cette demande est terminée. Relancez une recherche.",
+      "self": "Vous ne pouvez pas rejoindre votre propre demande. Attendez un partenaire.",
+      "unknown": "Impossible d’actualiser votre recherche. Vérifiez votre connexion et réessayez."
+    }
+  },
+  "adminAlerts": {
+    "user_signed_up": {
+      "subject": "Un nouveau membre a rejoint {app}",
+      "body": "{name} a créé un compte. Vous pouvez le consulter dans l’administration."
+    },
+    "report_created": {
+      "subject": "Un signalement doit être examiné",
+      "body": "Un nouveau signalement a été créé. Ce compte a reçu {name} signalement(s) au cours des 30 derniers jours. Consultez-le dans l’administration."
+    },
+    "support_ticket_created": {
+      "subject": "Nouvelle demande d’assistance de {name}",
+      "body": "{name} a envoyé une demande : {detail}. Ouvrez-la pour la lire et y répondre."
+    },
+    "match_now_waiting": {
+      "subject": "{name} veut se concentrer maintenant ({duration} min) — rejoignez cette personne",
+      "body": "{name} cherche un partenaire pour {duration} minutes. Rejoignez cette personne tant qu’elle attend. Les demandes expirent après 10 minutes."
+    },
+    "booking_unmatched": {
+      "subject": "Une réservation attend toujours un partenaire",
+      "body": "Une réservation de {duration} minutes n’avait pas de partenaire. Une salle ouverte ou un autre créneau a été proposé. Consultez les séances à venir dans l’administration."
+    },
+    "open": "Ouvrir les notifications d’administration",
+    "join": "Rejoindre cette séance",
+    "footer": "Vous recevez cet e-mail en tant qu’administrateur de {app}. Gérez ces e-mails dans Administration → Notifications.",
+    "testSubject": "Test des e-mails d’administration de {app}",
+    "testBody": "Vos alertes d’administration fonctionnent. Ce test vous a été envoyé uniquement à vous."
   }
 }
