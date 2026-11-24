@@ -25,12 +25,36 @@ vi.mock("@/src/lib/bookings/service", () => ({
   createBooking: vi.fn(),
 }));
 
-import { completeOnboarding, saveOnboarding } from "@/app/[locale]/(app)/onboarding/actions";
-import { initialOnboarding, type OnboardingProgress } from "@/src/lib/profiles/onboarding";
+import {
+  completeOnboarding,
+  saveOnboarding,
+} from "@/app/[locale]/(app)/onboarding/actions";
+import {
+  initialOnboarding,
+  type OnboardingProgress,
+} from "@/src/lib/profiles/onboarding";
 
 function progress(): OnboardingProgress {
-  const initial = initialOnboarding({ displayName: "Casey", timezone: "UTC", emailReminders: true, emailTips: true }, null);
-  return { ...initial, step: 8, answers: { ...initial.answers, age: true, focusAreas: ["study"], blockers: ["starting"], preferredTimes: ["morning"] } };
+  const initial = initialOnboarding(
+    {
+      displayName: "Casey",
+      timezone: "UTC",
+      emailReminders: true,
+      emailTips: true,
+    },
+    null,
+  );
+  return {
+    ...initial,
+    step: 8,
+    answers: {
+      ...initial.answers,
+      age: true,
+      focusAreas: ["study"],
+      blockers: ["starting"],
+      preferredTimes: ["morning"],
+    },
+  };
 }
 
 function form(extra: Record<string, string> = {}) {
@@ -43,10 +67,20 @@ function form(extra: Record<string, string> = {}) {
 
 beforeEach(() => {
   vi.resetAllMocks();
-  mocks.requireAppUser.mockResolvedValue({ user: { id: "member" }, profile: { onboardedAt: null } });
+  mocks.requireAppUser.mockResolvedValue({
+    user: { id: "member" },
+    profile: { onboardedAt: null },
+  });
   mocks.set.mockReturnValue({ where: vi.fn().mockResolvedValue(undefined) });
-  const query = { update: () => ({ set: mocks.set }), delete: () => ({ where: vi.fn() }) };
-  mocks.db.mockReturnValue({ ...query, transaction: async (callback: (tx: typeof query) => Promise<unknown>) => callback(query) });
+  const query = {
+    update: () => ({ set: mocks.set }),
+    delete: () => ({ where: vi.fn() }),
+  };
+  mocks.db.mockReturnValue({
+    ...query,
+    transaction: async (callback: (tx: typeof query) => Promise<unknown>) =>
+      callback(query),
+  });
   mocks.cookieGet.mockReturnValue({
     value: JSON.stringify({
       source: "newsletter",
@@ -140,13 +174,14 @@ describe("onboarding attribution storage and analytics", () => {
   });
 });
 
-
 describe("onboarding persistence and preferences", () => {
   it("saves the exact step and answers for resume, scoped to the signed-in user", async () => {
     const state = progress();
     state.step = 3;
     expect(await saveOnboarding(state)).toEqual({});
-    expect(mocks.set).toHaveBeenCalledWith(expect.objectContaining({ onboardingState: state }));
+    expect(mocks.set).toHaveBeenCalledWith(
+      expect.objectContaining({ onboardingState: state }),
+    );
     expect(mocks.requireAppUser).toHaveBeenCalledWith(true);
   });
   it("prevents moving beyond an invalid step", async () => {
@@ -157,20 +192,50 @@ describe("onboarding persistence and preferences", () => {
   });
   it("saves meaningful choices and existing notification preferences", async () => {
     const state = progress();
-    Object.assign(state.answers, { duration: 25, microphone: false, weeklyGoal: 5, reminders: false, tips: false, marketing: true, analytics: true });
-    const input = new FormData(); input.set("progress", JSON.stringify(state));
+    Object.assign(state.answers, {
+      duration: 25,
+      microphone: false,
+      weeklyGoal: 5,
+      reminders: false,
+      tips: false,
+      marketing: true,
+      analytics: true,
+    });
+    const input = new FormData();
+    input.set("progress", JSON.stringify(state));
     await completeOnboarding({}, input);
-    expect(mocks.set.mock.calls[0][0]).toMatchObject({ focusAreas: ["study"], blockers: ["starting"], preferredTimes: ["morning"], defaultDuration: 25, microphoneDefault: false, weeklyGoal: 5, emailReminders: false, pushReminders: false, emailTips: false, emailMarketing: true, birthdateConfirmed: true, onboardingState: state });
+    expect(mocks.set.mock.calls[0][0]).toMatchObject({
+      focusAreas: ["study"],
+      blockers: ["starting"],
+      preferredTimes: ["morning"],
+      defaultDuration: 25,
+      microphoneDefault: false,
+      weeklyGoal: 5,
+      emailReminders: false,
+      pushReminders: false,
+      emailTips: false,
+      emailMarketing: true,
+      birthdateConfirmed: true,
+      onboardingState: state,
+    });
     expect(mocks.set).toHaveBeenCalledWith({ analyticsConsent: true });
   });
   it("returns to a validated deep link on completion", async () => {
-    const state = progress(); state.next = "/book?x=1";
-    const input = new FormData(); input.set("progress", JSON.stringify(state));
+    const state = progress();
+    state.next = "/book?x=1";
+    const input = new FormData();
+    input.set("progress", JSON.stringify(state));
     await completeOnboarding({}, input);
-    expect(mocks.redirect).toHaveBeenCalledWith({ href: "/book?x=1", locale: "en" });
+    expect(mocks.redirect).toHaveBeenCalledWith({
+      href: "/book?x=1",
+      locale: "en",
+    });
   });
   it("does not overwrite completed onboarding", async () => {
-    mocks.requireAppUser.mockResolvedValue({ user: { id: "member" }, profile: { onboardedAt: new Date() } });
+    mocks.requireAppUser.mockResolvedValue({
+      user: { id: "member" },
+      profile: { onboardedAt: new Date() },
+    });
     expect(await saveOnboarding(progress())).toEqual({ error: "invalid" });
     expect(mocks.db).not.toHaveBeenCalled();
   });

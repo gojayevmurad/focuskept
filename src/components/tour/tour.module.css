@@ -252,5 +252,12 @@
   color: var(--text);
   box-shadow: var(--shadow-lg);
 }
-.welcomeDialog::backdrop { background: color-mix(in srgb, var(--bg) 75%, transparent); }
-.welcomeActions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; }
+.welcomeDialog::backdrop {
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+}
+.welcomeActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}

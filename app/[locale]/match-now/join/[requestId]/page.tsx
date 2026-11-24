@@ -3,7 +3,11 @@ import { notFound } from "next/navigation";
 import { requireAdmin, requireAppUser } from "@/src/lib/app-user";
 import { JoinMatch } from "./join";
 
-export default async function Page({ params }: { params: Promise<{ requestId: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ requestId: string }>;
+}) {
   const current = await requireAppUser();
   if (!current.isAdmin) notFound();
   await requireAdmin();

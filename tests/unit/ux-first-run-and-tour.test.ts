@@ -49,6 +49,4 @@ describe("Tour and first-run UX logic", () => {
     expect(advanceScene(3)).toBe(4);
     expect(advanceScene(4)).toBe(0); // loops back to beginning
   });
-
-
 });

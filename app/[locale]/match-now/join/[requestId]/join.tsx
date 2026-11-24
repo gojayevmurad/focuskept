@@ -11,17 +11,33 @@ export function JoinMatch({ requestId }: { requestId: string }) {
   const [error, setError] = useState(false);
   useEffect(() => {
     let active = true;
-    fetch(`/api/match-now/join/${encodeURIComponent(requestId)}`, { method: "POST" })
+    fetch(`/api/match-now/join/${encodeURIComponent(requestId)}`, {
+      method: "POST",
+    })
       .then(async (response) => {
         if (!response.ok) throw new Error("unavailable");
         const data = await response.json();
-        if (active && data.request?.sessionId) router.replace(`/session/${data.request.sessionId}`);
-      }).catch(() => { if (active) setError(true); });
-    return () => { active = false; };
+        if (active && data.request?.sessionId)
+          router.replace(`/session/${data.request.sessionId}`);
+      })
+      .catch(() => {
+        if (active) setError(true);
+      });
+    return () => {
+      active = false;
+    };
   }, [requestId, router]);
-  return <main className={styles.joinPage}><div className={styles.body}>
-    <h1>{t(error ? "unavailableTitle" : "joining")}</h1>
-    <p role="status">{t(error ? "unavailableBody" : "joiningBody")}</p>
-    {error && <Link className="button" href="/admin/notifications">{t("backNotifications")}</Link>}
-  </div></main>;
+  return (
+    <main className={styles.joinPage}>
+      <div className={styles.body}>
+        <h1>{t(error ? "unavailableTitle" : "joining")}</h1>
+        <p role="status">{t(error ? "unavailableBody" : "joiningBody")}</p>
+        {error && (
+          <Link className="button" href="/admin/notifications">
+            {t("backNotifications")}
+          </Link>
+        )}
+      </div>
+    </main>
+  );
 }

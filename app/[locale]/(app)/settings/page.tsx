@@ -87,7 +87,9 @@ export default async function Page() {
             </a>
           </div>
         </section>
-        <Link className="button secondary" href="/dashboard?tour=replay">{(await getTranslations("onboarding.welcomeFlow"))("replay")}</Link>
+        <Link className="button secondary" href="/dashboard?tour=replay">
+          {(await getTranslations("onboarding.welcomeFlow"))("replay")}
+        </Link>
         <section className="card danger stack">
           <h2>{t("deleteTitle")}</h2>
           <p className="muted small">{t("deleteLead")}</p>

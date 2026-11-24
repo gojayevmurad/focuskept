@@ -76,7 +76,8 @@ function roomState(): RoomState {
       displayName: userId === "me" ? "Me" : "Alex",
       username: userId,
       avatarUrl: null,
-      bio: userId === "partner" ? "Writing a novel, one chapter at a time." : "",
+      bio:
+        userId === "partner" ? "Writing a novel, one chapter at a time." : "",
       goalText: null,
       outcome: null,
       joined: true,
@@ -139,12 +140,22 @@ describe("session room", () => {
     expect(html).not.toContain("PhoneOff");
   });
   function stage(state: RoomState) {
-    return render(<RoomStage state={state} remote={{}} localVideo={{ current: null }} micOn={false} provider="none" />);
+    return render(
+      <RoomStage
+        state={state}
+        remote={{}}
+        localVideo={{ current: null }}
+        micOn={false}
+        provider="none"
+      />,
+    );
   }
   it("places the partner on the main stage and self in picture in picture", () => {
     const html = stage(roomState());
     expect(html).toContain('data-layout="pair"');
-    expect(html.indexOf('data-role="partner"')).toBeLessThan(html.indexOf('data-role="self"'));
+    expect(html.indexOf('data-role="partner"')).toBeLessThan(
+      html.indexOf('data-role="self"'),
+    );
     expect(html).toMatch(/class="[^"]*pip[^"]*" data-role="self"/);
   });
   it("distinguishes a partner who left from a partner yet to arrive", () => {
@@ -159,7 +170,11 @@ describe("session room", () => {
     state.session.type = "group";
     state.session.isFallbackRoom = true;
     expect(stage(state)).toContain('data-layout="pair"');
-    state.participants.push({ ...state.participants[1], userId: "third", displayName: "Sam" });
+    state.participants.push({
+      ...state.participants[1],
+      userId: "third",
+      displayName: "Sam",
+    });
     expect(stage(state)).toContain('data-layout="group"');
     state.session.isFallbackRoom = false;
     state.session.hostId = "partner";

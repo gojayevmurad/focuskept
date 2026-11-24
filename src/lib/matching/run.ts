@@ -246,8 +246,18 @@ export async function offerFallbacks(now = new Date()) {
     await publish(`user:${b.userId}`, "booking.fallback", {
       bookingId: b.id,
     }).catch(() => {});
-    await sendAdminAlert("booking_unmatched", b.id, { durationMin: b.durationMin, path: "/admin/house" });
-    await notify.fallbackOffered(b.id).catch((error) => logger.warn({ err: error, bookingId: b.id }, "Fallback notification failed"));
+    await sendAdminAlert("booking_unmatched", b.id, {
+      durationMin: b.durationMin,
+      path: "/admin/house",
+    });
+    await notify
+      .fallbackOffered(b.id)
+      .catch((error) =>
+        logger.warn(
+          { err: error, bookingId: b.id },
+          "Fallback notification failed",
+        ),
+      );
   }
   return rows.length;
 }

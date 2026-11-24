@@ -101,12 +101,17 @@ export default async function Page({
               ? t("welcome", { name: firstName(me.displayName) })
               : t("hello", { name: firstName(me.displayName) })}
           </h1>
-          <p>{preferences?.focusAreas.length
-            ? focus("dashboardSuggestion", {
-                area: focus(`focusAreas.${preferences.focusAreas[0]}`),
-                completed: preferences.completedThisWeek, goal: preferences.weeklyGoal,
-              })
-            : me.goal ? t("goalReminder", { goal: me.goal }) : t("lead")}</p>
+          <p>
+            {preferences?.focusAreas.length
+              ? focus("dashboardSuggestion", {
+                  area: focus(`focusAreas.${preferences.focusAreas[0]}`),
+                  completed: preferences.completedThisWeek,
+                  goal: preferences.weeklyGoal,
+                })
+              : me.goal
+                ? t("goalReminder", { goal: me.goal })
+                : t("lead")}
+          </p>
         </header>
 
         {fallback && (
@@ -296,7 +301,10 @@ export default async function Page({
           </div>
         </dl>
 
-        <WelcomeFlow initialPhase={welcomePhase(me)} replay={tour === "replay"} />
+        <WelcomeFlow
+          initialPhase={welcomePhase(me)}
+          replay={tour === "replay"}
+        />
       </div>
     </AppShell>
   );

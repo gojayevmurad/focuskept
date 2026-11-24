@@ -9,7 +9,6 @@ import {
 } from "@/src/lib/analytics/client";
 import styles from "./tour.module.css";
 
-
 type TourTitleKey =
   | "stepBookTitle"
   | "stepUpcomingTitle"
@@ -66,11 +65,7 @@ const STEPS: TourStep[] = [
   },
 ];
 
-export function Tour({
-  autoStart = false,
-}: {
-  autoStart?: boolean;
-}) {
+export function Tour({ autoStart = false }: { autoStart?: boolean }) {
   const t = useTranslations("tour");
   const [active, setActive] = useState(false);
   const [stepIndex, setStepIndex] = useState(0);
@@ -133,7 +128,12 @@ export function Tour({
 
     // Scroll into view if needed
     if (r.top < 80 || r.bottom > window.innerHeight - 80) {
-      el.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "center" });
+      el.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "instant"
+          : "smooth",
+        block: "center",
+      });
     }
 
     // Compute popover position for desktop
@@ -181,14 +181,21 @@ export function Tour({
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Tab") {
-        const buttons = popoverRef.current?.querySelectorAll<HTMLButtonElement>("button");
+        const buttons =
+          popoverRef.current?.querySelectorAll<HTMLButtonElement>("button");
         if (!buttons?.length) return;
         const first = buttons[0];
         const last = buttons[buttons.length - 1];
-        if (e.shiftKey && (document.activeElement === first || document.activeElement === popoverRef.current)) {
-          e.preventDefault(); last.focus();
+        if (
+          e.shiftKey &&
+          (document.activeElement === first ||
+            document.activeElement === popoverRef.current)
+        ) {
+          e.preventDefault();
+          last.focus();
         } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault(); first.focus();
+          e.preventDefault();
+          first.focus();
         }
       } else if (e.key === "Escape") {
         e.preventDefault();

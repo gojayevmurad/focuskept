@@ -6,7 +6,9 @@ import { disableAnalytics, enableAnalytics } from "@/src/lib/analytics/client";
 
 /** Keep onboarding, Settings and AnalyticsIdentity on the same browser preference. */
 export function applyAnalyticsPreference(consent: boolean) {
-  try { localStorage.setItem("analytics-consent", consent ? "yes" : "no"); } catch {}
+  try {
+    localStorage.setItem("analytics-consent", consent ? "yes" : "no");
+  } catch {}
   if (consent) enableAnalytics();
   else disableAnalytics();
   window.dispatchEvent(new Event("analytics-consent"));
