@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: LocaleProps) {
   const app = getAppConfig();
   return pageMetadata(
     t("title", { app: app.name }),
-    t("lead"),
+    t("lead", { app: app.name }),
     "/cookies",
     locale,
   );
@@ -33,35 +33,35 @@ export default async function CookiesPage({ params }: LocaleProps) {
   const rows = [
     {
       name: t("rowSessionName"),
-      provider: t("firstParty"),
+      provider: t("firstParty", { app: app.name }),
       purpose: t("rowSessionPurpose"),
       duration: t("rowSessionDuration"),
       type: t("rowSessionType"),
     },
     {
       name: t("rowLocaleName"),
-      provider: t("firstParty"),
+      provider: t("firstParty", { app: app.name }),
       purpose: t("rowLocalePurpose"),
       duration: t("rowLocaleDuration"),
       type: t("rowLocaleType"),
     },
     {
       name: t("rowThemeName"),
-      provider: t("firstParty"),
+      provider: t("firstParty", { app: app.name }),
       purpose: t("rowThemePurpose"),
       duration: t("rowThemeDuration"),
       type: t("rowThemeType"),
     },
     {
       name: t("rowAttrCookieName"),
-      provider: t("firstParty"),
+      provider: t("firstParty", { app: app.name }),
       purpose: t("rowAttrCookiePurpose"),
       duration: t("rowAttrCookieDuration"),
       type: t("rowAttrCookieType"),
     },
     {
       name: t("rowConsentName"),
-      provider: t("firstParty"),
+      provider: t("firstParty", { app: app.name }),
       purpose: t("rowConsentPurpose"),
       duration: t("rowConsentDuration"),
       type: t("rowConsentType"),
@@ -80,7 +80,7 @@ export default async function CookiesPage({ params }: LocaleProps) {
       <article className={styles.article}>
         <header className={styles.pageHead}>
           <h1>{t("heading")}</h1>
-          <p className={styles.lead}>{t("lead")}</p>
+          <p className={styles.lead}>{t("lead", { app: app.name })}</p>
           <p className={styles.updated}>{t("updated")}</p>
         </header>
 
@@ -122,7 +122,7 @@ export default async function CookiesPage({ params }: LocaleProps) {
 
           <section className={styles.section}>
             <h2>{t("manageTitle")}</h2>
-            <p>{t("manageText")}</p>
+            <p>{t("manageText", { app: app.name })}</p>
           </section>
         </div>
 

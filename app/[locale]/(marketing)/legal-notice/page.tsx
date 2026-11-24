@@ -98,7 +98,7 @@ export default async function LegalNoticePage({ params }: LocaleProps) {
 
           <section className={styles.section}>
             <h2>{t("disclaimerTitle")}</h2>
-            <p>{t("disclaimerText")}</p>
+            <p>{t("disclaimerText", { app: app.name })}</p>
           </section>
         </div>
 

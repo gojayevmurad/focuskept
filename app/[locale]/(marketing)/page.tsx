@@ -92,7 +92,9 @@ export default async function Home({ params }: LocaleProps) {
                   </Link>
                 </div>
                 {!app.billingEnabled && (
-                  <p className={styles.earlyAccess}>{f("earlyAccess.a")}</p>
+                  <p className={styles.earlyAccess}>
+                    {f("earlyAccess.a", { app: app.name })}
+                  </p>
                 )}
               </div>
               <PoolDemo

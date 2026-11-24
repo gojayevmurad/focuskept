@@ -116,7 +116,7 @@
     "goal": "Was möchtest du erledigen?",
     "goalPlaceholder": "Meinen Thesis-Entwurf bis März fertigstellen",
     "segments": "Welche Art von Arbeit machst du? Wähle beliebige aus.",
-    "heardFrom": "Wie hast du von FocusKept erfahren?",
+    "heardFrom": "Wie hast du von {app} erfahren?",
     "heardFromHint": "Optional — du kannst diese Frage überspringen.",
     "heardFromOther": "Andere Quelle (optional)",
     "heardFromClear": "Antwort löschen",
@@ -277,7 +277,7 @@
     "manage": "Verwalten",
     "empty": "Nichts gebucht. Gute Zeiten demnächst:",
     "waiting": "{count} wartend",
-    "firstRunTitle": "So funktioniert FocusKept",
+    "firstRunTitle": "So funktioniert {app}",
     "firstRunLead": "Body Doubling auf ruhigen Bahnen: Ein Partner an deiner Seite, null Gesprächsaufwand.",
     "firstRunStep1Title": "1. Bahn buchen",
     "firstRunStep1Desc": "Wähle 25, 50 oder 75 Minuten. Sessions beginnen zur vollen und halben Stunde.",
@@ -542,9 +542,9 @@
     "shareWhatsApp": "Auf WhatsApp teilen",
     "shareEmail": "Per E-Mail teilen",
     "copiedFeedback": "Einladungslink in die Zwischenablage kopiert",
-    "shareMessage": "Ich nutze FocusKept für virtuelles Coworking und Body Doubling – ruhige 25-, 50- oder 75-minütige Video-Fokussessions mit einem Partner. Probier es mit meinem Link aus:",
-    "emailSubject": "Fokussiere mit mir auf FocusKept",
-    "emailBody": "Hey,\n\nich nutze FocusKept für virtuelles Coworking und Body Doubling. Du wirst per Video mit einem Partner gematcht, ihr nennt kurz euer Ziel und fokussiert euch in Ruhe.\n\nMelde dich über meinen Link an und du erhältst einen kostenlosen Monat Plus, sobald du deine erste Session abgeschlossen hast:"
+    "shareMessage": "Ich nutze {app} für virtuelles Coworking und Body Doubling – ruhige 25-, 50- oder 75-minütige Video-Fokussessions mit einem Partner. Probier es mit meinem Link aus:",
+    "emailSubject": "Fokussiere mit mir auf {app}",
+    "emailBody": "Hey,\n\nich nutze {app} für virtuelles Coworking und Body Doubling. Du wirst per Video mit einem Partner gematcht, ihr nennt kurz euer Ziel und fokussiert euch in Ruhe.\n\nMelde dich über meinen Link an und du erhältst einen kostenlosen Monat Plus, sobald du deine erste Session abgeschlossen hast:"
   },
   "publicProfile": {
     "host": "Host",
@@ -892,8 +892,8 @@
       }
     ],
     "earlyAccess": {
-      "q": "Ist FocusKept während des Early Access kostenlos?",
-      "a": "Early Access: FocusKept ist kostenlos, während wir wachsen. Später umfasst der kostenlose Tarif 3 Sitzungen pro Woche. Alle, die während des Early Access beitreten, erhalten 3 Monate Plus kostenlos."
+      "q": "Ist {app} während des Early Access kostenlos?",
+      "a": "Early Access: {app} ist kostenlos, während wir wachsen. Später umfasst der kostenlose Tarif 3 Sitzungen pro Woche. Alle, die während des Early Access beitreten, erhalten 3 Monate Plus kostenlos."
     }
   },
   "pricing": {
@@ -1155,7 +1155,7 @@
   },
   "walkthrough": {
     "title": "So funktioniert eine Session",
-    "subtitle": "Ein 60-sekündiger visueller Überblick über Body-Doubling in FocusKept.",
+    "subtitle": "Ein 60-sekündiger visueller Überblick über Body-Doubling in {app}.",
     "close": "Walkthrough schließen",
     "play": "Walkthrough abspielen",
     "pause": "Walkthrough pausieren",
@@ -1199,9 +1199,9 @@
       "settings": "E-Mail-Einstellungen in den Einstellungen verwalten"
     },
     "welcome": {
-      "subject": "Willkommen bei FocusKept – was dich erwartet",
-      "heading": "Willkommen bei FocusKept",
-      "line1": "FocusKept verbindet dich 1:1 per Video, um deine wichtigsten Aufgaben auf ruhigen Fokus-Bahnen zu erledigen.",
+      "subject": "Willkommen bei {appName} – was dich erwartet",
+      "heading": "Willkommen bei {appName}",
+      "line1": "{appName} verbindet dich 1:1 per Video, um deine wichtigsten Aufgaben auf ruhigen Fokus-Bahnen zu erledigen.",
       "line2": "Sessions starten zur vollen und halben Stunde. Die Kamera bleibt an, du teilst dein Ziel in der ersten Minute, stellst dein Mikrofon stumm und arbeitest fokussiert.",
       "line3": "Du erhältst jede Woche drei kostenlose Sessions. Wähle einen Slot von 25, 50 oder 75 Minuten für deine erste Session.",
       "cta": "Erste Session buchen"
@@ -1209,7 +1209,7 @@
     "nudgeFirstBooking": {
       "subject": "Bereit für deine erste Fokus-Session?",
       "heading": "Plane deine erste Session im Kalender",
-      "line1": "Es dauert weniger als eine Minute, deine erste Session auf FocusKept zu buchen.",
+      "line1": "Es dauert weniger als eine Minute, deine erste Session auf {appName} zu buchen.",
       "line2": "Egal ob Schreiben, Lernen, Admin-Aufgaben oder Coden: Wenn ein ruhiger Partner auf dich wartet, fällt das Anfangen ganz leicht.",
       "line3": "Bis zu einer Stunde vor Beginn kannst du kostenlos stornieren.",
       "cta": "Termin finden"
@@ -1234,7 +1234,7 @@
     "winBack": {
       "subject": "Steig wieder in eine Fokus-Session ein",
       "heading": "Wir haben deine Fokus-Bahn freigehalten",
-      "line1": "Deine letzte Fokus-Session auf FocusKept ist zwei Wochen her.",
+      "line1": "Deine letzte Fokus-Session auf {appName} ist zwei Wochen her.",
       "line2": "Wenn du ein Projekt vor dir herschiebst oder eine Stunde ungestörte Konzentration brauchst, steig einfach wieder ein.",
       "line3": "Deine drei kostenlosen Sessions werden jede Woche zurückgesetzt.",
       "cta": "Slot buchen"
@@ -1295,7 +1295,7 @@
   },
   "contact": {
     "title": "Support kontaktieren | {app}",
-    "description": "Kontaktiere das FocusKept-Team für Hilfe zu deinem Konto, Sessions oder Fehlerberichten.",
+    "description": "Kontaktiere das {app}-Team für Hilfe zu deinem Konto, Sessions oder Fehlerberichten.",
     "heading": "Support kontaktieren",
     "lead": "Hast du eine Frage, Feedback oder brauchst Hilfe? Sende uns eine Nachricht und wir melden uns bei dir.",
     "name": "Dein Name",
@@ -1334,7 +1334,7 @@
   "cookiesPage": {
     "title": "Cookies und Browser-Speicher | {app}",
     "heading": "Cookies & Browser-Speicher",
-    "lead": "FocusKept ist standardmäßig auf Datenschutz ausgelegt. Wir verwenden keine Werbe-Cookies von Drittanbietern oder seitenübergreifende Tracking-Profile.",
+    "lead": "{app} ist standardmäßig auf Datenschutz ausgelegt. Wir verwenden keine Werbe-Cookies von Drittanbietern oder seitenübergreifende Tracking-Profile.",
     "updated": "Zuletzt aktualisiert: 22. November 2026",
     "overview": "Übersicht",
     "overviewText": "Wir verwenden standardmäßig nur essenzielle Cookies, um dich sicher angemeldet zu halten und deine Spracheinstellung zu speichern. Funktionaler Browser-Speicher wird ausschließlich zur Speicherung deiner Oberflächeneinstellungen wie dem Farbschema verwendet. Wenn Analysen aktiviert sind, arbeitet PostHog vor der Einwilligung im cookie-freien Modus, und optionale Nutzungsmetriken werden erst nach deiner ausdrücklichen Einwilligung übertragen.",
@@ -1368,10 +1368,10 @@
     "rowAnalyticsPurpose": "Erfasst bei erteilter Einwilligung Funktionsnutzungen, um die App zu verbessern. Läuft vor der Einwilligung ohne Cookies.",
     "rowAnalyticsDuration": "Sitzung / Bis zu 1 Jahr",
     "rowAnalyticsType": "Optionale Analyse",
-    "firstParty": "FocusKept (Erstanbieter)",
+    "firstParty": "{app} (Erstanbieter)",
     "posthog": "PostHog (Self-hosted oder EU/US-Cloud)",
     "manageTitle": "Cookies im Browser verwalten",
-    "manageText": "Du kannst Cookies jederzeit in deinen Browsereinstellungen blockieren oder löschen. Das Blockieren essenzieller Cookies verhindert die Anmeldung bei deinem FocusKept-Konto."
+    "manageText": "Du kannst Cookies jederzeit in deinen Browsereinstellungen blockieren oder löschen. Das Blockieren essenzieller Cookies verhindert die Anmeldung bei deinem {app}-Konto."
   },
   "legalNoticePage": {
     "title": "Impressum | {app}",
@@ -1387,12 +1387,12 @@
     "hostingTitle": "Hosting und Infrastruktur",
     "hostingText": "FocusKept ist eine Open-Source-Webanwendung für Body Doubling und virtuelles Coworking unter der AGPL-3.0-Lizenz. Einzelne Bereitstellungen können auf unabhängiger Serverinfrastruktur der jeweiligen Betreiber gehostet werden.",
     "disclaimerTitle": "Haftungsausschluss und Urheberrecht",
-    "disclaimerText": "Die Inhalte dieser Website dienen dem virtuellen Coworking und der gegenseitigen Verbindlichkeit. FocusKept ist kein Gesundheitsdienstleister und bietet keine medizinische oder psychologische Behandlung an. Wende dich bei gesundheitlichen Anliegen bitte an qualifiziertes medizinisches Fachpersonal."
+    "disclaimerText": "Die Inhalte dieser Website dienen dem virtuellen Coworking und der gegenseitigen Verbindlichkeit. {app} ist kein Gesundheitsdienstleister und bietet keine medizinische oder psychologische Behandlung an. Wende dich bei gesundheitlichen Anliegen bitte an qualifiziertes medizinisches Fachpersonal."
   },
   "accessibilityPage": {
     "title": "Erklärung zur Barrierefreiheit | {app}",
     "heading": "Erklärung zur Barrierefreiheit",
-    "lead": "FocusKept wurde entwickelt, um eine inklusive, ruhige und strukturierte Fokusumgebung für alle zu bieten – einschließlich neurodivergenter Personen und Menschen mit Behinderungen.",
+    "lead": "{app} wurde entwickelt, um eine inklusive, ruhige und strukturierte Fokusumgebung für alle zu bieten – einschließlich neurodivergenter Personen und Menschen mit Behinderungen.",
     "updated": "Zuletzt aktualisiert: 22. November 2026",
     "standardTitle": "Unser Engagement & Standard",
     "standardText": "Wir setzen uns für digitale Barrierefreiheit ein und streben die Einhaltung der Web Content Accessibility Guidelines (WCAG) 2.2 auf Stufe AA an.",
@@ -1413,7 +1413,7 @@
   "communityGuidelinesPage": {
     "title": "Community-Richtlinien | {app}",
     "heading": "Community-Richtlinien",
-    "lead": "FocusKept ist ein ruhiger, unterstützender Raum für fokussiertes Arbeiten. Diese Richtlinien stellen sicher, dass jede Session sicher, respektvoll und ablenkungsfrei bleibt.",
+    "lead": "{app} ist ein ruhiger, unterstützender Raum für fokussiertes Arbeiten. Diese Richtlinien stellen sicher, dass jede Session sicher, respektvoll und ablenkungsfrei bleibt.",
     "updated": "Zuletzt aktualisiert: 22. November 2026",
     "principlesTitle": "Grundprinzipien",
     "principleRespect": "Gegenseitiger Respekt: Behandle jeden Focus-Partner mit Höflichkeit und Freundlichkeit. Menschen mit unterschiedlichsten Hintergründen, Neurotypen und Berufen nehmen teil.",
@@ -1443,7 +1443,7 @@
   "statusPage": {
     "title": "Systemstatus | {app}",
     "heading": "Systemstatus",
-    "lead": "Live-Status der FocusKept-Dienste, Datenbanken und Hintergrund-Worker.",
+    "lead": "Live-Status der {app}-Dienste, Datenbanken und Hintergrund-Worker.",
     "operational": "Alle Systeme betriebsbereit",
     "degraded": "Systemleistung beeinträchtigt",
     "webApp": "Webanwendung",

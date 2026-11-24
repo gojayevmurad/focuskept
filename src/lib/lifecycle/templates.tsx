@@ -58,7 +58,8 @@ export async function renderLifecycleEmail(
   const app = getAppConfig();
   const t = await getLifecycleTranslator(recipient.locale);
   const unsubscribeUrl = buildUnsubscribeUrl(recipient.userId);
-  const footerText = `${t("footer.why", { appName: app.name })} ${t("footer.settings")}.`;
+  const named = { appName: app.name };
+  const footerText = `${t("footer.why", named)} ${t("footer.settings")}.`;
   const unsubscribeLabel = t("footer.unsubscribe");
 
   let subject = "";
@@ -68,9 +69,13 @@ export async function renderLifecycleEmail(
 
   switch (kind) {
     case "welcome": {
-      subject = t("welcome.subject");
-      heading = t("welcome.heading");
-      lines = [t("welcome.line1"), t("welcome.line2"), t("welcome.line3")];
+      subject = t("welcome.subject", named);
+      heading = t("welcome.heading", named);
+      lines = [
+        t("welcome.line1", named),
+        t("welcome.line2"),
+        t("welcome.line3"),
+      ];
       cta = { label: t("welcome.cta"), url: `${app.url}/book` };
       break;
     }
@@ -78,7 +83,7 @@ export async function renderLifecycleEmail(
       subject = t("nudgeFirstBooking.subject");
       heading = t("nudgeFirstBooking.heading");
       lines = [
-        t("nudgeFirstBooking.line1"),
+        t("nudgeFirstBooking.line1", named),
         t("nudgeFirstBooking.line2"),
         t("nudgeFirstBooking.line3"),
       ];
@@ -114,7 +119,11 @@ export async function renderLifecycleEmail(
     case "win_back": {
       subject = t("winBack.subject");
       heading = t("winBack.heading");
-      lines = [t("winBack.line1"), t("winBack.line2"), t("winBack.line3")];
+      lines = [
+        t("winBack.line1", named),
+        t("winBack.line2"),
+        t("winBack.line3"),
+      ];
       cta = { label: t("winBack.cta"), url: `${app.url}/book` };
       break;
     }

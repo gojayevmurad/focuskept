@@ -37,8 +37,8 @@ import FaqPage from "@/app/[locale]/(marketing)/faq/page";
 beforeEach(() => {
   vi.resetAllMocks();
   mocks.getAppConfig.mockReturnValue({
-    name: "FocusKept",
-    url: "https://focuskept.com",
+    name: "Study Hall",
+    url: "https://studyhall.example",
     marketingEnabled: true,
     billingEnabled: false,
     freeWeeklySessions: 3,
@@ -51,6 +51,16 @@ beforeEach(() => {
 describe.each(Object.entries({ en, de, fr, nl, es }))(
   "early access in %s",
   (locale, messages) => {
+    // Rendered with a self-hosted APP_NAME, so the copy must not say FocusKept.
+    const question = messages.faqPage.earlyAccess.q.replace(
+      "{app}",
+      "Study Hall",
+    );
+    const answer = messages.faqPage.earlyAccess.a.replace(
+      "{app}",
+      "Study Hall",
+    );
+
     beforeEach(() => {
       mocks.getTranslations.mockImplementation(
         async (namespace: "home" | "faqPage") =>
@@ -62,21 +72,21 @@ describe.each(Object.entries({ en, de, fr, nl, es }))(
       const props = { params: Promise.resolve({ locale }) };
       const home = renderToStaticMarkup(await Home(props));
       const faq = renderToStaticMarkup(await FaqPage(props));
-      expect(home).toContain(messages.faqPage.earlyAccess.a);
-      expect(home.indexOf(messages.faqPage.earlyAccess.a)).toBeGreaterThan(
+      expect(home).toContain(answer);
+      expect(home.indexOf(answer)).toBeGreaterThan(
         home.indexOf("Book a session"),
       );
-      expect(faq).toContain(messages.faqPage.earlyAccess.a);
+      expect(faq).toContain(answer);
       const summaries = [...faq.matchAll(/<summary>(.*?)<\/summary>/g)];
-      expect(summaries[0][1]).toContain(messages.faqPage.earlyAccess.q);
+      expect(summaries[0][1]).toContain(question);
+      expect(home).not.toContain("FocusKept");
+      expect(faq).not.toContain("FocusKept");
       // The visible answer and the FAQ schema must agree.
       const schema = JSON.parse(faq.match(/<script[^>]*>(.*?)<\/script>/)![1]);
       const faqSchema = schema["@graph"].find(
         (node: { "@type": string }) => node["@type"] === "FAQPage",
       );
-      expect(faqSchema.mainEntity[0].acceptedAnswer.text).toBe(
-        messages.faqPage.earlyAccess.a,
-      );
+      expect(faqSchema.mainEntity[0].acceptedAnswer.text).toBe(answer);
     });
 
     it("omits the notice and its FAQ/schema entry when billing is enabled", async () => {
@@ -87,8 +97,8 @@ describe.each(Object.entries({ en, de, fr, nl, es }))(
       const props = { params: Promise.resolve({ locale }) };
       for (const page of [Home, FaqPage]) {
         const html = renderToStaticMarkup(await page(props));
-        expect(html).not.toContain(messages.faqPage.earlyAccess.a);
-        expect(html).not.toContain(messages.faqPage.earlyAccess.q);
+        expect(html).not.toContain(answer);
+        expect(html).not.toContain(question);
       }
     });
   },

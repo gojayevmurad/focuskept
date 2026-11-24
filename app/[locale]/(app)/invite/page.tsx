@@ -37,7 +37,11 @@ export default async function Page() {
 
         <section className="card stack">
           <h2>{t("sharePrompt")}</h2>
-          <InviteShare baseUrl={app.url} referralCode={me.referralCode} />
+          <InviteShare
+            baseUrl={app.url}
+            referralCode={me.referralCode}
+            appName={app.name}
+          />
           <p className="small faint">{t("how")}</p>
         </section>
 

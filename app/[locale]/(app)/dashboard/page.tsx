@@ -4,6 +4,7 @@ import { and, eq, inArray } from "drizzle-orm";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { CalendarPlus, ArrowRight, Video } from "lucide-react";
 import { AppShell } from "@/src/components/app-shell";
+import { getAppConfig } from "@/src/config/app";
 import { requireAppUser } from "@/src/lib/app-user";
 import { upcomingBookings } from "@/src/lib/bookings/service";
 import { suggestedSlots } from "@/src/lib/bookings/availability";
@@ -116,6 +117,7 @@ export default async function Page({
               popular: s.popular,
             }))}
             tz={tz}
+            appName={getAppConfig().name}
           />
         )}
 
