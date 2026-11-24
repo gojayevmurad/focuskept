@@ -18,6 +18,7 @@ export function OnboardingForm(props: {
   username: string;
   timezone: string;
   appUrl: string;
+  appName: string;
   slots: Slot[];
   timezones: string[];
 }) {
@@ -183,7 +184,7 @@ export function OnboardingForm(props: {
           aria-describedby="heard-from-hint"
         >
           <legend className="field" style={{ marginBottom: 8 }}>
-            {t("heardFrom")}
+            {t("heardFrom", { app: props.appName })}
           </legend>
           <p id="heard-from-hint" className="small muted">
             {t("heardFromHint")}

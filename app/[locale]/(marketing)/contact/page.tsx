@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: LocaleProps) {
   const app = getAppConfig();
   return pageMetadata(
     t("title", { app: app.name }),
-    t("description"),
+    t("description", { app: app.name }),
     "/contact",
     locale,
   );

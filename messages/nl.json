@@ -116,7 +116,7 @@
     "goal": "Wat wil je gedaan krijgen?",
     "goalPlaceholder": "Mijn scriptieconcept afronden voor maart",
     "segments": "Wat voor werk doe je? Kies wat van toepassing is.",
-    "heardFrom": "Hoe heb je van FocusKept gehoord?",
+    "heardFrom": "Hoe heb je van {app} gehoord?",
     "heardFromHint": "Optioneel — je kunt deze vraag overslaan.",
     "heardFromOther": "Andere bron (optioneel)",
     "heardFromClear": "Antwoord wissen",
@@ -277,7 +277,7 @@
     "manage": "Beheren",
     "empty": "Niets geboekt. Goede opties binnenkort:",
     "waiting": "{count} wachtend",
-    "firstRunTitle": "Hoe FocusKept werkt",
+    "firstRunTitle": "Hoe {app} werkt",
     "firstRunLead": "Body doubling in rustige banen: een partner naast je, zonder overbodige gesprekken.",
     "firstRunStep1Title": "1. Boek een baan",
     "firstRunStep1Desc": "Kies 25, 50 of 75 minuten. Sessies starten op het hele en halve uur.",
@@ -535,9 +535,9 @@
     "shareWhatsApp": "Deel op WhatsApp",
     "shareEmail": "Deel via e-mail",
     "copiedFeedback": "Uitnodigingslink gekopieerd naar klembord",
-    "shareMessage": "Ik gebruik FocusKept voor virtuele coworking en body doubling — rustige video-focussessies van 25, 50 of 75 minuten met een partner. Probeer het via mijn link:",
-    "emailSubject": "Focus met mij op FocusKept",
-    "emailBody": "Hoi,\n\nIk gebruik FocusKept voor virtuele coworking en body doubling. Je wordt via video gekoppeld aan een partner, zodat jullie allebei je doel kunnen uitspreken en daarna in stilte kunnen focussen.\n\nMeld je aan via mijn link en je krijgt een gratis maand Plus zodra je je eerste sessie afrondt:"
+    "shareMessage": "Ik gebruik {app} voor virtuele coworking en body doubling — rustige video-focussessies van 25, 50 of 75 minuten met een partner. Probeer het via mijn link:",
+    "emailSubject": "Focus met mij op {app}",
+    "emailBody": "Hoi,\n\nIk gebruik {app} voor virtuele coworking en body doubling. Je wordt via video gekoppeld aan een partner, zodat jullie allebei je doel kunnen uitspreken en daarna in stilte kunnen focussen.\n\nMeld je aan via mijn link en je krijgt een gratis maand Plus zodra je je eerste sessie afrondt:"
   },
   "publicProfile": {
     "host": "Host",
@@ -885,8 +885,8 @@
       }
     ],
     "earlyAccess": {
-      "q": "Is FocusKept gratis tijdens de vroege toegang?",
-      "a": "Vroege toegang: FocusKept is gratis terwijl we groeien. Later bevat het gratis abonnement 3 sessies per week. Iedereen die zich tijdens de vroege toegang aanmeldt, krijgt 3 maanden Plus gratis."
+      "q": "Is {app} gratis tijdens de vroege toegang?",
+      "a": "Vroege toegang: {app} is gratis terwijl we groeien. Later bevat het gratis abonnement 3 sessies per week. Iedereen die zich tijdens de vroege toegang aanmeldt, krijgt 3 maanden Plus gratis."
     }
   },
   "pricing": {
@@ -1148,7 +1148,7 @@
   },
   "walkthrough": {
     "title": "Hoe een sessie werkt",
-    "subtitle": "Een visuele walkthrough van 60 seconden over body doubling in FocusKept.",
+    "subtitle": "Een visuele walkthrough van 60 seconden over body doubling in {app}.",
     "close": "Walkthrough sluiten",
     "play": "Walkthrough afspelen",
     "pause": "Walkthrough pauzeren",
@@ -1192,9 +1192,9 @@
       "settings": "Beheer e-mailvoorkeuren in Instellingen"
     },
     "welcome": {
-      "subject": "Welkom bij FocusKept — wat je kunt verwachten",
-      "heading": "Welkom bij FocusKept",
-      "line1": "FocusKept koppelt je 1-op-1 via video om je belangrijkste werk gedaan te krijgen in rustige focusbanen.",
+      "subject": "Welkom bij {appName} — wat je kunt verwachten",
+      "heading": "Welkom bij {appName}",
+      "line1": "{appName} koppelt je 1-op-1 via video om je belangrijkste werk gedaan te krijgen in rustige focusbanen.",
       "line2": "Sessies starten op het hele en halve uur. Camera's blijven aan, je deelt je doel in de eerste minuut, zet je microfoon op dempen en focust ongestoord.",
       "line3": "Je krijgt elke week drie gratis sessies. Kies een tijdslot van 25, 50 of 75 minuten om je eerste sessie te proberen.",
       "cta": "Boek je eerste sessie"
@@ -1202,7 +1202,7 @@
     "nudgeFirstBooking": {
       "subject": "Klaar voor je eerste focussessie?",
       "heading": "Zet je eerste sessie in de agenda",
-      "line1": "Het boeken van je eerste sessie op FocusKept kost minder dan een minuut.",
+      "line1": "Het boeken van je eerste sessie op {appName} kost minder dan een minuut.",
       "line2": "Of je nu schrijft, studeert, administratie doet of programmeert: met een rustige partner die op je wacht, begin je moeiteloos.",
       "line3": "Gratis annuleren kan tot een uur voor de sessie begint.",
       "cta": "Kies een tijdstip"
@@ -1227,7 +1227,7 @@
     "winBack": {
       "subject": "Duik weer in een focussessie",
       "heading": "We hebben je focusbaan vrijgehouden",
-      "line1": "Het is twee weken geleden sinds je laatste focussessie op FocusKept.",
+      "line1": "Het is twee weken geleden sinds je laatste focussessie op {appName}.",
       "line2": "Als je een project hebt uitgesteld of een uur ongestoorde focus nodig hebt, duik er dan weer in.",
       "line3": "Je drie gratis sessies worden elke week vernieuwd.",
       "cta": "Boek een tijdslot"
@@ -1288,7 +1288,7 @@
   },
   "contact": {
     "title": "Contact met support | {app}",
-    "description": "Neem contact op met het FocusKept-team voor hulp bij je account, sessies of het melden van bugs.",
+    "description": "Neem contact op met het {app}-team voor hulp bij je account, sessies of het melden van bugs.",
     "heading": "Contact met support",
     "lead": "Heb je een vraag, feedback of hulp nodig? Stuur ons een bericht en we nemen contact met je op.",
     "name": "Je naam",
@@ -1327,7 +1327,7 @@
   "cookiesPage": {
     "title": "Cookies en browseropslag | {app}",
     "heading": "Cookies & browseropslag",
-    "lead": "FocusKept is ontworpen met privacy als uitgangspunt. We gebruiken geen advertentiecookies van derden of cross-site trackingprofielen.",
+    "lead": "{app} is ontworpen met privacy als uitgangspunt. We gebruiken geen advertentiecookies van derden of cross-site trackingprofielen.",
     "updated": "Laatst bijgewerkt: 22 november 2026",
     "overview": "Overzicht",
     "overviewText": "We gebruiken standaard alleen essentiële cookies om je veilig ingelogd te houden en je taalvoorkeur te onthouden. Functionele browseropslag wordt uitsluitend gebruikt om je interface-instellingen op te slaan, zoals het kleurthema. Als analytics is ingeschakeld, werkt PostHog voorafgaand aan toestemming in een cookieloze modus, en worden optionele gebruiksstatistieken pas verzonden nadat je hier expliciet toestemming voor hebt gegeven.",
@@ -1361,10 +1361,10 @@
     "rowAnalyticsPurpose": "Registreert bij gegeven toestemming gebeurtenissen over functiegebruik om ons te helpen de app te verbeteren. Werkt cookieloos voorafgaand aan toestemming.",
     "rowAnalyticsDuration": "Sessie / Tot 1 jaar",
     "rowAnalyticsType": "Optionele analytics",
-    "firstParty": "FocusKept (First-party)",
+    "firstParty": "{app} (First-party)",
     "posthog": "PostHog (Zelf gehost of EU/VS-cloud)",
     "manageTitle": "Cookies beheren in je browser",
-    "manageText": "Je kunt cookies op elk moment blokkeren of verwijderen via je browserinstellingen. Het blokkeren van essentiële cookies zorgt ervoor dat je niet meer kunt inloggen op je FocusKept-account."
+    "manageText": "Je kunt cookies op elk moment blokkeren of verwijderen via je browserinstellingen. Het blokkeren van essentiële cookies zorgt ervoor dat je niet meer kunt inloggen op je {app}-account."
   },
   "legalNoticePage": {
     "title": "Juridische kennisgeving | {app}",
@@ -1380,12 +1380,12 @@
     "hostingTitle": "Hosting en infrastructuur",
     "hostingText": "FocusKept is een open-source webapplicatie voor body-doubling en virtuele coworking onder AGPL-3.0-licentie. Individuele implementaties kunnen worden gehost op onafhankelijke serverinfrastructuur naar keuze van de desbetreffende beheerder.",
     "disclaimerTitle": "Disclaimers en auteursrecht",
-    "disclaimerText": "De inhoud op deze site is bedoeld voor virtuele coworking en accountability. FocusKept is geen zorgaanbieder en biedt geen medische of psychologische behandeling. Raadpleeg bij medische vragen een gekwalificeerde zorgverlener."
+    "disclaimerText": "De inhoud op deze site is bedoeld voor virtuele coworking en accountability. {app} is geen zorgaanbieder en biedt geen medische of psychologische behandeling. Raadpleeg bij medische vragen een gekwalificeerde zorgverlener."
   },
   "accessibilityPage": {
     "title": "Toegankelijkheidsverklaring | {app}",
     "heading": "Toegankelijkheidsverklaring",
-    "lead": "FocusKept is ontworpen om een inclusieve, rustige en gestructureerde focusomgeving te bieden voor iedereen, inclusief neurodivergente personen en mensen met een beperking.",
+    "lead": "{app} is ontworpen om een inclusieve, rustige en gestructureerde focusomgeving te bieden voor iedereen, inclusief neurodivergente personen en mensen met een beperking.",
     "updated": "Laatst bijgewerkt: 22 november 2026",
     "standardTitle": "Onze toewijding & standaard",
     "standardText": "Wij zetten ons in voor digitale toegankelijkheid en streven ernaar te voldoen aan de Web Content Accessibility Guidelines (WCAG) 2.2 niveau AA.",
@@ -1406,7 +1406,7 @@
   "communityGuidelinesPage": {
     "title": "Communityrichtlijnen | {app}",
     "heading": "Communityrichtlijnen",
-    "lead": "FocusKept is een rustige, ondersteunende plek voor geconcentreerd werken. Deze richtlijnen zorgen ervoor dat elke sessie veilig, respectvol en vrij van afleiding is.",
+    "lead": "{app} is een rustige, ondersteunende plek voor geconcentreerd werken. Deze richtlijnen zorgen ervoor dat elke sessie veilig, respectvol en vrij van afleiding is.",
     "updated": "Laatst bijgewerkt: 22 november 2026",
     "principlesTitle": "Kernprincipes",
     "principleRespect": "Wederzijds respect: Behandel elke focuspartner met respect en vriendelijkheid. Mensen doen mee vanuit diverse achtergronden, neurotypes en beroepen.",
@@ -1436,7 +1436,7 @@
   "statusPage": {
     "title": "Systeemstatus | {app}",
     "heading": "Systeemstatus",
-    "lead": "Live status van FocusKept-diensten, databases en achtergrond-workers.",
+    "lead": "Live status van {app}-diensten, databases en achtergrond-workers.",
     "operational": "Alle systemen operationeel",
     "degraded": "Systeemprestaties verminderd",
     "webApp": "Webapplicatie",

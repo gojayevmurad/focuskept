@@ -41,10 +41,12 @@ export function WalkthroughModal({
   open,
   onClose,
   src,
+  appName,
 }: {
   open: boolean;
   onClose: () => void;
   src?: string;
+  appName: string;
 }) {
   const t = useTranslations("walkthrough");
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -122,7 +124,9 @@ export function WalkthroughModal({
             <h2 id="walkthrough-heading" className={styles.walkthroughTitle}>
               {t("title")}
             </h2>
-            <p className={styles.walkthroughSub}>{t("subtitle")}</p>
+            <p className={styles.walkthroughSub}>
+              {t("subtitle", { app: appName })}
+            </p>
           </div>
           <button
             type="button"
