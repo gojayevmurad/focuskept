@@ -5,6 +5,9 @@ import { heardFromInput } from "@/src/lib/attribution/heard-from";
 import { safeRedirect } from "@/src/lib/security/validation";
 import { checkBookable, isValidTimeZone } from "@/src/lib/scheduling/slots";
 
+/** The zone new profiles get before the person confirms their own. */
+export const DEFAULT_PROFILE_TIMEZONE = "America/New_York";
+
 export const FOCUS_AREAS = [
   "work",
   "study",

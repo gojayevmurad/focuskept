@@ -40,6 +40,7 @@ import {
   BLOCKERS,
   PREFERRED_TIMES,
   computeFocusPlan,
+  DEFAULT_PROFILE_TIMEZONE,
   validOnboardingStep,
   type OnboardingProgress,
   type OnboardingAnswers,
@@ -133,6 +134,16 @@ export function OnboardingForm({
   useEffect(() => {
     heading.current?.focus();
   }, [step]);
+
+  // New profiles carry the schema's default zone; use the device's zone instead.
+  useEffect(() => {
+    if (step !== 0 || answers.timezone !== DEFAULT_PROFILE_TIMEZONE) return;
+    const device = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (device && device !== answers.timezone && timezones.includes(device))
+      update({ timezone: device });
+    // Runs once on first render of a fresh onboarding.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function persist(next: OnboardingProgress) {
     const save = queue.current

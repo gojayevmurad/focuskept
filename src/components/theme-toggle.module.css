@@ -1,9 +1,11 @@
 /* SPDX-License-Identifier: AGPL-3.0-only */
 .toggle.toggle {
+  flex: none;
   min-width: 44px;
   min-height: 44px;
   border-radius: var(--radius-sm);
 }
-.toggle span {
+/* The state is spoken through aria-label and shown by the icon. */
+.toggle.toggle > span {
   display: none;
 }

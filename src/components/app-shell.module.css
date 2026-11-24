@@ -29,14 +29,16 @@
   gap: 8px;
   align-items: center;
 }
-.preferences [data-theme-toggle] {
+.preferences.preferences [data-theme-toggle] {
+  flex: none;
   width: auto;
+  white-space: nowrap;
   gap: 7px;
   padding-inline: 10px;
   border: 1px solid var(--line-strong);
   background: var(--surface);
 }
-.preferences [data-theme-toggle] span {
+.preferences.preferences [data-theme-toggle] > span {
   display: inline;
   font-size: 13px;
 }

@@ -706,3 +706,50 @@
     transition: none;
   }
 }
+
+/* Keep the partner, the clock and the controls in one screen on laptops:
+   the partner video never grows taller than the space the viewport leaves. */
+.pair > [data-role="partner"] > .media {
+  max-height: max(240px, calc(100dvh - 300px));
+  width: 100%;
+}
+@media (min-width: 1180px) {
+  /* Wide screens: goal and outcome sit beside the stage instead of below it. */
+  .room:has(> .stage):has(> .controls) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    grid-template-areas:
+      "top top"
+      "guidance guidance"
+      "stage controls";
+    column-gap: 20px;
+    align-content: start;
+    width: min(1440px, calc(100% - 32px));
+    margin-inline: auto;
+  }
+  .room:has(> .stage) > .top {
+    grid-area: top;
+    width: 100%;
+  }
+  .room:has(> .stage) > .guidance {
+    grid-area: guidance;
+    width: 100%;
+  }
+  .room:has(> .stage) > .stage {
+    grid-area: stage;
+    width: 100%;
+  }
+  .room:has(> .stage) > .controls {
+    grid-area: controls;
+    width: 100%;
+    align-self: start;
+  }
+  .room:has(> .stage) > .controls .controlDetails {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .room:has(> .stage) > .notice {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
