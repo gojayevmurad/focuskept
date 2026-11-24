@@ -55,7 +55,7 @@
     "pino": "10.4.0",
     "pino-pretty": "13.2.0",
     "posthog-js": "1.438.10",
-    "posthog-node": "5.56.1",
+    "posthog-node": "6.0.3",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "react-email": "6.11.2",
