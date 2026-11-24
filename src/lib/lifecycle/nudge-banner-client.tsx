@@ -3,6 +3,7 @@
 import { useState, useSyncExternalStore } from "react";
 import { Sparkles, X } from "lucide-react";
 import { Link } from "@/src/i18n/navigation";
+import { usePathname } from "@/src/i18n/navigation";
 import styles from "./nudge.module.css";
 
 type Props = {
@@ -31,6 +32,7 @@ export function NudgeBannerClient({
   bookLabel,
   dismissLabel,
 }: Props) {
+  const pathname = usePathname();
   const [manuallyDismissed, setManuallyDismissed] = useState(false);
 
   const isStoredDismissed = useSyncExternalStore(
@@ -54,7 +56,7 @@ export function NudgeBannerClient({
     } catch {}
   };
 
-  if (dismissed) return null;
+  if (dismissed || !["/dashboard", "/book"].includes(pathname)) return null;
 
   return (
     <div className={styles.nudgeBanner} role="complementary">

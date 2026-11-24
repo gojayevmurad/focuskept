@@ -1,13 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 "use client";
-import {
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  useSyncExternalStore,
-  useTransition,
-} from "react";
+import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useFormatter, useTranslations } from "next-intl";
 import {
   ChevronLeft,
@@ -15,6 +8,9 @@ import {
   LoaderCircle,
   Users,
   UsersRound,
+  Clock,
+  CalendarCheck,
+  Sunrise,
 } from "lucide-react";
 import { Link, useRouter } from "@/src/i18n/navigation";
 import { trackBookingViewed } from "@/src/lib/analytics/client";
@@ -26,14 +22,24 @@ import {
   type ActionResult,
 } from "./actions";
 
+import { Avatar } from "@/src/components/avatar";
+import { MatchNow } from "@/src/components/match-now";
+import styles from "./calendar.module.css";
+
 type Demand = Record<number, number>;
 export type CalendarData = {
   timeZone: string;
+  preferredTimes?: string[];
   now: string;
   days: {
     key: string;
     start: string;
-    slots: { at: string; demand: Demand; popular: boolean }[];
+    slots: {
+      at: string;
+      demand: Demand;
+      popular: boolean;
+      people?: Record<number, { name: string; avatar: string | null }[]>;
+    }[];
   }[];
   mine: {
     id: string;
@@ -43,6 +49,7 @@ export type CalendarData = {
     kind: string;
     sessionId: string | null;
     partner: string | null;
+    partnerAvatar?: string | null;
     label: string | null;
     fallbackOffered: boolean;
   }[];
@@ -54,6 +61,7 @@ export type CalendarData = {
     taken: number;
     capacity: number;
     hostName: string | null;
+    hostAvatar?: string | null;
     joined: boolean;
   }[];
   favorites: { username: string; displayName: string }[];
@@ -73,18 +81,6 @@ export type CalendarData = {
 const DURATIONS = [25, 50, 75] as const;
 const CUTOFF_MS = 2 * 60_000;
 
-function useNarrow() {
-  return useSyncExternalStore(
-    (cb) => {
-      const m = matchMedia("(max-width: 760px)");
-      m.addEventListener("change", cb);
-      return () => m.removeEventListener("change", cb);
-    },
-    () => matchMedia("(max-width: 760px)").matches,
-    () => false,
-  );
-}
-
 type Selection =
   | { type: "slot"; at: string }
   | { type: "mine"; id: string }
@@ -96,7 +92,6 @@ export function Calendar({ data }: { data: CalendarData }) {
   const c = useTranslations("common");
   const format = useFormatter();
   const router = useRouter();
-  const narrow = useNarrow();
   const [duration, setDuration] = useState<number>(data.prefill.duration ?? 50);
   const [dayIndex, setDayIndex] = useState(0);
   const [selected, setSelected] = useState<Selection>(() => {
@@ -142,7 +137,7 @@ export function Calendar({ data }: { data: CalendarData }) {
     );
     const thisWeek = new Date(data.days[0].start).getTime() <= Date.now();
     el.scrollTop = (thisWeek ? Math.max(0, hour - 1) : 8) * 88;
-  }, [data.timeZone, data.days, narrow]);
+  }, [data.timeZone, data.days]);
 
   const mineByStart = useMemo(() => {
     const map = new Map<string, CalendarData["mine"][number]>();
@@ -197,7 +192,7 @@ export function Calendar({ data }: { data: CalendarData }) {
     });
   }
 
-  const days = narrow ? data.days.slice(dayIndex, dayIndex + 1) : data.days;
+  const days = data.days;
   const rows = data.days[0].slots.length
     ? Math.max(...data.days.map((d) => d.slots.length))
     : 48;
@@ -232,13 +227,11 @@ export function Calendar({ data }: { data: CalendarData }) {
   );
 
   return (
-    <div className="stack">
+    <div className={`stack ${styles.page}`}>
       <div className="row-between">
         <div className="page-title">
           <h1>{t("title")}</h1>
-          <p className="muted">
-            {t("lead", { zone: data.timeZone.replaceAll("_", " ") })}
-          </p>
+          <p className="muted">{t("simpleLead")}</p>
         </div>
         {data.usage && data.billingEnabled && (
           <span className={`badge ${weekFull ? "warm" : ""}`}>
@@ -250,7 +243,7 @@ export function Calendar({ data }: { data: CalendarData }) {
         )}
       </div>
 
-      <div className="cal-toolbar">
+      <div className={`cal-toolbar ${styles.toolbar}`}>
         <div className="segmented" role="group" aria-label={t("length")}>
           {DURATIONS.map((d) => (
             <button
@@ -262,8 +255,12 @@ export function Calendar({ data }: { data: CalendarData }) {
             </button>
           ))}
         </div>
+        <MatchNow className="button secondary" />
+        <span className="small muted">
+          {data.timeZone.replaceAll("_", " ")}
+        </span>
         <span className="grow" />
-        {narrow ? (
+        <div className={styles.mobileNav}>
           <div className="row">
             <button
               className="button secondary small icon"
@@ -295,7 +292,8 @@ export function Calendar({ data }: { data: CalendarData }) {
               <ChevronRight size={16} />
             </button>
           </div>
-        ) : (
+        </div>
+        <div className={styles.weekNav}>
           <div className="row">
             {data.prevWeek ? (
               <Link
@@ -325,7 +323,7 @@ export function Calendar({ data }: { data: CalendarData }) {
               <ChevronRight size={16} />
             </Link>
           </div>
-        )}
+        </div>
       </div>
 
       {message && !selected && (
@@ -334,80 +332,134 @@ export function Calendar({ data }: { data: CalendarData }) {
         </p>
       )}
 
-      <div
-        className="cal"
-        style={{
-          ["--days" as string]: days.length,
-          gridTemplateColumns: `var(--cal-gutter) repeat(${days.length}, minmax(0, 1fr))`,
-        }}
-      >
-        <div className="cal-head" />
-        {days.map((d) => (
-          <div
-            key={d.key}
-            className={`cal-head ${d.key === todayKey ? "today" : ""}`}
-          >
-            {format.dateTime(new Date(d.start), {
-              timeZone: data.timeZone,
-              weekday: "short",
-            })}
-            <strong>
-              {format.dateTime(new Date(d.start), {
+      <div className={styles.dayList}>
+        <div
+          className={styles.dayTabs}
+          role="group"
+          aria-label={t("chooseDay")}
+        >
+          {data.days.map((day, index) => (
+            <button
+              key={day.key}
+              className="button secondary small"
+              aria-pressed={index === dayIndex}
+              onClick={() => setDayIndex(index)}
+            >
+              {format.dateTime(new Date(day.start), {
                 timeZone: data.timeZone,
+                weekday: "short",
                 day: "numeric",
               })}
-            </strong>
-          </div>
-        ))}
+            </button>
+          ))}
+        </div>
+        <div className={styles.dayRows}>
+          {data.days[dayIndex].slots.map((slot, row) => {
+            if (
+              Date.parse(slot.at) - now < CUTOFF_MS &&
+              !mineByStart.has(slot.at)
+            )
+              return null;
+            return (
+              <Row
+                key={slot.at}
+                row={row}
+                days={[data.days[dayIndex]]}
+                now={now}
+                duration={duration}
+                mineByStart={mineByStart}
+                busyUntil={busyUntil}
+                groupsByStart={groupsByStart}
+                time={time}
+                onSelect={setSelected}
+                t={t}
+                preferredTimes={data.preferredTimes ?? []}
+                timeZone={data.timeZone}
+                list
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className={styles.weekGrid}>
         <div
-          className="cal-scroll"
-          ref={scroller}
+          className="cal"
           style={{
+            ["--days" as string]: days.length,
             gridTemplateColumns: `var(--cal-gutter) repeat(${days.length}, minmax(0, 1fr))`,
           }}
         >
-          {Array.from({ length: rows }).map((_, row) => (
-            <Row
-              key={row}
-              row={row}
-              days={days}
-              now={now}
-              duration={duration}
-              mineByStart={mineByStart}
-              busyUntil={busyUntil}
-              groupsByStart={groupsByStart}
-              time={time}
-              onSelect={setSelected}
-              t={t}
-            />
+          <div className="cal-head" />
+          {days.map((d) => (
+            <div
+              key={d.key}
+              className={`cal-head ${d.key === todayKey ? "today" : ""}`}
+            >
+              {format.dateTime(new Date(d.start), {
+                timeZone: data.timeZone,
+                weekday: "short",
+              })}
+              <strong>
+                {format.dateTime(new Date(d.start), {
+                  timeZone: data.timeZone,
+                  day: "numeric",
+                })}
+              </strong>
+            </div>
           ))}
+          <div
+            className="cal-scroll"
+            ref={scroller}
+            style={{
+              gridTemplateColumns: `var(--cal-gutter) repeat(${days.length}, minmax(0, 1fr))`,
+            }}
+          >
+            {Array.from({ length: rows }).map((_, row) => (
+              <Row
+                key={row}
+                row={row}
+                days={days}
+                now={now}
+                duration={duration}
+                mineByStart={mineByStart}
+                busyUntil={busyUntil}
+                groupsByStart={groupsByStart}
+                time={time}
+                onSelect={setSelected}
+                t={t}
+                preferredTimes={data.preferredTimes ?? []}
+                timeZone={data.timeZone}
+              />
+            ))}
+          </div>
         </div>
       </div>
-
       <div className="legend">
+        {data.preferredTimes?.length ? (
+          <span>
+            <Sunrise size={16} />
+            {t("preferredSlot")}
+          </span>
+        ) : null}
         <span>
-          <i
-            style={{
-              background: "var(--lane)",
-              border: "1px solid var(--line)",
-            }}
-          />
+          <Clock size={16} />
           {t("legendPopular")}
         </span>
         <span>
-          <Users size={12} /> {t("legendWaiting")}
+          <Users size={16} /> {t("legendWaiting")}
         </span>
         <span>
-          <i style={{ background: "var(--accent)" }} />
+          <CalendarCheck size={16} />
           {t("legendMine")}
         </span>
         <span>
-          <i style={{ background: "var(--lane-strong)" }} />
+          <UsersRound size={16} />
           {t("legendGroup")}
         </span>
       </div>
 
       <dialog
+        aria-label={t("title")}
         ref={dialog}
         className="dialog"
         onClose={() => setSelected(null)}
@@ -425,7 +477,7 @@ export function Calendar({ data }: { data: CalendarData }) {
                     ? t("waitingCount", { count: waitingAt(selectedSlot) })
                     : t("nobodyYet")}
                 </p>
-                <p className="small muted">{t("newBooking")}</p>
+                <p className="small muted">{t("simpleLead")}</p>
               </div>
               <div className="segmented" role="group" aria-label={t("length")}>
                 {DURATIONS.map((d) => (
@@ -504,6 +556,15 @@ export function Calendar({ data }: { data: CalendarData }) {
             <>
               <div className="stack-sm">
                 <h2>{longWhen(selectedMine.startAt)}</h2>
+                {selectedMine.partner && (
+                  <div className="row">
+                    <Avatar
+                      name={selectedMine.partner}
+                      src={selectedMine.partnerAvatar}
+                    />
+                    <strong>{selectedMine.partner}</strong>
+                  </div>
+                )}
                 <p className="muted">
                   {c("minutes", { count: selectedMine.durationMin })} ·{" "}
                   {selectedMine.status === "matched"
@@ -634,6 +695,9 @@ export function Calendar({ data }: { data: CalendarData }) {
 
 function Row(props: {
   row: number;
+  preferredTimes: string[];
+  timeZone: string;
+  list?: boolean;
   days: CalendarData["days"];
   now: number;
   duration: number;
@@ -666,12 +730,35 @@ function Row(props: {
           !mine && props.busyUntil.some((b) => at > b.from && at < b.to);
         const groups = props.groupsByStart.get(slot.at) ?? [];
         const waiting = slot.demand[props.duration] ?? 0;
-        const label = `${props.time(slot.at)}${waiting ? `, ${props.t("waitingCount", { count: waiting })}` : ""}`;
+        const hour = Number(
+          new Intl.DateTimeFormat("en", {
+            timeZone: props.timeZone,
+            hour: "numeric",
+            hourCycle: "h23",
+          }).format(new Date(slot.at)),
+        );
+        const preferred = props.preferredTimes.includes(
+          hour >= 6 && hour < 12
+            ? "morning"
+            : hour >= 12 && hour < 18
+              ? "afternoon"
+              : hour >= 18 && hour < 22
+                ? "evening"
+                : "night",
+        );
+        const detail = mine
+          ? `${mine.label ?? mine.partner ?? props.t("waitingShort")}, ${mine.durationMin}`
+          : groups[0]
+            ? `${groups[0].title ?? props.t("groupShort")}, ${groups[0].hostName ?? ""}, ${props.t("seatsLeft", { count: Math.max(0, groups[0].capacity - groups[0].taken) })}`
+            : waiting
+              ? props.t("peopleBooked", { count: waiting })
+              : props.t("available");
+        const label = `${props.time(slot.at)}, ${detail}`;
         return (
           <button
             key={d.key}
-            className={`slot ${half ? "half" : ""} ${slot.popular ? "popular" : ""} ${mine ? "is-mine" : ""}`}
-            disabled={past && !mine}
+            className={`${styles.slot} ${props.list ? styles.slotRow : ""} ${preferred ? styles.preferred : ""} slot ${half ? "half" : ""} ${slot.popular ? "popular" : ""} ${mine ? "is-mine" : ""}`}
+            disabled={(past || Boolean(covered)) && !mine}
             aria-label={label}
             onClick={() =>
               mine
@@ -692,6 +779,13 @@ function Row(props: {
             )}
             {mine ? (
               <span className={`mine ${mine.kind === "group" ? "group" : ""}`}>
+                {mine.partner && (
+                  <Avatar
+                    size="sm"
+                    name={mine.partner}
+                    src={mine.partnerAvatar}
+                  />
+                )}
                 <span>
                   {mine.status === "matched"
                     ? (mine.label ?? mine.partner ?? props.t("groupShort"))
@@ -701,14 +795,46 @@ function Row(props: {
               </span>
             ) : groups[0] ? (
               <span className="mine group">
-                <UsersRound size={11} />{" "}
+                <Avatar
+                  size="sm"
+                  name={groups[0].hostName ?? props.t("groupShort")}
+                  src={groups[0].hostAvatar}
+                />{" "}
                 <span>
-                  {groups[0].title ?? props.t("groupShort")} {groups[0].taken}/
-                  {groups[0].capacity}
+                  {groups[0].title ?? props.t("groupShort")} ·{" "}
+                  {groups[0].hostName}
+                  <br />
+                  {props.t("seatsLeft", {
+                    count: Math.max(0, groups[0].capacity - groups[0].taken),
+                  })}
                 </span>
               </span>
             ) : (
-              !past && waiting > 0 && <span className="count">{waiting}</span>
+              !past &&
+              waiting > 0 && (
+                <span className={styles.waiting}>
+                  <span className={styles.avatarStack}>
+                    {slot.people?.[props.duration]?.map((person, index) => (
+                      <Avatar
+                        key={index}
+                        size="sm"
+                        name={person.name}
+                        src={person.avatar}
+                      />
+                    ))}
+                  </span>
+                  <span>
+                    {props.list
+                      ? props.t("peopleBooked", { count: waiting })
+                      : waiting}
+                  </span>
+                </span>
+              )
+            )}
+            {props.list && !mine && !groups[0] && !waiting && !past && (
+              <span className={styles.available}>
+                {covered ? props.t("busy") : props.t("available")}
+              </span>
             )}
           </button>
         );

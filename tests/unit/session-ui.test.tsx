@@ -305,6 +305,20 @@ function calendarData(startAt: string, sessionId: string | null): CalendarData {
   };
 }
 describe("booking management after start", () => {
+  it("renders accessible day controls and slot rows alongside the wide week grid", () => {
+    const data = calendarData(
+      new Date(Date.now() + 60 * 60000).toISOString(),
+      "room",
+    );
+    data.preferredTimes = ["morning", "afternoon", "evening", "night"];
+    const html = render(<Calendar data={data} />);
+    expect(html).toContain('aria-label="Choose a day"');
+    expect(html).toContain('aria-pressed="true"');
+    expect(html).toContain("dayRows");
+    expect(html).toContain("slotRow");
+    expect(html).toContain("preferred");
+    expect(html).toContain("Match now");
+  });
   it("offers a primary Join now link instead of cancel or late-cancel copy", () => {
     const html = render(
       <Calendar
@@ -345,7 +359,8 @@ describe("booking management after start", () => {
     data.mine[0].label = "Focus session with Alex";
     data.mine[0].kind = "group";
     const html = render(<Calendar data={data} />);
-    expect(html.match(/Focus session with Alex/g)).toHaveLength(2);
+    expect(html).toMatch(/aria-label="[^"]*Focus session with Alex/);
+    expect(html).toMatch(/<dialog[\s\S]*Focus session with Alex/);
     expect(html).not.toContain(messages.book.groupSeat);
   });
 });

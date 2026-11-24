@@ -16,6 +16,7 @@ import { getPlan, weeklyUsage } from "@/src/lib/billing/plan";
 import {
   groupSessionsBetween,
   slotDemand,
+  slotPeople,
 } from "@/src/lib/bookings/availability";
 import {
   addMinutes,
@@ -26,6 +27,7 @@ import {
 } from "@/src/lib/scheduling/slots";
 import { sessionLabel } from "@/src/lib/sessions/label";
 import { getAppConfig } from "@/src/config/app";
+import { getFocusPreferences } from "@/src/lib/profiles";
 import { Calendar, type CalendarData } from "./calendar";
 
 export const metadata: Metadata = { title: "Book" };
@@ -49,39 +51,45 @@ export default async function Page({
   const from = grid[0].start;
   const to = addMinutes(grid.at(-1)!.slots.at(-1)!, 30);
 
-  const [demand, mine, groups, plan, favs] = await Promise.all([
-    slotDemand(from, to, user.id),
-    db()
-      .select({
-        id: booking.id,
-        startAt: booking.startAt,
-        durationMin: booking.durationMin,
-        status: booking.status,
-        kind: booking.kind,
-        sessionId: booking.sessionId,
-        preferredPartnerId: booking.preferredPartnerId,
-        fallbackOfferedAt: booking.fallbackOfferedAt,
-        isFallbackRoom: focusSession.isFallbackRoom,
-        title: focusSession.title,
-      })
-      .from(booking)
-      .leftJoin(focusSession, eq(focusSession.id, booking.sessionId))
-      .where(
-        and(
-          eq(booking.userId, user.id),
-          inArray(booking.status, ["booked", "matched"]),
-          gte(booking.startAt, addMinutes(from, -75)),
-          lt(booking.startAt, to),
+  const [demand, mine, groups, plan, favs, preferences, people] =
+    await Promise.all([
+      slotDemand(from, to, user.id),
+      db()
+        .select({
+          id: booking.id,
+          startAt: booking.startAt,
+          durationMin: booking.durationMin,
+          status: booking.status,
+          kind: booking.kind,
+          sessionId: booking.sessionId,
+          preferredPartnerId: booking.preferredPartnerId,
+          fallbackOfferedAt: booking.fallbackOfferedAt,
+          isFallbackRoom: focusSession.isFallbackRoom,
+          title: focusSession.title,
+        })
+        .from(booking)
+        .leftJoin(focusSession, eq(focusSession.id, booking.sessionId))
+        .where(
+          and(
+            eq(booking.userId, user.id),
+            inArray(booking.status, ["booked", "matched"]),
+            gte(booking.startAt, addMinutes(from, -75)),
+            lt(booking.startAt, to),
+          ),
         ),
-      ),
-    groupSessionsBetween(from, to),
-    getPlan(user.id),
-    db()
-      .select({ username: profile.username, displayName: profile.displayName })
-      .from(favorite)
-      .innerJoin(profile, eq(profile.userId, favorite.partnerId))
-      .where(eq(favorite.userId, user.id)),
-  ]);
+      groupSessionsBetween(from, to),
+      getPlan(user.id),
+      db()
+        .select({
+          username: profile.username,
+          displayName: profile.displayName,
+        })
+        .from(favorite)
+        .innerJoin(profile, eq(profile.userId, favorite.partnerId))
+        .where(eq(favorite.userId, user.id)),
+      getFocusPreferences(user.id),
+      slotPeople(from, to, user.id),
+    ]);
   // Partner names for matched pair sessions.
   const sessionIds = mine
     .map((b) => b.sessionId)
@@ -92,6 +100,7 @@ export default async function Page({
           sessionId: sessionParticipant.sessionId,
           userId: sessionParticipant.userId,
           name: profile.displayName,
+          avatar: profile.avatarUrl,
           joinedAt: sessionParticipant.joinedAt,
         })
         .from(sessionParticipant)
@@ -109,6 +118,7 @@ export default async function Page({
 
   const data: CalendarData = {
     timeZone: tz,
+    preferredTimes: preferences?.preferredTimes ?? [],
     now: now.toISOString(),
     days: grid.map((d) => ({
       key: d.key,
@@ -118,6 +128,7 @@ export default async function Page({
         return {
           at: key,
           demand: demand.get(key) ?? {},
+          people: people.get(key) ?? {},
           popular: isPopularSlot(s, popularZonesFor(tz)),
         };
       }),
@@ -146,6 +157,10 @@ export default async function Page({
               labels,
             )
           : null,
+      partnerAvatar:
+        partners.find(
+          (p) => p.sessionId === b.sessionId && p.userId !== user.id,
+        )?.avatar ?? null,
       partner:
         partners.find(
           (p) => p.sessionId === b.sessionId && p.userId !== user.id,
@@ -159,6 +174,7 @@ export default async function Page({
       taken: g.taken,
       capacity: g.capacity,
       hostName: g.hostName,
+      hostAvatar: g.hostAvatar,
       joined: mine.some((b) => b.sessionId === g.id),
     })),
     favorites: plan.plan === "plus" ? favs : [],
@@ -167,9 +183,14 @@ export default async function Page({
     usage: usage ? { used: usage.used, limit: usage.limit } : null,
     usedByDay,
     prefill: {
-      start: params.start ?? null,
+      start:
+        params.start && Number.isFinite(requested.getTime())
+          ? requested.toISOString()
+          : null,
       partner: params.with ?? null,
-      duration: Number(params.duration) || null,
+      duration: [25, 50, 75].includes(Number(params.duration))
+        ? Number(params.duration)
+        : (preferences?.defaultDuration ?? 50),
     },
     prevWeek:
       first > now ? addMinutes(first, -7 * 24 * 60).toISOString() : null,

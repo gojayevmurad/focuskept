@@ -1,306 +1,194 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import type { Metadata } from "next";
-import { and, eq, inArray } from "drizzle-orm";
+import { and, eq, inArray, ne } from "drizzle-orm";
 import { getFormatter, getTranslations } from "next-intl/server";
-import { CalendarPlus, ArrowRight, Video } from "lucide-react";
 import { AppShell } from "@/src/components/app-shell";
-import { getAppConfig } from "@/src/config/app";
-import { requireAppUser } from "@/src/lib/app-user";
-import { upcomingBookings } from "@/src/lib/bookings/service";
-import { suggestedSlots } from "@/src/lib/bookings/availability";
-import { userStats } from "@/src/lib/growth/stats";
-import { db } from "@/src/lib/db";
-import { focusSession, profile, sessionParticipant } from "@/src/lib/db/schema";
-import { sessionLabel } from "@/src/lib/sessions/label";
-import { roomWindow } from "@/src/lib/sessions/access";
-import { firstName } from "@/src/lib/profiles/rules";
-import { Link } from "@/src/i18n/navigation";
-import { FallbackCard } from "./fallback-card";
-import { PaceClock } from "@/src/components/lanes";
-import { FirstRunGuide } from "./first-run-guide";
+import { Avatar } from "@/src/components/avatar";
+import { MatchNow } from "@/src/components/match-now";
 import { WelcomeFlow } from "@/src/components/tour";
+import { requireAppUser } from "@/src/lib/app-user";
+import { getAppConfig } from "@/src/config/app";
+import { upcomingBookings } from "@/src/lib/bookings/service";
+import { userStats } from "@/src/lib/growth/stats";
 import { getFocusPreferences } from "@/src/lib/profiles";
 import { welcomePhase } from "@/src/lib/profiles/onboarding";
+import { firstName } from "@/src/lib/profiles/rules";
+import { db } from "@/src/lib/db";
+import { profile, sessionParticipant } from "@/src/lib/db/schema";
+import { Link } from "@/src/i18n/navigation";
+import { peoplePage, peopleParameters } from "../people/queries";
+import { SessionHero } from "./session-hero";
+import { FirstRunGuide } from "./first-run-guide";
+import { dashboardState } from "./state";
+import { FallbackCard } from "./fallback-card";
 import styles from "./dashboard.module.css";
-
 export const metadata: Metadata = { title: "Home" };
-
 export default async function Page({
   searchParams,
 }: {
   searchParams: Promise<{ welcome?: string; tour?: string }>;
 }) {
   const { user, profile: me } = await requireAppUser();
-  const t = await getTranslations("dashboard");
-  const c = await getTranslations("common");
-  const focus = await getTranslations("onboarding.flow");
-  const labels = await getTranslations("sessionLabels");
-  const format = await getFormatter();
-  const tz = me.timezone;
   const { welcome, tour } = await searchParams;
-  const [upcoming, stats, preferences, suggestions] = await Promise.all([
-    upcomingBookings(user.id),
-    userStats(user.id, tz),
-    getFocusPreferences(user.id),
-    suggestedSlots(user.id, 50, new Date(), 4, tz),
-  ]);
-  const sessionIds = upcoming
-    .map((b) => b.sessionId)
-    .filter((x): x is string => Boolean(x));
-  const others = sessionIds.length
+  const [t, c, focus, format, upcoming, stats, prefs, recent] =
+    await Promise.all([
+      getTranslations("dashboard"),
+      getTranslations("common"),
+      getTranslations("onboarding.flow"),
+      getFormatter(),
+      upcomingBookings(user.id),
+      userStats(user.id, me.timezone),
+      getFocusPreferences(user.id),
+      peoplePage(user.id, peopleParameters({}), 6),
+    ]);
+  const ids = upcoming.flatMap((b) => (b.sessionId ? [b.sessionId] : []));
+  const partners = ids.length
     ? await db()
         .select({
           sessionId: sessionParticipant.sessionId,
-          userId: sessionParticipant.userId,
           name: profile.displayName,
-          joinedAt: sessionParticipant.joinedAt,
-          isFallbackRoom: focusSession.isFallbackRoom,
-          type: focusSession.type,
-          title: focusSession.title,
+          avatar: profile.avatarUrl,
+          goal: sessionParticipant.goalText,
+          profileGoal: profile.goal,
         })
         .from(sessionParticipant)
-        .innerJoin(
-          focusSession,
-          eq(focusSession.id, sessionParticipant.sessionId),
-        )
         .innerJoin(profile, eq(profile.userId, sessionParticipant.userId))
-        .where(and(inArray(sessionParticipant.sessionId, sessionIds)))
+        .where(
+          and(
+            inArray(sessionParticipant.sessionId, ids),
+            ne(sessionParticipant.userId, user.id),
+          ),
+        )
     : [];
+  const bookings = upcoming.map((b) => ({
+    ...b,
+    startAt: b.startAt.toISOString(),
+    partner: (() => {
+      const p = partners.find((p) => p.sessionId === b.sessionId);
+      return p ? { ...p, goal: p.goal ?? p.profileGoal } : null;
+    })(),
+  }));
+  const now = new Date().getTime();
+  const state = dashboardState(bookings, stats.sessions, now);
+  const fallback = upcoming.find(
+    (b) => b.status === "booked" && b.fallbackOfferedAt,
+  );
   const when = (d: Date) =>
     format.dateTime(d, {
-      timeZone: tz,
+      timeZone: me.timezone,
       weekday: "short",
       month: "short",
       day: "numeric",
       hour: "numeric",
       minute: "2-digit",
     });
-  const now = new Date();
-  const live = upcoming.find(
-    (b) =>
-      b.sessionId &&
-      roomWindow(
-        { startAt: b.startAt, durationMin: b.durationMin, status: "scheduled" },
-        now,
-      ) === "open",
-  );
-  const fallback = upcoming.find(
-    (b) => b.status === "booked" && b.fallbackOfferedAt,
-  );
-
-  const laneBookings = live
-    ? [live, ...upcoming.filter((b) => b.id !== live.id)]
-    : upcoming;
-
   return (
     <AppShell title={t("title")}>
       <div className={styles.dashboard}>
-        <header className={styles.title}>
-          <h1>
-            {welcome
-              ? t("welcome", { name: firstName(me.displayName) })
-              : t("hello", { name: firstName(me.displayName) })}
-          </h1>
-          <p>
-            {preferences?.focusAreas.length
-              ? focus("dashboardSuggestion", {
-                  area: focus(`focusAreas.${preferences.focusAreas[0]}`),
-                  completed: preferences.completedThisWeek,
-                  goal: preferences.weeklyGoal,
-                })
-              : me.goal
-                ? t("goalReminder", { goal: me.goal })
-                : t("lead")}
-          </p>
+        <header className={styles.header}>
+          <div className="page-title">
+            <h1>
+              {t(welcome ? "welcome" : "hello", {
+                name: firstName(me.displayName),
+              })}
+            </h1>
+            <p className="muted">{t("lead")}</p>
+          </div>
+          <div className={styles.actions}>
+            <MatchNow className="button secondary" />
+            <Link className="button" href="/book">
+              {t("bookSession")}
+            </Link>
+          </div>
         </header>
-
+        <SessionHero bookings={bookings} now={now} tz={me.timezone} />
         {fallback && (
           <FallbackCard bookingId={fallback.id} when={when(fallback.startAt)} />
         )}
-
-        {stats.sessions === 0 && (
-          <FirstRunGuide
-            hasUpcoming={laneBookings.length > 0}
-            firstBooking={
-              laneBookings[0]
-                ? {
-                    id: laneBookings[0].id,
-                    startAt: laneBookings[0].startAt.toISOString(),
-                    durationMin: laneBookings[0].durationMin,
-                    sessionId: laneBookings[0].sessionId,
-                    status: laneBookings[0].status,
-                  }
-                : null
-            }
-            formattedTime={
-              laneBookings[0] ? when(laneBookings[0].startAt) : undefined
-            }
-            suggestions={suggestions.map((s) => ({
-              startAt: s.startAt.toISOString(),
-              waiting: s.waiting,
-              popular: s.popular,
-            }))}
-            tz={tz}
-            appName={getAppConfig().name}
-          />
-        )}
-
-        {(stats.sessions > 0 || laneBookings.length > 0) && (
-          <section className={styles.upcoming} data-tour="upcoming">
-            <div className={styles.sectionHeading}>
-              <h2>{t("upcoming")}</h2>
-              <Link href="/book" className={styles.buttonSecondary}>
-                <CalendarPlus size={16} /> {t("book")}
-              </Link>
-            </div>
-            {laneBookings.length > 0 ? (
-              <div className={styles.bookingList}>
-                {laneBookings.map((b, index) => {
-                  const partners = others.filter(
-                    (p) => p.sessionId === b.sessionId && p.userId !== user.id,
-                  );
-                  const session = others.find(
-                    (p) => p.sessionId === b.sessionId,
-                  );
-                  const time = format.dateTime(b.startAt, {
-                    timeZone: tz,
-                    hour: "numeric",
-                    minute: "2-digit",
-                  });
-                  const phaseMinutes = b.durationMin <= 25 ? 2 : 3;
-                  return (
-                    <article
-                      key={b.id}
-                      className={
-                        index === 0 ? styles.laneCard : styles.bookingRow
-                      }
-                    >
-                      {index === 0 && (
-                        <PaceClock
-                          phase="waiting"
-                          progress={0}
-                          focusFrom={phaseMinutes / b.durationMin}
-                          wrapFrom={1 - phaseMinutes / b.durationMin}
-                          size={80}
-                        />
-                      )}
-                      <div className={styles.bookingInfo}>
-                        <h3
-                          className={
-                            index === 0 ? styles.startTime : styles.rowTime
-                          }
-                        >
-                          <time dateTime={b.startAt.toISOString()}>{time}</time>
-                        </h3>
-                        <p className={styles.meta}>
-                          {format.dateTime(b.startAt, {
-                            timeZone: tz,
-                            weekday: "long",
-                            month: "short",
-                            day: "numeric",
-                          })}{" "}
-                          · {c("minutes", { count: b.durationMin })}
-                        </p>
-                        <p className={styles.partner}>
-                          {b.status === "matched"
-                            ? session &&
-                              (session.type === "group" ||
-                                session.isFallbackRoom)
-                              ? sessionLabel(
-                                  session,
-                                  partners.map((p) => ({
-                                    name: p.name,
-                                    joined: Boolean(p.joinedAt),
-                                  })),
-                                  labels,
-                                )
-                              : t("with", { name: partners[0]?.name ?? "" })
-                            : t("pairing")}
-                        </p>
-                        {b.id === live?.id && (
-                          <div className={styles.live}>
-                            <span className={styles.liveBadge}>
-                              <Video size={14} /> {t("liveBadge")}
-                            </span>
-                            <p>{t("liveTitle", { time })}</p>
-                          </div>
-                        )}
-                      </div>
-                      <div className={styles.actions}>
-                        {b.sessionId && (
-                          <Link
-                            href={`/session/${b.sessionId}`}
-                            className={styles.button}
-                          >
-                            {b.id === live?.id ? t("joinNow") : t("open")}{" "}
-                            <ArrowRight size={16} />
-                          </Link>
-                        )}
-                        <Link
-                          href={`/book?start=${encodeURIComponent(b.startAt.toISOString())}`}
-                          className={styles.buttonSecondary}
-                        >
-                          {t("manage")}
-                        </Link>
-                      </div>
-                    </article>
-                  );
+        {state.showExplainer && <FirstRunGuide appName={getAppConfig().name} />}
+        <section className="card stack" data-tour="stats">
+          <div className="row-between">
+            <h2>{t("thisWeek")}</h2>
+            <Link className="link" href="/progress">
+              {t("viewProgress")}
+            </Link>
+          </div>
+          <div className={styles.week}>
+            <div>
+              <strong>
+                {t("weeklySessions", {
+                  done: prefs?.completedThisWeek ?? 0,
+                  goal: prefs?.weeklyGoal ?? 3,
                 })}
-              </div>
+              </strong>
+              <progress
+                className={styles.progress}
+                max={prefs?.weeklyGoal ?? 3}
+                value={prefs?.completedThisWeek ?? 0}
+                aria-label={t("thisWeek")}
+              />
+            </div>
+            <div>
+              <strong>{stats.dailyStreak}</strong>
+              <p className="muted small">{t("streak")}</p>
+            </div>
+          </div>
+        </section>
+        <div className={styles.columns}>
+          <section className="card stack">
+            <h2>{t("upcoming")}</h2>
+            {bookings.length ? (
+              bookings.slice(0, 5).map((b) => (
+                <Link
+                  className={styles.bookingRow}
+                  key={b.id}
+                  href={`/book?start=${encodeURIComponent(b.startAt)}`}
+                >
+                  <Avatar
+                    name={b.partner?.name ?? me.displayName}
+                    src={b.partner?.avatar}
+                  />
+                  <div>
+                    <strong>{when(new Date(b.startAt))}</strong>
+                    <p className="muted small">
+                      {c("minutes", { count: b.durationMin })} ·{" "}
+                      {b.partner?.name ?? t("pairing")}
+                    </p>
+                  </div>
+                </Link>
+              ))
             ) : (
-              <div className={styles.empty}>
-                <p>{t("empty")}</p>
-                <div className={styles.suggestions} data-tour="suggestions">
-                  {suggestions.map((s) => (
-                    <Link
-                      key={s.startAt.toISOString()}
-                      className={styles.suggestion}
-                      href={`/book?start=${encodeURIComponent(s.startAt.toISOString())}`}
-                    >
-                      {when(s.startAt)}
-                      {s.waiting > 0 && (
-                        <span className={styles.waiting}>
-                          {t("waiting", { count: s.waiting })}
-                        </span>
-                      )}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              <p className="muted">{t("noBookingLead")}</p>
             )}
           </section>
-        )}
-
-        <dl className={styles.stats} data-tour="stats">
-          <div className={styles.stat}>
-            <dt>{t("streak")}</dt>
-            <dd>
-              <strong>{format.number(stats.dailyStreak)}</strong>
-              <span>{t("streakHint", { weeks: stats.weeklyStreak })}</span>
-            </dd>
-          </div>
-          <div className={styles.stat}>
-            <dt>{t("hours")}</dt>
-            <dd>
-              <strong>{format.number(stats.hours)}</strong>
-              <span>{t("hoursHint", { month: stats.monthHours })}</span>
-            </dd>
-          </div>
-          <div className={styles.stat}>
-            <dt>{t("sessions")}</dt>
-            <dd>
-              <strong>{format.number(stats.sessions)}</strong>
-              <span>
-                {stats.sessions === 0
-                  ? t("firstRunEmptyStats")
-                  : stats.completionRate === null
-                    ? t("noOutcomes")
-                    : t("doneRate", { rate: stats.completionRate })}
-              </span>
-            </dd>
-          </div>
-        </dl>
-
+          <section className="card stack">
+            <div className="row-between">
+              <h2>{t("recentPartners")}</h2>
+              <Link className="link" href="/people">
+                {t("viewPeople")}
+              </Link>
+            </div>
+            {recent.rows.length ? (
+              <div className={styles.partners}>
+                {recent.rows.map((p) => (
+                  <Link key={p.id} href={`/u/${p.username}`}>
+                    <Avatar size="lg" name={p.name} src={p.avatar} />
+                    <span>{p.name}</span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <p className="muted">{t("partnersEmpty")}</p>
+            )}
+          </section>
+        </div>
+        <p className={styles.tip}>
+          {prefs?.focusAreas[0]
+            ? t("personalTip", {
+                area: focus(`focusAreas.${prefs.focusAreas[0]}`),
+              })
+            : t("quietTip")}
+        </p>
         <WelcomeFlow
           initialPhase={welcomePhase(me)}
           replay={tour === "replay"}

@@ -3,6 +3,7 @@ import { sql } from "drizzle-orm";
 import type { OnboardingProgress } from "@/src/lib/profiles/onboarding";
 import type { HeardFrom } from "@/src/lib/attribution/types";
 import {
+  customType,
   pgTable,
   text,
   timestamp,
@@ -670,3 +671,17 @@ export const hostRating = pgTable(
     check("host_rating_score_check", sql`${t.score} between 1 and 5`),
   ],
 );
+
+const bytea = customType<{ data: Buffer }>({
+  dataType() {
+    return "bytea";
+  },
+});
+export const avatarImage = pgTable("avatar_image", {
+  userId: text("user_id")
+    .primaryKey()
+    .references(() => user.id, { onDelete: "cascade" }),
+  content: bytea("content").notNull(),
+  contentType: text("content_type").notNull(),
+  updatedAt: time("updated_at").notNull().defaultNow(),
+});

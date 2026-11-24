@@ -8,7 +8,6 @@ import { localDayKey } from "@/src/lib/scheduling/slots";
 import { Link } from "@/src/i18n/navigation";
 import { ShareCards } from "./share-cards";
 import styles from "./progress.module.css";
-import lanes from "../lanes.module.css";
 
 export const metadata: Metadata = { title: "Progress" };
 
@@ -41,8 +40,8 @@ export default async function Page() {
   });
   return (
     <AppShell title={t("title")}>
-      <div className={lanes.page}>
-        <div className="page-title">
+      <div className={styles.page}>
+        <div className={`page-title ${styles.header}`}>
           <h1>{t("title")}</h1>
           <p className="muted">{t("lead")}</p>
         </div>
@@ -73,7 +72,7 @@ export default async function Page() {
             </div>
           ))}
         </dl>
-        <section className="stack">
+        <section className="card stack">
           <h2>{t("activity")}</h2>
           <table className={styles.activity}>
             <caption className="sr-only">{t("activityLabel")}</caption>
