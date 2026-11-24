@@ -50,16 +50,21 @@ export function BookingLink({
   }, [cutoffMinutes, slotMinutes]);
 
   return (
-    <Link href="/sign-up" className={`button ${styles.bookingButton}`}>
-      {next
-        ? t("next", {
-            time: new Intl.DateTimeFormat(undefined, {
+    <div className={styles.bookingAction}>
+      <Link href="/sign-up" className={`button ${styles.bookingButton}`}>
+        {label}
+      </Link>
+      {next && (
+        <span className={styles.nextSlot}>
+          {t("next", {
+            time: new Intl.DateTimeFormat(locale, {
               hour: "numeric",
               minute: "2-digit",
             }).format(next),
-          })
-        : label}
-    </Link>
+          })}
+        </span>
+      )}
+    </div>
   );
 }
 

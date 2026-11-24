@@ -3,6 +3,7 @@
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useSyncExternalStore } from "react";
+import styles from "./theme-toggle.module.css";
 import { currentTheme, cycleTheme, setTheme } from "@/src/lib/theme";
 
 function subscribe(callback: () => void) {
@@ -22,7 +23,8 @@ export function ThemeToggle() {
   );
   return (
     <button
-      className="button ghost small icon"
+      className={`button ghost small icon ${styles.toggle}`}
+      data-theme-toggle
       aria-label={t("themeState", { state: t(`themeOptions.${theme}`) })}
       onClick={() => setTheme(cycleTheme(theme))}
     >
@@ -33,6 +35,7 @@ export function ThemeToggle() {
       ) : (
         <Moon size={17} />
       )}
+      <span>{t(`themeOptions.${theme}`)}</span>
     </button>
   );
 }

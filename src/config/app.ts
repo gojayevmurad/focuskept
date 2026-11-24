@@ -12,6 +12,7 @@ export function getAppConfig() {
     description: brand.description,
     url: env.APP_URL,
     logoUrl: env.LOGO_URL,
+    repoUrl: env.REPO_URL,
     supportEmail: env.SUPPORT_EMAIL || brand.supportEmail,
     billingEnabled: env.BILLING_ENABLED,
     analyticsEnabled: env.ANALYTICS_ENABLED,

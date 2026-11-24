@@ -47,6 +47,10 @@ export const envSchema = z
     // Product and self-hosting switches
     APP_NAME: z.string().min(1).default("FocusKept"),
     LOGO_URL: optional,
+    REPO_URL: z.preprocess(
+      (v) => (v === "" ? undefined : v),
+      z.url({ protocol: /^https?$/ }).optional(),
+    ),
     SUPPORT_EMAIL: optional,
     // Search engines and AI search
     GOOGLE_SITE_VERIFICATION: optional,

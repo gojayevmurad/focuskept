@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
 import { Logo } from "./logo";
+import { SourceCode } from "./marketing/source-code";
 import { LocaleSwitcher } from "./locale-switcher";
 
 export async function SiteFooter() {
@@ -16,6 +17,12 @@ export async function SiteFooter() {
           <p className="small">{t("tagline")}</p>
           <p className="small faint">{t("openSource")}</p>
           <LocaleSwitcher label={t("language")} />
+          <SourceCode
+            url={app.repoUrl}
+            label={t("source")}
+            comingSoon={t("sourceComingSoon")}
+            iconOnly
+          />
         </div>
         {app.marketingEnabled ? (
           <>
@@ -95,11 +102,6 @@ export async function SiteFooter() {
               <Link href="/community-guidelines">
                 {t("communityGuidelines")}
               </Link>
-            </li>
-            <li>
-              <a href="https://github.com/gojayevmurad/focuskept">
-                {t("source")}
-              </a>
             </li>
           </ul>
         </div>

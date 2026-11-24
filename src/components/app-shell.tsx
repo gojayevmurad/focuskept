@@ -5,7 +5,6 @@ import {
   Home,
   Users,
   TrendingUp,
-  Trophy,
   UsersRound,
   Gift,
   Mic,
@@ -26,6 +25,9 @@ import { RealtimeRefresh } from "./realtime-refresh";
 import { Link } from "@/src/i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
 import { TourTrigger } from "./tour";
+import { AppShellMenu } from "./app-shell-menu";
+import { SourceCode } from "./marketing/source-code";
+import styles from "./app-shell.module.css";
 import { ActivationNudge } from "@/src/lib/lifecycle/activation-nudge";
 
 export async function AppShell({
@@ -38,7 +40,11 @@ export async function AppShell({
   narrow?: boolean;
 }) {
   const { user, profile, isAdmin } = await requireAppUser();
-  const t = await getTranslations("nav");
+  const [t, site, common] = await Promise.all([
+    getTranslations("nav"),
+    getTranslations("site"),
+    getTranslations("common"),
+  ]);
   const app = getAppConfig();
   const { plan } = await getPlan(user.id);
   const usage =
@@ -47,13 +53,12 @@ export async function AppShell({
     { href: "/dashboard", label: t("home"), icon: Home },
     { href: "/book", label: t("book"), icon: CalendarPlus },
     { href: "/people", label: t("people"), icon: Users },
+    { href: "/groups", label: t("groups"), icon: UsersRound },
     { href: "/progress", label: t("progress"), icon: TrendingUp },
   ];
-  const community = [
-    { href: "/challenges", label: t("challenges"), icon: Trophy },
-    { href: "/groups", label: t("groups"), icon: UsersRound },
-    { href: "/hosting", label: t("host"), icon: Mic },
+  const grow = [
     { href: "/invite", label: t("invite"), icon: Gift },
+    { href: "/hosting", label: t("host"), icon: Mic },
   ];
   const account = [
     { href: "/settings", label: t("settings"), icon: Settings },
@@ -64,69 +69,82 @@ export async function AppShell({
       ? [{ href: "/admin", label: t("admin"), icon: ShieldCheck }]
       : []),
   ];
-  return (
-    <div className="app">
-      <aside className="sidebar">
-        <Logo name={app.name} logoUrl={app.logoUrl} href="/dashboard" />
-        <nav className="nav" aria-label={app.name}>
-          {primary.map((n) => (
+  const navigation = (
+    <nav className={`nav ${styles.navigation}`} aria-label={app.name}>
+      {[
+        { label: t("main"), items: primary },
+        { label: t("grow"), items: grow },
+        { label: t("account"), items: account },
+      ].map((group) => (
+        <div
+          role="group"
+          aria-label={group.label}
+          className={styles.navGroup}
+          key={group.label}
+        >
+          <p className={styles.groupLabel}>{group.label}</p>
+          {group.items.map((n) => (
             <NavLink key={n.href} href={n.href}>
-              <n.icon size={18} />
-              {n.label}
+              <n.icon size={18} aria-hidden="true" />
+              <span>{n.label}</span>
             </NavLink>
           ))}
-          <span className="nav-label">{t("community")}</span>
-          {community.map((n) => (
-            <NavLink key={n.href} href={n.href}>
-              <n.icon size={18} />
-              {n.label}
-            </NavLink>
-          ))}
-          <span className="nav-label">{t("you")}</span>
-          {account.map((n) => (
-            <NavLink key={n.href} href={n.href}>
-              <n.icon size={18} />
-              {n.label}
-            </NavLink>
-          ))}
-        </nav>
-        <div className="sidebar-foot">
-          {app.billingEnabled && (
-            <div className="plan-box">
-              {usage ? (
-                <>
-                  <span>
-                    {t("freeLeft", {
-                      used: Math.min(usage.used, usage.limit),
-                      limit: usage.limit,
-                    })}
-                  </span>
-                  <Link href="/pricing" className="button small">
-                    {t("unlimited")}
-                  </Link>
-                </>
-              ) : (
-                <span className="badge accent">{t("plusActive")}</span>
-              )}
-            </div>
-          )}
-          <LocaleSwitcher label={t("language")} />
-          <div className="row">
-            <Avatar
-              name={profile.displayName}
-              src={profile.avatarUrl}
-              size="sm"
-            />
-            <span className="grow small">{profile.displayName}</span>
-            <SignOut compact />
-          </div>
         </div>
+      ))}
+    </nav>
+  );
+  const footer = (
+    <div className={`sidebar-foot ${styles.footer}`}>
+      {app.billingEnabled && (
+        <div className="plan-box">
+          {usage ? (
+            <>
+              <span>
+                {t("freeLeft", {
+                  used: Math.min(usage.used, usage.limit),
+                  limit: usage.limit,
+                })}
+              </span>
+              <Link href="/pricing" className="button small">
+                {t("unlimited")}
+              </Link>
+            </>
+          ) : (
+            <span className="badge accent">{t("plusActive")}</span>
+          )}
+        </div>
+      )}
+      <div className={styles.preferences}>
+        <LocaleSwitcher label={t("language")} />
+        <ThemeToggle />
+      </div>
+      <SourceCode
+        url={app.repoUrl}
+        label={site("source")}
+        comingSoon={site("sourceComingSoon")}
+      />
+      <div className="row">
+        <Avatar name={profile.displayName} src={profile.avatarUrl} size="sm" />
+        <span className="grow small">{profile.displayName}</span>
+        <SignOut compact />
+      </div>
+    </div>
+  );
+  return (
+    <div className={`app ${styles.shell}`}>
+      <aside className={`sidebar ${styles.sidebar}`}>
+        <Logo name={app.name} logoUrl={app.logoUrl} href="/dashboard" />
+        {navigation}
+        {footer}
       </aside>
       <div className="main">
         <header className="topbar">
           <span className="topbar-title">{title}</span>
           <TourTrigger className="button ghost small" />
-          <ThemeToggle />
+          <AppShellMenu label={t("more")} closeLabel={common("close")}>
+            {navigation}
+            {footer}
+          </AppShellMenu>
         </header>
         <main className={`content ${narrow ? "content-narrow" : ""}`}>
           {app.analyticsEnabled && <AnalyticsIdentity id={user.id} />}
@@ -136,10 +154,7 @@ export async function AppShell({
         </main>
       </div>
       <nav className="mobile-nav" aria-label={app.name}>
-        {[
-          ...primary,
-          { href: "/settings", label: t("settings"), icon: Settings },
-        ].map((n) => (
+        {primary.map((n) => (
           <NavLink key={n.href} href={n.href}>
             <n.icon size={20} />
             {n.label}

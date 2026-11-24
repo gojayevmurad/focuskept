@@ -47,16 +47,16 @@
     "retry": "Try again"
   },
   "nav": {
-    "home": "Home",
+    "home": "Dashboard",
     "book": "Book",
     "people": "People",
     "progress": "Progress",
     "challenges": "Challenges",
-    "groups": "Groups",
+    "groups": "Community",
     "invite": "Invite friends",
     "host": "Hosting",
     "settings": "Settings",
-    "billing": "Plan",
+    "billing": "Billing",
     "admin": "Admin",
     "more": "More",
     "community": "Community",
@@ -66,7 +66,10 @@
     "unlimited": "Unlimited sessions",
     "language": "Language",
     "takeTour": "Take tour",
-    "howItWorks": "How it works"
+    "howItWorks": "How it works",
+    "main": "Main",
+    "grow": "Grow",
+    "account": "Account"
   },
   "auth": {
     "signInTitle": "Welcome back",
@@ -197,7 +200,8 @@
     "legalNotice": "Legal notice",
     "accessibility": "Accessibility",
     "communityGuidelines": "Community guidelines",
-    "status": "System status"
+    "status": "System status",
+    "sourceComingSoon": "Source code — coming soon"
   },
   "book": {
     "title": "Book a session",
@@ -713,43 +717,43 @@
     "stepsTitle": "A time, a person, a little progress",
     "steps": [
       {
-        "title": "Book a time",
-        "body": "Choose a 25, 50, or 75-minute session that fits your day."
+        "title": "Book a slot",
+        "body": "Choose 25, 50 or 75 minutes. Your calendar shows every slot in your time zone."
       },
       {
-        "title": "Share one goal",
-        "body": "Meet your partner on video and name a small, concrete next step."
+        "title": "Get matched, share your goal",
+        "body": "Meet your partner on video. Say hello and name one thing you want to get done."
       },
       {
-        "title": "Work, then check in",
-        "body": "Work quietly with your camera on. At the end, share how it went."
+        "title": "Work quietly, then check in",
+        "body": "Keep your camera on and work on your own task. At the end, share how it went."
       }
     ],
     "featuresTitle": "Make room for the way you work",
     "features": [
       {
-        "title": "One partner or a hosted group",
-        "body": "Work one-on-one or share a quiet room led by a host."
+        "title": "Pairs and hosted groups",
+        "body": "Meet one partner or join a quiet group session guided by a host."
       },
       {
-        "title": "25, 50, or 75 minutes",
-        "body": "Pick a short start or a longer stretch. Leave room for a break."
+        "title": "Familiar faces",
+        "body": "Save favourite partners with Plus, and make it easier to work together again."
       },
       {
-        "title": "Keep good company",
-        "body": "Share your personal booking link. With Plus, save favorite partners."
+        "title": "25, 50 or 75 minutes",
+        "body": "A small start or a deeper stretch. Choose the time you want to give your task."
       },
       {
-        "title": "See your effort add up",
-        "body": "Use streaks and focus stats to notice the time you have made for your work."
+        "title": "Your calendar, your time zone",
+        "body": "See slots in your local time, even when your partner is on the other side of the world."
       },
       {
-        "title": "Your boundaries matter",
-        "body": "Report or block someone whenever you need to. The service is for adults 18 and older."
+        "title": "Privacy and boundaries",
+        "body": "Sessions are never recorded. Report or block someone whenever you need to."
       },
       {
-        "title": "Live company, no recordings",
-        "body": "We never record sessions. Keep private documents off camera and work on your own screen."
+        "title": "Camera on, mic optional",
+        "body": "Be present without constant conversation. Say your goal, then work quietly."
       }
     ],
     "audienceTitle": "Bring the work you have today",
@@ -767,7 +771,7 @@
     },
     "sourceTitle": "Open source, with room to make it yours",
     "sourceBody": "The software is licensed under AGPL-3.0. Read the code, contribute, or self-host your own instance.",
-    "sourceLink": "View the code on GitHub",
+    "sourceLink": "Source code",
     "faqTitle": "A few things you might be wondering",
     "allFaq": "Read all questions",
     "ctaTitle": "Bring one task. We’ll make room.",
@@ -787,7 +791,62 @@
       "pause": "Pause example session",
       "resume": "Resume example session",
       "freePlan": "{count, plural, one {# free session every week. Your lane is waiting.} other {# free sessions every week. Your lane is waiting.}}"
-    }
+    },
+    "bodyDoubling": "Body doubling, online",
+    "bookFirst": "Book your first session",
+    "nextSlot": "Next slot: {time} · your local time",
+    "previewYou": "You",
+    "sharedGoals": "Our goals for this session",
+    "previewDuration": "50-minute pair session",
+    "trustLabel": "What you can expect",
+    "trust": {
+      "free": "Free during early access",
+      "source": "Open source (AGPL)",
+      "recording": "Never recorded",
+      "camera": "Camera on, mic optional"
+    },
+    "stepsLead": "One small commitment. A real person beside you. Space to get started.",
+    "whyTitle": "A little company can make starting easier.",
+    "whyLead": "Body doubling means working alongside another person, each on your own task. You share the time, not the to-do list.",
+    "whyReasons": [
+      {
+        "title": "A reason to show up",
+        "body": "A booked time and a partner expecting you can help turn “later” into a place to start."
+      },
+      {
+        "title": "One clear intention",
+        "body": "Saying your goal out loud gives the session a direction. Small and specific is enough."
+      },
+      {
+        "title": "Room to find your rhythm",
+        "body": "Quiet company can help some people stay with a task. Try a session and see what works for you."
+      }
+    ],
+    "timelineTitle": "What a session looks like",
+    "timelineLead": "A simple rhythm, from your first hello to your last check-in.",
+    "timeline": [
+      {
+        "time": "5 minutes before",
+        "title": "Meet your match",
+        "body": "Your partner is matched before the session. Open the room and get ready."
+      },
+      {
+        "time": "At the start",
+        "title": "Say hello + your goal",
+        "body": "A quick introduction and one concrete goal each. No perfect plan needed."
+      },
+      {
+        "time": "During the session",
+        "title": "Settle into quiet focus",
+        "body": "Cameras on, microphones optional. Your work stays on your own screen."
+      },
+      {
+        "time": "At the end",
+        "title": "Check in together",
+        "body": "Share what you did, notice your progress and take a break."
+      }
+    ],
+    "sourceComingSoon": "Source code — coming soon"
   },
   "how": {
     "title": "How a focus session works | {app}",
