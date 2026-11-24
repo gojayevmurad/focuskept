@@ -32,6 +32,6 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Pages only: skip API routes, ingest proxy, Next internals and files with an extension.
-  matcher: ["/((?!api|ingest|_next|_vercel|.*\\..*).*)"],
+  // Pages only: skip invite redirects, API routes, ingest proxy, Next internals and files with an extension.
+  matcher: ["/((?!r/|api|ingest|_next|_vercel|.*\\..*).*)"],
 };

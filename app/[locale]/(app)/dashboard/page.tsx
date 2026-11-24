@@ -10,7 +10,8 @@ import { upcomingBookings } from "@/src/lib/bookings/service";
 import { suggestedSlots } from "@/src/lib/bookings/availability";
 import { userStats } from "@/src/lib/growth/stats";
 import { db } from "@/src/lib/db";
-import { profile, sessionParticipant } from "@/src/lib/db/schema";
+import { focusSession, profile, sessionParticipant } from "@/src/lib/db/schema";
+import { sessionLabel } from "@/src/lib/sessions/label";
 import { roomWindow } from "@/src/lib/sessions/access";
 import { firstName } from "@/src/lib/profiles/rules";
 import { Link } from "@/src/i18n/navigation";
@@ -30,6 +31,7 @@ export default async function Page({
   const { user, profile: me } = await requireAppUser();
   const t = await getTranslations("dashboard");
   const c = await getTranslations("common");
+  const labels = await getTranslations("sessionLabels");
   const format = await getFormatter();
   const tz = me.timezone;
   const { welcome } = await searchParams;
@@ -47,8 +49,16 @@ export default async function Page({
           sessionId: sessionParticipant.sessionId,
           userId: sessionParticipant.userId,
           name: profile.displayName,
+          joinedAt: sessionParticipant.joinedAt,
+          isFallbackRoom: focusSession.isFallbackRoom,
+          type: focusSession.type,
+          title: focusSession.title,
         })
         .from(sessionParticipant)
+        .innerJoin(
+          focusSession,
+          eq(focusSession.id, sessionParticipant.sessionId),
+        )
         .innerJoin(profile, eq(profile.userId, sessionParticipant.userId))
         .where(and(inArray(sessionParticipant.sessionId, sessionIds)))
     : [];
@@ -135,6 +145,9 @@ export default async function Page({
                   const partners = others.filter(
                     (p) => p.sessionId === b.sessionId && p.userId !== user.id,
                   );
+                  const session = others.find(
+                    (p) => p.sessionId === b.sessionId,
+                  );
                   const time = format.dateTime(b.startAt, {
                     timeZone: tz,
                     hour: "numeric",
@@ -176,8 +189,17 @@ export default async function Page({
                         </p>
                         <p className={styles.partner}>
                           {b.status === "matched"
-                            ? b.kind === "group"
-                              ? t("group")
+                            ? session &&
+                              (session.type === "group" ||
+                                session.isFallbackRoom)
+                              ? sessionLabel(
+                                  session,
+                                  partners.map((p) => ({
+                                    name: p.name,
+                                    joined: Boolean(p.joinedAt),
+                                  })),
+                                  labels,
+                                )
                               : t("with", { name: partners[0]?.name ?? "" })
                             : t("pairing")}
                         </p>

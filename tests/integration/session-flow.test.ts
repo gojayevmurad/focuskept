@@ -18,6 +18,8 @@ import {
 
 // Notifications and analytics are side effects outside this test.
 vi.mock("@/src/lib/notifications", () => ({
+  partnerMatched: vi.fn(async () => {}),
+  houseMatched: vi.fn(async () => {}),
   bookingConfirmed: vi.fn(async () => {}),
   partnerChanged: vi.fn(async () => {}),
   fallbackOffered: vi.fn(async () => {}),
@@ -74,6 +76,9 @@ describe.skipIf(!url)("session flow", () => {
     runSlotMatching: typeof import("@/src/lib/matching/run").runSlotMatching;
     offerFallbacks: typeof import("@/src/lib/matching/run").offerFallbacks;
     joinRoom: typeof import("@/src/lib/sessions/lifecycle").joinRoom;
+    leaveRoom: typeof import("@/src/lib/sessions/lifecycle").leaveRoom;
+    roomState: typeof import("@/src/lib/sessions/lifecycle").roomState;
+    endAbandonedSessions: typeof import("@/src/lib/sessions/lifecycle").endAbandonedSessions;
     setGoal: typeof import("@/src/lib/sessions/lifecycle").setGoal;
     setOutcome: typeof import("@/src/lib/sessions/lifecycle").setOutcome;
     completeEndedSessions: typeof import("@/src/lib/sessions/lifecycle").completeEndedSessions;
@@ -145,6 +150,17 @@ describe.skipIf(!url)("session flow", () => {
       .set({ startAt: new Date(Date.now() - 60_000) })
       .where(eq(focusSession.id, sessionId));
     expect(await lib.joinRoom(sessionId, "flow-a")).not.toBeNull();
+    await lib.leaveRoom(sessionId, "flow-a");
+    const leftState = await lib.roomState(sessionId, "flow-a");
+    expect(
+      leftState?.participants.find((p) => p.userId === "flow-a"),
+    ).toMatchObject({ joined: true, present: false });
+    expect(await lib.joinRoom(sessionId, "flow-a")).not.toBeNull();
+    expect(
+      (await lib.roomState(sessionId, "flow-a"))?.participants.find(
+        (p) => p.userId === "flow-a",
+      ),
+    ).toMatchObject({ joined: true, present: true });
     expect(await lib.setGoal(sessionId, "flow-a", "  write the intro  ")).toBe(
       "write the intro",
     );
@@ -258,6 +274,107 @@ describe.skipIf(!url)("session flow", () => {
       .from(sessionParticipant)
       .where(eq(sessionParticipant.sessionId, result.sessionId!));
     expect(seats.map((s) => s.userId)).toEqual(["flow-c"]);
+  });
+
+  it("ends abandoned rooms only after the latest departure plus five minutes", async () => {
+    const now = new Date();
+    const startAt = new Date(now.getTime() - 10 * 60_000);
+    const sessionId = crypto.randomUUID();
+    const bookingIds = [crypto.randomUUID(), crypto.randomUUID()];
+    await db().insert(focusSession).values({
+      id: sessionId,
+      startAt,
+      durationMin: 50,
+      type: "pair",
+      status: "scheduled",
+    });
+    try {
+      await db()
+        .insert(booking)
+        .values(
+          people.slice(0, 2).map((userId, i) => ({
+            id: bookingIds[i],
+            userId,
+            startAt,
+            durationMin: 50,
+            status: "matched",
+            sessionId,
+          })),
+        );
+      await db()
+        .insert(sessionParticipant)
+        .values(
+          people.slice(0, 2).map((userId, i) => ({
+            sessionId,
+            userId,
+            bookingId: bookingIds[i],
+          })),
+        );
+      // Nobody ever joined: even an old leftAt must not close the room.
+      await db()
+        .update(sessionParticipant)
+        .set({ leftAt: new Date(now.getTime() - 6 * 60_000) })
+        .where(eq(sessionParticipant.sessionId, sessionId));
+      await lib.endAbandonedSessions(now);
+      expect((await lib.roomState(sessionId, "flow-a"))?.session.status).toBe(
+        "scheduled",
+      );
+      // A present participant keeps the room open.
+      await db()
+        .update(sessionParticipant)
+        .set({ joinedAt: startAt, leftAt: null })
+        .where(eq(sessionParticipant.bookingId, bookingIds[0]));
+      await lib.endAbandonedSessions(now);
+      expect((await lib.roomState(sessionId, "flow-a"))?.session.status).toBe(
+        "scheduled",
+      );
+      const leftAt = new Date(now.getTime() - 4 * 60_000);
+      await db()
+        .update(sessionParticipant)
+        .set({ leftAt: new Date(now.getTime() - 20 * 60_000) })
+        .where(eq(sessionParticipant.bookingId, bookingIds[0]));
+      // A partner who has not arrived yet keeps the room open for them.
+      await lib.endAbandonedSessions(now);
+      expect((await lib.roomState(sessionId, "flow-a"))?.session.status).toBe(
+        "scheduled",
+      );
+      await db()
+        .update(sessionParticipant)
+        .set({ leftAt: new Date(now.getTime() - 9 * 60_000) })
+        .where(eq(sessionParticipant.bookingId, bookingIds[0]));
+      await db()
+        .update(sessionParticipant)
+        .set({ joinedAt: new Date(now.getTime() - 8 * 60_000), leftAt })
+        .where(eq(sessionParticipant.bookingId, bookingIds[1]));
+      // Latest departure wins, rather than the first departure.
+      await lib.endAbandonedSessions(
+        new Date(leftAt.getTime() + 5 * 60_000 - 1),
+      );
+      expect((await lib.roomState(sessionId, "flow-a"))?.session.status).toBe(
+        "scheduled",
+      );
+      const result = await lib.endAbandonedSessions(
+        new Date(leftAt.getTime() + 5 * 60_000),
+      );
+      expect(result.ended).toBeGreaterThanOrEqual(1);
+      const [ended] = await db()
+        .select()
+        .from(focusSession)
+        .where(eq(focusSession.id, sessionId));
+      expect(ended.status).toBe("ended");
+      const bookings = await db()
+        .select()
+        .from(booking)
+        .where(eq(booking.sessionId, sessionId));
+      expect(
+        Object.fromEntries(bookings.map((b) => [b.userId, b.status])),
+      ).toEqual({ "flow-a": "completed", "flow-b": "completed" });
+      expect(await lib.joinRoom(sessionId, "flow-a")).toBeNull();
+      expect((await lib.endAbandonedSessions(now)).ended).toBe(0);
+    } finally {
+      await db().delete(booking).where(inArray(booking.id, bookingIds));
+      await db().delete(focusSession).where(eq(focusSession.id, sessionId));
+    }
   });
 
   it("enforces the free weekly limit when billing is on", async () => {

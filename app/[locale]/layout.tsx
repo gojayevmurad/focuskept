@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import "../globals.css";
+import { THEME_INIT_SCRIPT } from "@/src/lib/theme";
 import { routing } from "@/src/i18n/routing";
 import { getAppConfig } from "@/src/config/app";
 import { ConsentBanner } from "@/src/components/consent";
@@ -96,7 +97,7 @@ export default async function LocaleLayout({
       <body>
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}`,
+            __html: THEME_INIT_SCRIPT,
           }}
         />
         <NextIntlClientProvider>

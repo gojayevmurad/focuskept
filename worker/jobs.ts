@@ -3,6 +3,7 @@ import { matchDueSlots, offerFallbacks } from "@/src/lib/matching/run";
 import {
   bookingsNeedingReminder,
   completeEndedSessions,
+  endAbandonedSessions,
 } from "@/src/lib/sessions/lifecycle";
 import { sessionReminder } from "@/src/lib/notifications";
 import { retryReferralRewards } from "@/src/lib/growth/referrals";
@@ -23,10 +24,25 @@ export async function minuteTick(now = new Date()) {
     reminders++;
   }
   const completed = await completeEndedSessions(now);
+  const abandoned = await endAbandonedSessions(now);
   const lifecycle = await processLifecycleEmails(now);
   await heartbeat(now);
-  const summary = { matched, fallbacks, reminders, lifecycle, ...completed };
-  if (matched || fallbacks || completed.ended || lifecycle > 0) logger.info(summary, "Tick");
+  const summary = {
+    matched,
+    fallbacks,
+    reminders,
+    lifecycle,
+    ...completed,
+    abandoned: abandoned.ended,
+  };
+  if (
+    matched ||
+    fallbacks ||
+    completed.ended ||
+    abandoned.ended ||
+    lifecycle > 0
+  )
+    logger.info(summary, "Tick");
   return summary;
 }
 

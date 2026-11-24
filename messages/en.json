@@ -31,7 +31,13 @@
     "dashboard": "Dashboard",
     "theme": "Toggle color theme",
     "somethingWrong": "Something went wrong. Please try again.",
-    "upgrade": "Upgrade to Plus"
+    "upgrade": "Upgrade to Plus",
+    "themeState": "Color theme: {state}. Activate to change.",
+    "themeOptions": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    }
   },
   "errors": {
     "notFound": "We couldn't find that page.",
@@ -233,7 +239,7 @@
     "waitingShort": "Booked",
     "errors": {
       "not_slot": "Sessions start on the hour or half hour.",
-      "too_late": "This time is too close to book.",
+      "too_late": "This slot is too close to its start time or has already started. Open your session or dashboard to see your options.",
       "too_far": "You can book up to two weeks ahead.",
       "duration": "Choose 25, 50 or 75 minutes.",
       "limit": "You've used your free sessions for this week.",
@@ -244,7 +250,10 @@
       "not_allowed": "That booking can't be changed anymore.",
       "full": "This session is full.",
       "invalid": "Something in the request was off. Please try again."
-    }
+    },
+    "joinNow": "Join now",
+    "startedWaiting": "No partner has been found yet. You can join the open room when it is available.",
+    "joinOpenRoom": "Join the open room"
   },
   "dashboard": {
     "title": "Home",
@@ -411,7 +420,15 @@
     "startWrap": "Start wrap-up",
     "goalsInRoom": "Goals in the room",
     "rateHost": "How was your host?",
-    "thanks": "Thanks for the feedback."
+    "thanks": "Thanks for the feedback.",
+    "leaveConfirmTitle": "Leave this session?",
+    "leaveConfirmBody": "You can rejoin until it ends.",
+    "stay": "Stay",
+    "leftTitle": "You left the session",
+    "rejoin": "Rejoin",
+    "partnerLeft": "{name} left the session",
+    "partnerBack": "{name} is back",
+    "partnerLeftTile": "Left the session"
   },
   "settings": {
     "title": "Settings",
@@ -1476,5 +1493,16 @@
       "disabledMessage": "Optional analytics disabled.",
       "errorMessage": "Unable to update preferences."
     }
+  },
+  "sessionLabels": {
+    "openRoom": "Open room",
+    "withPartner": "Focus session with {name}",
+    "group": "Group session",
+    "pair": "Focus session"
+  },
+  "notifications": {
+    "partnerMatched": "You're matched with {name}: your {time} session starts in 5 minutes",
+    "openSession": "Open the session",
+    "matchedTitle": "Your focus partner is ready"
   }
 }
