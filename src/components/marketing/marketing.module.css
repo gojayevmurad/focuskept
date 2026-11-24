@@ -204,6 +204,19 @@
   margin-block: 20px 28px;
 }
 
+.bookingAction {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.nextSlot {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
 .bookingButton {
   min-height: 48px;
   height: auto;

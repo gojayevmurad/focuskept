@@ -71,3 +71,27 @@ describe("production env", () => {
     expect(r.success).toBe(false);
   });
 });
+
+describe("source repository URL", () => {
+  it("allows unset and empty settings without a fallback URL", () => {
+    expect(envSchema.parse({}).REPO_URL).toBeUndefined();
+    expect(envSchema.parse({ REPO_URL: "" }).REPO_URL).toBeUndefined();
+  });
+  it.each([
+    "https://github.com/example/app",
+    "https://git.example.org/team/app",
+    "http://localhost:3001/source",
+  ])("accepts web URL %s", (url) => {
+    expect(envSchema.parse({ REPO_URL: url }).REPO_URL).toBe(url);
+  });
+  it.each([
+    "not-a-url",
+    "/source",
+    "github.com/example/app",
+    "javascript:alert(1)",
+    "data:text/html,hello",
+    "ftp://example.org/source",
+  ])("rejects invalid or non-web URL %s", (url) => {
+    expect(envSchema.safeParse({ REPO_URL: url }).success).toBe(false);
+  });
+});

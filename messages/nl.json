@@ -47,16 +47,16 @@
     "retry": "Opnieuw proberen"
   },
   "nav": {
-    "home": "Home",
+    "home": "Dashboard",
     "book": "Boeken",
     "people": "Mensen",
     "progress": "Voortgang",
     "challenges": "Uitdagingen",
-    "groups": "Groepen",
+    "groups": "Community",
     "invite": "Vrienden uitnodigen",
     "host": "Hosten",
     "settings": "Instellingen",
-    "billing": "Abonnement",
+    "billing": "Facturatie",
     "admin": "Beheer",
     "more": "Meer",
     "community": "Community",
@@ -66,7 +66,10 @@
     "unlimited": "Onbeperkt aantal sessies",
     "language": "Taal",
     "takeTour": "Rondleiding volgen",
-    "howItWorks": "Hoe het werkt"
+    "howItWorks": "Hoe het werkt",
+    "main": "Hoofdmenu",
+    "grow": "Samen groeien",
+    "account": "Account"
   },
   "auth": {
     "signInTitle": "Welkom terug",
@@ -197,7 +200,8 @@
     "legalNotice": "Juridische kennisgeving",
     "accessibility": "Toegankelijkheid",
     "communityGuidelines": "Communityrichtlijnen",
-    "status": "Systeemstatus"
+    "status": "Systeemstatus",
+    "sourceComingSoon": "Broncode — binnenkort beschikbaar"
   },
   "book": {
     "title": "Boek een sessie",
@@ -713,43 +717,43 @@
     "stepsTitle": "Een tijdstip, een persoon, een beetje vooruitgang",
     "steps": [
       {
-        "title": "Kies een tijd",
-        "body": "Kies een sessie van 25, 50 of 75 minuten die past in je dag."
+        "title": "Boek een tijdslot",
+        "body": "Kies 25, 50 of 75 minuten. Je agenda toont alle tijdsloten in jouw tijdzone."
       },
       {
-        "title": "Deel één doel",
-        "body": "Ontmoet je partner via video en noem een kleine, concrete volgende stap."
+        "title": "Ontmoet je partner, deel je doel",
+        "body": "Je wordt gekoppeld en ontmoet elkaar via video. Zeg even hallo en noem ieder één doel."
       },
       {
-        "title": "Werk en koppel terug",
-        "body": "Werk in stilte met je camera aan. Deel aan het einde hoe het ging."
+        "title": "Werk rustig, kijk samen terug",
+        "body": "Houd je camera aan en werk aan je eigen taak. Vertel elkaar aan het einde hoe het ging."
       }
     ],
     "featuresTitle": "Ruimte voor de manier waarop jij werkt",
     "features": [
       {
-        "title": "Eén partner of een gehoste groep",
-        "body": "Werk één-op-één of deel een rustige ruimte onder leiding van een host."
+        "title": "Samen of in een begeleide groep",
+        "body": "Werk met één partner of sluit aan bij een rustige groepssessie met een host."
+      },
+      {
+        "title": "Vertrouwde gezichten",
+        "body": "Sla met Plus je favoriete partners op, zodat je makkelijker weer samen kunt werken."
       },
       {
         "title": "25, 50 of 75 minuten",
-        "body": "Kies voor een snelle start of een langere sessie. Houd ruimte voor een pauze."
+        "body": "Een klein begin of wat langer de tijd. Kies hoeveel tijd je aan je taak wilt geven."
       },
       {
-        "title": "Houd goed gezelschap",
-        "body": "Deel je persoonlijke boekingslink. Sla met Plus favoriete partners op."
+        "title": "Jouw agenda, jouw tijdzone",
+        "body": "Je ziet tijdsloten in je lokale tijd, ook als je partner aan de andere kant van de wereld zit."
       },
       {
-        "title": "Zie je inzet optellen",
-        "body": "Gebruik reeksen en focusstatistieken om te zien hoeveel tijd je voor je werk hebt gemaakt."
+        "title": "Privacy en grenzen",
+        "body": "Sessies worden nooit opgenomen. Je kunt iemand op elk moment melden of blokkeren."
       },
       {
-        "title": "Jouw grenzen doen ertoe",
-        "body": "Meld of blokkeer iemand wanneer dat nodig is. De service is voor volwassenen van 18 jaar en ouder."
-      },
-      {
-        "title": "Live gezelschap, geen opnames",
-        "body": "We nemen sessies nooit op. Houd privédocumenten buiten beeld en werk op je eigen scherm."
+        "title": "Camera aan, microfoon optioneel",
+        "body": "Wees aanwezig zonder steeds te praten. Deel je doel en werk daarna rustig verder."
       }
     ],
     "audienceTitle": "Neem het werk mee dat je vandaag hebt",
@@ -767,7 +771,7 @@
     },
     "sourceTitle": "Open source, met ruimte om het van jou te maken",
     "sourceBody": "De software is gelicentieerd onder AGPL-3.0. Bekijk de code, draag bij of host je eigen instantie.",
-    "sourceLink": "Bekijk de code op GitHub",
+    "sourceLink": "Broncode",
     "faqTitle": "Een paar dingen die je je misschien afvraagt",
     "allFaq": "Lees alle vragen",
     "ctaTitle": "Breng één taak mee. Wij maken ruimte.",
@@ -787,7 +791,62 @@
       "pause": "Voorbeeldsessie pauzeren",
       "resume": "Voorbeeldsessie hervatten",
       "freePlan": "{count, plural, one {# gratis sessie elke week. Je baan wacht op je.} other {# gratis sessies elke week. Je baan wacht op je.}}"
-    }
+    },
+    "bodyDoubling": "Body doubling, online",
+    "bookFirst": "Boek je eerste sessie",
+    "nextSlot": "Volgend tijdslot: {time} · jouw lokale tijd",
+    "previewYou": "Jij",
+    "sharedGoals": "Onze doelen voor deze sessie",
+    "previewDuration": "50 minuten met z’n tweeën",
+    "trustLabel": "Hier kun je op rekenen",
+    "trust": {
+      "free": "Gratis tijdens early access",
+      "source": "Open source (AGPL)",
+      "recording": "Nooit opgenomen",
+      "camera": "Camera aan, microfoon optioneel"
+    },
+    "stepsLead": "Een kleine afspraak. Een echt persoon naast je. Ruimte om te beginnen.",
+    "whyTitle": "Een beetje gezelschap kan beginnen makkelijker maken.",
+    "whyLead": "Body doubling is werken naast iemand anders, ieder aan een eigen taak. Je deelt de tijd, niet je takenlijst.",
+    "whyReasons": [
+      {
+        "title": "Een reden om er te zijn",
+        "body": "Een afspraak en iemand die op je rekent, kunnen helpen om van ‘later’ een begin te maken."
+      },
+      {
+        "title": "Eén helder voornemen",
+        "body": "Je doel hardop uitspreken geeft de sessie richting. Klein en concreet is genoeg."
+      },
+      {
+        "title": "Vind je eigen ritme",
+        "body": "Rustig gezelschap helpt sommige mensen om bij een taak te blijven. Probeer een sessie en ontdek wat voor jou werkt."
+      }
+    ],
+    "timelineTitle": "Zo ziet een sessie eruit",
+    "timelineLead": "Een eenvoudig ritme, van het eerste hallo tot de afsluiting.",
+    "timeline": [
+      {
+        "time": "5 minuten vooraf",
+        "title": "Je partner is gevonden",
+        "body": "Je wordt vóór de sessie gekoppeld. Open de ruimte en maak je klaar."
+      },
+      {
+        "time": "Aan het begin",
+        "title": "Even hallo en je doel",
+        "body": "Stel je kort voor en noem ieder één concreet doel. Een perfect plan is niet nodig."
+      },
+      {
+        "time": "Tijdens de sessie",
+        "title": "Werk rustig door",
+        "body": "Camera’s aan, microfoons optioneel. Je werk blijft op je eigen scherm."
+      },
+      {
+        "time": "Aan het einde",
+        "title": "Kijk samen terug",
+        "body": "Deel wat je hebt gedaan, sta stil bij je vooruitgang en neem pauze."
+      }
+    ],
+    "sourceComingSoon": "Broncode — binnenkort beschikbaar"
   },
   "how": {
     "title": "Hoe een focussessie werkt | {app}",

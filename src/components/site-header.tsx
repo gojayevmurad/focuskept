@@ -4,6 +4,7 @@ import { getAppConfig } from "@/src/config/app";
 import { getSession } from "@/src/lib/auth/session";
 import { Link } from "@/src/i18n/navigation";
 import { Logo } from "./logo";
+import { SourceCode } from "./marketing/source-code";
 import { ThemeToggle } from "./theme-toggle";
 
 export async function SiteHeader() {
@@ -28,6 +29,12 @@ export async function SiteHeader() {
           )}
         </nav>
         <div className="header-actions">
+          <SourceCode
+            url={app.repoUrl}
+            label={t("source")}
+            comingSoon={t("sourceComingSoon")}
+            iconOnly
+          />
           <ThemeToggle />
           {session ? (
             <Link href="/dashboard" className="button small">

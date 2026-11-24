@@ -47,16 +47,16 @@
     "retry": "Réessayer"
   },
   "nav": {
-    "home": "Accueil",
+    "home": "Tableau de bord",
     "book": "Réserver",
     "people": "Personnes",
     "progress": "Progression",
     "challenges": "Défis",
-    "groups": "Groupes",
+    "groups": "Communauté",
     "invite": "Inviter des amis",
     "host": "Animation",
     "settings": "Paramètres",
-    "billing": "Forfait",
+    "billing": "Facturation",
     "admin": "Admin",
     "more": "Plus",
     "community": "Communauté",
@@ -66,7 +66,10 @@
     "unlimited": "Sessions illimitées",
     "language": "Langue",
     "takeTour": "Faire la visite",
-    "howItWorks": "Comment ça marche"
+    "howItWorks": "Comment ça marche",
+    "main": "Principal",
+    "grow": "Participer",
+    "account": "Compte"
   },
   "auth": {
     "signInTitle": "Ravi de vous revoir",
@@ -197,7 +200,8 @@
     "legalNotice": "Mentions légales",
     "accessibility": "Accessibilité",
     "communityGuidelines": "Règles de la communauté",
-    "status": "État du système"
+    "status": "État du système",
+    "sourceComingSoon": "Code source — bientôt disponible"
   },
   "book": {
     "title": "Réserver une session",
@@ -714,42 +718,42 @@
     "steps": [
       {
         "title": "Réservez un créneau",
-        "body": "Choisissez une session de 25, 50 ou 75 minutes adaptée à votre journée."
+        "body": "Choisissez 25, 50 ou 75 minutes. Le calendrier affiche les créneaux dans votre fuseau horaire."
       },
       {
-        "title": "Partagez un objectif",
-        "body": "Retrouvez votre partenaire en vidéo et définissez une prochaine étape concrète et ciblée."
+        "title": "Rencontrez votre binôme",
+        "body": "Nous vous trouvons un partenaire. Dites-vous bonjour en vidéo et annoncez chacun un objectif."
       },
       {
         "title": "Travaillez, puis faites le point",
-        "body": "Travaillez en silence avec votre caméra activée. À la fin, partagez vos avancées."
+        "body": "Gardez la caméra allumée et avancez sur votre tâche. À la fin, échangez sur votre séance."
       }
     ],
     "featuresTitle": "Créez l'espace adapté à votre façon de travailler",
     "features": [
       {
-        "title": "En duo ou en groupe animé",
-        "body": "Travaillez en tête-à-tête ou partagez une salle silencieuse animée par un hôte."
+        "title": "À deux ou en groupe animé",
+        "body": "Retrouvez un partenaire ou rejoignez une séance calme guidée par un hôte."
+      },
+      {
+        "title": "Des visages familiers",
+        "body": "Avec Plus, enregistrez vos partenaires favoris pour retravailler ensemble plus facilement."
       },
       {
         "title": "25, 50 ou 75 minutes",
-        "body": "Optez pour une mise en route rapide ou une période plus longue. Prévoyez du temps pour une pause."
+        "body": "Un petit début ou une plage plus longue. Choisissez le temps à consacrer à votre tâche."
       },
       {
-        "title": "Entourez-vous des bonnes personnes",
-        "body": "Partagez votre lien de réservation personnel. Avec Plus, enregistrez vos partenaires favoris."
+        "title": "Votre calendrier, votre fuseau",
+        "body": "Les créneaux s’affichent à votre heure locale, même si votre binôme est à l’autre bout du monde."
       },
       {
-        "title": "Constatez vos progrès",
-        "body": "Suivez vos séries et statistiques de concentration pour visualiser le temps consacré à votre travail."
+        "title": "Votre vie privée et vos limites",
+        "body": "Les séances ne sont jamais enregistrées. Signalez ou bloquez une personne à tout moment."
       },
       {
-        "title": "Vos limites sont respectées",
-        "body": "Signalez ou bloquez un utilisateur dès que nécessaire. Ce service est réservé aux adultes de 18 ans et plus."
-      },
-      {
-        "title": "En direct, sans aucun enregistrement",
-        "body": "Nous n'enregistrons jamais les sessions. Gardez vos documents privés hors du champ de la caméra et travaillez sur votre écran."
+        "title": "Caméra allumée, micro facultatif",
+        "body": "Soyez présent sans parler en permanence. Annoncez votre objectif, puis travaillez au calme."
       }
     ],
     "audienceTitle": "Venez avec le travail que vous avez à faire aujourd'hui",
@@ -767,7 +771,7 @@
     },
     "sourceTitle": "Open source, conçu pour s'adapter à vos besoins",
     "sourceBody": "Ce logiciel est sous licence AGPL-3.0. Consultez le code, contribuez ou hébergez votre propre instance.",
-    "sourceLink": "Voir le code sur GitHub",
+    "sourceLink": "Code source",
     "faqTitle": "Quelques questions fréquentes",
     "allFaq": "Consulter toutes les questions",
     "ctaTitle": "Apportez une seule tâche. Nous faisons de la place.",
@@ -787,7 +791,62 @@
       "pause": "Mettre en pause la session d'exemple",
       "resume": "Reprendre la session d'exemple",
       "freePlan": "{count, plural, one {# session gratuite chaque semaine. Votre couloir vous attend.} other {# sessions gratuites chaque semaine. Votre couloir vous attend.}}"
-    }
+    },
+    "bodyDoubling": "Le body doubling, en ligne",
+    "bookFirst": "Réservez votre première séance",
+    "nextSlot": "Prochain créneau : {time} · heure locale",
+    "previewYou": "Vous",
+    "sharedGoals": "Nos objectifs pour cette séance",
+    "previewDuration": "Séance à deux de 50 minutes",
+    "trustLabel": "Nos engagements",
+    "trust": {
+      "free": "Gratuit pendant l’accès anticipé",
+      "source": "Open source (AGPL)",
+      "recording": "Jamais enregistré",
+      "camera": "Caméra allumée, micro facultatif"
+    },
+    "stepsLead": "Un petit engagement. Une vraie personne à vos côtés. De la place pour commencer.",
+    "whyTitle": "Un peu de compagnie peut faciliter le premier pas.",
+    "whyLead": "Le body doubling consiste à travailler aux côtés d’une autre personne, chacun sur sa propre tâche. Vous partagez le temps, pas la liste de choses à faire.",
+    "whyReasons": [
+      {
+        "title": "Une raison d’être là",
+        "body": "Un rendez-vous et une personne qui vous attend peuvent aider à transformer « plus tard » en un point de départ."
+      },
+      {
+        "title": "Une intention claire",
+        "body": "Dire votre objectif à voix haute donne une direction à la séance. Petit et précis, cela suffit."
+      },
+      {
+        "title": "Trouvez votre rythme",
+        "body": "Une présence calme aide certaines personnes à rester sur leur tâche. Essayez une séance pour voir ce qui vous convient."
+      }
+    ],
+    "timelineTitle": "Le déroulement d’une séance",
+    "timelineLead": "Un rythme simple, du premier bonjour au bilan de fin.",
+    "timeline": [
+      {
+        "time": "5 minutes avant",
+        "title": "Votre binôme est choisi",
+        "body": "Un partenaire vous est attribué avant la séance. Ouvrez la salle et préparez-vous."
+      },
+      {
+        "time": "Au début",
+        "title": "Un bonjour et un objectif",
+        "body": "Présentez-vous brièvement et donnez chacun un objectif concret. Pas besoin d’un plan parfait."
+      },
+      {
+        "time": "Pendant la séance",
+        "title": "Place au travail en silence",
+        "body": "Caméras allumées, micros facultatifs. Votre travail reste sur votre propre écran."
+      },
+      {
+        "time": "À la fin",
+        "title": "Faites le point ensemble",
+        "body": "Partagez ce que vous avez fait, prenez conscience de vos progrès et faites une pause."
+      }
+    ],
+    "sourceComingSoon": "Code source — bientôt disponible"
   },
   "how": {
     "title": "Comment fonctionne une session de concentration | {app}",
