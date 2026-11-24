@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { sql } from "drizzle-orm";
+import type { OnboardingProgress } from "@/src/lib/profiles/onboarding";
 import type { HeardFrom } from "@/src/lib/attribution/types";
 import {
   pgTable,
@@ -206,6 +207,16 @@ export const profile = pgTable(
       .$type<Attribution>()
       .notNull()
       .default(sql`'{}'::jsonb`),
+    onboardingState: jsonb("onboarding_state").$type<OnboardingProgress>(),
+    focusAreas: text("focus_areas").array().notNull().default(sql`'{}'::text[]`),
+    blockers: text("blockers").array().notNull().default(sql`'{}'::text[]`),
+    preferredTimes: text("preferred_times").array().notNull().default(sql`'{}'::text[]`),
+    defaultDuration: integer("default_duration").notNull().default(50),
+    sessionStyle: text("session_style").notNull().default("quiet"),
+    weeklyGoal: integer("weekly_goal").notNull().default(3),
+    emailMarketing: boolean("email_marketing").notNull().default(false),
+    welcomeVideoSeenAt: time("welcome_video_seen_at"),
+    tourAnsweredAt: time("tour_answered_at"),
     onboardedAt: time("onboarded_at"),
     suspendedAt: time("suspended_at"),
     createdAt: time("created_at").notNull().defaultNow(),

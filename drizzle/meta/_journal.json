@@ -43,6 +43,13 @@
       "when": 1795353964134,
       "tag": "0005_growth_support",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1795524847158,
+      "tag": "0006_onboarding_focus",
+      "breakpoints": true
     }
   ]
 }

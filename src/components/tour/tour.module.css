@@ -19,10 +19,10 @@
   box-shadow: 0 0 0 9999px color-mix(in srgb, var(--text) 55%, transparent);
   pointer-events: none;
   transition:
-    top var(--duration-slow, 320ms) var(--ease-out, ease-out),
-    left var(--duration-slow, 320ms) var(--ease-out, ease-out),
-    width var(--duration-slow, 320ms) var(--ease-out, ease-out),
-    height var(--duration-slow, 320ms) var(--ease-out, ease-out);
+    top var(--duration-base, 200ms) var(--ease-out, ease-out),
+    left var(--duration-base, 200ms) var(--ease-out, ease-out),
+    width var(--duration-base, 200ms) var(--ease-out, ease-out),
+    height var(--duration-base, 200ms) var(--ease-out, ease-out);
   border: 2px solid var(--accent);
 }
 
@@ -76,8 +76,8 @@
 .closeButton {
   display: inline-grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-pill, 999px);
   border: 1px solid transparent;
   background: transparent;
@@ -151,7 +151,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 36px;
+  min-height: 44px;
   padding: 6px 14px;
   border-radius: var(--radius-pill, 999px);
   border: 1px solid var(--line-strong);
@@ -178,7 +178,7 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-height: 36px;
+  min-height: 44px;
   padding: 6px 16px;
   border-radius: var(--radius-pill, 999px);
   border: 1px solid transparent;
@@ -202,7 +202,7 @@
 
 /* Mobile Bottom Sheet Layout */
 @media (max-width: 760px) {
-  .popover {
+  .popover.popover {
     position: fixed;
     top: auto !important;
     bottom: 0 !important;
@@ -214,7 +214,7 @@
     border-inline: 0;
     border-bottom: 0;
     padding: 16px 20px calc(20px + env(safe-area-inset-bottom));
-    animation: sheetEnter var(--duration-slow, 320ms) var(--ease-spring, ease-out);
+    animation: sheetEnter var(--duration-base, 200ms) ease-out;
   }
 
   @keyframes sheetEnter {
@@ -226,7 +226,7 @@
     }
   }
 
-  .spotlight {
+  .spotlight.spotlight {
     border-width: 2px;
   }
 }
@@ -240,3 +240,17 @@
     transition: none !important;
   }
 }
+
+.welcomeDialog {
+  width: min(640px, calc(100vw - 32px));
+  max-height: calc(100dvh - 40px);
+  padding: 24px;
+  margin: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+}
+.welcomeDialog::backdrop { background: color-mix(in srgb, var(--bg) 75%, transparent); }
+.welcomeActions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; }

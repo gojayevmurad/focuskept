@@ -2,14 +2,13 @@
 "use client";
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { X, ChevronRight, ChevronLeft, Check, Compass } from "lucide-react";
+import { X, ChevronRight, ChevronLeft, Check } from "lucide-react";
 import {
   trackTourStarted,
   trackTourCompleted,
 } from "@/src/lib/analytics/client";
 import styles from "./tour.module.css";
 
-const STORAGE_KEY = "focuskept:tour_seen:v1";
 
 type TourTitleKey =
   | "stepBookTitle"
@@ -69,10 +68,8 @@ const STEPS: TourStep[] = [
 
 export function Tour({
   autoStart = false,
-  isFirstRun = false,
 }: {
   autoStart?: boolean;
-  isFirstRun?: boolean;
 }) {
   const t = useTranslations("tour");
   const [active, setActive] = useState(false);
@@ -83,8 +80,10 @@ export function Tour({
     left: number;
   } | null>(null);
   const popoverRef = useRef<HTMLDivElement>(null);
+  const previousFocus = useRef<HTMLElement | null>(null);
 
   const startTour = useCallback(() => {
+    previousFocus.current = document.activeElement as HTMLElement | null;
     setStepIndex(0);
     setActive(true);
     trackTourStarted();
@@ -92,17 +91,13 @@ export function Tour({
 
   const completeTour = useCallback(() => {
     setActive(false);
-    try {
-      localStorage.setItem(STORAGE_KEY, "true");
-    } catch {}
+    previousFocus.current?.focus();
     trackTourCompleted();
   }, []);
 
   const skipTour = useCallback(() => {
     setActive(false);
-    try {
-      localStorage.setItem(STORAGE_KEY, "true");
-    } catch {}
+    previousFocus.current?.focus();
   }, []);
 
   // Listen for manual trigger from help menu / topbar
@@ -113,19 +108,12 @@ export function Tour({
       window.removeEventListener("focuskept:start-tour", handleTrigger);
   }, [startTour]);
 
-  // Automatic trigger on first-run if not yet seen
+  // Automatic start is only used for an explicit Settings replay.
   useEffect(() => {
-    if (!autoStart && !isFirstRun) return;
-    try {
-      const seen = localStorage.getItem(STORAGE_KEY);
-      if (!seen) {
-        const timer = setTimeout(() => {
-          startTour();
-        }, 600);
-        return () => clearTimeout(timer);
-      }
-    } catch {}
-  }, [autoStart, isFirstRun, startTour]);
+    if (!autoStart) return;
+    const timer = setTimeout(startTour, 200);
+    return () => clearTimeout(timer);
+  }, [autoStart, startTour]);
 
   const updatePosition = useCallback(() => {
     if (!active) return;
@@ -145,7 +133,7 @@ export function Tour({
 
     // Scroll into view if needed
     if (r.top < 80 || r.bottom > window.innerHeight - 80) {
-      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      el.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "center" });
     }
 
     // Compute popover position for desktop
@@ -192,7 +180,17 @@ export function Tour({
     popoverRef.current?.focus();
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
+      if (e.key === "Tab") {
+        const buttons = popoverRef.current?.querySelectorAll<HTMLButtonElement>("button");
+        if (!buttons?.length) return;
+        const first = buttons[0];
+        const last = buttons[buttons.length - 1];
+        if (e.shiftKey && (document.activeElement === first || document.activeElement === popoverRef.current)) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      } else if (e.key === "Escape") {
         e.preventDefault();
         skipTour();
       } else if (e.key === "ArrowRight") {
@@ -313,22 +311,8 @@ export function Tour({
   );
 }
 
-/**
- * Trigger button to replay the product tour from the app shell.
- */
-export function TourTrigger({ className }: { className?: string }) {
-  const t = useTranslations("nav");
-  return (
-    <button
-      type="button"
-      className={className ?? "button secondary small"}
-      onClick={() =>
-        window.dispatchEvent(new CustomEvent("focuskept:start-tour"))
-      }
-      title={t("takeTour")}
-    >
-      <Compass size={15} />
-      <span>{t("takeTour")}</span>
-    </button>
-  );
+/** Compatibility mount in the shell; replay now lives in Settings. */
+export function TourTrigger(props: { className?: string }) {
+  void props;
+  return null;
 }

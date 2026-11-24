@@ -1,56 +1,36 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { getLocale } from "next-intl/server";
+import { eq } from "drizzle-orm";
+import { db } from "@/src/lib/db";
+import { user as account } from "@/src/lib/db/schema";
+import { getLocale, getTranslations } from "next-intl/server";
 import { requireAppUser } from "@/src/lib/app-user";
 import { getAppConfig } from "@/src/config/app";
-import { suggestedSlots } from "@/src/lib/bookings/availability";
+import { initialOnboarding, onboardingDestination } from "@/src/lib/profiles/onboarding";
 import { redirect } from "@/src/i18n/navigation";
 import { Logo } from "@/src/components/logo";
 import { AnalyticsIdentity } from "@/src/components/consent";
-import styles from "../lanes.module.css";
+import styles from "./onboarding.module.css";
 import { OnboardingForm } from "./onboarding-form";
 
-export const metadata: Metadata = {
-  title: "Welcome",
-  robots: { index: false },
-};
-
-export default async function Page() {
-  const { user, profile } = await requireAppUser(true);
-  if (profile.onboardedAt)
-    redirect({ href: "/dashboard", locale: await getLocale() });
+export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("onboarding");
+  return { title: t("title"), robots: { index: false } };
+}
+
+export default async function Page({ searchParams }: { searchParams: Promise<{ next?: string }> }) {
+  const { user, profile } = await requireAppUser(true);
+  const { next } = await searchParams;
+  if (profile.onboardedAt) redirect({ href: onboardingDestination(next), locale: await getLocale() });
   const app = getAppConfig();
-  const slots = await suggestedSlots(
-    user.id,
-    50,
-    new Date(),
-    6,
-    profile.timezone,
-  );
+  const [consent] = await db().select({ analytics: account.analyticsConsent }).from(account).where(eq(account.id, user.id));
+  const initial = initialOnboarding(profile, profile.onboardingState, next, consent?.analytics ?? false);
   return (
-    <main
-      className={`content content-narrow ${styles.page} ${styles.onboarding}`}
-      style={{ paddingTop: 40 }}
-    >
+    <main className={styles.page}>
       <Logo name={app.name} logoUrl={app.logoUrl} href="/onboarding" />
-      {/* Sync the analytics choice now so onboarding_completed is not dropped. */}
       {app.analyticsEnabled && <AnalyticsIdentity id={user.id} />}
-      <h1>{t("title")}</h1>
-      <OnboardingForm
-        displayName={profile.displayName}
-        username={profile.username}
-        timezone={profile.timezone}
-        appUrl={app.url}
-        appName={app.name}
-        timezones={Intl.supportedValuesOf("timeZone")}
-        slots={slots.map((s) => ({
-          startAt: s.startAt.toISOString(),
-          waiting: s.waiting,
-          popular: s.popular,
-        }))}
-      />
+      <OnboardingForm initial={initial} appName={app.name} analyticsEnabled={app.analyticsEnabled}
+        timezones={Intl.supportedValuesOf("timeZone")} />
     </main>
   );
 }

@@ -50,8 +50,5 @@ describe("Tour and first-run UX logic", () => {
     expect(advanceScene(4)).toBe(0); // loops back to beginning
   });
 
-  it("stores and checks tour completion in localStorage key format", () => {
-    const storageKey = "focuskept:tour_seen:v1";
-    expect(storageKey).toMatch(/^focuskept:tour_seen:v\d+$/);
-  });
+
 });
