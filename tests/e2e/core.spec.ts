@@ -41,18 +41,27 @@ test("sign up, onboard, book up to the free limit, then upgrade", async ({
 
     await expect(page).toHaveURL(/onboarding/);
     await hydrated(page);
+    const next = page.getByRole("button", { name: "Continue", exact: true });
     await page
       .getByRole("checkbox", { name: "I confirm I am 18 or older." })
       .check();
-    await page.getByRole("button", { name: "Continue to goal" }).click();
-    await page.getByText("Studying").click();
-    await page
-      .getByRole("button", { name: "Continue to first session" })
-      .click();
-    await page.getByRole("button", { name: "I'll book later" }).click();
+    await next.click();
+    await page.getByText("Studying", { exact: true }).click();
+    await next.click();
+    await page.getByText("Procrastination", { exact: true }).click();
+    await next.click();
+    await page.getByText("Morning", { exact: true }).click();
+    await next.click();
+    // Session style, where you heard about us, your plan and the first session
+    // all have valid defaults.
+    for (let step = 0; step < 4; step++) await next.click();
+    await page.getByRole("button", { name: "Enter my focus space" }).click();
     await expect(page).toHaveURL(/dashboard/);
+    // The welcome video and the one-time tour question follow onboarding.
+    await page.getByRole("button", { name: "Skip", exact: true }).click();
+    await page.getByRole("button", { name: "No, thanks" }).click();
     await expect(
-      page.getByRole("heading", { name: /Welcome, Casey/ }),
+      page.getByRole("heading", { level: 1, name: /(Welcome|Hi),? Casey/ }),
     ).toBeVisible();
 
     // Book three sessions on the same day (same week), then hit the free limit.
@@ -110,7 +119,7 @@ test("two partners meet in the room, share goals and one blocks the other", asyn
   const pool = testDb();
   const options = {
     permissions: ["camera", "microphone"],
-    baseURL: "http://localhost:3000",
+    baseURL: process.env.E2E_BASE_URL || "http://localhost:3000",
   };
   const a = await browser.newContext(options);
   const b = await browser.newContext(options);

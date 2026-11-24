@@ -7,7 +7,7 @@ test("landing and registration navigation", async ({ page }) => {
   await hydrated(page);
   await expect(
     page.getByRole("heading", {
-      name: "Your lane. Someone in the next one.",
+      name: "Get it done with someone beside you",
       exact: true,
     }),
   ).toBeVisible();
@@ -62,15 +62,19 @@ for (const path of ["/", "/blog"]) {
   });
 }
 
-test("theme can be switched", async ({ page }) => {
+test("theme cycles through system, light and dark", async ({ page }) => {
   await page.goto("/");
   await hydrated(page);
   const html = page.locator("html");
-  await expect(html).toHaveAttribute("data-theme", /light|dark/);
-  const before = await html.getAttribute("data-theme");
-  await page.getByRole("button", { name: "Toggle color theme" }).click();
-  await expect(html).toHaveAttribute(
-    "data-theme",
-    before === "dark" ? "light" : "dark",
-  );
+  // A first visit follows the device setting, so no explicit theme is set.
+  await expect(html).not.toHaveAttribute("data-theme", /.+/);
+  const toggle = page.getByRole("button", { name: /^Color theme:/ }).first();
+  await toggle.click();
+  await expect(html).toHaveAttribute("data-theme", "light");
+  await toggle.click();
+  await expect(html).toHaveAttribute("data-theme", "dark");
+  await toggle.click();
+  await expect(html).not.toHaveAttribute("data-theme", /.+/);
+  await page.reload();
+  await expect(html).not.toHaveAttribute("data-theme", /.+/);
 });

@@ -10,4 +10,6 @@ paths = [
 regexes = [
   '''whsec_test-secret''',
   '''isolated-ci-secret-not-used-outside-ci-123456''',
+  '''testkey1234567890''',
+  '''0123456789abcdef0123456789abcdef''',
 ]
