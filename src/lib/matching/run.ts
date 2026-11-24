@@ -15,6 +15,7 @@ import {
 import { getPlan } from "@/src/lib/billing/plan";
 import { publish } from "@/src/lib/realtime/publish";
 import { logger } from "@/src/lib/logger";
+import { sendAdminAlert } from "@/src/lib/admin/alerts";
 import {
   addMinutes,
   FALLBACK_LEAD_MIN,
@@ -245,7 +246,8 @@ export async function offerFallbacks(now = new Date()) {
     await publish(`user:${b.userId}`, "booking.fallback", {
       bookingId: b.id,
     }).catch(() => {});
-    await notify.fallbackOffered(b.id);
+    await sendAdminAlert("booking_unmatched", b.id, { durationMin: b.durationMin, path: "/admin/house" });
+    await notify.fallbackOffered(b.id).catch((error) => logger.warn({ err: error, bookingId: b.id }, "Fallback notification failed"));
   }
   return rows.length;
 }

@@ -162,6 +162,7 @@ export async function roomState(sessionId: string, userId: string) {
       displayName: p.displayName,
       username: p.username,
       avatarUrl: p.avatarUrl,
+      bio: p.bio,
       goalText: p.goalText,
       outcome: p.outcome,
       present: Boolean(p.joinedAt && !p.leftAt),

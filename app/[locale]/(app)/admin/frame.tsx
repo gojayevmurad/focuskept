@@ -14,6 +14,7 @@ const sections = [
   "groups",
   "house",
   "support",
+  "notifications",
 ] as const;
 export async function AdminFrame({
   section,

@@ -6,7 +6,7 @@ import { describe, expect, it, vi } from "vitest";
 import messages from "../../messages/en.json";
 import { sessionLabel, partnerPresenceMessage } from "@/src/lib/sessions/label";
 import type { RoomState } from "@/src/lib/sessions/lifecycle";
-import { Room } from "../../app/[locale]/session/[id]/room";
+import { Room, RoomStage } from "../../app/[locale]/session/[id]/room";
 import {
   Calendar,
   type CalendarData,
@@ -76,6 +76,7 @@ function roomState(): RoomState {
       displayName: userId === "me" ? "Me" : "Alex",
       username: userId,
       avatarUrl: null,
+      bio: userId === "partner" ? "Writing a novel, one chapter at a time." : "",
       goalText: null,
       outcome: null,
       joined: true,
@@ -119,16 +120,73 @@ describe("session room", () => {
     state.session.startAt = new Date(Date.now() - 51 * 60_000).toISOString();
     expect(renderRoom(state)).toContain(messages.room.howDidItGo);
   });
-  it("renders the accessible leave confirmation and distinguishes a partner who left", () => {
+  it("centres the pre-join camera check, partner bio, goal suggestions and timeline", () => {
     const state = roomState();
     state.participants[0].present = true;
-    state.participants[1].present = false;
     const html = renderRoom(state);
-    expect(html).toContain('aria-labelledby="leave-title"');
-    expect(html).toContain(messages.room.leaveConfirmBody);
-    expect(html).toContain("Stay</button>");
-    expect(html).toContain("Left the session");
-    expect(html).not.toContain(messages.room.joinToSee);
+    expect(html).toContain("Focus session with Alex");
+    expect(html).toContain("Your camera preview");
+    expect(html).toContain("Writing a novel, one chapter at a time.");
+    expect(html).toContain("Draft the intro");
+    expect(html).toContain("Clear my inbox");
+    expect(html).toContain("Study chapter 4");
+    expect(html).toContain("Hello + goal");
+    expect(html).toContain("Quiet focus");
+    expect(html).toContain("Check-in");
+    expect(html).toContain("Join with camera");
+    expect(html).toContain("Sessions are never recorded.");
+    expect(html).not.toContain('data-layout="pair"');
+    expect(html).not.toContain("PhoneOff");
+  });
+  function stage(state: RoomState) {
+    return render(<RoomStage state={state} remote={{}} localVideo={{ current: null }} micOn={false} provider="none" />);
+  }
+  it("places the partner on the main stage and self in picture in picture", () => {
+    const html = stage(roomState());
+    expect(html).toContain('data-layout="pair"');
+    expect(html.indexOf('data-role="partner"')).toBeLessThan(html.indexOf('data-role="self"'));
+    expect(html).toMatch(/class="[^"]*pip[^"]*" data-role="self"/);
+  });
+  it("distinguishes a partner who left from a partner yet to arrive", () => {
+    const state = roomState();
+    state.participants[1].present = false;
+    expect(stage(state)).toContain("Left the session");
+    state.participants[1].joined = false;
+    expect(stage(state)).toContain("Waiting for Alex…");
+  });
+  it("keeps two-person open rooms in the pair layout and highlights the host in real groups", () => {
+    const state = roomState();
+    state.session.type = "group";
+    state.session.isFallbackRoom = true;
+    expect(stage(state)).toContain('data-layout="pair"');
+    state.participants.push({ ...state.participants[1], userId: "third", displayName: "Sam" });
+    expect(stage(state)).toContain('data-layout="group"');
+    state.session.isFallbackRoom = false;
+    state.session.hostId = "partner";
+    expect(stage(state)).toContain('data-role="partner" data-host="true"');
+  });
+  it("includes the clock, remaining time and goal reminder after leaving", () => {
+    const state = roomState();
+    state.participants[0].goalText = "Finish the introduction";
+    const html = renderRoom(state);
+    expect(html).toContain("the session is still running");
+    expect(html).toContain("Finish the introduction");
+    expect(html).toContain(messages.room.backDashboard);
+  });
+  it("summarizes duration, goals, partner outcomes and quiet labelled safety actions", () => {
+    const state = roomState();
+    state.window = "over";
+    state.participants[0].goalText = "Finish the introduction";
+    state.participants[1].goalText = "Study chapter 4";
+    state.participants[1].outcome = "partial";
+    const html = renderRoom(state);
+    expect(html).toContain("Session length: 50 minutes");
+    expect(html).toContain("Finish the introduction");
+    expect(html).toContain("Study chapter 4");
+    expect(html).toContain("Partly");
+    expect(html).toContain('aria-pressed="false"');
+    expect(html).toContain('href="/book"');
+    expect(html).toContain('aria-label="Report"');
   });
   it("distinguishes a first join from a return in live presence notices", () => {
     const t = createTranslator({ locale: "en", messages, namespace: "room" });

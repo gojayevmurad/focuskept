@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import { matchDueSlots, offerFallbacks } from "@/src/lib/matching/run";
+import { expireMatchRequests } from "@/src/lib/matching/instant";
 import {
   bookingsNeedingReminder,
   completeEndedSessions,
@@ -16,6 +17,7 @@ import { processLifecycleEmails } from "@/src/lib/lifecycle/scheduler";
 
 /** Everything time-based that must happen within the minute. Each step is idempotent. */
 export async function minuteTick(now = new Date()) {
+  const expiredMatches = await expireMatchRequests(now);
   const matched = await matchDueSlots(now);
   const fallbacks = await offerFallbacks(now);
   let reminders = 0;
@@ -28,6 +30,7 @@ export async function minuteTick(now = new Date()) {
   const lifecycle = await processLifecycleEmails(now);
   await heartbeat(now);
   const summary = {
+    expiredMatches,
     matched,
     fallbacks,
     reminders,

@@ -428,7 +428,26 @@
     "rejoin": "Erneut beitreten",
     "partnerLeft": "{name} hat die Sitzung verlassen",
     "partnerBack": "{name} ist wieder da",
-    "partnerLeftTile": "Hat die Sitzung verlassen"
+    "partnerLeftTile": "Hat die Sitzung verlassen",
+    "leftRunning": "Du hast die Sitzung verlassen. Sie läuft noch {time}.",
+    "backDashboard": "Zurück zur Übersicht",
+    "cameraPreview": "Deine Kameravorschau",
+    "checkingDevices": "Kamera und Mikrofon werden geprüft…",
+    "devicesReady": "Kamera und Mikrofon bereit",
+    "partnerReady": "Dein Fokuspartner für diese Sitzung.",
+    "goalExamples": "Ideen für dein Ziel",
+    "examples": {
+      "draft": "Die Einleitung entwerfen",
+      "inbox": "Den Posteingang leeren",
+      "study": "Kapitel 4 lernen"
+    },
+    "timeline": {
+      "hello": "Begrüßung + Ziel",
+      "focus": "Konzentriert arbeiten",
+      "checkIn": "Kurzer Rückblick"
+    },
+    "waitingFor": "Warten auf {name}…",
+    "sessionDuration": "Sitzungsdauer: {minutes} Minuten"
   },
   "settings": {
     "title": "Einstellungen",
@@ -920,7 +939,11 @@
     "lead": "Starte mit drei Sessions pro Woche. Wähle Plus, wenn du mehr Raum brauchst.",
     "free": "Free",
     "freePrice": "Kostenlos",
-    "freeFeatures": ["3 Sessions pro Woche", "Partner-Matching", "Serien"],
+    "freeFeatures": [
+      "3 Sessions pro Woche",
+      "Partner-Matching",
+      "Serien"
+    ],
     "plus": "Plus",
     "plusFeatures": [
       "Unbegrenzte Sessions",
@@ -987,7 +1010,8 @@
       "challenges": "Challenges",
       "groups": "Gruppen",
       "house": "House",
-      "support": "Support"
+      "support": "Support",
+      "notifications": "Benachrichtigungen"
     },
     "navigation": "Admin-Navigation",
     "saving": "Wird gespeichert…",
@@ -1167,6 +1191,42 @@
         "privacy": "Datenschutz",
         "legal": "Rechtliches",
         "feedback": "Feedback"
+      }
+    },
+    "notifications": {
+      "lead": "Wähle deine Admin-E-Mails und sieh, wer gerade einen Fokuspartner sucht.",
+      "emailTitle": "Deine E-Mail-Benachrichtigungen",
+      "defaultEnabled": "Alle Hinweise sind standardmäßig aktiv. Diese Einstellungen gelten nur für dein Konto.",
+      "save": "Einstellungen speichern",
+      "test": "Test-E-Mail senden",
+      "sending": "Wird gesendet…",
+      "testSent": "Test-E-Mail gesendet. Im Vorschaumodus findest du sie im lokalen Posteingang.",
+      "testFailed": "Die E-Mail konnte nicht gesendet werden. Prüfe die E-Mail-Konfiguration und versuche es erneut.",
+      "waitingTitle": "Suchen gerade einen Partner",
+      "waitingDuration": "Sitzung mit {duration} Minuten",
+      "join": "Beitreten",
+      "noWaiting": "Gerade wartet niemand. Neue Anfragen erscheinen hier bis zu 10 Minuten lang.",
+      "events": {
+        "user_signed_up": {
+          "title": "Neue Mitglieder",
+          "description": "Neue Konten per E-Mail oder sozialer Anmeldung."
+        },
+        "report_created": {
+          "title": "Meldungen von Mitgliedern",
+          "description": "Ein Mitglied meldet ein Sicherheits- oder Verhaltensproblem."
+        },
+        "support_ticket_created": {
+          "title": "Supportanfragen",
+          "description": "Eine neue Supportanfrage wartet auf eine Antwort."
+        },
+        "match_now_waiting": {
+          "title": "Sofortige Partnersuche",
+          "description": "Jemand möchte jetzt arbeiten. Tritt direkt über die E-Mail bei."
+        },
+        "booking_unmatched": {
+          "title": "Buchungen ohne Partner",
+          "description": "Für eine Buchung wurde ein offener Raum oder ein anderer Termin angeboten."
+        }
       }
     }
   },
@@ -1504,5 +1564,62 @@
     "partnerMatched": "Dein Fokuspartner ist {name}: Deine Sitzung um {time} beginnt in 5 Minuten",
     "openSession": "Sitzung öffnen",
     "matchedTitle": "Dein Fokuspartner ist bereit"
+  },
+  "matchNow": {
+    "button": "Jetzt Partner finden",
+    "title": "Bereit, dich jetzt zu konzentrieren?",
+    "lead": "Wähle die Dauer. Wir suchen jemanden, der mit dir loslegen möchte.",
+    "duration": "Sitzungsdauer",
+    "start": "Partner finden",
+    "looking": "Wir suchen einen Partner…",
+    "waitingBody": "Meist dauert es nur wenige Minuten. Lass diese Seite offen. Sobald jemand da ist, öffnen wir eure Sitzung.",
+    "elapsed": "Bisherige Wartezeit",
+    "expiredTitle": "Diesmal kein Partner",
+    "expiredBody": "Deine Suche ist nach 10 Minuten abgelaufen. Buche einen Termin oder starte eine neue Suche.",
+    "bookNext": "Den nächsten Termin buchen",
+    "tryAgain": "Erneut versuchen",
+    "joining": "Deinem Fokuspartner beitreten",
+    "joiningBody": "Wir prüfen, ob die Person noch wartet…",
+    "unavailableTitle": "Diese Anfrage ist nicht mehr verfügbar",
+    "unavailableBody": "Die Person hat vielleicht einen Partner gefunden oder die Suche beendet. Aktuelle Anfragen findest du in den Benachrichtigungen.",
+    "backNotifications": "Zurück zu Benachrichtigungen",
+    "errors": {
+      "limit": "Du hast dein Wochenlimit erreicht. Wähle Plus oder versuche es nächste Woche erneut.",
+      "overlap": "Du hast zu dieser Zeit bereits eine Sitzung. Tritt ihr bei oder wähle eine andere Zeit.",
+      "suspended": "Dieses Konto kann keine Sitzung starten. Prüfe deinen Kontostatus oder kontaktiere den Support.",
+      "rate_limited": "Warte kurz, bevor du eine neue Suche startest.",
+      "unauthorized": "Melde dich erneut an, um einen Partner zu finden.",
+      "duration": "Wähle eine Sitzung mit 25 oder 50 Minuten.",
+      "unavailable": "Diese Anfrage ist abgelaufen. Starte eine neue Suche.",
+      "self": "Du kannst deiner eigenen Anfrage nicht beitreten. Warte auf einen Partner.",
+      "unknown": "Die Suche konnte nicht aktualisiert werden. Prüfe deine Verbindung und versuche es erneut."
+    }
+  },
+  "adminAlerts": {
+    "user_signed_up": {
+      "subject": "Ein neues Mitglied ist bei {app}",
+      "body": "{name} hat ein Konto erstellt. Du findest es im Adminbereich."
+    },
+    "report_created": {
+      "subject": "Eine Meldung muss geprüft werden",
+      "body": "Es gibt eine neue Sicherheitsmeldung. Für dieses Konto liegen {name} Meldung(en) aus den letzten 30 Tagen vor. Bitte prüfe sie im Adminbereich."
+    },
+    "support_ticket_created": {
+      "subject": "Neue Supportanfrage von {name}",
+      "body": "{name} hat eine Supportanfrage gesendet: {detail}. Öffne sie, um sie zu lesen und zu beantworten."
+    },
+    "match_now_waiting": {
+      "subject": "{name} möchte jetzt arbeiten ({duration} Min.) — mach mit",
+      "body": "{name} sucht einen Partner für {duration} Minuten. Tritt bei, solange die Person wartet. Anfragen laufen nach 10 Minuten ab."
+    },
+    "booking_unmatched": {
+      "subject": "Eine Buchung wartet noch auf einen Partner",
+      "body": "Eine Buchung mit {duration} Minuten hatte keinen Partner. Ein offener Raum oder ein anderer Termin wurde angeboten. Prüfe die kommenden Sitzungen im Adminbereich."
+    },
+    "open": "Admin-Benachrichtigungen öffnen",
+    "join": "Dieser Fokussitzung beitreten",
+    "footer": "Du erhältst diese E-Mail als Administrator von {app}. Verwalte sie unter Admin → Benachrichtigungen.",
+    "testSubject": "Admin-E-Mail-Test für {app}",
+    "testBody": "Deine Admin-E-Mails funktionieren. Dieser Test wurde nur an dich gesendet."
   }
 }

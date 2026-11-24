@@ -428,7 +428,26 @@
     "rejoin": "Opnieuw deelnemen",
     "partnerLeft": "{name} heeft de sessie verlaten",
     "partnerBack": "{name} is terug",
-    "partnerLeftTile": "Heeft de sessie verlaten"
+    "partnerLeftTile": "Heeft de sessie verlaten",
+    "leftRunning": "Je bent weggegaan. De sessie loopt nog {time}.",
+    "backDashboard": "Terug naar overzicht",
+    "cameraPreview": "Je cameravoorbeeld",
+    "checkingDevices": "Je camera en microfoon worden gecontroleerd…",
+    "devicesReady": "Camera en microfoon klaar",
+    "partnerReady": "Je focuspartner voor deze sessie.",
+    "goalExamples": "Ideeën voor je doel",
+    "examples": {
+      "draft": "De inleiding schrijven",
+      "inbox": "Mijn inbox opruimen",
+      "study": "Hoofdstuk 4 bestuderen"
+    },
+    "timeline": {
+      "hello": "Begroeting + doel",
+      "focus": "Rustig focussen",
+      "checkIn": "Even terugblikken"
+    },
+    "waitingFor": "Wachten op {name}…",
+    "sessionDuration": "Sessieduur: {minutes} minuten"
   },
   "settings": {
     "title": "Instellingen",
@@ -920,7 +939,11 @@
     "lead": "Begin met drie sessies per week. Kies Plus wanneer je meer ruimte wilt.",
     "free": "Free",
     "freePrice": "Kosteloos",
-    "freeFeatures": ["3 sessies per week", "Partnerkoppeling", "Reeksen"],
+    "freeFeatures": [
+      "3 sessies per week",
+      "Partnerkoppeling",
+      "Reeksen"
+    ],
     "plus": "Plus",
     "plusFeatures": [
       "Onbeperkt aantal sessies",
@@ -987,7 +1010,8 @@
       "challenges": "Uitdagingen",
       "groups": "Groepen",
       "house": "House",
-      "support": "Support"
+      "support": "Support",
+      "notifications": "Meldingen"
     },
     "navigation": "Beheernavigatie",
     "saving": "Opslaan…",
@@ -1167,6 +1191,42 @@
         "privacy": "Privacy",
         "legal": "Juridisch",
         "feedback": "Feedback"
+      }
+    },
+    "notifications": {
+      "lead": "Kies welke beheermails je ontvangt en bekijk wie nu een focuspartner zoekt.",
+      "emailTitle": "Je e-mailmeldingen",
+      "defaultEnabled": "Meldingen staan standaard aan. Deze voorkeuren gelden alleen voor jouw account.",
+      "save": "Voorkeuren opslaan",
+      "test": "Testmail versturen",
+      "sending": "Versturen…",
+      "testSent": "Testmail verstuurd. Kijk in de voorbeeldmodus in de lokale inbox.",
+      "testFailed": "De mail kon niet worden verstuurd. Controleer de e-mailinstellingen en probeer opnieuw.",
+      "waitingTitle": "Zoeken nu een partner",
+      "waitingDuration": "Sessie van {duration} minuten",
+      "join": "Deelnemen",
+      "noWaiting": "Er wacht nu niemand. Nieuwe verzoeken blijven hier maximaal 10 minuten staan.",
+      "events": {
+        "user_signed_up": {
+          "title": "Nieuwe leden",
+          "description": "Nieuwe accounts via e-mail of een sociaal account."
+        },
+        "report_created": {
+          "title": "Meldingen van leden",
+          "description": "Een lid meldt een veiligheids- of gedragsprobleem."
+        },
+        "support_ticket_created": {
+          "title": "Supportverzoeken",
+          "description": "Een nieuw supportverzoek wacht op een antwoord."
+        },
+        "match_now_waiting": {
+          "title": "Directe partnerverzoeken",
+          "description": "Iemand wil nu focussen. Neem direct deel vanuit de e-mail."
+        },
+        "booking_unmatched": {
+          "title": "Boekingen zonder partner",
+          "description": "Bij een boeking is een open ruimte of verplaatsing aangeboden."
+        }
       }
     }
   },
@@ -1504,5 +1564,62 @@
     "partnerMatched": "Je bent gekoppeld aan {name}: je sessie van {time} begint over 5 minuten",
     "openSession": "Sessie openen",
     "matchedTitle": "Je focuspartner is er klaar voor"
+  },
+  "matchNow": {
+    "button": "Nu een partner vinden",
+    "title": "Klaar om nu te focussen?",
+    "lead": "Kies de duur. We zoeken iemand die samen met jou wil beginnen.",
+    "duration": "Sessieduur",
+    "start": "Een partner zoeken",
+    "looking": "Een partner zoeken…",
+    "waitingBody": "Meestal duurt dit maar een paar minuten. Houd deze pagina open; je gaat naar de sessie zodra iemand aansluit.",
+    "elapsed": "Verstreken wachttijd",
+    "expiredTitle": "Deze keer geen partner",
+    "expiredBody": "Je zoekopdracht is na 10 minuten gestopt. Boek een tijdstip of zoek opnieuw wanneer je wilt.",
+    "bookNext": "Het volgende tijdstip boeken",
+    "tryAgain": "Opnieuw proberen",
+    "joining": "Deelnemen met je focuspartner",
+    "joiningBody": "We controleren of je partner nog wacht…",
+    "unavailableTitle": "Dit verzoek is niet meer beschikbaar",
+    "unavailableBody": "Deze persoon heeft misschien een partner gevonden of is gestopt met zoeken. Bekijk de actuele verzoeken in het meldingencentrum.",
+    "backNotifications": "Terug naar meldingen",
+    "errors": {
+      "limit": "Je hebt je wekelijkse sessielimiet bereikt. Kies Plus of probeer het volgende week opnieuw.",
+      "overlap": "Je hebt op dit moment al een sessie. Neem daaraan deel of kies een ander tijdstip.",
+      "suspended": "Dit account kan geen sessie starten. Controleer je accountstatus of neem contact op met ondersteuning.",
+      "rate_limited": "Wacht even voordat je opnieuw zoekt.",
+      "unauthorized": "Log opnieuw in om een partner te vinden.",
+      "duration": "Kies een sessie van 25 of 50 minuten.",
+      "unavailable": "Dit verzoek is verlopen. Zoek opnieuw.",
+      "self": "Je kunt niet op je eigen verzoek reageren. Wacht op een partner.",
+      "unknown": "We konden je zoekopdracht niet bijwerken. Controleer je verbinding en probeer opnieuw."
+    }
+  },
+  "adminAlerts": {
+    "user_signed_up": {
+      "subject": "Een nieuw lid bij {app}",
+      "body": "{name} heeft een account aangemaakt. Je vindt het in het beheerpaneel."
+    },
+    "report_created": {
+      "subject": "Een melding moet worden bekeken",
+      "body": "Er is een nieuwe veiligheidsmelding. Dit account heeft {name} melding(en) in de afgelopen 30 dagen. Bekijk deze in het beheerpaneel."
+    },
+    "support_ticket_created": {
+      "subject": "Nieuw supportverzoek van {name}",
+      "body": "{name} heeft een supportverzoek gestuurd: {detail}. Open het verzoek om te lezen en te antwoorden."
+    },
+    "match_now_waiting": {
+      "subject": "{name} wil nu focussen ({duration} min) — doe mee",
+      "body": "{name} zoekt een partner voor {duration} minuten. Doe mee zolang deze persoon wacht; verzoeken verlopen na 10 minuten."
+    },
+    "booking_unmatched": {
+      "subject": "Een boeking wacht nog op een partner",
+      "body": "Een boeking van {duration} minuten had geen partner en kreeg een open ruimte of ander tijdstip aangeboden. Bekijk de komende sessies in beheer."
+    },
+    "open": "Beheermeldingen openen",
+    "join": "Aan deze focussessie deelnemen",
+    "footer": "Je ontvangt dit omdat je beheerder bent van {app}. Beheer deze e-mails via Beheer → Meldingen.",
+    "testSubject": "Test van beheermails voor {app}",
+    "testBody": "Je beheermails werken. Deze test is alleen naar jou gestuurd."
   }
 }

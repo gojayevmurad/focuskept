@@ -8,7 +8,7 @@ import {
   report,
   sessionParticipant,
 } from "@/src/lib/db/schema";
-import { notifyAdmins } from "@/src/lib/notifications";
+import { sendAdminAlert } from "@/src/lib/admin/alerts";
 
 export const REPORT_REASONS = [
   "inappropriate",
@@ -102,15 +102,10 @@ export async function reportUser(input: {
       .update(profile)
       .set({ suspendedAt: new Date() })
       .where(eq(profile.userId, input.targetId));
-  void notifyAdmins(
-    "report",
-    id,
-    `New report: ${input.reason}`,
-    [
-      `A member reported another member (${n} report(s) on this account in 30 days).`,
-      "Review it in the admin panel.",
-    ],
-    "/admin/reports",
-  ).catch(() => {});
+  await sendAdminAlert("report_created", id, {
+    detail: input.reason,
+    name: String(n),
+    path: "/admin/reports",
+  });
   return id;
 }
