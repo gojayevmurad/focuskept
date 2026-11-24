@@ -4,6 +4,7 @@ import styles from "@/app/[locale]/(app)/lanes.module.css";
 import { and, eq } from "drizzle-orm";
 import { getTranslations } from "next-intl/server";
 import { Download } from "lucide-react";
+import { Link } from "@/src/i18n/navigation";
 import { AppShell } from "@/src/components/app-shell";
 import { requireAppUser } from "@/src/lib/app-user";
 import { getPlan } from "@/src/lib/billing/plan";
@@ -86,6 +87,7 @@ export default async function Page() {
             </a>
           </div>
         </section>
+        <Link className="button secondary" href="/dashboard?tour=replay">{(await getTranslations("onboarding.welcomeFlow"))("replay")}</Link>
         <section className="card danger stack">
           <h2>{t("deleteTitle")}</h2>
           <p className="muted small">{t("deleteLead")}</p>

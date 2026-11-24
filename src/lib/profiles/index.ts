@@ -116,3 +116,5 @@ export async function userEmail(userId: string) {
     .where(eq(user.id, userId));
   return row;
 }
+
+export { getFocusPreferences } from "./focus-preferences";

@@ -50,6 +50,13 @@
       "when": 1795524891688,
       "tag": "0006_instant_match_alerts",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1795525410367,
+      "tag": "0007_onboarding_focus",
+      "breakpoints": true
     }
   ]
 }

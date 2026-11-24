@@ -18,7 +18,9 @@ import { Link } from "@/src/i18n/navigation";
 import { FallbackCard } from "./fallback-card";
 import { PaceClock } from "@/src/components/lanes";
 import { FirstRunGuide } from "./first-run-guide";
-import { Tour } from "@/src/components/tour";
+import { WelcomeFlow } from "@/src/components/tour";
+import { getFocusPreferences } from "@/src/lib/profiles";
+import { welcomePhase } from "@/src/lib/profiles/onboarding";
 import styles from "./dashboard.module.css";
 
 export const metadata: Metadata = { title: "Home" };
@@ -26,18 +28,20 @@ export const metadata: Metadata = { title: "Home" };
 export default async function Page({
   searchParams,
 }: {
-  searchParams: Promise<{ welcome?: string }>;
+  searchParams: Promise<{ welcome?: string; tour?: string }>;
 }) {
   const { user, profile: me } = await requireAppUser();
   const t = await getTranslations("dashboard");
   const c = await getTranslations("common");
+  const focus = await getTranslations("onboarding.flow");
   const labels = await getTranslations("sessionLabels");
   const format = await getFormatter();
   const tz = me.timezone;
-  const { welcome } = await searchParams;
-  const [upcoming, stats, suggestions] = await Promise.all([
+  const { welcome, tour } = await searchParams;
+  const [upcoming, stats, preferences, suggestions] = await Promise.all([
     upcomingBookings(user.id),
     userStats(user.id, tz),
+    getFocusPreferences(user.id),
     suggestedSlots(user.id, 50, new Date(), 4, tz),
   ]);
   const sessionIds = upcoming
@@ -97,7 +101,12 @@ export default async function Page({
               ? t("welcome", { name: firstName(me.displayName) })
               : t("hello", { name: firstName(me.displayName) })}
           </h1>
-          <p>{me.goal ? t("goalReminder", { goal: me.goal }) : t("lead")}</p>
+          <p>{preferences?.focusAreas.length
+            ? focus("dashboardSuggestion", {
+                area: focus(`focusAreas.${preferences.focusAreas[0]}`),
+                completed: preferences.completedThisWeek, goal: preferences.weeklyGoal,
+              })
+            : me.goal ? t("goalReminder", { goal: me.goal }) : t("lead")}</p>
         </header>
 
         {fallback && (
@@ -287,7 +296,7 @@ export default async function Page({
           </div>
         </dl>
 
-        <Tour autoStart={Boolean(welcome)} isFirstRun={stats.sessions === 0} />
+        <WelcomeFlow initialPhase={welcomePhase(me)} replay={tour === "replay"} />
       </div>
     </AppShell>
   );
