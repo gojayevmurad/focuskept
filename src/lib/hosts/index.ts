@@ -23,6 +23,8 @@ import {
 import { getEnv } from "@/src/config/env";
 import { checkBookable } from "@/src/lib/scheduling/slots";
 import { publish } from "@/src/lib/realtime/publish";
+import { hostApplicationInput, hostedSessionInput } from "./validation";
+import { logger } from "@/src/lib/logger";
 import { notifyAdmins } from "@/src/lib/notifications";
 
 export const GROUP_CAPACITY = 9;
@@ -45,6 +47,11 @@ export async function applyToHost(
   pitch: string,
   audienceUrl: string | null,
 ) {
+  if (
+    !hostApplicationInput.safeParse({ pitch, audienceUrl: audienceUrl ?? "" })
+      .success
+  )
+    return { ok: false as const, reason: "invalid" };
   const needed = getEnv().HOST_MIN_SESSIONS;
   if ((await completedCount(userId)) < needed)
     return { ok: false as const, reason: "not_eligible" };
@@ -70,7 +77,9 @@ export async function applyToHost(
     "New host application",
     ["Someone applied to host group sessions."],
     "/admin/hosts",
-  ).catch(() => {});
+  ).catch((error) =>
+    logger.error({ err: error }, "Host application notification failed"),
+  );
   return { ok: true as const };
 }
 
@@ -81,6 +90,16 @@ export async function createGroupSession(input: {
   title: string;
   capacity: number;
 }) {
+  if (!Number.isFinite(input.startAt.getTime()))
+    return { ok: false as const, reason: "invalid" };
+  if (
+    !hostedSessionInput.safeParse({
+      ...input,
+      startAt: input.startAt.toISOString(),
+      duration: input.durationMin,
+    }).success
+  )
+    return { ok: false as const, reason: "invalid" };
   const h = await getHost(input.hostId);
   if (h?.status !== "approved")
     return { ok: false as const, reason: "not_host" };
@@ -160,16 +179,21 @@ export async function hostedSessions(hostId: string) {
       title: focusSession.title,
       capacity: focusSession.capacity,
       status: focusSession.status,
+      attendees: sql<
+        { name: string; avatarUrl: string | null }[]
+      >`coalesce((select jsonb_agg(jsonb_build_object('name', u.display_name, 'avatarUrl', u.avatar_url)) from ${sessionParticipant} p join ${profile} u on u.user_id = p.user_id join ${booking} b on b.id = p.booking_id where p.session_id = ${focusSession.id} and p.user_id <> ${hostId} and b.status in ('matched', 'completed')), '[]'::jsonb)`,
       taken: sql<number>`(select count(*)::int from ${sessionParticipant} p where p.session_id = ${focusSession.id} and p.user_id <> ${hostId})`,
     })
     .from(focusSession)
     .where(
       and(
         eq(focusSession.hostId, hostId),
+        inArray(focusSession.status, ["scheduled", "live"]),
         gt(focusSession.startAt, new Date(Date.now() - 2 * 3600_000)),
       ),
     )
-    .orderBy(focusSession.startAt);
+    .orderBy(focusSession.startAt)
+    .limit(30);
 }
 
 /** Moves a hosted group into focus or wrap-up early. Only the host can. */
@@ -252,4 +276,23 @@ export async function publicHosts(limit = 30) {
     .where(eq(host.status, "approved"))
     .orderBy(desc(host.sessionsHosted))
     .limit(limit);
+}
+
+/** Unique attendees who actually joined a completed hosted session. */
+export async function peopleHelped(hostId: string) {
+  const [row] = await db()
+    .select({
+      n: sql<number>`count(distinct ${sessionParticipant.userId})::int`,
+    })
+    .from(sessionParticipant)
+    .innerJoin(focusSession, eq(focusSession.id, sessionParticipant.sessionId))
+    .where(
+      and(
+        eq(focusSession.hostId, hostId),
+        eq(focusSession.status, "ended"),
+        sql`${sessionParticipant.joinedAt} is not null`,
+        sql`${sessionParticipant.userId} <> ${hostId}`,
+      ),
+    );
+  return row.n;
 }

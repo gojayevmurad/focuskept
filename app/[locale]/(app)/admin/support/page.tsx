@@ -7,23 +7,25 @@ import {
   getSupportTicketCounts,
 } from "@/src/lib/support/admin";
 import { SUPPORT_CATEGORIES } from "@/src/lib/support/validation";
+import { listQuery } from "../list-filter";
 import { AdminFrame } from "../frame";
 import styles from "./support.module.css";
 
 export default async function AdminSupportPage({
   searchParams,
 }: {
-  searchParams: Promise<{ status?: string; category?: string }>;
+  searchParams: Promise<{ status?: string; category?: string; q?: string }>;
 }) {
   const { profile } = await requireAdmin();
   const t = await getTranslations("admin.support");
   const format = await getFormatter();
   const params = await searchParams;
 
+  const q = listQuery(params);
   const currentStatus = params.status || "all";
   const currentCategory = params.category || "all";
 
-  const [tickets, counts] = await Promise.all([
+  const [allTickets, counts] = await Promise.all([
     getSupportTickets({
       status: currentStatus,
       category: currentCategory,
@@ -31,6 +33,11 @@ export default async function AdminSupportPage({
     getSupportTicketCounts(),
   ]);
 
+  const tickets = allTickets.filter((ticket) =>
+    `${ticket.subject} ${ticket.name} ${ticket.email}`
+      .toLocaleLowerCase()
+      .includes(q.toLocaleLowerCase()),
+  );
   const statusClass = (status: string) => {
     switch (status) {
       case "open":
@@ -89,6 +96,15 @@ export default async function AdminSupportPage({
       </div>
 
       <form method="GET" className={styles.filterBar}>
+        <label className="field">
+          {t("search")}
+          <input
+            name="q"
+            defaultValue={q}
+            placeholder={t("searchPlaceholder")}
+            maxLength={200}
+          />
+        </label>
         <div className={styles.filterGroup}>
           <label htmlFor="filter-status">{t("filterStatus")}:</label>
           <select
@@ -123,7 +139,7 @@ export default async function AdminSupportPage({
         </div>
 
         <button type="submit" className="button small secondary">
-          Apply filter
+          {t("applyFilter")}
         </button>
       </form>
 
@@ -136,7 +152,7 @@ export default async function AdminSupportPage({
               <th scope="col">{t("categoryLabel")}</th>
               <th scope="col">{t("fromLabel")}</th>
               <th scope="col">{t("subjectLabel")}</th>
-              <th scope="col">Actions</th>
+              <th scope="col">{t("actions")}</th>
             </tr>
           </thead>
           <tbody>
@@ -149,30 +165,30 @@ export default async function AdminSupportPage({
             ) : (
               tickets.map((ticket) => (
                 <tr key={ticket.id}>
-                  <td>
+                  <td data-label={t("dateLabel")}>
                     {format.dateTime(ticket.createdAt, {
                       dateStyle: "medium",
                       timeStyle: "short",
                       timeZone: profile.timezone,
                     })}
                   </td>
-                  <td>
+                  <td data-label={t("statusLabel")}>
                     <span className={statusClass(ticket.status)}>
                       {t(`status.${ticket.status}`)}
                     </span>
                   </td>
-                  <td>
+                  <td data-label={t("categoryLabel")}>
                     <span className="badge">
                       {t(`category.${ticket.category}`)}
                     </span>
                   </td>
-                  <td>
+                  <td data-label={t("fromLabel")}>
                     <div>
                       <strong>{ticket.name}</strong>
                       <div className="small muted">{ticket.email}</div>
                     </div>
                   </td>
-                  <td>
+                  <td data-label={t("subjectLabel")}>
                     <Link
                       href={`/admin/support/${ticket.id}`}
                       style={{ fontWeight: 600, color: "var(--accent)" }}
@@ -180,7 +196,7 @@ export default async function AdminSupportPage({
                       {ticket.subject}
                     </Link>
                   </td>
-                  <td>
+                  <td data-label={t("actions")}>
                     <Link
                       href={`/admin/support/${ticket.id}`}
                       className="button small secondary"

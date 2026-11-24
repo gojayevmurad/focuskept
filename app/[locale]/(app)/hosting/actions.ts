@@ -2,6 +2,10 @@
 "use server";
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
+import {
+  hostApplicationInput,
+  hostedSessionInput,
+} from "@/src/lib/hosts/validation";
 import { requireAppUser } from "@/src/lib/app-user";
 import {
   applyToHost,
@@ -16,15 +20,10 @@ export async function apply(
   form: FormData,
 ): Promise<HostState> {
   const { user } = await requireAppUser();
-  const parsed = z
-    .object({
-      pitch: z.string().trim().min(20).max(800),
-      audienceUrl: z.union([z.literal(""), z.url().max(300)]),
-    })
-    .safeParse({
-      pitch: form.get("pitch"),
-      audienceUrl: form.get("audienceUrl") ?? "",
-    });
+  const parsed = hostApplicationInput.safeParse({
+    pitch: form.get("pitch"),
+    audienceUrl: form.get("audienceUrl") ?? "",
+  });
   if (!parsed.success) return { error: "invalid" };
   const result = await applyToHost(
     user.id,
@@ -40,19 +39,12 @@ export async function scheduleGroup(
   form: FormData,
 ): Promise<HostState> {
   const { user } = await requireAppUser();
-  const parsed = z
-    .object({
-      startAt: z.string().datetime(),
-      duration: z.coerce.number().int(),
-      title: z.string().trim().min(3).max(80),
-      capacity: z.coerce.number().int().min(2).max(9),
-    })
-    .safeParse({
-      startAt: form.get("startAt"),
-      duration: form.get("duration"),
-      title: form.get("title"),
-      capacity: form.get("capacity"),
-    });
+  const parsed = hostedSessionInput.safeParse({
+    startAt: form.get("startAt"),
+    duration: form.get("duration"),
+    title: form.get("title"),
+    capacity: form.get("capacity"),
+  });
   if (!parsed.success) return { error: "invalid" };
   const result = await createGroupSession({
     hostId: user.id,

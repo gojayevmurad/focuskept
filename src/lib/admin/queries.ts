@@ -33,7 +33,7 @@ export async function searchUsers(q: string) {
     .orderBy(desc(user.createdAt))
     .limit(50);
 }
-export async function reports(resolved: boolean) {
+export async function reports(resolved: boolean, q = "") {
   const reporter = alias(user, "reporter");
   const target = alias(user, "target");
   const query = db()
@@ -49,15 +49,25 @@ export async function reports(resolved: boolean) {
     .innerJoin(target, eq(target.id, report.targetId))
     .leftJoin(profile, eq(profile.userId, report.targetId))
     .where(
-      resolved
-        ? inArray(report.status, ["actioned", "dismissed"])
-        : eq(report.status, "open"),
+      and(
+        resolved
+          ? inArray(report.status, ["actioned", "dismissed"])
+          : eq(report.status, "open"),
+        q
+          ? or(
+              ilike(reporter.name, `%${q}%`),
+              ilike(target.name, `%${q}%`),
+              ilike(report.details, `%${q}%`),
+              ilike(report.reason, `%${q}%`),
+            )
+          : undefined,
+      ),
     )
     .orderBy(resolved ? desc(report.resolvedAt) : desc(report.createdAt))
     .$dynamic();
   return resolved ? query.limit(50) : query;
 }
-export async function hosts() {
+export async function hosts(q = "") {
   return db()
     .select({
       host,
@@ -68,10 +78,21 @@ export async function hosts() {
     .from(host)
     .innerJoin(user, eq(user.id, host.userId))
     .leftJoin(profile, eq(profile.userId, host.userId))
-    .where(inArray(host.status, ["applied", "approved", "suspended"]))
+    .where(
+      and(
+        inArray(host.status, ["applied", "approved", "suspended"]),
+        q
+          ? or(
+              ilike(user.name, `%${q}%`),
+              ilike(host.pitch, `%${q}%`),
+              ilike(profile.username, `%${q}%`),
+            )
+          : undefined,
+      ),
+    )
     .orderBy(desc(host.appliedAt));
 }
-export async function groups() {
+export async function groups(q = "") {
   return db()
     .select({
       community,
@@ -80,6 +101,11 @@ export async function groups() {
     })
     .from(community)
     .leftJoin(user, eq(user.id, community.ownerId))
+    .where(
+      q
+        ? or(ilike(community.name, `%${q}%`), ilike(user.name, `%${q}%`))
+        : undefined,
+    )
     .orderBy(desc(community.createdAt));
 }
 export async function houseSlots(now = new Date()) {

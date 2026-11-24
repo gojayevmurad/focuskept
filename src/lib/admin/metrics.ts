@@ -3,6 +3,8 @@ import "server-only";
 import { sql, inArray } from "drizzle-orm";
 import { db } from "@/src/lib/db";
 import { appConfig } from "@/src/lib/db/schema";
+import { localDayStart } from "@/src/lib/scheduling/slots";
+import { MATCH_WAIT_MS } from "@/src/lib/matching/instant";
 import { getSupportTicketCounts } from "@/src/lib/support/admin";
 
 export function matchRate(matched: number, failed: number): number {
@@ -68,4 +70,54 @@ export async function currentMetrics() {
         ? new Date(heartbeat)
         : null,
   };
+}
+
+export type OverviewCounts = {
+  signupsToday: number;
+  signupsWeek: number;
+  sessionsToday: number;
+  sessionsWeek: number;
+  matched: number;
+  failed: number;
+  reports: number;
+  support: number;
+  waiting: number;
+  unmatched: number;
+};
+/** Today uses the operator's calendar; seven-day metrics use a rolling window. */
+export async function overviewMetrics(timeZone: string, now = new Date()) {
+  const today = localDayStart(now, timeZone).toISOString();
+  const week = new Date(now.getTime() - 7 * 86400000).toISOString();
+  const to = now.toISOString();
+  const nextDay = new Date(now.getTime() + 86400000).toISOString();
+  const waitCutoff = new Date(now.getTime() - MATCH_WAIT_MS).toISOString();
+  const result = await db().execute<OverviewCounts>(sql`select
+    (select count(*)::int from "user" where created_at >= ${today}::timestamptz and created_at < ${to}::timestamptz) as "signupsToday",
+    (select count(*)::int from "user" where created_at >= ${week}::timestamptz and created_at < ${to}::timestamptz) as "signupsWeek",
+    (select count(*)::int from focus_session where start_at >= ${today}::timestamptz and start_at < ${to}::timestamptz and status <> 'cancelled') as "sessionsToday",
+    (select count(*)::int from focus_session where start_at >= ${week}::timestamptz and start_at < ${to}::timestamptz and status <> 'cancelled') as "sessionsWeek",
+    (select count(*)::int from booking where start_at >= ${week}::timestamptz and start_at < ${to}::timestamptz and kind = 'pair' and session_id is not null) as matched,
+    (select count(*)::int from match_failure where start_at >= ${week}::timestamptz and start_at < ${to}::timestamptz and resolution is distinct from 'matched_late') as failed,
+    (select count(*)::int from report where status = 'open') as reports,
+    (select count(*)::int from support_ticket where status = 'open') as support,
+    (select count(*)::int from match_request m join profile p on p.user_id = m.user_id where m.status = 'waiting' and m.created_at > ${waitCutoff}::timestamptz and p.suspended_at is null) as waiting,
+    (select count(*)::int from booking where status = 'booked' and kind = 'pair' and session_id is null and start_at > ${to}::timestamptz and start_at <= ${nextDay}::timestamptz) as unmatched`);
+  const row = result.rows[0];
+  return { ...row, matchRate: matchRate(row.matched, row.failed) };
+}
+export type AttentionItem = {
+  id: string;
+  kind: "report" | "support" | "booking";
+  label: string;
+  at: string;
+};
+export async function needsAttention(now = new Date()) {
+  const result = await db().execute<AttentionItem>(sql`
+    (select id, 'report' as kind, reason as label, created_at::text as at from report where status = 'open' order by created_at limit 5)
+    union all
+    (select id, 'support' as kind, subject as label, created_at::text as at from support_ticket where status = 'open' order by created_at limit 5)
+    union all
+    (select b.id, 'booking' as kind, p.display_name as label, b.start_at::text as at from booking b join profile p on p.user_id = b.user_id where b.status = 'booked' and b.kind = 'pair' and b.session_id is null and b.start_at > ${now.toISOString()}::timestamptz and b.start_at <= ${new Date(now.getTime() + 86400000).toISOString()}::timestamptz order by b.start_at limit 5)
+  `);
+  return result.rows;
 }

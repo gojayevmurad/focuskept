@@ -186,7 +186,7 @@ export function buildReferralLink(
   referralCode: string,
   source = "referral",
 ): string {
-  const url = new URL(`/r/${referralCode}`, baseUrl);
+  const url = new URL(`/r/${encodeURIComponent(referralCode)}`, baseUrl);
   url.searchParams.set("utm_source", source);
   url.searchParams.set("utm_medium", "referral");
   url.searchParams.set("utm_campaign", "invite");

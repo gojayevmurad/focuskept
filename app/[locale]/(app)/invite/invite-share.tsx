@@ -1,37 +1,39 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 "use client";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
-import {
-  Copy,
-  Check,
-  Share2,
-  Mail,
-  MessageCircle,
-} from "lucide-react";
+import { Copy, Check, Share2, Mail, MessageCircle } from "lucide-react";
 import { track } from "@/src/lib/analytics/client";
 import styles from "./invite.module.css";
 
+const subscribeShare = () => () => {};
+const supportsShare = () => typeof navigator.share === "function";
+
 type Props = {
-  baseUrl: string;
-  referralCode: string;
+  url: string;
   appName: string;
 };
 
-export function InviteShare({ baseUrl, referralCode, appName }: Props) {
+export function InviteShare({ url: referralUrl, appName }: Props) {
   const t = useTranslations("invite");
   const common = useTranslations("common");
   const [copied, setCopied] = useState(false);
 
   const buildUrl = (source: string) => {
-    const url = new URL(`/r/${referralCode}`, baseUrl);
+    const url = new URL(referralUrl);
     url.searchParams.set("utm_source", source);
     url.searchParams.set("utm_medium", "referral");
     url.searchParams.set("utm_campaign", "invite");
     return url.toString();
   };
 
-  const copyUrl = buildUrl("copy_link");
+  const copyUrl = referralUrl;
+  const [copyFailed, setCopyFailed] = useState(false);
+  const hasNativeShare = useSyncExternalStore(
+    subscribeShare,
+    supportsShare,
+    () => false,
+  );
   const shareText = t("shareMessage", { app: appName });
   const shareTitle = appName;
 
@@ -39,9 +41,12 @@ export function InviteShare({ baseUrl, referralCode, appName }: Props) {
     try {
       await navigator.clipboard.writeText(copyUrl);
       setCopied(true);
+      setCopyFailed(false);
       track("referral_sent");
       setTimeout(() => setCopied(false), 2500);
-    } catch {}
+    } catch {
+      setCopyFailed(true);
+    }
   };
 
   const handleNativeShare = async () => {
@@ -57,9 +62,6 @@ export function InviteShare({ baseUrl, referralCode, appName }: Props) {
       } catch {}
     }
   };
-
-  const hasNativeShare =
-    typeof navigator !== "undefined" && typeof navigator.share === "function";
 
   const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     shareText,
@@ -81,23 +83,31 @@ export function InviteShare({ baseUrl, referralCode, appName }: Props) {
 
   return (
     <div className={styles.shareBlock}>
-      <div className={styles.copyRow}>
-        <input
-          className="input grow mono small"
-          readOnly
-          value={copyUrl}
-          onFocus={(e) => e.currentTarget.select()}
-          aria-label={t("yourLink")}
-        />
-        <button
-          className={`button ${copied ? "ok" : "secondary"}`}
-          onClick={handleCopy}
-          type="button"
-        >
-          {copied ? <Check size={16} /> : <Copy size={16} />}
-          <span>{copied ? common("copied") : common("copy")}</span>
-        </button>
-      </div>
+      <label className="field">
+        {t("yourLink")}
+        <div className={styles.copyRow}>
+          <input
+            className="input grow mono small"
+            readOnly
+            value={copyUrl}
+            onFocus={(e) => e.currentTarget.select()}
+            aria-label={t("yourLink")}
+          />
+          <button
+            className={`button ${copied ? "ok" : "secondary"}`}
+            onClick={handleCopy}
+            type="button"
+          >
+            {copied ? <Check size={16} /> : <Copy size={16} />}
+            <span>{copied ? common("copied") : common("copy")}</span>
+          </button>
+        </div>
+      </label>
+      {copyFailed && (
+        <p role="status" className="small">
+          {t("copyFailed")}
+        </p>
+      )}
 
       {copied && (
         <p className={styles.copiedFeedback} role="status">

@@ -10,6 +10,7 @@ import {
   booking,
   challenge,
   community,
+  communityPost,
   host,
   profile,
   report,
@@ -48,6 +49,7 @@ const command = z.discriminatedUnion("intent", [
   }),
   z.object({ intent: z.literal("challengeSave"), ...challengeInput.shape }),
   z.object({ intent: z.literal("challengeDelete"), id: z.uuid() }),
+  z.object({ intent: z.literal("postDelete"), id: z.uuid() }),
   z.object({ intent: z.literal("groupSave"), ...licenseInput.shape }),
   z.object({
     intent: z.literal("groupDelete"),
@@ -183,6 +185,15 @@ export async function adminAction(
         if (!rows.length) return { error: "notFound" };
         break;
       }
+      case "postDelete": {
+        const rows = await db()
+          .update(communityPost)
+          .set({ deletedAt: new Date() })
+          .where(eq(communityPost.id, input.id))
+          .returning({ id: communityPost.id });
+        if (!rows.length) return { error: "notFound" };
+        break;
+      }
       case "groupSave": {
         const rows = await db()
           .update(community)
@@ -237,7 +248,7 @@ export async function adminAction(
   revalidatePath("/[locale]/admin", "layout");
   if (input.intent.startsWith("challenge"))
     revalidatePath("/[locale]/challenges", "layout");
-  if (input.intent.startsWith("group"))
+  if (input.intent.startsWith("group") || input.intent === "postDelete")
     revalidatePath("/[locale]/groups", "layout");
   if (input.intent === "host") revalidatePath("/[locale]/hosting", "page");
   return { ok: true };

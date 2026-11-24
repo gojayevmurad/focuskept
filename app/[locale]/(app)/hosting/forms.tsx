@@ -2,14 +2,21 @@
 "use client";
 import { useActionState, useMemo, useState, useTransition } from "react";
 import { useFormatter, useTranslations } from "next-intl";
+import { joinGroup } from "@/app/[locale]/(app)/book/actions";
+import { Link } from "@/src/i18n/navigation";
 import { apply, cancelHosted, scheduleGroup, type HostState } from "./actions";
 
 function Status({ state }: { state: HostState }) {
   const t = useTranslations("hosting");
-  if (state.ok) return <p className="notice ok">{t("done")}</p>;
+  if (state.ok)
+    return (
+      <p role="status" className="notice ok">
+        {t("done")}
+      </p>
+    );
   if (state.error)
     return (
-      <p className="notice error">
+      <p role="alert" className="notice error">
         {t.has(`errors.${state.error}`)
           ? t(`errors.${state.error}`)
           : t("errors.invalid")}
@@ -58,23 +65,20 @@ export function ScheduleForm({ timeZone }: { timeZone: string }) {
     const out: string[] = [];
     const step = 30 * 60_000;
     let at = Math.ceil((Date.now() + 60 * 60_000) / step) * step;
-    for (let i = 0; i < 14 * 48; i++, at += step)
+    for (; at <= Date.now() + 14 * 86400000; at += step)
       out.push(new Date(at).toISOString());
     return out;
   }, []);
-  const [day, setDay] = useState(options[0].slice(0, 10));
-  const days = [
-    ...new Set(
-      options.map((o) =>
-        new Intl.DateTimeFormat("en-CA", { timeZone }).format(new Date(o)),
-      ),
-    ),
-  ];
-  const times = options.filter(
-    (o) =>
-      new Intl.DateTimeFormat("en-CA", { timeZone }).format(new Date(o)) ===
-      day,
-  );
+  const localDate = (value: string) =>
+    new Intl.DateTimeFormat("en-CA", {
+      timeZone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).format(new Date(value));
+  const [day, setDay] = useState(() => localDate(options[0]));
+  const days = [...new Set(options.map(localDate))];
+  const times = options.filter((o) => localDate(o) === day);
   return (
     <form action={action} className="form">
       <label className="field">
@@ -104,7 +108,7 @@ export function ScheduleForm({ timeZone }: { timeZone: string }) {
         </label>
         <label className="field">
           {t("time")}
-          <select name="startAt">
+          <select name="startAt" key={day} required>
             {times.map((o) => (
               <option key={o} value={o}>
                 {format.dateTime(new Date(o), {
@@ -131,14 +135,16 @@ export function ScheduleForm({ timeZone }: { timeZone: string }) {
         <label className="field">
           {t("capacity")}
           <select name="capacity" defaultValue="9">
-            {[3, 4, 5, 6, 7, 8, 9].map((n) => (
+            {[2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
               <option key={n} value={n}>
                 {n}
               </option>
             ))}
           </select>
+          <small>{t("capacityHelp")}</small>
         </label>
       </div>
+      <p className="small muted">{t("timezoneHelp", { timezone: timeZone })}</p>
       <div className="row">
         <button className="button" disabled={pending}>
           {t("schedule")}
@@ -160,5 +166,49 @@ export function CancelHosted({ id }: { id: string }) {
     >
       {t("cancel")}
     </button>
+  );
+}
+
+export function JoinHosted({
+  id,
+  full = false,
+}: {
+  id: string;
+  full?: boolean;
+}) {
+  const t = useTranslations("hostPage");
+  const book = useTranslations("book");
+  const [pending, start] = useTransition();
+  const [error, setError] = useState("");
+  const [joined, setJoined] = useState(false);
+  return (
+    <div className="stack-sm">
+      {joined ? (
+        <Link className="button" href={`/session/${id}`}>
+          {t("openSession")}
+        </Link>
+      ) : (
+        <button
+          className="button"
+          disabled={pending || full}
+          onClick={() =>
+            start(async () => {
+              const result = await joinGroup(id);
+              if (result.ok) setJoined(true);
+              else setError(result.error);
+            })
+          }
+        >
+          {t(full ? "full" : "takeSeat")}
+        </button>
+      )}
+      {error && (
+        <p role="alert" className="small">
+          {book.has(`errors.${error}`)
+            ? book(`errors.${error}`)
+            : book("errors.invalid")}
+        </p>
+      )}
+    </div>
   );
 }

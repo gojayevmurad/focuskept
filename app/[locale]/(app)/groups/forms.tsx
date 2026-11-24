@@ -4,6 +4,7 @@ import { useActionState, useTransition } from "react";
 import { useTranslations } from "next-intl";
 import {
   createGroup,
+  joinCircle,
   joinGroupByCode,
   leaveGroup,
   newInviteCode,
@@ -39,7 +40,12 @@ export function CreateGroupForm() {
       </label>
       <label className="field">
         {t("description")}
-        <textarea name="description" maxLength={400} rows={2} />
+        <textarea
+          name="description"
+          maxLength={400}
+          rows={2}
+          placeholder={t("descriptionPlaceholder")}
+        />
       </label>
       <div className="row">
         <button className="button" disabled={pending}>
@@ -55,14 +61,17 @@ export function JoinByCodeForm() {
   const t = useTranslations("groups");
   const [state, action, pending] = useActionState(joinGroupByCode, {});
   return (
-    <form action={action} className="row">
-      <input
-        className="input grow"
-        name="code"
-        required
-        placeholder={t("codePlaceholder")}
-        aria-label={t("code")}
-      />
+    <form action={action} className="form">
+      <label className="field">
+        {t("code")}
+        <input
+          className="input grow"
+          name="code"
+          required
+          placeholder={t("codePlaceholder")}
+          aria-label={t("code")}
+        />
+      </label>
       <button className="button secondary" disabled={pending}>
         {t("joinWithCode")}
       </button>
@@ -82,12 +91,13 @@ export function MemberActions({
 }: {
   communityId: string;
   userId?: string;
-  kind: "leave" | "remove" | "rotate";
+  kind: "leave" | "remove" | "rotate" | "join";
 }) {
   const t = useTranslations("groups");
   const [pending, start] = useTransition();
   const run = () =>
     start(async () => {
+      if (kind === "join") await joinCircle(communityId);
       if (kind === "leave") await leaveGroup(communityId);
       if (kind === "remove" && userId)
         await removeFromGroup(communityId, userId);

@@ -2,17 +2,27 @@
 import { getTranslations } from "next-intl/server";
 import { requireAdmin } from "@/src/lib/app-user";
 import { listChallenges } from "@/src/lib/challenges";
-import { Link } from "@/src/i18n/navigation";
+import { ListFilter, listQuery } from "../list-filter";
 import { AdminFrame } from "../frame";
 import { ActionForm } from "../action-form";
 import { ChallengeForm } from "./challenge-form";
 
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string | string[] }>;
+}) {
+  const q = listQuery(await searchParams);
   await requireAdmin();
   const t = await getTranslations("admin");
-  const rows = await listChallenges();
+  const rows = (await listChallenges()).filter((row) =>
+    `${row.title} ${row.slug} ${row.description}`
+      .toLocaleLowerCase()
+      .includes(q.toLocaleLowerCase()),
+  );
   return (
     <AdminFrame section="challenges">
+      <ListFilter q={q} />
       <section className="card stack">
         <h2>{t("createChallenge")}</h2>
         <ChallengeForm />
@@ -23,9 +33,7 @@ export default async function Page() {
         {rows.map((row) => (
           <article className="card stack" key={row.id}>
             <div className="row-between">
-              <h3>
-                <Link href={`/challenges/${row.slug}`}>{row.title}</Link>
-              </h3>
+              <h3>{row.title}</h3>
               <span className="badge">
                 {t("members", { count: row.members })}
               </span>

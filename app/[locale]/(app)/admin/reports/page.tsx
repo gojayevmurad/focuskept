@@ -4,16 +4,26 @@ import { requireAdmin } from "@/src/lib/app-user";
 import { reports } from "@/src/lib/admin/queries";
 import { REPORT_REASONS } from "@/src/lib/safety";
 import { Link } from "@/src/i18n/navigation";
+import { ListFilter, listQuery } from "../list-filter";
 import { AdminFrame } from "../frame";
 import { ActionForm } from "../action-form";
 
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string | string[] }>;
+}) {
+  const q = listQuery(await searchParams);
   const { profile } = await requireAdmin();
   const t = await getTranslations("admin");
   const format = await getFormatter();
-  const [open, resolved] = await Promise.all([reports(false), reports(true)]);
+  const [open, resolved] = await Promise.all([
+    reports(false, q),
+    reports(true, q),
+  ]);
   return (
     <AdminFrame section="reports">
+      <ListFilter q={q} />
       {[
         { title: "openReports", rows: open, open: true },
         { title: "resolvedReports", rows: resolved, open: false },
@@ -53,15 +63,15 @@ export default async function Page() {
                           timeStyle: "short",
                         })}
                       </th>
-                      <td>{reporter}</td>
-                      <td>
+                      <td data-label={t("columns.reporter")}>{reporter}</td>
+                      <td data-label={t("columns.target")}>
                         {username ? (
                           <Link href={`/u/${username}`}>{target}</Link>
                         ) : (
                           target
                         )}
                       </td>
-                      <td>
+                      <td data-label={t("columns.reason")}>
                         {REPORT_REASONS.some(
                           (reason) => reason === report.reason,
                         )
@@ -69,6 +79,7 @@ export default async function Page() {
                           : t("reasons.other")}
                       </td>
                       <td
+                        data-label={t("columns.details")}
                         style={{
                           whiteSpace: "pre-wrap",
                           overflowWrap: "anywhere",
@@ -77,18 +88,30 @@ export default async function Page() {
                       >
                         {report.details}
                       </td>
-                      <td>{report.sessionId || t("unavailable")}</td>
-                      <td>{recent}</td>
-                      <td>
+                      <td data-label={t("columns.session")}>
+                        {report.sessionId || t("unavailable")}
+                      </td>
+                      <td data-label={t("columns.reports30")}>{recent}</td>
+                      <td data-label={t("columns.status")}>
                         <span
                           className={`badge ${report.status === "open" ? "warm" : ""}`}
                         >
                           {t(`reportStatus.${report.status}`)}
                         </span>
                       </td>
-                      <td>
+                      <td data-label={t("columns.actions")}>
                         {section.open && (
                           <div className="stack-sm">
+                            {report.postId && (
+                              <ActionForm
+                                fields={{
+                                  intent: "postDelete",
+                                  id: report.postId,
+                                }}
+                                label={t("removePost")}
+                                danger
+                              />
+                            )}
                             <ActionForm
                               fields={{
                                 intent: "report",

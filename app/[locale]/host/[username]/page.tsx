@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { and, eq, gt, inArray, sql } from "drizzle-orm";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { Star } from "lucide-react";
 import { SiteHeader } from "@/src/components/site-header";
@@ -9,11 +8,10 @@ import { SiteFooter } from "@/src/components/site-footer";
 import { Avatar } from "@/src/components/avatar";
 import { LaneRope } from "@/src/components/lanes";
 import { getProfile, getProfileByUsername } from "@/src/lib/profiles";
+import { peopleHelped, hostedSessions } from "@/src/lib/hosts";
+import { JoinHosted } from "@/app/[locale]/(app)/hosting/forms";
 import { getHost } from "@/src/lib/hosts";
 import { getSession } from "@/src/lib/auth/session";
-import { db } from "@/src/lib/db";
-import { focusSession, sessionParticipant } from "@/src/lib/db/schema";
-import { Link } from "@/src/i18n/navigation";
 import styles from "./host.module.css";
 
 type Props = { params: Promise<{ username: string }> };
@@ -21,7 +19,8 @@ type Props = { params: Promise<{ username: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { username } = await params;
   const person = await getProfileByUsername(username);
-  return person ? { title: `Group sessions with ${person.displayName}` } : {};
+  const t = await getTranslations("hostPage");
+  return person ? { title: t("pageTitle", { name: person.displayName }) } : {};
 }
 
 export default async function Page({ params }: Props) {
@@ -37,25 +36,10 @@ export default async function Page({ params }: Props) {
     ? await getProfile(session.user.id)
     : undefined;
   const tz = viewer?.timezone ?? person.timezone;
-  const upcoming = await db()
-    .select({
-      id: focusSession.id,
-      title: focusSession.title,
-      startAt: focusSession.startAt,
-      durationMin: focusSession.durationMin,
-      capacity: focusSession.capacity,
-      taken: sql<number>`(select count(*)::int from ${sessionParticipant} p where p.session_id = ${focusSession.id})`,
-    })
-    .from(focusSession)
-    .where(
-      and(
-        eq(focusSession.hostId, person.userId),
-        inArray(focusSession.status, ["scheduled", "live"]),
-        gt(focusSession.startAt, new Date()),
-      ),
-    )
-    .orderBy(focusSession.startAt)
-    .limit(20);
+  const [upcoming, helped] = await Promise.all([
+    hostedSessions(person.userId),
+    peopleHelped(person.userId),
+  ]);
   return (
     <>
       <SiteHeader />
@@ -81,10 +65,13 @@ export default async function Page({ params }: Props) {
           <p className={styles.bio}>{person.bio || h.pitch}</p>
         )}
 
+        <p className="muted">{t("peopleHelped", { count: helped })}</p>
+        <p className={styles.bio}>{t("hostPurpose")}</p>
         <LaneRope className={styles.rope} />
 
         <section className={styles.section}>
           <h2>{t("upcoming")}</h2>
+          <p className="muted">{t("sessionHelp", { timezone: tz })}</p>
           {upcoming.length ? (
             <div className={styles.sessionList}>
               {upcoming.map((s) => (
@@ -102,17 +89,22 @@ export default async function Page({ params }: Props) {
                       })}{" "}
                       · {s.durationMin} min ·{" "}
                       {t("seatsLeft", {
-                        n: Math.max(0, s.capacity - s.taken),
+                        n: Math.max(0, s.capacity - 1 - s.attendees.length),
                       })}
                     </div>
                   </div>
+                  <div className={styles.attendees}>
+                    {s.attendees.slice(0, 6).map((p, i) => (
+                      <span key={i} title={p.name}>
+                        <Avatar name={p.name} src={p.avatarUrl} size="sm" />
+                      </span>
+                    ))}
+                  </div>
                   {viewer?.onboardedAt ? (
-                    <Link
-                      className="button small"
-                      href={`/book?start=${encodeURIComponent(s.startAt.toISOString())}`}
-                    >
-                      {t("takeSeat")}
-                    </Link>
+                    <JoinHosted
+                      id={s.id}
+                      full={s.attendees.length >= s.capacity - 1}
+                    />
                   ) : (
                     <a
                       className="button small"

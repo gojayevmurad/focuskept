@@ -15,6 +15,7 @@ export function getAppConfig() {
     repoUrl: env.REPO_URL,
     supportEmail: env.SUPPORT_EMAIL || brand.supportEmail,
     billingEnabled: env.BILLING_ENABLED,
+    challengesEnabled: env.CHALLENGES_ENABLED,
     analyticsEnabled: env.ANALYTICS_ENABLED,
     posthogKey: env.POSTHOG_KEY,
     posthogHost: env.POSTHOG_HOST,

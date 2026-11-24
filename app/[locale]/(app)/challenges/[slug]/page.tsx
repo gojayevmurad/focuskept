@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { AppShell } from "@/src/components/app-shell";
 import { Avatar } from "@/src/components/avatar";
+import { requireChallenges } from "@/src/lib/challenges/gate";
 import { requireAppUser } from "@/src/lib/app-user";
 import {
   getChallengeBySlug,
@@ -21,6 +22,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  requireChallenges();
   const { user, profile } = await requireAppUser();
   const c = await getChallengeBySlug(slug);
   if (!c) notFound();

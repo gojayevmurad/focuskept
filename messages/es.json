@@ -774,7 +774,27 @@
     "copiedFeedback": "Enlace de invitación copiado al portapapeles",
     "shareMessage": "Uso {app} para coworking virtual y body doubling: sesiones de enfoque en vídeo de 25, 50 o 75 minutos con un compañero, en silencio. Pruébalo con mi enlace:",
     "emailSubject": "Concéntrate conmigo en {app}",
-    "emailBody": "Hola:\n\nUso {app} para coworking virtual y body doubling. Te empareja con un compañero por vídeo para que digáis vuestro objetivo y os concentréis en silencio.\n\nRegístrate con mi enlace y te llevarás un mes gratis de Plus cuando completes tu primera sesión:"
+    "emailBody": "Hola, uso {app} para trabajar en silencio junto a otra persona por vídeo. Únete con este enlace:",
+    "steps": {
+      "share": {
+        "title": "Comparte tu enlace personal",
+        "body": "Envía el enlace de abajo a alguien con quien te gustaría concentrarte."
+      },
+      "signup": {
+        "title": "Tu amigo se registra",
+        "body": "Crea una cuenta en los 30 días posteriores a abrir tu enlace. Su progreso aparece aquí."
+      },
+      "reward": {
+        "title": "Ambos recibís un mes de Plus",
+        "body": "Tras su primera sesión completada, la recompensa por invitación os da un mes gratis a cada uno."
+      },
+      "together": {
+        "title": "Haced crecer la comunidad",
+        "body": "Ayuda a crear un espacio acogedor para concentrarse. Los pagos están desactivados, así que no hay recompensa de pago."
+      }
+    },
+    "howFree": "El registro y la primera sesión completada aparecerán abajo. No hay recompensa de pago mientras los pagos estén desactivados.",
+    "copyFailed": "No se pudo copiar. Selecciona el enlace y cópialo manualmente."
   },
   "publicProfile": {
     "host": "Anfitrión",
@@ -812,10 +832,10 @@
     "reached": "Objetivo alcanzado"
   },
   "groups": {
-    "title": "Grupos",
-    "lead": "Universidades, bootcamps y equipos. Los miembros se emparejan entre sí primero.",
-    "yours": "Tus grupos",
-    "none": "Aún no estás en ningún grupo.",
+    "title": "Comunidad",
+    "lead": "Descubre en qué trabajan los demás, anima a la comunidad y encuentra personas con quienes concentrarte.",
+    "yours": "Tus círculos",
+    "none": "Aún no te has unido a un círculo.",
     "memberCount": "{count, plural, one {# miembro} other {# miembros}}",
     "roles": {
       "owner": "Propietario",
@@ -828,29 +848,31 @@
       "company": "Empresa",
       "other": "Comunidad"
     },
-    "joinTitle": "Unirse a un grupo",
+    "joinTitle": "Unirse a un círculo",
     "code": "Código o enlace de invitación",
     "codePlaceholder": "Pega un enlace o código de invitación",
     "joinWithCode": "Unirse",
-    "codeNotFound": "Ese código de invitación no coincide con ningún grupo.",
-    "createTitle": "Crear un grupo",
+    "codeNotFound": "Ese código no corresponde a ningún círculo.",
+    "createTitle": "Crear un círculo",
     "name": "Nombre",
     "namePlaceholder": "Escritores nocturnos",
     "kind": "Tipo",
     "description": "Descripción",
-    "create": "Crear grupo",
+    "create": "Crear círculo",
     "invalid": "Por favor, revisa el nombre e inténtalo de nuevo.",
     "licensed": "Plus está incluido para los primeros {seats} miembros hasta el {date}.",
     "invite": "Enlace de invitación",
-    "inviteLead": "Cualquiera con este enlace puede unirse al grupo.",
+    "inviteLead": "Cualquiera con este enlace puede unirse al círculo.",
     "rotate": "Generar un nuevo enlace",
     "upcoming": "Miembros buscando un compañero",
     "upcomingLead": "Reserva a la misma hora y te emparejaremos con ellos primero.",
     "joinThem": "Unirte a ellos",
     "noUpcoming": "Nadie en el grupo está esperando un compañero en este momento.",
     "members": "Miembros",
-    "leave": "Salir del grupo",
-    "remove": "Eliminar"
+    "leave": "Salir del círculo",
+    "remove": "Eliminar",
+    "join": "Unirse al círculo",
+    "descriptionPlaceholder": "¿Para quién es este círculo y en qué trabajáis juntos?"
   },
   "hosting": {
     "title": "Ser anfitrión",
@@ -895,6 +917,51 @@
       "too_far": "Elige una hora dentro de las próximas dos semanas.",
       "not_slot": "Elige una hora en punto o a la media hora.",
       "duration": "Elige 25, 50 o 75 minutos."
+    },
+    "hubTitle": "Crea espacio para concentrarse",
+    "hubLead": "Una bienvenida cálida, un objetivo compartido y tiempo de trabajo en silencio. Como anfitrión, ayudas a un pequeño grupo a avanzar.",
+    "readyToHost": "Anfitrión aprobado",
+    "futureHost": "Tu camino como anfitrión",
+    "hostRole": "Guías el inicio y el cierre. Entre ambos, todos trabajan en silencio.",
+    "yourImpact": "Tu impacto",
+    "peopleHelped": "Personas acompañadas",
+    "minutes": "{count} min",
+    "scheduleHelp": "Pon un nombre acogedor a tu sesión y elige una hora en las próximas dos semanas.",
+    "capacityHelp": "Incluye tu plaza. Puede ser más fácil dar la bienvenida a un grupo pequeño.",
+    "timezoneHelp": "Todas las horas se muestran en {timezone}.",
+    "eligibility": "Sesiones completadas para ser anfitrión",
+    "bookNext": "Reserva tu próxima sesión",
+    "sharePageHelp": "Invita a personas a tus sesiones desde tu página pública de anfitrión.",
+    "previewPage": "Ver tu página de anfitrión",
+    "stepsTitle": "Tu primera sesión como anfitrión empieza aquí",
+    "steps": {
+      "experience": {
+        "title": "Conoce el ritmo",
+        "body": "Completa {needed} sesiones para conocer el inicio, el tiempo de concentración y el cierre."
+      },
+      "apply": {
+        "title": "Cuéntanos sobre ti",
+        "body": "Envía una breve solicitud. Nuestro equipo revisa cada candidatura personalmente."
+      },
+      "welcome": {
+        "title": "Da la bienvenida a tu primer grupo",
+        "body": "Tras la aprobación, elige una hora, comparte tu página y crea espacio para concentrarse juntos."
+      }
+    },
+    "tipsTitle": "Un poco de orientación ayuda mucho",
+    "tips": {
+      "welcome": {
+        "title": "Empieza con un saludo",
+        "body": "Usa los nombres de las personas e invítalas a compartir un objetivo realista."
+      },
+      "quiet": {
+        "title": "Cuida el silencio",
+        "body": "Explica los tiempos y deja que todos trabajen. Tu presencia tranquila es suficiente."
+      },
+      "wrap": {
+        "title": "Reconoce el progreso",
+        "body": "Deja un momento para celebrar los pequeños logros y agradecer a todos su presencia."
+      }
     }
   },
   "hostPage": {
@@ -902,9 +969,15 @@
     "hosted": "{n, plural, one {# sesión organizada} other {# sesiones organizadas}}",
     "upcoming": "Próximas sesiones grupales",
     "seatsLeft": "{n, plural, =0 {completo} one {queda # plaza} other {quedan # plazas}}",
-    "takeSeat": "Ocupar una plaza",
+    "takeSeat": "Unirse a la sesión",
     "signUp": "Regístrate para unirte",
-    "none": "No hay sesiones programadas en este momento."
+    "none": "No hay sesiones programadas en este momento.",
+    "pageTitle": "Sesiones de grupo con {name}",
+    "peopleHelped": "{count} personas se han concentrado con este anfitrión.",
+    "sessionHelp": "Elige una sesión y únete al grupo. Horarios en {timezone}.",
+    "openSession": "Abrir tu sesión",
+    "full": "Sesión completa",
+    "hostPurpose": "Un grupo pequeño, una bienvenida cálida y tiempo de trabajo en silencio para lo que te importa."
   },
   "home": {
     "title": "{app} — Saca adelante tus tareas con alguien a tu lado",
@@ -1252,12 +1325,12 @@
   },
   "admin": {
     "nav": {
-      "overview": "Resumen de administración",
+      "overview": "Resumen",
       "users": "Usuarios",
       "reports": "Reportes",
       "hosts": "Anfitriones",
       "challenges": "Retos",
-      "groups": "Grupos",
+      "groups": "Círculos",
       "house": "Casa",
       "support": "Soporte",
       "notifications": "Notificaciones"
@@ -1282,7 +1355,9 @@
       "plus": "Suscripciones activas a Plus",
       "reports": "Reportes abiertos",
       "hosts": "Solicitudes de anfitrión pendientes",
-      "supportTickets": "Tickets de soporte abiertos"
+      "supportTickets": "Tickets de soporte abiertos",
+      "sessions": "Sesiones iniciadas hoy",
+      "waiting": "Esperando en Emparejar ahora"
     },
     "metricNotes": "Los registros y las nuevas reservas utilizan sus fechas de creación. Las demás métricas del periodo utilizan las horas de inicio de las sesiones. La tasa de emparejamiento contabiliza las reservas emparejadas con una sesión frente a esas reservas más los fallos, excluyendo los fallos emparejados tarde. La tasa de ausencias es el número de ausencias dividido entre las reservas completadas más las ausencias. Las tasas vacías se muestran como 0%. Los recuentos de suscripciones y de la cola reflejan el estado actual.",
     "video": "Uso reciente de video",
@@ -1440,7 +1515,11 @@
         "privacy": "Privacidad",
         "legal": "Legal",
         "feedback": "Comentarios"
-      }
+      },
+      "applyFilter": "Aplicar filtros",
+      "actions": "Acciones",
+      "search": "Buscar solicitudes",
+      "searchPlaceholder": "Asunto, nombre o correo"
     },
     "notifications": {
       "lead": "Elige tus correos de administración y consulta quién busca compañero ahora.",
@@ -1477,7 +1556,34 @@
           "description": "Se ofreció una sala abierta o un cambio de horario como alternativa."
         }
       }
-    }
+    },
+    "descriptions": {
+      "overview": "Consulta la actividad de hoy y quién necesita tu ayuda.",
+      "users": "Busca cuentas, revisa accesos y gestiona roles y suspensiones.",
+      "reports": "Revisa denuncias y publicaciones y registra una decisión.",
+      "support": "Lee solicitudes de ayuda y actualiza sus estados y notas internas.",
+      "hosts": "Revisa solicitudes y apoya a quienes organizan sesiones de grupo.",
+      "house": "Ayuda a quienes esperan una pareja en las próximas 24 horas.",
+      "groups": "Gestiona círculos, licencias de miembros y moderación.",
+      "challenges": "Prepara y gestiona retos. Las páginas de miembros permanecen ocultas hasta su activación.",
+      "notifications": "Elige tus alertas y ayuda a quienes esperan en Emparejar ahora."
+    },
+    "weekTotal": "{count} en los últimos 7 días",
+    "lastSevenDays": "Últimos 7 días",
+    "overviewTimezone": "Los totales de hoy usan {timezone}. Las sesiones cuentan salas, no reservas individuales.",
+    "needsAttention": "Requiere atención",
+    "unmatchedCount": "{count} reservas en las próximas 24 horas esperan pareja.",
+    "attentionKinds": {
+      "report": "Denuncia abierta",
+      "support": "Solicitud de ayuda",
+      "booking": "Esperando pareja"
+    },
+    "allClear": "No hay denuncias, solicitudes ni reservas próximas sin pareja pendientes.",
+    "quickLinks": "Accesos rápidos",
+    "filterSearch": "Buscar en esta lista",
+    "filterPlaceholder": "Buscar por nombre o detalles",
+    "userSearchPlaceholder": "Nombre, usuario o correo",
+    "removePost": "Retirar publicación"
   },
   "tour": {
     "skip": "Saltar tour",
@@ -1849,5 +1955,71 @@
     "footer": "Recibes este correo porque administras {app}. Configúralos en Administración → Notificaciones.",
     "testSubject": "Prueba de correo de administración de {app}",
     "testBody": "Tus alertas de administración funcionan. Esta prueba solo se te ha enviado a ti."
+  },
+  "communityFeed": {
+    "title": "Comunidad",
+    "purpose": "Descubre en qué trabajan los demás, anima a la comunidad y encuentra personas con quienes concentrarte.",
+    "composerTitle": "¿En qué estás trabajando?",
+    "updateType": "Tipo de publicación",
+    "working": "Trabajando en",
+    "done": "Terminado",
+    "update": "Tu publicación",
+    "placeholder": "Trabajando en la introducción de mi tesis… o: ¡Terminado! Envié mi primera propuesta.",
+    "exampleWork": "Escribir mi primer borrador",
+    "exampleWin": "Una pequeña tarea terminada",
+    "linkSession": "Vincular una sesión (opcional)",
+    "sessionId": "Tu sesión",
+    "sessionPlaceholder": "Elige una de tus sesiones",
+    "noSession": "Sin sesión vinculada",
+    "sessionHelp": "Solo puedes vincular sesiones en las que participas. La sala sigue siendo privada.",
+    "publish": "Publicar",
+    "automatic": "Compartir mis logros automáticamente",
+    "automaticHelp": "Desactivado por defecto. Las sesiones completadas con «Terminado» comparten tu objetivo con todos. Puedes borrar cualquier publicación.",
+    "savePreference": "Guardar preferencia",
+    "saved": "Guardado.",
+    "feed": "Publicaciones de la comunidad",
+    "cheer": "Animar · {count}",
+    "delete": "Borrar publicación",
+    "report": "Denunciar publicación",
+    "reportHelp": "Un moderador revisará la publicación. También bloquearás a esta persona: sus publicaciones se ocultarán y no se os emparejará.",
+    "reason": "Motivo",
+    "details": "Más detalles (opcional)",
+    "detailsPlaceholder": "¿Qué debe saber el moderador?",
+    "sendReport": "Denunciar y bloquear",
+    "autoWin": "Una sesión de concentración completada",
+    "viewSession": "Ver tu sesión",
+    "emptyTitle": "Los pequeños avances tienen su lugar aquí",
+    "emptyBody": "Comparte en qué trabajas o celebra algo que terminaste. Toda la comunidad podrá ver tu publicación.",
+    "firstPost": "Escribir una publicación",
+    "older": "Publicaciones anteriores",
+    "newest": "Volver a las más recientes",
+    "discover": "Descubrir círculos",
+    "createCircle": "Crear un círculo",
+    "joinCode": "Unirse con código",
+    "noCircles": "Aún no hay más círculos. Crea uno para vuestro trabajo en común.",
+    "memberCount": "{count} miembros",
+    "breadcrumb": "Navegación de la comunidad",
+    "circlePurpose": "Sigue en qué trabajan los miembros de este círculo.",
+    "joinToPost": "Únete al círculo para publicar en su muro. Todas las publicaciones de la comunidad son visibles para todos.",
+    "allMembers": "Ver todos los miembros",
+    "circleSessions": "Próximas sesiones de grupo",
+    "noCircleSessions": "Los anfitriones de este círculo aún no han programado sesiones.",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Acoso",
+      "inappropriate": "Contenido inapropiado",
+      "underage": "Cuenta de menor de edad",
+      "other": "Otro motivo"
+    },
+    "errors": {
+      "invalid": "Escribe entre 1 y 280 caracteres y revisa la sesión elegida.",
+      "rateLimit": "Has compartido 10 publicaciones en una hora. Inténtalo más tarde.",
+      "membership": "Únete al círculo antes de publicar.",
+      "session": "Elige una sesión en la que participas.",
+      "reportFailed": "Esta publicación ya no está disponible para denunciar."
+    },
+    "circles": "Círculos",
+    "joinedCircles": "Tus filtros de círculos",
+    "everyone": "Todos"
   }
 }

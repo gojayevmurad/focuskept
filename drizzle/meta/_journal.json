@@ -64,6 +64,13 @@
       "when": 1795536990833,
       "tag": "0008_avatar_image",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1795538017110,
+      "tag": "0009_community_feed",
+      "breakpoints": true
     }
   ]
 }
