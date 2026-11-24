@@ -84,6 +84,7 @@ export async function groupSessionsBetween(from: Date, to: Date) {
       capacity: focusSession.capacity,
       hostId: focusSession.hostId,
       hostName: profile.displayName,
+      hostAvatar: profile.avatarUrl,
       hostUsername: profile.username,
       taken: sql<number>`(select count(*)::int from ${sessionParticipant} p where p.session_id = ${focusSession.id})`,
     })
@@ -100,4 +101,35 @@ export async function groupSessionsBetween(from: Date, to: Date) {
     )
     .orderBy(focusSession.startAt);
   return rows;
+}
+
+/** A bounded avatar sample per slot; demand counts remain the source of totals. */
+export async function slotPeople(from: Date, to: Date, excludeUserId: string) {
+  const rows = await db().execute<{
+    start_at: Date | string;
+    duration_min: number;
+    name: string;
+    avatar: string | null;
+  }>(sql`
+    select start_at,duration_min,name,avatar from (
+      select b.start_at,b.duration_min,p.display_name as name,p.avatar_url as avatar,
+        row_number() over(partition by b.start_at,b.duration_min order by b.id) as rank
+      from ${booking} b join ${profile} p on p.user_id=b.user_id
+      where b.start_at>=${from} and b.start_at<${to} and b.user_id<>${excludeUserId}
+        and b.kind='pair' and b.status in ('booked','matched')
+    ) people where rank<=3`);
+  const map = new Map<
+    string,
+    Record<number, { name: string; avatar: string | null }[]>
+  >();
+  for (const row of rows.rows) {
+    const key = new Date(row.start_at).toISOString();
+    const slot = map.get(key) ?? {};
+    slot[row.duration_min] = [
+      ...(slot[row.duration_min] ?? []),
+      { name: row.name, avatar: row.avatar },
+    ];
+    map.set(key, slot);
+  }
+  return map;
 }

@@ -3,7 +3,7 @@
 import { useTransition } from "react";
 import { Star } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { toggleFavorite, unblock } from "./actions";
+import { toggleFavorite, unblock, blockPartner } from "./actions";
 
 export function FavoriteButton({
   userId,
@@ -34,9 +34,29 @@ export function UnblockButton({ userId }: { userId: string }) {
     <button
       className="button ghost small"
       disabled={pending}
-      onClick={() => start(async () => void (await unblock(userId)))}
+      onClick={() => {
+        if (window.confirm(t("confirmUnblock")))
+          start(async () => void (await unblock(userId)));
+      }}
     >
       {t("unblock")}
+    </button>
+  );
+}
+
+export function BlockButton({ userId }: { userId: string }) {
+  const t = useTranslations("people");
+  const [pending, start] = useTransition();
+  return (
+    <button
+      className="button ghost small"
+      disabled={pending}
+      onClick={() => {
+        if (window.confirm(t("confirmBlock")))
+          start(async () => void (await blockPartner(userId)));
+      }}
+    >
+      {t("block")}
     </button>
   );
 }

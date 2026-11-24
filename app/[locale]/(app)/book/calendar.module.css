@@ -1,0 +1,112 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+.page {
+  max-width: 1200px;
+  margin-inline: auto;
+  min-width: 0;
+}
+.toolbar {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.mobileNav,
+.dayList {
+  display: none;
+}
+.weekGrid {
+  min-width: 0;
+}
+.slot.slot {
+  min-width: 0;
+}
+.page .slot.preferred:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 9%, var(--surface));
+}
+.waiting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.avatarStack {
+  display: flex;
+  padding-inline-start: 6px;
+}
+.avatarStack > span {
+  margin-inline-start: -6px;
+  border: 2px solid var(--surface);
+}
+.dayTabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0 12px;
+}
+.dayTabs button {
+  flex-shrink: 0;
+}
+.dayTabs button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+.dayRows {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+.slot.slotRow {
+  min-height: 72px;
+  padding: 12px;
+  justify-content: flex-start;
+  text-align: start;
+}
+.slotRow > span {
+  position: static;
+  max-width: 100%;
+}
+@media (max-width: 899px) {
+  .page .weekGrid,
+  .page .weekNav {
+    display: none;
+  }
+  .page .dayList,
+  .page .mobileNav {
+    display: block;
+  }
+  .page .toolbar {
+    align-items: start;
+  }
+}
+
+.page .slotRow > [class~="mine"] {
+  position: static;
+  inset: auto;
+  min-height: 48px;
+  width: 100%;
+  white-space: normal;
+}
+.page .slot > [class~="mine"] > [class~="avatar"] {
+  flex-shrink: 0;
+}
+
+.dayRows > [class~="cal-time"] {
+  min-height: 72px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-timer);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+  padding: 12px 6px;
+}
+.available {
+  color: var(--text-2);
+  font-size: 14px;
+}

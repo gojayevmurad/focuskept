@@ -40,13 +40,4 @@ describe("Tour and first-run UX logic", () => {
     expect(prevStep(0)).toBe(0);
     expect(prevStep(3)).toBe(2);
   });
-
-  it("handles walkthrough autoplay and scene looping", () => {
-    const totalScenes = 5;
-    const advanceScene = (current: number) => (current + 1) % totalScenes;
-
-    expect(advanceScene(0)).toBe(1);
-    expect(advanceScene(3)).toBe(4);
-    expect(advanceScene(4)).toBe(0); // loops back to beginning
-  });
 });

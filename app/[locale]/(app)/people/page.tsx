@@ -1,175 +1,158 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import type { Metadata } from "next";
-import styles from "@/app/[locale]/(app)/lanes.module.css";
-import { and, desc, eq, inArray, ne } from "drizzle-orm";
-import { alias } from "drizzle-orm/pg-core";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { AppShell } from "@/src/components/app-shell";
 import { Avatar } from "@/src/components/avatar";
 import { requireAppUser } from "@/src/lib/app-user";
-import { db } from "@/src/lib/db";
-import {
-  block,
-  favorite,
-  focusSession,
-  profile,
-  sessionParticipant,
-} from "@/src/lib/db/schema";
 import { getPlan } from "@/src/lib/billing/plan";
-import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
-import { FavoriteButton, UnblockButton } from "./people-actions";
-
+import { FavoriteButton, UnblockButton, BlockButton } from "./people-actions";
+import { peoplePage, peopleParameters } from "./queries";
+import styles from "./people.module.css";
 export const metadata: Metadata = { title: "People" };
-
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ tab?: string; page?: string; q?: string }>;
+}) {
   const { user, profile: me } = await requireAppUser();
-  const t = await getTranslations("people");
-  const format = await getFormatter();
-  const app = getAppConfig();
-  const plus = (await getPlan(user.id)).plan === "plus";
-  const mine = alias(sessionParticipant, "mine");
-  const [favorites, recent, blocked] = await Promise.all([
-    db()
-      .select({
-        id: profile.userId,
-        name: profile.displayName,
-        username: profile.username,
-        avatar: profile.avatarUrl,
-      })
-      .from(favorite)
-      .innerJoin(profile, eq(profile.userId, favorite.partnerId))
-      .where(eq(favorite.userId, user.id)),
-    db()
-      .select({
-        id: sessionParticipant.userId,
-        name: profile.displayName,
-        username: profile.username,
-        avatar: profile.avatarUrl,
-        at: focusSession.startAt,
-      })
-      .from(mine)
-      .innerJoin(focusSession, eq(focusSession.id, mine.sessionId))
-      .innerJoin(
-        sessionParticipant,
-        and(
-          eq(sessionParticipant.sessionId, mine.sessionId),
-          ne(sessionParticipant.userId, user.id),
-        ),
-      )
-      .innerJoin(profile, eq(profile.userId, sessionParticipant.userId))
-      .where(
-        and(
-          eq(mine.userId, user.id),
-          eq(focusSession.status, "ended"),
-          inArray(focusSession.type, ["pair", "group"]),
-        ),
-      )
-      .orderBy(desc(focusSession.startAt))
-      .limit(40),
-    db()
-      .select({ id: block.blockedId, name: profile.displayName })
-      .from(block)
-      .innerJoin(profile, eq(profile.userId, block.blockedId))
-      .where(eq(block.blockerId, user.id)),
+  const params = peopleParameters(await searchParams);
+  const [t, format, plan, result] = await Promise.all([
+    getTranslations("people"),
+    getFormatter(),
+    getPlan(user.id),
+    peoplePage(user.id, params),
   ]);
-  const favIds = new Set(favorites.map((f) => f.id));
-  const seen = new Set<string>();
-  const recentUnique = recent.filter(
-    (r) =>
-      !seen.has(r.id) && seen.add(r.id) && !blocked.some((b) => b.id === r.id),
-  );
-  const link = `${app.url.replace(/^https?:\/\//, "")}/u/${me.username}`;
-
+  const href = (page: number) =>
+    `/people?${new URLSearchParams({ tab: params.tab, q: params.q, page: String(page) })}`;
   return (
     <AppShell title={t("title")}>
       <div className={styles.page}>
-        <div className="page-title">
+        <header className="page-title">
           <h1>{t("title")}</h1>
           <p className="muted">{t("lead")}</p>
-        </div>
-        <section className="card stack-sm">
-          <h2>{t("yourLink")}</h2>
-          <p className="muted small">{t("yourLinkLead")}</p>
-          <code className="mono small">{link}</code>
-        </section>
-        <section className="card stack">
-          <h2>{t("favorites")}</h2>
-          {!plus && (
-            <p className="notice warn">
-              {t("favoritesPlus")}{" "}
-              {app.billingEnabled && (
-                <Link href="/pricing" className="link">
-                  {t("seePlus")}
-                </Link>
+        </header>
+        <nav className={styles.tabs} aria-label={t("title")}>
+          {["recent", "favorites", "blocked"].map((tab) => (
+            <Link
+              key={tab}
+              href={`/people?tab=${tab}`}
+              aria-current={params.tab === tab ? "page" : undefined}
+            >
+              {t(tab)}
+            </Link>
+          ))}
+        </nav>
+        <form className={styles.search}>
+          <input type="hidden" name="tab" value={params.tab} />
+          <label className="field">
+            {t("search")}
+            <input
+              type="search"
+              name="q"
+              defaultValue={params.q}
+              placeholder={t("searchPlaceholder")}
+              maxLength={60}
+            />
+          </label>
+          <button className="button secondary">{t("search")}</button>
+        </form>
+        {params.tab === "favorites" && plan.plan !== "plus" && (
+          <p className="notice">{t("favoritesPlus")}</p>
+        )}
+        {result.rows.length ? (
+          <div className={styles.grid}>
+            {result.rows.map((person) => (
+              <article className={`card ${styles.person}`} key={person.id}>
+                <div className="row">
+                  <Avatar name={person.name} src={person.avatar} size="lg" />
+                  <div className={styles.identity}>
+                    <h2>{person.name}</h2>
+                    <Link className="link" href={`/u/${person.username}`}>
+                      @{person.username}
+                    </Link>
+                  </div>
+                </div>
+                <p className="muted small">{person.bio || t("noBio")}</p>
+                <p className="small">
+                  {t("together", { count: person.count })}
+                  {person.at && (
+                    <span className="muted">
+                      {" "}
+                      ·{" "}
+                      {t("lastSession", {
+                        date: format.dateTime(person.at, {
+                          timeZone: me.timezone,
+                          dateStyle: "medium",
+                        }),
+                      })}
+                    </span>
+                  )}
+                </p>
+                <div className={styles.actions}>
+                  {params.tab === "blocked" ? (
+                    <UnblockButton userId={person.id} />
+                  ) : (
+                    <>
+                      <FavoriteButton
+                        userId={person.id}
+                        active={person.favorite}
+                        disabled={plan.plan !== "plus"}
+                      />
+                      <Link
+                        className="button secondary small"
+                        href={`/book?with=${encodeURIComponent(person.username)}`}
+                      >
+                        {t("bookWith")}
+                      </Link>
+                      <BlockButton userId={person.id} />
+                    </>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <section className="card stack">
+            <h2>
+              {t(
+                params.q
+                  ? "noResults"
+                  : params.tab === "recent"
+                    ? "noRecent"
+                    : params.tab === "favorites"
+                      ? "noFavorites"
+                      : "noBlocked",
+              )}
+            </h2>
+            <p className="muted">
+              {t(
+                params.q
+                  ? "searchHint"
+                  : params.tab === "blocked"
+                    ? "blockedHint"
+                    : "emptyHint",
               )}
             </p>
-          )}
-          {favorites.length ? (
-            <div className="list">
-              {favorites.map((f) => (
-                <div className="list-item" key={f.id}>
-                  <Avatar name={f.name} src={f.avatar} />
-                  <div className="grow">
-                    <strong>{f.name}</strong>
-                    <div className="small faint">@{f.username}</div>
-                  </div>
-                  <Link
-                    href={`/u/${f.username}`}
-                    className="button secondary small"
-                  >
-                    {t("bookWith")}
-                  </Link>
-                  <FavoriteButton userId={f.id} active />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="muted small">{t("noFavorites")}</p>
-          )}
-        </section>
-        <section className="card stack">
-          <h2>{t("recent")}</h2>
-          {recentUnique.length ? (
-            <div className="list">
-              {recentUnique.map((r) => (
-                <div className="list-item" key={r.id}>
-                  <Avatar name={r.name} src={r.avatar} />
-                  <div className="grow">
-                    <strong>{r.name}</strong>
-                    <div className="small faint">
-                      {format.dateTime(r.at, {
-                        timeZone: me.timezone,
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </div>
-                  </div>
-                  <FavoriteButton
-                    userId={r.id}
-                    active={favIds.has(r.id)}
-                    disabled={!plus}
-                  />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="muted small">{t("noRecent")}</p>
-          )}
-        </section>
-        {blocked.length > 0 && (
-          <section className="card stack">
-            <h2>{t("blocked")}</h2>
-            <div className="list">
-              {blocked.map((b) => (
-                <div className="list-item" key={b.id}>
-                  <span className="grow">{b.name}</span>
-                  <UnblockButton userId={b.id} />
-                </div>
-              ))}
-            </div>
+            {params.tab === "recent" && !params.q && (
+              <Link href="/book" className="button">
+                {t("bookSession")}
+              </Link>
+            )}
           </section>
         )}
+        <nav className="row" aria-label={t("pagination")}>
+          {params.page > 1 && (
+            <Link className="button secondary" href={href(params.page - 1)}>
+              {t("previous")}
+            </Link>
+          )}
+          {result.more && (
+            <Link className="button secondary" href={href(params.page + 1)}>
+              {t("next")}
+            </Link>
+          )}
+        </nav>
       </div>
     </AppShell>
   );

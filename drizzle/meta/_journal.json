@@ -57,6 +57,13 @@
       "when": 1795525410367,
       "tag": "0007_onboarding_focus",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1795536990833,
+      "tag": "0008_avatar_image",
+      "breakpoints": true
     }
   ]
 }

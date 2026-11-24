@@ -7,7 +7,7 @@ import { db } from "@/src/lib/db";
 import { favorite } from "@/src/lib/db/schema";
 import { requireAppUser } from "@/src/lib/app-user";
 import { getPlan } from "@/src/lib/billing/plan";
-import { unblockUser } from "@/src/lib/safety";
+import { blockUser, unblockUser } from "@/src/lib/safety";
 
 export async function toggleFavorite(partnerId: string) {
   const { user } = await requireAppUser();
@@ -30,6 +30,13 @@ export async function toggleFavorite(partnerId: string) {
 export async function unblock(targetId: string) {
   const { user } = await requireAppUser();
   await unblockUser(user.id, z.string().min(1).max(100).parse(targetId));
+  revalidatePath("/[locale]/people", "page");
+  return { ok: true as const };
+}
+
+export async function blockPartner(targetId: string) {
+  const { user } = await requireAppUser();
+  await blockUser(user.id, z.string().min(1).max(100).parse(targetId));
   revalidatePath("/[locale]/people", "page");
   return { ok: true as const };
 }
