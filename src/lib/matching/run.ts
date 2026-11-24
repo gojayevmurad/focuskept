@@ -98,68 +98,84 @@ async function loadCandidates(tx: Tx, rows: (typeof booking.$inferSelect)[]) {
  * concurrently: a transaction-scoped advisory lock serializes runs per slot.
  */
 export async function runSlotMatching(startAt: Date, durationMin: number) {
-  const { created, houseBookingIds } = await db().transaction(async (tx) => {
-    await tx.execute(
-      sql`select pg_advisory_xact_lock(hashtextextended(${`match:${startAt.toISOString()}:${durationMin}`}, 0))`,
-    );
-    const rows = await tx
-      .select()
-      .from(booking)
-      .where(
-        and(
-          eq(booking.startAt, startAt),
-          eq(booking.durationMin, durationMin),
-          eq(booking.status, "booked"),
-          eq(booking.kind, "pair"),
-        ),
-      )
-      .for("update");
-    if (rows.length < 2) return { created: [], houseBookingIds: [] };
-    const { candidates, blocked, houseUsers } = await loadCandidates(tx, rows);
-    const { pairs } = matchSlot(candidates, blocked);
-    const made: { sessionId: string; users: [string, string] }[] = [];
-    const houseBookingIds: string[] = [];
-    for (const pair of pairs) {
-      const sessionId = crypto.randomUUID();
-      await tx.insert(focusSession).values({
-        id: sessionId,
-        startAt,
-        durationMin,
-        type: "pair",
-        capacity: 2,
-      });
-      await tx.insert(sessionParticipant).values([
-        { sessionId, userId: pair.a.userId, bookingId: pair.a.bookingId },
-        { sessionId, userId: pair.b.userId, bookingId: pair.b.bookingId },
-      ]);
-      await tx
-        .update(booking)
-        .set({ status: "matched", sessionId })
-        .where(inArray(booking.id, [pair.a.bookingId, pair.b.bookingId]));
-      // A person who got a fallback offer and was matched after all.
-      await tx
-        .update(matchFailure)
-        .set({ resolution: "matched_late" })
+  const { created, houseBookingIds, partnerBookingIds } =
+    await db().transaction(async (tx) => {
+      await tx.execute(
+        sql`select pg_advisory_xact_lock(hashtextextended(${`match:${startAt.toISOString()}:${durationMin}`}, 0))`,
+      );
+      const rows = await tx
+        .select()
+        .from(booking)
         .where(
           and(
-            inArray(matchFailure.bookingId, [
-              pair.a.bookingId,
-              pair.b.bookingId,
-            ]),
-            isNull(matchFailure.resolution),
+            eq(booking.startAt, startAt),
+            eq(booking.durationMin, durationMin),
+            eq(booking.status, "booked"),
+            eq(booking.kind, "pair"),
           ),
-        );
-      made.push({ sessionId, users: [pair.a.userId, pair.b.userId] });
-      if (houseUsers.has(pair.a.userId) && !houseUsers.has(pair.b.userId))
-        houseBookingIds.push(pair.a.bookingId);
-      if (houseUsers.has(pair.b.userId) && !houseUsers.has(pair.a.userId))
-        houseBookingIds.push(pair.b.bookingId);
-    }
-    return { created: made, houseBookingIds };
-  });
+        )
+        .for("update");
+      if (rows.length < 2)
+        return { created: [], houseBookingIds: [], partnerBookingIds: [] };
+      const { candidates, blocked, houseUsers } = await loadCandidates(
+        tx,
+        rows,
+      );
+      const { pairs } = matchSlot(candidates, blocked);
+      const made: { sessionId: string; users: [string, string] }[] = [];
+      const houseBookingIds: string[] = [];
+      const partnerBookingIds: string[] = [];
+      for (const pair of pairs) {
+        const sessionId = crypto.randomUUID();
+        await tx.insert(focusSession).values({
+          id: sessionId,
+          startAt,
+          durationMin,
+          type: "pair",
+          capacity: 2,
+        });
+        await tx.insert(sessionParticipant).values([
+          { sessionId, userId: pair.a.userId, bookingId: pair.a.bookingId },
+          { sessionId, userId: pair.b.userId, bookingId: pair.b.bookingId },
+        ]);
+        await tx
+          .update(booking)
+          .set({ status: "matched", sessionId })
+          .where(inArray(booking.id, [pair.a.bookingId, pair.b.bookingId]));
+        // A person who got a fallback offer and was matched after all.
+        await tx
+          .update(matchFailure)
+          .set({ resolution: "matched_late" })
+          .where(
+            and(
+              inArray(matchFailure.bookingId, [
+                pair.a.bookingId,
+                pair.b.bookingId,
+              ]),
+              isNull(matchFailure.resolution),
+            ),
+          );
+        made.push({ sessionId, users: [pair.a.userId, pair.b.userId] });
+        for (const participant of [pair.a, pair.b])
+          if (!houseUsers.has(participant.userId))
+            partnerBookingIds.push(participant.bookingId);
+        if (houseUsers.has(pair.a.userId) && !houseUsers.has(pair.b.userId))
+          houseBookingIds.push(pair.a.bookingId);
+        if (houseUsers.has(pair.b.userId) && !houseUsers.has(pair.a.userId))
+          houseBookingIds.push(pair.b.bookingId);
+      }
+      return { created: made, houseBookingIds, partnerBookingIds };
+    });
   for (const bookingId of houseBookingIds)
     await notify.houseMatched(bookingId).catch((error) => {
       logger.warn({ err: error, bookingId }, "House match notification failed");
+    });
+  for (const bookingId of partnerBookingIds)
+    await notify.partnerMatched(bookingId).catch((error) => {
+      logger.warn(
+        { err: error, bookingId },
+        "Partner match notification failed",
+      );
     });
   for (const m of created)
     for (const userId of m.users)

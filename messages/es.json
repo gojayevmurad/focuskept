@@ -31,7 +31,13 @@
     "dashboard": "Panel",
     "theme": "Cambiar tema de color",
     "somethingWrong": "Algo salió mal. Por favor, inténtalo de nuevo.",
-    "upgrade": "Mejorar a Plus"
+    "upgrade": "Mejorar a Plus",
+    "themeState": "Tema de color: {state}. Activa para cambiarlo.",
+    "themeOptions": {
+      "system": "Sistema",
+      "light": "Claro",
+      "dark": "Oscuro"
+    }
   },
   "errors": {
     "notFound": "No pudimos encontrar esa página.",
@@ -233,7 +239,7 @@
     "waitingShort": "Reservado",
     "errors": {
       "not_slot": "Las sesiones empiezan en punto o a la media hora.",
-      "too_late": "Es demasiado tarde para reservar a esta hora.",
+      "too_late": "Esta sesión está a punto de empezar o ya ha empezado. Abre la sesión o tu panel para ver las opciones disponibles.",
       "too_far": "Puedes reservar con hasta dos semanas de antelación.",
       "duration": "Elige 25, 50 o 75 minutos.",
       "limit": "Has usado tus sesiones gratuitas de esta semana.",
@@ -244,7 +250,10 @@
       "not_allowed": "Esa reserva ya no se puede cambiar.",
       "full": "Esta sesión está llena.",
       "invalid": "Hubo un error en la solicitud. Por favor, inténtalo de nuevo."
-    }
+    },
+    "joinNow": "Unirme ahora",
+    "startedWaiting": "Aún no se ha encontrado a nadie para tu sesión. Puedes unirte a la sala abierta cuando esté disponible.",
+    "joinOpenRoom": "Unirme a la sala abierta"
   },
   "dashboard": {
     "title": "Inicio",
@@ -411,7 +420,15 @@
     "startWrap": "Iniciar cierre",
     "goalsInRoom": "Objetivos en la sala",
     "rateHost": "¿Cómo estuvo tu anfitrión?",
-    "thanks": "Gracias por tus comentarios."
+    "thanks": "Gracias por tus comentarios.",
+    "leaveConfirmTitle": "¿Salir de esta sesión?",
+    "leaveConfirmBody": "Puedes volver a unirte hasta que termine.",
+    "stay": "Quedarme",
+    "leftTitle": "Has salido de la sesión",
+    "rejoin": "Volver a unirme",
+    "partnerLeft": "{name} ha salido de la sesión",
+    "partnerBack": "{name} ha vuelto",
+    "partnerLeftTile": "Ha salido de la sesión"
   },
   "settings": {
     "title": "Ajustes",
@@ -1480,5 +1497,16 @@
       "disabledMessage": "Analíticas opcionales desactivadas.",
       "errorMessage": "No se pudieron actualizar las preferencias."
     }
+  },
+  "sessionLabels": {
+    "openRoom": "Sala abierta",
+    "withPartner": "Sesión de concentración con {name}",
+    "group": "Sesión de grupo",
+    "pair": "Sesión de concentración"
+  },
+  "notifications": {
+    "partnerMatched": "Tu compañero es {name}: tu sesión de las {time} empieza en 5 minutos",
+    "openSession": "Abrir la sesión",
+    "matchedTitle": "Tu compañero está listo"
   }
 }

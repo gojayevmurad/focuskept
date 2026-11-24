@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { Link, useRouter } from "@/src/i18n/navigation";
 import { useRealtime } from "@/src/lib/realtime/client";
+import { partnerPresenceMessage, sessionLabel } from "@/src/lib/sessions/label";
 import type { RoomState } from "@/src/lib/sessions/lifecycle";
 import type {
   QualityStats,
@@ -138,6 +139,7 @@ export function Room(props: {
 }) {
   const t = useTranslations("room");
   const c = useTranslations("common");
+  const labels = useTranslations("sessionLabels");
   const format = useFormatter();
   const router = useRouter();
   const [state, setState] = useState(props.initial);
@@ -164,7 +166,13 @@ export function Room(props: {
   const [quality, setQuality] = useState<"good" | "reduced">("good");
   const [reportFor, setReportFor] = useState<string | null>(null);
   const [favorites, setFavorites] = useState(props.favorites);
-  const [left, setLeft] = useState(false);
+  const [left, setLeft] = useState(() => {
+    const me = props.initial.participants.find(
+      (p) => p.userId === props.initial.me,
+    );
+    return Boolean(me?.joined && !me.present);
+  });
+  const [presenceNotice, setPresenceNotice] = useState("");
   const [blockedNotice, setBlockedNotice] = useState(false);
 
   const client = useRef<VideoClient | null>(null);
@@ -175,17 +183,26 @@ export function Room(props: {
   const lastPhase = useRef<Phase | null>(null);
   const manualMic = useRef(false);
   const reportDialog = useRef<HTMLDialogElement>(null);
+  const leaveDialog = useRef<HTMLDialogElement>(null);
   const rejoins = useRef(0);
   const joinedRef = useRef(false);
 
   const startMs = new Date(state.session.startAt).getTime();
   const serverNow = now + offset;
-  const { phase, remainingMs, progress, focusFrom, wrapFrom } = computePhase(
-    startMs,
-    state.session.durationMin,
-    serverNow,
-    { focusAt: state.session.focusAt, wrapAt: state.session.wrapAt },
-  );
+  const {
+    phase: clockPhase,
+    remainingMs,
+    progress,
+    focusFrom,
+    wrapFrom,
+  } = computePhase(startMs, state.session.durationMin, serverNow, {
+    focusAt: state.session.focusAt,
+    wrapAt: state.session.wrapAt,
+  });
+  const phase =
+    state.window === "over" || state.session.status === "ended"
+      ? "ended"
+      : clockPhase;
   const isHost = state.session.hostId === state.me;
   const me = state.participants.find((p) => p.userId === state.me);
   const others = state.participants.filter((p) => p.userId !== state.me);
@@ -204,6 +221,16 @@ export function Room(props: {
   useRealtime(
     (message) => {
       if (message.topic !== `session:${state.session.id}`) return;
+      if (
+        message.event === "session.presence" &&
+        message.data.userId !== state.me
+      ) {
+        const person = state.participants.find(
+          (p) => p.userId === message.data.userId,
+        );
+        const notice = partnerPresenceMessage(person, message.data.joined, t);
+        if (notice) setPresenceNotice(notice);
+      }
       void refresh();
     },
     { sessionId: state.session.id, onReconnect: () => void refresh() },
@@ -214,7 +241,7 @@ export function Room(props: {
     return () => clearInterval(timer);
   }, []);
 
-  // Local preview before joining. Runs once: the timer re-renders twice a second.
+  // Preview only while preparing to join; cancel pending media requests on exit.
   const mediaMessages = useRef({
     denied: t("media.denied"),
     not_found: t("media.not_found"),
@@ -222,6 +249,7 @@ export function Room(props: {
     unknown: t("media.unknown"),
   });
   useEffect(() => {
+    if (left || joined || phase === "ended" || localStream.current) return;
     let cancelled = false;
     getLocalMedia({ audio: true })
       .then((stream) => {
@@ -242,12 +270,12 @@ export function Room(props: {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [left, joined, phase]);
 
   useEffect(() => {
     if (localVideo.current && localStream.current)
       localVideo.current.srcObject = localStream.current;
-  }, [joined]);
+  }, [joined, left]);
 
   const applyMic = useCallback(async (on: boolean) => {
     setMicOn(on);
@@ -270,11 +298,17 @@ export function Room(props: {
     await client.current?.leave().catch(() => {});
     client.current = null;
     localStream.current?.getTracks().forEach((tr) => tr.stop());
-    void post(`/api/sessions/${state.session.id}/leave`).catch(() => {});
+    localStream.current = null;
+    subscribed.current.clear();
+    await post(`/api/sessions/${state.session.id}/leave`).catch(() => {});
   }, [quality, state.session.id]);
 
   // Phase changes: chimes, and the mic follows the session rhythm unless the person set it themselves.
   useEffect(() => {
+    if (phase === "ended" && !joined) {
+      if (localStream.current) void finish();
+      return;
+    }
     if (!joined || lastPhase.current === phase) return;
     const previous = lastPhase.current;
     lastPhase.current = phase;
@@ -293,10 +327,14 @@ export function Room(props: {
   }, [phase, joined]);
 
   async function join() {
-    if (!localStream.current) return;
     setJoining(true);
     setVideoError(null);
+    setMediaError(null);
     try {
+      if (!localStream.current) {
+        localStream.current = await getLocalMedia({ audio: true });
+        setMediaReady(true);
+      }
       await post(`/api/sessions/${state.session.id}/join`);
       const credentials = await post(`/api/video/join/${state.session.id}`);
       const video = await createVideoClient(credentials);
@@ -336,9 +374,12 @@ export function Room(props: {
       lastPhase.current = phase;
       joinedRef.current = true;
       setJoined(true);
+      setLeft(false);
       trackSessionJoined({ provider: props.provider });
       await refresh();
-    } catch {
+    } catch (error) {
+      if (error instanceof LocalMediaError)
+        setMediaError(mediaMessages.current[error.code]);
       joinedRef.current = false;
       setJoined(false);
       trackVideoFailed("join_failed");
@@ -419,7 +460,11 @@ export function Room(props: {
   async function leave() {
     joinedRef.current = false;
     await finish();
+    setRemote({});
+    setJoined(false);
+    setMediaReady(false);
     setLeft(true);
+    await refresh();
   }
 
   useEffect(() => {
@@ -429,7 +474,7 @@ export function Room(props: {
 
   const phaseLabel = t(`phase.${phase}`);
 
-  if (phase === "ended" || left || state.window === "over") {
+  if (phase === "ended") {
     return (
       <Summary
         focusFrom={focusFrom}
@@ -462,6 +507,36 @@ export function Room(props: {
     );
   }
 
+  if (left) {
+    return (
+      <main className={styles.summary}>
+        <h1>{t("leftTitle")}</h1>
+        {blockedNotice && (
+          <p className={styles.notice} role="status">
+            {t("reportSentBody")}
+          </p>
+        )}
+        {(mediaError || videoError) && (
+          <p className={styles.notice} role="status">
+            {mediaError || videoError}
+          </p>
+        )}
+        <div className={styles.row}>
+          <button
+            className={styles.button}
+            disabled={joining || state.window !== "open"}
+            onClick={join}
+          >
+            {joining && <LoaderCircle size={16} />} {t("rejoin")}
+          </button>
+          <Link href="/dashboard" className={styles.buttonSecondary}>
+            {t("backHome")}
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <div className={styles.room}>
       <header className={styles.top}>
@@ -475,8 +550,11 @@ export function Room(props: {
           )}
           <div className={styles.stackSmall}>
             <strong>
-              {state.session.title ??
-                (group ? t("groupTitle") : t("pairTitle"))}
+              {sessionLabel(
+                state.session,
+                others.map((p) => ({ name: p.displayName, joined: p.joined })),
+                labels,
+              )}
             </strong>
             <span className={styles.meta}>
               {format.dateTime(new Date(state.session.startAt), {
@@ -522,6 +600,11 @@ export function Room(props: {
         </div>
       </header>
 
+      {presenceNotice && (
+        <p className={styles.notice} role="status">
+          {presenceNotice}
+        </p>
+      )}
       <main className={styles.stage}>
         <div className={`${styles.tiles} ${group ? styles.group : ""}`}>
           <div className={styles.lane}>
@@ -564,15 +647,17 @@ export function Room(props: {
               avatarUrl={p.avatarUrl}
               goal={p.goalText}
               present={p.present}
-              stream={remote[p.userId]}
+              stream={p.present ? remote[p.userId] : undefined}
               hint={
-                !joined
-                  ? t("joinToSee")
-                  : props.provider === "none"
-                    ? t("noVideoProvider")
-                    : p.present
-                      ? t("connecting")
-                      : t("notHereYet")
+                p.joined && !p.present
+                  ? t("partnerLeftTile")
+                  : !joined
+                    ? t("joinToSee")
+                    : props.provider === "none"
+                      ? t("noVideoProvider")
+                      : p.present
+                        ? t("connecting")
+                        : t("notHereYet")
               }
               isHost={p.userId === state.session.hostId}
               hostLabel={t("host")}
@@ -708,10 +793,42 @@ export function Room(props: {
             <Flag size={16} /> {t("report")}
           </button>
         )}
-        <button className={styles.buttonDanger} onClick={leave}>
+        <button
+          className={styles.buttonDanger}
+          onClick={() => leaveDialog.current?.showModal()}
+        >
           <PhoneOff size={16} /> {t("leave")}
         </button>
       </footer>
+      <dialog
+        ref={leaveDialog}
+        className={styles.dialog}
+        aria-labelledby="leave-title"
+        aria-describedby="leave-description"
+      >
+        <div className={styles.dialogBody}>
+          <h2 id="leave-title">{t("leaveConfirmTitle")}</h2>
+          <p id="leave-description">{t("leaveConfirmBody")}</p>
+          <div className={styles.dialogActions}>
+            <button
+              className={styles.buttonSecondary}
+              autoFocus
+              onClick={() => leaveDialog.current?.close()}
+            >
+              {t("stay")}
+            </button>
+            <button
+              className={styles.buttonDanger}
+              onClick={() => {
+                leaveDialog.current?.close();
+                void leave();
+              }}
+            >
+              {t("leave")}
+            </button>
+          </div>
+        </div>
+      </dialog>
       <ReportDialog
         dialogRef={reportDialog}
         targetId={reportFor}

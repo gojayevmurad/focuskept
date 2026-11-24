@@ -31,7 +31,13 @@
     "dashboard": "Dashboard",
     "theme": "Farbschema wechseln",
     "somethingWrong": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
-    "upgrade": "Auf Plus upgraden"
+    "upgrade": "Auf Plus upgraden",
+    "themeState": "Farbschema: {state}. Zum Ändern aktivieren.",
+    "themeOptions": {
+      "system": "System",
+      "light": "Hell",
+      "dark": "Dunkel"
+    }
   },
   "errors": {
     "notFound": "Wir konnten diese Seite nicht finden.",
@@ -233,7 +239,7 @@
     "waitingShort": "Gebucht",
     "errors": {
       "not_slot": "Sessions beginnen zur vollen oder halben Stunde.",
-      "too_late": "Dieser Termin ist zu kurzfristig für eine Buchung.",
+      "too_late": "Dieser Termin beginnt zu bald oder hat bereits begonnen. Öffne die Sitzung oder dein Dashboard, um deine Möglichkeiten zu sehen.",
       "too_far": "Du kannst bis zu zwei Wochen im Voraus buchen.",
       "duration": "Wähle 25, 50 oder 75 Minuten.",
       "limit": "Du hast deine kostenlosen Sessions für diese Woche aufgebraucht.",
@@ -244,7 +250,10 @@
       "not_allowed": "Diese Buchung kann nicht mehr geändert werden.",
       "full": "Diese Session ist voll.",
       "invalid": "Mit der Anfrage stimmte etwas nicht. Bitte versuche es erneut."
-    }
+    },
+    "joinNow": "Jetzt beitreten",
+    "startedWaiting": "Es wurde noch kein Fokuspartner gefunden. Du kannst dem offenen Raum beitreten, sobald er verfügbar ist.",
+    "joinOpenRoom": "Dem offenen Raum beitreten"
   },
   "dashboard": {
     "title": "Startseite",
@@ -411,7 +420,15 @@
     "startWrap": "Abschlussrunde starten",
     "goalsInRoom": "Ziele im Raum",
     "rateHost": "Wie war dein Host?",
-    "thanks": "Vielen Dank für dein Feedback."
+    "thanks": "Vielen Dank für dein Feedback.",
+    "leaveConfirmTitle": "Diese Sitzung verlassen?",
+    "leaveConfirmBody": "Du kannst bis zum Ende wieder beitreten.",
+    "stay": "Bleiben",
+    "leftTitle": "Du hast die Sitzung verlassen",
+    "rejoin": "Erneut beitreten",
+    "partnerLeft": "{name} hat die Sitzung verlassen",
+    "partnerBack": "{name} ist wieder da",
+    "partnerLeftTile": "Hat die Sitzung verlassen"
   },
   "settings": {
     "title": "Einstellungen",
@@ -1476,5 +1493,16 @@
       "disabledMessage": "Optionale Analysen deaktiviert.",
       "errorMessage": "Einstellungen konnten nicht aktualisiert werden."
     }
+  },
+  "sessionLabels": {
+    "openRoom": "Offener Raum",
+    "withPartner": "Fokussitzung mit {name}",
+    "group": "Gruppensitzung",
+    "pair": "Fokussitzung"
+  },
+  "notifications": {
+    "partnerMatched": "Dein Fokuspartner ist {name}: Deine Sitzung um {time} beginnt in 5 Minuten",
+    "openSession": "Sitzung öffnen",
+    "matchedTitle": "Dein Fokuspartner ist bereit"
   }
 }

@@ -31,7 +31,13 @@
     "dashboard": "Dashboard",
     "theme": "Kleurthema wisselen",
     "somethingWrong": "Er is iets misgegaan. Probeer het opnieuw.",
-    "upgrade": "Upgraden naar Plus"
+    "upgrade": "Upgraden naar Plus",
+    "themeState": "Kleurthema: {state}. Activeer om te wijzigen.",
+    "themeOptions": {
+      "system": "Systeem",
+      "light": "Licht",
+      "dark": "Donker"
+    }
   },
   "errors": {
     "notFound": "We konden die pagina niet vinden.",
@@ -233,7 +239,7 @@
     "waitingShort": "Geboekt",
     "errors": {
       "not_slot": "Sessies beginnen op het hele of halve uur.",
-      "too_late": "Dit tijdstip is te dichtbij om te boeken.",
+      "too_late": "Dit tijdslot begint bijna of is al begonnen. Open je sessie of dashboard om je opties te bekijken.",
       "too_far": "Je kunt maximaal twee weken vooruit boeken.",
       "duration": "Kies 25, 50 of 75 minuten.",
       "limit": "Je hebt al je gratis sessies voor deze week gebruikt.",
@@ -244,7 +250,10 @@
       "not_allowed": "Die boeking kan niet meer worden gewijzigd.",
       "full": "Deze sessie is vol.",
       "invalid": "Er klopte iets niet in het verzoek. Probeer het opnieuw."
-    }
+    },
+    "joinNow": "Nu deelnemen",
+    "startedWaiting": "Er is nog geen focuspartner gevonden. Je kunt deelnemen aan de open ruimte zodra die beschikbaar is.",
+    "joinOpenRoom": "Naar de open ruimte"
   },
   "dashboard": {
     "title": "Home",
@@ -411,7 +420,15 @@
     "startWrap": "Start afronding",
     "goalsInRoom": "Doelen in de ruimte",
     "rateHost": "Hoe deed je host het?",
-    "thanks": "Bedankt voor de feedback."
+    "thanks": "Bedankt voor de feedback.",
+    "leaveConfirmTitle": "Deze sessie verlaten?",
+    "leaveConfirmBody": "Je kunt tot het einde weer deelnemen.",
+    "stay": "Blijven",
+    "leftTitle": "Je hebt de sessie verlaten",
+    "rejoin": "Opnieuw deelnemen",
+    "partnerLeft": "{name} heeft de sessie verlaten",
+    "partnerBack": "{name} is terug",
+    "partnerLeftTile": "Heeft de sessie verlaten"
   },
   "settings": {
     "title": "Instellingen",
@@ -1476,5 +1493,16 @@
       "disabledMessage": "Optionele analytics uitgeschakeld.",
       "errorMessage": "Kan voorkeuren niet bijwerken."
     }
+  },
+  "sessionLabels": {
+    "openRoom": "Open ruimte",
+    "withPartner": "Focussessie met {name}",
+    "group": "Groepssessie",
+    "pair": "Focussessie"
+  },
+  "notifications": {
+    "partnerMatched": "Je bent gekoppeld aan {name}: je sessie van {time} begint over 5 minuten",
+    "openSession": "Sessie openen",
+    "matchedTitle": "Je focuspartner is er klaar voor"
   }
 }

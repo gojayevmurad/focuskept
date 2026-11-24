@@ -31,7 +31,13 @@
     "dashboard": "Tableau de bord",
     "theme": "Changer de thème",
     "somethingWrong": "Une erreur s'est produite. Veuillez réessayer.",
-    "upgrade": "Passer à Plus"
+    "upgrade": "Passer à Plus",
+    "themeState": "Thème : {state}. Activer pour changer.",
+    "themeOptions": {
+      "system": "Système",
+      "light": "Clair",
+      "dark": "Sombre"
+    }
   },
   "errors": {
     "notFound": "Nous n'avons pas pu trouver cette page.",
@@ -233,7 +239,7 @@
     "waitingShort": "Réservé",
     "errors": {
       "not_slot": "Les sessions commencent à l'heure pile ou à la demi-heure.",
-      "too_late": "Il est trop tard pour réserver ce créneau.",
+      "too_late": "Ce créneau est sur le point de commencer ou a déjà commencé. Ouvre la session ou ton tableau de bord pour voir les options disponibles.",
       "too_far": "Vous pouvez réserver jusqu'à deux semaines à l'avance.",
       "duration": "Choisissez 25, 50 ou 75 minutes.",
       "limit": "Vous avez utilisé toutes vos sessions gratuites pour cette semaine.",
@@ -244,7 +250,10 @@
       "not_allowed": "Cette réservation ne peut plus être modifiée.",
       "full": "Cette session est complète.",
       "invalid": "Un problème est survenu avec la demande. Veuillez réessayer."
-    }
+    },
+    "joinNow": "Rejoindre maintenant",
+    "startedWaiting": "Aucun partenaire n’a encore été trouvé. Tu peux rejoindre la salle ouverte dès qu’elle est disponible.",
+    "joinOpenRoom": "Rejoindre la salle ouverte"
   },
   "dashboard": {
     "title": "Accueil",
@@ -411,7 +420,15 @@
     "startWrap": "Lancer la conclusion",
     "goalsInRoom": "Objectifs dans la salle",
     "rateHost": "Comment était votre hôte ?",
-    "thanks": "Merci pour votre retour."
+    "thanks": "Merci pour votre retour.",
+    "leaveConfirmTitle": "Quitter cette session ?",
+    "leaveConfirmBody": "Tu peux revenir jusqu’à la fin de la session.",
+    "stay": "Rester",
+    "leftTitle": "Tu as quitté la session",
+    "rejoin": "Revenir",
+    "partnerLeft": "{name} a quitté la session",
+    "partnerBack": "{name} est de retour",
+    "partnerLeftTile": "A quitté la session"
   },
   "settings": {
     "title": "Paramètres",
@@ -1480,5 +1497,16 @@
       "disabledMessage": "Analyses facultatives désactivées.",
       "errorMessage": "Impossible de mettre à jour les préférences."
     }
+  },
+  "sessionLabels": {
+    "openRoom": "Salle ouverte",
+    "withPartner": "Session de concentration avec {name}",
+    "group": "Session de groupe",
+    "pair": "Session de concentration"
+  },
+  "notifications": {
+    "partnerMatched": "Ton partenaire est {name} : ta session de {time} commence dans 5 minutes",
+    "openSession": "Ouvrir la session",
+    "matchedTitle": "Ton partenaire est prêt"
   }
 }

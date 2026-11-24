@@ -191,6 +191,60 @@ export async function completeEndedSessions(now = new Date()) {
       ),
     )
     .returning();
+  const result = await settleEndedSessions(ended);
+  // Nobody to pair with and no fallback taken.
+  await db()
+    .update(booking)
+    .set({ status: "cancelled", cancelledAt: now })
+    .where(
+      and(
+        eq(booking.status, "booked"),
+        lte(
+          sql`${booking.startAt} + make_interval(mins => ${booking.durationMin})`,
+          now,
+        ),
+      ),
+    );
+  return result;
+}
+
+/**
+ * Ends rooms that everyone joined and then left at least five minutes ago.
+ * Rooms with someone who never arrived stay open for them until the end.
+ */
+export async function endAbandonedSessions(now = new Date()) {
+  const cutoff = new Date(now.getTime() - 5 * 60_000);
+  const ended = await db()
+    .update(focusSession)
+    .set({ status: "ended", endedAt: now })
+    .where(
+      and(
+        inArray(focusSession.status, ["scheduled", "live"]),
+        sql`exists (
+          select 1 from ${sessionParticipant} p
+          where p.session_id = ${focusSession.id} and p.joined_at is not null
+        )`,
+        // A late partner can still arrive: only close rooms everyone has visited.
+        sql`not exists (
+          select 1 from ${sessionParticipant} p
+          where p.session_id = ${focusSession.id} and p.joined_at is null
+        )`,
+        sql`not exists (
+          select 1 from ${sessionParticipant} p
+          where p.session_id = ${focusSession.id}
+            and p.joined_at is not null and p.left_at is null
+        )`,
+        sql`(select max(p.left_at) from ${sessionParticipant} p
+          where p.session_id = ${focusSession.id}) <= ${cutoff}`,
+      ),
+    )
+    .returning();
+  return settleEndedSessions(ended);
+}
+
+async function settleEndedSessions(
+  ended: (typeof focusSession.$inferSelect)[],
+) {
   const completedUsers = new Set<string>();
   for (const s of ended) {
     const people = await db()
@@ -225,19 +279,6 @@ export async function completeEndedSessions(now = new Date()) {
         .where(eq(host.userId, s.hostId));
     await publish(`session:${s.id}`, "session.ended", {}).catch(() => {});
   }
-  // Nobody to pair with and no fallback taken.
-  await db()
-    .update(booking)
-    .set({ status: "cancelled", cancelledAt: now })
-    .where(
-      and(
-        eq(booking.status, "booked"),
-        lte(
-          sql`${booking.startAt} + make_interval(mins => ${booking.durationMin})`,
-          now,
-        ),
-      ),
-    );
   for (const userId of completedUsers) {
     void trackForUser(userId, "session_completed");
     await convertReferral(userId).catch((error) =>

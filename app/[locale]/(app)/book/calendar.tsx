@@ -18,7 +18,13 @@ import {
 } from "lucide-react";
 import { Link, useRouter } from "@/src/i18n/navigation";
 import { trackBookingViewed } from "@/src/lib/analytics/client";
-import { bookSlot, cancel, joinGroup, type ActionResult } from "./actions";
+import {
+  bookSlot,
+  cancel,
+  chooseFallback,
+  joinGroup,
+  type ActionResult,
+} from "./actions";
 
 type Demand = Record<number, number>;
 export type CalendarData = {
@@ -37,6 +43,8 @@ export type CalendarData = {
     kind: string;
     sessionId: string | null;
     partner: string | null;
+    label: string | null;
+    fallbackOffered: boolean;
   }[];
   groups: {
     id: string;
@@ -91,11 +99,14 @@ export function Calendar({ data }: { data: CalendarData }) {
   const narrow = useNarrow();
   const [duration, setDuration] = useState<number>(data.prefill.duration ?? 50);
   const [dayIndex, setDayIndex] = useState(0);
-  const [selected, setSelected] = useState<Selection>(
-    data.prefill.start
-      ? { type: "slot", at: new Date(data.prefill.start).toISOString() }
-      : null,
-  );
+  const [selected, setSelected] = useState<Selection>(() => {
+    if (!data.prefill.start) return null;
+    const at = new Date(data.prefill.start).toISOString();
+    const mine = data.mine.find(
+      (b) => new Date(b.startAt).toISOString() === at,
+    );
+    return mine ? { type: "mine", id: mine.id } : { type: "slot", at };
+  });
   const [partner, setPartner] = useState(data.prefill.partner ?? "");
   const [message, setMessage] = useState<{ text: string; ok?: boolean } | null>(
     null,
@@ -103,7 +114,11 @@ export function Calendar({ data }: { data: CalendarData }) {
   const [pending, start] = useTransition();
   const dialog = useRef<HTMLDialogElement>(null);
   const scroller = useRef<HTMLDivElement>(null);
-  const now = new Date(data.now).getTime();
+  const [now, setNow] = useState(() => new Date(data.now).getTime());
+  useEffect(() => {
+    const timer = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     trackBookingViewed();
@@ -195,6 +210,9 @@ export function Calendar({ data }: { data: CalendarData }) {
     selected?.type === "mine"
       ? data.mine.find((b) => b.id === selected.id)
       : null;
+  const selectedStarted = Boolean(
+    selectedMine && new Date(selectedMine.startAt).getTime() <= now,
+  );
   const selectedGroup =
     selected?.type === "group"
       ? data.groups.find((g) => g.id === selected.id)
@@ -489,39 +507,68 @@ export function Calendar({ data }: { data: CalendarData }) {
                 <p className="muted">
                   {c("minutes", { count: selectedMine.durationMin })} ·{" "}
                   {selectedMine.status === "matched"
-                    ? selectedMine.kind === "group"
-                      ? t("groupSeat")
-                      : t("matchedWith", { name: selectedMine.partner ?? "" })
+                    ? (selectedMine.label ??
+                      t("matchedWith", { name: selectedMine.partner ?? "" }))
                     : t("waitingForMatch")}
                 </p>
                 <p className="small muted">{t("yourSession")}</p>
               </div>
-              <p className="small faint">
-                {new Date(selectedMine.startAt).getTime() - now >= 3600_000
-                  ? t("freeCancel")
-                  : t("lateCancel")}
-              </p>
+              {selectedStarted ? (
+                !selectedMine.sessionId && (
+                  <p className="small muted">{t("startedWaiting")}</p>
+                )
+              ) : (
+                <p className="small faint">
+                  {new Date(selectedMine.startAt).getTime() - now >= 3600_000
+                    ? t("freeCancel")
+                    : t("lateCancel")}
+                </p>
+              )}
               {message && !message.ok && (
                 <p className="notice error">{message.text}</p>
               )}
               <div className="dialog-actions">
                 {selectedMine.sessionId && (
                   <Link
-                    className="button secondary"
+                    className={selectedStarted ? "button" : "button secondary"}
                     href={`/session/${selectedMine.sessionId}`}
                   >
-                    {t("openRoom")}
+                    {selectedStarted ? t("joinNow") : t("openRoom")}
                   </Link>
                 )}
-                <button
-                  className="button danger secondary"
-                  disabled={pending}
-                  onClick={() =>
-                    run(() => cancel(selectedMine.id), t("cancelled"))
-                  }
-                >
-                  {t("cancelBooking")}
-                </button>
+                {selectedStarted &&
+                  !selectedMine.sessionId &&
+                  selectedMine.fallbackOffered && (
+                    <button
+                      className="button"
+                      disabled={pending}
+                      onClick={() =>
+                        start(async () => {
+                          const result = await chooseFallback(
+                            selectedMine.id,
+                            "room",
+                          );
+                          if (result.ok && result.id)
+                            router.push(`/session/${result.id}`);
+                          else if (!result.ok)
+                            setMessage({ text: errorText(result) });
+                        })
+                      }
+                    >
+                      {t("joinOpenRoom")}
+                    </button>
+                  )}
+                {!selectedStarted && (
+                  <button
+                    className="button danger secondary"
+                    disabled={pending}
+                    onClick={() =>
+                      run(() => cancel(selectedMine.id), t("cancelled"))
+                    }
+                  >
+                    {t("cancelBooking")}
+                  </button>
+                )}
               </div>
             </>
           )}
@@ -647,7 +694,7 @@ function Row(props: {
               <span className={`mine ${mine.kind === "group" ? "group" : ""}`}>
                 <span>
                   {mine.status === "matched"
-                    ? (mine.partner ?? props.t("groupShort"))
+                    ? (mine.label ?? mine.partner ?? props.t("groupShort"))
                     : props.t("waitingShort")}{" "}
                   · {mine.durationMin}m
                 </span>

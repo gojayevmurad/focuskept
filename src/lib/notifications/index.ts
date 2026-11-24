@@ -1,14 +1,22 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 import "server-only";
-import { and, eq } from "drizzle-orm";
+import { and, eq, ne } from "drizzle-orm";
 import { db } from "@/src/lib/db";
-import { booking, notificationLog, profile, user } from "@/src/lib/db/schema";
+import {
+  booking,
+  notificationLog,
+  profile,
+  sessionParticipant,
+  user,
+} from "@/src/lib/db/schema";
 import { getAppConfig } from "@/src/config/app";
 import { sendEmail } from "@/src/lib/email/send";
 import { logger } from "@/src/lib/logger";
 import { emailBrand } from "@/src/lib/email/brand";
 import { EmailLayout } from "./email-layout";
 import { sendPush } from "./push";
+import { createTranslator } from "next-intl";
+import { routing } from "@/src/i18n/routing";
 
 type Channel = "email" | "push";
 
@@ -41,6 +49,7 @@ async function recipient(userId: string) {
   const [row] = await db()
     .select({
       email: user.email,
+      isHouse: profile.isHouse,
       name: profile.displayName,
       timezone: profile.timezone,
       locale: profile.locale,
@@ -173,6 +182,71 @@ export async function sessionReminder(bookingId: string) {
     body: "Pick the one thing you'll work on.",
     url,
   });
+}
+
+/** Match alerts share reminder preferences and never fail the matching job. */
+export async function partnerMatched(bookingId: string) {
+  try {
+    const b = await bookingRow(bookingId);
+    if (!b || b.status !== "matched" || !b.sessionId) return;
+    const r = await recipient(b.userId);
+    if (!r || r.isHouse) return;
+    const [partner] = await db()
+      .select({ name: profile.displayName })
+      .from(sessionParticipant)
+      .innerJoin(profile, eq(profile.userId, sessionParticipant.userId))
+      .where(
+        and(
+          eq(sessionParticipant.sessionId, b.sessionId),
+          ne(sessionParticipant.userId, b.userId),
+        ),
+      );
+    if (!partner) return;
+    const locale =
+      routing.locales.find((locale) => locale === r.locale) ?? "en";
+    const messages = (await import(`../../../messages/${locale}.json`)).default;
+    const t = createTranslator({
+      locale,
+      messages,
+      namespace: "notifications",
+    });
+    const message = t("partnerMatched", {
+      name: partner.name,
+      time: new Intl.DateTimeFormat(locale, {
+        timeZone: r.timezone,
+        hour: "numeric",
+        minute: "2-digit",
+      }).format(b.startAt),
+    });
+    const url = `${getAppConfig().url}/session/${b.sessionId}`;
+    const results = await Promise.allSettled([
+      email(
+        b.userId,
+        "partner_matched",
+        b.id,
+        () => ({
+          subject: message,
+          heading: message,
+          lines: [message],
+          cta: { label: t("openSession"), url },
+        }),
+        { respectReminderSetting: true },
+      ),
+      push(b.userId, "partner_matched", b.id, {
+        title: t("matchedTitle"),
+        body: message,
+        url,
+      }),
+    ]);
+    for (const result of results)
+      if (result.status === "rejected")
+        logger.warn(
+          { err: result.reason, bookingId },
+          "Partner match notification failed",
+        );
+  } catch (error) {
+    logger.warn({ err: error, bookingId }, "Partner match notification failed");
+  }
 }
 
 /** Operational alert for an anchor booking; email reminder opt-out does not apply. */

@@ -8,6 +8,7 @@ import { db } from "@/src/lib/db";
 import {
   booking,
   favorite,
+  focusSession,
   profile,
   sessionParticipant,
 } from "@/src/lib/db/schema";
@@ -23,6 +24,7 @@ import {
   popularZonesFor,
   weekGrid,
 } from "@/src/lib/scheduling/slots";
+import { sessionLabel } from "@/src/lib/sessions/label";
 import { getAppConfig } from "@/src/config/app";
 import { Calendar, type CalendarData } from "./calendar";
 
@@ -35,6 +37,7 @@ export default async function Page({
 }) {
   const { user, profile: me } = await requireAppUser();
   const t = await getTranslations("book");
+  const labels = await getTranslations("sessionLabels");
   const params = await searchParams;
   const tz = me.timezone;
   const now = new Date();
@@ -57,8 +60,12 @@ export default async function Page({
         kind: booking.kind,
         sessionId: booking.sessionId,
         preferredPartnerId: booking.preferredPartnerId,
+        fallbackOfferedAt: booking.fallbackOfferedAt,
+        isFallbackRoom: focusSession.isFallbackRoom,
+        title: focusSession.title,
       })
       .from(booking)
+      .leftJoin(focusSession, eq(focusSession.id, booking.sessionId))
       .where(
         and(
           eq(booking.userId, user.id),
@@ -85,6 +92,7 @@ export default async function Page({
           sessionId: sessionParticipant.sessionId,
           userId: sessionParticipant.userId,
           name: profile.displayName,
+          joinedAt: sessionParticipant.joinedAt,
         })
         .from(sessionParticipant)
         .innerJoin(profile, eq(profile.userId, sessionParticipant.userId))
@@ -121,6 +129,23 @@ export default async function Page({
       status: b.status,
       kind: b.kind,
       sessionId: b.sessionId,
+      fallbackOffered: Boolean(b.fallbackOfferedAt),
+      label:
+        b.status === "matched" && (b.kind === "group" || b.isFallbackRoom)
+          ? sessionLabel(
+              {
+                isFallbackRoom: Boolean(b.isFallbackRoom),
+                type: b.kind,
+                title: b.title,
+              },
+              partners
+                .filter(
+                  (p) => p.sessionId === b.sessionId && p.userId !== user.id,
+                )
+                .map((p) => ({ name: p.name, joined: Boolean(p.joinedAt) })),
+              labels,
+            )
+          : null,
       partner:
         partners.find(
           (p) => p.sessionId === b.sessionId && p.userId !== user.id,
