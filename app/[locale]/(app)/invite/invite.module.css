@@ -99,3 +99,32 @@
     transform: translateY(0);
   }
 }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 24px 24px 24px 44px;
+  background: var(--lane);
+  border-radius: var(--radius);
+}
+.steps li {
+  padding-left: 4px;
+}
+.steps p {
+  margin-top: 8px;
+}
+.copyRow input {
+  min-width: 0;
+}
+@media (max-width: 650px) {
+  .steps.steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .shareBlock .copyRow {
+    flex-wrap: wrap;
+  }
+  .copyRow input {
+    flex-basis: 100%;
+  }
+}

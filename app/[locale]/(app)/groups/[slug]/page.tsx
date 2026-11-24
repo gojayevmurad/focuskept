@@ -1,63 +1,61 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-import type { Metadata } from "next";
-import styles from "@/app/[locale]/(app)/lanes.module.css";
 import { notFound } from "next/navigation";
-import { and, gt, inArray } from "drizzle-orm";
+import { and, eq, gt, inArray, sql } from "drizzle-orm";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { AppShell } from "@/src/components/app-shell";
 import { Avatar } from "@/src/components/avatar";
 import { CopyLink } from "@/src/components/copy-link";
 import { requireAppUser } from "@/src/lib/app-user";
 import { getCommunity, members, membership } from "@/src/lib/community";
+import { postSessionOptions } from "@/src/lib/community/feed";
 import { db } from "@/src/lib/db";
-import { booking } from "@/src/lib/db/schema";
+import { communityMember, focusSession } from "@/src/lib/db/schema";
 import { getAppConfig } from "@/src/config/app";
 import { Link } from "@/src/i18n/navigation";
+import { JoinHosted } from "../../hosting/forms";
 import { MemberActions } from "../forms";
-
-export const metadata: Metadata = { title: "Group" };
-
-/** Bookings closer than this can't be joined anymore. */
-function soon() {
-  return new Date(Date.now() + 3 * 60_000);
-}
+import { Composer } from "../feed-controls";
+import { Feed } from "../feed";
+import styles from "../community.module.css";
 
 export default async function Page({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ cursor?: string }>;
 }) {
   const { slug } = await params;
   const { user, profile } = await requireAppUser();
   const group = await getCommunity(slug);
   if (!group) notFound();
-  const me = await membership(group.id, user.id);
-  if (!me) notFound();
-  const t = await getTranslations("groups");
-  const format = await getFormatter();
-  const app = getAppConfig();
-  const list = await members(group.id);
-  const upcoming = await db()
-    .select({
-      userId: booking.userId,
-      startAt: booking.startAt,
-      durationMin: booking.durationMin,
-    })
-    .from(booking)
-    .where(
-      and(
-        inArray(
-          booking.userId,
-          list.map((m) => m.userId),
+  const [me, list, t, format, query, options, upcoming] = await Promise.all([
+    membership(group.id, user.id),
+    members(group.id),
+    getTranslations("groups"),
+    getFormatter(),
+    searchParams,
+    postSessionOptions(user.id),
+    db()
+      .select({
+        id: focusSession.id,
+        title: focusSession.title,
+        startAt: focusSession.startAt,
+        durationMin: focusSession.durationMin,
+      })
+      .from(focusSession)
+      .where(
+        and(
+          eq(focusSession.type, "group"),
+          inArray(focusSession.status, ["scheduled", "live"]),
+          gt(focusSession.startAt, new Date()),
+          sql`exists (select 1 from ${communityMember} m where m.community_id = ${group.id} and m.user_id = ${focusSession.hostId})`,
         ),
-        inArray(booking.status, ["booked"]),
-        gt(booking.startAt, soon()),
-      ),
-    )
-    .orderBy(booking.startAt)
-    .limit(12);
-  const nameOf = new Map(list.map((m) => [m.userId, m]));
-  const manager = me.role !== "member";
+      )
+      .orderBy(focusSession.startAt)
+      .limit(12),
+  ]);
+  const feed = await getTranslations("communityFeed");
   const licensed =
     group.licenseUntil &&
     group.licenseUntil > new Date() &&
@@ -65,19 +63,26 @@ export default async function Page({
   return (
     <AppShell title={group.name}>
       <div className={styles.page}>
-        <div className="row-between">
+        <nav className={styles.breadcrumb} aria-label={feed("breadcrumb")}>
+          <Link href="/groups">{feed("title")}</Link>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{group.name}</span>
+        </nav>
+        <header className="row-between">
           <div className="page-title">
             <h1>{group.name}</h1>
             <p className="muted">
-              {t(`kinds.${group.kind}`)} ·{" "}
-              {t("memberCount", { count: list.length })}
+              {group.description || feed("circlePurpose")}
             </p>
           </div>
-          {me.role !== "owner" && (
+          {!me ? (
+            <MemberActions communityId={group.id} kind="join" />
+          ) : me.role !== "owner" ? (
             <MemberActions communityId={group.id} kind="leave" />
+          ) : (
+            <span className="badge">{t("roles.owner")}</span>
           )}
-        </div>
-        {group.description && <p className="lead">{group.description}</p>}
+        </header>
         {licensed && (
           <p className="notice ok">
             {t("licensed", {
@@ -88,80 +93,96 @@ export default async function Page({
             })}
           </p>
         )}
-        <section className="card stack">
-          <h2>{t("invite")}</h2>
-          <p className="muted small">{t("inviteLead")}</p>
-          <CopyLink value={`${app.url}/groups/join/${group.joinCode}`} />
-          {manager && (
-            <div>
-              <MemberActions communityId={group.id} kind="rotate" />
-            </div>
-          )}
-        </section>
-        <section className="card stack">
-          <h2>{t("upcoming")}</h2>
-          <p className="muted small">{t("upcomingLead")}</p>
-          {upcoming.filter((u) => u.userId !== user.id).length ? (
-            <div className="list">
-              {upcoming
-                .filter((u) => u.userId !== user.id)
-                .map((u) => {
-                  const m = nameOf.get(u.userId)!;
-                  return (
-                    <div
-                      key={`${u.userId}-${u.startAt.toISOString()}`}
-                      className="list-item"
-                    >
-                      <Avatar name={m.name} src={m.avatarUrl} size="sm" />
-                      <span className="grow">
-                        <strong>{m.name}</strong>
-                        <span className="small muted">
-                          {" "}
-                          ·{" "}
-                          {format.dateTime(u.startAt, {
-                            timeZone: profile.timezone,
-                            weekday: "short",
-                            hour: "numeric",
-                            minute: "2-digit",
-                          })}{" "}
-                          · {u.durationMin} min
-                        </span>
-                      </span>
-                      <Link
-                        className="button small"
-                        href={`/book?start=${encodeURIComponent(u.startAt.toISOString())}&duration=${u.durationMin}&with=${m.username}`}
-                      >
-                        {t("joinThem")}
-                      </Link>
-                    </div>
-                  );
-                })}
-            </div>
-          ) : (
-            <p className="small faint">{t("noUpcoming")}</p>
-          )}
-        </section>
-        <section className="card stack">
-          <h2>{t("members")}</h2>
-          <div className="list">
-            {list.map((m) => (
-              <div key={m.userId} className="list-item">
-                <Avatar name={m.name} src={m.avatarUrl} size="sm" />
-                <span className="grow">{m.name}</span>
-                {m.role !== "member" && (
-                  <span className="badge">{t(`roles.${m.role}`)}</span>
-                )}
-                {manager && m.role === "member" && (
-                  <MemberActions
-                    communityId={group.id}
-                    userId={m.userId}
-                    kind="remove"
-                  />
-                )}
+        <div className={styles.layout}>
+          <div className={styles.main}>
+            {me && (
+              <div id="composer">
+                <Composer
+                  automatic={profile.shareWinsAutomatically}
+                  groupId={group.id}
+                  sessions={options}
+                />
               </div>
-            ))}
+            )}
+            {!me && <p className="notice">{feed("joinToPost")}</p>}
+            <Feed
+              userId={user.id}
+              groupId={group.id}
+              cursor={query.cursor}
+              href={`/groups/${group.slug}`}
+              timeZone={profile.timezone}
+            />
           </div>
-        </section>
+          <aside className={styles.sidebar}>
+            <section className={styles.circleCard}>
+              <h2>{t("members")}</h2>
+              <p className="small muted">
+                {t("memberCount", { count: list.length })}
+              </p>
+              <div className={styles.people}>
+                {list.slice(0, 12).map((m) => (
+                  <Avatar
+                    key={m.userId}
+                    name={m.name}
+                    src={m.avatarUrl}
+                    size="sm"
+                  />
+                ))}
+              </div>
+              <details>
+                <summary>{feed("allMembers")}</summary>
+                <div className="list">
+                  {list.map((m) => (
+                    <div key={m.userId} className="list-item">
+                      <Link className="grow" href={`/u/${m.username}`}>
+                        {m.name}
+                      </Link>
+                      {me && me.role !== "member" && m.role === "member" && (
+                        <MemberActions
+                          communityId={group.id}
+                          userId={m.userId}
+                          kind="remove"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </details>
+            </section>
+            <section className={styles.circleCard}>
+              <h2>{feed("circleSessions")}</h2>
+              {upcoming.length ? (
+                upcoming.map((s) => (
+                  <div className={styles.session} key={s.id}>
+                    <strong>{s.title}</strong>
+                    <span className="small muted">
+                      {format.dateTime(s.startAt, {
+                        timeZone: profile.timezone,
+                        dateStyle: "medium",
+                        timeStyle: "short",
+                      })}
+                    </span>
+                    <JoinHosted id={s.id} />
+                  </div>
+                ))
+              ) : (
+                <p className="small muted">{feed("noCircleSessions")}</p>
+              )}
+            </section>
+            {me && (
+              <details className={styles.circleCard}>
+                <summary>{t("invite")}</summary>
+                <p className="small muted">{t("inviteLead")}</p>
+                <CopyLink
+                  value={`${getAppConfig().url.replace(/\/$/, "")}/groups/join/${group.joinCode}`}
+                />
+                {me.role !== "member" && (
+                  <MemberActions communityId={group.id} kind="rotate" />
+                )}
+              </details>
+            )}
+          </aside>
+        </div>
       </div>
     </AppShell>
   );

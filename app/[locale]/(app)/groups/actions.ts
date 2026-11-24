@@ -6,12 +6,20 @@ import { getLocale } from "next-intl/server";
 import { requireAppUser } from "@/src/lib/app-user";
 import {
   COMMUNITY_KINDS,
+  joinCommunity,
   createCommunity,
   joinByCode,
   leaveCommunity,
   removeMember,
   rotateJoinCode,
 } from "@/src/lib/community";
+import {
+  createPost,
+  setAutomaticWins,
+  cheerPost,
+  deletePost,
+  reportPost,
+} from "@/src/lib/community/feed";
 import { redirect } from "@/src/i18n/navigation";
 
 export async function createGroup(_prev: { error?: string }, form: FormData) {
@@ -65,5 +73,48 @@ export async function removeFromGroup(communityId: string, userId: string) {
 export async function newInviteCode(communityId: string) {
   const { user } = await requireAppUser();
   await rotateJoinCode(z.string().uuid().parse(communityId), user.id);
+  revalidatePath("/[locale]/groups", "layout");
+}
+
+export async function publishPost(
+  _prev: { error?: string; ok?: boolean },
+  form: FormData,
+): Promise<{ error?: string; ok?: boolean }> {
+  const { user } = await requireAppUser();
+  const result = await createPost(user.id, Object.fromEntries(form));
+  revalidatePath("/[locale]/groups", "layout");
+  return result;
+}
+export async function saveAutomaticWins(
+  _prev: { error?: string; ok?: boolean },
+  form: FormData,
+) {
+  const { user } = await requireAppUser();
+  await setAutomaticWins(user.id, form.get("enabled") === "on");
+  revalidatePath("/[locale]/groups", "layout");
+  return { ok: true };
+}
+export async function reactToPost(postId: string, cheer: boolean) {
+  const { user } = await requireAppUser();
+  await cheerPost(user.id, z.uuid().parse(postId), cheer);
+  revalidatePath("/[locale]/groups", "layout");
+}
+export async function removePost(postId: string) {
+  const { user } = await requireAppUser();
+  await deletePost(user.id, z.uuid().parse(postId));
+  revalidatePath("/[locale]/groups", "layout");
+}
+export async function flagPost(
+  _prev: { error?: string; ok?: boolean },
+  form: FormData,
+) {
+  const { user } = await requireAppUser();
+  const ok = await reportPost(user.id, Object.fromEntries(form));
+  revalidatePath("/[locale]/groups", "layout");
+  return ok ? { ok: true } : { error: "reportFailed" };
+}
+export async function joinCircle(communityId: string) {
+  const { user } = await requireAppUser();
+  await joinCommunity(z.uuid().parse(communityId), user.id);
   revalidatePath("/[locale]/groups", "layout");
 }

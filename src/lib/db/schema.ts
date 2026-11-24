@@ -200,6 +200,9 @@ export const profile = pgTable(
     microphoneDefault: boolean("microphone_default").notNull().default(true),
     matchSameSegment: boolean("match_same_segment").notNull().default(false),
     statsPublic: boolean("stats_public").notNull().default(false),
+    shareWinsAutomatically: boolean("share_wins_automatically")
+      .notNull()
+      .default(false),
     // Onboarding tips and win-back emails; every message carries an unsubscribe link.
     emailTips: boolean("email_tips").notNull().default(true),
     // First-touch acquisition data and optional self-reported discovery source.
@@ -365,6 +368,9 @@ export const report = pgTable(
     reporterId: userRef("reporter_id"),
     targetId: userRef("target_id"),
     sessionId: text("session_id").references(() => focusSession.id, {
+      onDelete: "set null",
+    }),
+    postId: text("post_id").references(() => communityPost.id, {
       onDelete: "set null",
     }),
     reason: text("reason").notNull(),
@@ -627,6 +633,49 @@ export const communityMember = pgTable(
       sql`${t.role} in ('owner','admin','member')`,
     ),
   ],
+);
+
+export const communityPost = pgTable(
+  "community_post",
+  {
+    id: text("id").primaryKey(),
+    userId: userRef("user_id"),
+    groupId: text("group_id").references(() => community.id, {
+      onDelete: "set null",
+    }),
+    body: text("body").notNull(),
+    kind: text("kind").notNull().default("working"),
+    automatic: boolean("automatic").notNull().default(false),
+    sessionId: text("session_id").references(() => focusSession.id, {
+      onDelete: "set null",
+    }),
+    createdAt: time("created_at").notNull().defaultNow(),
+    deletedAt: time("deleted_at"),
+  },
+  (t) => [
+    index("community_post_feed_idx").on(t.createdAt, t.id),
+    index("community_post_user_idx").on(t.userId, t.createdAt),
+    uniqueIndex("community_post_auto_win_unique")
+      .on(t.userId, t.sessionId)
+      .where(sql`${t.automatic} = true`),
+    check(
+      "community_post_body_check",
+      sql`char_length(${t.body}) between 1 and 280`,
+    ),
+    check("community_post_kind_check", sql`${t.kind} in ('working','done')`),
+  ],
+);
+
+export const communityReaction = pgTable(
+  "community_reaction",
+  {
+    postId: text("post_id")
+      .notNull()
+      .references(() => communityPost.id, { onDelete: "cascade" }),
+    userId: userRef("user_id"),
+    createdAt: time("created_at").notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.postId, t.userId] })],
 );
 
 export const host = pgTable(

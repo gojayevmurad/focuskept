@@ -4,6 +4,7 @@ import styles from "@/app/[locale]/(app)/lanes.module.css";
 import { eq } from "drizzle-orm";
 import { getFormatter, getTranslations } from "next-intl/server";
 import { AppShell } from "@/src/components/app-shell";
+import { requireChallenges } from "@/src/lib/challenges/gate";
 import { requireAppUser } from "@/src/lib/app-user";
 import { listChallenges } from "@/src/lib/challenges";
 import { db } from "@/src/lib/db";
@@ -14,6 +15,7 @@ import { JoinChallenge } from "./join-button";
 export const metadata: Metadata = { title: "Challenges" };
 
 export default async function Page() {
+  requireChallenges();
   const { user, profile } = await requireAppUser();
   const t = await getTranslations("challenges");
   const format = await getFormatter();

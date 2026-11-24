@@ -695,7 +695,27 @@
     "copiedFeedback": "Invite link copied to clipboard",
     "shareMessage": "I've been using {app} for virtual coworking and body doubling — quiet 25, 50, or 75-minute video focus sessions with a partner. Try it with my link:",
     "emailSubject": "Focus with me on {app}",
-    "emailBody": "Hey,\n\nI've been using {app} for virtual coworking and body doubling. It pairs you with a partner on video so you both say your goal and focus quietly.\n\nSign up with my link and you'll get a free month of Plus when you finish your first session:"
+    "emailBody": "Hey, I’m using {app} to work quietly alongside a partner on video. Join me with this link:",
+    "steps": {
+      "share": {
+        "title": "Share your personal link",
+        "body": "Send the link below to someone you would like to focus with."
+      },
+      "signup": {
+        "title": "Your friend signs up",
+        "body": "They create an account within 30 days of opening your link. Their progress appears here."
+      },
+      "reward": {
+        "title": "You both get a month of Plus",
+        "body": "After their first completed session, the existing referral reward gives each of you one free month."
+      },
+      "together": {
+        "title": "Grow the community together",
+        "body": "Help build a welcoming place to focus. Billing is off, so this invite has no paid reward."
+      }
+    },
+    "howFree": "Your friend’s signup and first completed session appear below. There is no paid referral reward while billing is off.",
+    "copyFailed": "Copy did not work. Select the link and copy it manually."
   },
   "publicProfile": {
     "host": "Host",
@@ -733,10 +753,10 @@
     "reached": "Goal reached"
   },
   "groups": {
-    "title": "Groups",
-    "lead": "Universities, bootcamps and teams. Members are matched with each other first.",
-    "yours": "Your groups",
-    "none": "You're not in any group yet.",
+    "title": "Community",
+    "lead": "See what others are working on, cheer each other on, and find people to focus with.",
+    "yours": "Your circles",
+    "none": "You haven’t joined a circle yet.",
     "memberCount": "{count, plural, one {# member} other {# members}}",
     "roles": {
       "owner": "Owner",
@@ -749,29 +769,31 @@
       "company": "Company",
       "other": "Community"
     },
-    "joinTitle": "Join a group",
+    "joinTitle": "Join a circle",
     "code": "Invite code or link",
     "codePlaceholder": "Paste an invite link or code",
     "joinWithCode": "Join",
-    "codeNotFound": "That invite code doesn't match any group.",
-    "createTitle": "Start a group",
+    "codeNotFound": "That code doesn’t match a circle.",
+    "createTitle": "Start a circle",
     "name": "Name",
     "namePlaceholder": "Night-owl writers",
     "kind": "Type",
     "description": "Description",
-    "create": "Create group",
+    "create": "Create circle",
     "invalid": "Please check the name and try again.",
     "licensed": "Plus is included for the first {seats} members until {date}.",
     "invite": "Invite link",
-    "inviteLead": "Anyone with this link can join the group.",
+    "inviteLead": "Anyone with this link can join the circle.",
     "rotate": "Make a new link",
     "upcoming": "Members looking for a partner",
     "upcomingLead": "Book the same time and you'll be paired with them first.",
     "joinThem": "Join them",
     "noUpcoming": "Nobody in the group is waiting for a partner right now.",
     "members": "Members",
-    "leave": "Leave group",
-    "remove": "Remove"
+    "leave": "Leave circle",
+    "remove": "Remove",
+    "join": "Join circle",
+    "descriptionPlaceholder": "Who is this circle for, and what do you work on together?"
   },
   "hosting": {
     "title": "Hosting",
@@ -816,6 +838,51 @@
       "too_far": "Pick a time within two weeks.",
       "not_slot": "Pick a time on the hour or half hour.",
       "duration": "Pick 25, 50 or 75 minutes."
+    },
+    "hubTitle": "Make room for someone’s focus",
+    "hubLead": "A warm welcome, a shared goal, and quiet time together. As a host, you help a small group show up and make progress.",
+    "readyToHost": "Approved host",
+    "futureHost": "Your hosting journey",
+    "hostRole": "You guide the check-in and wrap-up. Everyone works quietly in between.",
+    "yourImpact": "Your impact",
+    "peopleHelped": "People helped",
+    "minutes": "{count} min",
+    "scheduleHelp": "Give your session a welcoming name and choose a time in the next two weeks.",
+    "capacityHelp": "Includes your seat. A smaller group can feel easier to welcome.",
+    "timezoneHelp": "All times are shown in {timezone}.",
+    "eligibility": "Completed sessions toward host eligibility",
+    "bookNext": "Book your next session",
+    "sharePageHelp": "Invite people to your upcoming sessions with your public host page.",
+    "previewPage": "Preview your host page",
+    "stepsTitle": "Your first hosted session starts here",
+    "steps": {
+      "experience": {
+        "title": "Get to know the rhythm",
+        "body": "Complete {needed} sessions to experience the welcome, focus time and wrap-up yourself."
+      },
+      "apply": {
+        "title": "Tell us about yourself",
+        "body": "Send a short application. Our team reviews every host personally."
+      },
+      "welcome": {
+        "title": "Welcome your first group",
+        "body": "Once approved, choose a time, share your page, and make space for a few people to focus."
+      }
+    },
+    "tipsTitle": "A little guidance goes a long way",
+    "tips": {
+      "welcome": {
+        "title": "Start with a hello",
+        "body": "Use people’s names and invite everyone to share one realistic goal."
+      },
+      "quiet": {
+        "title": "Protect the quiet",
+        "body": "Explain the timing, then let people settle into their work. Your steady presence is enough."
+      },
+      "wrap": {
+        "title": "Notice the progress",
+        "body": "Leave a moment to celebrate small wins and thank everyone for showing up."
+      }
     }
   },
   "hostPage": {
@@ -823,9 +890,15 @@
     "hosted": "{n, plural, one {# session hosted} other {# sessions hosted}}",
     "upcoming": "Upcoming group sessions",
     "seatsLeft": "{n, plural, =0 {full} one {# seat left} other {# seats left}}",
-    "takeSeat": "Take a seat",
+    "takeSeat": "Join session",
     "signUp": "Sign up to join",
-    "none": "No sessions scheduled right now."
+    "none": "No sessions scheduled right now.",
+    "pageTitle": "Group sessions with {name}",
+    "peopleHelped": "{count} people have focused with this host.",
+    "sessionHelp": "Choose a session and join the group. Times are shown in {timezone}.",
+    "openSession": "Open your session",
+    "full": "Session full",
+    "hostPurpose": "A small group, a warm welcome, and quiet time to work on what matters to you."
   },
   "home": {
     "title": "{app} — Get it done with someone beside you",
@@ -1109,11 +1182,7 @@
     "lead": "Start with three sessions a week. Choose Plus when you want more room.",
     "free": "Free",
     "freePrice": "No charge",
-    "freeFeatures": [
-      "3 sessions a week",
-      "Partner matching",
-      "Streaks"
-    ],
+    "freeFeatures": ["3 sessions a week", "Partner matching", "Streaks"],
     "plus": "Plus",
     "plusFeatures": [
       "Unlimited sessions",
@@ -1173,12 +1242,12 @@
   },
   "admin": {
     "nav": {
-      "overview": "Admin overview",
+      "overview": "Overview",
       "users": "Users",
       "reports": "Reports",
       "hosts": "Hosts",
       "challenges": "Challenges",
-      "groups": "Groups",
+      "groups": "Circles",
       "house": "House",
       "support": "Support",
       "notifications": "Notifications"
@@ -1203,7 +1272,9 @@
       "plus": "Active Plus subscriptions",
       "reports": "Open reports",
       "hosts": "Pending host applications",
-      "supportTickets": "Open support tickets"
+      "supportTickets": "Open support tickets",
+      "sessions": "Sessions started today",
+      "waiting": "Waiting in Match now"
     },
     "metricNotes": "Signups and new bookings use their creation dates. Other period metrics use session start times. Match rate counts paired bookings with a session against those bookings plus failures, excluding failures matched late. No-show rate is no-shows divided by completed bookings plus no-shows. Empty rates display as 0%. Subscription and queue counts reflect the current state.",
     "video": "Latest video usage",
@@ -1361,7 +1432,11 @@
         "privacy": "Privacy",
         "legal": "Legal",
         "feedback": "Feedback"
-      }
+      },
+      "applyFilter": "Apply filters",
+      "actions": "Actions",
+      "search": "Search requests",
+      "searchPlaceholder": "Subject, name, or email"
     },
     "notifications": {
       "lead": "Choose the emails you receive as an administrator and see who needs a focus partner now.",
@@ -1398,7 +1473,34 @@
           "description": "A booking was offered an open-room or rescheduling fallback."
         }
       }
-    }
+    },
+    "descriptions": {
+      "overview": "See today’s activity and find the people who need your help.",
+      "users": "Find accounts, review access, and manage roles and suspensions.",
+      "reports": "Review safety reports and community posts, then record a decision.",
+      "support": "Read support requests and keep their status and internal notes up to date.",
+      "hosts": "Review applications and support the people hosting group sessions.",
+      "house": "Help people waiting for a partner in the next 24 hours.",
+      "groups": "Manage existing circles, member licenses, and moderation.",
+      "challenges": "Prepare and manage challenges. Member pages stay hidden until enabled in configuration.",
+      "notifications": "Choose which operational alerts reach you and help people waiting in Match now."
+    },
+    "weekTotal": "{count} in the last 7 days",
+    "lastSevenDays": "Last 7 days",
+    "overviewTimezone": "Today’s totals use {timezone}. Sessions count rooms, not individual bookings.",
+    "needsAttention": "Needs attention",
+    "unmatchedCount": "{count} upcoming bookings are waiting for a partner in the next 24 hours.",
+    "attentionKinds": {
+      "report": "Open report",
+      "support": "Support request",
+      "booking": "Waiting for a partner"
+    },
+    "allClear": "No open reports, support requests, or upcoming unmatched bookings.",
+    "quickLinks": "Quick links",
+    "filterSearch": "Search this list",
+    "filterPlaceholder": "Search by name or details",
+    "userSearchPlaceholder": "Name, username, or email",
+    "removePost": "Remove post"
   },
   "walkthrough": {
     "title": "How a session works",
@@ -1791,5 +1893,71 @@
     "footer": "You receive this because you are an administrator of {app}. Manage these emails in Admin → Notifications.",
     "testSubject": "{app} admin email test",
     "testBody": "Your admin email alerts are working. This test was sent only to you."
+  },
+  "communityFeed": {
+    "title": "Community",
+    "purpose": "See what others are working on, cheer each other on, and find people to focus with.",
+    "composerTitle": "What are you working on?",
+    "updateType": "Type of update",
+    "working": "Working on",
+    "done": "Done",
+    "update": "Your update",
+    "placeholder": "Working on my thesis introduction… or: Done! Sent my first proposal.",
+    "exampleWork": "Writing my first draft",
+    "exampleWin": "Finished one small task",
+    "linkSession": "Link a session (optional)",
+    "sessionId": "Your session",
+    "sessionPlaceholder": "Choose one of your sessions",
+    "noSession": "No linked session",
+    "sessionHelp": "Only sessions you joined can be linked. The room stays private to its participants.",
+    "publish": "Post update",
+    "automatic": "Share my wins automatically",
+    "automaticHelp": "Off by default. When enabled, sessions you complete with “Done” share your session goal with everyone. You can delete any post.",
+    "savePreference": "Save sharing preference",
+    "saved": "Saved.",
+    "feed": "Community updates",
+    "cheer": "Cheer · {count}",
+    "delete": "Delete post",
+    "report": "Report post",
+    "reportHelp": "A moderator will review this post. Reporting also blocks this person, so their posts are hidden and you will not be matched together.",
+    "reason": "Reason",
+    "details": "More details (optional)",
+    "detailsPlaceholder": "What should the moderator know?",
+    "sendReport": "Send report and block",
+    "autoWin": "Completed a focus session",
+    "viewSession": "View your session",
+    "emptyTitle": "Small progress belongs here",
+    "emptyBody": "Share what you are working on or celebrate something you finished. Your update is visible to everyone in Community.",
+    "firstPost": "Write an update",
+    "older": "Older updates",
+    "newest": "Back to newest",
+    "discover": "Discover circles",
+    "createCircle": "Start a circle",
+    "joinCode": "Join with an invite code",
+    "noCircles": "No more circles to discover yet. Start one around your shared work.",
+    "memberCount": "{count} members",
+    "breadcrumb": "Community navigation",
+    "circlePurpose": "Follow what this circle’s members are working on.",
+    "joinToPost": "Join this circle to add your updates to its feed. All community posts are visible to everyone.",
+    "allMembers": "See all members",
+    "circleSessions": "Upcoming group sessions",
+    "noCircleSessions": "No circle hosts have scheduled a group session yet.",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Harassment",
+      "inappropriate": "Inappropriate content",
+      "underage": "Underage account",
+      "other": "Something else"
+    },
+    "errors": {
+      "invalid": "Write an update of 1–280 characters and check the session selection.",
+      "rateLimit": "You have shared 10 updates in the last hour. Try again later.",
+      "membership": "Join this circle before posting.",
+      "session": "Choose a session you participate in.",
+      "reportFailed": "This post is no longer available to report."
+    },
+    "circles": "Circles",
+    "joinedCircles": "Your circle filters",
+    "everyone": "Everyone"
   }
 }

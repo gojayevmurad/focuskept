@@ -695,7 +695,27 @@
     "copiedFeedback": "Lien d'invitation copié dans le presse-papiers",
     "shareMessage": "J'utilise {app} pour le coworking virtuel et le body doubling — des sessions calmes de 25, 50 ou 75 minutes en vidéo avec un partenaire. Essayez avec mon lien :",
     "emailSubject": "Concentrez-vous avec moi sur {app}",
-    "emailBody": "Bonjour,\n\nJ'utilise {app} pour le coworking virtuel et le body doubling. L'application vous associe à un partenaire en vidéo pour que chacun annonce son objectif avant de se concentrer en silence.\n\nInscrivez-vous avec mon lien et vous recevrez un mois de Plus gratuit dès votre première session terminée :"
+    "emailBody": "Bonjour, j’utilise {app} pour travailler en silence avec un partenaire en vidéo. Rejoignez-moi avec ce lien :",
+    "steps": {
+      "share": {
+        "title": "Partagez votre lien personnel",
+        "body": "Envoyez le lien ci-dessous à une personne avec qui vous aimeriez vous concentrer."
+      },
+      "signup": {
+        "title": "Votre ami s’inscrit",
+        "body": "Votre ami crée un compte dans les 30 jours après avoir ouvert votre lien. Son progrès apparaît ici."
+      },
+      "reward": {
+        "title": "Un mois de Plus pour vous deux",
+        "body": "Après sa première session terminée, la récompense de parrainage vous offre un mois gratuit chacun."
+      },
+      "together": {
+        "title": "Faites grandir la communauté",
+        "body": "Aidez à créer un lieu accueillant pour se concentrer. La facturation est désactivée : aucune récompense payante n’est promise."
+      }
+    },
+    "howFree": "L’inscription et la première session de votre ami apparaîtront ci-dessous. Aucune récompense payante n’est accordée lorsque la facturation est désactivée.",
+    "copyFailed": "La copie a échoué. Sélectionnez le lien et copiez-le manuellement."
   },
   "publicProfile": {
     "host": "Hôte",
@@ -733,10 +753,10 @@
     "reached": "Objectif atteint"
   },
   "groups": {
-    "title": "Groupes",
-    "lead": "Universités, bootcamps et équipes. Les membres sont jumelés entre eux en priorité.",
-    "yours": "Vos groupes",
-    "none": "Vous ne faites encore partie d'aucun groupe.",
+    "title": "Communauté",
+    "lead": "Découvrez les projets des autres, encouragez-vous et trouvez des personnes avec qui vous concentrer.",
+    "yours": "Vos cercles",
+    "none": "Vous n’avez pas encore rejoint de cercle.",
     "memberCount": "{count, plural, one {# membre} other {# membres}}",
     "roles": {
       "owner": "Propriétaire",
@@ -749,29 +769,31 @@
       "company": "Entreprise",
       "other": "Communauté"
     },
-    "joinTitle": "Rejoindre un groupe",
+    "joinTitle": "Rejoindre un cercle",
     "code": "Code d'invitation ou lien",
     "codePlaceholder": "Collez un lien ou un code d'invitation",
     "joinWithCode": "Rejoindre",
-    "codeNotFound": "Ce code d'invitation ne correspond à aucun groupe.",
-    "createTitle": "Créer un groupe",
+    "codeNotFound": "Ce code ne correspond à aucun cercle.",
+    "createTitle": "Créer un cercle",
     "name": "Nom",
     "namePlaceholder": "Rédacteurs nocturnes",
     "kind": "Type",
     "description": "Description",
-    "create": "Créer le groupe",
+    "create": "Créer le cercle",
     "invalid": "Veuillez vérifier le nom et réessayer.",
     "licensed": "Plus est inclus pour les {seats} premiers membres jusqu'au {date}.",
     "invite": "Lien d'invitation",
-    "inviteLead": "Toute personne disposant de ce lien peut rejoindre le groupe.",
+    "inviteLead": "Toute personne avec ce lien peut rejoindre le cercle.",
     "rotate": "Générer un nouveau lien",
     "upcoming": "Membres à la recherche d'un partenaire",
     "upcomingLead": "Réservez le même créneau et vous serez jumelé en priorité avec eux.",
     "joinThem": "Les rejoindre",
     "noUpcoming": "Aucun membre du groupe n'attend de partenaire en ce moment.",
     "members": "Membres",
-    "leave": "Quitter le groupe",
-    "remove": "Retirer"
+    "leave": "Quitter le cercle",
+    "remove": "Retirer",
+    "join": "Rejoindre le cercle",
+    "descriptionPlaceholder": "À qui s’adresse ce cercle et sur quoi travaillez-vous ensemble ?"
   },
   "hosting": {
     "title": "Animation",
@@ -816,6 +838,51 @@
       "too_far": "Choisissez un horaire dans les deux semaines à venir.",
       "not_slot": "Choisissez un horaire à l'heure pile ou à la demi-heure.",
       "duration": "Choisissez 25, 50 ou 75 minutes."
+    },
+    "hubTitle": "Faites une place à la concentration",
+    "hubLead": "Un accueil chaleureux, un objectif partagé et du calme ensemble. En tant qu’hôte, vous aidez un petit groupe à avancer.",
+    "readyToHost": "Hôte approuvé",
+    "futureHost": "Votre parcours d’hôte",
+    "hostRole": "Vous guidez l’accueil et le bilan. Entre les deux, chacun travaille en silence.",
+    "yourImpact": "Votre impact",
+    "peopleHelped": "Personnes accompagnées",
+    "minutes": "{count} min",
+    "scheduleHelp": "Donnez un nom accueillant à votre session et choisissez un créneau dans les deux prochaines semaines.",
+    "capacityHelp": "Votre place est incluse. Un petit groupe peut être plus facile à accueillir.",
+    "timezoneHelp": "Tous les horaires sont affichés en {timezone}.",
+    "eligibility": "Sessions terminées avant de devenir hôte",
+    "bookNext": "Réserver votre prochaine session",
+    "sharePageHelp": "Invitez des personnes à vos sessions grâce à votre page publique d’hôte.",
+    "previewPage": "Voir votre page d’hôte",
+    "stepsTitle": "Votre première session commence ici",
+    "steps": {
+      "experience": {
+        "title": "Découvrez le rythme",
+        "body": "Terminez {needed} sessions pour vivre vous-même l’accueil, la concentration et le bilan."
+      },
+      "apply": {
+        "title": "Présentez-vous",
+        "body": "Envoyez une courte candidature. Notre équipe examine chaque profil personnellement."
+      },
+      "welcome": {
+        "title": "Accueillez votre premier groupe",
+        "body": "Après approbation, choisissez un horaire, partagez votre page et accueillez un petit groupe."
+      }
+    },
+    "tipsTitle": "Quelques repères font la différence",
+    "tips": {
+      "welcome": {
+        "title": "Commencez par un bonjour",
+        "body": "Appelez les participants par leur prénom et proposez à chacun un objectif réaliste."
+      },
+      "quiet": {
+        "title": "Préservez le calme",
+        "body": "Expliquez le déroulement, puis laissez chacun travailler. Votre présence suffit."
+      },
+      "wrap": {
+        "title": "Soulignez les progrès",
+        "body": "Gardez un moment pour célébrer les petites réussites et remercier chacun d’être venu."
+      }
     }
   },
   "hostPage": {
@@ -823,9 +890,15 @@
     "hosted": "{n, plural, one {# session animée} other {# sessions animées}}",
     "upcoming": "Sessions de groupe à venir",
     "seatsLeft": "{n, plural, =0 {complet} one {# place restante} other {# places restantes}}",
-    "takeSeat": "Prendre une place",
+    "takeSeat": "Rejoindre la session",
     "signUp": "S'inscrire pour participer",
-    "none": "Aucune session programmée pour l'instant."
+    "none": "Aucune session programmée pour l'instant.",
+    "pageTitle": "Sessions de groupe avec {name}",
+    "peopleHelped": "{count} personnes se sont concentrées avec cet hôte.",
+    "sessionHelp": "Choisissez une session et rejoignez le groupe. Horaires en {timezone}.",
+    "openSession": "Ouvrir votre session",
+    "full": "Session complète",
+    "hostPurpose": "Un petit groupe, un accueil chaleureux et du calme pour avancer sur ce qui compte pour vous."
   },
   "home": {
     "title": "{app} — Avancez dans votre travail aux côtés de quelqu'un",
@@ -1173,12 +1246,12 @@
   },
   "admin": {
     "nav": {
-      "overview": "Vue d'ensemble admin",
+      "overview": "Vue d’ensemble",
       "users": "Utilisateurs",
       "reports": "Signalements",
       "hosts": "Hôtes",
       "challenges": "Défis",
-      "groups": "Groupes",
+      "groups": "Cercles",
       "house": "Maison",
       "support": "Assistance",
       "notifications": "Notifications"
@@ -1203,7 +1276,9 @@
       "plus": "Abonnements Plus actifs",
       "reports": "Signalements ouverts",
       "hosts": "Candidatures d'hôtes en attente",
-      "supportTickets": "Tickets d'assistance ouverts"
+      "supportTickets": "Tickets d'assistance ouverts",
+      "sessions": "Sessions démarrées aujourd’hui",
+      "waiting": "En attente d’un partenaire immédiat"
     },
     "metricNotes": "Les inscriptions et nouvelles réservations utilisent leur date de création. Les autres métriques de période utilisent l'heure de début des sessions. Le taux de jumelage compare les réservations associées à une session par rapport à ces réservations plus les échecs, en excluant les échecs jumelés en retard. Le taux d'absence correspond aux absences divisées par les réservations terminées plus les absences. Les taux vides s'affichent à 0 %. Le nombre d'abonnements et les files d'attente reflètent l'état actuel.",
     "video": "Utilisation vidéo récente",
@@ -1361,7 +1436,11 @@
         "privacy": "Confidentialité",
         "legal": "Juridique",
         "feedback": "Retours"
-      }
+      },
+      "applyFilter": "Appliquer les filtres",
+      "actions": "Actions",
+      "search": "Rechercher des demandes",
+      "searchPlaceholder": "Objet, nom ou e-mail"
     },
     "notifications": {
       "lead": "Choisissez vos e-mails d’administration et découvrez qui cherche un partenaire maintenant.",
@@ -1398,7 +1477,34 @@
           "description": "Une réservation a reçu une proposition de salle ouverte ou de report."
         }
       }
-    }
+    },
+    "descriptions": {
+      "overview": "Consultez l’activité du jour et les personnes qui ont besoin d’aide.",
+      "users": "Trouvez des comptes, vérifiez les accès et gérez les rôles et suspensions.",
+      "reports": "Examinez les signalements et publications, puis prenez une décision.",
+      "support": "Lisez les demandes d’aide et actualisez leur statut et les notes internes.",
+      "hosts": "Examinez les candidatures et accompagnez les hôtes des sessions de groupe.",
+      "house": "Aidez les personnes qui attendent un partenaire dans les prochaines 24 heures.",
+      "groups": "Gérez les cercles, les licences des membres et la modération.",
+      "challenges": "Préparez et gérez les défis. Les pages des membres restent masquées jusqu’à leur activation.",
+      "notifications": "Choisissez vos alertes et aidez les personnes en attente d’un partenaire immédiat."
+    },
+    "weekTotal": "{count} ces 7 derniers jours",
+    "lastSevenDays": "7 derniers jours",
+    "overviewTimezone": "Les totaux du jour suivent {timezone}. Les sessions comptent les salles, pas les réservations individuelles.",
+    "needsAttention": "À traiter",
+    "unmatchedCount": "{count} réservations dans les prochaines 24 heures attendent un partenaire.",
+    "attentionKinds": {
+      "report": "Signalement ouvert",
+      "support": "Demande d’aide",
+      "booking": "En attente d’un partenaire"
+    },
+    "allClear": "Aucun signalement, demande d’aide ou réservation sans partenaire à traiter.",
+    "quickLinks": "Accès rapides",
+    "filterSearch": "Rechercher dans cette liste",
+    "filterPlaceholder": "Nom ou détails",
+    "userSearchPlaceholder": "Nom, identifiant ou e-mail",
+    "removePost": "Retirer la publication"
   },
   "walkthrough": {
     "title": "Comment fonctionne une session",
@@ -1791,5 +1897,71 @@
     "footer": "Vous recevez cet e-mail en tant qu’administrateur de {app}. Gérez ces e-mails dans Administration → Notifications.",
     "testSubject": "Test des e-mails d’administration de {app}",
     "testBody": "Vos alertes d’administration fonctionnent. Ce test vous a été envoyé uniquement à vous."
+  },
+  "communityFeed": {
+    "title": "Communauté",
+    "purpose": "Découvrez les projets des autres, encouragez-vous et trouvez des personnes avec qui vous concentrer.",
+    "composerTitle": "Sur quoi travaillez-vous ?",
+    "updateType": "Type de publication",
+    "working": "En cours",
+    "done": "Terminé",
+    "update": "Votre publication",
+    "placeholder": "Je rédige l’introduction de mon mémoire… ou : Terminé ! Ma première proposition est envoyée.",
+    "exampleWork": "Rédiger mon premier brouillon",
+    "exampleWin": "Une petite tâche terminée",
+    "linkSession": "Lier une session (facultatif)",
+    "sessionId": "Votre session",
+    "sessionPlaceholder": "Choisissez une de vos sessions",
+    "noSession": "Aucune session liée",
+    "sessionHelp": "Seules les sessions auxquelles vous participez peuvent être liées. La salle reste privée.",
+    "publish": "Publier",
+    "automatic": "Partager mes réussites automatiquement",
+    "automaticHelp": "Désactivé par défaut. Une session achevée avec « Terminé » publie votre objectif pour tout le monde. Vous pouvez supprimer chaque publication.",
+    "savePreference": "Enregistrer ce choix",
+    "saved": "Enregistré.",
+    "feed": "Publications de la communauté",
+    "cheer": "Encourager · {count}",
+    "delete": "Supprimer",
+    "report": "Signaler",
+    "reportHelp": "Un modérateur examinera cette publication. Le signalement bloque aussi cette personne : ses publications seront masquées et vous ne serez plus associés.",
+    "reason": "Motif",
+    "details": "Précisions (facultatif)",
+    "detailsPlaceholder": "Que doit savoir le modérateur ?",
+    "sendReport": "Signaler et bloquer",
+    "autoWin": "Une session de concentration terminée",
+    "viewSession": "Voir votre session",
+    "emptyTitle": "Les petits progrès ont leur place ici",
+    "emptyBody": "Partagez votre travail ou célébrez une tâche terminée. Votre publication est visible par toute la communauté.",
+    "firstPost": "Écrire une publication",
+    "older": "Publications précédentes",
+    "newest": "Voir les plus récentes",
+    "discover": "Découvrir les cercles",
+    "createCircle": "Créer un cercle",
+    "joinCode": "Rejoindre avec un code",
+    "noCircles": "Aucun autre cercle pour le moment. Créez-en un autour de votre travail.",
+    "memberCount": "{count} membres",
+    "breadcrumb": "Navigation de la communauté",
+    "circlePurpose": "Suivez les projets des membres de ce cercle.",
+    "joinToPost": "Rejoignez ce cercle pour publier dans son fil. Toutes les publications restent visibles par toute la communauté.",
+    "allMembers": "Voir tous les membres",
+    "circleSessions": "Prochaines sessions de groupe",
+    "noCircleSessions": "Les hôtes de ce cercle n’ont pas encore prévu de session.",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Harcèlement",
+      "inappropriate": "Contenu inapproprié",
+      "underage": "Compte de mineur",
+      "other": "Autre motif"
+    },
+    "errors": {
+      "invalid": "Écrivez entre 1 et 280 caractères et vérifiez la session choisie.",
+      "rateLimit": "Vous avez publié 10 fois en une heure. Réessayez plus tard.",
+      "membership": "Rejoignez ce cercle avant de publier.",
+      "session": "Choisissez une session à laquelle vous participez.",
+      "reportFailed": "Cette publication ne peut plus être signalée."
+    },
+    "circles": "Cercles",
+    "joinedCircles": "Vos filtres de cercles",
+    "everyone": "Tout le monde"
   }
 }

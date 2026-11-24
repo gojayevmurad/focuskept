@@ -64,6 +64,10 @@ export const envSchema = z
     LEGAL_EMAIL: optional,
     LEGAL_REGISTRATION: optional,
     SECURITY_CONTACT: optional,
+    CHALLENGES_ENABLED: z.preprocess(
+      (v) => (v === undefined || v === "" ? "false" : v),
+      z.enum(["true", "false"]).transform((v) => v === "true"),
+    ),
     BILLING_ENABLED: flag(false),
     FOUNDING_SIGNUP_BEFORE: optionalDate,
     FOUNDING_PLUS_UNTIL: optionalDate,

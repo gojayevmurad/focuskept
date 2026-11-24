@@ -22,7 +22,13 @@ export default async function Page({
       <form className="row" method="get">
         <label className="field grow">
           <span>{t("search")}</span>
-          <input className="input" name="q" defaultValue={q} maxLength={200} />
+          <input
+            className="input"
+            name="q"
+            defaultValue={q}
+            maxLength={200}
+            placeholder={t("userSearchPlaceholder")}
+          />
         </label>
         <button className="button">{t("searchButton")}</button>
       </form>
@@ -52,8 +58,8 @@ export default async function Page({
             {rows.map(({ user, profile, completed }) => (
               <tr key={user.id}>
                 <th scope="row">{profile?.displayName || user.name}</th>
-                <td>{user.email}</td>
-                <td>
+                <td data-label={t("columns.email")}>{user.email}</td>
+                <td data-label={t("columns.username")}>
                   {profile ? (
                     <Link href={`/u/${profile.username}`}>
                       @{profile.username}
@@ -62,18 +68,18 @@ export default async function Page({
                     t("unavailable")
                   )}
                 </td>
-                <td>
+                <td data-label={t("columns.created")}>
                   {format.dateTime(user.createdAt, {
                     timeZone: current.profile.timezone,
                     dateStyle: "medium",
                   })}
                 </td>
-                <td>
+                <td data-label={t("columns.role")}>
                   {profile?.role === "admin"
                     ? t("roles.admin")
                     : t("roles.user")}
                 </td>
-                <td>
+                <td data-label={t("columns.flags")}>
                   <div className="stack-sm">
                     {profile?.suspendedAt && (
                       <span className="badge danger">{t("suspended")}</span>
@@ -83,8 +89,10 @@ export default async function Page({
                     )}
                   </div>
                 </td>
-                <td>{format.number(completed)}</td>
-                <td>
+                <td data-label={t("columns.completed")}>
+                  {format.number(completed)}
+                </td>
+                <td data-label={t("columns.actions")}>
                   {profile ? (
                     <div className="stack-sm">
                       <ActionForm

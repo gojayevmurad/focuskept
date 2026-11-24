@@ -6,9 +6,7 @@ import { Link } from "@/src/i18n/navigation";
 import { getSupportTicket } from "@/src/lib/support/admin";
 import { AdminFrame } from "../../frame";
 import {
-  updateTicketNoteAction,
   updateTicketNoteFormAction,
-  updateTicketStatusAction,
   updateTicketStatusFormAction,
 } from "../actions";
 import styles from "../support.module.css";

@@ -3,17 +3,27 @@ import { getFormatter, getTranslations } from "next-intl/server";
 import { requireAdmin } from "@/src/lib/app-user";
 import { houseSlots, ownHouseBookings } from "@/src/lib/admin/queries";
 import { Link } from "@/src/i18n/navigation";
+import { ListFilter, listQuery } from "../list-filter";
 import { AdminFrame } from "../frame";
 import { ActionForm } from "../action-form";
 
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string | string[] }>;
+}) {
+  const q = listQuery(await searchParams);
   const { user, profile } = await requireAdmin();
   const t = await getTranslations("admin");
   const format = await getFormatter();
-  const [slots, own] = await Promise.all([
+  const [allSlots, own] = await Promise.all([
     houseSlots(),
     ownHouseBookings(user.id),
   ]);
+  const slots = allSlots.filter(
+    (slot) =>
+      slot.name?.toLocaleLowerCase().includes(q.toLocaleLowerCase()) || !q,
+  );
   const date = (value: Date) =>
     format.dateTime(value, {
       timeZone: profile.timezone,
@@ -22,6 +32,7 @@ export default async function Page() {
     });
   return (
     <AdminFrame section="house">
+      <ListFilter q={q} />
       <p>{t("houseHelp", { timezone: profile.timezone })}</p>
       {!profile.isHouse && (
         <p className="notice warn">
@@ -46,9 +57,13 @@ export default async function Page() {
               {slots.map((slot) => (
                 <tr key={`${slot.startAt.toISOString()}:${slot.durationMin}`}>
                   <th scope="row">{date(slot.startAt)}</th>
-                  <td>{t("minutes", { count: slot.durationMin })}</td>
-                  <td>{slot.name || t("unavailable")}</td>
-                  <td>
+                  <td data-label={t("columns.duration")}>
+                    {t("minutes", { count: slot.durationMin })}
+                  </td>
+                  <td data-label={t("columns.waiting")}>
+                    {slot.name || t("unavailable")}
+                  </td>
+                  <td data-label={t("columns.actions")}>
                     {profile.isHouse && slot.userId !== user.id && (
                       <ActionForm
                         fields={{

@@ -163,3 +163,33 @@ export async function rotateJoinCode(communityId: string, actorId: string) {
     .where(eq(community.id, communityId));
   return true;
 }
+
+/** Circles remain the existing communities; discovery never exposes join codes. */
+export async function discoverCommunities(userId: string) {
+  return db()
+    .select({
+      id: community.id,
+      name: community.name,
+      slug: community.slug,
+      description: community.description,
+      members: sql<number>`(select count(*)::int from ${communityMember} m where m.community_id = ${community.id})`,
+    })
+    .from(community)
+    .where(
+      sql`not exists (select 1 from ${communityMember} m where m.community_id = ${community.id} and m.user_id = ${userId})`,
+    )
+    .orderBy(community.name)
+    .limit(30);
+}
+export async function joinCommunity(communityId: string, userId: string) {
+  const [circle] = await db()
+    .select({ id: community.id })
+    .from(community)
+    .where(eq(community.id, communityId));
+  if (!circle) return false;
+  await db()
+    .insert(communityMember)
+    .values({ communityId, userId })
+    .onConflictDoNothing();
+  return true;
+}

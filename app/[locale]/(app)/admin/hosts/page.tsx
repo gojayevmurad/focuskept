@@ -3,6 +3,7 @@ import { getFormatter, getTranslations } from "next-intl/server";
 import { requireAdmin } from "@/src/lib/app-user";
 import { hosts } from "@/src/lib/admin/queries";
 import { Link } from "@/src/i18n/navigation";
+import { ListFilter, listQuery } from "../list-filter";
 import { AdminFrame } from "../frame";
 import { ActionForm } from "../action-form";
 
@@ -15,13 +16,19 @@ function safeUrl(value: string | null) {
     return null;
   }
 }
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string | string[] }>;
+}) {
+  const q = listQuery(await searchParams);
   const { profile } = await requireAdmin();
   const t = await getTranslations("admin");
   const format = await getFormatter();
-  const rows = await hosts();
+  const rows = await hosts(q);
   return (
     <AdminFrame section="hosts">
+      <ListFilter q={q} />
       {[true, false].map((applications) => (
         <section className="stack" key={String(applications)}>
           <h2>{t(applications ? "applications" : "approvedHosts")}</h2>
@@ -68,6 +75,7 @@ export default async function Page() {
                       {applications ? (
                         <>
                           <td
+                            data-label={t("columns.pitch")}
                             style={{
                               whiteSpace: "pre-wrap",
                               minWidth: "12rem",
@@ -75,7 +83,7 @@ export default async function Page() {
                           >
                             {host.pitch}
                           </td>
-                          <td>
+                          <td data-label={t("columns.audience")}>
                             {safeUrl(host.audienceUrl) ? (
                               <a
                                 href={safeUrl(host.audienceUrl)!}
@@ -88,8 +96,10 @@ export default async function Page() {
                               host.audienceUrl || t("unavailable")
                             )}
                           </td>
-                          <td>{completed}</td>
-                          <td>
+                          <td data-label={t("columns.completed")}>
+                            {completed}
+                          </td>
+                          <td data-label={t("columns.actions")}>
                             <div className="stack-sm">
                               <ActionForm
                                 fields={{
@@ -113,15 +123,17 @@ export default async function Page() {
                         </>
                       ) : (
                         <>
-                          <td>
+                          <td data-label={t("columns.rating")}>
                             {host.rating === null
                               ? t("unavailable")
                               : format.number(host.rating, {
                                   maximumFractionDigits: 1,
                                 })}
                           </td>
-                          <td>{host.sessionsHosted}</td>
-                          <td>
+                          <td data-label={t("columns.hosted")}>
+                            {host.sessionsHosted}
+                          </td>
+                          <td data-label={t("columns.perkUntil")}>
                             {host.perkUntil
                               ? format.dateTime(host.perkUntil, {
                                   timeZone: profile.timezone,
@@ -129,8 +141,10 @@ export default async function Page() {
                                 })
                               : t("unavailable")}
                           </td>
-                          <td>{t(`hostStatus.${host.status}`)}</td>
-                          <td>
+                          <td data-label={t("columns.status")}>
+                            {t(`hostStatus.${host.status}`)}
+                          </td>
+                          <td data-label={t("columns.actions")}>
                             <ActionForm
                               fields={{
                                 intent: "host",

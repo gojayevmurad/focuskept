@@ -1,15 +1,19 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-import type { Metadata } from "next";
 import lanes from "@/app/[locale]/(app)/lanes.module.css";
 import { getTranslations } from "next-intl/server";
 import { AppShell } from "@/src/components/app-shell";
 import { requireAppUser } from "@/src/lib/app-user";
 import { getAppConfig } from "@/src/config/app";
-import { getReferralStats } from "@/src/lib/growth/referrals";
+import {
+  buildReferralLink,
+  getReferralStats,
+} from "@/src/lib/growth/referrals";
 import { InviteShare } from "./invite-share";
 import styles from "./invite.module.css";
 
-export const metadata: Metadata = { title: "Invite friends" };
+export async function generateMetadata() {
+  return { title: (await getTranslations("invite"))("title") };
+}
 
 export default async function Page() {
   const { user, profile: me } = await requireAppUser();
@@ -28,6 +32,17 @@ export default async function Page() {
           </p>
         </div>
 
+        <ol className={styles.steps}>
+          {["share", "signup", app.billingEnabled ? "reward" : "together"].map(
+            (step) => (
+              <li key={step}>
+                <strong>{t(`steps.${step}.title`)}</strong>
+                <p className="small muted">{t(`steps.${step}.body`)}</p>
+              </li>
+            ),
+          )}
+        </ol>
+
         {app.billingEnabled && (
           <section className={styles.rewardCard}>
             <h2 className={styles.rewardHeadline}>{t("rewardHeadline")}</h2>
@@ -38,11 +53,12 @@ export default async function Page() {
         <section className="card stack">
           <h2>{t("sharePrompt")}</h2>
           <InviteShare
-            baseUrl={app.url}
-            referralCode={me.referralCode}
+            url={buildReferralLink(app.url, me.referralCode, "copy_link")}
             appName={app.name}
           />
-          <p className="small faint">{t("how")}</p>
+          <p className="small faint">
+            {app.billingEnabled ? t("how") : t("howFree")}
+          </p>
         </section>
 
         <section className="card stack">
@@ -57,6 +73,19 @@ export default async function Page() {
               <span className={styles.statNumber}>{totalConverted}</span>
               <span className={styles.statLabel}>{t("statsConverted")}</span>
             </div>
+            <ol className={styles.steps}>
+              {[
+                "share",
+                "signup",
+                app.billingEnabled ? "reward" : "together",
+              ].map((step) => (
+                <li key={step}>
+                  <strong>{t(`steps.${step}.title`)}</strong>
+                  <p className="small muted">{t(`steps.${step}.body`)}</p>
+                </li>
+              ))}
+            </ol>
+
             {app.billingEnabled && (
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>{totalRewarded}</span>

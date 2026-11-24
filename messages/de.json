@@ -695,7 +695,27 @@
     "copiedFeedback": "Einladungslink in die Zwischenablage kopiert",
     "shareMessage": "Ich nutze {app} für virtuelles Coworking und Body Doubling – ruhige 25-, 50- oder 75-minütige Video-Fokussessions mit einem Partner. Probier es mit meinem Link aus:",
     "emailSubject": "Fokussiere mit mir auf {app}",
-    "emailBody": "Hey,\n\nich nutze {app} für virtuelles Coworking und Body Doubling. Du wirst per Video mit einem Partner gematcht, ihr nennt kurz euer Ziel und fokussiert euch in Ruhe.\n\nMelde dich über meinen Link an und du erhältst einen kostenlosen Monat Plus, sobald du deine erste Session abgeschlossen hast:"
+    "emailBody": "Hallo, ich nutze {app}, um gemeinsam mit einem Partner in Ruhe per Video zu arbeiten. Mach mit über diesen Link:",
+    "steps": {
+      "share": {
+        "title": "Teile deinen persönlichen Link",
+        "body": "Schicke den Link unten an jemanden, mit dem du fokussieren möchtest."
+      },
+      "signup": {
+        "title": "Dein Freund meldet sich an",
+        "body": "Erstellt die Person innerhalb von 30 Tagen ein Konto, siehst du ihren Fortschritt hier."
+      },
+      "reward": {
+        "title": "Ihr bekommt beide einen Monat Plus",
+        "body": "Nach der ersten abgeschlossenen Session bekommt ihr durch die Einladungsprämie je einen Gratis-Monat."
+      },
+      "together": {
+        "title": "Lasst die Community wachsen",
+        "body": "Hilf mit, einen einladenden Ort zum Fokussieren aufzubauen. Die Abrechnung ist aus, daher gibt es keine bezahlte Prämie."
+      }
+    },
+    "howFree": "Die Anmeldung und erste abgeschlossene Session deines Freundes erscheinen unten. Ohne Abrechnung gibt es keine bezahlte Einladungsprämie.",
+    "copyFailed": "Kopieren hat nicht geklappt. Markiere den Link und kopiere ihn selbst."
   },
   "publicProfile": {
     "host": "Host",
@@ -733,10 +753,10 @@
     "reached": "Ziel erreicht"
   },
   "groups": {
-    "title": "Gruppen",
-    "lead": "Universitäten, Bootcamps und Teams. Mitglieder werden bevorzugt miteinander gematcht.",
-    "yours": "Deine Gruppen",
-    "none": "Du bist noch in keiner Gruppe.",
+    "title": "Community",
+    "lead": "Sieh, woran andere arbeiten, macht euch gegenseitig Mut und findet Menschen zum gemeinsamen Fokussieren.",
+    "yours": "Deine Kreise",
+    "none": "Du bist noch keinem Kreis beigetreten.",
     "memberCount": "{count, plural, one {# Mitglied} other {# Mitglieder}}",
     "roles": {
       "owner": "Inhaber",
@@ -749,29 +769,31 @@
       "company": "Unternehmen",
       "other": "Community"
     },
-    "joinTitle": "Einer Gruppe beitreten",
+    "joinTitle": "Einem Kreis beitreten",
     "code": "Einladungscode oder Link",
     "codePlaceholder": "Einladungslink oder -code einfügen",
     "joinWithCode": "Beitreten",
-    "codeNotFound": "Dieser Einladungscode passt zu keiner Gruppe.",
-    "createTitle": "Gruppe gründen",
+    "codeNotFound": "Dieser Code gehört zu keinem Kreis.",
+    "createTitle": "Einen Kreis gründen",
     "name": "Name",
     "namePlaceholder": "Nachteulen-Autorinnen",
     "kind": "Typ",
     "description": "Beschreibung",
-    "create": "Gruppe erstellen",
+    "create": "Kreis erstellen",
     "invalid": "Bitte überprüfe den Namen und versuche es erneut.",
     "licensed": "Plus ist für die ersten {seats} Mitglieder bis zum {date} enthalten.",
     "invite": "Einladungslink",
-    "inviteLead": "Jeder mit diesem Link kann der Gruppe beitreten.",
+    "inviteLead": "Alle mit diesem Link können dem Kreis beitreten.",
     "rotate": "Neuen Link erstellen",
     "upcoming": "Mitglieder, die einen Partner suchen",
     "upcomingLead": "Buche dieselbe Zeit und du wirst bevorzugt mit ihnen gematcht.",
     "joinThem": "Dazustoßen",
     "noUpcoming": "In dieser Gruppe wartet gerade niemand auf einen Partner.",
     "members": "Mitglieder",
-    "leave": "Gruppe verlassen",
-    "remove": "Entfernen"
+    "leave": "Kreis verlassen",
+    "remove": "Entfernen",
+    "join": "Kreis beitreten",
+    "descriptionPlaceholder": "Für wen ist der Kreis und woran arbeitet ihr gemeinsam?"
   },
   "hosting": {
     "title": "Hosting",
@@ -816,6 +838,51 @@
       "too_far": "Wähle einen Termin innerhalb der nächsten zwei Wochen.",
       "not_slot": "Wähle eine Zeit zur vollen oder halben Stunde.",
       "duration": "Wähle 25, 50 oder 75 Minuten."
+    },
+    "hubTitle": "Schaffe Raum für Konzentration",
+    "hubLead": "Ein herzlicher Empfang, ein gemeinsames Ziel und stille Zeit zusammen. Als Host hilfst du einer kleinen Gruppe, dranzubleiben und voranzukommen.",
+    "readyToHost": "Bestätigter Host",
+    "futureHost": "Dein Weg zum Hosting",
+    "hostRole": "Du leitest Begrüßung und Abschluss. Dazwischen arbeiten alle in Ruhe.",
+    "yourImpact": "Dein Beitrag",
+    "peopleHelped": "Unterstützte Personen",
+    "minutes": "{count} Min.",
+    "scheduleHelp": "Gib deiner Session einen einladenden Namen und wähle einen Termin innerhalb der nächsten zwei Wochen.",
+    "capacityHelp": "Dein Platz zählt mit. Eine kleine Gruppe lässt sich leichter begrüßen.",
+    "timezoneHelp": "Alle Zeiten werden in {timezone} angezeigt.",
+    "eligibility": "Abgeschlossene Sessions für die Host-Bewerbung",
+    "bookNext": "Nächste Session buchen",
+    "sharePageHelp": "Lade Menschen über deine öffentliche Host-Seite zu deinen Sessions ein.",
+    "previewPage": "Host-Seite ansehen",
+    "stepsTitle": "So beginnt deine erste gehostete Session",
+    "steps": {
+      "experience": {
+        "title": "Lerne den Ablauf kennen",
+        "body": "Schließe {needed} Sessions ab, um Begrüßung, Fokuszeit und Abschluss selbst zu erleben."
+      },
+      "apply": {
+        "title": "Erzähl uns von dir",
+        "body": "Schicke eine kurze Bewerbung. Unser Team prüft jeden Host persönlich."
+      },
+      "welcome": {
+        "title": "Begrüße deine erste Gruppe",
+        "body": "Nach der Freigabe wählst du einen Termin, teilst deine Seite und schaffst Raum für gemeinsame Konzentration."
+      }
+    },
+    "tipsTitle": "Kleine Impulse helfen viel",
+    "tips": {
+      "welcome": {
+        "title": "Beginne mit einem Hallo",
+        "body": "Sprich die Menschen mit Namen an und bitte alle, ein realistisches Ziel zu nennen."
+      },
+      "quiet": {
+        "title": "Bewahre die Ruhe",
+        "body": "Erkläre den Ablauf und lass alle arbeiten. Deine ruhige Anwesenheit genügt."
+      },
+      "wrap": {
+        "title": "Würdige den Fortschritt",
+        "body": "Nimm dir kurz Zeit, kleine Erfolge zu feiern, und danke allen fürs Dabeisein."
+      }
     }
   },
   "hostPage": {
@@ -823,9 +890,15 @@
     "hosted": "{n, plural, one {# Session geleitet} other {# Sessions geleitet}}",
     "upcoming": "Bevorstehende Gruppensessions",
     "seatsLeft": "{n, plural, =0 {voll} one {# Platz frei} other {# Plätze frei}}",
-    "takeSeat": "Platz einnehmen",
+    "takeSeat": "Session beitreten",
     "signUp": "Registrieren zum Beitreten",
-    "none": "Derzeit keine Sessions geplant."
+    "none": "Derzeit keine Sessions geplant.",
+    "pageTitle": "Gruppensessions mit {name}",
+    "peopleHelped": "{count} Menschen haben mit diesem Host fokussiert.",
+    "sessionHelp": "Wähle eine Session und tritt der Gruppe bei. Zeiten in {timezone}.",
+    "openSession": "Deine Session öffnen",
+    "full": "Session voll",
+    "hostPurpose": "Eine kleine Gruppe, ein herzlicher Empfang und ruhige Zeit für das, was dir wichtig ist."
   },
   "home": {
     "title": "{app} — Schaffe deine Aufgaben mit jemandem an deiner Seite",
@@ -1109,11 +1182,7 @@
     "lead": "Starte mit drei Sessions pro Woche. Wähle Plus, wenn du mehr Raum brauchst.",
     "free": "Free",
     "freePrice": "Kostenlos",
-    "freeFeatures": [
-      "3 Sessions pro Woche",
-      "Partner-Matching",
-      "Serien"
-    ],
+    "freeFeatures": ["3 Sessions pro Woche", "Partner-Matching", "Serien"],
     "plus": "Plus",
     "plusFeatures": [
       "Unbegrenzte Sessions",
@@ -1173,12 +1242,12 @@
   },
   "admin": {
     "nav": {
-      "overview": "Admin-Übersicht",
+      "overview": "Übersicht",
       "users": "Benutzer",
       "reports": "Meldungen",
       "hosts": "Hosts",
       "challenges": "Challenges",
-      "groups": "Gruppen",
+      "groups": "Kreise",
       "house": "House",
       "support": "Support",
       "notifications": "Benachrichtigungen"
@@ -1203,7 +1272,9 @@
       "plus": "Aktive Plus-Abonnements",
       "reports": "Offene Meldungen",
       "hosts": "Ausstehende Host-Bewerbungen",
-      "supportTickets": "Offene Support-Tickets"
+      "supportTickets": "Offene Support-Tickets",
+      "sessions": "Heute gestartete Sessions",
+      "waiting": "Warten auf „Jetzt matchen“"
     },
     "metricNotes": "Registrierungen und neue Buchungen basieren auf ihrem Erstellungsdatum. Andere Kennzahlen beziehen sich auf die Startzeiten der Sessions. Die Match-Quote vergleicht gematchte Buchungen mit einer Session mit allen Buchungen plus Fehlern, ausgenommen spät gematchte Fehler. Die No-Show-Quote entspricht den No-Shows geteilt durch abgeschlossene Buchungen plus No-Shows. Leere Quoten werden als 0 % dargestellt. Abonnements und Warteschlangen-Zahlen spiegeln den aktuellen Stand wider.",
     "video": "Aktuelle Videonutzung",
@@ -1361,7 +1432,11 @@
         "privacy": "Datenschutz",
         "legal": "Rechtliches",
         "feedback": "Feedback"
-      }
+      },
+      "applyFilter": "Filter anwenden",
+      "actions": "Aktionen",
+      "search": "Anfragen durchsuchen",
+      "searchPlaceholder": "Betreff, Name oder E-Mail"
     },
     "notifications": {
       "lead": "Wähle deine Admin-E-Mails und sieh, wer gerade einen Fokuspartner sucht.",
@@ -1398,7 +1473,34 @@
           "description": "Für eine Buchung wurde ein offener Raum oder ein anderer Termin angeboten."
         }
       }
-    }
+    },
+    "descriptions": {
+      "overview": "Sieh die heutige Aktivität und finde Menschen, die deine Hilfe brauchen.",
+      "users": "Finde Konten, prüfe Zugänge und verwalte Rollen und Sperren.",
+      "reports": "Prüfe Sicherheitsmeldungen und Community-Beiträge und halte eine Entscheidung fest.",
+      "support": "Lies Supportanfragen und halte Status und interne Notizen aktuell.",
+      "hosts": "Prüfe Bewerbungen und unterstütze die Hosts der Gruppensessions.",
+      "house": "Hilf Menschen, die in den nächsten 24 Stunden einen Partner suchen.",
+      "groups": "Verwalte Kreise, Mitgliederlizenzen und Moderation.",
+      "challenges": "Bereite Challenges vor und verwalte sie. Mitgliederseiten bleiben bis zur Aktivierung verborgen.",
+      "notifications": "Wähle deine Betriebsbenachrichtigungen und hilf Wartenden in „Jetzt matchen“."
+    },
+    "weekTotal": "{count} in den letzten 7 Tagen",
+    "lastSevenDays": "Letzte 7 Tage",
+    "overviewTimezone": "Die Tageswerte gelten für {timezone}. Sessions zählen Räume, keine einzelnen Buchungen.",
+    "needsAttention": "Benötigt Aufmerksamkeit",
+    "unmatchedCount": "{count} Buchungen in den nächsten 24 Stunden warten auf einen Partner.",
+    "attentionKinds": {
+      "report": "Offene Meldung",
+      "support": "Supportanfrage",
+      "booking": "Wartet auf einen Partner"
+    },
+    "allClear": "Keine offenen Meldungen, Supportanfragen oder ungematchten Buchungen.",
+    "quickLinks": "Schnellzugriff",
+    "filterSearch": "Diese Liste durchsuchen",
+    "filterPlaceholder": "Nach Namen oder Details suchen",
+    "userSearchPlaceholder": "Name, Benutzername oder E-Mail",
+    "removePost": "Beitrag entfernen"
   },
   "walkthrough": {
     "title": "So funktioniert eine Session",
@@ -1791,5 +1893,71 @@
     "footer": "Du erhältst diese E-Mail als Administrator von {app}. Verwalte sie unter Admin → Benachrichtigungen.",
     "testSubject": "Admin-E-Mail-Test für {app}",
     "testBody": "Deine Admin-E-Mails funktionieren. Dieser Test wurde nur an dich gesendet."
+  },
+  "communityFeed": {
+    "title": "Community",
+    "purpose": "Sieh, woran andere arbeiten, macht euch gegenseitig Mut und findet Menschen zum gemeinsamen Fokussieren.",
+    "composerTitle": "Woran arbeitest du?",
+    "updateType": "Art des Updates",
+    "working": "Ich arbeite an",
+    "done": "Geschafft",
+    "update": "Dein Update",
+    "placeholder": "Ich arbeite an der Einleitung meiner Abschlussarbeit… oder: Geschafft! Das erste Angebot ist raus.",
+    "exampleWork": "Meinen ersten Entwurf schreiben",
+    "exampleWin": "Eine kleine Aufgabe erledigt",
+    "linkSession": "Session verlinken (optional)",
+    "sessionId": "Deine Session",
+    "sessionPlaceholder": "Wähle eine deiner Sessions",
+    "noSession": "Keine verlinkte Session",
+    "sessionHelp": "Du kannst nur eigene Sessions verlinken. Der Raum bleibt für die Teilnehmenden reserviert.",
+    "publish": "Update posten",
+    "automatic": "Meine Erfolge automatisch teilen",
+    "automaticHelp": "Standardmäßig aus. Wenn aktiviert, wird dein Sessionziel bei abgeschlossenen Sessions mit „Geschafft“ mit allen geteilt. Du kannst jeden Beitrag löschen.",
+    "savePreference": "Teilen-Einstellung speichern",
+    "saved": "Gespeichert.",
+    "feed": "Updates der Community",
+    "cheer": "Anfeuern · {count}",
+    "delete": "Beitrag löschen",
+    "report": "Beitrag melden",
+    "reportHelp": "Ein Moderator prüft den Beitrag. Die Person wird auch blockiert: Ihre Beiträge werden ausgeblendet und ihr werdet nicht mehr zusammen gematcht.",
+    "reason": "Grund",
+    "details": "Weitere Angaben (optional)",
+    "detailsPlaceholder": "Was sollte die Moderation wissen?",
+    "sendReport": "Melden und blockieren",
+    "autoWin": "Eine Fokus-Session abgeschlossen",
+    "viewSession": "Deine Session ansehen",
+    "emptyTitle": "Auch kleine Fortschritte zählen",
+    "emptyBody": "Teile, woran du arbeitest, oder feiere etwas Erledigtes. Dein Update ist für die gesamte Community sichtbar.",
+    "firstPost": "Ein Update schreiben",
+    "older": "Ältere Updates",
+    "newest": "Zurück zu den neuesten",
+    "discover": "Kreise entdecken",
+    "createCircle": "Einen Kreis gründen",
+    "joinCode": "Mit Einladungscode beitreten",
+    "noCircles": "Noch keine weiteren Kreise. Gründe einen für eure gemeinsame Arbeit.",
+    "memberCount": "{count} Mitglieder",
+    "breadcrumb": "Community-Navigation",
+    "circlePurpose": "Verfolge die Arbeit der Mitglieder dieses Kreises.",
+    "joinToPost": "Tritt diesem Kreis bei, um Updates in seinem Feed zu teilen. Alle Community-Beiträge sind für alle sichtbar.",
+    "allMembers": "Alle Mitglieder ansehen",
+    "circleSessions": "Kommende Gruppensessions",
+    "noCircleSessions": "Noch keine Gruppensessions von Hosts dieses Kreises.",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Belästigung",
+      "inappropriate": "Unangemessene Inhalte",
+      "underage": "Minderjähriges Konto",
+      "other": "Etwas anderes"
+    },
+    "errors": {
+      "invalid": "Schreibe 1–280 Zeichen und prüfe die ausgewählte Session.",
+      "rateLimit": "Du hast in der letzten Stunde 10 Updates geteilt. Versuche es später erneut.",
+      "membership": "Tritt diesem Kreis bei, bevor du postest.",
+      "session": "Wähle eine Session, an der du teilnimmst.",
+      "reportFailed": "Dieser Beitrag kann nicht mehr gemeldet werden."
+    },
+    "circles": "Kreise",
+    "joinedCircles": "Deine Kreisfilter",
+    "everyone": "Alle"
   }
 }

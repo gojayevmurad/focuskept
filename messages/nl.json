@@ -695,7 +695,27 @@
     "copiedFeedback": "Uitnodigingslink gekopieerd naar klembord",
     "shareMessage": "Ik gebruik {app} voor virtuele coworking en body doubling — rustige video-focussessies van 25, 50 of 75 minuten met een partner. Probeer het via mijn link:",
     "emailSubject": "Focus met mij op {app}",
-    "emailBody": "Hoi,\n\nIk gebruik {app} voor virtuele coworking en body doubling. Je wordt via video gekoppeld aan een partner, zodat jullie allebei je doel kunnen uitspreken en daarna in stilte kunnen focussen.\n\nMeld je aan via mijn link en je krijgt een gratis maand Plus zodra je je eerste sessie afrondt:"
+    "emailBody": "Hoi, ik gebruik {app} om rustig samen met iemand via video te werken. Doe mee via deze link:",
+    "steps": {
+      "share": {
+        "title": "Deel je persoonlijke link",
+        "body": "Stuur de link hieronder naar iemand met wie je wilt focussen."
+      },
+      "signup": {
+        "title": "Je vriend meldt zich aan",
+        "body": "Je vriend maakt binnen 30 dagen na het openen van je link een account. De voortgang verschijnt hier."
+      },
+      "reward": {
+        "title": "Jullie krijgen allebei een maand Plus",
+        "body": "Na de eerste afgeronde sessie krijgen jullie via de uitnodigingsbeloning elk een gratis maand."
+      },
+      "together": {
+        "title": "Laat samen de community groeien",
+        "body": "Help een fijne plek om te focussen opbouwen. Betaling staat uit, dus deze uitnodiging heeft geen betaalde beloning."
+      }
+    },
+    "howFree": "De aanmelding en eerste afgeronde sessie van je vriend verschijnen hieronder. Zonder betaling is er geen betaalde uitnodigingsbeloning.",
+    "copyFailed": "Kopiëren is niet gelukt. Selecteer de link en kopieer deze zelf."
   },
   "publicProfile": {
     "host": "Host",
@@ -733,10 +753,10 @@
     "reached": "Doel bereikt"
   },
   "groups": {
-    "title": "Groepen",
-    "lead": "Universiteiten, bootcamps en teams. Leden worden als eerste aan elkaar gekoppeld.",
-    "yours": "Jouw groepen",
-    "none": "Je zit nog niet in een groep.",
+    "title": "Community",
+    "lead": "Zie waar anderen aan werken, moedig elkaar aan en vind mensen om samen mee te focussen.",
+    "yours": "Je kringen",
+    "none": "Je bent nog geen lid van een kring.",
     "memberCount": "{count, plural, one {# lid} other {# leden}}",
     "roles": {
       "owner": "Eigenaar",
@@ -749,29 +769,31 @@
       "company": "Bedrijf",
       "other": "Community"
     },
-    "joinTitle": "Lid worden van een groep",
+    "joinTitle": "Lid worden van een kring",
     "code": "Uitnodigingscode of link",
     "codePlaceholder": "Plak een uitnodigingslink of -code",
     "joinWithCode": "Deelnemen",
-    "codeNotFound": "Die uitnodigingscode hoort niet bij een groep.",
-    "createTitle": "Start een groep",
+    "codeNotFound": "Die code hoort niet bij een kring.",
+    "createTitle": "Een kring starten",
     "name": "Naam",
     "namePlaceholder": "Nachtbrakende schrijvers",
     "kind": "Type",
     "description": "Beschrijving",
-    "create": "Groep aanmaken",
+    "create": "Kring maken",
     "invalid": "Controleer de naam en probeer het opnieuw.",
     "licensed": "Plus is inbegrepen voor de eerste {seats} leden tot {date}.",
     "invite": "Uitnodigingslink",
-    "inviteLead": "Iedereen met deze link kan lid worden van de groep.",
+    "inviteLead": "Iedereen met deze link kan lid worden van de kring.",
     "rotate": "Nieuwe link aanmaken",
     "upcoming": "Leden die een partner zoeken",
     "upcomingLead": "Boek hetzelfde tijdstip en je wordt eerst aan hen gekoppeld.",
     "joinThem": "Doe mee",
     "noUpcoming": "Niemand in de groep wacht momenteel op een partner.",
     "members": "Leden",
-    "leave": "Groep verlaten",
-    "remove": "Verwijderen"
+    "leave": "Kring verlaten",
+    "remove": "Verwijderen",
+    "join": "Lid worden",
+    "descriptionPlaceholder": "Voor wie is deze kring en waar werken jullie samen aan?"
   },
   "hosting": {
     "title": "Hosten",
@@ -816,6 +838,51 @@
       "too_far": "Kies een tijd binnen twee weken.",
       "not_slot": "Kies een tijd op het hele of halve uur.",
       "duration": "Kies 25, 50 of 75 minuten."
+    },
+    "hubTitle": "Maak ruimte voor iemands focus",
+    "hubLead": "Een warm welkom, een gedeeld doel en samen rustig werken. Als host help je een kleine groep om te beginnen en vooruit te komen.",
+    "readyToHost": "Goedgekeurde host",
+    "futureHost": "Jouw weg naar hosting",
+    "hostRole": "Je begeleidt de start en afsluiting. Tussendoor werkt iedereen rustig.",
+    "yourImpact": "Jouw bijdrage",
+    "peopleHelped": "Geholpen mensen",
+    "minutes": "{count} min",
+    "scheduleHelp": "Geef je sessie een uitnodigende naam en kies een tijd in de komende twee weken.",
+    "capacityHelp": "Inclusief jouw plek. Een kleine groep is soms makkelijker te verwelkomen.",
+    "timezoneHelp": "Alle tijden staan in {timezone}.",
+    "eligibility": "Afgeronde sessies voor hostaanmelding",
+    "bookNext": "Je volgende sessie boeken",
+    "sharePageHelp": "Nodig mensen uit voor je sessies via je openbare hostpagina.",
+    "previewPage": "Je hostpagina bekijken",
+    "stepsTitle": "Hier begint je eerste hostsessie",
+    "steps": {
+      "experience": {
+        "title": "Leer het ritme kennen",
+        "body": "Rond {needed} sessies af om de start, focustijd en afsluiting zelf te ervaren."
+      },
+      "apply": {
+        "title": "Vertel over jezelf",
+        "body": "Stuur een korte aanmelding. Ons team bekijkt elke host persoonlijk."
+      },
+      "welcome": {
+        "title": "Verwelkom je eerste groep",
+        "body": "Na goedkeuring kies je een tijd, deel je je pagina en maak je ruimte voor anderen om te focussen."
+      }
+    },
+    "tipsTitle": "Een beetje begeleiding helpt veel",
+    "tips": {
+      "welcome": {
+        "title": "Begin met een welkom",
+        "body": "Noem mensen bij naam en vraag iedereen om één haalbaar doel te delen."
+      },
+      "quiet": {
+        "title": "Bewaar de rust",
+        "body": "Leg de timing uit en laat iedereen aan het werk gaan. Je rustige aanwezigheid is genoeg."
+      },
+      "wrap": {
+        "title": "Sta stil bij de vooruitgang",
+        "body": "Neem even de tijd om kleine successen te vieren en bedank iedereen voor het meedoen."
+      }
     }
   },
   "hostPage": {
@@ -823,9 +890,15 @@
     "hosted": "{n, plural, one {# sessie gehost} other {# sessies gehost}}",
     "upcoming": "Aankomende groepssessies",
     "seatsLeft": "{n, plural, =0 {vol} one {# plek over} other {# plekken over}}",
-    "takeSeat": "Neem plaats",
+    "takeSeat": "Meedoen met sessie",
     "signUp": "Meld je aan om mee te doen",
-    "none": "Geen sessies ingepland op dit moment."
+    "none": "Geen sessies ingepland op dit moment.",
+    "pageTitle": "Groepssessies met {name}",
+    "peopleHelped": "{count} mensen hebben met deze host gefocust.",
+    "sessionHelp": "Kies een sessie en doe mee. Tijden staan in {timezone}.",
+    "openSession": "Je sessie openen",
+    "full": "Sessie vol",
+    "hostPurpose": "Een kleine groep, een warm welkom en rust om te werken aan wat voor jou telt."
   },
   "home": {
     "title": "{app} — Krijg het gedaan met iemand naast je",
@@ -1109,11 +1182,7 @@
     "lead": "Begin met drie sessies per week. Kies Plus wanneer je meer ruimte wilt.",
     "free": "Free",
     "freePrice": "Kosteloos",
-    "freeFeatures": [
-      "3 sessies per week",
-      "Partnerkoppeling",
-      "Reeksen"
-    ],
+    "freeFeatures": ["3 sessies per week", "Partnerkoppeling", "Reeksen"],
     "plus": "Plus",
     "plusFeatures": [
       "Onbeperkt aantal sessies",
@@ -1173,12 +1242,12 @@
   },
   "admin": {
     "nav": {
-      "overview": "Beheeroverzicht",
+      "overview": "Overzicht",
       "users": "Gebruikers",
       "reports": "Meldingen",
       "hosts": "Hosts",
       "challenges": "Uitdagingen",
-      "groups": "Groepen",
+      "groups": "Kringen",
       "house": "House",
       "support": "Support",
       "notifications": "Meldingen"
@@ -1203,7 +1272,9 @@
       "plus": "Actieve Plus-abonnementen",
       "reports": "Openstaande meldingen",
       "hosts": "Aanmeldingen van hosts in behandeling",
-      "supportTickets": "Openstaande supporttickets"
+      "supportTickets": "Openstaande supporttickets",
+      "sessions": "Vandaag gestarte sessies",
+      "waiting": "Wachten op een directe match"
     },
     "metricNotes": "Aanmeldingen en nieuwe boekingen gebruiken hun aanmaakdatum. Andere periodieke statistieken gebruiken sessiestarttijden. Matchpercentage telt gekoppelde boekingen met een sessie af tegen die boekingen plus mislukkingen, exclusief laat gematchte mislukkingen. No-show-percentage is het aantal no-shows gedeeld door voltooide boekingen plus no-shows. Lege percentages worden weergegeven als 0%. Abonnements- en wachtrijtellingen weerspiegelen de huidige status.",
     "video": "Recent videogebruik",
@@ -1361,7 +1432,11 @@
         "privacy": "Privacy",
         "legal": "Juridisch",
         "feedback": "Feedback"
-      }
+      },
+      "applyFilter": "Filters toepassen",
+      "actions": "Acties",
+      "search": "Vragen doorzoeken",
+      "searchPlaceholder": "Onderwerp, naam of e-mail"
     },
     "notifications": {
       "lead": "Kies welke beheermails je ontvangt en bekijk wie nu een focuspartner zoekt.",
@@ -1398,7 +1473,34 @@
           "description": "Bij een boeking is een open ruimte of verplaatsing aangeboden."
         }
       }
-    }
+    },
+    "descriptions": {
+      "overview": "Bekijk de activiteit van vandaag en wie je hulp nodig heeft.",
+      "users": "Vind accounts, bekijk toegang en beheer rollen en schorsingen.",
+      "reports": "Bekijk veiligheidsmeldingen en communityberichten en leg een besluit vast.",
+      "support": "Lees hulpvragen en werk de status en interne notities bij.",
+      "hosts": "Bekijk aanmeldingen en ondersteun de hosts van groepssessies.",
+      "house": "Help mensen die de komende 24 uur op een partner wachten.",
+      "groups": "Beheer kringen, ledenlicenties en moderatie.",
+      "challenges": "Bereid uitdagingen voor en beheer ze. Ledenpagina’s blijven verborgen tot ze worden ingeschakeld.",
+      "notifications": "Kies je beheermeldingen en help mensen die op een directe match wachten."
+    },
+    "weekTotal": "{count} in de afgelopen 7 dagen",
+    "lastSevenDays": "Afgelopen 7 dagen",
+    "overviewTimezone": "De dagtotalen volgen {timezone}. Sessies tellen ruimtes, geen losse boekingen.",
+    "needsAttention": "Vraagt aandacht",
+    "unmatchedCount": "{count} boekingen in de komende 24 uur wachten op een partner.",
+    "attentionKinds": {
+      "report": "Open melding",
+      "support": "Hulpvraag",
+      "booking": "Wacht op een partner"
+    },
+    "allClear": "Geen open meldingen, hulpvragen of komende boekingen zonder partner.",
+    "quickLinks": "Snelkoppelingen",
+    "filterSearch": "Deze lijst doorzoeken",
+    "filterPlaceholder": "Zoek op naam of details",
+    "userSearchPlaceholder": "Naam, gebruikersnaam of e-mail",
+    "removePost": "Bericht verwijderen"
   },
   "walkthrough": {
     "title": "Hoe een sessie werkt",
@@ -1791,5 +1893,71 @@
     "footer": "Je ontvangt dit omdat je beheerder bent van {app}. Beheer deze e-mails via Beheer → Meldingen.",
     "testSubject": "Test van beheermails voor {app}",
     "testBody": "Je beheermails werken. Deze test is alleen naar jou gestuurd."
+  },
+  "communityFeed": {
+    "title": "Community",
+    "purpose": "Zie waar anderen aan werken, moedig elkaar aan en vind mensen om samen mee te focussen.",
+    "composerTitle": "Waar werk je aan?",
+    "updateType": "Soort update",
+    "working": "Bezig met",
+    "done": "Afgerond",
+    "update": "Je update",
+    "placeholder": "Bezig met de inleiding van mijn scriptie… of: Afgerond! Mijn eerste voorstel verstuurd.",
+    "exampleWork": "Mijn eerste versie schrijven",
+    "exampleWin": "Eén kleine taak afgerond",
+    "linkSession": "Sessie koppelen (optioneel)",
+    "sessionId": "Je sessie",
+    "sessionPlaceholder": "Kies een van je sessies",
+    "noSession": "Geen gekoppelde sessie",
+    "sessionHelp": "Je kunt alleen je eigen sessies koppelen. De ruimte blijft privé voor deelnemers.",
+    "publish": "Update plaatsen",
+    "automatic": "Mijn successen automatisch delen",
+    "automaticHelp": "Standaard uit. Afgeronde sessies met ‘Afgerond’ delen je sessiedoel met iedereen. Je kunt elk bericht verwijderen.",
+    "savePreference": "Deelvoorkeur opslaan",
+    "saved": "Opgeslagen.",
+    "feed": "Updates uit de community",
+    "cheer": "Aanmoedigen · {count}",
+    "delete": "Bericht verwijderen",
+    "report": "Bericht melden",
+    "reportHelp": "Een moderator bekijkt dit bericht. Je blokkeert ook deze persoon: berichten worden verborgen en jullie worden niet meer gekoppeld.",
+    "reason": "Reden",
+    "details": "Meer informatie (optioneel)",
+    "detailsPlaceholder": "Wat moet de moderator weten?",
+    "sendReport": "Melden en blokkeren",
+    "autoWin": "Een focussessie afgerond",
+    "viewSession": "Je sessie bekijken",
+    "emptyTitle": "Kleine stappen zijn ook vooruitgang",
+    "emptyBody": "Deel waar je aan werkt of vier iets dat af is. Je update is zichtbaar voor de hele community.",
+    "firstPost": "Een update schrijven",
+    "older": "Oudere updates",
+    "newest": "Terug naar de nieuwste",
+    "discover": "Kringen ontdekken",
+    "createCircle": "Een kring starten",
+    "joinCode": "Deelnemen met uitnodigingscode",
+    "noCircles": "Er zijn nog geen andere kringen. Start er een rond jullie gezamenlijke werk.",
+    "memberCount": "{count} leden",
+    "breadcrumb": "Communitynavigatie",
+    "circlePurpose": "Volg waar leden van deze kring aan werken.",
+    "joinToPost": "Word lid om updates aan deze kring toe te voegen. Alle communityberichten zijn voor iedereen zichtbaar.",
+    "allMembers": "Alle leden bekijken",
+    "circleSessions": "Komende groepssessies",
+    "noCircleSessions": "Hosts van deze kring hebben nog geen groepssessie gepland.",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Intimidatie",
+      "inappropriate": "Ongepaste inhoud",
+      "underage": "Minderjarig account",
+      "other": "Iets anders"
+    },
+    "errors": {
+      "invalid": "Schrijf 1–280 tekens en controleer de sessiekeuze.",
+      "rateLimit": "Je hebt het afgelopen uur 10 updates gedeeld. Probeer het later opnieuw.",
+      "membership": "Word lid van deze kring voordat je iets plaatst.",
+      "session": "Kies een sessie waaraan je deelneemt.",
+      "reportFailed": "Dit bericht kan niet meer worden gemeld."
+    },
+    "circles": "Kringen",
+    "joinedCircles": "Je kringfilters",
+    "everyone": "Iedereen"
   }
 }
