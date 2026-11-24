@@ -209,7 +209,7 @@ export default async function Page() {
                 </ol>
               </section>
             )}
-            <section className="card stack">
+            <section className={`card stack ${styles.tips}`}>
               <h2>{t("tipsTitle")}</h2>
               {["welcome", "quiet", "wrap"].map((tip) => (
                 <div key={tip}>

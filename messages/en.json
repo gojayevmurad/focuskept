@@ -694,7 +694,9 @@
     "reminderBenefit": "A timely email helps you arrive ready.",
     "pushBenefit": "Get a prompt even when this tab is in the background.",
     "tipsBenefit": "Practical ways to build a regular focus habit.",
-    "marketingBenefit": "Occasional updates. You can unsubscribe any time."
+    "marketingBenefit": "Occasional updates. You can unsubscribe any time.",
+    "choosePhoto": "Choose a photo",
+    "changePhoto": "Change photo"
   },
   "billing": {
     "title": "Your plan",
@@ -1579,7 +1581,9 @@
     "filterSearch": "Search this list",
     "filterPlaceholder": "Search by name or details",
     "userSearchPlaceholder": "Name, username, or email",
-    "removePost": "Remove post"
+    "removePost": "Remove post",
+    "review": "Review",
+    "keyMetrics": "Key metrics"
   },
   "tour": {
     "skip": "Skip tour",

@@ -100,29 +100,8 @@ export function AvatarUpload({
   }
   return (
     <div className="stack-sm">
-      <label className="field">
-        {t("photo")}
-        <input
-          ref={input}
-          type="file"
-          accept="image/jpeg,image/png,image/webp"
-          disabled={busy}
-          onChange={(e) => {
-            const selected = e.target.files?.[0];
-            setReady(false);
-            setMessage("");
-            setZoom(1);
-            if (selected && selected.size <= 10 * 1024 * 1024)
-              setFile(selected);
-            else {
-              setFile(null);
-              if (selected) setMessage(t("photoError"));
-            }
-          }}
-        />
-        <small>{t("photoHint")}</small>
-      </label>
-      <div className="row">
+      <span className={styles.photoLabel}>{t("photo")}</span>
+      <div className={styles.photoRow}>
         {file ? (
           <canvas
             ref={canvas}
@@ -134,23 +113,51 @@ export function AvatarUpload({
         ) : (
           <Avatar name={name} src={url} size="lg" />
         )}
-        {file && (
-          <label className="field">
-            {t("zoom")}
+        <div className="stack-sm">
+          <label
+            className={`button secondary ${styles.fileButton}`}
+            aria-disabled={busy}
+          >
+            {url || file ? t("changePhoto") : t("choosePhoto")}
             <input
-              type="range"
-              min="1"
-              max="3"
-              step="0.05"
-              value={zoom}
+              ref={input}
+              className="sr-only"
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
               disabled={busy}
               onChange={(e) => {
+                const selected = e.target.files?.[0];
                 setReady(false);
-                setZoom(Number(e.target.value));
+                setMessage("");
+                setZoom(1);
+                if (selected && selected.size <= 10 * 1024 * 1024)
+                  setFile(selected);
+                else {
+                  setFile(null);
+                  if (selected) setMessage(t("photoError"));
+                }
               }}
             />
           </label>
-        )}
+          <small className="muted">{t("photoHint")}</small>
+          {file && (
+            <label className="field">
+              {t("zoom")}
+              <input
+                type="range"
+                min="1"
+                max="3"
+                step="0.05"
+                value={zoom}
+                disabled={busy}
+                onChange={(e) => {
+                  setReady(false);
+                  setZoom(Number(e.target.value));
+                }}
+              />
+            </label>
+          )}
+        </div>
       </div>
       <div className="row">
         {file && (

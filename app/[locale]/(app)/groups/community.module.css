@@ -174,3 +174,17 @@
     padding: 18px;
   }
 }
+.examples.examples button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-weight: 500;
+}
+.examples.examples button:hover {
+  border-color: var(--accent);
+}
+.report.report summary {
+  gap: 6px;
+  padding-inline: 12px;
+  list-style: none;
+}

@@ -694,7 +694,9 @@
     "reminderBenefit": "Un e-mail à temps pour arriver prêt.",
     "pushBenefit": "Recevez une alerte même si cet onglet est en arrière-plan.",
     "tipsBenefit": "Des conseils pratiques pour une concentration régulière.",
-    "marketingBenefit": "Des nouvelles occasionnelles. Désabonnement à tout moment."
+    "marketingBenefit": "Des nouvelles occasionnelles. Désabonnement à tout moment.",
+    "choosePhoto": "Choisir une photo",
+    "changePhoto": "Changer de photo"
   },
   "billing": {
     "title": "Votre forfait",
@@ -1583,7 +1585,9 @@
     "filterSearch": "Rechercher dans cette liste",
     "filterPlaceholder": "Nom ou détails",
     "userSearchPlaceholder": "Nom, identifiant ou e-mail",
-    "removePost": "Retirer la publication"
+    "removePost": "Retirer la publication",
+    "review": "Examiner",
+    "keyMetrics": "Indicateurs clés"
   },
   "tour": {
     "skip": "Passer la visite",

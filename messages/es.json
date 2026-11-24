@@ -694,7 +694,9 @@
     "reminderBenefit": "Un correo a tiempo te ayuda a llegar preparado.",
     "pushBenefit": "Recibe un aviso aunque esta pestaña esté en segundo plano.",
     "tipsBenefit": "Consejos prácticos para crear un hábito de concentración.",
-    "marketingBenefit": "Novedades ocasionales. Puedes darte de baja cuando quieras."
+    "marketingBenefit": "Novedades ocasionales. Puedes darte de baja cuando quieras.",
+    "choosePhoto": "Elegir una foto",
+    "changePhoto": "Cambiar foto"
   },
   "billing": {
     "title": "Tu plan",
@@ -1583,7 +1585,9 @@
     "filterSearch": "Buscar en esta lista",
     "filterPlaceholder": "Buscar por nombre o detalles",
     "userSearchPlaceholder": "Nombre, usuario o correo",
-    "removePost": "Retirar publicación"
+    "removePost": "Retirar publicación",
+    "review": "Revisar",
+    "keyMetrics": "Métricas clave"
   },
   "tour": {
     "skip": "Saltar tour",

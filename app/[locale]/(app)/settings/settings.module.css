@@ -108,3 +108,28 @@
     flex-shrink: 0;
   }
 }
+
+.photoLabel {
+  font-weight: 600;
+  font-size: 14px;
+}
+.photoRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.photoRow > .stack-sm,
+.photoRow > div:last-child {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+.fileButton.fileButton {
+  align-self: flex-start;
+  width: fit-content;
+  cursor: pointer;
+}
+.fileButton:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

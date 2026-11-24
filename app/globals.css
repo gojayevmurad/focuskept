@@ -1823,3 +1823,28 @@ body:has(.consent) {
     font-size: 14px;
   }
 }
+
+/* ---------- Progress bars ---------- */
+progress {
+  height: 10px;
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--surface-2);
+  color: var(--accent);
+  accent-color: var(--accent);
+}
+progress::-webkit-progress-bar {
+  background: var(--surface-2);
+  border-radius: 999px;
+}
+progress::-webkit-progress-value {
+  background: var(--accent);
+  border-radius: 999px;
+  transition: inline-size var(--duration-slow, 400ms) var(--ease-out, ease);
+}
+progress::-moz-progress-bar {
+  background: var(--accent);
+  border-radius: 999px;
+}

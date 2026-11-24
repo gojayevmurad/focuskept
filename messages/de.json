@@ -694,7 +694,9 @@
     "reminderBenefit": "Eine rechtzeitige E-Mail hilft dir, vorbereitet zu sein.",
     "pushBenefit": "Erhalte einen Hinweis, auch wenn dieser Tab im Hintergrund ist.",
     "tipsBenefit": "Praktische Tipps für eine regelmäßige Fokusroutine.",
-    "marketingBenefit": "Gelegentliche Neuigkeiten. Jederzeit abbestellbar."
+    "marketingBenefit": "Gelegentliche Neuigkeiten. Jederzeit abbestellbar.",
+    "choosePhoto": "Foto auswählen",
+    "changePhoto": "Foto ändern"
   },
   "billing": {
     "title": "Dein Tarif",
@@ -1579,7 +1581,9 @@
     "filterSearch": "Diese Liste durchsuchen",
     "filterPlaceholder": "Nach Namen oder Details suchen",
     "userSearchPlaceholder": "Name, Benutzername oder E-Mail",
-    "removePost": "Beitrag entfernen"
+    "removePost": "Beitrag entfernen",
+    "review": "Prüfen",
+    "keyMetrics": "Wichtige Kennzahlen"
   },
   "tour": {
     "skip": "Tour überspringen",

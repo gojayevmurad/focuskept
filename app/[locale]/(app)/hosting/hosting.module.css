@@ -86,7 +86,12 @@
 }
 .progress {
   width: 100%;
-  accent-color: var(--accent);
+}
+.tips.tips h3 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
 }
 @media (max-width: 800px) {
   .page .hero,

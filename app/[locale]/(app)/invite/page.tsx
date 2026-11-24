@@ -73,19 +73,6 @@ export default async function Page() {
               <span className={styles.statNumber}>{totalConverted}</span>
               <span className={styles.statLabel}>{t("statsConverted")}</span>
             </div>
-            <ol className={styles.steps}>
-              {[
-                "share",
-                "signup",
-                app.billingEnabled ? "reward" : "together",
-              ].map((step) => (
-                <li key={step}>
-                  <strong>{t(`steps.${step}.title`)}</strong>
-                  <p className="small muted">{t(`steps.${step}.body`)}</p>
-                </li>
-              ))}
-            </ol>
-
             {app.billingEnabled && (
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>{totalRewarded}</span>
